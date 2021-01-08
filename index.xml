@@ -1,25 +1,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sorryfu Blog.</title>
-    <link>http://example.org/</link>
+    <link>https://fushaolei.github.io/</link>
     <description>Recent content on Sorryfu Blog.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>This is a customized copyright.</copyright>
     <lastBuildDate>Fri, 08 Jan 2021 12:54:02 +0800</lastBuildDate>
     
-        <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://fushaolei.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     
         <item>
         <title>Hello Hugo</title>
-        <link>http://example.org/post/hello-hugo/</link>
+        <link>https://fushaolei.github.io/post/hello-hugo/</link>
         <pubDate>Fri, 08 Jan 2021 12:54:02 +0800</pubDate>
         
-        <guid>http://example.org/post/hello-hugo/</guid>
-        <description>Sorryfu Blog. http://example.org/post/hello-hugo/ -&lt;h2 id=&#34;hello-hugo&#34;&gt;Hello Hugo&lt;/h2&gt;
-- http://example.org/post/hello-hugo/ - This is a customized copyright.</description>
+        <guid>https://fushaolei.github.io/post/hello-hugo/</guid>
+        <description>Sorryfu Blog. https://fushaolei.github.io/post/hello-hugo/ -&lt;h2 id=&#34;hello-hugo&#34;&gt;Hello Hugo&lt;/h2&gt;
+- https://fushaolei.github.io/post/hello-hugo/ - This is a customized copyright.</description>
         </item>
     
     

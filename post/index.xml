@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Sorryfu Blog.</title>
-    <link>http://example.org/post/</link>
+    <link>https://fushaolei.github.io/post/</link>
     <description>Recent content in Posts on Sorryfu Blog.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>This is a customized copyright.</copyright>
     <lastBuildDate>Fri, 08 Jan 2021 12:54:02 +0800</lastBuildDate>
     
-	<atom:link href="http://example.org/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://fushaolei.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hello Hugo</title>
-      <link>http://example.org/post/hello-hugo/</link>
+      <link>https://fushaolei.github.io/post/hello-hugo/</link>
       <pubDate>Fri, 08 Jan 2021 12:54:02 +0800</pubDate>
       
-      <guid>http://example.org/post/hello-hugo/</guid>
+      <guid>https://fushaolei.github.io/post/hello-hugo/</guid>
       <description>Hello Hugo </description>
     </item>
     
