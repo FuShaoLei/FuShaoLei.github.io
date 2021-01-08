@@ -1,0 +1,704 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sorryfu Blog.</title>
+    <link>https://fushaolei.github.io/</link>
+    <description>Recent content on Sorryfu Blog.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Fri, 08 Jan 2021 12:54:02 +0800</lastBuildDate>
+    
+        <atom:link href="https://fushaolei.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>如何创建一个Hexo博客</title>
+        <link>https://fushaolei.github.io/post/how-to-make-a-hexo-blog/</link>
+        <pubDate>Sun, 21 Jun 2020 00:38:22 +0000</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/how-to-make-a-hexo-blog/</guid>
+        <description>Sorryfu Blog. https://fushaolei.github.io/post/how-to-make-a-hexo-blog/ -&lt;blockquote&gt;
+&lt;p&gt;自用教程&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;环境准备&#34;&gt;环境准备&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Node.j：: &lt;a href=&#34;https://nodejs.org/en/&#34;&gt;https://nodejs.org/en/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Git：https://git-scm.com/&lt;/li&gt;
+&lt;li&gt;一个Github账号：https://github.com/， 并且创建一个名为 &amp;lt;用户名&amp;gt;.github.io的仓库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;安装hexo&#34;&gt;安装Hexo&lt;/h2&gt;
+&lt;h3 id=&#34;全局安装&#34;&gt;全局安装&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-npm&#34; data-lang=&#34;npm&#34;&gt;npm install hexo-cli -g
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;或&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-npm&#34; data-lang=&#34;npm&#34;&gt;npm install -g hexo
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;初始化&#34;&gt;初始化&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-npm&#34; data-lang=&#34;npm&#34;&gt;hexo init blog  ## 在blog文件夹中初始化hexo
+cd blog ## 进入blog文件夹
+hexo g  ## 编译
+hexo s  ## 本地预览，在浏览器中输入localhost:4000看看效果
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;部署到github-pages&#34;&gt;部署到Github Pages&lt;/h2&gt;
+&lt;h3 id=&#34;配置ssh密钥&#34;&gt;配置SSH密钥&lt;/h3&gt;
+&lt;p&gt;在博客文件夹中&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-npm&#34; data-lang=&#34;npm&#34;&gt;ssh-keygen -t rsa -C &amp;quot;1563250958@qq.com&amp;quot; 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;然后&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-npm&#34; data-lang=&#34;npm&#34;&gt;clip &amp;lt; ~/.ssh/id_rsa.pub
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;将公钥的内容复制到系统粘贴板上&lt;/p&gt;
+&lt;p&gt;在github中，以此&lt;code&gt;setting&lt;/code&gt;-&amp;gt;&lt;code&gt;SSH and GPG keys&lt;/code&gt;-&amp;gt;添加一个新的SSH key（key就填公钥）（可允许&lt;code&gt;ssh -T git@github.com&lt;/code&gt;测试成功或不成功）&lt;/p&gt;
+&lt;h3 id=&#34;配置hexo&#34;&gt;配置hexo&lt;/h3&gt;
+&lt;p&gt;复制&lt;code&gt;&amp;lt;用户名&amp;gt;.github.io&lt;/code&gt;仓库中的ssh链接备用，然后hexo根目录的&lt;code&gt;_config.yml&lt;/code&gt;这样配置：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;color:#719e07&#34;&gt;deploy&lt;/span&gt;:
+  &lt;span style=&#34;color:#719e07&#34;&gt;type&lt;/span&gt;: git
+  &lt;span style=&#34;color:#719e07&#34;&gt;repository&lt;/span&gt;: git@github.com:FuShaoLei/FuShaoLei.github.io.git
+  &lt;span style=&#34;color:#719e07&#34;&gt;branch&lt;/span&gt;: master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后还要再安装一个东西&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-npm&#34; data-lang=&#34;npm&#34;&gt;npm install hexo-deployer-git --save
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;到这就大功告成啦~&lt;/p&gt;
+- https://fushaolei.github.io/post/how-to-make-a-hexo-blog/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>IDEA食用小记</title>
+        <link>https://fushaolei.github.io/post/idea-note/</link>
+        <pubDate>Sun, 14 Jun 2020 21:36:08 +0000</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/idea-note/</guid>
+        <description>Sorryfu Blog. https://fushaolei.github.io/post/idea-note/ -&lt;blockquote&gt;
+&lt;p&gt;哭唧唧，用惯了eclispe的我用起idea就像一个傻子，现在记录一下，以免忘记
+所用版本：idea 2020.1&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;1-下载和安装&#34;&gt;1. 下载和安装&lt;/h2&gt;
+&lt;p&gt;去官网下载：https://www.jetbrains.com/idea/download/
+安装随意，破解的话 看这篇&lt;a href=&#34;https://nymane.github.io/post/2020-04-14-IntelliJ_IDEA_2020.1%E6%B3%A8%E5%86%8C%E7%A0%81%EF%BC%88%E4%BA%B2%E6%B5%8B%E6%9C%89%E6%95%88%EF%BC%8C%E5%8F%AF%E6%BF%80%E6%B4%BB%E8%87%B3_2089_%E5%B9%B4&#34;&gt;文章&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;2-配置maven&#34;&gt;2. 配置maven&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;maven的作用就是帮助我们下载需要的jar包，不需要在自己去网上找来找去了&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;去这个页面:
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20200614230817.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;然后解压，记住你解压后的位置，比如我直接解压到E盘
+然后是配置环境，电脑&amp;gt;属性&amp;gt;高级系统设置&amp;gt;环境变量，在系统变量中添加一个变量为&lt;code&gt;M2_HOME&lt;/code&gt;，值为你的maven存放路径，然后到path里添加一个maven的bin路径，懒了不贴图了
+在cmd中输入&lt;code&gt;mvn -v&lt;/code&gt;出现maven的版本号 ，就说明配置成功啦！&lt;/p&gt;
+&lt;p&gt;这时还没完：
+进入&lt;code&gt;E:\apache-maven-3.6.3\conf&lt;/code&gt;路径下。打开setting.xml
+在mirrors中添加一个镜像&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;     &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;mirror&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;id&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;nexus-aliyun&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;mirrorOf&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;central&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/mirrorOf&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;name&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;Nexus aliyun&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/name&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;url&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/url&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/mirror&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;阿里云镜像，到时候下载jar包时会更快&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;下载的路径还没修改，将在后续补上&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;3-idea配置maven&#34;&gt;3. Idea配置maven&lt;/h2&gt;
+&lt;p&gt;先随意创建一个项目。。。进去后
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20200614233119.png&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20200614233133.png&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20200614233140.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;-Xms1024m -Xmx2048m
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;好了 这样后，每创建一个新的项目，都会自动给你配置maven的路径，然后下载jar包的速度也会相应的加快，这给我们的开发带来了极大的便利&lt;/p&gt;
+- https://fushaolei.github.io/post/idea-note/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Hexo博客备份过程记录</title>
+        <link>https://fushaolei.github.io/post/hexo-backup/</link>
+        <pubDate>Sun, 31 May 2020 11:18:27 +0000</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/hexo-backup/</guid>
+        <description>Sorryfu Blog. https://fushaolei.github.io/post/hexo-backup/ -&lt;blockquote&gt;
+&lt;p&gt;小记录&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;备份实质&#34;&gt;备份实质&lt;/h2&gt;
+&lt;p&gt;由于我主题文件已经备份到github： &lt;a href=&#34;https://github.com/FuShaoLei/hexo-theme-volantis&#34;&gt;https://github.com/FuShaoLei/hexo-theme-volantis&lt;/a&gt; （当然是fork了大佬的）&lt;/p&gt;
+&lt;p&gt;贴一个原作者地址：https://github.com/xaoxuu/hexo-theme-volantis&lt;/p&gt;
+&lt;p&gt;主题已经备份了，那么其他要备份的也就是这一部分了&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20200531114624.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;**即全部md文件 **&lt;/p&gt;
+&lt;p&gt;然后还要知道github pages的机制，如果你的仓库名是 &lt;code&gt;&amp;lt;username&amp;gt;.github.io&lt;/code&gt;的话，pages服务默认在master分支，否则会默认在&lt;code&gt;gh-pages&lt;/code&gt;分支上
+这有就是为什么在配置博客的&lt;code&gt;config.yml&lt;/code&gt;的时候，branch要填master的原因
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20200531124128.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;好了，有了以上认识后，我们就可以开始备份我们的博文了，（其实就简单的把本地仓库关联到远程仓库罢了）&lt;/p&gt;
+&lt;h2 id=&#34;开始操作&#34;&gt;开始操作&lt;/h2&gt;
+&lt;h3 id=&#34;一新建分支&#34;&gt;一，新建分支&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20200531124705.png&#34; alt=&#34;&#34;&gt;
+并设为&lt;strong&gt;默认&lt;/strong&gt;（&lt;strong&gt;这一步是方便我们在push的时候，不用指定分支什么的了&lt;/strong&gt;）&lt;/p&gt;
+&lt;p&gt;点击setting&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20200531124709.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;二关联到远程仓库&#34;&gt;二，关联到远程仓库&lt;/h3&gt;
+&lt;p&gt;在&lt;code&gt;/source&lt;/code&gt;里的&lt;code&gt;git bash&lt;/code&gt;小黑块里依次输入：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;tips: 在小黑块中复制粘贴使用&lt;code&gt;shift+ins&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;git init&lt;/code&gt; （初始化）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git remote add origin git@github.com:FuShaoLei/FuShaoLei.github.io.git&lt;/code&gt;
+为的是关联到远程仓库&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git pull --rebase origin back-up&lt;/code&gt;为的是和远程仓库同步（因为新建的分支上是原来master里的东西，需要我们删除）&lt;/li&gt;
+&lt;li&gt;然后&lt;code&gt;git switch -c back-up&lt;/code&gt;（新建并跳转到此分支），这个本地分支名一定要与远程仓库那个分支名一样！&lt;/li&gt;
+&lt;li&gt;把除了&lt;code&gt;.git&lt;/code&gt;的文件全删了，然后&lt;code&gt;git add .&lt;/code&gt; ,&lt;code&gt;git commit -m &amp;quot;xx&amp;quot;&lt;/code&gt;, &lt;code&gt;git  push -u origin back-up&lt;/code&gt;，发现远程仓库这个分支里的东西果然全被删了&lt;/li&gt;
+&lt;li&gt;将备份的博文放入，然后重复上面的，不过&lt;code&gt;git push -u origin back-up&lt;/code&gt;可以换成&lt;code&gt;git push&lt;/code&gt;了&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;图片待补充。。。。&lt;/p&gt;
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.zhihu.com/question/21193762/answer/489124966&#34;&gt;使用hexo，如果换了电脑怎么更新博客？ - 直上云霄的回答 - 知乎&lt;/a&gt;&lt;/p&gt;
+- https://fushaolei.github.io/post/hexo-backup/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>解决git clone超慢速度的问题</title>
+        <link>https://fushaolei.github.io/post/solve-the-slow-git-clone/</link>
+        <pubDate>Thu, 28 May 2020 20:26:06 +0000</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/solve-the-slow-git-clone/</guid>
+        <description>Sorryfu Blog. https://fushaolei.github.io/post/solve-the-slow-git-clone/ -&lt;blockquote&gt;
+&lt;p&gt;思路是用码云进行clone后修改配置文件以对应到github上&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;一在gitee中点击&#34;&gt;一，在gitee中点击&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;首先你得先有个码云账号&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20200528203232.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;二粘贴上原地址&#34;&gt;二，粘贴上原地址&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20200528205226.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;点击导入&lt;/p&gt;
+&lt;h2 id=&#34;三在本地git-clone&#34;&gt;三，在本地git clone&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20200528205536.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20200528205230.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;看到这个速度，我不禁老泪纵横，果然不一下子，就完成了，不过还有最重要的一步&lt;/p&gt;
+&lt;h2 id=&#34;四关联到github仓库&#34;&gt;四，关联到github仓库&lt;/h2&gt;
+&lt;p&gt;找到隐藏文件&lt;code&gt;.git&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20200528205237.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;进入config里&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20200528205242.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;把url改成原来github仓库的url，然后 就大功告成啦！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20200528205247.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20200528210044.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV1aE411p7Cd&#34;&gt;直击痛点：一招搞定GitHub开源项目下载加速！&lt;/a&gt;&lt;/p&gt;- https://fushaolei.github.io/post/solve-the-slow-git-clone/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Android制作双人联机游戏</title>
+        <link>https://fushaolei.github.io/post/android-make-double-game/</link>
+        <pubDate>Wed, 20 May 2020 14:25:02 +0000</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/android-make-double-game/</guid>
+        <description>Sorryfu Blog. https://fushaolei.github.io/post/android-make-double-game/ -&lt;blockquote&gt;
+&lt;p&gt;项目有涉及到双人联机游戏的机制，这之前都没有做过类似的东西，现在什么都是从零开始，故开此文记录&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;我觉得的联机游戏流程是：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;点击“双人游戏”&lt;/li&gt;
+&lt;li&gt;进入匹配
+&lt;ul&gt;
+&lt;li&gt;匹配失败👉结束&lt;/li&gt;
+&lt;li&gt;匹配成功👉进入3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;建立可靠连接&lt;/li&gt;
+&lt;li&gt;系统出题，双方答题，根据对错实时更新ui&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;其中2，3是最重要的点，所谓可靠链接，难点在于怎么样使两个真机通过服务端链接，这时我想到了socket ，这就涉及到网络中怎么传输数据的问题了&lt;/p&gt;
+&lt;p&gt;由于游戏的性质我还要考虑以下问题&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;怎么保证题目的一致性&lt;/li&gt;
+&lt;li&gt;如何自动匹配&lt;/li&gt;
+&lt;li&gt;怎么保证A方传的数据到了B方那里？&lt;/li&gt;
+&lt;li&gt;怎么保证一个客户端就匹配另一个客户端，并且不会被第三个客户端匹配到（保证一一对应）&lt;/li&gt;
+&lt;li&gt;互相之间要传什么数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;额 ，好乱啊，虽然一瞬间考虑了那么多，但还是觉得无从下手。&lt;/p&gt;
+&lt;p&gt;昨天又想到了一些，对于如何自动匹配，我想到的是，如果客户端有传friendID的话，则于这个friendID进行匹配，如果没有的话，则进行自动匹配。好了，思考了这么多，该动手进行实现了。首先 ，是匹配机制的实现。&lt;/p&gt;
+&lt;h2 id=&#34;匹配机制&#34;&gt;匹配机制&lt;/h2&gt;
+&lt;p&gt;首先，每个用户都会有&lt;strong&gt;专属的唯一的&lt;/strong&gt;一个id，我们可以以id进行标识，这大大方便了我们。&lt;/p&gt;
+&lt;p&gt;好了，想要匹配上，得先连接上服务器&lt;/p&gt;
+&lt;h3 id=&#34;进行简单连接测试&#34;&gt;进行简单连接测试&lt;/h3&gt;
+&lt;p&gt;1.android客户端：在子线程中启用socket&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;initSocket&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; Thread&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; Runnable&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+            &lt;span style=&#34;color:#268bd2&#34;&gt;@Override&lt;/span&gt;
+            &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;run&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+                &lt;span style=&#34;color:#719e07&#34;&gt;try&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+                    clientSocket&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; Socket&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;IP&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;PORT&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//这个ip是电脑的ip，端口自己定的
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;                    &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;clientSocket&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;isConnected&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//进行简单的测试
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;                        Log&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;e&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;成功！&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;已连接到服务器！！&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+                    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+                    clientSocket&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;close&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+                &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;catch&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;Exception e&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+                    e&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;printStackTrace&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+                &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+            &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;start&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;2.java服务端,&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#719e07&#34;&gt;try&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+			serverSocket&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; ServerSocket&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;SERVER_PORT&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+			System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;服务端已启动，端口号是: &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;SERVER_PORT&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+			System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;==========等待客户端连接中==========&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+			&lt;span style=&#34;color:#719e07&#34;&gt;while&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#cb4b16&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+				Socket socket&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;serverSocket&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;accept&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+				System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;客户端已连接！客户端的IP地址是:&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;socket&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getInetAddress&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+			&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+		&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;catch&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;IOException e&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+			&lt;span style=&#34;color:#586e75&#34;&gt;// TODO Auto-generated catch block
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;			e&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;printStackTrace&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+		&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ok 先打开服务端，后打开客户端，关掉windows防火墙，我们进行一下小测试&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20200524155439.png&#34; alt=&#34;服务端已启动&#34;&gt;&lt;/p&gt;
+&lt;p&gt;然后打开android端。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20200524155719.png&#34; alt=&#34;测试成功！&#34;&gt;&lt;/p&gt;
+&lt;p&gt;已成功连接！&lt;/p&gt;
+&lt;p&gt;在给服务端传一个id试试。。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#719e07&#34;&gt;try&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+            DataOutputStream writer&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; DataOutputStream&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;clientSocket&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getOutputStream&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+            writer&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;writeInt&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;userId&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;catch&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;Exception e&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+            e&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;printStackTrace&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;服务端进行接受&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;reader&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; DataInputStream&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;socket&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getInputStream&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;while&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#cb4b16&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+	&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; id&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;reader&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;readInt&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+	System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;获取到客户端的id是：&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;同样也可以接受成功。&lt;/p&gt;
+&lt;p&gt;好了 ，接下来可以考虑匹配的问题了。&lt;/p&gt;
+&lt;h3 id=&#34;如何匹配&#34;&gt;如何匹配&lt;/h3&gt;
+&lt;p&gt;首先，封装成类，方便我们调用，然后，一个id唯一对应一个socket 又有唯一的friendID，在互传数据时要进行双向验证，也就是，在只有互相是对方的friendID的情况下，才能互发数据。
+如何匹配？当有一个新的id进入时（游戏结束后会删除，也就是有一个新的游戏请求就是一个新的id），在自定义的类里进行循环，如果没有friendID则进行匹配，上面讲到了，实际上这里匹配的实质就是： 把friendID设置成对方的ID，不知道在这里你想明白没有。（其实这些是我边写此文时边想到的，写字果然能促进人的思考啊(。・∀・)ノ）&lt;/p&gt;
+&lt;p&gt;按照上面的思路，我们可以一步一步进行实现&lt;/p&gt;
+&lt;h4 id=&#34;一新建类&#34;&gt;一，新建类&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#719e07&#34;&gt;package&lt;/span&gt; com&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+
+&lt;span style=&#34;color:#719e07&#34;&gt;import&lt;/span&gt; java.net.Socket&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+
+&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;SocketClass&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+	&lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; id&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//本体的id
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; friendid&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//待匹配id
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; Socket socket&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//socket
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;	
+	&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;SocketClass&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; id&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;Socket socket&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//friendid默认是0
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;		&lt;span style=&#34;color:#719e07&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+		&lt;span style=&#34;color:#719e07&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;socket&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;socket&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+	&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+	
+	&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;getId&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+		&lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; id&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+	&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+	&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;setId&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; id&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+		&lt;span style=&#34;color:#719e07&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;id &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; id&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+	&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+	&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;getFriendid&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+		&lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; friendid&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+	&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+	&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;setFriendid&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; friendid&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+		&lt;span style=&#34;color:#719e07&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;friendid &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; friendid&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+	&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+	&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; Socket &lt;span style=&#34;color:#268bd2&#34;&gt;getSocket&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+		&lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; socket&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+	&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+	&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;setSocket&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;Socket socket&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+		&lt;span style=&#34;color:#719e07&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;socket &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; socket&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+	&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+
+	&lt;span style=&#34;color:#268bd2&#34;&gt;@Override&lt;/span&gt;
+	&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; String &lt;span style=&#34;color:#268bd2&#34;&gt;toString&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+		&lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;SocketClass [id=&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt; id &lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;, friendid=&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt; friendid &lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;]&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+	&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;二新建匹配方法&#34;&gt;二，新建匹配方法&lt;/h4&gt;
+&lt;p&gt;放在获取客户端id的后面&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;reader&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; DataInputStream&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;socket&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getInputStream&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;while&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#cb4b16&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+	&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; id&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;reader&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;readInt&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+	System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;获取到客户端的id是：&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+	socketList&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;add&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; SocketClass&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; socket&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//添加进List里去备用
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;	match&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//由于是在while（true）循环里，所以会一直等待匹配
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt; 
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;匹配方法&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;	&lt;span style=&#34;color:#586e75&#34;&gt;//开始匹配
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;match&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+&lt;span style=&#34;color:#586e75&#34;&gt;//		System.out.println(socketList.get(0).toString());//int默认值是0
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;		&lt;span style=&#34;color:#586e75&#34;&gt;//大于或2才开始，否则就不能匹配咯
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;		&lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;socketList&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;size&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;2&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+			System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;开始匹配前的状态&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+			&lt;span style=&#34;color:#719e07&#34;&gt;for&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;SocketClass mSocket&lt;span style=&#34;color:#719e07&#34;&gt;:&lt;/span&gt;socketList&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+				System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;mSocket&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;toString&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+			&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+			&lt;span style=&#34;color:#719e07&#34;&gt;for&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; i&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;0&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&lt;/span&gt;socketList&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;size&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+				&lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;socketList&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;get&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getFriendid&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;0&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+                    &lt;span style=&#34;color:#586e75&#34;&gt;//friendId(int)的基本默认值是0，所以，如果等于0的话说明没有，则进行匹配操作
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;					&lt;span style=&#34;color:#719e07&#34;&gt;for&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; j&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;1&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;j&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&lt;/span&gt;socketList&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;size&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;j&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+						&lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;socketList&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;get&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;j&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getFriendid&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;0&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+                            &lt;span style=&#34;color:#586e75&#34;&gt;//如果在此循环里，也有一个friendId为0的话，就进行两两匹配
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;							socketList&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;get&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;setFriendid&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;socketList&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;get&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;j&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getId&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+							socketList&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;get&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;j&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;setFriendid&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;socketList&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;get&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getId&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+						&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+					&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+					
+				&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+				
+			&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+			System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;匹配后的状态&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+		&lt;span style=&#34;color:#719e07&#34;&gt;for&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;SocketClass mSocket&lt;span style=&#34;color:#719e07&#34;&gt;:&lt;/span&gt;socketList&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+			System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;mSocket&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;toString&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+		&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+		&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+		
+	&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;测试一下，，匹配成功！！！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20200524193753.png&#34; alt=&#34;匹配机制成功！&#34;&gt;&lt;/p&gt;
+&lt;p&gt;喜大普奔。我们终于完成了匹配机制，到这里，在看看前言我所写的，我们现在只剩下最后一步了，接下来进入关于游戏ui更新的部分。&lt;/p&gt;
+&lt;h2 id=&#34;同步ui&#34;&gt;同步UI&lt;/h2&gt;
+&lt;p&gt;这部分也蛮简单的（才怪~），A方答题后更新A方的UI，然后把A的回答传到服务器后传给B方以更新B方的UI，B方同样如此，重要的要保证题目一致，也就是，当每次答题开始时，服务端会向A方B方发送题目以及答案。&lt;/p&gt;
+&lt;p&gt;同步UI要走以下流程，为了简单考虑，就先不考虑有一方中途推出的情况了。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;（与服务器建立连接）匹配后 服务器向双方发送对方的id，两客户端更新对方UI信息（头像啊，名字之类的）（如何保证只发送一次？）✅&lt;/li&gt;
+&lt;li&gt;由其中一方向服务器发送信息 请求题目，服务器同时向双方发送题目以及答案✅&lt;/li&gt;
+&lt;li&gt;双方客户端更新题目UI✅&lt;/li&gt;
+&lt;li&gt;A方答题后，更新A方UI ，并把回答发送到服务器转发给B方&lt;/li&gt;
+&lt;li&gt;B方接收后判断并更新UI，同上&lt;/li&gt;
+&lt;li&gt;后答完题的人向服务端发送信息请求题目，重复以上&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这里其实涉及到了一个传输问题，开始的时候（服务端）用了一些奇奇怪怪的方法，后来了解到json数据，如果key值不存在的话，取得的是null，这就大大方便了我们，以json作为传输对象也大大简化了逻辑。比如，想更新对方的ui信息时，服务端，传一个key为otherID值为19的json数据过客户端，然后客户端接受后判断key为otherID是否存在，若存在，则更新ui，若不存在，则执行其他逻辑，也就是可以以这个key作为判断条件，判断执行什么逻辑，例如更新题目ui啊，接受到对方的答案啊之类的&lt;/p&gt;- https://fushaolei.github.io/post/android-make-double-game/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>flex布局笔记</title>
+        <link>https://fushaolei.github.io/post/html-flex/</link>
+        <pubDate>Sat, 25 Apr 2020 18:10:39 +0000</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/html-flex/</guid>
+        <description>Sorryfu Blog. https://fushaolei.github.io/post/html-flex/ -&lt;blockquote&gt;
+&lt;p&gt;因为要仿照一个网站做一款hexo主题，发现里边有很多flex布局，自己照葫芦画瓢很是费劲，不如系统学过，反正也不是很费时间。。下面开始&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;先放参考教程: &lt;a href=&#34;https://zhuanlan.zhihu.com/p/25303493&#34;&gt;30 分钟学会 Flex 布局&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;基础知识&#34;&gt;基础知识&lt;/h2&gt;
+&lt;p&gt;指定布局：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;.&lt;span style=&#34;color:#268bd2&#34;&gt;container&lt;/span&gt;{
+    &lt;span style=&#34;color:#719e07&#34;&gt;display&lt;/span&gt;: &lt;span style=&#34;color:#cb4b16&#34;&gt;flex&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;tip: 当设置flex布局后，子元素的float clear verticle-align失效&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;可以在父container中设置的属性&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;属性&lt;/th&gt;
+&lt;th&gt;作用&lt;/th&gt;
+&lt;th&gt;详解&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;flex-direction&lt;/td&gt;
+&lt;td&gt;决定item的排列方向&lt;/td&gt;
+&lt;td&gt;row：（默认）水平方向 &lt;!-- raw HTML omitted --&gt;row-reverse :水平反方向&lt;!-- raw HTML omitted --&gt;column: 垂直方向&lt;!-- raw HTML omitted --&gt;column：垂直方向，由下往上排列&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;flex-wrap&lt;/td&gt;
+&lt;td&gt;决定item是否可换行&lt;/td&gt;
+&lt;td&gt;nowrap: (默认)不换行&lt;!-- raw HTML omitted --&gt;wrap: 超出容器时换行，第一行在最上&lt;!-- raw HTML omitted --&gt;wrap-reverse 同上，不过第一行在最下&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;flex-flow&lt;/td&gt;
+&lt;td&gt;flex-direction和flex-wrapd的简写形式&lt;/td&gt;
+&lt;td&gt;默认值 row nowrap&lt;!-- raw HTML omitted --&gt;原作者写道 没有什么卵用，我😂😂&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;justify-content&lt;/td&gt;
+&lt;td&gt;决定item在主轴的对齐方式&lt;/td&gt;
+&lt;td&gt;flex-start : （默认值）左对齐&lt;!-- raw HTML omitted --&gt;flex-end：右对齐&lt;!-- raw HTML omitted --&gt;center：居中&lt;!-- raw HTML omitted --&gt;space-between：两端对齐，间隙相等&lt;!-- raw HTML omitted --&gt;space-around：类似上面那个属性，不过项目两侧的间隙相等&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;align-items&lt;/td&gt;
+&lt;td&gt;决定item在交叉轴的对齐方式&lt;/td&gt;
+&lt;td&gt;stretch：（默认值）不是很理解。。&lt;!-- raw HTML omitted --&gt;flex-start：交叉轴起点对齐&lt;!-- raw HTML omitted --&gt;flex-end：交叉轴的终点对齐&lt;!-- raw HTML omitted --&gt;center：交叉轴的中点对齐&lt;!-- raw HTML omitted --&gt;baseline：item的第一行文字的基线对齐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;align-content&lt;/td&gt;
+&lt;td&gt;待补充。。我跳着看&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其实学到flex-wrap那里我的问题已经解决了，但这个布局属性实在是太强大了，我决定继续学下去&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;可在子item中设置的属性&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;属性&lt;/th&gt;
+&lt;th&gt;作用&lt;/th&gt;
+&lt;th&gt;详解&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;order&lt;/td&gt;
+&lt;td&gt;定义item在container内的排列顺序&lt;/td&gt;
+&lt;td&gt;越小越靠前&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;flex-basis&lt;/td&gt;
+&lt;td&gt;分配多余空间，的方法？？&lt;/td&gt;
+&lt;td&gt;默认auto&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;待补充。。&lt;/p&gt;- https://fushaolei.github.io/post/html-flex/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Git学习笔记</title>
+        <link>https://fushaolei.github.io/post/git-note/</link>
+        <pubDate>Mon, 03 Feb 2020 10:55:36 +0000</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/git-note/</guid>
+        <description>Sorryfu Blog. https://fushaolei.github.io/post/git-note/ -&lt;blockquote&gt;
+&lt;p&gt;使用Git是程序员必备的一个技能，虽然以前有跟着老师学过，但是一知半解，所以重新学过，本文记录了我学习Git的全过程&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;参考教程&#34;&gt;参考教程&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;学习教程：&lt;a href=&#34;https://www.liaoxuefeng.com/wiki/896043488029600&#34;&gt;廖雪峰的Git教程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;测试：&lt;a href=&#34;https://learngitbranching.js.org/&#34;&gt;learngitbranching&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;笔记&#34;&gt;笔记&lt;/h2&gt;
+&lt;h3 id=&#34;简介&#34;&gt;🥝简介&lt;/h3&gt;
+&lt;p&gt;由Linus用c语言开发的分布式版本控制系统&lt;/p&gt;
+&lt;h3 id=&#34;版本穿梭&#34;&gt;💉版本穿梭&lt;/h3&gt;
+&lt;p&gt;可先用&lt;code&gt;git log&lt;/code&gt;指令查看一下有几个版本提交到了仓库里
+&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzQ0MDcucG5n?x-oss-process=image/format,png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;或用&lt;code&gt;git log --pretty=oneline&lt;/code&gt;可以简单的看到版本号&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzQ3NDkucG5n?x-oss-process=image/format,png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;版本倒退回过去&#34;&gt;版本倒退（回过去）&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;git reset --hard ?&lt;/code&gt;&lt;br&gt;
+&lt;strong&gt;?里&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以填&lt;code&gt;HEAD^&lt;/code&gt;标识上个版本，上上个版本就是&lt;code&gt;HEAD^^&lt;/code&gt;，假如更上的话就是&lt;code&gt;HEAD~100&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;也可以直接填版本号，只要写前几个就行，比如上面直接写&lt;code&gt;git reset --hard 9410f&lt;/code&gt;就会退回到上一个版本了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzQ5MDEucG5n?x-oss-process=image/format,png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;版本恢复去未来&#34;&gt;版本恢复（去未来）&lt;/h4&gt;
+&lt;p&gt;首先查看一下历史信息&lt;code&gt;git reflog&lt;/code&gt;,然后根据版本号写&lt;code&gt;git reset --hard 版本号&lt;/code&gt;,就这么简单😋&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzUwMjIucG5n?x-oss-process=image/format,png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;工作区和暂存区&#34;&gt;🛀工作区和暂存区&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;git add 文件&lt;/code&gt;指令是把文件修改添加到暂存区
+而&lt;code&gt;git commit -m &amp;quot;XXXX&amp;quot;&lt;/code&gt;就是往分支上提交更改&lt;/p&gt;
+&lt;h4 id=&#34;撤销修改&#34;&gt;撤销修改&lt;/h4&gt;
+&lt;h5 id=&#34;撤销未被git-add的修改&#34;&gt;撤销未被&lt;code&gt;git add&lt;/code&gt;的修改&lt;/h5&gt;
+&lt;p&gt;&lt;code&gt;git checkout -- file&lt;/code&gt;可以把&lt;code&gt;file&lt;/code&gt;在工作区的修改全部撤销
+这里出现了两种情况&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;未&lt;code&gt;git add&lt;/code&gt;，那么将恢复到未被修改的样子&lt;/li&gt;
+&lt;li&gt;已&lt;code&gt;git add&lt;/code&gt;，然后又修改了一下，那么将恢复到&lt;code&gt;git add&lt;/code&gt;后的样子，就是恢复到最近一次&lt;code&gt;git add&lt;/code&gt;后的样子&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;撤销提交到git-add的修改&#34;&gt;撤销提交到&lt;code&gt;git add&lt;/code&gt;的修改&lt;/h5&gt;
+&lt;p&gt;这里分两步走：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;首先要把在暂存区的给提出来，&lt;code&gt;git restore --staged file&lt;/code&gt;，也就是恢复到未提交修改的状态&lt;/li&gt;
+&lt;li&gt;然后在&lt;code&gt;git checkout -- file&lt;/code&gt; 把在工作区的修改（&lt;code&gt;git restore --staged file&lt;/code&gt;提出来的）全部撤销&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;注：&lt;/strong&gt;
+由于git更新换代，所以这里与廖老师的有些出入，关于&lt;code&gt;git restore --staged file&lt;/code&gt;的功能如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU0MzMucG5n?x-oss-process=image/format,png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;删除文件&#34;&gt;删除文件&lt;/h4&gt;
+&lt;h5 id=&#34;删错了&#34;&gt;删错了&lt;/h5&gt;
+&lt;p&gt;可以用&lt;code&gt;git checkout -- file（被删文件名）&lt;/code&gt;来恢复那个被删文件&lt;/p&gt;
+&lt;h5 id=&#34;确实要删&#34;&gt;确实要删&lt;/h5&gt;
+&lt;p&gt;直接&lt;code&gt;git rm file（要删文件名）&lt;/code&gt;，然后再&lt;code&gt;git commit &lt;/code&gt;提交修改，就行了&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一些想法：这里的&lt;code&gt;git rm file&lt;/code&gt;实际上也是将要做的修改提交到暂存区，然后&lt;code&gt;git commit&lt;/code&gt;才提交修改，因此如果这里想反悔的话，可以用&lt;code&gt;git restore --staged file&lt;/code&gt;把在暂存区的修改给撤销掉
+&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU1MDUucG5n?x-oss-process=image/format,png&#34; alt=&#34;&#34;&gt;
+由图很简单的知道，绿色就代表放入了暂存区，红色就代表未放入&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;由上面许许多多案列可以知道，git操作时，总是先在暂存区里进行操作，然后再提交到分支上🔑&lt;/p&gt;
+&lt;h3 id=&#34;分支管理&#34;&gt;🤳分支管理&lt;/h3&gt;
+&lt;h4 id=&#34;创建-合并分支&#34;&gt;创建 合并分支&lt;/h4&gt;
+&lt;h5 id=&#34;创建&#34;&gt;创建&lt;/h5&gt;
+&lt;p&gt;&lt;code&gt;git switch -c &amp;lt;branch~name&amp;gt;&lt;/code&gt;可以创建然后并转换到这个分支上
+&lt;code&gt;git switch &amp;lt;branch~name&amp;gt;&lt;/code&gt;可用于切换分支，&lt;code&gt;git branch&lt;/code&gt;可以看到已有分支，前面带一个&lt;code&gt;*&lt;/code&gt;的表示现在所在的分支
+&lt;code&gt;git branch -d &amp;lt;branch~name&amp;gt;&lt;/code&gt;这个指令用于删除分支，前提是切换到了其他分支，
+如下
+&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU1MjgucG5n?x-oss-process=image/format,png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h5 id=&#34;关于合并&#34;&gt;关于合并&lt;/h5&gt;
+&lt;p&gt;&lt;code&gt;git merge &amp;lt;branch~name&amp;gt;&lt;/code&gt;合并分支，&lt;strong&gt;产生的冲突只发生在当前的分支上&lt;/strong&gt;&lt;/p&gt;
+&lt;h6 id=&#34;合并冲突与解决方法&#34;&gt;🔥合并冲突与解决方法&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;产生原因：分支与分支在同一个地方（有待研究）的&lt;strong&gt;不同修改&lt;/strong&gt;导致合并时的冲突,这时只能手动的修改冲突的地方，并提交&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;产生冲突后：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU1NTQucG5n?x-oss-process=image/format,png&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU2MTEucG5n?x-oss-process=image/format,png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这时只能手动修改后提交（&lt;code&gt;git add&lt;/code&gt;， &lt;code&gt;git commit&lt;/code&gt;）&lt;/p&gt;
+&lt;p&gt;提交完后可通过 &lt;code&gt;git log --graph --pretty=oneline --abbrev-commit&lt;/code&gt;查看合并的情况
+&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU3MzYucG5n?x-oss-process=image/format,png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;简单总结一下，合并产生的冲突&lt;strong&gt;只能手动解决后提交&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;终于明白上学期和别人合写App时会出现的&lt;code&gt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;HEAD&lt;/code&gt;标识了😋&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;####### 💧合并分支时的模式&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;普通的&lt;code&gt;git merge &amp;lt;branch~name&amp;gt;&lt;/code&gt; 优先采用&lt;code&gt;Fast forward&lt;/code&gt;模式，不会记录分支信息&lt;/li&gt;
+&lt;li&gt;用&lt;code&gt;git merge --no-ff -m &amp;quot;xxxx&amp;quot; &amp;lt;branch~name&amp;gt;&lt;/code&gt;会禁用&lt;code&gt;Fast forward&lt;/code&gt;模式 则会记录分支&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU4MDgucG5n?x-oss-process=image/format,png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;bug分支&#34;&gt;BUG分支&lt;/h4&gt;
+&lt;p&gt;修复bug时，通过创建新的分支来进行修复，然后合并到&lt;code&gt;master&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;当工作现场没有完成的时候👉&lt;code&gt;git stash&lt;/code&gt;隐藏工作现场以方便修改bug，用&lt;code&gt;git stash list&lt;/code&gt;可查看隐藏的东西，当修复完后可用&lt;code&gt;git stash pop&lt;/code&gt;来进行恢复&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注：&lt;/strong&gt; &lt;code&gt;git stash pop&lt;/code&gt;（恢复工作现场并删除隐藏）=&lt;code&gt;git stash apply&lt;/code&gt;（恢复工作现场）+&lt;code&gt;git stash drop&lt;/code&gt;（删除隐藏）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;有的时候需要一个个恢复工作现场&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU4MzIucG5n?x-oss-process=image/format,png&#34; alt=&#34;&#34;&gt;
+那就应该先&lt;code&gt;git stash list&lt;/code&gt;查看一下隐藏的列表，再&lt;code&gt;git stash apply stash@{x}&lt;/code&gt;恢复，然后还有&lt;code&gt;git stash drop&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h5 id=&#34;在master修复的bug的操作复制到其他分支上&#34;&gt;在master修复的bug的操作复制到其他分支上&lt;/h5&gt;
+&lt;p&gt;在要复制到的分支（此分支得先&lt;code&gt;commit&lt;/code&gt;后再操作）上：&lt;code&gt;git cherry-pick  &amp;lt;commit码&amp;gt;&lt;/code&gt;这里的 &lt;code&gt;&amp;lt;commit~码&amp;gt;&lt;/code&gt;是指修复bug的分支的commit号，就像下面这张图的&lt;code&gt;34bbddd&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU5NDkucG5n?x-oss-process=image/format,png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDcwMDAxNTUucG5n?x-oss-process=image/format,png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;多人协作待重读未总结&#34;&gt;📌多人协作(待重读，未总结)&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;git remote -v&lt;/code&gt;可以查看远程库的信息，可以发现，若本地的分支如不推送到远程，对其他人是不可见的，可用&lt;code&gt;git push origin &amp;lt;branch~name&amp;gt;&lt;/code&gt;来推送，如果失败可以先&lt;code&gt;git pull&lt;/code&gt;然后再修改什么的，在本地创建和远程分支对应的分支，使用&lt;code&gt;git checkout -b branch-name origin/branch-name&lt;/code&gt;，本地和远程分支的名称最好一致；
+建立本地分支和远程分支的关联，使用&lt;code&gt;git branch --set-upstream branch-name origin/branch-name&lt;/code&gt;
+从远程抓取分支，使用&lt;code&gt;git pull&lt;/code&gt;，如果有冲突，要先处理冲突。&lt;/p&gt;
+&lt;h4 id=&#34;rebase未理解&#34;&gt;📌rebase(未理解)&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;git rebase&lt;/code&gt;操作可以把本地未push的分叉提交历史整理成直线；&lt;/p&gt;
+&lt;h3 id=&#34;指令总结&#34;&gt;🍻指令总结&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;指令&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;git init&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;初始化&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;git status&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;查看状态&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;git diff .&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;可以查看具体被修改了那些内容（应在&lt;code&gt;git add .&lt;/code&gt;前使用）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;git log&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;可以查看有几个版本提交到仓库里&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;git log --pretty=oneline&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;同上，不过简化了些&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;git reflog&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;可以查看每一次命令（可以看到版本号）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;gir reset --hard 版本号&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;版本退回或回溯&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;git add 文件名&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;把修改放到暂存区&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;git commit -m &amp;quot;xxxxx&amp;quot;&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;一次性把暂存区的所有修改提交到分支上&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;git checkout -- &amp;lt;file~name&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;可把未&lt;code&gt;git add&lt;/code&gt;的文件修改全部撤销&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;git retore --staged &amp;lt;file~name&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;把&lt;code&gt;&amp;lt;file~name&amp;gt;&lt;/code&gt;在暂存区的东西移出(到工作区，也就是可以进行&lt;code&gt;git checkout -- &amp;lt;file~name&amp;gt;&lt;/code&gt;操作)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;git rm &amp;lt;file~name&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;删除file文件，并提交修改到暂存区中&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;git switch &amp;lt;branch~name&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;切换分支&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;git switch -c &amp;lt;branch~name&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;创建并切换到新的分支&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;git branch&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;查看已有分支，带&lt;code&gt;*&lt;/code&gt;的是现所在分支&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;git branch -d &amp;lt;branch~name&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;删除分支（前提是已&lt;code&gt;switch&lt;/code&gt;到其他分支上）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;git branch -D &amp;lt;branch~name&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;删除分支,强行删除&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;git merge &amp;lt;branch~name&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;合并分支（优先采用&lt;code&gt;Fast forward&lt;/code&gt;模式）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;git merge --no-ff -m &amp;quot;xxxx&amp;quot; &amp;lt;branch~name&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;合并分支（禁用&lt;code&gt;Fast forward&lt;/code&gt;模式）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;git log --graph --pretty=oneline --abbrev-commit&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;查看合并情况&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;git stash&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;隐藏工作现场&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;git stash list&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;可查看&lt;code&gt;stash&lt;/code&gt;的东西&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;git stash pop&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;恢复工作现场，注：&lt;code&gt;git stash pop&lt;/code&gt;=&lt;code&gt;git stash apply&lt;/code&gt;+&lt;code&gt;git stash drop&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;git cherry-pick  &amp;lt;commit码&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;复制操作&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;git remote&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;查看远程库的信息，用&lt;code&gt;git remote -v&lt;/code&gt;可以看到更详细的信息&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;git push origin &amp;lt;branch~name&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;推送名为&lt;code&gt;&amp;lt;branch~name&amp;gt;&lt;/code&gt;的分支&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;- https://fushaolei.github.io/post/git-note/ - </description>
+        </item>
+    
+    
+  </channel>
+</rss> 

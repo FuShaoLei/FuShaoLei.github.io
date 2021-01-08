@@ -1,0 +1,982 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sorryfu Blog.</title>
+    <link>https://fushaolei.github.io/</link>
+    <description>Recent content on Sorryfu Blog.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Fri, 08 Jan 2021 12:54:02 +0800</lastBuildDate>
+    
+        <atom:link href="https://fushaolei.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>实习小结</title>
+        <link>https://fushaolei.github.io/post/sina-work-knowledge/</link>
+        <pubDate>Wed, 25 Nov 2020 00:16:03 +0000</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/sina-work-knowledge/</guid>
+        <description>Sorryfu Blog. https://fushaolei.github.io/post/sina-work-knowledge/ -&lt;p&gt;时间飞逝，不知不觉在新浪已经待了快两个月了（android实习），从懵懂无知的小白到懵懂无知的小白，可谓经历颇多啊，下面就来小结下这两个月来的收获&lt;/p&gt;
+&lt;h2 id=&#34;布局性能的优化&#34;&gt;布局性能的优化&lt;/h2&gt;
+&lt;h3 id=&#34;减少层级&#34;&gt;减少层级&lt;/h3&gt;
+&lt;p&gt;首先，嵌套的层级越多，就意味着在渲染的时候的时间越长，性能就越低，所以应该去除掉没必要的层级&lt;/p&gt;
+&lt;h3 id=&#34;用framelayout替代relativelayout&#34;&gt;用&lt;code&gt;FrameLayout&lt;/code&gt;替代&lt;code&gt;RelativeLayout&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;当做一个比如说左边是图标，然后最右边是文字的界面需求时（就是两端都有东西），我之前最开始想到的就是&lt;code&gt;RelativeLayout&lt;/code&gt;布局了，为什么，因为好用嘛，直接一个&lt;code&gt;alignParentRight&lt;/code&gt;或&lt;code&gt;alignParentLeft&lt;/code&gt;就可以放到两端了，然后再来一个什么&lt;code&gt;centerHorizontal&lt;/code&gt;啊，简直方便的不要不要的，为什么不用？？&lt;/p&gt;
+&lt;p&gt;因为&lt;code&gt;RelativeLayout&lt;/code&gt;在绘制的时候要经过两次测绘，性能极差，在正常情况下最好不用。&lt;/p&gt;
+&lt;p&gt;这种两端都有控件的需求其实可以用&lt;code&gt;FrameLayout&lt;/code&gt;帧布局来做的，之前的我一直图快，都没有去留意这些东西，那怎么做呢。可以用layout_gravity属性去控制控件的位置，甚至可以多个控制，比如&lt;code&gt;layout_gravity = &amp;quot;right|center_vertical&amp;quot;&lt;/code&gt;就是把这个控件放在右边，然后又让它在竖直的中间，这些我还是第一次了解到&lt;/p&gt;
+&lt;h2 id=&#34;代码规范化&#34;&gt;代码规范化&lt;/h2&gt;
+&lt;p&gt;代码规范化其实是为了给维护的人看的，包括必要的空格啊，必要的换行啊之类的&lt;/p&gt;
+&lt;h3 id=&#34;必要的空格&#34;&gt;必要的空格&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;注释后空格&lt;/li&gt;
+&lt;li&gt;花括号前要空格&lt;/li&gt;
+&lt;li&gt;逗号后要空格&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;==&lt;/code&gt;或&lt;code&gt;!=&lt;/code&gt;前后都要空格，类似的又很多&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;类似的有很多，其实这我一开始也没理解为什么要空格，其实一 是为了提高阅读性，二呢也是为了提高可维护性&lt;/p&gt;
+&lt;h2 id=&#34;简化代码&#34;&gt;简化代码&lt;/h2&gt;
+&lt;p&gt;想起了一个这几天发生的事情，哈哈，就是我要判断一个布尔值是不是为true嘛，然后我居然写了这样的代码&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;isShow &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#cb4b16&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;哈哈 现在想起来真是好笑，像是刚学会飞的小鸟，笨拙的扑棱着翅膀&lt;/p&gt;
+&lt;p&gt;其实还有一些可以简化的代码，比如&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;boolean&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;isOk&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;String name&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;mName&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;equal&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;name&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#cb4b16&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+    &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#cb4b16&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;其实不就是想判断是否相等嘛，其实可以直接返回的，不用这么麻烦，这种冗余的代码表示我就犯过几次。。。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;boolean&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;isOk&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;String name&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; mName&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;equal&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;name&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;类似的代码还有很多，还有什么三元运算符之类的， 就不一一例举了&lt;/p&gt;
+&lt;h2 id=&#34;让自己更加意识到自己的不足&#34;&gt;让自己更加意识到自己的不足&lt;/h2&gt;
+&lt;p&gt;每一次&lt;code&gt;code review&lt;/code&gt;的时候都会被大佬灵魂拷问许多东西，比如类是什么，static是什么之类的问题，看似很简单，也很基础，可我就是偏偏答不上来，我虽然知道static，但是没有去想过它本质是个什么，然后被大佬突然这么一问，简直脑袋一片空白，毫无概念。再来列一些自己最常犯的错误。。&lt;/p&gt;
+&lt;h3 id=&#34;判断string类型和另一个string类型的时候&#34;&gt;判断String类型和另一个String类型的时候&lt;/h3&gt;
+&lt;p&gt;这个是比较无语的错误&lt;/p&gt;
+&lt;p&gt;我经常写着写着就顺着写成这样了：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;isShow &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;实际上，这样的话如果isShow为1的话还是会判为false的，事实上应该用equals去判断是否相等。&lt;/p&gt;
+&lt;h3 id=&#34;思考的太局限&#34;&gt;思考的太局限&lt;/h3&gt;
+&lt;p&gt;有时候在做一个功能的时候，总是只想着怎么把它给做出来，然后就局限在一个类里边或者一个方法里边，没有往大的方面去思考，不去思考以后功能扩展的话会怎么样，就会局限在一块小小的空间里。&lt;/p&gt;
+&lt;p&gt;记得有一次在feed流里改造一个item view 但是它们传过来的数据稍微有些不一样，然后我就不管了，直接用原来的bean结构，这其实就不符合面向对象思想，因为数据结构不一样的就不能视为一个对象，当时的我并没有意识到这一点，大佬还给我讲了很久的面向对象😥。&lt;/p&gt;
+&lt;h3 id=&#34;防止空指针错误防止越界错误&#34;&gt;防止空指针错误，防止越界错误&lt;/h3&gt;
+&lt;p&gt;越简单的问题，越容易被忽略，而往往就是这些简单的问题，就会导致一些莫名其妙的crash。我就犯过好多次。。。&lt;/p&gt;
+&lt;p&gt;思维过程应该是这样先想变量是否可用？（是否不为null）然后，才想其他的东西&lt;/p&gt;
+- https://fushaolei.github.io/post/sina-work-knowledge/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>数据结构：图</title>
+        <link>https://fushaolei.github.io/post/data-structure-map/</link>
+        <pubDate>Tue, 24 Nov 2020 22:28:25 +0000</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/data-structure-map/</guid>
+        <description>Sorryfu Blog. https://fushaolei.github.io/post/data-structure-map/ -&lt;h2 id=&#34;图的定义和术语&#34;&gt;图的定义和术语&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;图 顶点和边的集合&lt;/li&gt;
+&lt;li&gt;无向图：边无方向&lt;/li&gt;
+&lt;li&gt;有向图：边有方向&lt;/li&gt;
+&lt;li&gt;完全图：任意两点都有边连接
+&lt;ul&gt;
+&lt;li&gt;无向完全图&lt;/li&gt;
+&lt;li&gt;有向完全图&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;顶点的度：与该顶点相关联的边的数目
+&lt;ul&gt;
+&lt;li&gt;入度：以自己为终点的有向边的数目&lt;/li&gt;
+&lt;li&gt;出度：以自己为始点的有向边的数目&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;路径：接续的边构成的顶点序列&lt;/li&gt;
+&lt;li&gt;路径长度：&lt;/li&gt;
+&lt;li&gt;回路/回环：第一个顶点和最后一个顶点相同的路径&lt;/li&gt;
+&lt;/ul&gt;
+- https://fushaolei.github.io/post/data-structure-map/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>通过一个小小开源项目获取jetbrains license的经历</title>
+        <link>https://fushaolei.github.io/post/get-the-jetbrains-license/</link>
+        <pubDate>Sat, 21 Nov 2020 22:41:39 +0000</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/get-the-jetbrains-license/</guid>
+        <description>Sorryfu Blog. https://fushaolei.github.io/post/get-the-jetbrains-license/ -&lt;h2 id=&#34;楔子&#34;&gt;楔子&lt;/h2&gt;
+&lt;p&gt;对于大多数收费软件，例如ps，pr，idea等等之类的，我大多数是白嫖，需要授权码的话就去网上随便一搜，遍地都是，一个不行就换下一个，总之 总是能找到可以用的。诸如此类的事情，数不胜数。甚至老师当时教springboot的时候（要用IDEA），就直接提供破解方法给我们了。。原因呢，很简单，因为我们学生无力购买这花费高昂的软件，然后又想使用，所以不得不用盗版的了，这也是情有可原的，再一个是，白嫖是人类的天性（也不能说是全部），就算软件的价格在可以承担的范围内，仍会有人去用盗版的，为什么，因为有免费的谁会去花钱呐哈哈哈。当然。当时安装IDEA的时候我也用的盗版，软件到期时间直接他吗的干到2089年😂估计那个时候我已经驾鹤西去了。&lt;/p&gt;
+&lt;p&gt;然后不知道怎么，在网上了解到，可以通过学生的身份去申请使用权，可是我没有学生邮箱啊，学校没发。。然后又了解到可以用自己的开源项目去申请，刚好手中有一个hexo主题的项目，hexo-theme-white，这主题也注入了自己好多的心血，今年七月开的坑，虽然已经暂停维护一个月了，不过已有六十多颗star，有将近二十个fork，还收到了4，5个PR，还是蛮开心的，第一次维护项目，那感觉真是奇妙啊，每一次被star都是对我的肯定，然后我还建了个群（不过现在已经解散了，感觉没什么用），大家讨论来讨论去的，还是蛮开心的，因为感觉自己的东西被别人认可了，那感觉真不是一时的开心，而是持续的，有时候可用偷偷躲在被窝里笑的开心哈哈哈&lt;/p&gt;
+&lt;h2 id=&#34;初试&#34;&gt;初试&lt;/h2&gt;
+&lt;p&gt;抱着试一试的心态，我打开了这个网址 &lt;a href=&#34;https://www.jetbrains.com/zh-cn/community/opensource/&#34;&gt;https://www.jetbrains.com/zh-cn/community/opensource/&lt;/a&gt; 点击申请后进入申请界面申请即可，注意开源项目必须是持续开发三个月的项目，当时我就用了我从六七月份开始开坑的hexo主题&lt;a href=&#34;https://github.com/FuShaoLei/hexo-theme-white&#34;&gt;hexo-theme-white&lt;/a&gt;项目进行申请，虽然只是一个小小的html项目，但是里边也侵入了我很多的心血和时间，不过我感到蛮快乐的，因为自己的开源项目得到了许多人的肯定（截至目前有70多颗Star了），然后这中间也有建立过QQ群，然后也和我的“用户”交流什么的啊，同时也得到了一些PR，啊，这感觉真是奇妙啊&lt;/p&gt;
+&lt;h2 id=&#34;回应&#34;&gt;回应&lt;/h2&gt;
+&lt;p&gt;然后，过了大概三四天吧，就有一个负责人联系我了：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20201211003808.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;哦，原来是叫我把授权码填入Github的简介中啊，然后再过了两天，审批就通过了！JetBrains会给你发一个授权的网址，然后进去后注册你的账号，然后授权就完成啦！进入你的账户的主页就可以看到：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20201211004151.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;左边可以看到我用来申请的项目，然后右边可以看到一个&lt;code&gt;License For non-commercial open source&lt;/code&gt;，即用于非商业的开源，不以商业目的的开源，然后下边可以看到，你可以用的软件，下载软件后登录你的账号密码就可以使用了！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20201211004533.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;后记&#34;&gt;后记&lt;/h2&gt;
+&lt;p&gt;顺便推荐JetBrains家好用的一些软件~，&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;DataGrip&lt;/code&gt;用于管理数据库的工具&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Clion&lt;/code&gt;写C或C++的IDE&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;IDEA&lt;/code&gt;功能强大的Java IDE&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我暂时用到就那么多，一个好用的IDE会是程序员手中的利器，会让我在敲代码的时候幸福感满满啊&lt;/p&gt;
+- https://fushaolei.github.io/post/get-the-jetbrains-license/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>踩坑日记</title>
+        <link>https://fushaolei.github.io/post/error-note/</link>
+        <pubDate>Thu, 05 Nov 2020 20:23:35 +0000</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/error-note/</guid>
+        <description>Sorryfu Blog. https://fushaolei.github.io/post/error-note/ -&lt;blockquote&gt;
+&lt;p&gt;一把辛酸泪&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;使用okhttp-3-时&#34;&gt;使用OKHttp 3 时&lt;/h2&gt;
+&lt;p&gt;出现java.lang.BootstrapMethodError: Exception from call site #0 bootstrap method&lt;/p&gt;
+&lt;p&gt;解决方式：在build.gradle中添加以下代码 &lt;a href=&#34;https://developer.android.com/studio/write/java8-support&#34;&gt;Java8的新特性&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;compileOptions{
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;参考: &lt;a href=&#34;https://blog.csdn.net/qq_32425789/article/details/88838587&#34;&gt;https://blog.csdn.net/qq_32425789/article/details/88838587&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;使用rxjava时&#34;&gt;使用RxJava时&lt;/h2&gt;
+&lt;p&gt;observeOn(AndroidSchedulers.mainThread())报错&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;待定，这个最后是直接复制别人的解决的。。。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;使用arouter时&#34;&gt;使用Arouter时&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;出现：android.content.ActivityNotFoundException: Unable to find explicit activity class&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;原因是没有给新增的activity注册&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;因为定义了一个基类的activity，然后在复用的时候忘记注册新增的activity了（之前都是使用android studio自带的创建方法创建的，它会帮你自动注册，这次没有这样，也怪自己太粗心大意，在这里翻车了QAQ）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;参数未传进来&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;有以下几种情况会造成这样的情况&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;未在&lt;code&gt;onCreate()&lt;/code&gt;方法里 进行 &lt;code&gt;ARouter.getInstance().inject(this);&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;未在&lt;code&gt;onCreate()&lt;/code&gt;方法里进行值的判断（存疑）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;使用webview时&#34;&gt;使用webview时&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;图片加载不出来&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在AndroidManifest文件中加入&lt;code&gt;android:usesCleartextTraffic=&amp;quot;true&amp;quot;&lt;/code&gt;，然后按如下代码设置webview&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mWebView.getSettings().setJavaScriptEnabled(true);//启用js
+mWebView.getSettings().setBlockNetworkImage(false);//解决图片不显示
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;参考：https://blog.csdn.net/u013320868/article/details/52837671&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;使用relativelayout布局时各种乱七八糟的属性&#34;&gt;使用RelativeLayout布局时各种乱七八糟的属性&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;总结如下&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;与parent相对的属性&#34;&gt;与parent相对的属性&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;属性&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignParentTop&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示widget的&lt;strong&gt;顶部&lt;/strong&gt;和Container的&lt;strong&gt;顶部&lt;/strong&gt;对齐。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignParentBottom&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示widget的&lt;strong&gt;底部&lt;/strong&gt;和Container的&lt;strong&gt;底部&lt;/strong&gt;对齐。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignParentStart&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示widget的左边和Container的起始边缘对齐。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignParentEnd&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示widget的&lt;strong&gt;左边&lt;/strong&gt;和Container的结束边缘对齐。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignParentLeft&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示widget的&lt;strong&gt;左边&lt;/strong&gt;和Container的&lt;strong&gt;左边&lt;/strong&gt;对齐。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignParentRight&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示widget的&lt;strong&gt;右边&lt;/strong&gt;和Container的&lt;strong&gt;右边&lt;/strong&gt;对齐。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_centerInParent&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示widget处于Container平面上的&lt;strong&gt;正中间&lt;/strong&gt;。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignWithParentIfMissing&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;若设置true，则当该控件layout_toLeftOf, layout_toRightOf等找不到相对的参考widget时，就以父container为参考。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;与widget相对的布局&#34;&gt;与widget相对的布局&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;属性&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_above&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示该widget位于参数值标识的widget的上方。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_below&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示该widget位于参数值标识的widget的下方。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignTop&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示该widget的&lt;strong&gt;顶部&lt;/strong&gt;与参数值标识的widget的&lt;strong&gt;顶部&lt;/strong&gt;对齐。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignBottom&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示该widget的&lt;strong&gt;底部&lt;/strong&gt;与参数值标识的widget的**底部*8对齐。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignStart&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示该widget的&lt;strong&gt;起始边缘&lt;/strong&gt;与参数值标识的widget的&lt;strong&gt;起始边缘&lt;/strong&gt;对齐。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignEnd&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示该widget的&lt;strong&gt;结束边缘&lt;/strong&gt;与参数值标识的widget的&lt;strong&gt;结束边缘&lt;/strong&gt;对齐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignLeft&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示该widget的&lt;strong&gt;左边&lt;/strong&gt;与参数值标识的widget的&lt;strong&gt;左边&lt;/strong&gt;对齐。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignRight&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示该widget的&lt;strong&gt;右边&lt;/strong&gt;参数值标识的widget的&lt;strong&gt;右边&lt;/strong&gt;对齐。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_centerHorizontal&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示widget处于Container&lt;strong&gt;水平方向上的中间&lt;/strong&gt;。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_centerVertical&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示widget处于Container&lt;strong&gt;垂直方向上的中间&lt;/strong&gt;。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignBaseline&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示该widget的BaseLine与参数值标识的widget的BaseLine对齐。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_toLeftOf&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示该widget&lt;strong&gt;位于参数值标识的widget的左方&lt;/strong&gt;。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_toRightOf&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示该widget&lt;strong&gt;位于参数值标识的widget的右方&lt;/strong&gt;。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_toStartOf&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;🚩表示该widget&lt;strong&gt;结束边缘&lt;/strong&gt;与参数值标识的widget的&lt;strong&gt;起始边缘&lt;/strong&gt;对齐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_toEndOf&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;🚩表示该widget&lt;strong&gt;起始边缘&lt;/strong&gt;与参数值标识的widget的&lt;strong&gt;结束边缘&lt;/strong&gt;对齐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;延时&#34;&gt;延时&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;场景：（android）点击首页的listview里的item后进入详情页时进行锚点（用户看不到锚点动作）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我一开始想到的就是&lt;code&gt;Thread.sleep&lt;/code&gt;，，，，QAQ 不用想，就是错的，&lt;code&gt;Thread.sleep&lt;/code&gt;是让整个线程都休眠了，期间就不会进行任何的工作了。。。&lt;/p&gt;
+&lt;p&gt;正确做法：使用Handler的postdelay，&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;待补充&lt;/p&gt;
+&lt;/blockquote&gt;
+- https://fushaolei.github.io/post/error-note/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>数据结构：树和二叉树</title>
+        <link>https://fushaolei.github.io/post/data-structure-tree/</link>
+        <pubDate>Sat, 31 Oct 2020 12:42:57 +0000</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/data-structure-tree/</guid>
+        <description>Sorryfu Blog. https://fushaolei.github.io/post/data-structure-tree/ -&lt;blockquote&gt;
+&lt;p&gt;补课&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;二叉数的性质和存储结构&#34;&gt;二叉数的性质和存储结构&lt;/h2&gt;
+&lt;p&gt;性质&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在二叉树的第 i 层上至多有 &lt;strong&gt;2的i-1次幂&lt;/strong&gt; 个结点，最少有 1 结点&lt;/li&gt;
+&lt;li&gt;深度为 k 的二叉树至多有 &lt;strong&gt;2的k次幂&lt;/strong&gt; -1 个结点，最少有 k 个结点&lt;/li&gt;
+&lt;li&gt;对任何一棵二叉树T，如果其叶子数为 a , 度为 2 的结点数位 b，则 a = b + 1&lt;/li&gt;
+&lt;li&gt;具有n个结点的完全二叉树的深度为  log以2为底n的对数  + 1&lt;/li&gt;
+&lt;li&gt;懒了，没看&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;两种特殊形式的二叉树&#34;&gt;两种特殊形式的二叉树&lt;/h3&gt;
+&lt;h4 id=&#34;满二叉树&#34;&gt;满二叉树&lt;/h4&gt;
+&lt;p&gt;一棵 深度为 k 的二叉树且有 &lt;strong&gt;2的k次幂&lt;/strong&gt; -1 个结点的二叉树称为&lt;strong&gt;满二叉树&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;特点&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;每层都满&lt;/li&gt;
+&lt;li&gt;叶子节点全在底层&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;完全二叉树&#34;&gt;完全二叉树&lt;/h4&gt;
+&lt;p&gt;深度为k的具有n个节点的二叉树，当且仅当其每一个节点都与深度为k的满二叉树中编号为1~n的节点一一对应时，称之为完全二叉树&lt;/p&gt;
+&lt;p&gt;（可以缺少某个叶子节点）&lt;/p&gt;
+&lt;p&gt;特点&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;叶子只能分布在层次最大的两层上&lt;/li&gt;
+&lt;li&gt;对任一结点，如果其右子树的最大层次为 i，则其左子树的最大层次必为 i 或 i+1&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;关系&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;满二叉树 一定是 完全二叉树&lt;/li&gt;
+&lt;li&gt;完全二叉树 不一定是 满二叉树&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;二叉树的存储结构&#34;&gt;二叉树的存储结构&lt;/h3&gt;
+&lt;h4 id=&#34;顺序存储&#34;&gt;顺序存储&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;color:#719e07&#34;&gt;#&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;define MAXTSIZE 100&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;#&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;define TElemType char&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;typedef&lt;/span&gt; TElemType SqBiTree[MAXTSIZE];
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;实现：按满二叉树的结点层次编号，依次存放二叉树中的数据元素&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;缺点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;大小固定&lt;/li&gt;
+&lt;li&gt;浪费空间&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;特点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;结点间关系蕴含在其存储位置中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;链式存储&#34;&gt;链式存储&lt;/h3&gt;
+&lt;h4 id=&#34;二叉链表&#34;&gt;二叉链表&lt;/h4&gt;
+&lt;p&gt;每个结点有两个指针指向其左右孩子&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//链式存储结构
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//二叉链表
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;typedef&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;struct&lt;/span&gt; BiNode {
+    TElemType data;
+    &lt;span style=&#34;color:#719e07&#34;&gt;struct&lt;/span&gt; BiNode &lt;span style=&#34;color:#719e07&#34;&gt;*&lt;/span&gt;lchild,&lt;span style=&#34;color:#719e07&#34;&gt;*&lt;/span&gt;rchild;&lt;span style=&#34;color:#586e75&#34;&gt;//左右孩子指针
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;}BiNode,&lt;span style=&#34;color:#719e07&#34;&gt;*&lt;/span&gt;BiTree;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;在n个结点的二叉链表中，有n+1个空指针域&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;三叉链表&#34;&gt;三叉链表&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//三叉链表
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;typedef&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;struct&lt;/span&gt; TriTNode{
+    TElemType data;
+    &lt;span style=&#34;color:#719e07&#34;&gt;struct&lt;/span&gt; TriTNode &lt;span style=&#34;color:#719e07&#34;&gt;*&lt;/span&gt;lchild,&lt;span style=&#34;color:#719e07&#34;&gt;*&lt;/span&gt;parent,&lt;span style=&#34;color:#719e07&#34;&gt;*&lt;/span&gt;rchild;&lt;span style=&#34;color:#586e75&#34;&gt;//左孩子，双亲，右孩子
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;}TriTNode,&lt;span style=&#34;color:#719e07&#34;&gt;*&lt;/span&gt;TriTree;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;遍历二叉树和线索二叉树&#34;&gt;遍历二叉树和线索二叉树&lt;/h2&gt;
+&lt;h3 id=&#34;遍历二叉树&#34;&gt;遍历二叉树&lt;/h3&gt;
+&lt;p&gt;顺着某一个条路径，使每个结点均被访问且仅被访问一次&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;先序遍历，根，左，右&lt;/li&gt;
+&lt;li&gt;中序遍历，左，根，右&lt;/li&gt;
+&lt;li&gt;后序遍历，左，右，根&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;根据遍历确定二叉树&lt;/strong&gt;
+由先序遍历和中序遍历，或由后序遍历和中序遍历，可以确定唯一一棵二叉树&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;递归算法&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;color:#586e75&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; * 先序遍历
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; * 若为空，则空操作
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; * 若为非空，根，左，右
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; */&lt;/span&gt;
+&lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;PreOrderTraverse&lt;/span&gt;(BiTree T) {
+    &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt; (T &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#b58900&#34;&gt;NULL&lt;/span&gt;) &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt;;
+    &lt;span style=&#34;color:#719e07&#34;&gt;else&lt;/span&gt; {
+        visit(T);&lt;span style=&#34;color:#586e75&#34;&gt;//访问根结点
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        PreOrderTraverse(T&lt;span style=&#34;color:#719e07&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt;lchild);&lt;span style=&#34;color:#586e75&#34;&gt;//递归遍历左子树
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        PreOrderTraverse(T&lt;span style=&#34;color:#719e07&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt;rchild);&lt;span style=&#34;color:#586e75&#34;&gt;//递归遍历右子树
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;    }
+}
+
+&lt;span style=&#34;color:#586e75&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; * 中序遍历
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; * 若为空，则空操作
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; * 若为非空，左，根，右
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; */&lt;/span&gt;
+&lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;InOrderTraverse&lt;/span&gt;(BiTree T) {
+    &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt; (T &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#b58900&#34;&gt;NULL&lt;/span&gt;) &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt;;
+    &lt;span style=&#34;color:#719e07&#34;&gt;else&lt;/span&gt; {
+        InOrderTraverse(T&lt;span style=&#34;color:#719e07&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt;lchild);
+        visit(T);
+        InOrderTraverse(T&lt;span style=&#34;color:#719e07&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt;rchild);
+    }
+}
+
+&lt;span style=&#34;color:#586e75&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; * 后序遍历
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; * 若为空，则空操作
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; * 若为非空，左，右，根
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; */&lt;/span&gt;
+&lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;PostOrderTraverse&lt;/span&gt;(BiTree T) {
+    &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt; (T &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#b58900&#34;&gt;NULL&lt;/span&gt;) &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt;;
+    &lt;span style=&#34;color:#719e07&#34;&gt;else&lt;/span&gt; {
+        PostOrderTraverse(T&lt;span style=&#34;color:#719e07&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt;lchild);
+        PostOrderTraverse(T&lt;span style=&#34;color:#719e07&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt;rchild);
+        visit(T);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;树的存储结构&#34;&gt;树的存储结构&lt;/h2&gt;
+&lt;h3 id=&#34;3孩子兄弟表示法&#34;&gt;3.孩子兄弟表示法&lt;/h3&gt;
+&lt;p&gt;二叉链表，分别指向第一个孩子结点和下一个兄弟结点&lt;/p&gt;
+&lt;h2 id=&#34;哈夫曼树及其应用&#34;&gt;哈夫曼树及其应用&lt;/h2&gt;
+- https://fushaolei.github.io/post/data-structure-tree/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>新浪工作流程小记录</title>
+        <link>https://fushaolei.github.io/post/sina-workflow/</link>
+        <pubDate>Wed, 21 Oct 2020 19:34:54 +0000</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/sina-workflow/</guid>
+        <description>Sorryfu Blog. https://fushaolei.github.io/post/sina-workflow/ -&lt;blockquote&gt;
+&lt;p&gt;小记录&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;1确认需求&#34;&gt;1.确认需求&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;是否需要后端的接口，是否定好了协议，或者增加了什么字段&lt;/li&gt;
+&lt;li&gt;是否有设计稿，哪里和哪里对齐什么的&lt;/li&gt;
+&lt;li&gt;必要的时候，还要找后端或者产品沟通一下&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2创建新分支&#34;&gt;2.创建新分支&lt;/h2&gt;
+&lt;p&gt;分支命名&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果是修bug的就写：&lt;code&gt;issues/fixbug_编号&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;如果是加新功能的就写：&lt;code&gt;features/版本号/功能_名字&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;将分支push到远程仓库&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git push --set-upstream origin &amp;lt;分支名&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;可用&lt;code&gt;git branch -vv&lt;/code&gt;指令查看本地分支是否与远程分支建立了连接&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;3开发&#34;&gt;3.开发&lt;/h2&gt;
+&lt;p&gt;要注意写的代码是否有意义，是否有必要&lt;/p&gt;
+&lt;h2 id=&#34;4code-review&#34;&gt;4.code review&lt;/h2&gt;
+&lt;p&gt;开发完成后要进行code review，操作如下&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;git add .&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;git commmit -m &amp;quot;&amp;quot;&lt;/code&gt;，格式要求如下&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;Feature(或是Fix bug之类的): 更改或增加了什么
+
+Summary: jira
+
+Test Plan: 测试计划
+
+Reviewers: 你指定的要帮你code reivew的人，多个人用英文逗号隔开
+
+Subscribers: #订阅者
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;之后执行&lt;code&gt;arc diff&lt;/code&gt;指令，（在&lt;code&gt;nano editor&lt;/code&gt;里操作指令如下）&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;ctrl+o&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;alt+d&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;enter&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ctrl+x&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;然后就告知你指定的人review你的代码，有不好的地方就修改，然后再次&lt;code&gt;arc diff&lt;/code&gt;，有人accept后就可用执行&lt;code&gt;arc land&lt;/code&gt;指令，这个指令类似&lt;code&gt;git push&lt;/code&gt;，就是推送到了远程仓库上&lt;/p&gt;
+&lt;h2 id=&#34;5提测&#34;&gt;5.提测&lt;/h2&gt;
+&lt;p&gt;然后就可以交给测试去测试了，有bug的话就修bug，然后再次&lt;code&gt;arc diff&lt;/code&gt;,&lt;code&gt;arc land&lt;/code&gt;流程，测试通过后就可以交给产品确认，确认完成后就可以合并了&lt;/p&gt;
+&lt;h2 id=&#34;6合并到devtrunk分支&#34;&gt;6.合并到devTrunk分支&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;在&lt;code&gt;devTrunk&lt;/code&gt;分支下，&lt;code&gt;git pull origin devTrunk&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;切换到&lt;strong&gt;要合并的分支下&lt;/strong&gt;进行 &lt;code&gt;git rebase devTrunk&lt;/code&gt;，如有冲突则进行处理（尚未明白&lt;code&gt;git rebase&lt;/code&gt;的功能）&lt;/li&gt;
+&lt;li&gt;切回到&lt;code&gt;devTrunk&lt;/code&gt;进行 &lt;code&gt;git merge &amp;lt;要合并的分支&amp;gt; --no-ff&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git push origin devTrunk&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;到这里基本完成了，然后测试那边就会集成测试什么的d=====(￣▽￣*)b&lt;/p&gt;
+- https://fushaolei.github.io/post/sina-workflow/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>工作中常用到的git指令</title>
+        <link>https://fushaolei.github.io/post/git-in-work/</link>
+        <pubDate>Tue, 20 Oct 2020 17:04:26 +0000</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/git-in-work/</guid>
+        <description>Sorryfu Blog. https://fushaolei.github.io/post/git-in-work/ -&lt;h2 id=&#34;推送分支并建立连接&#34;&gt;推送分支并建立连接&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;指令&lt;/th&gt;
+&lt;th&gt;作用&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;git branch -vv&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;查看本地分支是否与远端分支建立了连接&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;git push origin &amp;lt;分支名&amp;gt;:&amp;lt;分支名&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;仅仅将本地分支推送到远端分支&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;注意:这个操作只是单纯的把本地的分支推送到远端,尚未建立连接&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;git push --set-upstream origin &amp;lt;分支名&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;将本地分支推送到远端分支并建立连接&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;git checkout -b &amp;lt;分支名&amp;gt; origin/&amp;lt;分支名&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;拉取远程分支到本地（本地与远程建立连接）&lt;/td&gt;
+&lt;td&gt;本地已经由其他分支了&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+- https://fushaolei.github.io/post/git-in-work/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>RelativeLayout中的属性</title>
+        <link>https://fushaolei.github.io/post/android-relativelayout-att/</link>
+        <pubDate>Sun, 18 Oct 2020 23:13:16 +0000</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/android-relativelayout-att/</guid>
+        <description>Sorryfu Blog. https://fushaolei.github.io/post/android-relativelayout-att/ -&lt;h2 id=&#34;与parent相对的属性&#34;&gt;与parent相对的属性&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;属性&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignParentTop&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示widget的&lt;strong&gt;顶部&lt;/strong&gt;和Container的&lt;strong&gt;顶部&lt;/strong&gt;对齐。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignParentBottom&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示widget的&lt;strong&gt;底部&lt;/strong&gt;和Container的&lt;strong&gt;底部&lt;/strong&gt;对齐。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignParentStart&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示widget的左边和Container的起始边缘对齐。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignParentEnd&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示widget的&lt;strong&gt;左边&lt;/strong&gt;和Container的结束边缘对齐。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignParentLeft&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示widget的&lt;strong&gt;左边&lt;/strong&gt;和Container的&lt;strong&gt;左边&lt;/strong&gt;对齐。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignParentRight&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示widget的&lt;strong&gt;右边&lt;/strong&gt;和Container的&lt;strong&gt;右边&lt;/strong&gt;对齐。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_centerInParent&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示widget处于Container平面上的&lt;strong&gt;正中间&lt;/strong&gt;。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignWithParentIfMissing&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;若设置true，则当该控件layout_toLeftOf, layout_toRightOf等找不到相对的参考widget时，就以父container为参考。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;与widget相对的布局&#34;&gt;与widget相对的布局&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;属性&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_above&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示该widget位于参数值标识的widget的上方。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_below&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示该widget位于参数值标识的widget的下方。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignTop&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示该widget的&lt;strong&gt;顶部&lt;/strong&gt;与参数值标识的widget的&lt;strong&gt;顶部&lt;/strong&gt;对齐。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignBottom&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示该widget的&lt;strong&gt;底部&lt;/strong&gt;与参数值标识的widget的**底部*8对齐。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignStart&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示该widget的&lt;strong&gt;起始边缘&lt;/strong&gt;与参数值标识的widget的&lt;strong&gt;起始边缘&lt;/strong&gt;对齐。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignEnd&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示该widget的&lt;strong&gt;结束边缘&lt;/strong&gt;与参数值标识的widget的&lt;strong&gt;结束边缘&lt;/strong&gt;对齐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignLeft&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示该widget的&lt;strong&gt;左边&lt;/strong&gt;与参数值标识的widget的&lt;strong&gt;左边&lt;/strong&gt;对齐。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignRight&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示该widget的&lt;strong&gt;右边&lt;/strong&gt;参数值标识的widget的&lt;strong&gt;右边&lt;/strong&gt;对齐。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_centerHorizontal&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示widget处于Container&lt;strong&gt;水平方向上的中间&lt;/strong&gt;。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_centerVertical&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示widget处于Container&lt;strong&gt;垂直方向上的中间&lt;/strong&gt;。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignBaseline&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示该widget的BaseLine与参数值标识的widget的BaseLine对齐。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_toLeftOf&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示该widget&lt;strong&gt;位于参数值标识的widget的左方&lt;/strong&gt;。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_toRightOf&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示该widget&lt;strong&gt;位于参数值标识的widget的右方&lt;/strong&gt;。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_toStartOf&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;🚩表示该widget&lt;strong&gt;结束边缘&lt;/strong&gt;与参数值标识的widget的&lt;strong&gt;起始边缘&lt;/strong&gt;对齐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_toEndOf&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;🚩表示该widget&lt;strong&gt;起始边缘&lt;/strong&gt;与参数值标识的widget的&lt;strong&gt;结束边缘&lt;/strong&gt;对齐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+- https://fushaolei.github.io/post/android-relativelayout-att/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>C语言基础</title>
+        <link>https://fushaolei.github.io/post/c-base/</link>
+        <pubDate>Thu, 15 Oct 2020 23:34:07 +0000</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/c-base/</guid>
+        <description>Sorryfu Blog. https://fushaolei.github.io/post/c-base/ -&lt;blockquote&gt;
+&lt;p&gt;之前大一还是大二学过，现在都忘光光了QAQ，如今为了复习数据结构要用到，所以要重新学过，以下都是我在菜鸟教程中学习的比较，附上一个地址：https://www.runoob.com/cprogramming/c-tutorial.html&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;第一个c语言程序&#34;&gt;第一个c语言程序&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;color:#719e07&#34;&gt;#&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;include&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//预处理
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;main&lt;/span&gt;(&lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt;) {&lt;span style=&#34;color:#586e75&#34;&gt;//所有程序的入口
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;	printf(&lt;span style=&#34;color:#2aa198&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;Hello World&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;&lt;/span&gt;);&lt;span style=&#34;color:#586e75&#34;&gt;//打印
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;0&lt;/span&gt;;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;基本数据类型&#34;&gt;基本数据类型&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;类型&lt;/th&gt;
+&lt;th&gt;存储大小（字节）&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;char&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;- https://fushaolei.github.io/post/c-base/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Java的基本程序结构设计</title>
+        <link>https://fushaolei.github.io/post/core-java-note-1/</link>
+        <pubDate>Tue, 06 Oct 2020 13:34:37 +0000</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/core-java-note-1/</guid>
+        <description>Sorryfu Blog. https://fushaolei.github.io/post/core-java-note-1/ -&lt;h2 id=&#34;1第一个程序&#34;&gt;1.第一个程序&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;Hello&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+	&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;main&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;String&lt;span style=&#34;color:#719e07&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;]&lt;/span&gt; args&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+		System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;Hello World&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+	&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;public&lt;/code&gt;（访问修饰符） 用于控制对所修饰的类或对象或字段的访问级别&lt;/li&gt;
+&lt;li&gt;class表示这是一个类，Hello则是这个类的类名&lt;/li&gt;
+&lt;li&gt;main方法是所有程序的&lt;strong&gt;入口&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;大括号表示方法体的开始与结束&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2注释&#34;&gt;2.注释&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//单行注释
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;
+&lt;span style=&#34;color:#586e75&#34;&gt;/*
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;多行注释，（不能嵌套使用）
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;*/&lt;/span&gt;
+
+&lt;span style=&#34;color:#586e75&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; * 文档注释
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; * 可用于自动的生成文档
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; */&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;3数据类型&#34;&gt;3.数据类型&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;基本类型&lt;/th&gt;
+&lt;th&gt;位数&lt;/th&gt;
+&lt;th&gt;字节&lt;/th&gt;
+&lt;th&gt;默认值&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;int&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;32&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;short&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;long&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;64&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;0L&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;byte&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;char&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;&#39;u0000&amp;rsquo;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;float&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;32&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;0f&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;double&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;64&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;0d&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;boolean&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;false&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;4变量与常量&#34;&gt;4.变量与常量&lt;/h2&gt;
+&lt;h3 id=&#34;变量&#34;&gt;变量&lt;/h3&gt;
+&lt;h4 id=&#34;声明变量&#34;&gt;声明变量&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; a&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+String name&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;即 以&lt;code&gt;变量类型&lt;/code&gt;  &lt;code&gt;变量名&lt;/code&gt;这种形式来声明一个变量&lt;/p&gt;
+&lt;h4 id=&#34;变量初始化&#34;&gt;变量初始化&lt;/h4&gt;
+&lt;p&gt;声明一个变量后，必须用赋值语句对变量进行&lt;strong&gt;显式初始化&lt;/strong&gt;，如下&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; a &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; 0&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+String name &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;任我行&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;常量&#34;&gt;常量&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;常量就是值不会变的变量&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;可用&lt;code&gt;final&lt;/code&gt;关键字来修饰常量，而且通常此常量名为大写&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;final&lt;/span&gt; String BAIDU_URL &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;www.baidu.com&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;枚举类型&#34;&gt;枚举类型&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;作用：限制变量的取值范围&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;    &lt;span style=&#34;color:#268bd2&#34;&gt;enum&lt;/span&gt; Size &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;SMALL&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;MEDIUM&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;LARGE&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;EXTRA_LARGE&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;那么&lt;code&gt;Size&lt;/code&gt;类型的变量只能取里边的值&lt;/p&gt;
+&lt;h2 id=&#34;5运算符&#34;&gt;5.运算符&lt;/h2&gt;
+&lt;h3 id=&#34;算术运算符&#34;&gt;算术运算符&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;算术运算符&lt;/th&gt;
+&lt;th&gt;表示&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;+&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;加&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;-&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;减&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;*&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;乘&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;除&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;%&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;取模&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;类型转换&#34;&gt;类型转换&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;如参与运算的两个数类型不一致，则结果为较大类型的整型&lt;/li&gt;
+&lt;li&gt;强制转换：(有可能损失信息)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;其他运算符&#34;&gt;其他运算符&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;二元运算符：例如&lt;code&gt;x+=4;&lt;/code&gt;，运算符放于等号左边&lt;/li&gt;
+&lt;li&gt;自增自减运算符
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;++x&lt;/code&gt; 前缀形式会先加1再使用&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;x++&lt;/code&gt; 后缀形式会先使用原来的值，之后才加1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;关系运算符：如&lt;code&gt;==&lt;/code&gt;,&lt;code&gt;!=&lt;/code&gt;，&lt;code&gt;&amp;gt;=&lt;/code&gt;之类的，还有&lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt;和&lt;code&gt;||&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;三元运算符：&lt;code&gt;x&amp;gt;0 ? true : false&lt;/code&gt;如表达式为真，则为&lt;code&gt;true&lt;/code&gt;，如假则为&lt;code&gt;false&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;6字符串&#34;&gt;6.字符串&lt;/h2&gt;
+&lt;p&gt;先跳过，待补充&lt;/p&gt;
+&lt;h2 id=&#34;7输入与输出&#34;&gt;7.输入与输出&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;Scanner input&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; Scanner&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;in&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;请输入一个数字&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; num&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;input&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;nextInt&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//输入
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;你输入的数字是：&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;num&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//输出
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;8控制流程&#34;&gt;8.控制流程&lt;/h2&gt;
+&lt;h4 id=&#34;条件分支流程&#34;&gt;条件分支流程&lt;/h4&gt;
+&lt;p&gt;普通分支语句&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;        &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; a &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; 1&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+        &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; b &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; 2&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+        &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;a &lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt; b&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+            System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;a大于b&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//如果a大于b则执行这个语句
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;a &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; b&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+            System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;a等于b&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//如果a等于b则执行这个语句
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+            System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;a小于b&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//否则就a小于b，当以上两种情况都不是的时候执行
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;条件多分支语句&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;		&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; g&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;2&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+		&lt;span style=&#34;color:#719e07&#34;&gt;switch&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;g&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+		&lt;span style=&#34;color:#719e07&#34;&gt;case&lt;/span&gt; 1&lt;span style=&#34;color:#719e07&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+			System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;是1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//当g是1时执行
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;			&lt;span style=&#34;color:#719e07&#34;&gt;break&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+		&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+		&lt;span style=&#34;color:#719e07&#34;&gt;case&lt;/span&gt; 2&lt;span style=&#34;color:#719e07&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+			System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;是2&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//当g是2时执行
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;			&lt;span style=&#34;color:#719e07&#34;&gt;break&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+		&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+		&lt;span style=&#34;color:#719e07&#34;&gt;default&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+			System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;都不是&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//当以上情况都不是的时候执行
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;			&lt;span style=&#34;color:#719e07&#34;&gt;break&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+		&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+		&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;循环流程&#34;&gt;循环流程&lt;/h4&gt;
+&lt;p&gt;根据条件，反复执行某些操作&lt;/p&gt;
+&lt;h5 id=&#34;for&#34;&gt;&lt;code&gt;for&lt;/code&gt;&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;	&lt;span style=&#34;color:#719e07&#34;&gt;for&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; i&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;0&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&lt;/span&gt;5&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//int i=0是初始值，i&amp;lt;5是循环条件。i++是循环后更新i的值，然后进入下一轮循环
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;		System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;循环第&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;次&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+	&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;while&#34;&gt;&lt;code&gt;while&lt;/code&gt;&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;		&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; u&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;5&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+		&lt;span style=&#34;color:#719e07&#34;&gt;while&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;u&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt;0&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//当为true时执行
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;			System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;u=&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;u&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+			&lt;span style=&#34;color:#719e07&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;-&lt;/span&gt;u&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+		&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;dowhile&#34;&gt;&lt;code&gt;do&lt;/code&gt;..&lt;code&gt;while&lt;/code&gt;&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;		&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; p&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;0&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+		&lt;span style=&#34;color:#719e07&#34;&gt;do&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//无条件进入循环
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;			&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;p&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+			System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;p=&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;p&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+		&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;while&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;p&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&lt;/span&gt;5&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//首先执行一次循环体后进行判断，若为true则继续进行下去
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;for-each增强型for循环&#34;&gt;&lt;code&gt;for each&lt;/code&gt;（增强型&lt;code&gt;for&lt;/code&gt;循环）&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#719e07&#34;&gt;for&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt; 类型 变量名&lt;span style=&#34;color:#719e07&#34;&gt;:&lt;/span&gt; 数组或集合 &lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+循环体
+&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;与普通for循环的区别：for each循环语句的循环变量将会遍历数组中的每个元素，而不是下标值&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;9大数&#34;&gt;9.大数&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;BigInteger&lt;/code&gt;实现任意精度的整数运算&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;BigDecimal&lt;/code&gt;实现任意精度的浮点数运算&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;10数组&#34;&gt;10.数组&lt;/h2&gt;
+&lt;p&gt;存储一组具有&lt;strong&gt;相同数据类型&lt;/strong&gt;的数据元素的有序集合&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#586e75&#34;&gt;// 声明
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; num&lt;span style=&#34;color:#719e07&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;]&lt;/span&gt; sum&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#586e75&#34;&gt;// 静态初始化
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; num&lt;span style=&#34;color:#719e07&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;1&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;2&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;3&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;4&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;5&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#586e75&#34;&gt;//动态初始化
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; num&lt;span style=&#34;color:#719e07&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;[&lt;/span&gt;5&lt;span style=&#34;color:#719e07&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//预先分配内存空间
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;for&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; i&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;0&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&lt;/span&gt;5&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+	num&lt;span style=&#34;color:#719e07&#34;&gt;[&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;*&lt;/span&gt;3&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://fushaolei.github.io/post/core-java-note-1/ - </description>
+        </item>
+    
+    
+  </channel>
+</rss> 

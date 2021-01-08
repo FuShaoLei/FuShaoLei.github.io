@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>《Java核心技术》读书笔记 on Sorryfu Blog.</title>
+    <link>https://fushaolei.github.io/tags/java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
+    <description>Recent content in 《Java核心技术》读书笔记 on Sorryfu Blog.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 04 Jan 2021 13:34:37 +0000</lastBuildDate>
+    
+	<atom:link href="https://fushaolei.github.io/tags/java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>对象与类</title>
+      <link>https://fushaolei.github.io/post/core-java-note-2/</link>
+      <pubDate>Mon, 04 Jan 2021 13:34:37 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/core-java-note-2/</guid>
+      <description>1.面向对象  面向对象编程，是一种通过对象的方式，把现实世界映射到计算机模型的一种编程方法。 面向对象程序设计：程序由对象来组成 类：构造对象的模板或蓝图 对象：类的实例化   类和对象的关系好比 模具 和 具体的用模具实际做出来的东西
+ 2.使用预定义类 构造器  用来构造并初始化对象的一种特殊的方法 构造器的名字应该与类名相同  这里要明确一个东西，比方说，我定义了一个类叫做Animal，然后做了如下的操作
+Animal mAnimal; 此时，mAnimal叫做对象变量，它是一个变量，不是一个对象
+然后做如下操作
+mAnimal = new Animal(); 此时mAnimal引用了一个对象
+3.用户自定义类 隐式参数与显示参数 一句话，隐式参数是调用方法的对象本身（在方法中可用this来表示），显示参数是方法名后面的数值</description>
+    </item>
+    
+    <item>
+      <title>Java的基本程序结构设计</title>
+      <link>https://fushaolei.github.io/post/core-java-note-1/</link>
+      <pubDate>Tue, 06 Oct 2020 13:34:37 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/core-java-note-1/</guid>
+      <description>1.第一个程序 public class Hello { public static void main(String[] args) { System.out.println(&amp;#34;Hello World&amp;#34;); } }  public（访问修饰符） 用于控制对所修饰的类或对象或字段的访问级别 class表示这是一个类，Hello则是这个类的类名 main方法是所有程序的入口 大括号表示方法体的开始与结束  2.注释 //单行注释  /* 多行注释，（不能嵌套使用） */ /** * 文档注释 * 可用于自动的生成文档 */ 3.数据类型    基本类型 位数 字节 默认值     int 32 4 0   short 16 2 0   long 64 8 0L   byte 8 1 0   char 16 2 &#39;u0000&amp;rsquo;   float 32 4 0f   double 64 8 0d   boolean 1  false    4.</description>
+    </item>
+    
+  </channel>
+</rss>

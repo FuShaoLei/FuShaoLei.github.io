@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html><head>
+<title>实习小结</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<meta property="og:title" content="实习小结" />
+<meta property="og:description" content="时间飞逝，不知不觉在新浪已经待了快两个月了（android实习），从懵懂无知的小白到懵懂无知的小白，可谓经历颇多啊，下面就来小结下这两个月来的收获
+布局性能的优化 减少层级 首先，嵌套的层级越多，就意味着在渲染的时候的时间越长，性能就越低，所以应该去除掉没必要的层级
+用FrameLayout替代RelativeLayout 当做一个比如说左边是图标，然后最右边是文字的界面需求时（就是两端都有东西），我之前最开始想到的就是RelativeLayout布局了，为什么，因为好用嘛，直接一个alignParentRight或alignParentLeft就可以放到两端了，然后再来一个什么centerHorizontal啊，简直方便的不要不要的，为什么不用？？
+因为RelativeLayout在绘制的时候要经过两次测绘，性能极差，在正常情况下最好不用。
+这种两端都有控件的需求其实可以用FrameLayout帧布局来做的，之前的我一直图快，都没有去留意这些东西，那怎么做呢。可以用layout_gravity属性去控制控件的位置，甚至可以多个控制，比如layout_gravity = &quot;right|center_vertical&quot;就是把这个控件放在右边，然后又让它在竖直的中间，这些我还是第一次了解到
+代码规范化 代码规范化其实是为了给维护的人看的，包括必要的空格啊，必要的换行啊之类的
+必要的空格  注释后空格 花括号前要空格 逗号后要空格 ==或!=前后都要空格，类似的又很多  类似的有很多，其实这我一开始也没理解为什么要空格，其实一 是为了提高阅读性，二呢也是为了提高可维护性
+简化代码 想起了一个这几天发生的事情，哈哈，就是我要判断一个布尔值是不是为true嘛，然后我居然写了这样的代码
+if(isShow == true){ ..... } 哈哈 现在想起来真是好笑，像是刚学会飞的小鸟，笨拙的扑棱着翅膀
+其实还有一些可以简化的代码，比如
+public boolean isOk(String name){ if(mName.equal(name)){ return true; } return false; } 其实不就是想判断是否相等嘛，其实可以直接返回的，不用这么麻烦，这种冗余的代码表示我就犯过几次。。。
+public boolean isOk(String name){ return mName.equal(name); } 类似的代码还有很多，还有什么三元运算符之类的， 就不一一例举了
+让自己更加意识到自己的不足 每一次code review的时候都会被大佬灵魂拷问许多东西，比如类是什么，static是什么之类的问题，看似很简单，也很基础，可我就是偏偏答不上来，我虽然知道static，但是没有去想过它本质是个什么，然后被大佬突然这么一问，简直脑袋一片空白，毫无概念。再来列一些自己最常犯的错误。。
+判断String类型和另一个String类型的时候 这个是比较无语的错误
+我经常写着写着就顺着写成这样了：
+if(isShow == &#34;1&#34;){ .... } 实际上，这样的话如果isShow为1的话还是会判为false的，事实上应该用equals去判断是否相等。
+思考的太局限 有时候在做一个功能的时候，总是只想着怎么把它给做出来，然后就局限在一个类里边或者一个方法里边，没有往大的方面去思考，不去思考以后功能扩展的话会怎么样，就会局限在一块小小的空间里。
+记得有一次在feed流里改造一个item view 但是它们传过来的数据稍微有些不一样，然后我就不管了，直接用原来的bean结构，这其实就不符合面向对象思想，因为数据结构不一样的就不能视为一个对象，当时的我并没有意识到这一点，大佬还给我讲了很久的面向对象😥。
+防止空指针错误，防止越界错误 越简单的问题，越容易被忽略，而往往就是这些简单的问题，就会导致一些莫名其妙的crash。我就犯过好多次。。。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://fushaolei.github.io/post/sina-work-knowledge/" />
+<meta property="article:published_time" content="2020-11-25T00:16:03+00:00" />
+<meta property="article:modified_time" content="2020-11-25T00:16:03+00:00" /><meta property="og:site_name" content="My Blog" />
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="实习小结"/>
+<meta name="twitter:description" content="时间飞逝，不知不觉在新浪已经待了快两个月了（android实习），从懵懂无知的小白到懵懂无知的小白，可谓经历颇多啊，下面就来小结下这两个月来的收获
+布局性能的优化 减少层级 首先，嵌套的层级越多，就意味着在渲染的时候的时间越长，性能就越低，所以应该去除掉没必要的层级
+用FrameLayout替代RelativeLayout 当做一个比如说左边是图标，然后最右边是文字的界面需求时（就是两端都有东西），我之前最开始想到的就是RelativeLayout布局了，为什么，因为好用嘛，直接一个alignParentRight或alignParentLeft就可以放到两端了，然后再来一个什么centerHorizontal啊，简直方便的不要不要的，为什么不用？？
+因为RelativeLayout在绘制的时候要经过两次测绘，性能极差，在正常情况下最好不用。
+这种两端都有控件的需求其实可以用FrameLayout帧布局来做的，之前的我一直图快，都没有去留意这些东西，那怎么做呢。可以用layout_gravity属性去控制控件的位置，甚至可以多个控制，比如layout_gravity = &quot;right|center_vertical&quot;就是把这个控件放在右边，然后又让它在竖直的中间，这些我还是第一次了解到
+代码规范化 代码规范化其实是为了给维护的人看的，包括必要的空格啊，必要的换行啊之类的
+必要的空格  注释后空格 花括号前要空格 逗号后要空格 ==或!=前后都要空格，类似的又很多  类似的有很多，其实这我一开始也没理解为什么要空格，其实一 是为了提高阅读性，二呢也是为了提高可维护性
+简化代码 想起了一个这几天发生的事情，哈哈，就是我要判断一个布尔值是不是为true嘛，然后我居然写了这样的代码
+if(isShow == true){ ..... } 哈哈 现在想起来真是好笑，像是刚学会飞的小鸟，笨拙的扑棱着翅膀
+其实还有一些可以简化的代码，比如
+public boolean isOk(String name){ if(mName.equal(name)){ return true; } return false; } 其实不就是想判断是否相等嘛，其实可以直接返回的，不用这么麻烦，这种冗余的代码表示我就犯过几次。。。
+public boolean isOk(String name){ return mName.equal(name); } 类似的代码还有很多，还有什么三元运算符之类的， 就不一一例举了
+让自己更加意识到自己的不足 每一次code review的时候都会被大佬灵魂拷问许多东西，比如类是什么，static是什么之类的问题，看似很简单，也很基础，可我就是偏偏答不上来，我虽然知道static，但是没有去想过它本质是个什么，然后被大佬突然这么一问，简直脑袋一片空白，毫无概念。再来列一些自己最常犯的错误。。
+判断String类型和另一个String类型的时候 这个是比较无语的错误
+我经常写着写着就顺着写成这样了：
+if(isShow == &#34;1&#34;){ .... } 实际上，这样的话如果isShow为1的话还是会判为false的，事实上应该用equals去判断是否相等。
+思考的太局限 有时候在做一个功能的时候，总是只想着怎么把它给做出来，然后就局限在一个类里边或者一个方法里边，没有往大的方面去思考，不去思考以后功能扩展的话会怎么样，就会局限在一块小小的空间里。
+记得有一次在feed流里改造一个item view 但是它们传过来的数据稍微有些不一样，然后我就不管了，直接用原来的bean结构，这其实就不符合面向对象思想，因为数据结构不一样的就不能视为一个对象，当时的我并没有意识到这一点，大佬还给我讲了很久的面向对象😥。
+防止空指针错误，防止越界错误 越简单的问题，越容易被忽略，而往往就是这些简单的问题，就会导致一些莫名其妙的crash。我就犯过好多次。。。"/>
+
+
+
+
+
+
+
+<script src="/vendor/js/jquery.min.js" ></script>
+<script src="/vendor/js/popper.min.js" ></script>
+<script src="/vendor/js/bootstrap.min.js" ></script>
+<script src="/vendor/js/smooth-scroll.polyfills.min.js" ></script>
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+<script src="/vendor/js/vue.min.js" ></script>
+
+
+
+
+
+
+<link rel="stylesheet" href="https://fushaolei.github.io/scss/journal.min.c116bc90d171283f099f173854157ec8f183f9073b93443b2c8ad82899ee9025.css" integrity="sha256-wRa8kNFxKD8Jnxc4VBV&#43;yPGD&#43;Qc7k0Q7LIrYKJnukCU=" media="screen">
+
+
+
+<link rel="stylesheet" href="https://fushaolei.github.io/scss/dark-mode.min.ed17e7506ac79ad26428e2ac35f7129cd134774d75548840407bb957fe545c00.css" integrity="sha256-7RfnUGrHmtJkKOKsNfcSnNE0d011VIhAQHu5V/5UXAA=" media="screen">
+
+
+<script src="https://fushaolei.github.io//js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
+</script>
+
+
+
+
+  
+    <script src="https://fushaolei.github.io//js/toc-collapse.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div ref="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://fushaolei.github.io/">
+    
+        <div class="nav-title">
+            Sorryfu Blog.
+        </div>
+        
+        <div class="nav-subtitle">
+            努力，奋斗.
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories">
+                分类
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                标签
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/index.xml">
+                RSS
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+移植自 <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2021 Sorryfu Blog.
+	
+
+    </div>
+    
+</div><div ref="extraContainer" class="extra-container">
+    
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a class="pagination-action" v-on:click="toggleDarkMode">
+            <i class="material-icons pagination-action-icon" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons pagination-action-icon" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </a>
+        
+        
+    </div>
+</div>
+<div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories">
+                    分类
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    标签
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/index.xml">
+                    RSS
+                </a>
+                
+            
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="https://fushaolei.github.io/">
+            Sorryfu Blog.
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" v-on:click="toggleDarkMode">
+            <i class="material-icons" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://fushaolei.github.io/">
+        <div class="single-column-header-title">Sorryfu Blog.</div>
+        
+        <div class="single-column-header-subtitle">努力，奋斗.</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    实习小结
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2020-11-25 00:16
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/tech">Tech</a>
+                                &nbsp;
+                        
+
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <p>时间飞逝，不知不觉在新浪已经待了快两个月了（android实习），从懵懂无知的小白到懵懂无知的小白，可谓经历颇多啊，下面就来小结下这两个月来的收获</p>
+<h2 id="布局性能的优化">布局性能的优化</h2>
+<h3 id="减少层级">减少层级</h3>
+<p>首先，嵌套的层级越多，就意味着在渲染的时候的时间越长，性能就越低，所以应该去除掉没必要的层级</p>
+<h3 id="用framelayout替代relativelayout">用<code>FrameLayout</code>替代<code>RelativeLayout</code></h3>
+<p>当做一个比如说左边是图标，然后最右边是文字的界面需求时（就是两端都有东西），我之前最开始想到的就是<code>RelativeLayout</code>布局了，为什么，因为好用嘛，直接一个<code>alignParentRight</code>或<code>alignParentLeft</code>就可以放到两端了，然后再来一个什么<code>centerHorizontal</code>啊，简直方便的不要不要的，为什么不用？？</p>
+<p>因为<code>RelativeLayout</code>在绘制的时候要经过两次测绘，性能极差，在正常情况下最好不用。</p>
+<p>这种两端都有控件的需求其实可以用<code>FrameLayout</code>帧布局来做的，之前的我一直图快，都没有去留意这些东西，那怎么做呢。可以用layout_gravity属性去控制控件的位置，甚至可以多个控制，比如<code>layout_gravity = &quot;right|center_vertical&quot;</code>就是把这个控件放在右边，然后又让它在竖直的中间，这些我还是第一次了解到</p>
+<h2 id="代码规范化">代码规范化</h2>
+<p>代码规范化其实是为了给维护的人看的，包括必要的空格啊，必要的换行啊之类的</p>
+<h3 id="必要的空格">必要的空格</h3>
+<ul>
+<li>注释后空格</li>
+<li>花括号前要空格</li>
+<li>逗号后要空格</li>
+<li><code>==</code>或<code>!=</code>前后都要空格，类似的又很多</li>
+</ul>
+<p>类似的有很多，其实这我一开始也没理解为什么要空格，其实一 是为了提高阅读性，二呢也是为了提高可维护性</p>
+<h2 id="简化代码">简化代码</h2>
+<p>想起了一个这几天发生的事情，哈哈，就是我要判断一个布尔值是不是为true嘛，然后我居然写了这样的代码</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#719e07">if</span><span style="color:#719e07">(</span>isShow <span style="color:#719e07">=</span><span style="color:#719e07">=</span> <span style="color:#cb4b16">true</span><span style="color:#719e07">)</span><span style="color:#719e07">{</span>
+    <span style="color:#719e07">.</span><span style="color:#719e07">.</span><span style="color:#719e07">.</span><span style="color:#719e07">.</span><span style="color:#719e07">.</span>
+<span style="color:#719e07">}</span>
+</code></pre></div><p>哈哈 现在想起来真是好笑，像是刚学会飞的小鸟，笨拙的扑棱着翅膀</p>
+<p>其实还有一些可以简化的代码，比如</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> <span style="color:#dc322f">boolean</span> <span style="color:#268bd2">isOk</span><span style="color:#719e07">(</span>String name<span style="color:#719e07">)</span><span style="color:#719e07">{</span>
+    <span style="color:#719e07">if</span><span style="color:#719e07">(</span>mName<span style="color:#719e07">.</span>equal<span style="color:#719e07">(</span>name<span style="color:#719e07">)</span><span style="color:#719e07">)</span><span style="color:#719e07">{</span>
+        <span style="color:#719e07">return</span> <span style="color:#cb4b16">true</span><span style="color:#719e07">;</span>
+    <span style="color:#719e07">}</span>
+    <span style="color:#719e07">return</span> <span style="color:#cb4b16">false</span><span style="color:#719e07">;</span>
+<span style="color:#719e07">}</span>
+</code></pre></div><p>其实不就是想判断是否相等嘛，其实可以直接返回的，不用这么麻烦，这种冗余的代码表示我就犯过几次。。。</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> <span style="color:#dc322f">boolean</span> <span style="color:#268bd2">isOk</span><span style="color:#719e07">(</span>String name<span style="color:#719e07">)</span><span style="color:#719e07">{</span>
+    <span style="color:#719e07">return</span> mName<span style="color:#719e07">.</span>equal<span style="color:#719e07">(</span>name<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+<span style="color:#719e07">}</span>
+</code></pre></div><p>类似的代码还有很多，还有什么三元运算符之类的， 就不一一例举了</p>
+<h2 id="让自己更加意识到自己的不足">让自己更加意识到自己的不足</h2>
+<p>每一次<code>code review</code>的时候都会被大佬灵魂拷问许多东西，比如类是什么，static是什么之类的问题，看似很简单，也很基础，可我就是偏偏答不上来，我虽然知道static，但是没有去想过它本质是个什么，然后被大佬突然这么一问，简直脑袋一片空白，毫无概念。再来列一些自己最常犯的错误。。</p>
+<h3 id="判断string类型和另一个string类型的时候">判断String类型和另一个String类型的时候</h3>
+<p>这个是比较无语的错误</p>
+<p>我经常写着写着就顺着写成这样了：</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#719e07">if</span><span style="color:#719e07">(</span>isShow <span style="color:#719e07">=</span><span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;1&#34;</span><span style="color:#719e07">)</span><span style="color:#719e07">{</span>
+    <span style="color:#719e07">.</span><span style="color:#719e07">.</span><span style="color:#719e07">.</span><span style="color:#719e07">.</span>
+<span style="color:#719e07">}</span>
+</code></pre></div><p>实际上，这样的话如果isShow为1的话还是会判为false的，事实上应该用equals去判断是否相等。</p>
+<h3 id="思考的太局限">思考的太局限</h3>
+<p>有时候在做一个功能的时候，总是只想着怎么把它给做出来，然后就局限在一个类里边或者一个方法里边，没有往大的方面去思考，不去思考以后功能扩展的话会怎么样，就会局限在一块小小的空间里。</p>
+<p>记得有一次在feed流里改造一个item view 但是它们传过来的数据稍微有些不一样，然后我就不管了，直接用原来的bean结构，这其实就不符合面向对象思想，因为数据结构不一样的就不能视为一个对象，当时的我并没有意识到这一点，大佬还给我讲了很久的面向对象😥。</p>
+<h3 id="防止空指针错误防止越界错误">防止空指针错误，防止越界错误</h3>
+<p>越简单的问题，越容易被忽略，而往往就是这些简单的问题，就会导致一些莫名其妙的crash。我就犯过好多次。。。</p>
+<p>思维过程应该是这样先想变量是否可用？（是否不为null）然后，才想其他的东西</p>
+
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">最后修改于 2020-11-25</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://fushaolei.github.io/post/android-no-network-security-config/">
+			下回<br>Android连接HTTP时有问题
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://fushaolei.github.io/post/data-structure-map/">
+			上回<br>数据结构：图
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+移植自 <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2021 Sorryfu Blog.
+	
+</div>
+            </div>
+    <script>
+let app;
+
+app = new Vue({
+    el: '#app',
+    data: {
+        scrollY: 0,
+        navOpacity: 0,
+        isDrawerOpen: false,
+        mounted: false,
+        isDarkMode: false
+    },
+    methods: {
+            sgn(t, x) {
+                let k = 1. / (1. - 2 * t);
+                if (x <= t) return 0;
+                else if (x >= 1 - t) return 1;
+                else {
+                    return k * (x - t);
+                }
+            },
+            handleScroll() {
+                this.scrollY = window.scrollY;
+                this.navOpacity = this.sgn(.0, Math.min(1, Math.max(0, window.scrollY / (this.pageHeadHeight() - this.navBarHeight() * 0.8))));
+                const {navBar, navBackground, navTitle, extraContainer, streamContainer} = this.$refs;
+
+                if (this.navOpacity >= 1) {
+                    navBackground.style.opacity = 1;
+                    navTitle.style.opacity = 1;
+                } else {
+                    navBackground.style.opacity = 0;
+                    navTitle.style.opacity = 0;
+                }
+            },
+            handleResize() {
+                const {navBar, navBackground, navTitle, extraContainer, streamContainer} = this.$refs;
+                extraContainer.style.left = (streamContainer.offsetWidth - extraContainer.offsetWidth) + 'px';
+            },
+            navBarHeight() {
+                return this.$refs.navBar.offsetHeight;
+            },
+            pageHeadHeight() {
+                return this.$refs.pageHead.offsetHeight;
+            },
+            toggleDrawer() {
+                this.isDrawerOpen = !this.isDrawerOpen;
+                document.getElementsByTagName('html')[0].style.overflow = this.isDrawerOpen ? 'hidden' : 'unset';
+            },
+            closeDrawer() {
+                this.isDrawerOpen = false;
+                document.getElementsByTagName('html')[0].style.overflow = this.isDrawerOpen ? 'hidden' : 'unset';
+            },
+            toggleDarkMode() {
+                this.isDarkMode = !this.isDarkMode;
+                if (this.isDarkMode==true){
+                    document.cookie = "night=1;path=/";
+                    document.body.classList.add("night");
+                } else {
+                    document.cookie = "night=0;path=/";
+                    document.body.classList.remove("night");
+                }
+            }
+    },
+    created() {
+        window.addEventListener('scroll', this.handleScroll);
+        window.addEventListener('resize', this.handleResize);
+        window._nonDesktop = function () {
+            let check = false;
+            (function (a) {
+                if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0, 4))) check = true;
+            })(navigator.userAgent || navigator.vendor || window.opera);
+            return check;
+        };
+        
+        var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        if (night==""){
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                
+            }
+        }else{
+            
+            if (night=="1") {
+                this.toggleDarkMode();
+            }
+        }
+    },
+    mounted() {
+        this.handleScroll();
+        this.handleResize();
+        this.mounted = true;
+
+        
+    },
+    destroyed() {
+        window.removeEventListener('scroll', this.handleScroll);
+        window.removeEventListener('resize', this.handleResize);
+    }
+});
+</script>
+
+<script src="https://fushaolei.github.io//js/journal.js"></script>
+    </body>
+</html>

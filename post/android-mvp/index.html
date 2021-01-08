@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html><head>
+<title>浅谈Android MVP模式</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<meta property="og:title" content="浅谈Android MVP模式" />
+<meta property="og:description" content="前言  以前有学过，感觉理解不了，然后又用不到，然后就不了了之了 QAQ，现在因为实习公司的项目有用到，如果不学的话感觉根本看不懂项目（其实学完之后还是看不懂哈哈哈），所以就重新学过，顺面记录一下
+ 预备知识 通过这一次的学习，以前没有学懂，或者没有理解的东西都显露出来了，说到低还是自己太菜了QAQ，不废话，我认为想要理解好MVP模式就先得了解以下的知识
+ 面向接口的编程思想 向上转型的概念 解耦的含义，思想（这里的理解不太深）  ok 如果你不懂的话请往下看、
+面向接口编程 先复习一下接口的概念：
+在Java程序设计语言中，接口不是类，而是对希望符合这个接口的类的一组需求（出自《Java核心卷一》p222页） 说白了，接口就是一组需求
+而面向接口编程呢，就是在开始开发前，先定义好接口（可以理解为先列出一组需求），然后再进行开发
+向上转型 即父类引用指向子类对象，看完下面的代码应该更好理解些
+/** * 定义一个接口 */ public interface IStudent { String getName(); } /** * 继承实现这个接口 */ public class Student implements IStudent{//此时IStudent是父类，Student是子类  @Override public String getName() { return &#34;任我行&#34;; } } /** * 测试一下 */ public class Test { public static void main(String[] args) { IStudent iStudent; iStudent=new Student();//父类引用指向子类的对象，这里做了向上转型  System." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://fushaolei.github.io/post/android-mvp/" />
+<meta property="article:published_time" content="2020-10-06T13:34:37+00:00" />
+<meta property="article:modified_time" content="2020-10-06T13:34:37+00:00" /><meta property="og:site_name" content="My Blog" />
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="浅谈Android MVP模式"/>
+<meta name="twitter:description" content="前言  以前有学过，感觉理解不了，然后又用不到，然后就不了了之了 QAQ，现在因为实习公司的项目有用到，如果不学的话感觉根本看不懂项目（其实学完之后还是看不懂哈哈哈），所以就重新学过，顺面记录一下
+ 预备知识 通过这一次的学习，以前没有学懂，或者没有理解的东西都显露出来了，说到低还是自己太菜了QAQ，不废话，我认为想要理解好MVP模式就先得了解以下的知识
+ 面向接口的编程思想 向上转型的概念 解耦的含义，思想（这里的理解不太深）  ok 如果你不懂的话请往下看、
+面向接口编程 先复习一下接口的概念：
+在Java程序设计语言中，接口不是类，而是对希望符合这个接口的类的一组需求（出自《Java核心卷一》p222页） 说白了，接口就是一组需求
+而面向接口编程呢，就是在开始开发前，先定义好接口（可以理解为先列出一组需求），然后再进行开发
+向上转型 即父类引用指向子类对象，看完下面的代码应该更好理解些
+/** * 定义一个接口 */ public interface IStudent { String getName(); } /** * 继承实现这个接口 */ public class Student implements IStudent{//此时IStudent是父类，Student是子类  @Override public String getName() { return &#34;任我行&#34;; } } /** * 测试一下 */ public class Test { public static void main(String[] args) { IStudent iStudent; iStudent=new Student();//父类引用指向子类的对象，这里做了向上转型  System."/>
+
+
+
+
+
+
+
+<script src="/vendor/js/jquery.min.js" ></script>
+<script src="/vendor/js/popper.min.js" ></script>
+<script src="/vendor/js/bootstrap.min.js" ></script>
+<script src="/vendor/js/smooth-scroll.polyfills.min.js" ></script>
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+<script src="/vendor/js/vue.min.js" ></script>
+
+
+
+
+
+
+<link rel="stylesheet" href="https://fushaolei.github.io/scss/journal.min.c116bc90d171283f099f173854157ec8f183f9073b93443b2c8ad82899ee9025.css" integrity="sha256-wRa8kNFxKD8Jnxc4VBV&#43;yPGD&#43;Qc7k0Q7LIrYKJnukCU=" media="screen">
+
+
+
+<link rel="stylesheet" href="https://fushaolei.github.io/scss/dark-mode.min.ed17e7506ac79ad26428e2ac35f7129cd134774d75548840407bb957fe545c00.css" integrity="sha256-7RfnUGrHmtJkKOKsNfcSnNE0d011VIhAQHu5V/5UXAA=" media="screen">
+
+
+<script src="https://fushaolei.github.io//js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
+</script>
+
+
+
+
+  
+    <script src="https://fushaolei.github.io//js/toc-collapse.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div ref="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://fushaolei.github.io/">
+    
+        <div class="nav-title">
+            Sorryfu Blog.
+        </div>
+        
+        <div class="nav-subtitle">
+            努力，奋斗.
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories">
+                分类
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                标签
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/index.xml">
+                RSS
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+移植自 <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2021 Sorryfu Blog.
+	
+
+    </div>
+    
+</div><div ref="extraContainer" class="extra-container">
+    
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a class="pagination-action" v-on:click="toggleDarkMode">
+            <i class="material-icons pagination-action-icon" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons pagination-action-icon" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </a>
+        
+        
+    </div>
+</div>
+<div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories">
+                    分类
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    标签
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/index.xml">
+                    RSS
+                </a>
+                
+            
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="https://fushaolei.github.io/">
+            Sorryfu Blog.
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" v-on:click="toggleDarkMode">
+            <i class="material-icons" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://fushaolei.github.io/">
+        <div class="single-column-header-title">Sorryfu Blog.</div>
+        
+        <div class="single-column-header-subtitle">努力，奋斗.</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    浅谈Android MVP模式
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2020-10-06 13:34
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/tech">Tech</a>
+                                &nbsp;
+                        
+
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <h2 id="前言">前言</h2>
+<blockquote>
+<p>以前有学过，感觉理解不了，然后又用不到，然后就不了了之了 QAQ，现在因为实习公司的项目有用到，如果不学的话感觉根本看不懂项目（其实学完之后还是看不懂哈哈哈），所以就重新学过，顺面记录一下</p>
+</blockquote>
+<h2 id="预备知识">预备知识</h2>
+<p>通过这一次的学习，以前没有学懂，或者没有理解的东西都显露出来了，说到低还是自己太菜了QAQ，不废话，我认为想要理解好MVP模式就先得了解以下的知识</p>
+<ul>
+<li>面向接口的编程思想</li>
+<li>向上转型的概念</li>
+<li>解耦的含义，思想（这里的理解不太深）</li>
+</ul>
+<p>ok 如果你不懂的话请往下看、</p>
+<h3 id="面向接口编程">面向接口编程</h3>
+<p>先复习一下接口的概念：</p>
+<pre><code>在Java程序设计语言中，接口不是类，而是对希望符合这个接口的类的一组需求（出自《Java核心卷一》p222页）
+</code></pre><p>说白了，接口就是一组<strong>需求</strong></p>
+<p>而面向接口编程呢，就是在开始开发前，先定义好接口（可以理解为先列出一组需求），然后再进行开发</p>
+<h3 id="向上转型">向上转型</h3>
+<p>即<strong>父类引用指向子类对象</strong>，看完下面的代码应该更好理解些</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#586e75">/**
+</span><span style="color:#586e75"> * 定义一个接口
+</span><span style="color:#586e75"> */</span>
+<span style="color:#268bd2">public</span> <span style="color:#268bd2">interface</span> <span style="color:#268bd2">IStudent</span> <span style="color:#719e07">{</span>
+    String <span style="color:#268bd2">getName</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+<span style="color:#719e07">}</span>
+</code></pre></div><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#586e75">/**
+</span><span style="color:#586e75"> * 继承实现这个接口
+</span><span style="color:#586e75"> */</span>
+<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">Student</span> <span style="color:#268bd2">implements</span> IStudent<span style="color:#719e07">{</span><span style="color:#586e75">//此时IStudent是父类，Student是子类
+</span><span style="color:#586e75"></span>    <span style="color:#268bd2">@Override</span>
+    <span style="color:#268bd2">public</span> String <span style="color:#268bd2">getName</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+        <span style="color:#719e07">return</span> <span style="color:#2aa198">&#34;任我行&#34;</span><span style="color:#719e07">;</span>
+    <span style="color:#719e07">}</span>
+<span style="color:#719e07">}</span>
+</code></pre></div><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#586e75">/**
+</span><span style="color:#586e75"> * 测试一下
+</span><span style="color:#586e75"> */</span>
+<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">Test</span> <span style="color:#719e07">{</span>
+    <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span><span style="color:#719e07">(</span>String<span style="color:#719e07">[</span><span style="color:#719e07">]</span> args<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+        IStudent iStudent<span style="color:#719e07">;</span>
+        iStudent<span style="color:#719e07">=</span><span style="color:#719e07">new</span> Student<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span><span style="color:#586e75">//父类引用指向子类的对象，这里做了向上转型
+</span><span style="color:#586e75"></span>        System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;学生的名字是：&#34;</span><span style="color:#719e07">+</span>iStudent<span style="color:#719e07">.</span>getName<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span><span style="color:#586e75">//打印结果：学生的名字是：任我行
+</span><span style="color:#586e75"></span>    <span style="color:#719e07">}</span>
+<span style="color:#719e07">}</span>
+</code></pre></div><h3 id="解耦">解耦</h3>
+<blockquote>
+<p>以前总听老师说要写出高内聚，低耦合的代码，到现在还是没有理解啊啊啊啊</p>
+</blockquote>
+<p>首先要理解耦合度的概念， 耦合度就是对象之间的<strong>依赖性</strong>，解耦就是降低对象之间或者说是方法之间的依赖性，让其可以独立存在</p>
+<blockquote>
+<p>好吧 我这里理解也不是特别深（；´д｀）ゞ</p>
+</blockquote>
+<h2 id="mvp模式">MVP模式</h2>
+<p>Actually，我觉得MVP模式的灵魂就是presenter层同时持有view层和model层的<strong>引用</strong>（请联系上边的向上转型的概念）。</p>
+<hr>
+<p>照此逻辑，我们简单实现一个常见的登录模块。根据<strong>面向接口编程</strong>，我们首先列出我们的接口（需求）：</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#586e75">/**
+</span><span style="color:#586e75"> * View层的需求
+</span><span style="color:#586e75"> */</span>
+<span style="color:#268bd2">public</span> <span style="color:#268bd2">interface</span> <span style="color:#268bd2">IView</span> <span style="color:#719e07">{</span>
+    <span style="color:#586e75">//1. 获取用户的输入信息
+</span><span style="color:#586e75"></span>    <span style="color:#268bd2">public</span> User <span style="color:#268bd2">getViewUser</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+    <span style="color:#586e75">//2. 登录成功的操作
+</span><span style="color:#586e75"></span>    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">loginSuceess</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+    <span style="color:#586e75">//3. 登录失败后的操作
+</span><span style="color:#586e75"></span>    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">loginFail</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+<span style="color:#719e07">}</span>
+</code></pre></div><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#586e75">/**
+</span><span style="color:#586e75"> * Model层的需求
+</span><span style="color:#586e75"> */</span>
+<span style="color:#268bd2">public</span> <span style="color:#268bd2">interface</span> <span style="color:#268bd2">IModel</span> <span style="color:#719e07">{</span>
+     <span style="color:#586e75">//判断信息是否正确
+</span><span style="color:#586e75"></span>     <span style="color:#268bd2">public</span> <span style="color:#dc322f">boolean</span> <span style="color:#268bd2">isOk</span><span style="color:#719e07">(</span>User user<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+<span style="color:#719e07">}</span>
+</code></pre></div><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#586e75">/**
+</span><span style="color:#586e75"> * presenter层的需求
+</span><span style="color:#586e75"> */</span>
+<span style="color:#268bd2">public</span> <span style="color:#268bd2">interface</span> <span style="color:#268bd2">IPresenter</span> <span style="color:#719e07">{</span>
+    <span style="color:#586e75">//登录操作
+</span><span style="color:#586e75"></span>    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">login</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+<span style="color:#719e07">}</span>
+</code></pre></div><p>好了，接口写完，现在去实现接口：</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">View</span> <span style="color:#268bd2">extends</span> AppCompatActivity <span style="color:#268bd2">implements</span> IView<span style="color:#719e07">{</span>
+    <span style="color:#268bd2">private</span> EditText mUsername<span style="color:#719e07">;</span>
+    <span style="color:#268bd2">private</span> EditText mPassword<span style="color:#719e07">;</span>
+    <span style="color:#268bd2">private</span> Button mButton<span style="color:#719e07">;</span>
+
+    <span style="color:#268bd2">private</span> IPresenter iPresenter<span style="color:#719e07">;</span><span style="color:#586e75">//present的引用
+</span><span style="color:#586e75"></span>
+    <span style="color:#268bd2">@Override</span>
+    <span style="color:#268bd2">protected</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">onCreate</span><span style="color:#719e07">(</span>Bundle savedInstanceState<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+        <span style="color:#268bd2">super</span><span style="color:#719e07">.</span>onCreate<span style="color:#719e07">(</span>savedInstanceState<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+        setContentView<span style="color:#719e07">(</span>R<span style="color:#719e07">.</span>layout<span style="color:#719e07">.</span>activity_main<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+
+        mUsername <span style="color:#719e07">=</span> findViewById<span style="color:#719e07">(</span>R<span style="color:#719e07">.</span>id<span style="color:#719e07">.</span>et_username<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+        mPassword <span style="color:#719e07">=</span> findViewById<span style="color:#719e07">(</span>R<span style="color:#719e07">.</span>id<span style="color:#719e07">.</span>et_password<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+        mButton <span style="color:#719e07">=</span> findViewById<span style="color:#719e07">(</span>R<span style="color:#719e07">.</span>id<span style="color:#719e07">.</span>btn_login<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+
+        iPresenter <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Presenter<span style="color:#719e07">(</span><span style="color:#719e07">this</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span><span style="color:#586e75">//父类引用指向子类对象，向上转型，这个this指向的是View本身，也就是是传入了一个IView的子类对象
+</span><span style="color:#586e75"></span>        <span style="color:#586e75">//此时Presenter同时持有Model层和View层的对象
+</span><span style="color:#586e75"></span>        mButton<span style="color:#719e07">.</span>setOnClickListener<span style="color:#719e07">(</span><span style="color:#719e07">new</span> android<span style="color:#719e07">.</span>view<span style="color:#719e07">.</span>View<span style="color:#719e07">.</span>OnClickListener<span style="color:#719e07">(</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+            <span style="color:#268bd2">@Override</span>
+            <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">onClick</span><span style="color:#719e07">(</span>android<span style="color:#719e07">.</span>view<span style="color:#719e07">.</span>View v<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+                iPresenter<span style="color:#719e07">.</span>login<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span><span style="color:#586e75">//此操作会执行Pressenter对象的login方法
+</span><span style="color:#586e75"></span>            <span style="color:#719e07">}</span>
+        <span style="color:#719e07">}</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+    <span style="color:#719e07">}</span>
+
+    <span style="color:#586e75">//实现IView的需求
+</span><span style="color:#586e75"></span>    <span style="color:#268bd2">@Override</span>
+    <span style="color:#268bd2">public</span> User <span style="color:#268bd2">getViewUser</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+        <span style="color:#719e07">return</span> <span style="color:#719e07">new</span> User<span style="color:#719e07">(</span>mUsername<span style="color:#719e07">.</span>getText<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">.</span>toString<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">,</span>mPassword<span style="color:#719e07">.</span>getText<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">.</span>toString<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+    <span style="color:#719e07">}</span>
+
+    <span style="color:#268bd2">@Override</span>
+    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">loginSuceess</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+        Toast<span style="color:#719e07">.</span>makeText<span style="color:#719e07">(</span><span style="color:#719e07">this</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;登录成功！&#34;</span><span style="color:#719e07">,</span> Toast<span style="color:#719e07">.</span>LENGTH_SHORT<span style="color:#719e07">)</span><span style="color:#719e07">.</span>show<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+    <span style="color:#719e07">}</span>
+
+    <span style="color:#268bd2">@Override</span>
+    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">loginFail</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+        Toast<span style="color:#719e07">.</span>makeText<span style="color:#719e07">(</span><span style="color:#719e07">this</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;登录失败！&#34;</span><span style="color:#719e07">,</span> Toast<span style="color:#719e07">.</span>LENGTH_SHORT<span style="color:#719e07">)</span><span style="color:#719e07">.</span>show<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+    <span style="color:#719e07">}</span>
+<span style="color:#719e07">}</span>
+</code></pre></div><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">Model</span> <span style="color:#268bd2">implements</span> IModel<span style="color:#719e07">{</span>
+    <span style="color:#586e75">//IModel的需求
+</span><span style="color:#586e75"></span>    <span style="color:#268bd2">@Override</span>
+    <span style="color:#268bd2">public</span> <span style="color:#dc322f">boolean</span> <span style="color:#268bd2">isOk</span><span style="color:#719e07">(</span>User user<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>user<span style="color:#719e07">.</span>getUsername<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">.</span>equals<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;root&#34;</span><span style="color:#719e07">)</span><span style="color:#719e07">&amp;</span><span style="color:#719e07">&amp;</span>user<span style="color:#719e07">.</span>getPassword<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">.</span>equals<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;123&#34;</span><span style="color:#719e07">)</span><span style="color:#719e07">)</span><span style="color:#719e07">{</span>
+            <span style="color:#719e07">return</span> <span style="color:#cb4b16">true</span><span style="color:#719e07">;</span>
+        <span style="color:#719e07">}</span>
+        <span style="color:#719e07">return</span> <span style="color:#cb4b16">false</span><span style="color:#719e07">;</span>
+    <span style="color:#719e07">}</span>
+<span style="color:#719e07">}</span>
+</code></pre></div><p>我觉得mvp模式的核心在此</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#586e75">//presenter层，联系model和view的枢纽
+</span><span style="color:#586e75"></span><span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">Presenter</span> <span style="color:#268bd2">implements</span> IPresenter <span style="color:#719e07">{</span>
+    <span style="color:#268bd2">private</span> IModel iModel<span style="color:#719e07">;</span>
+    <span style="color:#268bd2">private</span> IView iView<span style="color:#719e07">;</span>
+
+    <span style="color:#268bd2">public</span> <span style="color:#268bd2">Presenter</span><span style="color:#719e07">(</span>IView iView<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+        <span style="color:#719e07">this</span><span style="color:#719e07">.</span>iModel <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Model<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span><span style="color:#586e75">//向上转型
+</span><span style="color:#586e75"></span>        <span style="color:#719e07">this</span><span style="color:#719e07">.</span>iView <span style="color:#719e07">=</span> iView<span style="color:#719e07">;</span><span style="color:#586e75">//向上转型
+</span><span style="color:#586e75"></span>    <span style="color:#719e07">}</span>
+
+    <span style="color:#586e75">//IPresenter的需求
+</span><span style="color:#586e75"></span>    <span style="color:#268bd2">@Override</span>
+    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">login</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span><span style="color:#586e75">//当View层点击button的时候，将会调用到这个方法
+</span><span style="color:#586e75"></span>        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>iModel<span style="color:#719e07">.</span>isOk<span style="color:#719e07">(</span>iView<span style="color:#719e07">.</span>getViewUser<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">)</span><span style="color:#719e07">)</span><span style="color:#719e07">{</span>
+            iView<span style="color:#719e07">.</span>loginSuceess<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span><span style="color:#586e75">//执行view层的loginSuceess
+</span><span style="color:#586e75"></span>        <span style="color:#719e07">}</span><span style="color:#719e07">else</span> <span style="color:#719e07">{</span>
+            iView<span style="color:#719e07">.</span>loginFail<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span><span style="color:#586e75">//执行view层的loginFail
+</span><span style="color:#586e75"></span>        <span style="color:#719e07">}</span>
+    <span style="color:#719e07">}</span>
+<span style="color:#719e07">}</span>
+</code></pre></div><p>model，view，presenter的接口，就像是三条引子，把它们联系在了一起</p>
+<h2 id="参考资料">参考资料</h2>
+<blockquote>
+<p>肥肠感谢这些参考资料的作者(≧∀≦)ゞ</p>
+</blockquote>
+<ul>
+<li><a href="https://mp.weixin.qq.com/s/DuNbl3V4gZY-ZCETbhZGug">一步步带你精通MVP</a></li>
+<li><a href="https://juejin.im/post/6844903720036073480">Android MVP架构从入门到精通-真枪实弹</a></li>
+<li><a href="https://blog.csdn.net/lmj623565791/article/details/46596109?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522160170643419724836748193%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=160170643419724836748193&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_click~default-3-46596109.first_rank_ecpm_v3_pc_rank_v2&amp;utm_term=android+mvp&amp;spm=1018.2118.3001.4187">浅谈 MVP in Android</a></li>
+<li><a href="https://blog.csdn.net/chenssy/article/details/12786385?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522160169439719724835832063%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=160169439719724835832063&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v3~pc_rank_v2-1-12786385.first_rank_ecpm_v3_pc_rank_v2&amp;utm_term=%E5%A4%9A%E6%80%81&amp;spm=1018.2118.3001.4187">java提高篇（三）&mdash;&ndash;理解java的三大特性之多态</a></li>
+<li><a href="https://blog.csdn.net/Cyy19970527/article/details/83177996?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522160171051919725255500190%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=160171051919725255500190&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v3~pc_rank_v2-2-83177996.first_rank_ecpm_v3_pc_rank_v2&amp;utm_term=%E9%9D%A2%E5%90%91%E6%8E%A5%E5%8F%A3%E7%BC%96%E7%A8%8B&amp;spm=1018.2118.3001.4187">面向接口编程思想(的好处)</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/34026164">Java的向上转型与向下转型</a></li>
+</ul>
+
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">最后修改于 2020-10-06</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://fushaolei.github.io/post/kotlin-note-base-element/">
+			下回<br>Kotlin基本要素
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://fushaolei.github.io/post/java-interview-note/">
+			上回<br>Java面试必知必会
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+移植自 <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2021 Sorryfu Blog.
+	
+</div>
+            </div>
+    <script>
+let app;
+
+app = new Vue({
+    el: '#app',
+    data: {
+        scrollY: 0,
+        navOpacity: 0,
+        isDrawerOpen: false,
+        mounted: false,
+        isDarkMode: false
+    },
+    methods: {
+            sgn(t, x) {
+                let k = 1. / (1. - 2 * t);
+                if (x <= t) return 0;
+                else if (x >= 1 - t) return 1;
+                else {
+                    return k * (x - t);
+                }
+            },
+            handleScroll() {
+                this.scrollY = window.scrollY;
+                this.navOpacity = this.sgn(.0, Math.min(1, Math.max(0, window.scrollY / (this.pageHeadHeight() - this.navBarHeight() * 0.8))));
+                const {navBar, navBackground, navTitle, extraContainer, streamContainer} = this.$refs;
+
+                if (this.navOpacity >= 1) {
+                    navBackground.style.opacity = 1;
+                    navTitle.style.opacity = 1;
+                } else {
+                    navBackground.style.opacity = 0;
+                    navTitle.style.opacity = 0;
+                }
+            },
+            handleResize() {
+                const {navBar, navBackground, navTitle, extraContainer, streamContainer} = this.$refs;
+                extraContainer.style.left = (streamContainer.offsetWidth - extraContainer.offsetWidth) + 'px';
+            },
+            navBarHeight() {
+                return this.$refs.navBar.offsetHeight;
+            },
+            pageHeadHeight() {
+                return this.$refs.pageHead.offsetHeight;
+            },
+            toggleDrawer() {
+                this.isDrawerOpen = !this.isDrawerOpen;
+                document.getElementsByTagName('html')[0].style.overflow = this.isDrawerOpen ? 'hidden' : 'unset';
+            },
+            closeDrawer() {
+                this.isDrawerOpen = false;
+                document.getElementsByTagName('html')[0].style.overflow = this.isDrawerOpen ? 'hidden' : 'unset';
+            },
+            toggleDarkMode() {
+                this.isDarkMode = !this.isDarkMode;
+                if (this.isDarkMode==true){
+                    document.cookie = "night=1;path=/";
+                    document.body.classList.add("night");
+                } else {
+                    document.cookie = "night=0;path=/";
+                    document.body.classList.remove("night");
+                }
+            }
+    },
+    created() {
+        window.addEventListener('scroll', this.handleScroll);
+        window.addEventListener('resize', this.handleResize);
+        window._nonDesktop = function () {
+            let check = false;
+            (function (a) {
+                if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0, 4))) check = true;
+            })(navigator.userAgent || navigator.vendor || window.opera);
+            return check;
+        };
+        
+        var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        if (night==""){
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                
+            }
+        }else{
+            
+            if (night=="1") {
+                this.toggleDarkMode();
+            }
+        }
+    },
+    mounted() {
+        this.handleScroll();
+        this.handleResize();
+        this.mounted = true;
+
+        
+    },
+    destroyed() {
+        window.removeEventListener('scroll', this.handleScroll);
+        window.removeEventListener('resize', this.handleResize);
+    }
+});
+</script>
+
+<script src="https://fushaolei.github.io//js/journal.js"></script>
+    </body>
+</html>

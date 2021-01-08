@@ -6,7 +6,6 @@
     <description>Recent content in Posts on Sorryfu Blog.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <copyright>This is a customized copyright.</copyright>
     <lastBuildDate>Fri, 08 Jan 2021 12:54:02 +0800</lastBuildDate>
     
 	<atom:link href="https://fushaolei.github.io/post/index.xml" rel="self" type="application/rss+xml" />
@@ -19,6 +18,672 @@
       
       <guid>https://fushaolei.github.io/post/hello-hugo/</guid>
       <description>Hello Hugo </description>
+    </item>
+    
+    <item>
+      <title>日常用到IDE小技巧汇总</title>
+      <link>https://fushaolei.github.io/post/ide-skill/</link>
+      <pubDate>Tue, 05 Jan 2021 10:48:35 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/ide-skill/</guid>
+      <description>Android Studio  ctrl + alt + ← 返回光标的上一个位置 ctrl + alt + → 返回光标的下一个位置 shift+f6重命名  IDEA  tab 将选中的代码块整体右移，tab+shift整体左移 alt+insert 有多个选项，有getter setter方法，还有构造等等 alt+enter自动补全（？  </description>
+    </item>
+    
+    <item>
+      <title>对象与类</title>
+      <link>https://fushaolei.github.io/post/core-java-note-2/</link>
+      <pubDate>Mon, 04 Jan 2021 13:34:37 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/core-java-note-2/</guid>
+      <description>1.面向对象  面向对象编程，是一种通过对象的方式，把现实世界映射到计算机模型的一种编程方法。 面向对象程序设计：程序由对象来组成 类：构造对象的模板或蓝图 对象：类的实例化   类和对象的关系好比 模具 和 具体的用模具实际做出来的东西
+ 2.使用预定义类 构造器  用来构造并初始化对象的一种特殊的方法 构造器的名字应该与类名相同  这里要明确一个东西，比方说，我定义了一个类叫做Animal，然后做了如下的操作
+Animal mAnimal; 此时，mAnimal叫做对象变量，它是一个变量，不是一个对象
+然后做如下操作
+mAnimal = new Animal(); 此时mAnimal引用了一个对象
+3.用户自定义类 隐式参数与显示参数 一句话，隐式参数是调用方法的对象本身（在方法中可用this来表示），显示参数是方法名后面的数值</description>
+    </item>
+    
+    <item>
+      <title>About HTTP</title>
+      <link>https://fushaolei.github.io/post/about-http/</link>
+      <pubDate>Mon, 04 Jan 2021 09:53:01 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/about-http/</guid>
+      <description>关于HTTP HTTP是 Hypertext Transfer Protocol 超文本传输协议
+URL的组成：协议类型://服务器地址[:端口号] 路径
+常用请求方法    方法 作用     GET 获取资源，没有Body   POST 增加或修改资源，有Body   PUT 修改资源，有Body   DELETE 删除资源，无Body   HEAD 和GET方法一样，不过返回的响应没有Body    状态码    状态码 说明     1XX 临时性消息   2XX 成功   3XX 重定向   4XX 客户端错误   5XX 服务器错误    </description>
+    </item>
+    
+    <item>
+      <title>在新浪实习是一种什么体验？</title>
+      <link>https://fushaolei.github.io/post/work-in-sina/</link>
+      <pubDate>Tue, 15 Dec 2020 15:07:39 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/work-in-sina/</guid>
+      <description>初见 新浪大厦位于海淀区西北旺东路10号院8号楼，旁边就是网易，百度，腾讯等大厂，刚刚来公司的时候看的这个场景还是蛮震撼的。离我租的宿舍大概三四公里这样，然后每天我都要骑那么二三十分钟的车才能到这里（就当作锻炼了）
+ 坐过一次公司的大巴，太特么晕了@_@，差点吐在车里，此后就再也没有坐过。。。
+ 办完入职手续后，组里的leader便来接我了，然后就是安环境(用于code review的环境)，然后熟悉熟悉代码什么的。中午的时候还是大佬们带我去吃的午饭，然后逛逛新浪大厦什么的，熟悉熟悉环境。
+ 好家伙 果然是企业级开发，一上来就给我整傻了，光项目就有2.5G大，跑了差不多一个小时才好。然后项目里面一大堆分包，什么MVP模式啊，什么Kotlin啊，什么自定义的组件，给我看傻了都
+ 和大家相处一段时间后 ，感觉组里的人情味比较浓， 技术氛围也很浓， 甚至有时候会给我一种就是在学校里几个同学一起做项目的错觉，不过就是项目大了些，技术复杂了些而已，当然 这都是后话了
+吃在新浪 在新浪，我这个日常实习生唯一的福利就是 早餐会减免六块钱了。
+所以我早晨吃的特别饱，然后午餐就可以少吃一些，省些钱。（写到这里，眼前浮现的是以往大手大脚花钱的自己，泪，夺眶而出QAQ）
+下面放两个我很喜欢的早餐搭配
+ 刚开始为了吃早餐我还起的挺早的，后面因为赖床，就没吃了QAQ
+ 然后午餐晚餐一般一顿都要二十以上这样，最便宜的西红柿鸡蛋面都要14块钱，哎，穷学生伤不起啊。不过后面发现了麻辣烫可以便宜些，于是也有吃过一段时间的麻辣烫哈哈。后期，基本都是两个菜配一碗饭了，肉根本不敢点，一碗肉就将近二十了，简直可怕。
+ 想想在学校的食堂，吃一顿饭也就七块钱，来到这里钱包都被榨干了(╯‵□′)╯︵┻━┻
+ 玩在新浪 新浪的第一层布置了娱乐区，有健身房，舞蹈房，动感单车，还有台球桌，桌上足球等娱乐项目，像我一般都是午饭和晚饭后去打打台球，一两个月下来，Android技术没有涨多少，台球技术倒是进步了很多哈哈哈哈
+日常工作 我所实习的岗位是 新浪新闻客户端，那我日常实习就是大佬给我分配需求，然后我去做就可以了（通常大佬都会给一些比较容易的活。。），有那么大概一个流程，如下
+ 确认需求（有时候还要找产品进行确认） 开发（其实大多时间都是在等编译。。） code review（这时候大佬会看我写的代码，然后指出哪里哪里不对什么的，修改后再此review，通过后才能进行下一步） 交给测试进行分支测试（有时候有些bug测试都测不出来。。） 有bug的话改bug，没有的话就测试会交给产品进行确认 产品确认完毕就可以合入主分支了，然后进行集成测试  这里放张commit的截图
+ 这里要吐槽一下，那么大的公司居然不给实习生发个电脑。。只能用着自己的那个垃圾电脑，每次build都要半个小时(╯‵□′)╯︵┻━┻ 每天都是在等待build中度过。。。难受的一批，这也是我离职的一部分原因，受不了了
+ 工资 给的真的少，还特么扣税，我一个月的工资扣完税后只剩 2500 这样，这可是北京啊。反正我已经倒贴了好多，每个月光租房就花去了1700，剩下的没多少了。如果你也想来新浪实习的话，请慎重考虑！
+实习体会与收获 第一次实习就到了这样蛮不错的公司，我感觉自己真是个幸运儿哈哈。然后组里的大佬也都蛮照顾我的，尤其带我的那个大佬说过一句让我印象深刻的话，他说 我们写的代码是写给人看的，确实，这个项目会不断的修修改改，当别人修改到你的代码的时候，不知道你在写什么，想要干什么，这样的话就得从头来过了，直接的增加了代码的维护成本。所以，工作中，我也严格要求自己，让自己的代码变得易读又简洁，就也是我每一次写代码的目标。 通过这次实习，除了学会了基本的工作流程以外，在日常开发中也让我重新认识了一些概念，比如面向对象开发啊，如何体现到代码中去，比如Android的布局啊，怎么样效率才高啊，又比如listview的view复用机制，这些都是我以前从未去了解或者去接触 实践过的。同时，还让我意识到了自己的基础是多么的薄弱，还需加强。 总体来说，收获满满啊
+ 因为要回学校考试，再加上我受不了我那个破电脑的编译速度以及一些其他原因，十二月份的某一天，我便从新浪离职了。经历了两个多月的历练，我完成了学生到打工人的身份上的转变，从此 我也是一名社畜啦~
+ </description>
+    </item>
+    
+    <item>
+      <title>故宫游记</title>
+      <link>https://fushaolei.github.io/post/life-travel-in-gugong/</link>
+      <pubDate>Mon, 14 Dec 2020 16:53:37 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/life-travel-in-gugong/</guid>
+      <description>&lt;p&gt;来北京实习也已经有两个多月了，但是因为这个学期选了三门课 要做网上的作业，然后又因为懒，再加上天气变冷了，虽然一直在北京，但从未出去玩过。眼看下个星期就要离职了，这时不出去玩更待何时？&lt;/p&gt;
+&lt;p&gt;于是，在十二月十二号的早晨十点，我遍乘坐地铁，去往故宫了。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;然而，，快到故宫的时候我才发现我没带身份证，还有学生证也没带。。不过也没关系，照样顺利进去了..&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20201214210454.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Android图文混排的实现</title>
+      <link>https://fushaolei.github.io/post/android-multi-text/</link>
+      <pubDate>Fri, 11 Dec 2020 23:57:30 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/android-multi-text/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recyclerview多样式混合布局</title>
+      <link>https://fushaolei.github.io/post/recyclerview-multi-style/</link>
+      <pubDate>Tue, 08 Dec 2020 22:04:03 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/recyclerview-multi-style/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;问题：已知字段中会有一个名为&lt;code&gt;layoutStyle&lt;/code&gt;的字段来控制布局的样式，求解这个recyclerview的adapter如何写&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;嘶，看到这个题目真是眉头一紧，因为对&lt;code&gt;recyclerview&lt;/code&gt;不是很熟悉（当然对listview也不是很熟悉），哎 怎么办捏，他妈的。先照着网上的方法抄了以下，暂时如此，改天回头把&lt;code&gt;recyclerview&lt;/code&gt;的代码读读&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>前端杂记</title>
+      <link>https://fushaolei.github.io/post/easy-html/</link>
+      <pubDate>Thu, 03 Dec 2020 22:52:58 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/easy-html/</guid>
+      <description> 因为想要继续维护我的hexo主题项目white，然后自己的Html和CSS基础又不是很好，所以就边做边学咯
+ CSS选择器    选择器 说明     #top ID选择器，ID是唯一的   .body Class选择器 ，一个Class可以套用在多个HTML元素上，一个HTML元素也可以拥有多个选择器   div,h1等 标签选择器，直接用标签名，后面如果加Class选择器表示只在这个标签上生效   .container div 选取这个class的HTML元素里的所有div，但并不包括class本身   .container&amp;gt;div 选取拥有这个class的HTML元素的第一层div   .container+div 选取这个class的HTML与它身处同一层紧接的div   .container~div 选取这个class的HTML与它身处同一层的div   * 选取全部    </description>
+    </item>
+    
+    <item>
+      <title>Android连接HTTP时有问题</title>
+      <link>https://fushaolei.github.io/post/android-no-network-security-config/</link>
+      <pubDate>Sun, 29 Nov 2020 22:21:11 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/android-no-network-security-config/</guid>
+      <description>前言 今天做毕业设计的登录模块的时候，要在本地的服务器上取资源，结果就发生了这个错误
+NetworkSecurityConfig: No Network Security Config specified, using platform default </description>
+    </item>
+    
+    <item>
+      <title>实习小结</title>
+      <link>https://fushaolei.github.io/post/sina-work-knowledge/</link>
+      <pubDate>Wed, 25 Nov 2020 00:16:03 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/sina-work-knowledge/</guid>
+      <description>时间飞逝，不知不觉在新浪已经待了快两个月了（android实习），从懵懂无知的小白到懵懂无知的小白，可谓经历颇多啊，下面就来小结下这两个月来的收获
+布局性能的优化 减少层级 首先，嵌套的层级越多，就意味着在渲染的时候的时间越长，性能就越低，所以应该去除掉没必要的层级
+用FrameLayout替代RelativeLayout 当做一个比如说左边是图标，然后最右边是文字的界面需求时（就是两端都有东西），我之前最开始想到的就是RelativeLayout布局了，为什么，因为好用嘛，直接一个alignParentRight或alignParentLeft就可以放到两端了，然后再来一个什么centerHorizontal啊，简直方便的不要不要的，为什么不用？？
+因为RelativeLayout在绘制的时候要经过两次测绘，性能极差，在正常情况下最好不用。
+这种两端都有控件的需求其实可以用FrameLayout帧布局来做的，之前的我一直图快，都没有去留意这些东西，那怎么做呢。可以用layout_gravity属性去控制控件的位置，甚至可以多个控制，比如layout_gravity = &amp;quot;right|center_vertical&amp;quot;就是把这个控件放在右边，然后又让它在竖直的中间，这些我还是第一次了解到
+代码规范化 代码规范化其实是为了给维护的人看的，包括必要的空格啊，必要的换行啊之类的
+必要的空格  注释后空格 花括号前要空格 逗号后要空格 ==或!=前后都要空格，类似的又很多  类似的有很多，其实这我一开始也没理解为什么要空格，其实一 是为了提高阅读性，二呢也是为了提高可维护性
+简化代码 想起了一个这几天发生的事情，哈哈，就是我要判断一个布尔值是不是为true嘛，然后我居然写了这样的代码
+if(isShow == true){ ..... } 哈哈 现在想起来真是好笑，像是刚学会飞的小鸟，笨拙的扑棱着翅膀
+其实还有一些可以简化的代码，比如
+public boolean isOk(String name){ if(mName.equal(name)){ return true; } return false; } 其实不就是想判断是否相等嘛，其实可以直接返回的，不用这么麻烦，这种冗余的代码表示我就犯过几次。。。
+public boolean isOk(String name){ return mName.equal(name); } 类似的代码还有很多，还有什么三元运算符之类的， 就不一一例举了
+让自己更加意识到自己的不足 每一次code review的时候都会被大佬灵魂拷问许多东西，比如类是什么，static是什么之类的问题，看似很简单，也很基础，可我就是偏偏答不上来，我虽然知道static，但是没有去想过它本质是个什么，然后被大佬突然这么一问，简直脑袋一片空白，毫无概念。再来列一些自己最常犯的错误。。
+判断String类型和另一个String类型的时候 这个是比较无语的错误
+我经常写着写着就顺着写成这样了：
+if(isShow == &amp;#34;1&amp;#34;){ .... } 实际上，这样的话如果isShow为1的话还是会判为false的，事实上应该用equals去判断是否相等。
+思考的太局限 有时候在做一个功能的时候，总是只想着怎么把它给做出来，然后就局限在一个类里边或者一个方法里边，没有往大的方面去思考，不去思考以后功能扩展的话会怎么样，就会局限在一块小小的空间里。
+记得有一次在feed流里改造一个item view 但是它们传过来的数据稍微有些不一样，然后我就不管了，直接用原来的bean结构，这其实就不符合面向对象思想，因为数据结构不一样的就不能视为一个对象，当时的我并没有意识到这一点，大佬还给我讲了很久的面向对象😥。
+防止空指针错误，防止越界错误 越简单的问题，越容易被忽略，而往往就是这些简单的问题，就会导致一些莫名其妙的crash。我就犯过好多次。。。</description>
+    </item>
+    
+    <item>
+      <title>数据结构：图</title>
+      <link>https://fushaolei.github.io/post/data-structure-map/</link>
+      <pubDate>Tue, 24 Nov 2020 22:28:25 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/data-structure-map/</guid>
+      <description>图的定义和术语  图 顶点和边的集合 无向图：边无方向 有向图：边有方向 完全图：任意两点都有边连接  无向完全图 有向完全图   顶点的度：与该顶点相关联的边的数目  入度：以自己为终点的有向边的数目 出度：以自己为始点的有向边的数目   路径：接续的边构成的顶点序列 路径长度： 回路/回环：第一个顶点和最后一个顶点相同的路径  </description>
+    </item>
+    
+    <item>
+      <title>通过一个小小开源项目获取jetbrains license的经历</title>
+      <link>https://fushaolei.github.io/post/get-the-jetbrains-license/</link>
+      <pubDate>Sat, 21 Nov 2020 22:41:39 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/get-the-jetbrains-license/</guid>
+      <description>楔子 对于大多数收费软件，例如ps，pr，idea等等之类的，我大多数是白嫖，需要授权码的话就去网上随便一搜，遍地都是，一个不行就换下一个，总之 总是能找到可以用的。诸如此类的事情，数不胜数。甚至老师当时教springboot的时候（要用IDEA），就直接提供破解方法给我们了。。原因呢，很简单，因为我们学生无力购买这花费高昂的软件，然后又想使用，所以不得不用盗版的了，这也是情有可原的，再一个是，白嫖是人类的天性（也不能说是全部），就算软件的价格在可以承担的范围内，仍会有人去用盗版的，为什么，因为有免费的谁会去花钱呐哈哈哈。当然。当时安装IDEA的时候我也用的盗版，软件到期时间直接他吗的干到2089年😂估计那个时候我已经驾鹤西去了。
+然后不知道怎么，在网上了解到，可以通过学生的身份去申请使用权，可是我没有学生邮箱啊，学校没发。。然后又了解到可以用自己的开源项目去申请，刚好手中有一个hexo主题的项目，hexo-theme-white，这主题也注入了自己好多的心血，今年七月开的坑，虽然已经暂停维护一个月了，不过已有六十多颗star，有将近二十个fork，还收到了4，5个PR，还是蛮开心的，第一次维护项目，那感觉真是奇妙啊，每一次被star都是对我的肯定，然后我还建了个群（不过现在已经解散了，感觉没什么用），大家讨论来讨论去的，还是蛮开心的，因为感觉自己的东西被别人认可了，那感觉真不是一时的开心，而是持续的，有时候可用偷偷躲在被窝里笑的开心哈哈哈
+初试 抱着试一试的心态，我打开了这个网址 https://www.jetbrains.com/zh-cn/community/opensource/ 点击申请后进入申请界面申请即可，注意开源项目必须是持续开发三个月的项目，当时我就用了我从六七月份开始开坑的hexo主题hexo-theme-white项目进行申请，虽然只是一个小小的html项目，但是里边也侵入了我很多的心血和时间，不过我感到蛮快乐的，因为自己的开源项目得到了许多人的肯定（截至目前有70多颗Star了），然后这中间也有建立过QQ群，然后也和我的“用户”交流什么的啊，同时也得到了一些PR，啊，这感觉真是奇妙啊
+回应 然后，过了大概三四天吧，就有一个负责人联系我了：
+哦，原来是叫我把授权码填入Github的简介中啊，然后再过了两天，审批就通过了！JetBrains会给你发一个授权的网址，然后进去后注册你的账号，然后授权就完成啦！进入你的账户的主页就可以看到：
+左边可以看到我用来申请的项目，然后右边可以看到一个License For non-commercial open source，即用于非商业的开源，不以商业目的的开源，然后下边可以看到，你可以用的软件，下载软件后登录你的账号密码就可以使用了！
+后记 顺便推荐JetBrains家好用的一些软件~，
+ DataGrip用于管理数据库的工具 Clion写C或C++的IDE IDEA功能强大的Java IDE  我暂时用到就那么多，一个好用的IDE会是程序员手中的利器，会让我在敲代码的时候幸福感满满啊</description>
+    </item>
+    
+    <item>
+      <title>踩坑日记</title>
+      <link>https://fushaolei.github.io/post/error-note/</link>
+      <pubDate>Thu, 05 Nov 2020 20:23:35 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/error-note/</guid>
+      <description>一把辛酸泪
+ 使用OKHttp 3 时 出现java.lang.BootstrapMethodError: Exception from call site #0 bootstrap method
+解决方式：在build.gradle中添加以下代码 Java8的新特性
+compileOptions{ sourceCompatibility JavaVersion.VERSION_1_8 targetCompatibility JavaVersion.VERSION_1_8 }  参考: https://blog.csdn.net/qq_32425789/article/details/88838587
+ 使用RxJava时 observeOn(AndroidSchedulers.mainThread())报错
+ 待定，这个最后是直接复制别人的解决的。。。
+ 使用Arouter时 出现：android.content.ActivityNotFoundException: Unable to find explicit activity class
+原因是没有给新增的activity注册
+ 因为定义了一个基类的activity，然后在复用的时候忘记注册新增的activity了（之前都是使用android studio自带的创建方法创建的，它会帮你自动注册，这次没有这样，也怪自己太粗心大意，在这里翻车了QAQ）
+ 参数未传进来
+有以下几种情况会造成这样的情况
+ 未在onCreate()方法里 进行 ARouter.getInstance().inject(this); 未在onCreate()方法里进行值的判断（存疑）  使用webview时 图片加载不出来
+在AndroidManifest文件中加入android:usesCleartextTraffic=&amp;quot;true&amp;quot;，然后按如下代码设置webview
+mWebView.getSettings().setJavaScriptEnabled(true);//启用js mWebView.getSettings().setBlockNetworkImage(false);//解决图片不显示  参考：https://blog.csdn.net/u013320868/article/details/52837671
+ 使用RelativeLayout布局时各种乱七八糟的属性  总结如下
+ 与parent相对的属性    属性 说明     layout_alignParentTop 表示widget的顶部和Container的顶部对齐。   layout_alignParentBottom 表示widget的底部和Container的底部对齐。   layout_alignParentStart 表示widget的左边和Container的起始边缘对齐。   layout_alignParentEnd 表示widget的左边和Container的结束边缘对齐。   layout_alignParentLeft 表示widget的左边和Container的左边对齐。   layout_alignParentRight 表示widget的右边和Container的右边对齐。   layout_centerInParent 表示widget处于Container平面上的正中间。   layout_alignWithParentIfMissing 若设置true，则当该控件layout_toLeftOf, layout_toRightOf等找不到相对的参考widget时，就以父container为参考。    与widget相对的布局    属性 说明     layout_above 表示该widget位于参数值标识的widget的上方。   layout_below 表示该widget位于参数值标识的widget的下方。   layout_alignTop 表示该widget的顶部与参数值标识的widget的顶部对齐。   layout_alignBottom 表示该widget的底部与参数值标识的widget的**底部*8对齐。   layout_alignStart 表示该widget的起始边缘与参数值标识的widget的起始边缘对齐。   layout_alignEnd 表示该widget的结束边缘与参数值标识的widget的结束边缘对齐   layout_alignLeft 表示该widget的左边与参数值标识的widget的左边对齐。   layout_alignRight 表示该widget的右边参数值标识的widget的右边对齐。   layout_centerHorizontal 表示widget处于Container水平方向上的中间。   layout_centerVertical 表示widget处于Container垂直方向上的中间。   layout_alignBaseline 表示该widget的BaseLine与参数值标识的widget的BaseLine对齐。   layout_toLeftOf 表示该widget位于参数值标识的widget的左方。   layout_toRightOf 表示该widget位于参数值标识的widget的右方。   layout_toStartOf 🚩表示该widget结束边缘与参数值标识的widget的起始边缘对齐   layout_toEndOf 🚩表示该widget起始边缘与参数值标识的widget的结束边缘对齐    延时  场景：（android）点击首页的listview里的item后进入详情页时进行锚点（用户看不到锚点动作）</description>
+    </item>
+    
+    <item>
+      <title>数据结构：树和二叉树</title>
+      <link>https://fushaolei.github.io/post/data-structure-tree/</link>
+      <pubDate>Sat, 31 Oct 2020 12:42:57 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/data-structure-tree/</guid>
+      <description>补课
+ 二叉数的性质和存储结构 性质
+ 在二叉树的第 i 层上至多有 2的i-1次幂 个结点，最少有 1 结点 深度为 k 的二叉树至多有 2的k次幂 -1 个结点，最少有 k 个结点 对任何一棵二叉树T，如果其叶子数为 a , 度为 2 的结点数位 b，则 a = b + 1 具有n个结点的完全二叉树的深度为 log以2为底n的对数 + 1 懒了，没看  两种特殊形式的二叉树 满二叉树 一棵 深度为 k 的二叉树且有 2的k次幂 -1 个结点的二叉树称为满二叉树
+特点
+ 每层都满 叶子节点全在底层  完全二叉树 深度为k的具有n个节点的二叉树，当且仅当其每一个节点都与深度为k的满二叉树中编号为1~n的节点一一对应时，称之为完全二叉树
+（可以缺少某个叶子节点）
+特点
+ 叶子只能分布在层次最大的两层上 对任一结点，如果其右子树的最大层次为 i，则其左子树的最大层次必为 i 或 i+1   关系
+ 满二叉树 一定是 完全二叉树 完全二叉树 不一定是 满二叉树   二叉树的存储结构 顺序存储 #define MAXTSIZE 100#define TElemType char typedef TElemType SqBiTree[MAXTSIZE];   实现：按满二叉树的结点层次编号，依次存放二叉树中的数据元素</description>
+    </item>
+    
+    <item>
+      <title>新浪工作流程小记录</title>
+      <link>https://fushaolei.github.io/post/sina-workflow/</link>
+      <pubDate>Wed, 21 Oct 2020 19:34:54 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/sina-workflow/</guid>
+      <description>小记录
+ 1.确认需求  是否需要后端的接口，是否定好了协议，或者增加了什么字段 是否有设计稿，哪里和哪里对齐什么的 必要的时候，还要找后端或者产品沟通一下  2.创建新分支 分支命名
+ 如果是修bug的就写：issues/fixbug_编号 如果是加新功能的就写：features/版本号/功能_名字  将分支push到远程仓库
+ git push --set-upstream origin &amp;lt;分支名&amp;gt; 可用git branch -vv指令查看本地分支是否与远程分支建立了连接  3.开发 要注意写的代码是否有意义，是否有必要
+4.code review 开发完成后要进行code review，操作如下
+  git add .
+  git commmit -m &amp;quot;&amp;quot;，格式要求如下
+  Feature(或是Fix bug之类的): 更改或增加了什么 Summary: jira Test Plan: 测试计划 Reviewers: 你指定的要帮你code reivew的人，多个人用英文逗号隔开 Subscribers: #订阅者   之后执行arc diff指令，（在nano editor里操作指令如下）
+ ctrl+o alt+d enter ctrl+x    然后就告知你指定的人review你的代码，有不好的地方就修改，然后再次arc diff，有人accept后就可用执行arc land指令，这个指令类似git push，就是推送到了远程仓库上</description>
+    </item>
+    
+    <item>
+      <title>工作中常用到的git指令</title>
+      <link>https://fushaolei.github.io/post/git-in-work/</link>
+      <pubDate>Tue, 20 Oct 2020 17:04:26 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/git-in-work/</guid>
+      <description>推送分支并建立连接    指令 作用 说明     git branch -vv 查看本地分支是否与远端分支建立了连接    git push origin &amp;lt;分支名&amp;gt;:&amp;lt;分支名&amp;gt; 仅仅将本地分支推送到远端分支 注意:这个操作只是单纯的把本地的分支推送到远端,尚未建立连接   git push --set-upstream origin &amp;lt;分支名&amp;gt; 将本地分支推送到远端分支并建立连接    git checkout -b &amp;lt;分支名&amp;gt; origin/&amp;lt;分支名&amp;gt; 拉取远程分支到本地（本地与远程建立连接） 本地已经由其他分支了    </description>
+    </item>
+    
+    <item>
+      <title>RelativeLayout中的属性</title>
+      <link>https://fushaolei.github.io/post/android-relativelayout-att/</link>
+      <pubDate>Sun, 18 Oct 2020 23:13:16 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/android-relativelayout-att/</guid>
+      <description>与parent相对的属性    属性 说明     layout_alignParentTop 表示widget的顶部和Container的顶部对齐。   layout_alignParentBottom 表示widget的底部和Container的底部对齐。   layout_alignParentStart 表示widget的左边和Container的起始边缘对齐。   layout_alignParentEnd 表示widget的左边和Container的结束边缘对齐。   layout_alignParentLeft 表示widget的左边和Container的左边对齐。   layout_alignParentRight 表示widget的右边和Container的右边对齐。   layout_centerInParent 表示widget处于Container平面上的正中间。   layout_alignWithParentIfMissing 若设置true，则当该控件layout_toLeftOf, layout_toRightOf等找不到相对的参考widget时，就以父container为参考。    与widget相对的布局    属性 说明     layout_above 表示该widget位于参数值标识的widget的上方。   layout_below 表示该widget位于参数值标识的widget的下方。   layout_alignTop 表示该widget的顶部与参数值标识的widget的顶部对齐。   layout_alignBottom 表示该widget的底部与参数值标识的widget的**底部*8对齐。   layout_alignStart 表示该widget的起始边缘与参数值标识的widget的起始边缘对齐。   layout_alignEnd 表示该widget的结束边缘与参数值标识的widget的结束边缘对齐   layout_alignLeft 表示该widget的左边与参数值标识的widget的左边对齐。   layout_alignRight 表示该widget的右边参数值标识的widget的右边对齐。   layout_centerHorizontal 表示widget处于Container水平方向上的中间。   layout_centerVertical 表示widget处于Container垂直方向上的中间。   layout_alignBaseline 表示该widget的BaseLine与参数值标识的widget的BaseLine对齐。   layout_toLeftOf 表示该widget位于参数值标识的widget的左方。   layout_toRightOf 表示该widget位于参数值标识的widget的右方。   layout_toStartOf 🚩表示该widget结束边缘与参数值标识的widget的起始边缘对齐   layout_toEndOf 🚩表示该widget起始边缘与参数值标识的widget的结束边缘对齐    </description>
+    </item>
+    
+    <item>
+      <title>C语言基础</title>
+      <link>https://fushaolei.github.io/post/c-base/</link>
+      <pubDate>Thu, 15 Oct 2020 23:34:07 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/c-base/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;之前大一还是大二学过，现在都忘光光了QAQ，如今为了复习数据结构要用到，所以要重新学过，以下都是我在菜鸟教程中学习的比较，附上一个地址：https://www.runoob.com/cprogramming/c-tutorial.html&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Java的基本程序结构设计</title>
+      <link>https://fushaolei.github.io/post/core-java-note-1/</link>
+      <pubDate>Tue, 06 Oct 2020 13:34:37 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/core-java-note-1/</guid>
+      <description>1.第一个程序 public class Hello { public static void main(String[] args) { System.out.println(&amp;#34;Hello World&amp;#34;); } }  public（访问修饰符） 用于控制对所修饰的类或对象或字段的访问级别 class表示这是一个类，Hello则是这个类的类名 main方法是所有程序的入口 大括号表示方法体的开始与结束  2.注释 //单行注释  /* 多行注释，（不能嵌套使用） */ /** * 文档注释 * 可用于自动的生成文档 */ 3.数据类型    基本类型 位数 字节 默认值     int 32 4 0   short 16 2 0   long 64 8 0L   byte 8 1 0   char 16 2 &#39;u0000&amp;rsquo;   float 32 4 0f   double 64 8 0d   boolean 1  false    4.</description>
+    </item>
+    
+    <item>
+      <title>Kindle备忘</title>
+      <link>https://fushaolei.github.io/post/kindle-dont-forget/</link>
+      <pubDate>Tue, 06 Oct 2020 13:34:37 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/kindle-dont-forget/</guid>
+      <description>优化设置  怎么去掉Kindle的广告  书籍资源  亚马逊官网 Blah书城 鸠摩搜索  </description>
+    </item>
+    
+    <item>
+      <title>Kotlin基本要素</title>
+      <link>https://fushaolei.github.io/post/kotlin-note-base-element/</link>
+      <pubDate>Tue, 06 Oct 2020 13:34:37 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/kotlin-note-base-element/</guid>
+      <description>第一个Kotlin程序 fun main(args: Array&amp;lt;String&amp;gt;) {//以fun关键字定义函数体  println(&amp;#34;Hello World&amp;#34;)//省略了分号  println(&amp;#34;较大的是：&amp;#34;+max(2,1)) println(&amp;#34;较大的是：&amp;#34;+max2(4,3)) } fun max(a:Int,b:Int): Int{//先写参数名，再写参数类型  return if(a&amp;gt;b) a else b//在kotlin中，if是表达式，这里类似java中的三元运算符 } //另一种写法： fun max2(a:Int,b:Int):Int = if (a&amp;gt;b) a else b //这里max和max2的:Int可以省略，编译器会帮你分析表达式体函数，并把它的类型作为函数返回类型 变量 关键字
+ val：不可变引用（相当于Java的加上了final关键字） var 可变引用  val a = 3//编译器会把int类型作为变量a的类型  var b = &amp;#34;gulugulu&amp;#34;//b的类型是String  var c:Char c = &amp;#39;x&amp;#39; 字符串模板 可用$或${}来注入到字符串中
+fun main(args: Array&amp;lt;String&amp;gt;) { val name = &amp;#34;Kotlin&amp;#34; var a = 2 var b = 3 println(&amp;#34;Hello $name&amp;#34;) println(&amp;#34;Hello ${if(a&amp;gt;b) &amp;#34;a大于b&amp;#34; else &amp;#34;a小于b&amp;#34;}&amp;#34;) println(&amp;#34;Hello ${if(a&amp;gt;b) a else b}&amp;#34;)//甚至可以注入变量，这也太方便了 } //输出 Hello Kotlin Hello a小于b Hello 3 类和属性 声明一个类</description>
+    </item>
+    
+    <item>
+      <title>浅谈Android MVP模式</title>
+      <link>https://fushaolei.github.io/post/android-mvp/</link>
+      <pubDate>Tue, 06 Oct 2020 13:34:37 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/android-mvp/</guid>
+      <description>前言  以前有学过，感觉理解不了，然后又用不到，然后就不了了之了 QAQ，现在因为实习公司的项目有用到，如果不学的话感觉根本看不懂项目（其实学完之后还是看不懂哈哈哈），所以就重新学过，顺面记录一下
+ 预备知识 通过这一次的学习，以前没有学懂，或者没有理解的东西都显露出来了，说到低还是自己太菜了QAQ，不废话，我认为想要理解好MVP模式就先得了解以下的知识
+ 面向接口的编程思想 向上转型的概念 解耦的含义，思想（这里的理解不太深）  ok 如果你不懂的话请往下看、
+面向接口编程 先复习一下接口的概念：
+在Java程序设计语言中，接口不是类，而是对希望符合这个接口的类的一组需求（出自《Java核心卷一》p222页） 说白了，接口就是一组需求
+而面向接口编程呢，就是在开始开发前，先定义好接口（可以理解为先列出一组需求），然后再进行开发
+向上转型 即父类引用指向子类对象，看完下面的代码应该更好理解些
+/** * 定义一个接口 */ public interface IStudent { String getName(); } /** * 继承实现这个接口 */ public class Student implements IStudent{//此时IStudent是父类，Student是子类  @Override public String getName() { return &amp;#34;任我行&amp;#34;; } } /** * 测试一下 */ public class Test { public static void main(String[] args) { IStudent iStudent; iStudent=new Student();//父类引用指向子类的对象，这里做了向上转型  System.</description>
+    </item>
+    
+    <item>
+      <title>Java面试必知必会</title>
+      <link>https://fushaolei.github.io/post/java-interview-note/</link>
+      <pubDate>Thu, 01 Oct 2020 12:11:32 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/java-interview-note/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;面试题以及答案，有些是我经历过的面试题，有些是收集自网上的，水平有限，如果你有更好的答案欢迎和我交流！&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Android面试必知必会</title>
+      <link>https://fushaolei.github.io/post/android-interview/</link>
+      <pubDate>Thu, 01 Oct 2020 11:56:39 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/android-interview/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git Commit规范化</title>
+      <link>https://fushaolei.github.io/post/git-commit-note/</link>
+      <pubDate>Wed, 30 Sep 2020 22:09:46 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/git-commit-note/</guid>
+      <description>规范化格式 公式：
+&amp;lt;type&amp;gt;: &amp;lt;subject&amp;gt;    type类型 含义     feat 加入新功能   fix 修复了bug   style 改变了代码格式   refactor 重构   test 增加测试 ??    参考  你可能会忽略的 Git 提交规范 如何规范你的Git commit？  </description>
+    </item>
+    
+    <item>
+      <title>新浪之旅</title>
+      <link>https://fushaolei.github.io/post/sina-travel/</link>
+      <pubDate>Mon, 28 Sep 2020 22:23:14 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/sina-travel/</guid>
+      <description>楔子 有心情再写d=====(￣▽￣*)b
+初入北京 最重要的就是找房子咯，一开始我是在58同城上面找的，结果不是黑中介就是离公司太远了，糟心，然后在朋友的推荐下去了自如APP上找房，看着比58上正规多了，但是太特么贵了，最便宜的也要1900一个月，而且离公司还远，经过了多方搜索后终于在暖房公众号中找到了想要的房子，离公司大概四公里，然后也相对较便宜，在这里也安利一下暖房公众号。（顺面说一下，初入北京的时候是我上铺接待并收留我的，这里也特地感谢他！
+新浪每日小计(～￣▽￣)～ 9.29 今天是蛮重要的一天的，说来玄幻，我以为什么都准备好了，谁知道，天有不测风云，29号那天本来应该是开心的一天，但是却下起了小雨，没错，我没准备雨伞！！！！紧张！，结果七点钟就起床了，然后带着书包小跑着去比较近的小卖部买了一个雨伞（雨伞！突然想起来了，忘记在共享单车上了卧槽QAQ），然后因为紧张，起的太早了，到公司门口的时候才8点半这样，然后offer上说是9点半报道的，虽是这么说，但不可能这么晚吧？但是去太早了感觉也不太行，然后在街头站到8点45时，我终于耐不住了，就进去报道了，一开始前台让我签个名然后给了我一张卡，然后就去等着，等着专人来报道的，一直等到了九点二十这样，然后就是签合同，签保密证书啊，什么什么之类的。然后就是我们部门的人来接我啦(￣▽￣)&amp;quot;，我一直想象的实习之旅便要开始了，我开心的原地起飞。终于到了办公室了，大佬给我指定了工位，紧接着就是搭环境啦（搭到下班），然后熟悉熟悉代码（我天(╯‵□′)╯︵┻━┻根本看不懂），熟悉熟悉工作流程（根据需求开发，测试，修代码 等等）
+9.30 昨天问了大佬了，他说他们十点半前打卡就行，但是我以为十点半是那种潜在的规则，于是我八点50的时候就到了。。。然后等到了九点五十的时候才见有人来。。。。原来上班真的那么晚啊，我这个傻小子→_→，然后就是看项目的代码，说实话，真的太难了，结构都大的一批，然后一个类实现好多个接口，属实把我看懵了，然后过了会大佬就分配给了我一个超级简单的任务，不过到现在还没做完，因为我连代码都没看懂啊QAQ，哎，还好明天就是国庆了，可以好好利用这个时间熟悉熟悉项目的代码(*￣3￣)╭。
+10.9 今天是复工的第一天，本来是计划再国庆期间好好读一遍源码的，无奈，自己实在是太菜了，没有毅力和耐心坚持下去，结果对于这个大佬分配的小任务还是模棱两可，不知所措，其实需求很简单，但是无奈自己的电脑实在是太慢了，编译一次项目需要半个小时左右，真是窒息，也感觉到了自己的思维方式还有待提高
+10.10 今天还是做大佬给的小任务（呜呜呜我真是被自己菜哭了），也感觉到了自己的基础是那么的薄弱，简直是一看三不知啊QAQ，太尴尬了！！！！！也感觉到自己和大佬思维方式的区别，我是想着怎么做出来，大佬是想着怎么完美的做出来，也不容忍一些多余的东西。今天还被一个大佬教育了，他不知道问了我一个什么问题，我有些不明白，很难为情，不知道大佬要问什么，结果大佬不耐烦了就自己说了，好特么尴尬QAQ
+10.12 大佬给的小任务终于找到突破点了，泪目，原来是我太粗心大意了，本该早完成的东西居然做了那么久，真是有些尴尬，一来是怕leader看不起我，二来是我自己也有些怀疑自己了，还好最后找到了突破口，其实就是一个setVisibility的事，只是当时我以为这个方法是在其他类里边的，关顾着在其他类里寻找了，一点也没有看本身的类里是否有这个方法，哎，这就是我思维的死板了，不懂的转换思维，哎，我这脑子还真是本呐，还有，今天做完了这个之后呢，就是arc diff给其他同事code review，当他们code review完之后呢，就提测了，当测试结束后（这个过程中没有事情干，源码也看不下去，然后今天一直在划水哈哈哈），还有产品经理什么的确认过后，就可以合并了，今天leader还暖心的给我一步一步的写如何合并，什么先rebase先啊，然后再merge之类的，我没想到leader会写的那么详细，着实感动到我了，（因为今天一直明目张胆的划水，我甚至有些愧疚哈哈哈，还是再leader附近，疯狂划水），然后今天似乎要集成测试，各位都挺忙的，就我不忙，到了八点的时候，我就和leader说我先走了，照理我这么怂的性格应该一直等大佬下班我才敢走的，但不知道为什么，那一刻，就算被辞职也要勇敢一次 哈哈哈哈
+10.13 疯狂摸鱼的一天，几乎没怎么工作，可能是因为组里的大佬觉得我太菜了，不想给我任务QAQ。值得说的是今天去了公司吃早餐，蛮不错，减免六块钱，虽然我只吃了三块五哈哈哈，还有今天下午那个卤鸭饭，很不错，缺点就是米饭太少，卤鸭过咸了，感觉来新浪这几天吃的东西米饭都很少TAT，喵的，今天过的是真滴颓废啊
+10.14 今天上午看了看那个底栏四个tab和对应的fragment以及fragment里的顶栏nav的逻辑，完全一知半解，代码量实在是太庞大了，看的头晕脑胀的，然后看到了下午六点这样，然后leader才分配了一个任务过来，然后到了弄到了八点半这样（大多数时间是在等编译QAQ），看到身边的大佬不是在讨论，就是在写代码的，那个氛围，就好像高考时的晚修，而到了下课铃声响起的那一刻，除了我，他们都还在奋斗，我鼓起勇气，抑制羞涩，和leader说，我先走了，哈哈哈，太滑稽了。
+10.15 今天居然来了个新人呼哈哈，然后最近大佬们都挺忙忙的，然后顾不上他，哈哈，还好我比较闲，哈哈，至少有一个实习生作伴，还不太算寂寞，否则，老是自己一个人，怪孤独的
+10.16 哎，今天居然被程哥怼了，起因是leader给了我一个小需求，然后需要一个后端的接口，然后那个接口还没弄好呢，连协议都没有，然后大佬就开始怼我了，哎，这特么的，过程就不详细说了，emm，从此成为一名社畜，我现在是社会人啦（已疯~）
+10.19 今天无感，不过今天和后端对接了，还蛮新奇的，然后今天早上还有站会，让我想起当时在学校做大作业的时候，也有站会，然后感觉来这里工作就是在做一个超级大的作业，然后分工很明确，和学校里差不多哈哈哈
+10.20 今天出现了一个重大的失误，就是在arc diff前，本来是要推送我开发的分支上去的嘛，我使用的是这个指令git push origin dev:dev（权且用dev代替开发分支名），这个指令仅仅是将我这个分支推送到了远端而已，并没有将本地的这个分支，与远端分支建立连接（也就是说，当我git push的时候，是不会成功的），结果，我arc diff了之后，它找不到我远程的那个分支（因为没用建立关联），然后就以为我是和默认分支进行一个比较，结果产生了很多的比较文件。。。。。那一刻我真是慌的一批哈哈哈，不过在鹏程哥耐心的指导下，终于解决了:)，这就是由于push分支不当而出现的恐慌。那么，正确的操作应该是怎么样的呢，正确的操作应该是git push --set-upstream origin dev，没错，就是这样。
+10.21 今天还是和产品那边对接，简直糟心，后来直接和ue对接，然后改来改去的才过了，哎
+10.22 今天又被教育了，哎，规范代码很重要，减少维护成本，还有，写代码，是给后面维护的人看的QAQ
+10.23 划水的一天
+10.26 迷茫，打工人的迷茫，不知道路怎么走
+10.27 无感的一天
+10.28 终于等来这一天了，因为今天发工资，先前和序哥了解过，工资是每个月的28号结算上个月15号到当月的15号的工资的，算起来有三十天是吧，然后因为我是实习生，每天的工资是150，然后是按工作日算，然后我是上个月的29号到的，中间还有国庆的假期，所以算起来，没多少钱，应该有8x150 = 1200，但是最后到账的是1120，哎呀，是真滴少啊卧槽，连房租都不够交，哎，还向老爸要了七百来交房租，哎，家里本来就不富裕了，我还硬要来北京，只会增加父母的负担，在骑车回来的路上，看着熙熙攘攘的人们，骑着电动车的，电动滑板的，哎，我也想啊，可是我没有钱，钱都是家里给的，都是父母挣的钱，而我，都已经二十一岁了，还这么大把大把的花着他们的钱，我 确是不该啊，唯有好好读书 提高自己，回报他们。不过今天确实值得纪念，因为这是我，依靠自己，找的实习，赚的第一笔钱。往后还得加油啊！奥里给，打工人雄起！
+10.29 我独自走在北京萧瑟的夜~
+10.30 今天的事情蛮多的，先是大佬们中午就出发去团建了，然后我和亚坤哥没去，就是剩我两在组里，摸摸鱼，划划水，然后可爱漂亮的产品姐姐还过来和我沟通了一会需求(￣▽￣)&amp;quot;，然后和舍友讨论晚上去哪里吃饭，六点就溜了，晚上和康还有友一起去吃了火锅，哎呀，真幸福啊这天哈哈，吃完饭，走在北京的路上，看着川流不息的车辆和人群，我迷茫了，大城市的夜，如此繁华，这栋房，这辆车，不知我何年何月才可以拥有，总有一天，我一定会有属于我的天的。
+11.2 无感的一天
+11.11 今天和鹏程哥以及宸烁开了个小会啊，期间鹏程哥对我们甚是关怀，问着问那的，同时也提出了他看到我我们的缺点，以及对我们的期望，哎，鹏程哥外冷内热，是个好人，就凭他把我招进来这点，就是我的恩人呐
+11.12 今天居然见到了明星，小时候还经常看她的剧，就是仙剑奇侠传里的紫萱！太幸运了，虽然我不追星，但是见明星还是第一次</description>
+    </item>
+    
+    <item>
+      <title>GitHub &#43; Action实现在线写作</title>
+      <link>https://fushaolei.github.io/post/github-action-hexo/</link>
+      <pubDate>Mon, 21 Sep 2020 22:01:51 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/github-action-hexo/</guid>
+      <description>零，前言 hexo 是一款快速、简洁且高效的静态博客框架，因为它的高可定制性，所以深受各个程序员的喜爱，我也曾一头扎进去研究过，先后开发了white和hiya主题，在使用过程中，也渐渐的发现了一些问题
+情景一，当浏览自己某篇博客时发现了一些错误之后想要马上修改时，将要经历经历一下步骤
+ 在本地的hexo博客文件夹中找到source/_post文件夹 找到那个md文件，打开 修改 然后还要经历hexo clean,hexo g，hexo d  情景二，当想要马上写一篇博客时，需要经历以下步骤
+ 在博客根目录中hexo n &amp;quot;博客名&amp;quot; 点击进入source/_post文件夹中找到这个md文件并打开 写博客 然后还要经历hexo clean,hexo g，hexo d三连  以上过程想必使用过hexo博客的人都经历过吧？不知道你们什么感觉，反正这对于我这种急性子的人来说简直是忍不了(╯‵□′)╯︵┻━┻，而且每次写完博客啊，修改完博客啊之类的，还必须经历过hexo clean,hexo g，hexo d才可以将博客推送到网上去，这玩意我一开始还有耐心，现在就不行了(ノ｀Д)ノ，幸好后来发现了github action可以实现自动部署，再结合自己以往开发hexo主题的经验，做出来了可以在线新建博客或者修改博客的功能（具体可参观我的博客），效果如下：
+新建文章
+修改文章
+就这样，利用github action交给github去做hexo clean,hexo g，hexo d三连，很方便的实现了新建文章和修改文章，即优雅，又方便，那么这又是如何做到的呢？下面我将分为两个部分来说明，第一部分是如何结合github action来实现自动部署，第二部分是如何点击某个按钮后进入新建文章页，和修改文章页。
+一，使用github aciton实现自动部署 1.在github新建一个仓库，专门用来存放源文件，我的源文件如下，供各位参考
+ 什么？你不会要先git clone到本地后，再将源文件复制粘贴到里面再上传吧？这也太low太笨拙了吧哈哈哈，咳咳，如果你不会将本地仓库关联到远程仓库的话，请按下边步骤进行
+ 在hexo源文件夹中 hexo init  进行初始化 关联远程仓库 git remote add origin git@github.com:&amp;lt;你的用户名&amp;gt;/&amp;lt;存放源文件的仓库名&amp;gt;.git git pull --rebase origin master和远程仓库进行一个同步 然后依次进行git add .，git commit -m &amp;quot;init repo&amp;quot;，git push -u origin master ，然后就大功告成啦  上传好的源文件在github中如下</description>
+    </item>
+    
+    <item>
+      <title>Spring笔记</title>
+      <link>https://fushaolei.github.io/post/spring-note/</link>
+      <pubDate>Mon, 17 Aug 2020 09:27:43 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/spring-note/</guid>
+      <description>很早之前就听说过这个框架了，但是今年二月份才开始学╰(￣ω￣ｏ)，未必是有些晚了，现在又重新学期，有了之前学idea的经验，应该也不是什么问题
+贴一个文档：https://docs.spring.io/spring/docs/current/spring-framework-reference/index.html
+ 第一个程序 IoC和DI的概念  IoC：控制反转（设计原则）由容器主动将资源推送到它所管理的组件里，组件要有接受资源的方式 DI：依赖注入（IoC的典型实现）   好了，光知道这个思想其实没什么用，下面开始编码
+步骤
+ 创建maven项目 在pom.xml中添加相应的依赖 👴忘了   pom.xml里的依赖 &amp;lt;!--Spring核心基础依赖--&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-core&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;5.0.2.RELEASE&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-context&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;5.0.2.RELEASE&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-beans&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;5.0.2.RELEASE&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-expression&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;5.0.2.RELEASE&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;!--日志相关--&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;commons-logging&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;commons-logging&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.2&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;log4j&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;log4j&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.2.17&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.testng&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;testng&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;RELEASE&amp;lt;/version&amp;gt; &amp;lt;scope&amp;gt;compile&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; 3种配置元数据的方法 基于Xml的配置 &amp;lt;beans xmlns=&amp;#34;http://www.springframework.org/schema/beans&amp;#34; xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; xmlns:context=&amp;#34;http://www.springframework.org/schema/context&amp;#34; xsi:schemaLocation=&amp;#34;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd&amp;#34;&amp;gt; &amp;lt;!--id写什么都行 只要保证唯一就行，在Spring容器中用id来调用--&amp;gt; &amp;lt;!</description>
+    </item>
+    
+    <item>
+      <title>面试流程</title>
+      <link>https://fushaolei.github.io/post/interview-water/</link>
+      <pubDate>Fri, 14 Aug 2020 15:57:53 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/interview-water/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;其实说是android面试，其实更多的会问到许多java的知识，毕竟基础嘛，实习生面试还是以基础为主（我猜的），然后这篇文章会融合之前写过的东西，从面试流程开始。此文的面试题有的是我经历过的，有的是网上的一些，为方便复习总结，收集于此。学术不精，如有错误，请与我联系改正 ( •̀ ω •́ )✧&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>MyBatis笔记</title>
+      <link>https://fushaolei.github.io/post/mybatis-note/</link>
+      <pubDate>Fri, 14 Aug 2020 14:12:12 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/mybatis-note/</guid>
+      <description>这框架是大三下学期的课程了，当时学的时候是用的eclipse的，现在换用IDEA 遇到了许多的坑，特此记录，然后，这也是个从零开始学mybatis的博文，为了期末考试，也为了巩固自己的编码基础，特写此文. 注：编码环境
+ IDEA 2020.1 Mysql 8.0.20 全部都是Maven项目（为方便引入jar包）  外加一个官网指路👉https://mybatis.org/mybatis-3/
+还有一个自己学mybatis时敲过的全部代码：https://github.com/FuShaoLei/FrameDemo/tree/master/Mybatis
+ 第一个项目  分为以下几步
+ 创建一个maven项目 配置包，编译 创建entity类，以及映射器接口和SQL映射XML文件 创建mybatis的 xml配置文件并关联SQL映射XML文件 测试  👴哭了，第一次配置太麻烦了
+ 导入jar包 由于我是maven项目，根据官方的文档 ，只需在pom.xml中添加相应的东西即可
+&amp;lt;dependencies&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.mybatis&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mybatis&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.5.5&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;mysql&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mysql-connector-java&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;8.0.20&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;/dependencies&amp;gt; 从 XML 中构建 SqlSessionFactory  **每个基于 MyBatis 的应用都是以一个 SqlSessionFactory 的实例为核心的。**SqlSessionFactory 的实例可以通过 SqlSessionFactoryBuilder 获得。而 SqlSessionFactoryBuilder 则可以从 XML 配置文件或一个预先配置的 Configuration 实例来构建出 SqlSessionFactory 实例。(官方原话)
+ 由上面可知，要创建一个xml配置文件，为的是构建SqlSessionFactory实例。根据官方给的xml配置文件示例进行修改即可
+&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34; ?&amp;gt; &amp;lt;!DOCTYPE configuration PUBLIC &amp;#34;-//mybatis.</description>
+    </item>
+    
+    <item>
+      <title>排序算法</title>
+      <link>https://fushaolei.github.io/post/sort-algorithm/</link>
+      <pubDate>Thu, 13 Aug 2020 19:34:10 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/sort-algorithm/</guid>
+      <description>更新中(づ￣ 3￣)づ
+ 算法简介 一个算法的评价主要从时间复杂度和空间复杂度来考虑，
+时间复杂度 我们把问题的规模称为n，（这个n代表着要处理的数量）
+ 一般情况下，算法中基本操作重复执行的次数是问题规模 n 的某个函数 f(n) ，算法的时间度量记作 T(n)=O(f(n)) 表示随着问题规模 n 的增大，算法执行时间的增长率和 f(n) 的增长率相同，称作算法的渐进时间复杂度，简称时间复杂度。
+ 比如冒泡排序，时间复杂度就是T(n)=n^2（因为有两层循环）
+空间复杂度 空间复杂度是指算法占用内存空间的值
+ 正餐开始( •̀ ω •́ )✧
+ 冒泡排序 思想 依次比较两个相邻的元素，如果他们的顺序错误就把他们的值互换
+示例代码  两层循环 依据需求比较互换  /** * 冒泡排序 */ public static void bubble_sort(int array[]){ System.out.println(&amp;#34;冒泡排序开始&amp;#34;); for(int i=0;i&amp;lt;array.length-1;i++){ for(int j=i+1;j&amp;lt;array.length;j++){ if(array[j]&amp;gt;array[i]){ int temp=array[j]; array[j]=array[i]; array[i]=temp; } } } System.out.println(Arrays.toString(array)); System.out.println(&amp;#34;冒泡排序结束&amp;#34;); } 选择排序 思想 先假设比如第一个元素是最大的（或最小），然后去循环，如果有比它更大的元素，则互换
+示例代码  假设最值 比较互换  /** * 选择排序 */ public static void select_sort(int array[]){ System.</description>
+    </item>
+    
+    <item>
+      <title>常用设计模式</title>
+      <link>https://fushaolei.github.io/post/usually-use-design-pattern/</link>
+      <pubDate>Thu, 13 Aug 2020 19:33:06 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/usually-use-design-pattern/</guid>
+      <description>选修课程笔记
+ 什么是模式  重复出现的问题，它的通用的解决方案就是模式
+ 是由三部分组成的规则  特定的环境 一个问题 一个解决方案  本文在介绍每一个设计模式之前都会先说这三个部分
+核心思想 设计的复用
+面向对象原则  单一职责原则：高内聚低耦合（一个类完成一个职责，类和类之间的调用尽量少） 开闭原则：在不修改原有代码的基础上扩展其功能  好设计原则  依赖倒装原则：细节依赖抽象，针对接口编程 接口隔离原则：将一些大的接口细化成小的接口供客户端使用 合成复用原则：复用时尽量使用对象组合 迪米特法则：要求一个软件实体应当尽可能少的与其他实体发生相互作用  单例模式 确保一个类仅有一个唯一的实例（多次new只生成一个对象）
+解决方法  private 私有化————在类外无法new出来了 static————控制全局只有一个 提供一个获取实例的方法  观察者模式  又叫发布-订阅模式，我觉得还是这个名字好
+ 介绍  背景：某对象发生了变化，需其他对象做出调整 两个角色：观察者和被观察者 当被观察者发生变化时，观察者回察到变化，并做出响应  类比的话 就像微信公众号一样，公众号若发布消息的话，所有订阅者都回收到消息
+ 这里可以看出，公众号是发布者（也就是被观察者），当它发生变换时，所有订阅这个公众号的用户就是订阅者（即观察者），都会收到消息，并做出响应
+ 实现 (A表示订阅者 B表示发布者)
+ 发布者将所有订阅者装进一个容器里 发布者发布了某些信息，从容器中得到所有注册过的订阅者，将变化通知他。 当订阅者不想订阅此发布者时，只需告知发布者，发布者即从容器中把此订阅者删除   下面是小小demo
+ /** * 发布者，拥有以下几个功能 * 1. 添加订阅者 * 2.</description>
+    </item>
+    
+    <item>
+      <title>white主题配置</title>
+      <link>https://fushaolei.github.io/post/doc-white-configration/</link>
+      <pubDate>Sun, 09 Aug 2020 23:31:29 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/doc-white-configration/</guid>
+      <description>👋Hi there 欢迎使用本主题 ，White 是一个在个性和极简之间徘徊的主题，（因为作者本身性格就是这样的人，而且搞不好心态爆炸会删库跑路（现已跑路。。。），还请喜欢的各位及时fork🤣
+如果你喜欢这款主题的话，不妨给我一个star 感激不尽！
+安装  方便备份和更新
+  fork 本项目 git clone https://github.com/&amp;lt;你的用户名&amp;gt;/hexo-theme-white.git themes/white 修改根目录下的_config.yml 为theme: white  主题配置  其实config文件里写的很明白了，现在就重新列一下，添加一些不必要的说明
+ 可自定义style ############## style ############## style: layout: max-width: 1130px #总体宽度 post-max-width: 800px #文章内容宽度 color: theme-main: &amp;#34;#1A98FF&amp;#34; # 主色调 theme-secondary: &amp;#34;#DDF0FF&amp;#34; # 次色调 text-main: &amp;#34;#333333&amp;#34; # 文字主色调 text-secondary: &amp;#34;#898FA0&amp;#34; # 文字次色调 animation: open: true # 如果开启动画的话会引入animation.css 主页配置 home页和archive可选配置 # home页可选类型 home: type: &amp;#34;img&amp;#34; # 主页的类型，可选 home | img | simple # archive页可选类型 archive: type: &amp;#34;simple&amp;#34; # archive的类型，可选 img | simple type为home就是一个封面，为img就是图片加标题的形式，simple就是极简模式</description>
+    </item>
+    
+    <item>
+      <title>Java基础</title>
+      <link>https://fushaolei.github.io/post/java-base-note/</link>
+      <pubDate>Tue, 04 Aug 2020 11:32:08 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/java-base-note/</guid>
+      <description>基础语法  简介：Java是由Sun公司于1995年5月推出的面向对象程序设计语言和Java平台的总称
+ 基本结构 public class Hello {//public访问修饰符 class表示这是一个类，Hello则是这个类的类名 	public static void main(String[] args) {//main方法是程序的入口 	System.out.println(&amp;#34;Hello World&amp;#34;);//执行的语句 	} } 注释 /* 块注释 */ //行注释 /** * 文档注释 */ 输入/输出 输入System.in，输出System.out
+输入 需借助Scanner对象读取System.in的输入 示例：
+import java.util.Scanner; public class Hello { public static void main(String[] args) { Scanner input=new Scanner(System.in); System.out.println(&amp;#34;请输入一个数字&amp;#34;); int num=input.nextInt(); System.out.println(&amp;#34;你输入的数字是：&amp;#34;+num); } } 输出 System.out.println(&amp;#34;Hi&amp;#34;);//输出后面有一个换行符 System.out.print(&amp;#34;Hi&amp;#34;); System.out.printf(&amp;#34;Hi&amp;#34;); 基本数据类型    基本类型 位数 字节 默认值 对应的包装器类     int 32 4 0 Integer   short 16 2 0 Short   long 64 8 0L Long   byte 8 1 0 Byte   char 16 2 &#39;u0000&amp;rsquo; Character   float 32 4 0f Float   double 64 8 0d Double   boolean 1  false Boolean     注意:</description>
+    </item>
+    
+    <item>
+      <title>Flutter入门</title>
+      <link>https://fushaolei.github.io/post/flutter-note/</link>
+      <pubDate>Fri, 17 Jul 2020 15:23:41 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/flutter-note/</guid>
+      <description>刚开始知道Flutter还是在19年初的时候（？），在学校举办的google开发者大会上知道的，起初也想试试来着，不过他说要按什么环境，我就觉得麻烦就不弄了，直到上次面试威视的时候面试官提及，才想起有这么一个东西，而这时的我已经经历了好多次重装系统（TAT），已经无所畏惧了，程序员嘛，要敢于折腾
+ 简介 略
+配置环境 配置Flutter环境 看官方这篇教程就好：入门: 在Windows上搭建Flutter开发环境
+列几个点吧：
+ 下载安装包： https://flutter.dev/docs/development/tools/sdk/releases#windows 解压 配置环境变量，在用户变量里加入flutter/bin的路径  然后测试一下，win+R 输入cmd启动小黑块 输入flutter doctor 出现类似如下 说明成功啦！（存疑）
+安装Android studio插件 需要安装Flutter插件和Dart插件 在安装Flutter插件的时候给我报了个错误： 然后我重启android studio又给我报了一个错误 我特喵 (╯‵□′)╯︵┻━┻
+后来重启电脑和连手机热点就解决了。。网速真是个大问题啊
+两个插件都安装成功后重启你的android studio就可以看到新增的东西了
+第一个Flutter程序 最开始也得配置一下flutter的路径 等待创建 这一步我等了有二十分钟&amp;hellip;
+然后就创建完成啦
+运行到手机上看看
+如果出现这个页面（默认的） ，就说明 我们大功告成啦~~</description>
+    </item>
+    
+    <item>
+      <title>Linux安装</title>
+      <link>https://fushaolei.github.io/post/linux-note/</link>
+      <pubDate>Mon, 13 Jul 2020 00:17:53 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/linux-note/</guid>
+      <description>参考资料: Linux常用命令
+ 基础 关机/重启  关机：shutdown -h now 重启：shutdown -r now  帮助 例如想查看shutdown命令的用法，可以这样
+shutdown --help 就会出现： 更详细的，输入这个
+man shutdown 就会出现 按q可退出
+目录切换 cd 后面更不一样的东西会有不一样的效果
+   命令 切换到     cd / 切换到根目录   cd /user 切换到更目录下的user目录   cd .. 切换到上一级   cd ~ 切换到home目录   cd - 切换到上次回访的目录（？）    目录查看    命令 查看..     ls 查看当前目录下的所有目录和文件   ls -a 查看当前目录下的所有目录和文件（包括隐藏的文件）   ls -l 或 ll 列表查看当前目录下的所有目录和文件（列表查看，显示更多信息）   ls /dir 查看指定目录下的所有目录和文件 如：ls /usr    目录操作 增 mkdir    命令 作用     mkdir aaa 在当前目录下创建一个名为aaa的目录   mkdir /usr/aaa 在指定目录下创建一个名为aaa的目录    删 rm 删除文件： rm 文件 删除当前目录下的文件 rm -f 文件 删除当前目录的的文件（不询问）</description>
+    </item>
+    
+    <item>
+      <title>Linux虚拟机安装记录</title>
+      <link>https://fushaolei.github.io/post/linux-install/</link>
+      <pubDate>Thu, 09 Jul 2020 16:53:45 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/linux-install/</guid>
+      <description> 直接开搞
+ 前期准备 下载vmware https://www.vmware.com/cn/products/workstation-player/workstation-player-evaluation.html
+下载ubuntu镜像 http://mirrors.ustc.edu.cn/
+开始安装 点击创建虚拟机 配置用户名和密码 配置虚拟机路径 配置虚拟机 点击完成后  这一步会蛮久的，我等的心态都快炸了
+  这里这个vmware tool我并没有安装好，好像是个可以托本地的东西进入虚拟机的东西？
+ 下载源更换 参考：https://blog.csdn.net/YooLcx/article/details/104527734
+ 可以让你下载东西时更快些
+ 大功告成啦 话说这个壁纸好好看哦
+ 写博客写到这里，我居然想不起今天下午突然想安装linux的原因了，，是为了学习吧^^
+另外，本博客的图片上传工具使用的是我新开发的Imagic，稳定性杠杆滴，比picgo强多了，虽然说现在Imagic的界面很丑，也没有相册管理功能，但至少，我用我学来的知识，为自己带来了便利，即所谓技术服务于人类
+ </description>
+    </item>
+    
+    <item>
+      <title>java打造一个图片上传工具</title>
+      <link>https://fushaolei.github.io/post/java-make-a-image-upload/</link>
+      <pubDate>Fri, 03 Jul 2020 12:25:29 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/java-make-a-image-upload/</guid>
+      <description>前言 hexo博客，图片是个问题，有一种方法是，把图片放在一个文件夹里，和hexo一起部署，然后博客里用相对路径来引用，这里有个问题，假如博客迁移，或者想转平台发布的时候，每次图片都要找出来然后再贴上去，这真是大大的不便啊。还好后来发现了picgo这个软件，做为资深白嫖党，picgo+github+jsDelivr的组合做图床简直香的不要不要的，但是，我发现，用picgo来上传图片到github并不稳定，然后我又是个急性子，有时候想上传一张图片的时候给我报错，我特么能忍吗，所以想自己动手丰衣足食
+尝试一：调用github api  原因是昨天玩travelling 的时候看见了这篇文章：Java调用Github API实现上传文件到Github仓库
+ 心血来潮，跟着作者写demo，不过弄完了我发现，调用github api这种方法上传简单txt文件的没问题的，上传图片之类的问题就大了，因为content要求的是base64格式嘛，然后图片的base64格式出来的字符串就长的不行，每次都失败（回传了个422错误码），无语，然后 我还发现，这东西还特么的不稳定，有时候会connection reset链接错误，看到这个时我才明白，为什么picgo上传到gihub会不稳定，也可能是我网的问题，我问Hexo群里，都是蛮稳定的，不知道为什么我这个很不稳定
+第一次尝试 失败
+尝试二：Jgit Jgit是一个由Eclipse基金会开发、用于操作git的纯Java库。（也就是可以用java进行git add .，git commit -m &amp;quot;update&amp;quot;等操作）于是我搜这搜那，终于在今天的上午写成了一个demo，完美实现了git add .,git commit -m &amp;quot;update&amp;quot;，git push三连。不过这样还不够，少了一些b格，然后就琢磨着怎么搞一个界面出来，于是接触道理swing，反正啥也不哦那个，就东拼拼，西凑凑，弄了一个东西出来，可以实现拖拽上传，成果如下
+完美实现上传！在这里要特别感谢测试工具人——策酱
+此项目的github地址：https://github.com/FuShaoLei/Imagic 虽然界面是有些丑啦，但是用起来可比picgo流畅多了，没出现过什么卡顿现象
+第二次尝试 成功了^^
+ 补充一下思路啊，就是拖拽图片后获取绝对路径，根据绝对路径来复制到本地的git仓库，然后再git三连到远程仓库，然后组合连接返回就好
+ 畅想 未来准备给Imagic加上更多的功能，因为我的定位就是专门为github上传图片的，然后可以返回一个自动组成的jsDelivr加速链接，也打算用Swing开发，不用javaFX了（也会考虑） 先列举一些以后要添加的功能
+ 图片管理（复制链接，删除图片，修改图片名，批量删除，批量添加等） 自带截图（我一般都是用的qq截图，这样太麻烦了，每次截图都要打开qq，多low啊） 自带录取gif图（打算参考参考greenTogif的源码）  </description>
+    </item>
+    
+    <item>
+      <title>Listview学习</title>
+      <link>https://fushaolei.github.io/post/android-listview/</link>
+      <pubDate>Wed, 24 Jun 2020 08:37:32 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/android-listview/</guid>
+      <description>Listview是入门android的重点，当初浅尝辄止，不是很理解原理，如今重新来过，希望有不一样的感悟
+ 简介 AdapterView 容器控件，其整体效果由每一个子元素内容决定，子元素的形式由Adapter决定。 常见子类：
+ ListView 垂直列表 GridView 网格列表 Spinner 下拉列表  待显示的数据如何传递给AdapterView中的Item？
+ 准备数据 （数据和item是匹配的） 借助Adapter来实现数据与View之间的数据传递。  Adapter 将数据显示到视图上，数据和视图之间交互的中介。
+图解 作用  将数据和视图分开了，数据改变时，不需要修改视图组件，只需更新Adapter 对于同一组数据，可以显示为不同的视图形式  常用Adapter  ArrayAdapter：最简单的适配器，数据源为文本字符串数组。 SimpleAdapter：简单适配器，数据源结构比较复杂，一般为List类型对象。 SimpleCursorAdapter：游标适配器，数据源一般为数据库中（SQLite）的数据。 自定义适配器：更灵活的适配器，数据源不定（由用户自行指定），需要继承BaseAdapter抽象类。   实际项目中，自定义适配器用的比较多
+ 基本流程  准备数据源 准备AdapterView每一个子项（item）的视图布局。 创建Adapter（连接数据源和视图布局）。 为指定AdapterView视图组件绑定适配器。 为AdapterView绑定（item）事件监听器。  自定义Adapter 基础样式 /** * 继承BaseAdapter后需要完成四个方法 * 1. getCount() 获得数据的条数 * 2. getItem(int position) 获取每个item显示的数据对象 * 3. getItemId(int position) 获取每个item的id的值 * 4. getView(int position, View convertView, ViewGroup parent) 获取item的视图对象 */ public class MyAdapter extends BaseAdapter { /** * 三个必要的东西： * 1.</description>
+    </item>
+    
+    <item>
+      <title>如何创建一个Hexo博客</title>
+      <link>https://fushaolei.github.io/post/how-to-make-a-hexo-blog/</link>
+      <pubDate>Sun, 21 Jun 2020 00:38:22 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/how-to-make-a-hexo-blog/</guid>
+      <description>自用教程
+ 环境准备  Node.j：: https://nodejs.org/en/ Git：https://git-scm.com/ 一个Github账号：https://github.com/， 并且创建一个名为 &amp;lt;用户名&amp;gt;.github.io的仓库  安装Hexo 全局安装 npm install hexo-cli -g 或
+npm install -g hexo 初始化 hexo init blog ## 在blog文件夹中初始化hexo cd blog ## 进入blog文件夹 hexo g ## 编译 hexo s ## 本地预览，在浏览器中输入localhost:4000看看效果 部署到Github Pages 配置SSH密钥 在博客文件夹中
+ssh-keygen -t rsa -C &amp;quot;1563250958@qq.com&amp;quot; 然后
+clip &amp;lt; ~/.ssh/id_rsa.pub 将公钥的内容复制到系统粘贴板上
+在github中，以此setting-&amp;gt;SSH and GPG keys-&amp;gt;添加一个新的SSH key（key就填公钥）（可允许ssh -T git@github.com测试成功或不成功）
+配置hexo 复制&amp;lt;用户名&amp;gt;.github.io仓库中的ssh链接备用，然后hexo根目录的_config.yml这样配置：
+deploy: type: git repository: git@github.com:FuShaoLei/FuShaoLei.github.io.git branch: master 然后还要再安装一个东西</description>
+    </item>
+    
+    <item>
+      <title>IDEA食用小记</title>
+      <link>https://fushaolei.github.io/post/idea-note/</link>
+      <pubDate>Sun, 14 Jun 2020 21:36:08 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/idea-note/</guid>
+      <description>哭唧唧，用惯了eclispe的我用起idea就像一个傻子，现在记录一下，以免忘记 所用版本：idea 2020.1
+ 1. 下载和安装 去官网下载：https://www.jetbrains.com/idea/download/ 安装随意，破解的话 看这篇文章
+2. 配置maven  maven的作用就是帮助我们下载需要的jar包，不需要在自己去网上找来找去了
+ 去这个页面: 然后解压，记住你解压后的位置，比如我直接解压到E盘 然后是配置环境，电脑&amp;gt;属性&amp;gt;高级系统设置&amp;gt;环境变量，在系统变量中添加一个变量为M2_HOME，值为你的maven存放路径，然后到path里添加一个maven的bin路径，懒了不贴图了 在cmd中输入mvn -v出现maven的版本号 ，就说明配置成功啦！
+这时还没完： 进入E:\apache-maven-3.6.3\conf路径下。打开setting.xml 在mirrors中添加一个镜像
+&amp;lt;mirror&amp;gt; &amp;lt;id&amp;gt;nexus-aliyun&amp;lt;/id&amp;gt; &amp;lt;mirrorOf&amp;gt;central&amp;lt;/mirrorOf&amp;gt; &amp;lt;name&amp;gt;Nexus aliyun&amp;lt;/name&amp;gt; &amp;lt;url&amp;gt;http://maven.aliyun.com/nexus/content/groups/public/&amp;lt;/url&amp;gt; &amp;lt;/mirror&amp;gt; 阿里云镜像，到时候下载jar包时会更快
+ 下载的路径还没修改，将在后续补上
+ 3. Idea配置maven 先随意创建一个项目。。。进去后 -Xms1024m -Xmx2048m 好了 这样后，每创建一个新的项目，都会自动给你配置maven的路径，然后下载jar包的速度也会相应的加快，这给我们的开发带来了极大的便利</description>
+    </item>
+    
+    <item>
+      <title>Hexo博客备份过程记录</title>
+      <link>https://fushaolei.github.io/post/hexo-backup/</link>
+      <pubDate>Sun, 31 May 2020 11:18:27 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/hexo-backup/</guid>
+      <description>小记录
+ 备份实质 由于我主题文件已经备份到github： https://github.com/FuShaoLei/hexo-theme-volantis （当然是fork了大佬的）
+贴一个原作者地址：https://github.com/xaoxuu/hexo-theme-volantis
+主题已经备份了，那么其他要备份的也就是这一部分了
+**即全部md文件 **
+然后还要知道github pages的机制，如果你的仓库名是 &amp;lt;username&amp;gt;.github.io的话，pages服务默认在master分支，否则会默认在gh-pages分支上 这有就是为什么在配置博客的config.yml的时候，branch要填master的原因 好了，有了以上认识后，我们就可以开始备份我们的博文了，（其实就简单的把本地仓库关联到远程仓库罢了）
+开始操作 一，新建分支 并设为默认（这一步是方便我们在push的时候，不用指定分支什么的了）
+点击setting
+二，关联到远程仓库 在/source里的git bash小黑块里依次输入：
+ tips: 在小黑块中复制粘贴使用shift+ins
+  git init （初始化） git remote add origin git@github.com:FuShaoLei/FuShaoLei.github.io.git 为的是关联到远程仓库 git pull --rebase origin back-up为的是和远程仓库同步（因为新建的分支上是原来master里的东西，需要我们删除） 然后git switch -c back-up（新建并跳转到此分支），这个本地分支名一定要与远程仓库那个分支名一样！ 把除了.git的文件全删了，然后git add . ,git commit -m &amp;quot;xx&amp;quot;, git push -u origin back-up，发现远程仓库这个分支里的东西果然全被删了 将备份的博文放入，然后重复上面的，不过git push -u origin back-up可以换成git push了  图片待补充。。。。
+参考资料 使用hexo，如果换了电脑怎么更新博客？ - 直上云霄的回答 - 知乎</description>
+    </item>
+    
+    <item>
+      <title>解决git clone超慢速度的问题</title>
+      <link>https://fushaolei.github.io/post/solve-the-slow-git-clone/</link>
+      <pubDate>Thu, 28 May 2020 20:26:06 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/solve-the-slow-git-clone/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;思路是用码云进行clone后修改配置文件以对应到github上&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Android制作双人联机游戏</title>
+      <link>https://fushaolei.github.io/post/android-make-double-game/</link>
+      <pubDate>Wed, 20 May 2020 14:25:02 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/android-make-double-game/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;项目有涉及到双人联机游戏的机制，这之前都没有做过类似的东西，现在什么都是从零开始，故开此文记录&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>flex布局笔记</title>
+      <link>https://fushaolei.github.io/post/html-flex/</link>
+      <pubDate>Sat, 25 Apr 2020 18:10:39 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/html-flex/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;因为要仿照一个网站做一款hexo主题，发现里边有很多flex布局，自己照葫芦画瓢很是费劲，不如系统学过，反正也不是很费时间。。下面开始&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;先放参考教程: &lt;a href=&#34;https://zhuanlan.zhihu.com/p/25303493&#34;&gt;30 分钟学会 Flex 布局&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Git学习笔记</title>
+      <link>https://fushaolei.github.io/post/git-note/</link>
+      <pubDate>Mon, 03 Feb 2020 10:55:36 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/git-note/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;使用Git是程序员必备的一个技能，虽然以前有跟着老师学过，但是一知半解，所以重新学过，本文记录了我学习Git的全过程&lt;/p&gt;
+&lt;/blockquote&gt;</description>
     </item>
     
   </channel>

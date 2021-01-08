@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html><head>
+<title>Android面试必知必会</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<meta property="og:title" content="Android面试必知必会" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://fushaolei.github.io/post/android-interview/" />
+<meta property="article:published_time" content="2020-10-01T11:56:39+00:00" />
+<meta property="article:modified_time" content="2020-10-01T11:56:39+00:00" /><meta property="og:site_name" content="My Blog" />
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Android面试必知必会"/>
+<meta name="twitter:description" content=""/>
+
+
+
+
+
+
+
+<script src="/vendor/js/jquery.min.js" ></script>
+<script src="/vendor/js/popper.min.js" ></script>
+<script src="/vendor/js/bootstrap.min.js" ></script>
+<script src="/vendor/js/smooth-scroll.polyfills.min.js" ></script>
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+<script src="/vendor/js/vue.min.js" ></script>
+
+
+
+
+
+
+<link rel="stylesheet" href="https://fushaolei.github.io/scss/journal.min.c116bc90d171283f099f173854157ec8f183f9073b93443b2c8ad82899ee9025.css" integrity="sha256-wRa8kNFxKD8Jnxc4VBV&#43;yPGD&#43;Qc7k0Q7LIrYKJnukCU=" media="screen">
+
+
+
+<link rel="stylesheet" href="https://fushaolei.github.io/scss/dark-mode.min.ed17e7506ac79ad26428e2ac35f7129cd134774d75548840407bb957fe545c00.css" integrity="sha256-7RfnUGrHmtJkKOKsNfcSnNE0d011VIhAQHu5V/5UXAA=" media="screen">
+
+
+<script src="https://fushaolei.github.io//js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
+</script>
+
+
+
+
+  
+    <script src="https://fushaolei.github.io//js/toc-collapse.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div ref="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://fushaolei.github.io/">
+    
+        <div class="nav-title">
+            Sorryfu Blog.
+        </div>
+        
+        <div class="nav-subtitle">
+            努力，奋斗.
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories">
+                分类
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                标签
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/index.xml">
+                RSS
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+移植自 <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2021 Sorryfu Blog.
+	
+
+    </div>
+    
+</div><div ref="extraContainer" class="extra-container">
+    
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a class="pagination-action" v-on:click="toggleDarkMode">
+            <i class="material-icons pagination-action-icon" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons pagination-action-icon" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </a>
+        
+        
+    </div>
+</div>
+<div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories">
+                    分类
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    标签
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/index.xml">
+                    RSS
+                </a>
+                
+            
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="https://fushaolei.github.io/">
+            Sorryfu Blog.
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" v-on:click="toggleDarkMode">
+            <i class="material-icons" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://fushaolei.github.io/">
+        <div class="single-column-header-title">Sorryfu Blog.</div>
+        
+        <div class="single-column-header-subtitle">努力，奋斗.</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    Android面试必知必会
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2020-10-01 11:56
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/tech">Tech</a>
+                                &nbsp;
+                        
+
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <h2 id="android">Android</h2>
+<h3 id="一-android的四大组件">一， Android的四大组件</h3>
+<blockquote>
+<p>所有android应用都是由四大组件组成的：Activity，BroadcastReceiver，Service，ContentProvider</p>
+</blockquote>
+<ul>
+<li>Activity：最基本的组件，一个就是一个屏幕，通常都被实现为一个独立的类</li>
+<li>BroadcastReceiver：使用它对外部事件进行过滤，接收并做出响应</li>
+<li>Service：一个服务是具有一个较长生命周期且没有用户界面的程序。</li>
+<li>ContentProvider：使一个应用程序的指定数据集可以提供给其他应用程序。</li>
+</ul>
+<h3 id="二activity的生命周期">二，Activity的生命周期</h3>
+<blockquote>
+<p>参考文章：<a href="https://www.jianshu.com/p/fb44584daee3">深入理解Activity的生命周期</a></p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/fushaolei/img/20200607214328.png" alt=""></p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>onCreate</code></td>
+<td>进行初始化工作，此时<strong>Activity还在后台，不可见</strong></td>
+</tr>
+<tr>
+<td><code>onStart</code></td>
+<td>此时Actvity<strong>已经可见</strong>，但是还没出现在前台，<strong>不可交互</strong></td>
+</tr>
+<tr>
+<td><code>onResume</code></td>
+<td>此时Activity出现在前台并<strong>可交互</strong></td>
+</tr>
+<tr>
+<td><code>onPause</code></td>
+<td>当Activity要跳到另一个Activity或应用正常退出时都会执行这个方法。此时Activity在<strong>前台</strong>并可见</td>
+</tr>
+<tr>
+<td><code>onStop</code></td>
+<td>此时Activity已经<strong>不可见</strong>了，（但是Activity对象还在内存中，没有被销毁）</td>
+</tr>
+<tr>
+<td><code>onDestroy</code></td>
+<td>这个阶段Activity被销毁</td>
+</tr>
+<tr>
+<td><code>onRestart</code></td>
+<td>restart表示重新开始，Activity在这时<strong>可见</strong>，当用户按Home键切换到桌面后又切回来或者从后一个Activity切回前一个Activity就会触发这个方法。这里一般不做什么操作。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="三activity的四个启动方法">三，Activity的四个启动方法</h3>
+<blockquote>
+<p><del>给👴整懵逼了，看都看不懂</del></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>启动模式</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>standard</td>
+<td><strong>标准模式</strong>，每创建一个Activity，都会在任务栈中添加一个实例</td>
+</tr>
+<tr>
+<td>singleTop</td>
+<td><strong>栈顶复用</strong>，如果打开的Activity在任务栈顶，就不在创建，直接复用，如果不在栈顶，就重新创建一个</td>
+</tr>
+<tr>
+<td>singleTask</td>
+<td><strong>栈内复用</strong>，如果打开的Activity在任务栈中，就删除此Activity上面所有的Activity，知道该Activity在栈顶，如果打开的Activity没在任务栈中，直接创建一个新的Activity实例入栈</td>
+</tr>
+<tr>
+<td>singleInstance</td>
+<td><strong>全局唯一</strong>（单例模式），给每一个Activity创建一个任务栈，<strong>独占一个栈</strong>，打开Activity的时候就对所有的任务进行查询，如果有此Activity，直接复用，不用重新创建</td>
+</tr>
+</tbody>
+</table>
+<h3 id="四fragment的生命周期">四，Fragment的生命周期</h3>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>onAttach()</code></td>
+<td>Fragment<strong>和Activity建立关联</strong>的时候调用，被附加到Activity中去。</td>
+</tr>
+<tr>
+<td><code>onCreate()</code></td>
+<td>系统会在创建Fragment时调用此方法。可以<strong>初始化一段资源文件</strong>等等。</td>
+</tr>
+<tr>
+<td><code>onCreateView()</code></td>
+<td>系统会在Fragment<strong>首次绘制其用户界面时调用此方法</strong>。 要想为Fragment绘制 UI，从该方法中返回的 View 必须是Fragment布局的根视图。如果Fragment未提供 UI，您可以返回 null。</td>
+</tr>
+<tr>
+<td><code>onViewCreated()</code></td>
+<td>在Fragment被绘制后，调用此方法，可以<strong>初始化控件资源</strong>。</td>
+</tr>
+<tr>
+<td><code>onActivityCreated()</code></td>
+<td>当onCreate()，onCreateView()，onViewCreated()方法执行完后调用，也就是Activity被渲染绘制出来后。</td>
+</tr>
+<tr>
+<td><code>onPause()</code></td>
+<td>系统将此方法作为用户离开Fragment的第一个信号（但并不总是意味着此Fragment会被销毁）进行调用。 通常可以在此方法内确认在当前用户会话结束后仍然有效的任何更改（因为用户可能不会返回）。</td>
+</tr>
+<tr>
+<td><code>onDestroyView()</code></td>
+<td>Fragment中的布局<strong>被移除</strong>时调用。</td>
+</tr>
+<tr>
+<td><code>onDetach()</code></td>
+<td>Fragment和Activity解除关联的时候调用。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="五service的生命周期">五，service的生命周期</h3>
+<h4 id="通过startservice方式启动服务">通过startService方式启动服务</h4>
+<ol>
+<li>onCreate：首次创建服务时由系统调用</li>
+<li>onStartCommand：每次客户端通过调用显式启动服务时</li>
+<li>onDestroy</li>
+</ol>
+<h4 id="通过bindservice方式启动服务">通过bindService方式启动服务</h4>
+<ol>
+<li>onCreate：首次创建服务时由系统调用</li>
+<li>onBind：绑定服务</li>
+<li>onUnBind：解绑服务</li>
+<li>onDestroy</li>
+</ol>
+<h2 id="java">Java</h2>
+<h3 id="一和equal的区别">一，==和equal的区别</h3>
+<p>先讲==</p>
+<ul>
+<li>如果是基本类型话，比较的是值</li>
+<li>如果是引用数据类型的话，比较的是他们在内存中的地址值</li>
+</ul>
+<p>然后是equal</p>
+<ul>
+<li>引用类型：默认情况下，比较的是地址值。</li>
+</ul>
+<h3 id="二stringbufffer与stringbuilder的区别">二，stringbufffer与stringbuilder的区别</h3>
+<ul>
+<li>StringBuffer是<strong>线程安全</strong>的</li>
+<li>StringBuilder是<strong>非线程安全</strong>的（简单来说就是StringBuilder的append方法没有实现同步锁synchronized机制，而StringBuffer实现了，这也是StringBuffer效率比较低的原因）</li>
+</ul>
+<h4 id="扩展什么叫线程安全什么叫线程不安全">扩展：什么叫线程安全，什么叫线程不安全</h4>
+<ul>
+<li><strong>线程安全</strong>
+<ul>
+<li>就是<strong>多线程</strong>访问时，采用了加锁机制，当一个线程访问该类的某个数据时，进行保护，其他线程不能进行访问直到该线程<strong>读/写</strong>完，其他线程才可使用。不会出现数据不一致或者数据污染。</li>
+</ul>
+</li>
+<li><strong>线程不安全</strong>
+<ul>
+<li>就是<strong>不提供数据访问保护</strong>，有可能出现多个线程先后更改数据造成所得到的数据是脏数据。</li>
+</ul>
+</li>
+</ul>
+<h3 id="三listsetmap的区别">三，List，Set，Map的区别</h3>
+<ul>
+<li><code>List</code>的元素以线性方式存储，可以存放重复对象</li>
+<li><code>Set</code>中的对象不按特定(HashCode)的方式排序，并且没有重复对象</li>
+<li><code>Map</code>是一种把键对象和值对象映射的集合，它的每一个元素都包含一个键对象和值对象，是无序的</li>
+</ul>
+<h3 id="四重载和重写有什么区别">四，重载和重写有什么区别</h3>
+<ul>
+<li>重载：是在一个类里面，方法名字相同，<strong>而参数不同，返回类型也可以不同</strong> 的方法</li>
+<li>重写：在子类存在方法与父类的方法的名字相同，<strong>且参数的个数一样，返回值类型也一样</strong>的方法</li>
+</ul>
+<h3 id="五请简述面向对象">五，请简述面向对象</h3>
+<ul>
+<li>封装：把一个<strong>对象的属性私有化，同时提供一些可以被外界访问的属性的方法</strong></li>
+<li>继承：继承是指<strong>当A类继承B类时（关键字<code>extends</code>），A类就自动获得B类的所有功能</strong></li>
+<li>多态：<strong>针对某个类型的方法调用，其真正执行的方法取决于运行时期实际类型的方法</strong> （重载，重写）</li>
+</ul>
+<h3 id="六抽象和接口的区别">六，抽象和接口的区别</h3>
+<ul>
+<li>最大的一个区别：就是<code>interface</code>中只能定义方法，而不能有方法的实现，而在<code>abstract class</code>中则可以既有方法的具体实现，又有 没有具体实现的抽象方法</li>
+<li>一个类只能有一个继承类，但可以实现多个接口</li>
+</ul>
+<h3 id="七arraylist和linkedlist有什么区别">七，ArrayList和LinkedList有什么区别</h3>
+<ul>
+<li><strong>ArrayList</strong>：底层数据结构是<strong>数组</strong>，查询快，增删慢，线程不安全，效率高，可以存储重复元素</li>
+<li><strong>LinkedList</strong> 底层数据结构是<strong>链表</strong>，查询慢，增删快，线程不安全，效率高，可以存储重复元素</li>
+</ul>
+<h4 id="扩展一数组和链表有什么区别">扩展一：数组和链表有什么区别</h4>
+<ul>
+<li>数组是基于索引的数据结构，其中每个元素与索引相关联。</li>
+<li>链表 依赖于引用，其中每个节点由数据和对前一个和下一个元素的引用组成。</li>
+</ul>
+<h3 id="八基本类型">八，基本类型</h3>
+<table>
+<thead>
+<tr>
+<th>基本类型</th>
+<th>位数</th>
+<th>字节</th>
+<th>默认值</th>
+<th>对应的包装器类</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td>32</td>
+<td>4</td>
+<td>0</td>
+<td><code>Integer</code></td>
+</tr>
+<tr>
+<td><code>short</code></td>
+<td>16</td>
+<td>2</td>
+<td>0</td>
+<td><code>Short</code></td>
+</tr>
+<tr>
+<td><code>long</code></td>
+<td>64</td>
+<td>8</td>
+<td>0L</td>
+<td><code>Long</code></td>
+</tr>
+<tr>
+<td><code>byte</code></td>
+<td>8</td>
+<td>1</td>
+<td>0</td>
+<td><code>Byte</code></td>
+</tr>
+<tr>
+<td><code>char</code></td>
+<td>16</td>
+<td>2</td>
+<td>&lsquo;u0000&rsquo;</td>
+<td><code>Character</code></td>
+</tr>
+<tr>
+<td><code>float</code></td>
+<td>32</td>
+<td>4</td>
+<td>0f</td>
+<td><code>Float</code></td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td>64</td>
+<td>8</td>
+<td>0d</td>
+<td><code>Double</code></td>
+</tr>
+<tr>
+<td><code>boolean</code></td>
+<td>1</td>
+<td></td>
+<td>false</td>
+<td><code>Boolean</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注意:</p>
+</blockquote>
+<ol>
+<li>Java 里使用<code>long</code>类型的数据一定要在数值后面加上<strong>L</strong>，否则将作为整型解析</li>
+<li>char a = &lsquo;h&rsquo; char :单引号，String a = &ldquo;hello&rdquo; ：双引号</li>
+</ol>
+<h2 id="九hashset和hashmap的区别">九，HashSet和HashMap的区别</h2>
+<table>
+<thead>
+<tr>
+<th align="left">HashMap</th>
+<th align="center">HashSet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">HashMap实现了<strong>Map接口</strong></td>
+<td align="center">HashSet实现了<strong>Set接口</strong></td>
+</tr>
+<tr>
+<td align="left">HashMap储存键值对</td>
+<td align="center">HashSet仅仅存储对象</td>
+</tr>
+<tr>
+<td align="left">使用put()方法将元素放入map中</td>
+<td align="center">使用add()方法将元素放入set中</td>
+</tr>
+<tr>
+<td align="left">HashMap中使用键对象来计算hashcode值</td>
+<td align="center">HashSet使用成员对象来计算hashcode值，对于两个对象来说hashcode可能相同，所以equals()方法用来判断对象的相等性，如果两个对象不同的话，那么返回false</td>
+</tr>
+<tr>
+<td align="left">HashMap比较快，因为是使用唯一的键来获取对象</td>
+<td align="center">HashSet较HashMap来说比较慢</td>
+</tr>
+</tbody>
+</table>
+<h3 id="十如何实现多线程">十，如何实现多线程</h3>
+<ul>
+<li>继承Thread类</li>
+<li>实现Runnable接口</li>
+</ul>
+<h2 id="网络原理">网络原理</h2>
+<h3 id="一http和https的区别">一，Http和Https的区别</h3>
+<ul>
+<li>Http协议以<strong>明文方式</strong>发送内容，安全性较差，80端口</li>
+<li>Https是在Http下加入SSL层进行加密，安全性高，443端口</li>
+</ul>
+<h3 id="二get和post有什么区别">二，Get和Post有什么区别</h3>
+<ul>
+<li>Get：当客户端要从服务器中读取某个资源时用Get，Get参数通过URL传递，传递的参数有长度限制，不能用来传敏感信息</li>
+<li>Post：当客户端要给服务器提供信息较多的时候可用Post，Post将请求参数封装在HTTP请求数据中，可以传输大量数据，传参方式也比Get更安全</li>
+</ul>
+<h3 id="三tcp和udp有什么区别">三，TCP和UDP有什么区别</h3>
+<ul>
+<li>TCP：面向连接的可靠传输协议
+<ul>
+<li>发送数据前必须建立连接</li>
+<li>提供可靠交付</li>
+<li>面向字节流</li>
+<li>有拥塞控制机制</li>
+<li>仅支持一对一</li>
+<li>首部开销大</li>
+</ul>
+</li>
+<li>UDP：非连接协议
+<ul>
+<li>发送数据前不需要建立连接</li>
+<li>尽最大努力交付，不保证可靠传输</li>
+<li>面向报文</li>
+<li>无拥塞控制</li>
+<li>支持一对一，多对一，多对一，多对多</li>
+<li>首部开销小</li>
+</ul>
+</li>
+</ul>
+<h3 id="四简单解释下tcp建立连接的三次握手和断开连接的四次挥手">四，简单解释下TCP建立连接的三次握手和断开连接的四次挥手</h3>
+<ul>
+<li>三次握手
+<ul>
+<li>A向B发送请求，告知B：我要和你通信</li>
+<li>B收到A的请求后，返回消息给A：我收到你的请求了，你可以传数据了</li>
+<li>A收到后再发送一个确认应答，确认已收到B的数据段，三次握手完成</li>
+</ul>
+</li>
+<li>四次挥手
+<ul>
+<li>A向b提出停止连接的请求</li>
+<li>B收到请求后确认连接将关闭</li>
+<li>B再提出反方向的关闭请求给A</li>
+<li>A对B的请求进行确认，四次挥手结束</li>
+</ul>
+</li>
+</ul>
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">最后修改于 2020-10-01</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://fushaolei.github.io/post/java-interview-note/">
+			下回<br>Java面试必知必会
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://fushaolei.github.io/post/git-commit-note/">
+			上回<br>Git Commit规范化
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+移植自 <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2021 Sorryfu Blog.
+	
+</div>
+            </div>
+    <script>
+let app;
+
+app = new Vue({
+    el: '#app',
+    data: {
+        scrollY: 0,
+        navOpacity: 0,
+        isDrawerOpen: false,
+        mounted: false,
+        isDarkMode: false
+    },
+    methods: {
+            sgn(t, x) {
+                let k = 1. / (1. - 2 * t);
+                if (x <= t) return 0;
+                else if (x >= 1 - t) return 1;
+                else {
+                    return k * (x - t);
+                }
+            },
+            handleScroll() {
+                this.scrollY = window.scrollY;
+                this.navOpacity = this.sgn(.0, Math.min(1, Math.max(0, window.scrollY / (this.pageHeadHeight() - this.navBarHeight() * 0.8))));
+                const {navBar, navBackground, navTitle, extraContainer, streamContainer} = this.$refs;
+
+                if (this.navOpacity >= 1) {
+                    navBackground.style.opacity = 1;
+                    navTitle.style.opacity = 1;
+                } else {
+                    navBackground.style.opacity = 0;
+                    navTitle.style.opacity = 0;
+                }
+            },
+            handleResize() {
+                const {navBar, navBackground, navTitle, extraContainer, streamContainer} = this.$refs;
+                extraContainer.style.left = (streamContainer.offsetWidth - extraContainer.offsetWidth) + 'px';
+            },
+            navBarHeight() {
+                return this.$refs.navBar.offsetHeight;
+            },
+            pageHeadHeight() {
+                return this.$refs.pageHead.offsetHeight;
+            },
+            toggleDrawer() {
+                this.isDrawerOpen = !this.isDrawerOpen;
+                document.getElementsByTagName('html')[0].style.overflow = this.isDrawerOpen ? 'hidden' : 'unset';
+            },
+            closeDrawer() {
+                this.isDrawerOpen = false;
+                document.getElementsByTagName('html')[0].style.overflow = this.isDrawerOpen ? 'hidden' : 'unset';
+            },
+            toggleDarkMode() {
+                this.isDarkMode = !this.isDarkMode;
+                if (this.isDarkMode==true){
+                    document.cookie = "night=1;path=/";
+                    document.body.classList.add("night");
+                } else {
+                    document.cookie = "night=0;path=/";
+                    document.body.classList.remove("night");
+                }
+            }
+    },
+    created() {
+        window.addEventListener('scroll', this.handleScroll);
+        window.addEventListener('resize', this.handleResize);
+        window._nonDesktop = function () {
+            let check = false;
+            (function (a) {
+                if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0, 4))) check = true;
+            })(navigator.userAgent || navigator.vendor || window.opera);
+            return check;
+        };
+        
+        var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        if (night==""){
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                
+            }
+        }else{
+            
+            if (night=="1") {
+                this.toggleDarkMode();
+            }
+        }
+    },
+    mounted() {
+        this.handleScroll();
+        this.handleResize();
+        this.mounted = true;
+
+        
+    },
+    destroyed() {
+        window.removeEventListener('scroll', this.handleScroll);
+        window.removeEventListener('resize', this.handleResize);
+    }
+});
+</script>
+
+<script src="https://fushaolei.github.io//js/journal.js"></script>
+    </body>
+</html>

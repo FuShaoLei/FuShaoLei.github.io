@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html><head>
+<title>GitHub &#43; Action实现在线写作</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<meta property="og:title" content="GitHub &#43; Action实现在线写作" />
+<meta property="og:description" content="零，前言 hexo 是一款快速、简洁且高效的静态博客框架，因为它的高可定制性，所以深受各个程序员的喜爱，我也曾一头扎进去研究过，先后开发了white和hiya主题，在使用过程中，也渐渐的发现了一些问题
+情景一，当浏览自己某篇博客时发现了一些错误之后想要马上修改时，将要经历经历一下步骤
+ 在本地的hexo博客文件夹中找到source/_post文件夹 找到那个md文件，打开 修改 然后还要经历hexo clean,hexo g，hexo d  情景二，当想要马上写一篇博客时，需要经历以下步骤
+ 在博客根目录中hexo n &quot;博客名&quot; 点击进入source/_post文件夹中找到这个md文件并打开 写博客 然后还要经历hexo clean,hexo g，hexo d三连  以上过程想必使用过hexo博客的人都经历过吧？不知道你们什么感觉，反正这对于我这种急性子的人来说简直是忍不了(╯‵□′)╯︵┻━┻，而且每次写完博客啊，修改完博客啊之类的，还必须经历过hexo clean,hexo g，hexo d才可以将博客推送到网上去，这玩意我一开始还有耐心，现在就不行了(ノ｀Д)ノ，幸好后来发现了github action可以实现自动部署，再结合自己以往开发hexo主题的经验，做出来了可以在线新建博客或者修改博客的功能（具体可参观我的博客），效果如下：
+新建文章
+修改文章
+就这样，利用github action交给github去做hexo clean,hexo g，hexo d三连，很方便的实现了新建文章和修改文章，即优雅，又方便，那么这又是如何做到的呢？下面我将分为两个部分来说明，第一部分是如何结合github action来实现自动部署，第二部分是如何点击某个按钮后进入新建文章页，和修改文章页。
+一，使用github aciton实现自动部署 1.在github新建一个仓库，专门用来存放源文件，我的源文件如下，供各位参考
+ 什么？你不会要先git clone到本地后，再将源文件复制粘贴到里面再上传吧？这也太low太笨拙了吧哈哈哈，咳咳，如果你不会将本地仓库关联到远程仓库的话，请按下边步骤进行
+ 在hexo源文件夹中 hexo init  进行初始化 关联远程仓库 git remote add origin git@github.com:&lt;你的用户名&gt;/&lt;存放源文件的仓库名&gt;.git git pull --rebase origin master和远程仓库进行一个同步 然后依次进行git add .，git commit -m &quot;init repo&quot;，git push -u origin master ，然后就大功告成啦  上传好的源文件在github中如下" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://fushaolei.github.io/post/github-action-hexo/" />
+<meta property="article:published_time" content="2020-09-21T22:01:51+00:00" />
+<meta property="article:modified_time" content="2020-09-21T22:01:51+00:00" /><meta property="og:site_name" content="My Blog" />
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="GitHub &#43; Action实现在线写作"/>
+<meta name="twitter:description" content="零，前言 hexo 是一款快速、简洁且高效的静态博客框架，因为它的高可定制性，所以深受各个程序员的喜爱，我也曾一头扎进去研究过，先后开发了white和hiya主题，在使用过程中，也渐渐的发现了一些问题
+情景一，当浏览自己某篇博客时发现了一些错误之后想要马上修改时，将要经历经历一下步骤
+ 在本地的hexo博客文件夹中找到source/_post文件夹 找到那个md文件，打开 修改 然后还要经历hexo clean,hexo g，hexo d  情景二，当想要马上写一篇博客时，需要经历以下步骤
+ 在博客根目录中hexo n &quot;博客名&quot; 点击进入source/_post文件夹中找到这个md文件并打开 写博客 然后还要经历hexo clean,hexo g，hexo d三连  以上过程想必使用过hexo博客的人都经历过吧？不知道你们什么感觉，反正这对于我这种急性子的人来说简直是忍不了(╯‵□′)╯︵┻━┻，而且每次写完博客啊，修改完博客啊之类的，还必须经历过hexo clean,hexo g，hexo d才可以将博客推送到网上去，这玩意我一开始还有耐心，现在就不行了(ノ｀Д)ノ，幸好后来发现了github action可以实现自动部署，再结合自己以往开发hexo主题的经验，做出来了可以在线新建博客或者修改博客的功能（具体可参观我的博客），效果如下：
+新建文章
+修改文章
+就这样，利用github action交给github去做hexo clean,hexo g，hexo d三连，很方便的实现了新建文章和修改文章，即优雅，又方便，那么这又是如何做到的呢？下面我将分为两个部分来说明，第一部分是如何结合github action来实现自动部署，第二部分是如何点击某个按钮后进入新建文章页，和修改文章页。
+一，使用github aciton实现自动部署 1.在github新建一个仓库，专门用来存放源文件，我的源文件如下，供各位参考
+ 什么？你不会要先git clone到本地后，再将源文件复制粘贴到里面再上传吧？这也太low太笨拙了吧哈哈哈，咳咳，如果你不会将本地仓库关联到远程仓库的话，请按下边步骤进行
+ 在hexo源文件夹中 hexo init  进行初始化 关联远程仓库 git remote add origin git@github.com:&lt;你的用户名&gt;/&lt;存放源文件的仓库名&gt;.git git pull --rebase origin master和远程仓库进行一个同步 然后依次进行git add .，git commit -m &quot;init repo&quot;，git push -u origin master ，然后就大功告成啦  上传好的源文件在github中如下"/>
+
+
+
+
+
+
+
+<script src="/vendor/js/jquery.min.js" ></script>
+<script src="/vendor/js/popper.min.js" ></script>
+<script src="/vendor/js/bootstrap.min.js" ></script>
+<script src="/vendor/js/smooth-scroll.polyfills.min.js" ></script>
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+<script src="/vendor/js/vue.min.js" ></script>
+
+
+
+
+
+
+<link rel="stylesheet" href="https://fushaolei.github.io/scss/journal.min.c116bc90d171283f099f173854157ec8f183f9073b93443b2c8ad82899ee9025.css" integrity="sha256-wRa8kNFxKD8Jnxc4VBV&#43;yPGD&#43;Qc7k0Q7LIrYKJnukCU=" media="screen">
+
+
+
+<link rel="stylesheet" href="https://fushaolei.github.io/scss/dark-mode.min.ed17e7506ac79ad26428e2ac35f7129cd134774d75548840407bb957fe545c00.css" integrity="sha256-7RfnUGrHmtJkKOKsNfcSnNE0d011VIhAQHu5V/5UXAA=" media="screen">
+
+
+<script src="https://fushaolei.github.io//js/loadCSS.js"></script>
+<script>
+  loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
+</script>
+
+
+
+
+  
+    <script src="https://fushaolei.github.io//js/toc-collapse.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    	<div id="app"><div ref="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://fushaolei.github.io/">
+    
+        <div class="nav-title">
+            Sorryfu Blog.
+        </div>
+        
+        <div class="nav-subtitle">
+            努力，奋斗.
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories">
+                分类
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                标签
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/index.xml">
+                RSS
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+移植自 <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2021 Sorryfu Blog.
+	
+
+    </div>
+    
+</div><div ref="extraContainer" class="extra-container">
+    
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a class="pagination-action" v-on:click="toggleDarkMode">
+            <i class="material-icons pagination-action-icon" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons pagination-action-icon" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </a>
+        
+        
+    </div>
+</div>
+<div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories">
+                    分类
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    标签
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/index.xml">
+                    RSS
+                </a>
+                
+            
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="https://fushaolei.github.io/">
+            Sorryfu Blog.
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" v-on:click="toggleDarkMode">
+            <i class="material-icons" v-if="isDarkMode">
+                brightness_4
+            </i>
+            <i class="material-icons" v-else="isDarkMode">
+                brightness_7
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://fushaolei.github.io/">
+        <div class="single-column-header-title">Sorryfu Blog.</div>
+        
+        <div class="single-column-header-subtitle">努力，奋斗.</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    GitHub &#43; Action实现在线写作
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2020-09-21 22:01
+                        </time>
+                        
+
+                        
+
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <h2 id="零前言">零，前言</h2>
+<p><a href="https://hexo.io/">hexo</a> 是一款快速、简洁且高效的静态博客框架，因为它的高可定制性，所以深受各个程序员的喜爱，我也曾一头扎进去研究过，先后开发了white和hiya主题，在使用过程中，也渐渐的发现了一些问题</p>
+<p>情景一，当浏览自己某篇博客时发现了一些错误之后想要马上修改时，将要经历经历一下步骤</p>
+<ol>
+<li>在本地的hexo博客文件夹中找到<code>source/_post</code>文件夹</li>
+<li>找到那个md文件，打开</li>
+<li>修改</li>
+<li>然后还要经历<code>hexo clean</code>,<code>hexo g</code>，<code>hexo d</code></li>
+</ol>
+<p>情景二，当想要马上写一篇博客时，需要经历以下步骤</p>
+<ol>
+<li>在博客根目录中<code>hexo n &quot;博客名&quot;</code></li>
+<li>点击进入<code>source/_post</code>文件夹中找到这个md文件并打开</li>
+<li>写博客</li>
+<li>然后还要经历<code>hexo clean</code>,<code>hexo g</code>，<code>hexo d</code>三连</li>
+</ol>
+<p>以上过程想必使用过hexo博客的人都经历过吧？不知道你们什么感觉，反正这对于我这种急性子的人来说简直是忍不了(╯‵□′)╯︵┻━┻，而且每次写完博客啊，修改完博客啊之类的，还必须经历过<code>hexo clean</code>,<code>hexo g</code>，<code>hexo d</code>才可以将博客推送到网上去，这玩意我一开始还有耐心，现在就不行了(ノ｀Д)ノ，幸好后来发现了github action可以实现自动部署，再结合自己以往开发hexo主题的经验，做出来了可以在线新建博客或者修改博客的功能（具体可参观我的<a href="https://fushaolei.github.io/">博客</a>），效果如下：</p>
+<p>新建文章</p>
+<p><img src="https://cdn.jsdelivr.net/gh/fushaolei/img/20200920220049.gif" alt=""></p>
+<p>修改文章</p>
+<p><img src="https://cdn.jsdelivr.net/gh/fushaolei/img/20200920220327.gif" alt=""></p>
+<p>就这样，利用github action交给github去做<code>hexo clean</code>,<code>hexo g</code>，<code>hexo d</code>三连，很方便的实现了新建文章和修改文章，即优雅，又方便，那么这又是如何做到的呢？下面我将分为两个部分来说明，第一部分是如何结合github action来实现自动部署，第二部分是如何点击某个按钮后进入新建文章页，和修改文章页。</p>
+<h2 id="一使用github-aciton实现自动部署">一，使用github aciton实现自动部署</h2>
+<p>1.<strong>在github新建一个仓库，专门用来存放源文件</strong>，我的源文件如下，供各位参考</p>
+<p><img src="https://cdn.jsdelivr.net/gh/fushaolei/img/20200920221609.png" alt=""></p>
+<blockquote>
+<p>什么？你不会要先git clone到本地后，再将源文件复制粘贴到里面再上传吧？这也太low太笨拙了吧哈哈哈，咳咳，如果你不会将本地仓库关联到远程仓库的话，请按下边步骤进行</p>
+<ol>
+<li>在hexo源文件夹中 <code>hexo init </code> 进行初始化</li>
+<li>关联远程仓库 <code>git remote add origin git@github.com:&lt;你的用户名&gt;/&lt;存放源文件的仓库名&gt;.git</code></li>
+<li><code>git pull --rebase origin master</code>和远程仓库进行一个同步</li>
+<li>然后依次进行<code>git add .</code>，<code>git commit -m &quot;init repo&quot;</code>，<code>git push -u origin master</code> ，然后就大功告成啦</li>
+</ol>
+<p>上传好的源文件在github中如下</p>
+<p><img src="https://cdn.jsdelivr.net/gh/fushaolei/img/20200921000040.png" alt=""></p>
+</blockquote>
+<p><strong>注意：如theme文件夹中主题文件中有<code>.git文件</code>，请将其删除在上传</strong></p>
+<p>2.添加私钥和公钥</p>
+<p>在<code>C:\Users\用户名\.ssh</code>中可找到</p>
+<p><img src="https://cdn.jsdelivr.net/gh/fushaolei/img2/20200920221956.png" alt=""></p>
+<ul>
+<li>公钥的配置（正常来说应该是配置过了），直接在这个<a href="https://github.com/settings/keys">链接</a>点击那个new SSH key就可配置</li>
+<li>私钥的配置，点击 <a href="https://github.com/">https://github.com/</a>&lt;你的用户名&gt;/&lt;存放源文件的仓库名&gt;/settings/secrets，新建私钥，注意，这里的名称要填<code>HEXO_DEPLOY_PRIVATE_KEY</code></li>
+</ul>
+<p>3.添加github action</p>
+<p><img src="https://cdn.jsdelivr.net/gh/fushaolei/img/20200920224635.png" alt=""></p>
+<p>将以下的代码复制粘贴</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#586e75"># workflow name</span>
+<span style="color:#719e07">name</span>: Hexo Blog CI
+
+<span style="color:#586e75"># master branch on push, auto run</span>
+<span style="color:#719e07">on</span>: 
+  <span style="color:#719e07">push</span>:
+    <span style="color:#719e07">branches</span>:
+      - master
+      
+<span style="color:#719e07">jobs</span>:
+  <span style="color:#719e07">build</span>: 
+    <span style="color:#719e07">runs-on</span>: ubuntu-latest 
+        
+    <span style="color:#719e07">steps</span>:
+    <span style="color:#586e75"># check it to your workflow can access it</span>
+    <span style="color:#586e75"># from: https://github.com/actions/checkout</span>
+    - <span style="color:#719e07">name</span>: Checkout Repository master branch
+      <span style="color:#719e07">uses</span>: actions/checkout@master 
+      
+    <span style="color:#586e75"># from: https://github.com/actions/setup-node  </span>
+    - <span style="color:#719e07">name</span>: Setup Node.js <span style="color:#2aa198">12.</span>x 
+      <span style="color:#719e07">uses</span>: actions/setup-node@master
+      <span style="color:#719e07">with</span>:
+        <span style="color:#719e07">node-version</span>: <span style="color:#2aa198">&#34;12.x&#34;</span>
+    
+    - <span style="color:#719e07">name</span>: Setup Hexo Dependencies
+      <span style="color:#719e07">run</span>: <span style="color:#2aa198">|
+</span><span style="color:#2aa198">       </span><span style="color:#2aa198"> </span><span style="color:#2aa198">npm install hexo-cli -g</span>
+        npm install
+    
+    - <span style="color:#719e07">name</span>: Setup Deploy Private Key
+      <span style="color:#719e07">env</span>:
+        <span style="color:#719e07">HEXO_DEPLOY_PRIVATE_KEY</span>: ${{ secrets.HEXO_DEPLOY_PRIVATE_KEY }}
+      <span style="color:#719e07">run</span>: <span style="color:#2aa198">|
+</span><span style="color:#2aa198">       </span><span style="color:#2aa198"> </span><span style="color:#2aa198">mkdir -p ~/.ssh/</span>
+        echo <span style="color:#2aa198">&#34;$HEXO_DEPLOY_PRIVATE_KEY&#34;</span> &gt; ~/.ssh/id_rsa 
+        chmod <span style="color:#2aa198">600</span> ~/.ssh/id_rsa
+        ssh-keyscan github.com &gt;&gt; ~/.ssh/known_hosts
+        
+    - <span style="color:#719e07">name</span>: Setup Git Infomation
+      <span style="color:#719e07">run</span>: <span style="color:#2aa198">| 
+</span><span style="color:#2aa198">       </span><span style="color:#2aa198"> </span><span style="color:#2aa198">git config --global user.name &#39;&lt;你的用户名&gt;&#39; </span>
+        git config --global user.email <span style="color:#2aa198">&#39;&lt;你登录的email&gt;&#39;</span>
+    - <span style="color:#719e07">name</span>: Deploy Hexo 
+      <span style="color:#719e07">run</span>: <span style="color:#2aa198">|
+</span><span style="color:#2aa198">       </span><span style="color:#2aa198"> </span><span style="color:#2aa198">hexo clean</span>
+        hexo generate 
+        hexo deploy
+</code></pre></div><p><strong>仔细看这段代码，里边要填上你的用户名和邮箱</strong></p>
+<p>DONE!大功告成啦，到这里可以去测试一下，修改修改某个文章标题，看看是否有效果</p>
+<p>好了，利用GitHub action实现自动部署这一步已经完成了</p>
+<h2 id="二设置点击进入新建或编辑">二，设置点击进入新建或编辑</h2>
+<blockquote>
+<p>如果你是一名hexo主题开发者的话，这一步对你来说就是无比的简单了，如果你是一名小白的话 也没关系，跟着我的步骤，稍微有些耐心，应该不是什么问题</p>
+</blockquote>
+<h3 id="新建文章">新建文章</h3>
+<p>其实完成了第一步，这一步就捉襟见肘了，无非就是点击一个按钮后跳转到<strong>存放hexo源文件仓库的<code>source/_posts</code>路径的新建页面</strong>，比如我，链接就是 <a href="https://github.com/FuShaoLei/auto-blog/new/master/source/_posts">https://github.com/FuShaoLei/auto-blog/new/master/source/_posts</a> ，效果如下</p>
+<p><img src="https://cdn.jsdelivr.net/gh/fushaolei/img/20200920220049.gif" alt=""></p>
+<p>放一个模板： <code>https://github.com/&lt;你的用户名&gt;/&lt;存放博客源文件的仓库名&gt;/new/master/source/_posts</code></p>
+<p>就是一个链接而已，你可以把它放在menu中，或者任何你想放的地方</p>
+<h3 id="修改文章">修改文章</h3>
+<p><strong>修改文章本质就是修改源文件中的<code>source/_posts</code>目录下的md文件</strong></p>
+<p>而这个md是与path路径有关的，不过一般文章的path路径都类似<code>/2020/08/09/doc-white/</code>这样的，有一个日期的前缀，而且有一个斜杠，所以一般要经历以下步骤，</p>
+<ol>
+<li>去除这个post的path路径中的数字和斜杠</li>
+<li>加上前缀<code>https://github.com/&lt;你的用户名&gt;/&lt;存放源文件的仓库名&gt;/edit/master/source/_posts/</code></li>
+<li>加上后缀<code>.md</code></li>
+<li>组合成类似<code>https://github.com/&lt;你的用户名&gt;/&lt;存放源文件的仓库名&gt;/edit/master/source/_posts/&lt;文章名&gt;.md</code> 的链接即可</li>
+</ol>
+<p>下面以<code>ejs</code>举例（在<code>post.ejs</code>中）</p>
+<pre><code class="language-ejs" data-lang="ejs">
+&lt;%
+&lt;!-- 这个js函数是抄的，见笑 --&gt;
+function trimNumber(str){
+    return str.replace(/\d+/g,'').replace(/\//g,'');
+}
+%&gt;
+&lt;article id=&quot;post&quot;&gt;
+  &lt;h1&gt;&lt;%= page.title%&gt;&lt;/h1&gt;
+  &lt;%-page.content%&gt;
+  &lt;a  href=&quot;https://github.com/FuShaoLei/auto-blog/edit/master/source/_posts/&lt;%=trimNumber(page.path)%&gt;.md&quot;&gt;Edit Post&lt;/a&gt;
+&lt;/article&gt;
+
+</code></pre><p>好了，之后点击那个新增的超链接后 就会跳转到你想要修改的文章了，效果如下</p>
+<p><img src="https://cdn.jsdelivr.net/gh/fushaolei/img/20200920220327.gif" alt=""></p>
+<p>这样一来，当你新增或修改文章并点击那个<code>git commit</code>后，都会出发github action，然后它就会帮你进行hexo三连，也就是自动部署啦</p>
+<h2 id="三后记">三，后记</h2>
+<p>如果你按照以上的步骤一一做完后，你就可以得到一个可以在线编辑的hexo网站了，这其中当然也有些缺点咯，比如下面两个</p>
+<ul>
+<li>修改完后触发编译，需要等待一段时间（其实这属于鸡蛋里挑骨头了hhhh</li>
+<li>想要上传图片的时候有一些不方便</li>
+</ul>
+<h3 id="参考文章">参考文章</h3>
+<ul>
+<li><a href="https://blog.csdn.net/u012208219/article/details/106883054?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522160061139819195188346686%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=160061139819195188346686&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v3~pc_rank_v3-1-106883054.pc_ecpm_v3_pc_rank_v3&amp;utm_term=github+action+%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2hexo&amp;spm=1018.2118.3001.4187">利用GitHub+Actions自动部署Hexo博客</a></li>
+</ul>
+
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">最后修改于 2020-09-21</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://fushaolei.github.io/post/sina-travel/">
+			下回<br>新浪之旅
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://fushaolei.github.io/post/spring-note/">
+			上回<br>Spring笔记
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+移植自 <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2021 Sorryfu Blog.
+	
+</div>
+            </div>
+    <script>
+let app;
+
+app = new Vue({
+    el: '#app',
+    data: {
+        scrollY: 0,
+        navOpacity: 0,
+        isDrawerOpen: false,
+        mounted: false,
+        isDarkMode: false
+    },
+    methods: {
+            sgn(t, x) {
+                let k = 1. / (1. - 2 * t);
+                if (x <= t) return 0;
+                else if (x >= 1 - t) return 1;
+                else {
+                    return k * (x - t);
+                }
+            },
+            handleScroll() {
+                this.scrollY = window.scrollY;
+                this.navOpacity = this.sgn(.0, Math.min(1, Math.max(0, window.scrollY / (this.pageHeadHeight() - this.navBarHeight() * 0.8))));
+                const {navBar, navBackground, navTitle, extraContainer, streamContainer} = this.$refs;
+
+                if (this.navOpacity >= 1) {
+                    navBackground.style.opacity = 1;
+                    navTitle.style.opacity = 1;
+                } else {
+                    navBackground.style.opacity = 0;
+                    navTitle.style.opacity = 0;
+                }
+            },
+            handleResize() {
+                const {navBar, navBackground, navTitle, extraContainer, streamContainer} = this.$refs;
+                extraContainer.style.left = (streamContainer.offsetWidth - extraContainer.offsetWidth) + 'px';
+            },
+            navBarHeight() {
+                return this.$refs.navBar.offsetHeight;
+            },
+            pageHeadHeight() {
+                return this.$refs.pageHead.offsetHeight;
+            },
+            toggleDrawer() {
+                this.isDrawerOpen = !this.isDrawerOpen;
+                document.getElementsByTagName('html')[0].style.overflow = this.isDrawerOpen ? 'hidden' : 'unset';
+            },
+            closeDrawer() {
+                this.isDrawerOpen = false;
+                document.getElementsByTagName('html')[0].style.overflow = this.isDrawerOpen ? 'hidden' : 'unset';
+            },
+            toggleDarkMode() {
+                this.isDarkMode = !this.isDarkMode;
+                if (this.isDarkMode==true){
+                    document.cookie = "night=1;path=/";
+                    document.body.classList.add("night");
+                } else {
+                    document.cookie = "night=0;path=/";
+                    document.body.classList.remove("night");
+                }
+            }
+    },
+    created() {
+        window.addEventListener('scroll', this.handleScroll);
+        window.addEventListener('resize', this.handleResize);
+        window._nonDesktop = function () {
+            let check = false;
+            (function (a) {
+                if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0, 4))) check = true;
+            })(navigator.userAgent || navigator.vendor || window.opera);
+            return check;
+        };
+        
+        var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        if (night==""){
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                
+            }
+        }else{
+            
+            if (night=="1") {
+                this.toggleDarkMode();
+            }
+        }
+    },
+    mounted() {
+        this.handleScroll();
+        this.handleResize();
+        this.mounted = true;
+
+        
+    },
+    destroyed() {
+        window.removeEventListener('scroll', this.handleScroll);
+        window.removeEventListener('resize', this.handleResize);
+    }
+});
+</script>
+
+<script src="https://fushaolei.github.io//js/journal.js"></script>
+    </body>
+</html>
