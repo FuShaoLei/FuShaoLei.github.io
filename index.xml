@@ -17,7 +17,10 @@
         <pubDate>Fri, 08 Jan 2021 12:54:02 +0800</pubDate>
         
         <guid>https://fushaolei.github.io/post/hello-hugo/</guid>
-        <description>Sorryfu Blog. https://fushaolei.github.io/post/hello-hugo/ -&lt;h2 id=&#34;hello-hugo&#34;&gt;Hello Hugo&lt;/h2&gt;
+        <description>Sorryfu Blog. https://fushaolei.github.io/post/hello-hugo/ -&lt;p&gt;近来总是不满意自己的hexo主题，怎么改都觉得不满意，其实我这样已经违背了博客的初衷了，但没办法，明知背道而驰了我还是不想停下来，就这样。我不断的修改着自己的主题，然后还不断着物色主题商店的主题，没有一个令我满意的，就连自己做的那个，也是因为不满意而自暴自弃了。&lt;/p&gt;
+&lt;p&gt;遂转到hugo。&lt;/p&gt;
+&lt;p&gt;搭建教程参考这篇文章：&lt;a href=&#34;https://blog.csdn.net/weixin_41263449/article/details/107584336&#34;&gt;使用Github(Action)+Hugo搭建自己的博客
+&lt;/a&gt;&lt;/p&gt;
 - https://fushaolei.github.io/post/hello-hugo/ - </description>
         </item>
     
@@ -237,7 +240,8 @@
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20201214205801.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;末了还去朋友宿舍撸了撸他的猫&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20201214210713.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20201214210843.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;- https://fushaolei.github.io/post/life-travel-in-gugong/ - </description>
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20201214210843.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+- https://fushaolei.github.io/post/life-travel-in-gugong/ - </description>
         </item>
     
     
@@ -360,63 +364,6 @@
     
     
         <item>
-        <title>前端杂记</title>
-        <link>https://fushaolei.github.io/post/easy-html/</link>
-        <pubDate>Thu, 03 Dec 2020 22:52:58 +0000</pubDate>
-        
-        <guid>https://fushaolei.github.io/post/easy-html/</guid>
-        <description>Sorryfu Blog. https://fushaolei.github.io/post/easy-html/ -&lt;blockquote&gt;
-&lt;p&gt;因为想要继续维护我的hexo主题项目&lt;a href=&#34;https://github.com/FuShaoLei/hexo-theme-white&#34;&gt;white&lt;/a&gt;，然后自己的Html和CSS基础又不是很好，所以就边做边学咯&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;css选择器&#34;&gt;CSS选择器&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;选择器&lt;/th&gt;
-&lt;th&gt;说明&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;#top&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;ID选择器，ID是唯一的&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;.body&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Class选择器 ，一个Class可以套用在多个HTML元素上，一个HTML元素也可以拥有多个选择器&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;div&lt;/code&gt;,&lt;code&gt;h1&lt;/code&gt;等&lt;/td&gt;
-&lt;td&gt;标签选择器，直接用标签名，后面如果加Class选择器表示只在这个标签上生效&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;.container div&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;选取这个class的HTML元素里的所有div，但并不包括class本身&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;.container&amp;gt;div&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;选取拥有这个class的HTML元素的第一层div&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;.container+div&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;选取这个class的HTML与它身处同一层紧接的div&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;.container~div&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;选取这个class的HTML与它身处同一层的div&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;*&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;选取全部&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-- https://fushaolei.github.io/post/easy-html/ - </description>
-        </item>
-    
-    
-    
-        <item>
         <title>Android连接HTTP时有问题</title>
         <link>https://fushaolei.github.io/post/android-no-network-security-config/</link>
         <pubDate>Sun, 29 Nov 2020 22:21:11 +0000</pubDate>
@@ -426,6 +373,68 @@
 &lt;p&gt;今天做毕业设计的登录模块的时候，要在本地的服务器上取资源，结果就发生了这个错误&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;NetworkSecurityConfig: No Network Security Config specified, using platform default
 &lt;/code&gt;&lt;/pre&gt;- https://fushaolei.github.io/post/android-no-network-security-config/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>实习小结</title>
+        <link>https://fushaolei.github.io/post/sina-work-knowledge/</link>
+        <pubDate>Wed, 25 Nov 2020 00:16:03 +0000</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/sina-work-knowledge/</guid>
+        <description>Sorryfu Blog. https://fushaolei.github.io/post/sina-work-knowledge/ -&lt;p&gt;时间飞逝，不知不觉在新浪已经待了快两个月了（android实习），从懵懂无知的小白到懵懂无知的小白，可谓经历颇多啊，下面就来小结下这两个月来的收获&lt;/p&gt;
+&lt;h2 id=&#34;布局性能的优化&#34;&gt;布局性能的优化&lt;/h2&gt;
+&lt;h3 id=&#34;减少层级&#34;&gt;减少层级&lt;/h3&gt;
+&lt;p&gt;首先，嵌套的层级越多，就意味着在渲染的时候的时间越长，性能就越低，所以应该去除掉没必要的层级&lt;/p&gt;
+&lt;h3 id=&#34;用framelayout替代relativelayout&#34;&gt;用&lt;code&gt;FrameLayout&lt;/code&gt;替代&lt;code&gt;RelativeLayout&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;当做一个比如说左边是图标，然后最右边是文字的界面需求时（就是两端都有东西），我之前最开始想到的就是&lt;code&gt;RelativeLayout&lt;/code&gt;布局了，为什么，因为好用嘛，直接一个&lt;code&gt;alignParentRight&lt;/code&gt;或&lt;code&gt;alignParentLeft&lt;/code&gt;就可以放到两端了，然后再来一个什么&lt;code&gt;centerHorizontal&lt;/code&gt;啊，简直方便的不要不要的，为什么不用？？&lt;/p&gt;
+&lt;p&gt;因为&lt;code&gt;RelativeLayout&lt;/code&gt;在绘制的时候要经过两次测绘，性能极差，在正常情况下最好不用。&lt;/p&gt;
+&lt;p&gt;这种两端都有控件的需求其实可以用&lt;code&gt;FrameLayout&lt;/code&gt;帧布局来做的，之前的我一直图快，都没有去留意这些东西，那怎么做呢。可以用layout_gravity属性去控制控件的位置，甚至可以多个控制，比如&lt;code&gt;layout_gravity = &amp;quot;right|center_vertical&amp;quot;&lt;/code&gt;就是把这个控件放在右边，然后又让它在竖直的中间，这些我还是第一次了解到&lt;/p&gt;
+&lt;h2 id=&#34;代码规范化&#34;&gt;代码规范化&lt;/h2&gt;
+&lt;p&gt;代码规范化其实是为了给维护的人看的，包括必要的空格啊，必要的换行啊之类的&lt;/p&gt;
+&lt;h3 id=&#34;必要的空格&#34;&gt;必要的空格&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;注释后空格&lt;/li&gt;
+&lt;li&gt;花括号前要空格&lt;/li&gt;
+&lt;li&gt;逗号后要空格&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;==&lt;/code&gt;或&lt;code&gt;!=&lt;/code&gt;前后都要空格，类似的又很多&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;类似的有很多，其实这我一开始也没理解为什么要空格，其实一 是为了提高阅读性，二呢也是为了提高可维护性&lt;/p&gt;
+&lt;h2 id=&#34;简化代码&#34;&gt;简化代码&lt;/h2&gt;
+&lt;p&gt;想起了一个这几天发生的事情，哈哈，就是我要判断一个布尔值是不是为true嘛，然后我居然写了这样的代码&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;isShow &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#cb4b16&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;哈哈 现在想起来真是好笑，像是刚学会飞的小鸟，笨拙的扑棱着翅膀&lt;/p&gt;
+&lt;p&gt;其实还有一些可以简化的代码，比如&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;boolean&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;isOk&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;String name&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;mName&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;equal&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;name&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#cb4b16&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+    &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#cb4b16&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;其实不就是想判断是否相等嘛，其实可以直接返回的，不用这么麻烦，这种冗余的代码表示我就犯过几次。。。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;boolean&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;isOk&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;String name&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; mName&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;equal&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;name&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;类似的代码还有很多，还有什么三元运算符之类的， 就不一一例举了&lt;/p&gt;
+&lt;h2 id=&#34;让自己更加意识到自己的不足&#34;&gt;让自己更加意识到自己的不足&lt;/h2&gt;
+&lt;p&gt;每一次&lt;code&gt;code review&lt;/code&gt;的时候都会被大佬灵魂拷问许多东西，比如类是什么，static是什么之类的问题，看似很简单，也很基础，可我就是偏偏答不上来，我虽然知道static，但是没有去想过它本质是个什么，然后被大佬突然这么一问，简直脑袋一片空白，毫无概念。再来列一些自己最常犯的错误。。&lt;/p&gt;
+&lt;h3 id=&#34;判断string类型和另一个string类型的时候&#34;&gt;判断String类型和另一个String类型的时候&lt;/h3&gt;
+&lt;p&gt;这个是比较无语的错误&lt;/p&gt;
+&lt;p&gt;我经常写着写着就顺着写成这样了：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;isShow &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;实际上，这样的话如果isShow为1的话还是会判为false的，事实上应该用equals去判断是否相等。&lt;/p&gt;
+&lt;h3 id=&#34;思考的太局限&#34;&gt;思考的太局限&lt;/h3&gt;
+&lt;p&gt;有时候在做一个功能的时候，总是只想着怎么把它给做出来，然后就局限在一个类里边或者一个方法里边，没有往大的方面去思考，不去思考以后功能扩展的话会怎么样，就会局限在一块小小的空间里。&lt;/p&gt;
+&lt;p&gt;记得有一次在feed流里改造一个item view 但是它们传过来的数据稍微有些不一样，然后我就不管了，直接用原来的bean结构，这其实就不符合面向对象思想，因为数据结构不一样的就不能视为一个对象，当时的我并没有意识到这一点，大佬还给我讲了很久的面向对象😥。&lt;/p&gt;
+&lt;h3 id=&#34;防止空指针错误防止越界错误&#34;&gt;防止空指针错误，防止越界错误&lt;/h3&gt;
+&lt;p&gt;越简单的问题，越容易被忽略，而往往就是这些简单的问题，就会导致一些莫名其妙的crash。我就犯过好多次。。。&lt;/p&gt;
+&lt;p&gt;思维过程应该是这样先想变量是否可用？（是否不为null）然后，才想其他的东西&lt;/p&gt;
+- https://fushaolei.github.io/post/sina-work-knowledge/ - </description>
         </item>
     
     
