@@ -257,7 +257,7 @@ mWebView.getSettings().setBlockNetworkImage(false);//解决图片不显示
         
         <guid>https://fushaolei.github.io/about/</guid>
         <description>Sorryfu Blog. https://fushaolei.github.io/about/ -&lt;h2 id=&#34;关于我&#34;&gt;关于我&lt;/h2&gt;
-&lt;p&gt;不善言谈，为人感性，努力改造中&lt;/p&gt;
+&lt;p&gt;一介凡人，喜好编程，看书，写作，偶尔网抑云&lt;/p&gt;
 &lt;h3 id=&#34;联系方式&#34;&gt;联系方式&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;github主页：https://github.com/FuShaoLei&lt;/li&gt;
@@ -270,7 +270,7 @@ mWebView.getSettings().setBlockNetworkImage(false);//解决图片不显示
 &lt;li&gt;QQ：1563250958&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;关于本站&#34;&gt;关于本站&lt;/h2&gt;
-&lt;p&gt;个人网站嘛，其实是很私人的东西，除了记录和总结知识外，可能也会写一些人生的感悟之类的，不过主要还是知识（我只是一个喜欢开坑不喜欢填坑的菜狗啊QAQ）&lt;/p&gt;
+&lt;p&gt;主要用于记录所学的东西，前端，后端，Android什么的，比较杂，因为我还是一个正在成长的菜狗啊啊啊啊，当然不排除会有一些日常的感悟啊，经历啊什么的（当然 有一些文字我自己都不想重复看，因为感觉很羞耻2333），各位看官请便&lt;/p&gt;
 &lt;h2 id=&#34;建站历史&#34;&gt;建站历史&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;2019/04/01 &lt;code&gt;hexo&lt;/code&gt;引擎 &lt;code&gt;next&lt;/code&gt;主题，部署在&lt;code&gt;github&lt;/code&gt;上&lt;/li&gt;
@@ -298,11 +298,12 @@ mWebView.getSettings().setBlockNetworkImage(false);//解决图片不显示
 &lt;h2 id=&#34;特别感谢&#34;&gt;特别感谢&lt;/h2&gt;
 &lt;p&gt;特别感谢以下软件/公司提供的服务&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;github pages &lt;/code&gt;免费托管网站&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;git &lt;/code&gt;用于上传代码到远端的工具&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Typora &lt;/code&gt;用于书写md格式的文章&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;VScode&lt;/code&gt; 用于开发和魔改&lt;code&gt;hexo&lt;/code&gt;主题&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;hexo &lt;/code&gt;博客引擎&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Github Pages &lt;/code&gt;免费托管网站&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Git &lt;/code&gt;用于上传代码到远端的工具&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://typora.io/&#34;&gt;&lt;code&gt;Typora &lt;/code&gt;&lt;/a&gt;用于书写md格式的文章&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;VScode&lt;/code&gt; 用于开发和魔改博客主题&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hexo.io/&#34;&gt;&lt;code&gt;Hexo &lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;&lt;code&gt;Hugo&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 - https://fushaolei.github.io/about/ - </description>
         </item>
