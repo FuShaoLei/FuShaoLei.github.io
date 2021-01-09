@@ -5,7 +5,7 @@
     <description>Recent content on Sorryfu Blog.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 08 Jan 2021 12:54:02 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 09 Jan 2021 16:38:31 +0800</lastBuildDate>
     
         <atom:link href="https://fushaolei.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -154,6 +154,253 @@ fun &lt;span style=&#34;color:#268bd2&#34;&gt;getStatus&lt;/span&gt;&lt;span sty
 &lt;/tbody&gt;
 &lt;/table&gt;
 - https://fushaolei.github.io/post/kotlin-note-base-element/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>《Java核心技术》读书笔记</title>
+        <link>https://fushaolei.github.io/post/core-java-note-1/</link>
+        <pubDate>Tue, 06 Oct 2020 13:34:37 +0000</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/core-java-note-1/</guid>
+        <description>Sorryfu Blog. https://fushaolei.github.io/post/core-java-note-1/ -&lt;blockquote&gt;
+&lt;p&gt;仅仅是边读边记的笔记，因为不像是某些资料，这本书不是成“体系”的，比较混乱，所以，索性都记录到一个md文件里咯&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;1第一个程序&#34;&gt;1.第一个程序&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;Hello&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+	&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;main&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;String&lt;span style=&#34;color:#719e07&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;]&lt;/span&gt; args&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+		System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;Hello World&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+	&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;public&lt;/code&gt;（访问修饰符） 用于控制对所修饰的类或对象或字段的访问级别&lt;/li&gt;
+&lt;li&gt;class表示这是一个类，Hello则是这个类的类名&lt;/li&gt;
+&lt;li&gt;main方法是所有程序的&lt;strong&gt;入口&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;大括号表示方法体的开始与结束&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2注释&#34;&gt;2.注释&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//单行注释
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;
+&lt;span style=&#34;color:#586e75&#34;&gt;/*
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;多行注释，（不能嵌套使用）
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;*/&lt;/span&gt;
+
+&lt;span style=&#34;color:#586e75&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; * 文档注释
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; * 可用于自动的生成文档
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; */&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;3数据类型&#34;&gt;3.数据类型&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;基本类型&lt;/th&gt;
+&lt;th&gt;位数&lt;/th&gt;
+&lt;th&gt;字节&lt;/th&gt;
+&lt;th&gt;默认值&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;int&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;32&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;short&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;long&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;64&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;0L&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;byte&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;char&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;&#39;u0000&amp;rsquo;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;float&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;32&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;0f&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;double&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;64&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;0d&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;boolean&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;false&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;4变量与常量&#34;&gt;4.变量与常量&lt;/h2&gt;
+&lt;h3 id=&#34;变量&#34;&gt;变量&lt;/h3&gt;
+&lt;h4 id=&#34;声明变量&#34;&gt;声明变量&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; a&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+String name&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;即 以&lt;code&gt;变量类型&lt;/code&gt;  &lt;code&gt;变量名&lt;/code&gt;这种形式来声明一个变量&lt;/p&gt;
+&lt;h4 id=&#34;变量初始化&#34;&gt;变量初始化&lt;/h4&gt;
+&lt;p&gt;声明一个变量后，必须用赋值语句对变量进行&lt;strong&gt;显式初始化&lt;/strong&gt;，如下&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; a &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; 0&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+String name &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;任我行&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;常量&#34;&gt;常量&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;常量就是值不会变的变量&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;可用&lt;code&gt;final&lt;/code&gt;关键字来修饰常量，而且通常此常量名为大写&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;final&lt;/span&gt; String BAIDU_URL &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;www.baidu.com&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;枚举类型&#34;&gt;枚举类型&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;作用：限制变量的取值范围&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;    &lt;span style=&#34;color:#268bd2&#34;&gt;enum&lt;/span&gt; Size &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;SMALL&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;MEDIUM&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;LARGE&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;EXTRA_LARGE&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;那么&lt;code&gt;Size&lt;/code&gt;类型的变量只能取里边的值&lt;/p&gt;
+&lt;h2 id=&#34;5运算符&#34;&gt;5.运算符&lt;/h2&gt;
+&lt;h3 id=&#34;算术运算符&#34;&gt;算术运算符&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;算术运算符&lt;/th&gt;
+&lt;th&gt;表示&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;+&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;加&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;-&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;减&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;*&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;乘&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;除&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;%&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;取模&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;类型转换&#34;&gt;类型转换&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;如参与运算的两个数类型不一致，则结果为较大类型的整型&lt;/li&gt;
+&lt;li&gt;强制转换：(有可能损失信息)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;其他运算符&#34;&gt;其他运算符&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;二元运算符：例如&lt;code&gt;x+=4;&lt;/code&gt;，运算符放于等号左边&lt;/li&gt;
+&lt;li&gt;自增自减运算符
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;++x&lt;/code&gt; 前缀形式会先加1再使用&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;x++&lt;/code&gt; 后缀形式会先使用原来的值，之后才加1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;关系运算符：如&lt;code&gt;==&lt;/code&gt;,&lt;code&gt;!=&lt;/code&gt;，&lt;code&gt;&amp;gt;=&lt;/code&gt;之类的，还有&lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt;和&lt;code&gt;||&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;三元运算符：&lt;code&gt;x&amp;gt;0 ? true : false&lt;/code&gt;如表达式为真，则为&lt;code&gt;true&lt;/code&gt;，如假则为&lt;code&gt;false&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;6字符串&#34;&gt;6.字符串&lt;/h2&gt;
+&lt;p&gt;先跳过，待补充&lt;/p&gt;
+&lt;h2 id=&#34;7输入与输出&#34;&gt;7.输入与输出&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;Scanner input&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; Scanner&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;in&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;请输入一个数字&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; num&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;input&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;nextInt&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//输入
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;你输入的数字是：&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;num&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//输出
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;8控制流程&#34;&gt;8.控制流程&lt;/h2&gt;
+&lt;h4 id=&#34;条件分支流程&#34;&gt;条件分支流程&lt;/h4&gt;
+&lt;p&gt;普通分支语句&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;        &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; a &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; 1&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+        &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; b &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; 2&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+        &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;a &lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt; b&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+            System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;a大于b&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//如果a大于b则执行这个语句
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;a &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; b&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+            System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;a等于b&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//如果a等于b则执行这个语句
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+            System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;a小于b&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//否则就a小于b，当以上两种情况都不是的时候执行
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;条件多分支语句&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;		&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; g&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;2&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+		&lt;span style=&#34;color:#719e07&#34;&gt;switch&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;g&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+		&lt;span style=&#34;color:#719e07&#34;&gt;case&lt;/span&gt; 1&lt;span style=&#34;color:#719e07&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+			System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;是1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//当g是1时执行
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;			&lt;span style=&#34;color:#719e07&#34;&gt;break&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+		&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+		&lt;span style=&#34;color:#719e07&#34;&gt;case&lt;/span&gt; 2&lt;span style=&#34;color:#719e07&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+			System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;是2&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//当g是2时执行
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;			&lt;span style=&#34;color:#719e07&#34;&gt;break&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+		&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+		&lt;span style=&#34;color:#719e07&#34;&gt;default&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+			System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;都不是&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//当以上情况都不是的时候执行
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;			&lt;span style=&#34;color:#719e07&#34;&gt;break&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+		&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+		&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;循环流程&#34;&gt;循环流程&lt;/h4&gt;
+&lt;p&gt;根据条件，反复执行某些操作&lt;/p&gt;
+&lt;h5 id=&#34;for&#34;&gt;&lt;code&gt;for&lt;/code&gt;&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;	&lt;span style=&#34;color:#719e07&#34;&gt;for&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; i&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;0&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&lt;/span&gt;5&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//int i=0是初始值，i&amp;lt;5是循环条件。i++是循环后更新i的值，然后进入下一轮循环
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;		System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;循环第&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;次&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+	&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;while&#34;&gt;&lt;code&gt;while&lt;/code&gt;&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;		&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; u&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;5&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+		&lt;span style=&#34;color:#719e07&#34;&gt;while&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;u&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt;0&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//当为true时执行
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;			System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;u=&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;u&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+			&lt;span style=&#34;color:#719e07&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;-&lt;/span&gt;u&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+		&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;dowhile&#34;&gt;&lt;code&gt;do&lt;/code&gt;..&lt;code&gt;while&lt;/code&gt;&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;		&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; p&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;0&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+		&lt;span style=&#34;color:#719e07&#34;&gt;do&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//无条件进入循环
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;			&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;p&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+			System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;p=&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;p&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+		&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;while&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;p&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&lt;/span&gt;5&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//首先执行一次循环体后进行判断，若为true则继续进行下去
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;for-each增强型for循环&#34;&gt;&lt;code&gt;for each&lt;/code&gt;（增强型&lt;code&gt;for&lt;/code&gt;循环）&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#719e07&#34;&gt;for&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt; 类型 变量名&lt;span style=&#34;color:#719e07&#34;&gt;:&lt;/span&gt; 数组或集合 &lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+循环体
+&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;与普通for循环的区别：for each循环语句的循环变量将会遍历数组中的每个元素，而不是下标值&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;9大数&#34;&gt;9.大数&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;BigInteger&lt;/code&gt;实现任意精度的整数运算&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;BigDecimal&lt;/code&gt;实现任意精度的浮点数运算&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;10数组&#34;&gt;10.数组&lt;/h2&gt;
+&lt;p&gt;存储一组具有&lt;strong&gt;相同数据类型&lt;/strong&gt;的数据元素的有序集合&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#586e75&#34;&gt;// 声明
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; num&lt;span style=&#34;color:#719e07&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;]&lt;/span&gt; sum&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#586e75&#34;&gt;// 静态初始化
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; num&lt;span style=&#34;color:#719e07&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;1&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;2&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;3&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;4&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;5&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#586e75&#34;&gt;//动态初始化
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; num&lt;span style=&#34;color:#719e07&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;[&lt;/span&gt;5&lt;span style=&#34;color:#719e07&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//预先分配内存空间
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;for&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; i&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;0&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&lt;/span&gt;5&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+	num&lt;span style=&#34;color:#719e07&#34;&gt;[&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;*&lt;/span&gt;3&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://fushaolei.github.io/post/core-java-note-1/ - </description>
         </item>
     
     
@@ -1325,36 +1572,6 @@ Spring容器中（自动分配的id首字母是小写的），当扫描到@Resou
 &lt;p&gt;感觉，还是基于xml的配置更好些，修改方便，然后，也方便复用（雾(+_+)?&lt;/p&gt;
 &lt;/blockquote&gt;
 - https://fushaolei.github.io/post/spring-note/ - </description>
-        </item>
-    
-    
-    
-        <item>
-        <title>面试流程</title>
-        <link>https://fushaolei.github.io/post/interview-water/</link>
-        <pubDate>Fri, 14 Aug 2020 15:57:53 +0000</pubDate>
-        
-        <guid>https://fushaolei.github.io/post/interview-water/</guid>
-        <description>Sorryfu Blog. https://fushaolei.github.io/post/interview-water/ -&lt;blockquote&gt;
-&lt;p&gt;其实说是android面试，其实更多的会问到许多java的知识，毕竟基础嘛，实习生面试还是以基础为主（我猜的），然后这篇文章会融合之前写过的东西，从面试流程开始。此文的面试题有的是我经历过的，有的是网上的一些，为方便复习总结，收集于此。学术不精，如有错误，请与我联系改正 ( •̀ ω •́ )✧&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;简单写写面试流程 , 我遇到过的好几个都是这样的 QAQ&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;自我介绍&#34;&gt;自我介绍&lt;/h3&gt;
-&lt;p&gt;面试官您好，我叫XXX，来自XXX（学校）XX学院，XX公司我一直非常尊敬的公司，这一次我应聘的是XXX（职位），平常喜欢XXX（和职位有关的兴趣，比如写博客什么的），希望能过加入XX公司从事相关工作&lt;/p&gt;
-&lt;h3 id=&#34;介绍项目&#34;&gt;介绍项目&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;如果你有写的话&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;通常分为几步&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;在项目里担任了什么职位，完成了什么&lt;/li&gt;
-&lt;li&gt;涉及到的技术，这其中会深入的问你和项目相关的问题，比如，我的项目里用到了&lt;code&gt;okhttp&lt;/code&gt;，面试官会问你有没有阅读过&lt;code&gt;okhttp&lt;/code&gt;的&lt;strong&gt;源码&lt;/strong&gt;啊，大概怎么实现的啊，之类的问题&lt;/li&gt;
-&lt;li&gt;有什么感悟，遇到过什么难题 , 有些地方的实现为什么要这样实现而不是那样实现啊&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;（更新中(‾◡◝)）&lt;/p&gt;- https://fushaolei.github.io/post/interview-water/ - </description>
         </item>
     
     
