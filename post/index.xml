@@ -12,12 +12,13 @@
     
     
     <item>
-      <title>Reinstall Sys</title>
+      <title>我的常用软件</title>
       <link>https://fushaolei.github.io/post/reinstall-sys/</link>
       <pubDate>Sun, 10 Jan 2021 12:14:48 +0800</pubDate>
       
       <guid>https://fushaolei.github.io/post/reinstall-sys/</guid>
-      <description>1.环境相关  JDK环境配置 Git安装与配置，配置ssh MySQL安装与配置：  </description>
+      <description> 因为自己会不定时的会重置电脑（因为处女座的一些奇怪特性？），所以写下此文备用
+ 1.win10设置  全屏幕显示“开始”菜单  2.环境相关  JDK环境配置 Git安装与配置，配置ssh MySQL安装与配置：  3.常用软件及网址 软件  火绒 JetBrains系列产品  IDEA：配置maven DataGrip   Android Studio Typora ：用于书写markdown Git ：用于上传代码到远端的工具 VScode ：用于开发  网址 </description>
     </item>
     
     <item>
@@ -37,6 +38,8 @@
       <guid>https://fushaolei.github.io/post/hello-hugo/</guid>
       <description>近来总是不满意自己的hexo主题，怎么改都觉得不满意，其实我这样已经违背了博客的初衷了，但没办法，明知背道而驰了我还是不想停下来，就这样。我不断的修改着自己的主题，然后还不断着物色主题商店的主题，没有一个令我满意的，就连自己做的那个，也是因为不满意而自暴自弃了。
 遂转到hugo。
+而且我还发现，hugo比hexo安装的时候快多了，hugo只需要下一个程序而已，而hexo需要安装什么nodejs环境啊之类的，比较麻烦。
+所以，早知道一开始就选hugo啦！！！！
 搭建教程参考这篇文章：使用Github(Action)+Hugo搭建自己的博客</description>
     </item>
     
@@ -628,9 +631,9 @@ deploy: type: git repository: git@github.com:FuShaoLei/FuShaoLei.github.io.git b
       
       <guid>https://fushaolei.github.io/post/idea-note/</guid>
       <description>哭唧唧，用惯了eclispe的我用起idea就像一个傻子，现在记录一下，以免忘记 所用版本：idea 2020.1
- 1. 下载和安装 去官网下载：https://www.jetbrains.com/idea/download/ 安装随意，破解的话 看这篇文章
+ 1. 下载和安装 去官网下载：https://www.jetbrains.com/idea/download/ 安装随意，破解的话 看这篇文章，有开源项目的建议可以试着申请下免费的一年使用权，链接指路：https://www.jetbrains.com/zh-cn/community/opensource/
 2. 配置maven  maven的作用就是帮助我们下载需要的jar包，不需要在自己去网上找来找去了
- 去这个页面: 然后解压，记住你解压后的位置，比如我直接解压到E盘 然后是配置环境，电脑&amp;gt;属性&amp;gt;高级系统设置&amp;gt;环境变量，在系统变量中添加一个变量为M2_HOME，值为你的maven存放路径，然后到path里添加一个maven的bin路径，懒了不贴图了 在cmd中输入mvn -v出现maven的版本号 ，就说明配置成功啦！
+ 点击这个链接：https://maven.apache.org/，去这个页面: 然后解压，记住你解压后的位置，比如我直接解压到E盘 然后是配置环境，电脑&amp;gt;属性&amp;gt;高级系统设置&amp;gt;环境变量，在系统变量中添加一个变量为M2_HOME，值为你的maven存放路径，然后到path里添加一个maven的bin路径，懒了不贴图了 在cmd中输入mvn -v出现maven的版本号 ，就说明配置成功啦！
 这时还没完： 进入E:\apache-maven-3.6.3\conf路径下。打开setting.xml 在mirrors中添加一个镜像
 &amp;lt;mirror&amp;gt; &amp;lt;id&amp;gt;nexus-aliyun&amp;lt;/id&amp;gt; &amp;lt;mirrorOf&amp;gt;central&amp;lt;/mirrorOf&amp;gt; &amp;lt;name&amp;gt;Nexus aliyun&amp;lt;/name&amp;gt; &amp;lt;url&amp;gt;http://maven.aliyun.com/nexus/content/groups/public/&amp;lt;/url&amp;gt; &amp;lt;/mirror&amp;gt; 阿里云镜像，到时候下载jar包时会更快
  下载的路径还没修改，将在后续补上

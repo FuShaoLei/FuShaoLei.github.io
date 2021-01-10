@@ -492,12 +492,12 @@ hexo s  ## 本地预览，在浏览器中输入localhost:4000看看效果
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;1-下载和安装&#34;&gt;1. 下载和安装&lt;/h2&gt;
 &lt;p&gt;去官网下载：https://www.jetbrains.com/idea/download/
-安装随意，破解的话 看这篇&lt;a href=&#34;https://nymane.github.io/post/2020-04-14-IntelliJ_IDEA_2020.1%E6%B3%A8%E5%86%8C%E7%A0%81%EF%BC%88%E4%BA%B2%E6%B5%8B%E6%9C%89%E6%95%88%EF%BC%8C%E5%8F%AF%E6%BF%80%E6%B4%BB%E8%87%B3_2089_%E5%B9%B4&#34;&gt;文章&lt;/a&gt;&lt;/p&gt;
+安装随意，&lt;del&gt;破解的话 看这篇&lt;a href=&#34;https://nymane.github.io/post/2020-04-14-IntelliJ_IDEA_2020.1%E6%B3%A8%E5%86%8C%E7%A0%81%EF%BC%88%E4%BA%B2%E6%B5%8B%E6%9C%89%E6%95%88%EF%BC%8C%E5%8F%AF%E6%BF%80%E6%B4%BB%E8%87%B3_2089_%E5%B9%B4&#34;&gt;文章&lt;/a&gt;&lt;/del&gt;，有开源项目的建议可以试着申请下免费的一年使用权，链接指路：https://www.jetbrains.com/zh-cn/community/opensource/&lt;/p&gt;
 &lt;h2 id=&#34;2-配置maven&#34;&gt;2. 配置maven&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;maven的作用就是帮助我们下载需要的jar包，不需要在自己去网上找来找去了&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;去这个页面:
+&lt;p&gt;点击这个链接：https://maven.apache.org/，去这个页面:
 &lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20200614230817.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;然后解压，记住你解压后的位置，比如我直接解压到E盘
 然后是配置环境，电脑&amp;gt;属性&amp;gt;高级系统设置&amp;gt;环境变量，在系统变量中添加一个变量为&lt;code&gt;M2_HOME&lt;/code&gt;，值为你的maven存放路径，然后到path里添加一个maven的bin路径，懒了不贴图了

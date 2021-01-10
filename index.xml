@@ -12,17 +12,40 @@
     
     
         <item>
-        <title>Reinstall Sys</title>
+        <title>我的常用软件</title>
         <link>https://fushaolei.github.io/post/reinstall-sys/</link>
         <pubDate>Sun, 10 Jan 2021 12:14:48 +0800</pubDate>
         
         <guid>https://fushaolei.github.io/post/reinstall-sys/</guid>
-        <description>Sorryfu Blog. https://fushaolei.github.io/post/reinstall-sys/ -&lt;h2 id=&#34;1环境相关&#34;&gt;1.环境相关&lt;/h2&gt;
+        <description>Sorryfu Blog. https://fushaolei.github.io/post/reinstall-sys/ -&lt;blockquote&gt;
+&lt;p&gt;因为自己会不定时的会重置电脑（因为处女座的一些奇怪特性？），所以写下此文备用&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;1win10设置&#34;&gt;1.win10设置&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://support.microsoft.com/zh-cn/windows/%E5%85%A8%E5%B1%8F%E5%B9%95%E6%98%BE%E7%A4%BA-%E5%BC%80%E5%A7%8B-%E8%8F%9C%E5%8D%95-13bc1e29-65dd-ba38-e3ec-7959b8d770dc&#34;&gt;全屏幕显示“开始”菜单&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2环境相关&#34;&gt;2.环境相关&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://blog.csdn.net/CAU_Ayao/article/details/82023517&#34;&gt;JDK环境配置&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Git&lt;a href=&#34;https://blog.csdn.net/qq_31884737/article/details/108632492?ops_request_misc=%25257B%252522request%25255Fid%252522%25253A%252522161024257516780257480350%252522%25252C%252522scm%252522%25253A%25252220140713.130102334..%252522%25257D&amp;amp;request_id=161024257516780257480350&amp;amp;biz_id=0&amp;amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_click~default-1-108632492.first_rank_v2_pc_rank_v29&amp;amp;utm_term=git%E5%AE%89%E8%A3%85&#34;&gt;安装&lt;/a&gt;与&lt;a href=&#34;https://blog.csdn.net/chuyouyinghe/article/details/81567785?ops_request_misc=%25257B%252522request%25255Fid%252522%25253A%252522161024842716780274120876%252522%25252C%252522scm%252522%25253A%25252220140713.130102334..%252522%25257D&amp;amp;request_id=161024842716780274120876&amp;amp;biz_id=0&amp;amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~baidu_landing_v2~default-2-81567785.first_rank_v2_pc_rank_v29&amp;amp;utm_term=git%E9%85%8D%E7%BD%AE%E5%85%A8%E5%B1%80&#34;&gt;配置&lt;/a&gt;，&lt;a href=&#34;https://docs.github.com/cn/free-pro-team@latest/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account&#34;&gt;配置ssh&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;MySQL安装与配置：&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h2 id=&#34;3常用软件及网址&#34;&gt;3.常用软件及网址&lt;/h2&gt;
+&lt;h3 id=&#34;软件&#34;&gt;软件&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.huorong.cn/&#34;&gt;火绒&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.jetbrains.com/&#34;&gt;&lt;code&gt;JetBrains系列产品&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.jetbrains.com/idea/&#34;&gt;IDEA&lt;/a&gt;：&lt;a href=&#34;https://fushaolei.github.io/post/idea-note/&#34;&gt;配置maven&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.jetbrains.com/datagrip/&#34;&gt;DataGrip&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Android Studio&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://typora.io/&#34;&gt;&lt;code&gt;Typora &lt;/code&gt;&lt;/a&gt;：用于书写markdown&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://git-scm.com/&#34;&gt;&lt;code&gt;Git &lt;/code&gt;&lt;/a&gt;：用于上传代码到远端的工具&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://code.visualstudio.com/&#34;&gt;&lt;code&gt;VScode&lt;/code&gt;&lt;/a&gt; ：用于开发&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;网址&#34;&gt;网址&lt;/h3&gt;
 - https://fushaolei.github.io/post/reinstall-sys/ - </description>
         </item>
     
@@ -70,6 +93,8 @@
         <guid>https://fushaolei.github.io/post/hello-hugo/</guid>
         <description>Sorryfu Blog. https://fushaolei.github.io/post/hello-hugo/ -&lt;p&gt;近来总是不满意自己的hexo主题，怎么改都觉得不满意，其实我这样已经违背了博客的初衷了，但没办法，明知背道而驰了我还是不想停下来，就这样。我不断的修改着自己的主题，然后还不断着物色主题商店的主题，没有一个令我满意的，就连自己做的那个，也是因为不满意而自暴自弃了。&lt;/p&gt;
 &lt;p&gt;遂转到hugo。&lt;/p&gt;
+&lt;p&gt;而且我还发现，hugo比hexo安装的时候快多了，hugo只需要下一个程序而已，而hexo需要安装什么nodejs环境啊之类的，比较麻烦。&lt;/p&gt;
+&lt;p&gt;所以，早知道一开始就选hugo啦！！！！&lt;/p&gt;
 &lt;p&gt;搭建教程参考这篇文章：&lt;a href=&#34;https://blog.csdn.net/weixin_41263449/article/details/107584336&#34;&gt;使用Github(Action)+Hugo搭建自己的博客
 &lt;/a&gt;&lt;/p&gt;
 - https://fushaolei.github.io/post/hello-hugo/ - </description>
