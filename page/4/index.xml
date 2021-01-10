@@ -5,9 +5,170 @@
     <description>Recent content on Sorryfu Blog.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 09 Jan 2021 16:38:31 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 10 Jan 2021 12:14:48 +0800</lastBuildDate>
     
         <atom:link href="https://fushaolei.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Spring笔记</title>
+        <link>https://fushaolei.github.io/post/spring-note/</link>
+        <pubDate>Mon, 17 Aug 2020 09:27:43 +0000</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/spring-note/</guid>
+        <description>Sorryfu Blog. https://fushaolei.github.io/post/spring-note/ -&lt;blockquote&gt;
+&lt;p&gt;很早之前就听说过这个框架了，但是今年二月份才开始学╰(￣ω￣ｏ)，未必是有些晚了，现在又重新学期，有了之前学idea的经验，应该也不是什么问题&lt;/p&gt;
+&lt;p&gt;贴一个文档：https://docs.spring.io/spring/docs/current/spring-framework-reference/index.html&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;第一个程序&#34;&gt;第一个程序&lt;/h2&gt;
+&lt;h3 id=&#34;ioc和di的概念&#34;&gt;IoC和DI的概念&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;IoC：控制反转（设计原则）&lt;strong&gt;由容器主动将资源推送到它所管理的组件里，组件要有接受资源的方式&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;DI：依赖注入（IoC的典型实现）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;好了，光知道这个思想其实没什么用，下面开始编码&lt;/p&gt;
+&lt;p&gt;步骤&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;创建maven项目&lt;/li&gt;
+&lt;li&gt;在pom.xml中添加相应的依赖&lt;/li&gt;
+&lt;li&gt;👴忘了&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;pomxml里的依赖&#34;&gt;pom.xml里的依赖&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;        &lt;span style=&#34;color:#586e75&#34;&gt;&amp;lt;!--&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;Spring核心基础依赖&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;--&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;org.springframework&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;spring-core&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;version&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;5.0.2.RELEASE&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;org.springframework&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;spring-context&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;version&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;5.0.2.RELEASE&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;org.springframework&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;spring-beans&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;version&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;5.0.2.RELEASE&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;org.springframework&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;spring-expression&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;version&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;5.0.2.RELEASE&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#586e75&#34;&gt;&amp;lt;!--&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;日志相关&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;--&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;commons-logging&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;commons-logging&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;version&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;1.2&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;log4j&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;log4j&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;version&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;1.2.17&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;dependency&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;groupId&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;org.testng&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;artifactId&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;testng&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;version&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;RELEASE&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;scope&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;compile&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/scope&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;3种配置元数据的方法&#34;&gt;3种配置元数据的方法&lt;/h2&gt;
+&lt;h3 id=&#34;基于xml的配置&#34;&gt;基于Xml的配置&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;beans&lt;/span&gt; xmlns=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;http://www.springframework.org/schema/beans&amp;#34;&lt;/span&gt;
+	xmlns:xsi=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34;&lt;/span&gt; xmlns:context=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;http://www.springframework.org/schema/context&amp;#34;&lt;/span&gt;
+	xsi:schemaLocation=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;
+	&lt;span style=&#34;color:#586e75&#34;&gt;&amp;lt;!--&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; id写什么都行 只要保证唯一就行，在Spring容器中用id来调用&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;--&amp;gt;&lt;/span&gt;
+	&lt;span style=&#34;color:#586e75&#34;&gt;&amp;lt;!--&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;  class要写完整路径,Spring运行时通过class这个路径来实例化对象放入Spring容器中 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;--&amp;gt;&lt;/span&gt;
+	&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;bean&lt;/span&gt; id=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;InteCpu&amp;#34;&lt;/span&gt; class=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;com.pc.InteCpu&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/bean&amp;gt;&lt;/span&gt;
+	&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;bean&lt;/span&gt; id=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;Computer&amp;#34;&lt;/span&gt; class=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;com.pc.Computer&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;
+	&lt;span style=&#34;color:#586e75&#34;&gt;&amp;lt;!--&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; name要写Computer中的类名名称 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;--&amp;gt;&lt;/span&gt;
+	&lt;span style=&#34;color:#586e75&#34;&gt;&amp;lt;!--&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; ref依赖注入，ref里写id &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;--&amp;gt;&lt;/span&gt;
+	&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;property&lt;/span&gt; name=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;cpu&amp;#34;&lt;/span&gt; ref=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;InteCpu&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/property&amp;gt;&lt;/span&gt;
+	&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/bean&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/beans&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后引用：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#719e07&#34;&gt;package&lt;/span&gt; com.pc&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+
+&lt;span style=&#34;color:#719e07&#34;&gt;import&lt;/span&gt; org.springframework.context.ApplicationContext&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;import&lt;/span&gt; org.springframework.context.support.ClassPathXmlApplicationContext&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+
+&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;Test&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+	&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;main&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;String&lt;span style=&#34;color:#719e07&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;]&lt;/span&gt; args&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+		&lt;span style=&#34;color:#586e75&#34;&gt;//接口
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;		ApplicationContext ctx&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; ClassPathXmlApplicationContext&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;applicationContext.xml&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+		Computer pc&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;Computer&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;ctx&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getBean&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;Computer&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//从Spring容器内调用id为Computer的类（？不知是否改用这个词）
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;		pc&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;play&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//运行
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;基于注解的配置&#34;&gt;基于注解的配置&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;beans&lt;/span&gt; xmlns=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;http://www.springframework.org/schema/beans&amp;#34;&lt;/span&gt;
+	xmlns:xsi=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34;&lt;/span&gt; xmlns:context=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;http://www.springframework.org/schema/context&amp;#34;&lt;/span&gt;
+	xsi:schemaLocation=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;
+	&lt;span style=&#34;color:#586e75&#34;&gt;&amp;lt;!--&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; 用注解的方式 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;--&amp;gt;&lt;/span&gt;
+	&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;context:annotation-config&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;/&amp;gt;&lt;/span&gt;
+	&lt;span style=&#34;color:#586e75&#34;&gt;&amp;lt;!--&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; 说明包在哪，然后就会帮你扫描com.pc下所有的类
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;	当扫描到@Component的时候，则会帮你把这个&amp;#34;组件&amp;#34;实例化出来放入
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;	Spring容器中（自动分配的id首字母是小写的），当扫描到@Resource的时候，说明要依赖注入，Spring会自动帮你引入依赖&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;--&amp;gt;&lt;/span&gt;
+	&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;context:component-scan&lt;/span&gt; base-package=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;com.pc&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;
+	&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/context:component-scan&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/beans&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;比如：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#719e07&#34;&gt;package&lt;/span&gt; com.pc&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;import&lt;/span&gt; javax.annotation.Resource&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;import&lt;/span&gt; org.springframework.stereotype.Component&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#586e75&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; * 配置元数据第二种方法：基于注解的配置
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; */&lt;/span&gt;
+&lt;span style=&#34;color:#268bd2&#34;&gt;@Component&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;Computer&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;Computer&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+	&lt;span style=&#34;color:#586e75&#34;&gt;//加入这个标签，说明
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#268bd2&#34;&gt;@Resource&lt;/span&gt;
+	&lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; Cpu cpu&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+
+	&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;setCpu&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;Cpu cpu&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+		&lt;span style=&#34;color:#719e07&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;cpu &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; cpu&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+	&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+	&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;play&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+		&lt;span style=&#34;color:#719e07&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;cpu&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;run&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+		System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;computer is playing by annotation&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+	&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;引用的方法和&lt;code&gt;基于Xml的配置&lt;/code&gt;的差不多&lt;/p&gt;
+&lt;h3 id=&#34;基于java的配置&#34;&gt;基于Java的配置&lt;/h3&gt;
+&lt;p&gt;此方法没有xml文件，纯java引用&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#719e07&#34;&gt;package&lt;/span&gt; com.pc&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;import&lt;/span&gt; org.springframework.context.ApplicationContext&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;import&lt;/span&gt; org.springframework.context.annotation.AnnotationConfigApplicationContext&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;import&lt;/span&gt; org.springframework.context.annotation.ComponentScan&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;import&lt;/span&gt; org.springframework.context.annotation.Configuration&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;import&lt;/span&gt; org.springframework.context.support.ClassPathXmlApplicationContext&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+
+&lt;span style=&#34;color:#268bd2&#34;&gt;@Configuration&lt;/span&gt;
+&lt;span style=&#34;color:#268bd2&#34;&gt;@ComponentScan&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;com.pc&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;Test&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+	&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;main&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;String&lt;span style=&#34;color:#719e07&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;]&lt;/span&gt; args&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+		&lt;span style=&#34;color:#586e75&#34;&gt;//接口
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;		ApplicationContext ctx&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; AnnotationConfigApplicationContext&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;Test&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;class&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+		Computer pc&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;Computer&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;ctx&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getBean&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;Computer&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+		pc&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;play&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+	&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;需要添加注解，此方法可以理解为另一种形式的&lt;code&gt;基于注解的配置&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;当扫描到@Component的时候，则会帮你把这个&amp;quot;组件&amp;quot;实例化出来放入
+Spring容器中（自动分配的id首字母是小写的），当扫描到@Resource的时候，说明要依赖注入，Spring会自动帮你引入依赖&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;感觉，还是基于xml的配置更好些，修改方便，然后，也方便复用（雾(+_+)?&lt;/p&gt;
+&lt;/blockquote&gt;
+- https://fushaolei.github.io/post/spring-note/ - </description>
+        </item>
     
     
     
@@ -1533,43 +1694,6 @@ System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=
 &lt;p&gt;另外，本博客的图片上传工具使用的是我新开发的Imagic，稳定性杠杆滴，比picgo强多了，虽然说现在Imagic的界面很丑，也没有相册管理功能，但至少，我用我学来的知识，为自己带来了便利，即所谓技术服务于人类&lt;/p&gt;
 &lt;/blockquote&gt;
 - https://fushaolei.github.io/post/linux-install/ - </description>
-        </item>
-    
-    
-    
-        <item>
-        <title>java打造一个图片上传工具</title>
-        <link>https://fushaolei.github.io/post/java-make-a-image-upload/</link>
-        <pubDate>Fri, 03 Jul 2020 12:25:29 +0000</pubDate>
-        
-        <guid>https://fushaolei.github.io/post/java-make-a-image-upload/</guid>
-        <description>Sorryfu Blog. https://fushaolei.github.io/post/java-make-a-image-upload/ -&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;p&gt;hexo博客，图片是个问题，有一种方法是，把图片放在一个文件夹里，和hexo一起部署，然后博客里用相对路径来引用，这里有个问题，假如博客迁移，或者想转平台发布的时候，每次图片都要找出来然后再贴上去，这真是大大的不便啊。还好后来发现了picgo这个软件，做为资深白嫖党，&lt;strong&gt;picgo+github+jsDelivr&lt;/strong&gt;的组合做图床简直香的不要不要的，但是，我发现，用picgo来上传图片到github并不稳定，然后我又是个急性子，有时候想上传一张图片的时候给我报错，我特么能忍吗，所以想自己动手丰衣足食&lt;/p&gt;
-&lt;h2 id=&#34;尝试一调用github-api&#34;&gt;尝试一：调用github api&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;原因是昨天玩travelling 的时候看见了这篇文章：&lt;a href=&#34;https://fx7.top/index.php/archives/91/&#34;&gt;Java调用Github API实现上传文件到Github仓库&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;心血来潮，跟着作者写demo，不过弄完了我发现，调用github api这种方法上传简单txt文件的没问题的，上传图片之类的问题就大了，因为&lt;code&gt;content&lt;/code&gt;要求的是&lt;code&gt;base64&lt;/code&gt;格式嘛，然后图片的&lt;code&gt;base64&lt;/code&gt;格式出来的字符串就长的不行，每次都失败（回传了个422错误码），无语，然后 我还发现，这东西还特么的不稳定，有时候会&lt;code&gt;connection reset&lt;/code&gt;链接错误，看到这个时我才明白，为什么picgo上传到gihub会不稳定，也可能是我网的问题，我问Hexo群里，都是蛮稳定的，不知道为什么我这个很不稳定&lt;/p&gt;
-&lt;p&gt;第一次尝试 失败&lt;/p&gt;
-&lt;h2 id=&#34;尝试二jgit&#34;&gt;尝试二：Jgit&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;Jgit&lt;/code&gt;是一个由Eclipse基金会开发、用于操作git的纯Java库。（也就是可以用java进行&lt;code&gt;git add .&lt;/code&gt;，&lt;code&gt;git commit -m &amp;quot;update&amp;quot;&lt;/code&gt;等操作）于是我搜这搜那，终于在今天的上午写成了一个demo，完美实现了&lt;code&gt;git add .&lt;/code&gt;,&lt;code&gt;git commit -m &amp;quot;update&amp;quot;&lt;/code&gt;，&lt;code&gt;git push&lt;/code&gt;三连。不过这样还不够，少了一些b格，然后就琢磨着怎么搞一个界面出来，于是接触道理swing，反正啥也不哦那个，就东拼拼，西凑凑，弄了一个东西出来，可以实现拖拽上传，成果如下&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/ImagitcTest/test.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;完美实现上传！在这里要特别感谢测试工具人——&lt;a href=&#34;https://www.cnblogs.com/occlive/&#34;&gt;策酱&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;此项目的github地址：https://github.com/FuShaoLei/Imagic
-虽然界面是有些丑啦，但是用起来可比picgo流畅多了，没出现过什么卡顿现象&lt;/p&gt;
-&lt;p&gt;第二次尝试 成功了^^&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;补充一下思路啊，就是拖拽图片后获取绝对路径，根据绝对路径来复制到本地的git仓库，然后再git三连到远程仓库，然后组合连接返回就好&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;畅想&#34;&gt;畅想&lt;/h3&gt;
-&lt;p&gt;未来准备给Imagic加上更多的功能，因为我的定位就是专门为github上传图片的，然后可以返回一个自动组成的jsDelivr加速链接，也打算用Swing开发，不用javaFX了（也会考虑）
-先列举一些以后要添加的功能&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;图片管理（复制链接，删除图片，修改图片名，批量删除，批量添加等）&lt;/li&gt;
-&lt;li&gt;自带截图（我一般都是用的qq截图，这样太麻烦了，每次截图都要打开qq，多low啊）&lt;/li&gt;
-&lt;li&gt;自带录取gif图（打算参考参考greenTogif的源码）&lt;/li&gt;
-&lt;/ul&gt;
-- https://fushaolei.github.io/post/java-make-a-image-upload/ - </description>
         </item>
     
     

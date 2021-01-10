@@ -5,9 +5,23 @@
     <description>Recent content on Sorryfu Blog.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 09 Jan 2021 16:38:31 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 10 Jan 2021 12:14:48 +0800</lastBuildDate>
     
         <atom:link href="https://fushaolei.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Android连接HTTP时有问题</title>
+        <link>https://fushaolei.github.io/post/android-no-network-security-config/</link>
+        <pubDate>Sun, 29 Nov 2020 22:21:11 +0000</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/android-no-network-security-config/</guid>
+        <description>Sorryfu Blog. https://fushaolei.github.io/post/android-no-network-security-config/ -&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;今天做毕业设计的登录模块的时候，要在本地的服务器上取资源，结果就发生了这个错误&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;NetworkSecurityConfig: No Network Security Config specified, using platform default
+&lt;/code&gt;&lt;/pre&gt;- https://fushaolei.github.io/post/android-no-network-security-config/ - </description>
+        </item>
     
     
     
@@ -757,41 +771,6 @@ Subscribers: #订阅者
 &lt;/tbody&gt;
 &lt;/table&gt;
 - https://fushaolei.github.io/post/android-relativelayout-att/ - </description>
-        </item>
-    
-    
-    
-        <item>
-        <title>C语言基础</title>
-        <link>https://fushaolei.github.io/post/c-base/</link>
-        <pubDate>Thu, 15 Oct 2020 23:34:07 +0000</pubDate>
-        
-        <guid>https://fushaolei.github.io/post/c-base/</guid>
-        <description>Sorryfu Blog. https://fushaolei.github.io/post/c-base/ -&lt;blockquote&gt;
-&lt;p&gt;之前大一还是大二学过，现在都忘光光了QAQ，如今为了复习数据结构要用到，所以要重新学过，以下都是我在菜鸟教程中学习的比较，附上一个地址：https://www.runoob.com/cprogramming/c-tutorial.html&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;第一个c语言程序&#34;&gt;第一个c语言程序&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;color:#719e07&#34;&gt;#&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;include&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//预处理
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;main&lt;/span&gt;(&lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt;) {&lt;span style=&#34;color:#586e75&#34;&gt;//所有程序的入口
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;	printf(&lt;span style=&#34;color:#2aa198&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;Hello World&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;&lt;/span&gt;);&lt;span style=&#34;color:#586e75&#34;&gt;//打印
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;0&lt;/span&gt;;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;基本数据类型&#34;&gt;基本数据类型&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;类型&lt;/th&gt;
-&lt;th&gt;存储大小（字节）&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;char&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;- https://fushaolei.github.io/post/c-base/ - </description>
         </item>
     
     

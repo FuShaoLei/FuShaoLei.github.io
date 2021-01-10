@@ -5,9 +5,26 @@
     <description>Recent content on Sorryfu Blog.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 09 Jan 2021 16:38:31 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 10 Jan 2021 12:14:48 +0800</lastBuildDate>
     
         <atom:link href="https://fushaolei.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Reinstall Sys</title>
+        <link>https://fushaolei.github.io/post/reinstall-sys/</link>
+        <pubDate>Sun, 10 Jan 2021 12:14:48 +0800</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/reinstall-sys/</guid>
+        <description>Sorryfu Blog. https://fushaolei.github.io/post/reinstall-sys/ -&lt;h2 id=&#34;1环境相关&#34;&gt;1.环境相关&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.csdn.net/CAU_Ayao/article/details/82023517&#34;&gt;JDK环境配置&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Git&lt;a href=&#34;https://blog.csdn.net/qq_31884737/article/details/108632492?ops_request_misc=%25257B%252522request%25255Fid%252522%25253A%252522161024257516780257480350%252522%25252C%252522scm%252522%25253A%25252220140713.130102334..%252522%25257D&amp;amp;request_id=161024257516780257480350&amp;amp;biz_id=0&amp;amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_click~default-1-108632492.first_rank_v2_pc_rank_v29&amp;amp;utm_term=git%E5%AE%89%E8%A3%85&#34;&gt;安装&lt;/a&gt;与&lt;a href=&#34;https://blog.csdn.net/chuyouyinghe/article/details/81567785?ops_request_misc=%25257B%252522request%25255Fid%252522%25253A%252522161024842716780274120876%252522%25252C%252522scm%252522%25253A%25252220140713.130102334..%252522%25257D&amp;amp;request_id=161024842716780274120876&amp;amp;biz_id=0&amp;amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~baidu_landing_v2~default-2-81567785.first_rank_v2_pc_rank_v29&amp;amp;utm_term=git%E9%85%8D%E7%BD%AE%E5%85%A8%E5%B1%80&#34;&gt;配置&lt;/a&gt;，&lt;a href=&#34;https://docs.github.com/cn/free-pro-team@latest/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account&#34;&gt;配置ssh&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;MySQL安装与配置：&lt;/li&gt;
+&lt;/ul&gt;
+- https://fushaolei.github.io/post/reinstall-sys/ - </description>
+        </item>
     
     
     
@@ -417,20 +434,6 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//                view  = View.inflate(parent.getContext(), R.layout.item_type_two,null);
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;                view &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; LayoutInflater&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;from&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;parent&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getContext&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;inflate&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;layout&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;item_type_two&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;parent&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#cb4b16&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这两个方法都能弄出视图来，可是，第一个方法呈现的视图是紧凑的，也就是我的&lt;code&gt;margin&lt;/code&gt;值是无效的&amp;hellip;.留个坑&lt;/p&gt;- https://fushaolei.github.io/post/recyclerview-multi-style/ - </description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Android连接HTTP时有问题</title>
-        <link>https://fushaolei.github.io/post/android-no-network-security-config/</link>
-        <pubDate>Sun, 29 Nov 2020 22:21:11 +0000</pubDate>
-        
-        <guid>https://fushaolei.github.io/post/android-no-network-security-config/</guid>
-        <description>Sorryfu Blog. https://fushaolei.github.io/post/android-no-network-security-config/ -&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;p&gt;今天做毕业设计的登录模块的时候，要在本地的服务器上取资源，结果就发生了这个错误&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;NetworkSecurityConfig: No Network Security Config specified, using platform default
-&lt;/code&gt;&lt;/pre&gt;- https://fushaolei.github.io/post/android-no-network-security-config/ - </description>
         </item>
     
     
