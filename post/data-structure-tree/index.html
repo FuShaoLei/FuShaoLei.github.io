@@ -25,7 +25,7 @@
 （可以缺少某个叶子节点）
 特点
  叶子只能分布在层次最大的两层上 对任一结点，如果其右子树的最大层次为 i，则其左子树的最大层次必为 i 或 i&#43;1   关系
- 满二叉树 一定是 完全二叉树 完全二叉树 不一定是 满二叉树   二叉树的存储结构 顺序存储 #define MAXTSIZE 100#define TElemType char typedef TElemType SqBiTree[MAXTSIZE];   实现：按满二叉树的结点层次编号，依次存放二叉树中的数据元素" />
+ 满二叉树 一定是 完全二叉树 完全二叉树 不一定是 满二叉树   二叉树的存储结构 顺序存储 #define MAXTSIZE 100 #define TElemType char  typedef TElemType SqBiTree[MAXTSIZE];   实现：按满二叉树的结点层次编号，依次存放二叉树中的数据元素" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://fushaolei.github.io/post/data-structure-tree/" />
 <meta property="article:published_time" content="2020-10-31T12:42:57+00:00" />
@@ -45,7 +45,7 @@
 （可以缺少某个叶子节点）
 特点
  叶子只能分布在层次最大的两层上 对任一结点，如果其右子树的最大层次为 i，则其左子树的最大层次必为 i 或 i&#43;1   关系
- 满二叉树 一定是 完全二叉树 完全二叉树 不一定是 满二叉树   二叉树的存储结构 顺序存储 #define MAXTSIZE 100#define TElemType char typedef TElemType SqBiTree[MAXTSIZE];   实现：按满二叉树的结点层次编号，依次存放二叉树中的数据元素"/>
+ 满二叉树 一定是 完全二叉树 完全二叉树 不一定是 满二叉树   二叉树的存储结构 顺序存储 #define MAXTSIZE 100 #define TElemType char  typedef TElemType SqBiTree[MAXTSIZE];   实现：按满二叉树的结点层次编号，依次存放二叉树中的数据元素"/>
 
 
 
@@ -69,7 +69,7 @@
 
 
 
-<link rel="stylesheet" href="https://fushaolei.github.io/scss/dark-mode.min.ed17e7506ac79ad26428e2ac35f7129cd134774d75548840407bb957fe545c00.css" integrity="sha256-7RfnUGrHmtJkKOKsNfcSnNE0d011VIhAQHu5V/5UXAA=" media="screen">
+<link rel="stylesheet" href="https://fushaolei.github.io/scss/dark-mode.min.552aae4638a84aa57cf0b195750a49ea9131d3bb621d1ed3ebc9b14b18166536.css" integrity="sha256-VSquRjioSqV88LGVdQpJ6pEx07tiHR7T68mxSxgWZTY=" media="screen">
 
 
 <script src="https://fushaolei.github.io//js/loadCSS.js"></script>
@@ -348,8 +348,8 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 </blockquote>
 <h3 id="二叉树的存储结构">二叉树的存储结构</h3>
 <h4 id="顺序存储">顺序存储</h4>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#719e07">#</span><span style="color:#719e07">define MAXTSIZE 100</span><span style="color:#719e07">
-</span><span style="color:#719e07"></span><span style="color:#719e07">#</span><span style="color:#719e07">define TElemType char</span><span style="color:#719e07">
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#719e07">#define MAXTSIZE 100
+</span><span style="color:#719e07">#define TElemType char
 </span><span style="color:#719e07"></span>
 <span style="color:#719e07">typedef</span> TElemType SqBiTree[MAXTSIZE];
 </code></pre></div><ul>
@@ -374,7 +374,7 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 <h4 id="二叉链表">二叉链表</h4>
 <p>每个结点有两个指针指向其左右孩子</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#586e75">//链式存储结构
-</span><span style="color:#586e75"></span><span style="color:#586e75">//二叉链表
+</span><span style="color:#586e75">//二叉链表
 </span><span style="color:#586e75"></span><span style="color:#719e07">typedef</span> <span style="color:#719e07">struct</span> BiNode {
     TElemType data;
     <span style="color:#719e07">struct</span> BiNode <span style="color:#719e07">*</span>lchild,<span style="color:#719e07">*</span>rchild;<span style="color:#586e75">//左右孩子指针
@@ -407,11 +407,11 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 </span><span style="color:#586e75"> * 若为非空，根，左，右
 </span><span style="color:#586e75"> */</span>
 <span style="color:#dc322f">void</span> <span style="color:#268bd2">PreOrderTraverse</span>(BiTree T) {
-    <span style="color:#719e07">if</span> (T <span style="color:#719e07">=</span><span style="color:#719e07">=</span> <span style="color:#b58900">NULL</span>) <span style="color:#719e07">return</span>;
+    <span style="color:#719e07">if</span> (T <span style="color:#719e07">==</span> <span style="color:#b58900">NULL</span>) <span style="color:#719e07">return</span>;
     <span style="color:#719e07">else</span> {
         visit(T);<span style="color:#586e75">//访问根结点
-</span><span style="color:#586e75"></span>        PreOrderTraverse(T<span style="color:#719e07">-</span><span style="color:#719e07">&gt;</span>lchild);<span style="color:#586e75">//递归遍历左子树
-</span><span style="color:#586e75"></span>        PreOrderTraverse(T<span style="color:#719e07">-</span><span style="color:#719e07">&gt;</span>rchild);<span style="color:#586e75">//递归遍历右子树
+</span><span style="color:#586e75"></span>        PreOrderTraverse(T<span style="color:#719e07">-&gt;</span>lchild);<span style="color:#586e75">//递归遍历左子树
+</span><span style="color:#586e75"></span>        PreOrderTraverse(T<span style="color:#719e07">-&gt;</span>rchild);<span style="color:#586e75">//递归遍历右子树
 </span><span style="color:#586e75"></span>    }
 }
 
@@ -421,11 +421,11 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 </span><span style="color:#586e75"> * 若为非空，左，根，右
 </span><span style="color:#586e75"> */</span>
 <span style="color:#dc322f">void</span> <span style="color:#268bd2">InOrderTraverse</span>(BiTree T) {
-    <span style="color:#719e07">if</span> (T <span style="color:#719e07">=</span><span style="color:#719e07">=</span> <span style="color:#b58900">NULL</span>) <span style="color:#719e07">return</span>;
+    <span style="color:#719e07">if</span> (T <span style="color:#719e07">==</span> <span style="color:#b58900">NULL</span>) <span style="color:#719e07">return</span>;
     <span style="color:#719e07">else</span> {
-        InOrderTraverse(T<span style="color:#719e07">-</span><span style="color:#719e07">&gt;</span>lchild);
+        InOrderTraverse(T<span style="color:#719e07">-&gt;</span>lchild);
         visit(T);
-        InOrderTraverse(T<span style="color:#719e07">-</span><span style="color:#719e07">&gt;</span>rchild);
+        InOrderTraverse(T<span style="color:#719e07">-&gt;</span>rchild);
     }
 }
 
@@ -435,10 +435,10 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 </span><span style="color:#586e75"> * 若为非空，左，右，根
 </span><span style="color:#586e75"> */</span>
 <span style="color:#dc322f">void</span> <span style="color:#268bd2">PostOrderTraverse</span>(BiTree T) {
-    <span style="color:#719e07">if</span> (T <span style="color:#719e07">=</span><span style="color:#719e07">=</span> <span style="color:#b58900">NULL</span>) <span style="color:#719e07">return</span>;
+    <span style="color:#719e07">if</span> (T <span style="color:#719e07">==</span> <span style="color:#b58900">NULL</span>) <span style="color:#719e07">return</span>;
     <span style="color:#719e07">else</span> {
-        PostOrderTraverse(T<span style="color:#719e07">-</span><span style="color:#719e07">&gt;</span>lchild);
-        PostOrderTraverse(T<span style="color:#719e07">-</span><span style="color:#719e07">&gt;</span>rchild);
+        PostOrderTraverse(T<span style="color:#719e07">-&gt;</span>lchild);
+        PostOrderTraverse(T<span style="color:#719e07">-&gt;</span>rchild);
         visit(T);
     }
 }

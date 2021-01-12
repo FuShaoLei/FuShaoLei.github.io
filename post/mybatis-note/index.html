@@ -69,7 +69,7 @@
 
 
 
-<link rel="stylesheet" href="https://fushaolei.github.io/scss/dark-mode.min.ed17e7506ac79ad26428e2ac35f7129cd134774d75548840407bb957fe545c00.css" integrity="sha256-7RfnUGrHmtJkKOKsNfcSnNE0d011VIhAQHu5V/5UXAA=" media="screen">
+<link rel="stylesheet" href="https://fushaolei.github.io/scss/dark-mode.min.552aae4638a84aa57cf0b195750a49ea9131d3bb621d1ed3ebc9b14b18166536.css" integrity="sha256-VSquRjioSqV88LGVdQpJ6pEx07tiHR7T68mxSxgWZTY=" media="screen">
 
 
 <script src="https://fushaolei.github.io//js/loadCSS.js"></script>
@@ -336,16 +336,16 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 </blockquote>
 <h3 id="导入jar包">导入jar包</h3>
 <p>由于我是maven项目，根据官方的文档 ，只需在pom.xml中添加相应的东西即可</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#268bd2">&lt;dependencies</span><span style="color:#268bd2">&gt;</span>
-    <span style="color:#268bd2">&lt;dependency</span><span style="color:#268bd2">&gt;</span>
-        <span style="color:#268bd2">&lt;groupId</span><span style="color:#268bd2">&gt;</span>org.mybatis<span style="color:#268bd2">&lt;/groupId&gt;</span>
-        <span style="color:#268bd2">&lt;artifactId</span><span style="color:#268bd2">&gt;</span>mybatis<span style="color:#268bd2">&lt;/artifactId&gt;</span>
-        <span style="color:#268bd2">&lt;version</span><span style="color:#268bd2">&gt;</span>3.5.5<span style="color:#268bd2">&lt;/version&gt;</span>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#268bd2">&lt;dependencies&gt;</span>
+    <span style="color:#268bd2">&lt;dependency&gt;</span>
+        <span style="color:#268bd2">&lt;groupId&gt;</span>org.mybatis<span style="color:#268bd2">&lt;/groupId&gt;</span>
+        <span style="color:#268bd2">&lt;artifactId&gt;</span>mybatis<span style="color:#268bd2">&lt;/artifactId&gt;</span>
+        <span style="color:#268bd2">&lt;version&gt;</span>3.5.5<span style="color:#268bd2">&lt;/version&gt;</span>
     <span style="color:#268bd2">&lt;/dependency&gt;</span>
-    <span style="color:#268bd2">&lt;dependency</span><span style="color:#268bd2">&gt;</span>
-        <span style="color:#268bd2">&lt;groupId</span><span style="color:#268bd2">&gt;</span>mysql<span style="color:#268bd2">&lt;/groupId&gt;</span>
-        <span style="color:#268bd2">&lt;artifactId</span><span style="color:#268bd2">&gt;</span>mysql-connector-java<span style="color:#268bd2">&lt;/artifactId&gt;</span>
-        <span style="color:#268bd2">&lt;version</span><span style="color:#268bd2">&gt;</span>8.0.20<span style="color:#268bd2">&lt;/version&gt;</span>
+    <span style="color:#268bd2">&lt;dependency&gt;</span>
+        <span style="color:#268bd2">&lt;groupId&gt;</span>mysql<span style="color:#268bd2">&lt;/groupId&gt;</span>
+        <span style="color:#268bd2">&lt;artifactId&gt;</span>mysql-connector-java<span style="color:#268bd2">&lt;/artifactId&gt;</span>
+        <span style="color:#268bd2">&lt;version&gt;</span>8.0.20<span style="color:#268bd2">&lt;/version&gt;</span>
     <span style="color:#268bd2">&lt;/dependency&gt;</span>
 <span style="color:#268bd2">&lt;/dependencies&gt;</span>
 </code></pre></div><h3 id="从-xml-中构建-sqlsessionfactory">从 XML 中构建 SqlSessionFactory</h3>
@@ -357,8 +357,8 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 <span style="color:#719e07">&lt;!DOCTYPE configuration
 </span><span style="color:#719e07">        PUBLIC &#34;-//mybatis.org//DTD Config 3.0//EN&#34;
 </span><span style="color:#719e07">        &#34;http://mybatis.org/dtd/mybatis-3-config.dtd&#34;&gt;</span>
-<span style="color:#268bd2">&lt;configuration</span><span style="color:#268bd2">&gt;</span>
-    <span style="color:#268bd2">&lt;settings</span><span style="color:#268bd2">&gt;</span>
+<span style="color:#268bd2">&lt;configuration&gt;</span>
+    <span style="color:#268bd2">&lt;settings&gt;</span>
         <span style="color:#268bd2">&lt;setting</span> name=<span style="color:#2aa198">&#34;logImpl&#34;</span> value=<span style="color:#2aa198">&#34;STDOUT_LOGGING&#34;</span> <span style="color:#268bd2">/&gt;</span>
     <span style="color:#268bd2">&lt;/settings&gt;</span>
     <span style="color:#268bd2">&lt;environments</span> default=<span style="color:#2aa198">&#34;dev&#34;</span><span style="color:#268bd2">&gt;</span>
@@ -374,7 +374,7 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
         <span style="color:#268bd2">&lt;/environment&gt;</span>
     <span style="color:#268bd2">&lt;/environments&gt;</span>
 
-    <span style="color:#268bd2">&lt;mappers</span><span style="color:#268bd2">&gt;</span>
+    <span style="color:#268bd2">&lt;mappers&gt;</span>
         <span style="color:#268bd2">&lt;mapper</span> resource=<span style="color:#2aa198">&#34;com/mapper/StudentMapper.xml&#34;</span><span style="color:#268bd2">/&gt;</span>
     <span style="color:#268bd2">&lt;/mappers&gt;</span>
 <span style="color:#268bd2">&lt;/configuration&gt;</span>
@@ -390,14 +390,14 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
     <span style="color:#268bd2">static</span> <span style="color:#719e07">{</span>
         InputStream is<span style="color:#719e07">;</span>
         <span style="color:#719e07">try</span> <span style="color:#719e07">{</span>
-            is<span style="color:#719e07">=</span> Resources<span style="color:#719e07">.</span>getResourceAsStream<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;mybatis-config.xml&#34;</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-            sessionFactory <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> SqlSessionFactoryBuilder<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">.</span>build<span style="color:#719e07">(</span>is<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-        <span style="color:#719e07">}</span><span style="color:#719e07">catch</span> <span style="color:#719e07">(</span>IOException e<span style="color:#719e07">)</span><span style="color:#719e07">{</span>
-            e<span style="color:#719e07">.</span>printStackTrace<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+            is<span style="color:#719e07">=</span> Resources<span style="color:#719e07">.</span>getResourceAsStream<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;mybatis-config.xml&#34;</span><span style="color:#719e07">);</span>
+            sessionFactory <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> SqlSessionFactoryBuilder<span style="color:#719e07">().</span>build<span style="color:#719e07">(</span>is<span style="color:#719e07">);</span>
+        <span style="color:#719e07">}</span><span style="color:#719e07">catch</span> <span style="color:#719e07">(</span>IOException e<span style="color:#719e07">){</span>
+            e<span style="color:#719e07">.</span>printStackTrace<span style="color:#719e07">();</span>
         <span style="color:#719e07">}</span>
     <span style="color:#719e07">}</span>
-    <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> SqlSession <span style="color:#268bd2">getSession</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">{</span>
-        <span style="color:#719e07">return</span> sessionFactory<span style="color:#719e07">.</span>openSession<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+    <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> SqlSession <span style="color:#268bd2">getSession</span><span style="color:#719e07">(){</span>
+        <span style="color:#719e07">return</span> sessionFactory<span style="color:#719e07">.</span>openSession<span style="color:#719e07">();</span>
     <span style="color:#719e07">}</span>
 <span style="color:#719e07">}</span>
 </code></pre></div><p>通过阅读以上代码可知，MybatisUtil这个类暴露了一个<code>getSession()</code>方法供使用这个<code>sessionFactory.openSession();</code>这个是什么意思呢？ 👴也不懂啊 woc</p>
@@ -408,12 +408,12 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 <p>推荐阅读：https://blog.csdn.net/qq_23184291/article/details/78089115</p>
 </blockquote>
 <p>算了 👴不想说了，反正就是要往pom.xml中添加</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#268bd2">&lt;build</span><span style="color:#268bd2">&gt;</span>
-    <span style="color:#268bd2">&lt;resources</span><span style="color:#268bd2">&gt;</span>
-        <span style="color:#268bd2">&lt;resource</span><span style="color:#268bd2">&gt;</span>
-            <span style="color:#268bd2">&lt;directory</span><span style="color:#268bd2">&gt;</span>src/main/java<span style="color:#268bd2">&lt;/directory&gt;</span>
-            <span style="color:#268bd2">&lt;includes</span><span style="color:#268bd2">&gt;</span>
-                <span style="color:#268bd2">&lt;include</span><span style="color:#268bd2">&gt;</span>**/*.xml<span style="color:#268bd2">&lt;/include&gt;</span>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#268bd2">&lt;build&gt;</span>
+    <span style="color:#268bd2">&lt;resources&gt;</span>
+        <span style="color:#268bd2">&lt;resource&gt;</span>
+            <span style="color:#268bd2">&lt;directory&gt;</span>src/main/java<span style="color:#268bd2">&lt;/directory&gt;</span>
+            <span style="color:#268bd2">&lt;includes&gt;</span>
+                <span style="color:#268bd2">&lt;include&gt;</span>**/*.xml<span style="color:#268bd2">&lt;/include&gt;</span>
             <span style="color:#268bd2">&lt;/includes&gt;</span>
         <span style="color:#268bd2">&lt;/resource&gt;</span>
     <span style="color:#268bd2">&lt;/resources&gt;</span>
@@ -428,16 +428,16 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 </span><span style="color:#586e75"> */</span>
 <span style="color:#268bd2">public</span> <span style="color:#268bd2">interface</span> <span style="color:#268bd2">StudentMapper</span> <span style="color:#719e07">{</span>
     <span style="color:#586e75">//增
-</span><span style="color:#586e75"></span>    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">insertStudentNoReturnId</span><span style="color:#719e07">(</span>Student student<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-    <span style="color:#268bd2">public</span> <span style="color:#dc322f">int</span> <span style="color:#268bd2">insertStudentAndReturnId</span><span style="color:#719e07">(</span>Student student<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+</span><span style="color:#586e75"></span>    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">insertStudentNoReturnId</span><span style="color:#719e07">(</span>Student student<span style="color:#719e07">);</span>
+    <span style="color:#268bd2">public</span> <span style="color:#dc322f">int</span> <span style="color:#268bd2">insertStudentAndReturnId</span><span style="color:#719e07">(</span>Student student<span style="color:#719e07">);</span>
     <span style="color:#586e75">//删
-</span><span style="color:#586e75"></span>    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">deleteStudent</span><span style="color:#719e07">(</span><span style="color:#dc322f">int</span> id<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+</span><span style="color:#586e75"></span>    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">deleteStudent</span><span style="color:#719e07">(</span><span style="color:#dc322f">int</span> id<span style="color:#719e07">);</span>
     <span style="color:#586e75">//改
-</span><span style="color:#586e75"></span>    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">updateStudent</span><span style="color:#719e07">(</span>String sex<span style="color:#719e07">,</span><span style="color:#dc322f">int</span> id<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+</span><span style="color:#586e75"></span>    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">updateStudent</span><span style="color:#719e07">(</span>String sex<span style="color:#719e07">,</span><span style="color:#dc322f">int</span> id<span style="color:#719e07">);</span>
 
     <span style="color:#586e75">//查
-</span><span style="color:#586e75"></span>    <span style="color:#268bd2">public</span> List<span style="color:#719e07">&lt;</span>Student<span style="color:#719e07">&gt;</span> <span style="color:#268bd2">selectAllStudent</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-    <span style="color:#268bd2">public</span> Student <span style="color:#268bd2">selectStudent</span><span style="color:#719e07">(</span><span style="color:#dc322f">int</span> id<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+</span><span style="color:#586e75"></span>    <span style="color:#268bd2">public</span> List<span style="color:#719e07">&lt;</span>Student<span style="color:#719e07">&gt;</span> <span style="color:#268bd2">selectAllStudent</span><span style="color:#719e07">();</span>
+    <span style="color:#268bd2">public</span> Student <span style="color:#268bd2">selectStudent</span><span style="color:#719e07">(</span><span style="color:#dc322f">int</span> id<span style="color:#719e07">);</span>
 <span style="color:#719e07">}</span>
 </code></pre></div><p>SQL映射XML文件</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#719e07">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; ?&gt;</span>
@@ -445,27 +445,27 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 </span><span style="color:#719e07">        PUBLIC &#34;-//mybatis.org//DTD Mapper 3.0//EN&#34;
 </span><span style="color:#719e07">        &#34;http://mybatis.org/dtd/mybatis-3-mapper.dtd&#34;&gt;</span>
 <span style="color:#268bd2">&lt;mapper</span> namespace=<span style="color:#2aa198">&#34;com.mapper.StudentMapper&#34;</span><span style="color:#268bd2">&gt;</span>
-    <span style="color:#586e75">&lt;!--</span><span style="color:#586e75">增</span><span style="color:#586e75">--&gt;</span>
+    <span style="color:#586e75">&lt;!--增--&gt;</span>
     <span style="color:#268bd2">&lt;insert</span> id=<span style="color:#2aa198">&#34;insertStudentNoReturnId&#34;</span><span style="color:#268bd2">&gt;</span>
         insert into students(name,sex) values (#{name},#{sex})
     <span style="color:#268bd2">&lt;/insert&gt;</span>
-    <span style="color:#586e75">&lt;!--</span><span style="color:#586e75">如果想在执行插入操作以后返回表中的主键值，需要在映射文件中insert元素中加上如下两个属性</span><span style="color:#586e75">--&gt;</span>
+    <span style="color:#586e75">&lt;!--如果想在执行插入操作以后返回表中的主键值，需要在映射文件中insert元素中加上如下两个属性--&gt;</span>
     <span style="color:#268bd2">&lt;insert</span> id=<span style="color:#2aa198">&#34;insertStudentAndReturnId&#34;</span> useGeneratedKeys=<span style="color:#2aa198">&#34;true&#34;</span> keyProperty=<span style="color:#2aa198">&#34;id&#34;</span><span style="color:#268bd2">&gt;</span>
         insert into students(name,sex) values (#{name},#{sex})
         <span style="color:#268bd2">&lt;selectKey</span> resultType=<span style="color:#2aa198">&#34;int&#34;</span> keyProperty=<span style="color:#2aa198">&#34;id&#34;</span> order=<span style="color:#2aa198">&#34;AFTER&#34;</span><span style="color:#268bd2">&gt;</span>
             select last_insert_id()
         <span style="color:#268bd2">&lt;/selectKey&gt;</span>
     <span style="color:#268bd2">&lt;/insert&gt;</span>
-    <span style="color:#586e75">&lt;!--</span><span style="color:#586e75">删</span><span style="color:#586e75">--&gt;</span>
+    <span style="color:#586e75">&lt;!--删--&gt;</span>
     <span style="color:#268bd2">&lt;delete</span> id=<span style="color:#2aa198">&#34;deleteStudent&#34;</span><span style="color:#268bd2">&gt;</span>
         delete from students where id=#{id}
     <span style="color:#268bd2">&lt;/delete&gt;</span>
-    <span style="color:#586e75">&lt;!--</span><span style="color:#586e75">改</span><span style="color:#586e75">--&gt;</span>
-    <span style="color:#586e75">&lt;!--</span><span style="color:#586e75">跟据id修改性别 (￣▽￣)&#34;</span><span style="color:#586e75">--&gt;</span>
+    <span style="color:#586e75">&lt;!--改--&gt;</span>
+    <span style="color:#586e75">&lt;!--跟据id修改性别 (￣▽￣)&#34;--&gt;</span>
     <span style="color:#268bd2">&lt;update</span> id=<span style="color:#2aa198">&#34;updateStudent&#34;</span><span style="color:#268bd2">&gt;</span>
         update students set sex=#{arg0} where id=#{arg1}
     <span style="color:#268bd2">&lt;/update&gt;</span>
-    <span style="color:#586e75">&lt;!--</span><span style="color:#586e75">查</span><span style="color:#586e75">--&gt;</span>
+    <span style="color:#586e75">&lt;!--查--&gt;</span>
     <span style="color:#268bd2">&lt;select</span> id=<span style="color:#2aa198">&#34;selectAllStudent&#34;</span> resultType=<span style="color:#2aa198">&#34;com.entity.Student&#34;</span><span style="color:#268bd2">&gt;</span>
         select * from students
     <span style="color:#268bd2">&lt;/select&gt;</span>
@@ -475,9 +475,9 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 <span style="color:#268bd2">&lt;/mapper&gt;</span>
 </code></pre></div><p>这里要说明的一点是，那个插入后放回的值不是id，二十它影响的行数，如果要获取id的话
 （除了需要改动映射的xml文件），直接getId即可，如下</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#dc322f">int</span> returnId <span style="color:#719e07">=</span> studentMapper<span style="color:#719e07">.</span>insertStudentAndReturnId<span style="color:#719e07">(</span>student2<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#dc322f">int</span> returnId <span style="color:#719e07">=</span> studentMapper<span style="color:#719e07">.</span>insertStudentAndReturnId<span style="color:#719e07">(</span>student2<span style="color:#719e07">);</span>
 <span style="color:#586e75">//插入后直接student2.getId()即可
-</span><span style="color:#586e75"></span>System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;影响的行数是：&#34;</span> <span style="color:#719e07">+</span> returnId<span style="color:#719e07">+</span><span style="color:#2aa198">&#34; 新插入的id是：&#34;</span><span style="color:#719e07">+</span>student2<span style="color:#719e07">.</span>getId<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+</span><span style="color:#586e75"></span>System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;影响的行数是：&#34;</span> <span style="color:#719e07">+</span> returnId<span style="color:#719e07">+</span><span style="color:#2aa198">&#34; 新插入的id是：&#34;</span><span style="color:#719e07">+</span>student2<span style="color:#719e07">.</span>getId<span style="color:#719e07">());</span>
 </code></pre></div>
                     
                     <HR width="100%" id="EOF">

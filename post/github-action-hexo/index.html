@@ -71,7 +71,7 @@
 
 
 
-<link rel="stylesheet" href="https://fushaolei.github.io/scss/dark-mode.min.ed17e7506ac79ad26428e2ac35f7129cd134774d75548840407bb957fe545c00.css" integrity="sha256-7RfnUGrHmtJkKOKsNfcSnNE0d011VIhAQHu5V/5UXAA=" media="screen">
+<link rel="stylesheet" href="https://fushaolei.github.io/scss/dark-mode.min.552aae4638a84aa57cf0b195750a49ea9131d3bb621d1ed3ebc9b14b18166536.css" integrity="sha256-VSquRjioSqV88LGVdQpJ6pEx07tiHR7T68mxSxgWZTY=" media="screen">
 
 
 <script src="https://fushaolei.github.io//js/loadCSS.js"></script>
@@ -357,53 +357,53 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 <p><img src="https://cdn.jsdelivr.net/gh/fushaolei/img/20200920224635.png" alt=""></p>
 <p>将以下的代码复制粘贴</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#586e75"># workflow name</span>
-<span style="color:#719e07">name</span>: Hexo Blog CI
+<span style="color:#268bd2">name</span>: Hexo Blog CI
 
 <span style="color:#586e75"># master branch on push, auto run</span>
-<span style="color:#719e07">on</span>: 
-  <span style="color:#719e07">push</span>:
-    <span style="color:#719e07">branches</span>:
+<span style="color:#268bd2">on</span>: 
+  <span style="color:#268bd2">push</span>:
+    <span style="color:#268bd2">branches</span>:
       - master
       
-<span style="color:#719e07">jobs</span>:
-  <span style="color:#719e07">build</span>: 
-    <span style="color:#719e07">runs-on</span>: ubuntu-latest 
+<span style="color:#268bd2">jobs</span>:
+  <span style="color:#268bd2">build</span>: 
+    <span style="color:#268bd2">runs-on</span>: ubuntu-latest 
         
-    <span style="color:#719e07">steps</span>:
+    <span style="color:#268bd2">steps</span>:
     <span style="color:#586e75"># check it to your workflow can access it</span>
     <span style="color:#586e75"># from: https://github.com/actions/checkout</span>
-    - <span style="color:#719e07">name</span>: Checkout Repository master branch
-      <span style="color:#719e07">uses</span>: actions/checkout@master 
+    - <span style="color:#268bd2">name</span>: Checkout Repository master branch
+      <span style="color:#268bd2">uses</span>: actions/checkout@master 
       
     <span style="color:#586e75"># from: https://github.com/actions/setup-node  </span>
-    - <span style="color:#719e07">name</span>: Setup Node.js <span style="color:#2aa198">12.</span>x 
-      <span style="color:#719e07">uses</span>: actions/setup-node@master
-      <span style="color:#719e07">with</span>:
-        <span style="color:#719e07">node-version</span>: <span style="color:#2aa198">&#34;12.x&#34;</span>
+    - <span style="color:#268bd2">name</span>: Setup Node.js 12.x 
+      <span style="color:#268bd2">uses</span>: actions/setup-node@master
+      <span style="color:#268bd2">with</span>:
+        <span style="color:#268bd2">node-version</span>: <span style="color:#2aa198">&#34;12.x&#34;</span>
     
-    - <span style="color:#719e07">name</span>: Setup Hexo Dependencies
-      <span style="color:#719e07">run</span>: <span style="color:#2aa198">|
-</span><span style="color:#2aa198">       </span><span style="color:#2aa198"> </span><span style="color:#2aa198">npm install hexo-cli -g</span>
-        npm install
+    - <span style="color:#268bd2">name</span>: Setup Hexo Dependencies
+      <span style="color:#268bd2">run</span>: |<span style="color:#2aa198">
+</span><span style="color:#2aa198">        npm install hexo-cli -g
+</span><span style="color:#2aa198">        npm install</span>        
     
-    - <span style="color:#719e07">name</span>: Setup Deploy Private Key
-      <span style="color:#719e07">env</span>:
-        <span style="color:#719e07">HEXO_DEPLOY_PRIVATE_KEY</span>: ${{ secrets.HEXO_DEPLOY_PRIVATE_KEY }}
-      <span style="color:#719e07">run</span>: <span style="color:#2aa198">|
-</span><span style="color:#2aa198">       </span><span style="color:#2aa198"> </span><span style="color:#2aa198">mkdir -p ~/.ssh/</span>
-        echo <span style="color:#2aa198">&#34;$HEXO_DEPLOY_PRIVATE_KEY&#34;</span> &gt; ~/.ssh/id_rsa 
-        chmod <span style="color:#2aa198">600</span> ~/.ssh/id_rsa
-        ssh-keyscan github.com &gt;&gt; ~/.ssh/known_hosts
-        
-    - <span style="color:#719e07">name</span>: Setup Git Infomation
-      <span style="color:#719e07">run</span>: <span style="color:#2aa198">| 
-</span><span style="color:#2aa198">       </span><span style="color:#2aa198"> </span><span style="color:#2aa198">git config --global user.name &#39;&lt;你的用户名&gt;&#39; </span>
-        git config --global user.email <span style="color:#2aa198">&#39;&lt;你登录的email&gt;&#39;</span>
-    - <span style="color:#719e07">name</span>: Deploy Hexo 
-      <span style="color:#719e07">run</span>: <span style="color:#2aa198">|
-</span><span style="color:#2aa198">       </span><span style="color:#2aa198"> </span><span style="color:#2aa198">hexo clean</span>
-        hexo generate 
-        hexo deploy
+    - <span style="color:#268bd2">name</span>: Setup Deploy Private Key
+      <span style="color:#268bd2">env</span>:
+        <span style="color:#268bd2">HEXO_DEPLOY_PRIVATE_KEY</span>: ${{ secrets.HEXO_DEPLOY_PRIVATE_KEY }}
+      <span style="color:#268bd2">run</span>: |<span style="color:#2aa198">
+</span><span style="color:#2aa198">        mkdir -p ~/.ssh/
+</span><span style="color:#2aa198">        echo &#34;$HEXO_DEPLOY_PRIVATE_KEY&#34; &gt; ~/.ssh/id_rsa 
+</span><span style="color:#2aa198">        chmod 600 ~/.ssh/id_rsa
+</span><span style="color:#2aa198">        ssh-keyscan github.com &gt;&gt; ~/.ssh/known_hosts
+</span><span style="color:#2aa198">        </span>        
+    - <span style="color:#268bd2">name</span>: Setup Git Infomation
+      <span style="color:#268bd2">run</span>: | 
+        git config --global user.name &#39;&lt;你的用户名&gt;&#39; 
+        git config --global user.email &#39;&lt;你登录的email&gt;&#39;
+    - <span style="color:#268bd2">name</span>: Deploy Hexo 
+      <span style="color:#268bd2">run</span>: |<span style="color:#2aa198">
+</span><span style="color:#2aa198">        hexo clean
+</span><span style="color:#2aa198">        hexo generate 
+</span><span style="color:#2aa198">        hexo deploy</span>        
 </code></pre></div><p><strong>仔细看这段代码，里边要填上你的用户名和邮箱</strong></p>
 <p>DONE!大功告成啦，到这里可以去测试一下，修改修改某个文章标题，看看是否有效果</p>
 <p>好了，利用GitHub action实现自动部署这一步已经完成了</p>

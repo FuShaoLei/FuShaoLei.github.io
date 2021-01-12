@@ -57,7 +57,7 @@ fun main(args: Array&lt;String&gt;) { val name = &#34;Kotlin&#34; var a = 2 var 
 
 
 
-<link rel="stylesheet" href="https://fushaolei.github.io/scss/dark-mode.min.ed17e7506ac79ad26428e2ac35f7129cd134774d75548840407bb957fe545c00.css" integrity="sha256-7RfnUGrHmtJkKOKsNfcSnNE0d011VIhAQHu5V/5UXAA=" media="screen">
+<link rel="stylesheet" href="https://fushaolei.github.io/scss/dark-mode.min.552aae4638a84aa57cf0b195750a49ea9131d3bb621d1ed3ebc9b14b18166536.css" integrity="sha256-VSquRjioSqV88LGVdQpJ6pEx07tiHR7T68mxSxgWZTY=" media="screen">
 
 
 <script src="https://fushaolei.github.io//js/loadCSS.js"></script>
@@ -327,9 +327,9 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
     <span style="color:#719e07">val</span> name  = <span style="color:#2aa198">&#34;Kotlin&#34;</span>
     <span style="color:#719e07">var</span> a = <span style="color:#2aa198">2</span>
     <span style="color:#719e07">var</span> b = <span style="color:#2aa198">3</span>
-    println(<span style="color:#2aa198">&#34;Hello $name&#34;</span>)
-    println(<span style="color:#2aa198">&#34;Hello ${if(a&gt;b) &#34;</span>a大于b<span style="color:#2aa198">&#34; else &#34;</span>a小于b<span style="color:#2aa198">&#34;}&#34;</span>)
-    println(<span style="color:#2aa198">&#34;Hello ${if(a&gt;b) a else b}&#34;</span>)<span style="color:#586e75">//甚至可以注入变量，这也太方便了
+    println(<span style="color:#2aa198">&#34;Hello </span><span style="color:#2aa198">$name</span><span style="color:#2aa198">&#34;</span>)
+    println(<span style="color:#2aa198">&#34;Hello </span><span style="color:#2aa198">${if(a&gt;b) &#34;a大于b&#34; else &#34;a小于b&#34;}</span><span style="color:#2aa198">&#34;</span>)
+    println(<span style="color:#2aa198">&#34;Hello </span><span style="color:#2aa198">${if(a&gt;b) a else b}</span><span style="color:#2aa198">&#34;</span>)<span style="color:#586e75">//甚至可以注入变量，这也太方便了
 </span><span style="color:#586e75"></span>}
 <span style="color:#586e75">//输出
 </span><span style="color:#586e75"></span>Hello Kotlin
@@ -343,13 +343,13 @@ Hello <span style="color:#2aa198">3</span>
 </span><span style="color:#586e75"></span>        <span style="color:#719e07">var</span> isMarried: Boolean<span style="color:#586e75">//可写属性，有getter和setter方法
 </span><span style="color:#586e75"></span>)
 <span style="color:#586e75">//简写:
-</span><span style="color:#586e75"></span><span style="color:#586e75">//class Person(val name: String, var isMarried: Boolean)
+</span><span style="color:#586e75">//class Person(val name: String, var isMarried: Boolean)
 </span></code></pre></div><p>使用</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#719e07">fun</span> <span style="color:#268bd2">main</span>(args: Array&lt;String&gt;) {
     <span style="color:#719e07">val</span> p = Person(<span style="color:#2aa198">&#34;令狐冲&#34;</span>,<span style="color:#719e07">false</span>)<span style="color:#586e75">//直接的调用了构造器，没有像Java一样的new关键字
-</span><span style="color:#586e75"></span>    println(<span style="color:#2aa198">&#34;isMarried的值是：${p.isMarried}&#34;</span>)
+</span><span style="color:#586e75"></span>    println(<span style="color:#2aa198">&#34;isMarried的值是：</span><span style="color:#2aa198">${p.isMarried}</span><span style="color:#2aa198">&#34;</span>)
     p.isMarried = <span style="color:#719e07">true</span><span style="color:#586e75">//因为是isMarried是可写属性的，所以可用直接更改它的值
-</span><span style="color:#586e75"></span>    println(<span style="color:#2aa198">&#34;isMarried的值是：${p.isMarried}&#34;</span>)
+</span><span style="color:#586e75"></span>    println(<span style="color:#2aa198">&#34;isMarried的值是：</span><span style="color:#2aa198">${p.isMarried}</span><span style="color:#2aa198">&#34;</span>)
 }
 <span style="color:#586e75">//输出
 </span><span style="color:#586e75"></span>isMarried的值是：<span style="color:#719e07">false</span>
@@ -358,14 +358,14 @@ isMarried的值是：<span style="color:#719e07">true</span>
 <h2 id="when">when</h2>
 <p>在kotlin里，when可以有多种用法</p>
 <p>第一种用法，相当于java中的switch语句</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">fun <span style="color:#268bd2">main</span><span style="color:#719e07">(</span>args<span style="color:#719e07">:</span> Array<span style="color:#719e07">&lt;</span>String<span style="color:#719e07">&gt;</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-    println<span style="color:#719e07">(</span>getStatus<span style="color:#719e07">(</span>1<span style="color:#719e07">)</span><span style="color:#719e07">)</span>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">fun <span style="color:#268bd2">main</span><span style="color:#719e07">(</span>args<span style="color:#719e07">:</span> Array<span style="color:#719e07">&lt;</span>String<span style="color:#719e07">&gt;)</span> <span style="color:#719e07">{</span>
+    println<span style="color:#719e07">(</span>getStatus<span style="color:#719e07">(</span>1<span style="color:#719e07">))</span>
 <span style="color:#719e07">}</span>
-fun <span style="color:#268bd2">getStatus</span><span style="color:#719e07">(</span>num<span style="color:#719e07">:</span> Int<span style="color:#719e07">)</span> <span style="color:#719e07">=</span> when<span style="color:#719e07">(</span>num<span style="color:#719e07">)</span><span style="color:#719e07">{</span>
-    1 <span style="color:#719e07">-</span><span style="color:#719e07">&gt;</span> <span style="color:#2aa198">&#34;优秀&#34;</span>
-    2 <span style="color:#719e07">-</span><span style="color:#719e07">&gt;</span> <span style="color:#2aa198">&#34;棒&#34;</span>
-    3 <span style="color:#719e07">-</span><span style="color:#719e07">&gt;</span> <span style="color:#2aa198">&#34;稀巴烂&#34;</span>
-    <span style="color:#719e07">else</span> <span style="color:#719e07">-</span><span style="color:#719e07">&gt;</span> <span style="color:#2aa198">&#34;未知&#34;</span>
+fun <span style="color:#268bd2">getStatus</span><span style="color:#719e07">(</span>num<span style="color:#719e07">:</span> Int<span style="color:#719e07">)</span> <span style="color:#719e07">=</span> when<span style="color:#719e07">(</span>num<span style="color:#719e07">){</span>
+    1 <span style="color:#719e07">-&gt;</span> <span style="color:#2aa198">&#34;优秀&#34;</span>
+    2 <span style="color:#719e07">-&gt;</span> <span style="color:#2aa198">&#34;棒&#34;</span>
+    3 <span style="color:#719e07">-&gt;</span> <span style="color:#2aa198">&#34;稀巴烂&#34;</span>
+    <span style="color:#719e07">else</span> <span style="color:#719e07">-&gt;</span> <span style="color:#2aa198">&#34;未知&#34;</span>
 <span style="color:#719e07">}</span>
 <span style="color:#586e75">//输出
 </span><span style="color:#586e75"></span>优秀

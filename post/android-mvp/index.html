@@ -67,7 +67,7 @@
 
 
 
-<link rel="stylesheet" href="https://fushaolei.github.io/scss/dark-mode.min.ed17e7506ac79ad26428e2ac35f7129cd134774d75548840407bb957fe545c00.css" integrity="sha256-7RfnUGrHmtJkKOKsNfcSnNE0d011VIhAQHu5V/5UXAA=" media="screen">
+<link rel="stylesheet" href="https://fushaolei.github.io/scss/dark-mode.min.552aae4638a84aa57cf0b195750a49ea9131d3bb621d1ed3ebc9b14b18166536.css" integrity="sha256-VSquRjioSqV88LGVdQpJ6pEx07tiHR7T68mxSxgWZTY=" media="screen">
 
 
 <script src="https://fushaolei.github.io//js/loadCSS.js"></script>
@@ -332,14 +332,14 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 </span><span style="color:#586e75"> * 定义一个接口
 </span><span style="color:#586e75"> */</span>
 <span style="color:#268bd2">public</span> <span style="color:#268bd2">interface</span> <span style="color:#268bd2">IStudent</span> <span style="color:#719e07">{</span>
-    String <span style="color:#268bd2">getName</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+    String <span style="color:#268bd2">getName</span><span style="color:#719e07">();</span>
 <span style="color:#719e07">}</span>
 </code></pre></div><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#586e75">/**
 </span><span style="color:#586e75"> * 继承实现这个接口
 </span><span style="color:#586e75"> */</span>
 <span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">Student</span> <span style="color:#268bd2">implements</span> IStudent<span style="color:#719e07">{</span><span style="color:#586e75">//此时IStudent是父类，Student是子类
 </span><span style="color:#586e75"></span>    <span style="color:#268bd2">@Override</span>
-    <span style="color:#268bd2">public</span> String <span style="color:#268bd2">getName</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+    <span style="color:#268bd2">public</span> String <span style="color:#268bd2">getName</span><span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
         <span style="color:#719e07">return</span> <span style="color:#2aa198">&#34;任我行&#34;</span><span style="color:#719e07">;</span>
     <span style="color:#719e07">}</span>
 <span style="color:#719e07">}</span>
@@ -347,10 +347,10 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 </span><span style="color:#586e75"> * 测试一下
 </span><span style="color:#586e75"> */</span>
 <span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">Test</span> <span style="color:#719e07">{</span>
-    <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span><span style="color:#719e07">(</span>String<span style="color:#719e07">[</span><span style="color:#719e07">]</span> args<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+    <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span><span style="color:#719e07">(</span>String<span style="color:#719e07">[]</span> args<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
         IStudent iStudent<span style="color:#719e07">;</span>
-        iStudent<span style="color:#719e07">=</span><span style="color:#719e07">new</span> Student<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span><span style="color:#586e75">//父类引用指向子类的对象，这里做了向上转型
-</span><span style="color:#586e75"></span>        System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;学生的名字是：&#34;</span><span style="color:#719e07">+</span>iStudent<span style="color:#719e07">.</span>getName<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span><span style="color:#586e75">//打印结果：学生的名字是：任我行
+        iStudent<span style="color:#719e07">=</span><span style="color:#719e07">new</span> Student<span style="color:#719e07">();</span><span style="color:#586e75">//父类引用指向子类的对象，这里做了向上转型
+</span><span style="color:#586e75"></span>        System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;学生的名字是：&#34;</span><span style="color:#719e07">+</span>iStudent<span style="color:#719e07">.</span>getName<span style="color:#719e07">());</span><span style="color:#586e75">//打印结果：学生的名字是：任我行
 </span><span style="color:#586e75"></span>    <span style="color:#719e07">}</span>
 <span style="color:#719e07">}</span>
 </code></pre></div><h3 id="解耦">解耦</h3>
@@ -370,25 +370,25 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 </span><span style="color:#586e75"> */</span>
 <span style="color:#268bd2">public</span> <span style="color:#268bd2">interface</span> <span style="color:#268bd2">IView</span> <span style="color:#719e07">{</span>
     <span style="color:#586e75">//1. 获取用户的输入信息
-</span><span style="color:#586e75"></span>    <span style="color:#268bd2">public</span> User <span style="color:#268bd2">getViewUser</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+</span><span style="color:#586e75"></span>    <span style="color:#268bd2">public</span> User <span style="color:#268bd2">getViewUser</span><span style="color:#719e07">();</span>
     <span style="color:#586e75">//2. 登录成功的操作
-</span><span style="color:#586e75"></span>    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">loginSuceess</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+</span><span style="color:#586e75"></span>    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">loginSuceess</span><span style="color:#719e07">();</span>
     <span style="color:#586e75">//3. 登录失败后的操作
-</span><span style="color:#586e75"></span>    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">loginFail</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+</span><span style="color:#586e75"></span>    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">loginFail</span><span style="color:#719e07">();</span>
 <span style="color:#719e07">}</span>
 </code></pre></div><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#586e75">/**
 </span><span style="color:#586e75"> * Model层的需求
 </span><span style="color:#586e75"> */</span>
 <span style="color:#268bd2">public</span> <span style="color:#268bd2">interface</span> <span style="color:#268bd2">IModel</span> <span style="color:#719e07">{</span>
      <span style="color:#586e75">//判断信息是否正确
-</span><span style="color:#586e75"></span>     <span style="color:#268bd2">public</span> <span style="color:#dc322f">boolean</span> <span style="color:#268bd2">isOk</span><span style="color:#719e07">(</span>User user<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+</span><span style="color:#586e75"></span>     <span style="color:#268bd2">public</span> <span style="color:#dc322f">boolean</span> <span style="color:#268bd2">isOk</span><span style="color:#719e07">(</span>User user<span style="color:#719e07">);</span>
 <span style="color:#719e07">}</span>
 </code></pre></div><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#586e75">/**
 </span><span style="color:#586e75"> * presenter层的需求
 </span><span style="color:#586e75"> */</span>
 <span style="color:#268bd2">public</span> <span style="color:#268bd2">interface</span> <span style="color:#268bd2">IPresenter</span> <span style="color:#719e07">{</span>
     <span style="color:#586e75">//登录操作
-</span><span style="color:#586e75"></span>    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">login</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+</span><span style="color:#586e75"></span>    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">login</span><span style="color:#719e07">();</span>
 <span style="color:#719e07">}</span>
 </code></pre></div><p>好了，接口写完，现在去实现接口：</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
@@ -401,44 +401,44 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 </span><span style="color:#586e75"></span>
     <span style="color:#268bd2">@Override</span>
     <span style="color:#268bd2">protected</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">onCreate</span><span style="color:#719e07">(</span>Bundle savedInstanceState<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-        <span style="color:#268bd2">super</span><span style="color:#719e07">.</span>onCreate<span style="color:#719e07">(</span>savedInstanceState<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-        setContentView<span style="color:#719e07">(</span>R<span style="color:#719e07">.</span>layout<span style="color:#719e07">.</span>activity_main<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+        <span style="color:#268bd2">super</span><span style="color:#719e07">.</span>onCreate<span style="color:#719e07">(</span>savedInstanceState<span style="color:#719e07">);</span>
+        setContentView<span style="color:#719e07">(</span>R<span style="color:#719e07">.</span>layout<span style="color:#719e07">.</span>activity_main<span style="color:#719e07">);</span>
 
-        mUsername <span style="color:#719e07">=</span> findViewById<span style="color:#719e07">(</span>R<span style="color:#719e07">.</span>id<span style="color:#719e07">.</span>et_username<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-        mPassword <span style="color:#719e07">=</span> findViewById<span style="color:#719e07">(</span>R<span style="color:#719e07">.</span>id<span style="color:#719e07">.</span>et_password<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-        mButton <span style="color:#719e07">=</span> findViewById<span style="color:#719e07">(</span>R<span style="color:#719e07">.</span>id<span style="color:#719e07">.</span>btn_login<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+        mUsername <span style="color:#719e07">=</span> findViewById<span style="color:#719e07">(</span>R<span style="color:#719e07">.</span>id<span style="color:#719e07">.</span>et_username<span style="color:#719e07">);</span>
+        mPassword <span style="color:#719e07">=</span> findViewById<span style="color:#719e07">(</span>R<span style="color:#719e07">.</span>id<span style="color:#719e07">.</span>et_password<span style="color:#719e07">);</span>
+        mButton <span style="color:#719e07">=</span> findViewById<span style="color:#719e07">(</span>R<span style="color:#719e07">.</span>id<span style="color:#719e07">.</span>btn_login<span style="color:#719e07">);</span>
 
-        iPresenter <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Presenter<span style="color:#719e07">(</span><span style="color:#719e07">this</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span><span style="color:#586e75">//父类引用指向子类对象，向上转型，这个this指向的是View本身，也就是是传入了一个IView的子类对象
+        iPresenter <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Presenter<span style="color:#719e07">(</span><span style="color:#719e07">this</span><span style="color:#719e07">);</span><span style="color:#586e75">//父类引用指向子类对象，向上转型，这个this指向的是View本身，也就是是传入了一个IView的子类对象
 </span><span style="color:#586e75"></span>        <span style="color:#586e75">//此时Presenter同时持有Model层和View层的对象
-</span><span style="color:#586e75"></span>        mButton<span style="color:#719e07">.</span>setOnClickListener<span style="color:#719e07">(</span><span style="color:#719e07">new</span> android<span style="color:#719e07">.</span>view<span style="color:#719e07">.</span>View<span style="color:#719e07">.</span>OnClickListener<span style="color:#719e07">(</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+</span><span style="color:#586e75"></span>        mButton<span style="color:#719e07">.</span>setOnClickListener<span style="color:#719e07">(</span><span style="color:#719e07">new</span> android<span style="color:#719e07">.</span>view<span style="color:#719e07">.</span>View<span style="color:#719e07">.</span>OnClickListener<span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
             <span style="color:#268bd2">@Override</span>
             <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">onClick</span><span style="color:#719e07">(</span>android<span style="color:#719e07">.</span>view<span style="color:#719e07">.</span>View v<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-                iPresenter<span style="color:#719e07">.</span>login<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span><span style="color:#586e75">//此操作会执行Pressenter对象的login方法
+                iPresenter<span style="color:#719e07">.</span>login<span style="color:#719e07">();</span><span style="color:#586e75">//此操作会执行Pressenter对象的login方法
 </span><span style="color:#586e75"></span>            <span style="color:#719e07">}</span>
-        <span style="color:#719e07">}</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+        <span style="color:#719e07">});</span>
     <span style="color:#719e07">}</span>
 
     <span style="color:#586e75">//实现IView的需求
 </span><span style="color:#586e75"></span>    <span style="color:#268bd2">@Override</span>
-    <span style="color:#268bd2">public</span> User <span style="color:#268bd2">getViewUser</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-        <span style="color:#719e07">return</span> <span style="color:#719e07">new</span> User<span style="color:#719e07">(</span>mUsername<span style="color:#719e07">.</span>getText<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">.</span>toString<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">,</span>mPassword<span style="color:#719e07">.</span>getText<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">.</span>toString<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+    <span style="color:#268bd2">public</span> User <span style="color:#268bd2">getViewUser</span><span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
+        <span style="color:#719e07">return</span> <span style="color:#719e07">new</span> User<span style="color:#719e07">(</span>mUsername<span style="color:#719e07">.</span>getText<span style="color:#719e07">().</span>toString<span style="color:#719e07">(),</span>mPassword<span style="color:#719e07">.</span>getText<span style="color:#719e07">().</span>toString<span style="color:#719e07">());</span>
     <span style="color:#719e07">}</span>
 
     <span style="color:#268bd2">@Override</span>
-    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">loginSuceess</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-        Toast<span style="color:#719e07">.</span>makeText<span style="color:#719e07">(</span><span style="color:#719e07">this</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;登录成功！&#34;</span><span style="color:#719e07">,</span> Toast<span style="color:#719e07">.</span>LENGTH_SHORT<span style="color:#719e07">)</span><span style="color:#719e07">.</span>show<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">loginSuceess</span><span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
+        Toast<span style="color:#719e07">.</span>makeText<span style="color:#719e07">(</span><span style="color:#719e07">this</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;登录成功！&#34;</span><span style="color:#719e07">,</span> Toast<span style="color:#719e07">.</span>LENGTH_SHORT<span style="color:#719e07">).</span>show<span style="color:#719e07">();</span>
     <span style="color:#719e07">}</span>
 
     <span style="color:#268bd2">@Override</span>
-    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">loginFail</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-        Toast<span style="color:#719e07">.</span>makeText<span style="color:#719e07">(</span><span style="color:#719e07">this</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;登录失败！&#34;</span><span style="color:#719e07">,</span> Toast<span style="color:#719e07">.</span>LENGTH_SHORT<span style="color:#719e07">)</span><span style="color:#719e07">.</span>show<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">loginFail</span><span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
+        Toast<span style="color:#719e07">.</span>makeText<span style="color:#719e07">(</span><span style="color:#719e07">this</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;登录失败！&#34;</span><span style="color:#719e07">,</span> Toast<span style="color:#719e07">.</span>LENGTH_SHORT<span style="color:#719e07">).</span>show<span style="color:#719e07">();</span>
     <span style="color:#719e07">}</span>
 <span style="color:#719e07">}</span>
 </code></pre></div><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">Model</span> <span style="color:#268bd2">implements</span> IModel<span style="color:#719e07">{</span>
     <span style="color:#586e75">//IModel的需求
 </span><span style="color:#586e75"></span>    <span style="color:#268bd2">@Override</span>
     <span style="color:#268bd2">public</span> <span style="color:#dc322f">boolean</span> <span style="color:#268bd2">isOk</span><span style="color:#719e07">(</span>User user<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>user<span style="color:#719e07">.</span>getUsername<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">.</span>equals<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;root&#34;</span><span style="color:#719e07">)</span><span style="color:#719e07">&amp;</span><span style="color:#719e07">&amp;</span>user<span style="color:#719e07">.</span>getPassword<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">.</span>equals<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;123&#34;</span><span style="color:#719e07">)</span><span style="color:#719e07">)</span><span style="color:#719e07">{</span>
+        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>user<span style="color:#719e07">.</span>getUsername<span style="color:#719e07">().</span>equals<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;root&#34;</span><span style="color:#719e07">)&amp;&amp;</span>user<span style="color:#719e07">.</span>getPassword<span style="color:#719e07">().</span>equals<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;123&#34;</span><span style="color:#719e07">)){</span>
             <span style="color:#719e07">return</span> <span style="color:#cb4b16">true</span><span style="color:#719e07">;</span>
         <span style="color:#719e07">}</span>
         <span style="color:#719e07">return</span> <span style="color:#cb4b16">false</span><span style="color:#719e07">;</span>
@@ -451,17 +451,17 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
     <span style="color:#268bd2">private</span> IView iView<span style="color:#719e07">;</span>
 
     <span style="color:#268bd2">public</span> <span style="color:#268bd2">Presenter</span><span style="color:#719e07">(</span>IView iView<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-        <span style="color:#719e07">this</span><span style="color:#719e07">.</span>iModel <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Model<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span><span style="color:#586e75">//向上转型
+        <span style="color:#719e07">this</span><span style="color:#719e07">.</span>iModel <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Model<span style="color:#719e07">();</span><span style="color:#586e75">//向上转型
 </span><span style="color:#586e75"></span>        <span style="color:#719e07">this</span><span style="color:#719e07">.</span>iView <span style="color:#719e07">=</span> iView<span style="color:#719e07">;</span><span style="color:#586e75">//向上转型
 </span><span style="color:#586e75"></span>    <span style="color:#719e07">}</span>
 
     <span style="color:#586e75">//IPresenter的需求
 </span><span style="color:#586e75"></span>    <span style="color:#268bd2">@Override</span>
-    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">login</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span><span style="color:#586e75">//当View层点击button的时候，将会调用到这个方法
-</span><span style="color:#586e75"></span>        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>iModel<span style="color:#719e07">.</span>isOk<span style="color:#719e07">(</span>iView<span style="color:#719e07">.</span>getViewUser<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">)</span><span style="color:#719e07">)</span><span style="color:#719e07">{</span>
-            iView<span style="color:#719e07">.</span>loginSuceess<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span><span style="color:#586e75">//执行view层的loginSuceess
+    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">login</span><span style="color:#719e07">()</span> <span style="color:#719e07">{</span><span style="color:#586e75">//当View层点击button的时候，将会调用到这个方法
+</span><span style="color:#586e75"></span>        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>iModel<span style="color:#719e07">.</span>isOk<span style="color:#719e07">(</span>iView<span style="color:#719e07">.</span>getViewUser<span style="color:#719e07">())){</span>
+            iView<span style="color:#719e07">.</span>loginSuceess<span style="color:#719e07">();</span><span style="color:#586e75">//执行view层的loginSuceess
 </span><span style="color:#586e75"></span>        <span style="color:#719e07">}</span><span style="color:#719e07">else</span> <span style="color:#719e07">{</span>
-            iView<span style="color:#719e07">.</span>loginFail<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span><span style="color:#586e75">//执行view层的loginFail
+            iView<span style="color:#719e07">.</span>loginFail<span style="color:#719e07">();</span><span style="color:#586e75">//执行view层的loginFail
 </span><span style="color:#586e75"></span>        <span style="color:#719e07">}</span>
     <span style="color:#719e07">}</span>
 <span style="color:#719e07">}</span>

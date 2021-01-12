@@ -6,11 +6,7 @@
     <description>Recent content in Android on Sorryfu Blog.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 08 Dec 2020 22:04:03 +0000</lastBuildDate>
-    
-	<atom:link href="https://fushaolei.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 08 Dec 2020 22:04:03 +0000</lastBuildDate><atom:link href="https://fushaolei.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Recyclerview多样式混合布局</title>
       <link>https://fushaolei.github.io/post/recyclerview-multi-style/</link>

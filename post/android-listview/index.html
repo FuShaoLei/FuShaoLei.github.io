@@ -63,7 +63,7 @@
 
 
 
-<link rel="stylesheet" href="https://fushaolei.github.io/scss/dark-mode.min.ed17e7506ac79ad26428e2ac35f7129cd134774d75548840407bb957fe545c00.css" integrity="sha256-7RfnUGrHmtJkKOKsNfcSnNE0d011VIhAQHu5V/5UXAA=" media="screen">
+<link rel="stylesheet" href="https://fushaolei.github.io/scss/dark-mode.min.552aae4638a84aa57cf0b195750a49ea9131d3bb621d1ed3ebc9b14b18166536.css" integrity="sha256-VSquRjioSqV88LGVdQpJ6pEx07tiHR7T68mxSxgWZTY=" media="screen">
 
 
 <script src="https://fushaolei.github.io//js/loadCSS.js"></script>
@@ -366,7 +366,7 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 </span><span style="color:#586e75">     * 3. item布局文件
 </span><span style="color:#586e75">     */</span>
     <span style="color:#268bd2">private</span> Context mContext<span style="color:#719e07">;</span>
-    <span style="color:#268bd2">private</span> List<span style="color:#719e07">&lt;</span>Student<span style="color:#719e07">&gt;</span> students <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ArrayList<span style="color:#719e07">&lt;</span><span style="color:#719e07">&gt;</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+    <span style="color:#268bd2">private</span> List<span style="color:#719e07">&lt;</span>Student<span style="color:#719e07">&gt;</span> students <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ArrayList<span style="color:#719e07">&lt;&gt;();</span>
     <span style="color:#268bd2">private</span> <span style="color:#dc322f">int</span> itemLinearRes<span style="color:#719e07">;</span>
 
     <span style="color:#268bd2">public</span> <span style="color:#268bd2">MyAdapter</span><span style="color:#719e07">(</span>Context mContext<span style="color:#719e07">,</span> List<span style="color:#719e07">&lt;</span>Student<span style="color:#719e07">&gt;</span> students<span style="color:#719e07">,</span> <span style="color:#dc322f">int</span> itemLinearRes<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
@@ -376,17 +376,17 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
     <span style="color:#719e07">}</span>
 
     <span style="color:#268bd2">@Override</span>
-    <span style="color:#268bd2">public</span> <span style="color:#dc322f">int</span> <span style="color:#268bd2">getCount</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span><span style="color:#586e75">//获得数据的条数
-</span><span style="color:#586e75"></span>        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span><span style="color:#cb4b16">null</span> <span style="color:#719e07">!</span><span style="color:#719e07">=</span> students<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-            <span style="color:#719e07">return</span> students<span style="color:#719e07">.</span>size<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+    <span style="color:#268bd2">public</span> <span style="color:#dc322f">int</span> <span style="color:#268bd2">getCount</span><span style="color:#719e07">()</span> <span style="color:#719e07">{</span><span style="color:#586e75">//获得数据的条数
+</span><span style="color:#586e75"></span>        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span><span style="color:#cb4b16">null</span> <span style="color:#719e07">!=</span> students<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+            <span style="color:#719e07">return</span> students<span style="color:#719e07">.</span>size<span style="color:#719e07">();</span>
         <span style="color:#719e07">}</span>
         <span style="color:#719e07">return</span> 0<span style="color:#719e07">;</span>
     <span style="color:#719e07">}</span>
 
     <span style="color:#268bd2">@Override</span>
     <span style="color:#268bd2">public</span> Object <span style="color:#268bd2">getItem</span><span style="color:#719e07">(</span><span style="color:#dc322f">int</span> position<span style="color:#719e07">)</span> <span style="color:#719e07">{</span><span style="color:#586e75">//获取每个item显示的数据对象
-</span><span style="color:#586e75"></span>        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span><span style="color:#cb4b16">null</span> <span style="color:#719e07">!</span><span style="color:#719e07">=</span> students<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-            <span style="color:#719e07">return</span> students<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span>position<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+</span><span style="color:#586e75"></span>        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span><span style="color:#cb4b16">null</span> <span style="color:#719e07">!=</span> students<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+            <span style="color:#719e07">return</span> students<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span>position<span style="color:#719e07">);</span>
         <span style="color:#719e07">}</span>
         <span style="color:#719e07">return</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">;</span>
     <span style="color:#719e07">}</span>
@@ -407,21 +407,21 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
         <span style="color:#586e75">//1. 加载item的布局文件来创建出item的视图对象
 </span><span style="color:#586e75"></span>        <span style="color:#586e75">//这一步其实和setContentView一样
 </span><span style="color:#586e75"></span>        <span style="color:#586e75">// LayoutInflater布局填充器
-</span><span style="color:#586e75"></span>        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>convertView <span style="color:#719e07">=</span><span style="color:#719e07">=</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span><span style="color:#586e75">//当converView为空时才加载
-</span><span style="color:#586e75"></span>            LayoutInflater inflater <span style="color:#719e07">=</span> LayoutInflater<span style="color:#719e07">.</span>from<span style="color:#719e07">(</span>mContext<span style="color:#719e07">)</span><span style="color:#719e07">;</span><span style="color:#586e75">//创建布局填充其
-</span><span style="color:#586e75"></span>            convertView <span style="color:#719e07">=</span> inflater<span style="color:#719e07">.</span>inflate<span style="color:#719e07">(</span>itemLinearRes<span style="color:#719e07">,</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span><span style="color:#586e75">//可加载布局文件
+</span><span style="color:#586e75"></span>        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>convertView <span style="color:#719e07">==</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span><span style="color:#586e75">//当converView为空时才加载
+</span><span style="color:#586e75"></span>            LayoutInflater inflater <span style="color:#719e07">=</span> LayoutInflater<span style="color:#719e07">.</span>from<span style="color:#719e07">(</span>mContext<span style="color:#719e07">);</span><span style="color:#586e75">//创建布局填充其
+</span><span style="color:#586e75"></span>            convertView <span style="color:#719e07">=</span> inflater<span style="color:#719e07">.</span>inflate<span style="color:#719e07">(</span>itemLinearRes<span style="color:#719e07">,</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">);</span><span style="color:#586e75">//可加载布局文件
 </span><span style="color:#586e75"></span>        <span style="color:#719e07">}</span>
 <span style="color:#586e75">//  上面两行可以简化写成这样 convertView=LayoutInflater.from(mContext).inflate(itemLinearRes,null);
 </span><span style="color:#586e75"></span>
         <span style="color:#586e75">//2. 获取item控件的引用
-</span><span style="color:#586e75"></span>        ImageView img <span style="color:#719e07">=</span> convertView<span style="color:#719e07">.</span>findViewById<span style="color:#719e07">(</span>R<span style="color:#719e07">.</span>id<span style="color:#719e07">.</span>img_item<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-        TextView name <span style="color:#719e07">=</span> convertView<span style="color:#719e07">.</span>findViewById<span style="color:#719e07">(</span>R<span style="color:#719e07">.</span>id<span style="color:#719e07">.</span>tv_name_item<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-        TextView no <span style="color:#719e07">=</span> convertView<span style="color:#719e07">.</span>findViewById<span style="color:#719e07">(</span>R<span style="color:#719e07">.</span>id<span style="color:#719e07">.</span>tv_name_no<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+</span><span style="color:#586e75"></span>        ImageView img <span style="color:#719e07">=</span> convertView<span style="color:#719e07">.</span>findViewById<span style="color:#719e07">(</span>R<span style="color:#719e07">.</span>id<span style="color:#719e07">.</span>img_item<span style="color:#719e07">);</span>
+        TextView name <span style="color:#719e07">=</span> convertView<span style="color:#719e07">.</span>findViewById<span style="color:#719e07">(</span>R<span style="color:#719e07">.</span>id<span style="color:#719e07">.</span>tv_name_item<span style="color:#719e07">);</span>
+        TextView no <span style="color:#719e07">=</span> convertView<span style="color:#719e07">.</span>findViewById<span style="color:#719e07">(</span>R<span style="color:#719e07">.</span>id<span style="color:#719e07">.</span>tv_name_no<span style="color:#719e07">);</span>
 
         <span style="color:#586e75">//3.设置控件内容
-</span><span style="color:#586e75"></span>        img<span style="color:#719e07">.</span>setImageResource<span style="color:#719e07">(</span>students<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span>position<span style="color:#719e07">)</span><span style="color:#719e07">.</span>getPhotoId<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-        name<span style="color:#719e07">.</span>setText<span style="color:#719e07">(</span>students<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span>position<span style="color:#719e07">)</span><span style="color:#719e07">.</span>getName<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-        no<span style="color:#719e07">.</span>setText<span style="color:#719e07">(</span>students<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span>position<span style="color:#719e07">)</span><span style="color:#719e07">.</span>getStuiNo<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+</span><span style="color:#586e75"></span>        img<span style="color:#719e07">.</span>setImageResource<span style="color:#719e07">(</span>students<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span>position<span style="color:#719e07">).</span>getPhotoId<span style="color:#719e07">());</span>
+        name<span style="color:#719e07">.</span>setText<span style="color:#719e07">(</span>students<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span>position<span style="color:#719e07">).</span>getName<span style="color:#719e07">());</span>
+        no<span style="color:#719e07">.</span>setText<span style="color:#719e07">(</span>students<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span>position<span style="color:#719e07">).</span>getStuiNo<span style="color:#719e07">());</span>
 
         <span style="color:#719e07">return</span> convertView<span style="color:#719e07">;</span><span style="color:#586e75">//return视图
 </span><span style="color:#586e75"></span>    <span style="color:#719e07">}</span>
@@ -442,19 +442,19 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 </span><span style="color:#586e75">     */</span>
     <span style="color:#268bd2">public</span> View <span style="color:#268bd2">getView</span><span style="color:#719e07">(</span><span style="color:#dc322f">int</span> position<span style="color:#719e07">,</span> View convertView<span style="color:#719e07">,</span> ViewGroup parent<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
         ViewHolder viewHolder<span style="color:#719e07">;</span>
-        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span><span style="color:#cb4b16">null</span><span style="color:#719e07">=</span><span style="color:#719e07">=</span>convertView<span style="color:#719e07">)</span><span style="color:#719e07">{</span>
-            convertView<span style="color:#719e07">=</span>LayoutInflater<span style="color:#719e07">.</span>from<span style="color:#719e07">(</span>mContext<span style="color:#719e07">)</span><span style="color:#719e07">.</span>inflate<span style="color:#719e07">(</span>itemLinearRes<span style="color:#719e07">,</span><span style="color:#cb4b16">null</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-            viewHolder<span style="color:#719e07">=</span><span style="color:#719e07">new</span> ViewHolder<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-            viewHolder<span style="color:#719e07">.</span>vImg<span style="color:#719e07">=</span>convertView<span style="color:#719e07">.</span>findViewById<span style="color:#719e07">(</span>R<span style="color:#719e07">.</span>id<span style="color:#719e07">.</span>img_item<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-            viewHolder<span style="color:#719e07">.</span>vName<span style="color:#719e07">=</span>convertView<span style="color:#719e07">.</span>findViewById<span style="color:#719e07">(</span>R<span style="color:#719e07">.</span>id<span style="color:#719e07">.</span>tv_name_item<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-            viewHolder<span style="color:#719e07">.</span>vNum<span style="color:#719e07">=</span>convertView<span style="color:#719e07">.</span>findViewById<span style="color:#719e07">(</span>R<span style="color:#719e07">.</span>id<span style="color:#719e07">.</span>tv_name_no<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-            convertView<span style="color:#719e07">.</span>setTag<span style="color:#719e07">(</span>viewHolder<span style="color:#719e07">)</span><span style="color:#719e07">;</span><span style="color:#586e75">//将ViewHolder存储到convertView中
+        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span><span style="color:#cb4b16">null</span><span style="color:#719e07">==</span>convertView<span style="color:#719e07">){</span>
+            convertView<span style="color:#719e07">=</span>LayoutInflater<span style="color:#719e07">.</span>from<span style="color:#719e07">(</span>mContext<span style="color:#719e07">).</span>inflate<span style="color:#719e07">(</span>itemLinearRes<span style="color:#719e07">,</span><span style="color:#cb4b16">null</span><span style="color:#719e07">);</span>
+            viewHolder<span style="color:#719e07">=</span><span style="color:#719e07">new</span> ViewHolder<span style="color:#719e07">();</span>
+            viewHolder<span style="color:#719e07">.</span>vImg<span style="color:#719e07">=</span>convertView<span style="color:#719e07">.</span>findViewById<span style="color:#719e07">(</span>R<span style="color:#719e07">.</span>id<span style="color:#719e07">.</span>img_item<span style="color:#719e07">);</span>
+            viewHolder<span style="color:#719e07">.</span>vName<span style="color:#719e07">=</span>convertView<span style="color:#719e07">.</span>findViewById<span style="color:#719e07">(</span>R<span style="color:#719e07">.</span>id<span style="color:#719e07">.</span>tv_name_item<span style="color:#719e07">);</span>
+            viewHolder<span style="color:#719e07">.</span>vNum<span style="color:#719e07">=</span>convertView<span style="color:#719e07">.</span>findViewById<span style="color:#719e07">(</span>R<span style="color:#719e07">.</span>id<span style="color:#719e07">.</span>tv_name_no<span style="color:#719e07">);</span>
+            convertView<span style="color:#719e07">.</span>setTag<span style="color:#719e07">(</span>viewHolder<span style="color:#719e07">);</span><span style="color:#586e75">//将ViewHolder存储到convertView中
 </span><span style="color:#586e75"></span>        <span style="color:#719e07">}</span><span style="color:#719e07">else</span> <span style="color:#719e07">{</span>
-            viewHolder<span style="color:#719e07">=</span><span style="color:#719e07">(</span>ViewHolder<span style="color:#719e07">)</span> convertView<span style="color:#719e07">.</span>getTag<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+            viewHolder<span style="color:#719e07">=(</span>ViewHolder<span style="color:#719e07">)</span> convertView<span style="color:#719e07">.</span>getTag<span style="color:#719e07">();</span>
         <span style="color:#719e07">}</span>
-        viewHolder<span style="color:#719e07">.</span>vImg<span style="color:#719e07">.</span>setImageResource<span style="color:#719e07">(</span>students<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span>position<span style="color:#719e07">)</span><span style="color:#719e07">.</span>getPhotoId<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-        viewHolder<span style="color:#719e07">.</span>vName<span style="color:#719e07">.</span>setText<span style="color:#719e07">(</span>students<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span>position<span style="color:#719e07">)</span><span style="color:#719e07">.</span>getName<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-        viewHolder<span style="color:#719e07">.</span>vNum<span style="color:#719e07">.</span>setText<span style="color:#719e07">(</span>students<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span>position<span style="color:#719e07">)</span><span style="color:#719e07">.</span>getStuiNo<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+        viewHolder<span style="color:#719e07">.</span>vImg<span style="color:#719e07">.</span>setImageResource<span style="color:#719e07">(</span>students<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span>position<span style="color:#719e07">).</span>getPhotoId<span style="color:#719e07">());</span>
+        viewHolder<span style="color:#719e07">.</span>vName<span style="color:#719e07">.</span>setText<span style="color:#719e07">(</span>students<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span>position<span style="color:#719e07">).</span>getName<span style="color:#719e07">());</span>
+        viewHolder<span style="color:#719e07">.</span>vNum<span style="color:#719e07">.</span>setText<span style="color:#719e07">(</span>students<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span>position<span style="color:#719e07">).</span>getStuiNo<span style="color:#719e07">());</span>
 
         <span style="color:#719e07">return</span> convertView<span style="color:#719e07">;</span><span style="color:#586e75">//return视图
 </span><span style="color:#586e75"></span>    <span style="color:#719e07">}</span>
@@ -489,13 +489,13 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
     <span style="color:#719e07">}</span>
 
     <span style="color:#268bd2">@Override</span>
-    <span style="color:#268bd2">public</span> <span style="color:#dc322f">int</span> <span style="color:#268bd2">getCount</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-        <span style="color:#719e07">return</span> mData <span style="color:#719e07">!</span><span style="color:#719e07">=</span> <span style="color:#cb4b16">null</span> <span style="color:#719e07">?</span> mData<span style="color:#719e07">.</span>size<span style="color:#719e07">(</span><span style="color:#719e07">)</span> <span style="color:#719e07">:</span> 0<span style="color:#719e07">;</span>
+    <span style="color:#268bd2">public</span> <span style="color:#dc322f">int</span> <span style="color:#268bd2">getCount</span><span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
+        <span style="color:#719e07">return</span> mData <span style="color:#719e07">!=</span> <span style="color:#cb4b16">null</span> <span style="color:#719e07">?</span> mData<span style="color:#719e07">.</span>size<span style="color:#719e07">()</span> <span style="color:#719e07">:</span> 0<span style="color:#719e07">;</span>
     <span style="color:#719e07">}</span>
 
     <span style="color:#268bd2">@Override</span>
     <span style="color:#268bd2">public</span> T <span style="color:#268bd2">getItem</span><span style="color:#719e07">(</span><span style="color:#dc322f">int</span> position<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-        <span style="color:#719e07">return</span> mData<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span>position<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+        <span style="color:#719e07">return</span> mData<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span>position<span style="color:#719e07">);</span>
     <span style="color:#719e07">}</span>
 
     <span style="color:#268bd2">@Override</span>
@@ -505,51 +505,51 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 
     <span style="color:#268bd2">@Override</span>
     <span style="color:#268bd2">public</span> View <span style="color:#268bd2">getView</span><span style="color:#719e07">(</span><span style="color:#dc322f">int</span> position<span style="color:#719e07">,</span> View convertView<span style="color:#719e07">,</span> ViewGroup parent<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-        ViewHolder holder <span style="color:#719e07">=</span> ViewHolder<span style="color:#719e07">.</span>bind<span style="color:#719e07">(</span>parent<span style="color:#719e07">.</span>getContext<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">,</span> convertView<span style="color:#719e07">,</span> parent<span style="color:#719e07">,</span> mLayoutRes
-                <span style="color:#719e07">,</span> position<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-        bindView<span style="color:#719e07">(</span>holder<span style="color:#719e07">,</span> getItem<span style="color:#719e07">(</span>position<span style="color:#719e07">)</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-        <span style="color:#719e07">return</span> holder<span style="color:#719e07">.</span>getItemView<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+        ViewHolder holder <span style="color:#719e07">=</span> ViewHolder<span style="color:#719e07">.</span>bind<span style="color:#719e07">(</span>parent<span style="color:#719e07">.</span>getContext<span style="color:#719e07">(),</span> convertView<span style="color:#719e07">,</span> parent<span style="color:#719e07">,</span> mLayoutRes
+                <span style="color:#719e07">,</span> position<span style="color:#719e07">);</span>
+        bindView<span style="color:#719e07">(</span>holder<span style="color:#719e07">,</span> getItem<span style="color:#719e07">(</span>position<span style="color:#719e07">));</span>
+        <span style="color:#719e07">return</span> holder<span style="color:#719e07">.</span>getItemView<span style="color:#719e07">();</span>
     <span style="color:#719e07">}</span>
 
-    <span style="color:#268bd2">public</span> <span style="color:#268bd2">abstract</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">bindView</span><span style="color:#719e07">(</span>ViewHolder holder<span style="color:#719e07">,</span> T obj<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+    <span style="color:#268bd2">public</span> <span style="color:#268bd2">abstract</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">bindView</span><span style="color:#719e07">(</span>ViewHolder holder<span style="color:#719e07">,</span> T obj<span style="color:#719e07">);</span>
 
     <span style="color:#586e75">//添加一个元素
 </span><span style="color:#586e75"></span>    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">add</span><span style="color:#719e07">(</span>T data<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>mData <span style="color:#719e07">=</span><span style="color:#719e07">=</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-            mData <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ArrayList<span style="color:#719e07">&lt;</span><span style="color:#719e07">&gt;</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>mData <span style="color:#719e07">==</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+            mData <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ArrayList<span style="color:#719e07">&lt;&gt;();</span>
         <span style="color:#719e07">}</span>
-        mData<span style="color:#719e07">.</span>add<span style="color:#719e07">(</span>data<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-        notifyDataSetChanged<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+        mData<span style="color:#719e07">.</span>add<span style="color:#719e07">(</span>data<span style="color:#719e07">);</span>
+        notifyDataSetChanged<span style="color:#719e07">();</span>
     <span style="color:#719e07">}</span>
 
     <span style="color:#586e75">//往特定位置，添加一个元素
 </span><span style="color:#586e75"></span>    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">add</span><span style="color:#719e07">(</span><span style="color:#dc322f">int</span> position<span style="color:#719e07">,</span> T data<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>mData <span style="color:#719e07">=</span><span style="color:#719e07">=</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-            mData <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ArrayList<span style="color:#719e07">&lt;</span><span style="color:#719e07">&gt;</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>mData <span style="color:#719e07">==</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+            mData <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ArrayList<span style="color:#719e07">&lt;&gt;();</span>
         <span style="color:#719e07">}</span>
-        mData<span style="color:#719e07">.</span>add<span style="color:#719e07">(</span>position<span style="color:#719e07">,</span> data<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-        notifyDataSetChanged<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+        mData<span style="color:#719e07">.</span>add<span style="color:#719e07">(</span>position<span style="color:#719e07">,</span> data<span style="color:#719e07">);</span>
+        notifyDataSetChanged<span style="color:#719e07">();</span>
     <span style="color:#719e07">}</span>
 
     <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">remove</span><span style="color:#719e07">(</span>T data<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>mData <span style="color:#719e07">!</span><span style="color:#719e07">=</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-            mData<span style="color:#719e07">.</span>remove<span style="color:#719e07">(</span>data<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>mData <span style="color:#719e07">!=</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+            mData<span style="color:#719e07">.</span>remove<span style="color:#719e07">(</span>data<span style="color:#719e07">);</span>
         <span style="color:#719e07">}</span>
-        notifyDataSetChanged<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+        notifyDataSetChanged<span style="color:#719e07">();</span>
     <span style="color:#719e07">}</span>
 
     <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">remove</span><span style="color:#719e07">(</span><span style="color:#dc322f">int</span> position<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>mData <span style="color:#719e07">!</span><span style="color:#719e07">=</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-            mData<span style="color:#719e07">.</span>remove<span style="color:#719e07">(</span>position<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>mData <span style="color:#719e07">!=</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+            mData<span style="color:#719e07">.</span>remove<span style="color:#719e07">(</span>position<span style="color:#719e07">);</span>
         <span style="color:#719e07">}</span>
-        notifyDataSetChanged<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+        notifyDataSetChanged<span style="color:#719e07">();</span>
     <span style="color:#719e07">}</span>
 
-    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">clear</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>mData <span style="color:#719e07">!</span><span style="color:#719e07">=</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-            mData<span style="color:#719e07">.</span>clear<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">clear</span><span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
+        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>mData <span style="color:#719e07">!=</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+            mData<span style="color:#719e07">.</span>clear<span style="color:#719e07">();</span>
         <span style="color:#719e07">}</span>
-        notifyDataSetChanged<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+        notifyDataSetChanged<span style="color:#719e07">();</span>
     <span style="color:#719e07">}</span>
 
 
@@ -562,10 +562,10 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 </span><span style="color:#586e75"></span>
         <span style="color:#586e75">//构造方法，完成相关初始化
 </span><span style="color:#586e75"></span>        <span style="color:#268bd2">private</span> <span style="color:#268bd2">ViewHolder</span><span style="color:#719e07">(</span>Context context<span style="color:#719e07">,</span> ViewGroup parent<span style="color:#719e07">,</span> <span style="color:#dc322f">int</span> layoutRes<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-            mViews <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> SparseArray<span style="color:#719e07">&lt;</span><span style="color:#719e07">&gt;</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+            mViews <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> SparseArray<span style="color:#719e07">&lt;&gt;();</span>
             <span style="color:#719e07">this</span><span style="color:#719e07">.</span>context <span style="color:#719e07">=</span> context<span style="color:#719e07">;</span>
-            View convertView <span style="color:#719e07">=</span> LayoutInflater<span style="color:#719e07">.</span>from<span style="color:#719e07">(</span>context<span style="color:#719e07">)</span><span style="color:#719e07">.</span>inflate<span style="color:#719e07">(</span>layoutRes<span style="color:#719e07">,</span> parent<span style="color:#719e07">,</span> <span style="color:#cb4b16">false</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-            convertView<span style="color:#719e07">.</span>setTag<span style="color:#719e07">(</span><span style="color:#719e07">this</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+            View convertView <span style="color:#719e07">=</span> LayoutInflater<span style="color:#719e07">.</span>from<span style="color:#719e07">(</span>context<span style="color:#719e07">).</span>inflate<span style="color:#719e07">(</span>layoutRes<span style="color:#719e07">,</span> parent<span style="color:#719e07">,</span> <span style="color:#cb4b16">false</span><span style="color:#719e07">);</span>
+            convertView<span style="color:#719e07">.</span>setTag<span style="color:#719e07">(</span><span style="color:#719e07">this</span><span style="color:#719e07">);</span>
             item <span style="color:#719e07">=</span> convertView<span style="color:#719e07">;</span>
         <span style="color:#719e07">}</span>
 
@@ -573,10 +573,10 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 </span><span style="color:#586e75"></span>        <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> ViewHolder <span style="color:#268bd2">bind</span><span style="color:#719e07">(</span>Context context<span style="color:#719e07">,</span> View convertView<span style="color:#719e07">,</span> ViewGroup parent<span style="color:#719e07">,</span>
                                       <span style="color:#dc322f">int</span> layoutRes<span style="color:#719e07">,</span> <span style="color:#dc322f">int</span> position<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
             ViewHolder holder<span style="color:#719e07">;</span>
-            <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>convertView <span style="color:#719e07">=</span><span style="color:#719e07">=</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-                holder <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ViewHolder<span style="color:#719e07">(</span>context<span style="color:#719e07">,</span> parent<span style="color:#719e07">,</span> layoutRes<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+            <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>convertView <span style="color:#719e07">==</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+                holder <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ViewHolder<span style="color:#719e07">(</span>context<span style="color:#719e07">,</span> parent<span style="color:#719e07">,</span> layoutRes<span style="color:#719e07">);</span>
             <span style="color:#719e07">}</span> <span style="color:#719e07">else</span> <span style="color:#719e07">{</span>
-                holder <span style="color:#719e07">=</span> <span style="color:#719e07">(</span>ViewHolder<span style="color:#719e07">)</span> convertView<span style="color:#719e07">.</span>getTag<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+                holder <span style="color:#719e07">=</span> <span style="color:#719e07">(</span>ViewHolder<span style="color:#719e07">)</span> convertView<span style="color:#719e07">.</span>getTag<span style="color:#719e07">();</span>
                 holder<span style="color:#719e07">.</span>item <span style="color:#719e07">=</span> convertView<span style="color:#719e07">;</span>
             <span style="color:#719e07">}</span>
             holder<span style="color:#719e07">.</span>position <span style="color:#719e07">=</span> position<span style="color:#719e07">;</span>
@@ -585,10 +585,10 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 
         <span style="color:#268bd2">@SuppressWarnings</span><span style="color:#719e07">(</span><span style="color:#2aa198">&#34;unchecked&#34;</span><span style="color:#719e07">)</span>
         <span style="color:#268bd2">public</span> <span style="color:#719e07">&lt;</span>T <span style="color:#268bd2">extends</span> View<span style="color:#719e07">&gt;</span> T <span style="color:#268bd2">getView</span><span style="color:#719e07">(</span><span style="color:#dc322f">int</span> id<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-            T t <span style="color:#719e07">=</span> <span style="color:#719e07">(</span>T<span style="color:#719e07">)</span> mViews<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span>id<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-            <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>t <span style="color:#719e07">=</span><span style="color:#719e07">=</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-                t <span style="color:#719e07">=</span> <span style="color:#719e07">(</span>T<span style="color:#719e07">)</span> item<span style="color:#719e07">.</span>findViewById<span style="color:#719e07">(</span>id<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-                mViews<span style="color:#719e07">.</span>put<span style="color:#719e07">(</span>id<span style="color:#719e07">,</span> t<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+            T t <span style="color:#719e07">=</span> <span style="color:#719e07">(</span>T<span style="color:#719e07">)</span> mViews<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span>id<span style="color:#719e07">);</span>
+            <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>t <span style="color:#719e07">==</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+                t <span style="color:#719e07">=</span> <span style="color:#719e07">(</span>T<span style="color:#719e07">)</span> item<span style="color:#719e07">.</span>findViewById<span style="color:#719e07">(</span>id<span style="color:#719e07">);</span>
+                mViews<span style="color:#719e07">.</span>put<span style="color:#719e07">(</span>id<span style="color:#719e07">,</span> t<span style="color:#719e07">);</span>
             <span style="color:#719e07">}</span>
             <span style="color:#719e07">return</span> t<span style="color:#719e07">;</span>
         <span style="color:#719e07">}</span>
@@ -597,14 +597,14 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
         <span style="color:#586e75">/**
 </span><span style="color:#586e75">         * 获取当前条目
 </span><span style="color:#586e75">         */</span>
-        <span style="color:#268bd2">public</span> View <span style="color:#268bd2">getItemView</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+        <span style="color:#268bd2">public</span> View <span style="color:#268bd2">getItemView</span><span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
             <span style="color:#719e07">return</span> item<span style="color:#719e07">;</span>
         <span style="color:#719e07">}</span>
 
         <span style="color:#586e75">/**
 </span><span style="color:#586e75">         * 获取条目位置
 </span><span style="color:#586e75">         */</span>
-        <span style="color:#268bd2">public</span> <span style="color:#dc322f">int</span> <span style="color:#268bd2">getItemPosition</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+        <span style="color:#268bd2">public</span> <span style="color:#dc322f">int</span> <span style="color:#268bd2">getItemPosition</span><span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
             <span style="color:#719e07">return</span> position<span style="color:#719e07">;</span>
         <span style="color:#719e07">}</span>
 
@@ -612,9 +612,9 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 </span><span style="color:#586e75">         * 设置文字
 </span><span style="color:#586e75">         */</span>
         <span style="color:#268bd2">public</span> ViewHolder <span style="color:#268bd2">setText</span><span style="color:#719e07">(</span><span style="color:#dc322f">int</span> id<span style="color:#719e07">,</span> CharSequence text<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-            View view <span style="color:#719e07">=</span> getView<span style="color:#719e07">(</span>id<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+            View view <span style="color:#719e07">=</span> getView<span style="color:#719e07">(</span>id<span style="color:#719e07">);</span>
             <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>view <span style="color:#719e07">instanceof</span> TextView<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-                <span style="color:#719e07">(</span><span style="color:#719e07">(</span>TextView<span style="color:#719e07">)</span> view<span style="color:#719e07">)</span><span style="color:#719e07">.</span>setText<span style="color:#719e07">(</span>text<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+                <span style="color:#719e07">((</span>TextView<span style="color:#719e07">)</span> view<span style="color:#719e07">).</span>setText<span style="color:#719e07">(</span>text<span style="color:#719e07">);</span>
             <span style="color:#719e07">}</span>
             <span style="color:#719e07">return</span> <span style="color:#719e07">this</span><span style="color:#719e07">;</span>
         <span style="color:#719e07">}</span>
@@ -623,11 +623,11 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 </span><span style="color:#586e75">         * 设置图片
 </span><span style="color:#586e75">         */</span>
         <span style="color:#268bd2">public</span> ViewHolder <span style="color:#268bd2">setImageResource</span><span style="color:#719e07">(</span><span style="color:#dc322f">int</span> id<span style="color:#719e07">,</span> <span style="color:#dc322f">int</span> drawableRes<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-            View view <span style="color:#719e07">=</span> getView<span style="color:#719e07">(</span>id<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+            View view <span style="color:#719e07">=</span> getView<span style="color:#719e07">(</span>id<span style="color:#719e07">);</span>
             <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>view <span style="color:#719e07">instanceof</span> ImageView<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-                <span style="color:#719e07">(</span><span style="color:#719e07">(</span>ImageView<span style="color:#719e07">)</span> view<span style="color:#719e07">)</span><span style="color:#719e07">.</span>setImageResource<span style="color:#719e07">(</span>drawableRes<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+                <span style="color:#719e07">((</span>ImageView<span style="color:#719e07">)</span> view<span style="color:#719e07">).</span>setImageResource<span style="color:#719e07">(</span>drawableRes<span style="color:#719e07">);</span>
             <span style="color:#719e07">}</span> <span style="color:#719e07">else</span> <span style="color:#719e07">{</span>
-                view<span style="color:#719e07">.</span>setBackgroundResource<span style="color:#719e07">(</span>drawableRes<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+                view<span style="color:#719e07">.</span>setBackgroundResource<span style="color:#719e07">(</span>drawableRes<span style="color:#719e07">);</span>
             <span style="color:#719e07">}</span>
             <span style="color:#719e07">return</span> <span style="color:#719e07">this</span><span style="color:#719e07">;</span>
         <span style="color:#719e07">}</span>
@@ -637,7 +637,7 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 </span><span style="color:#586e75">         * 设置点击监听
 </span><span style="color:#586e75">         */</span>
         <span style="color:#268bd2">public</span> ViewHolder <span style="color:#268bd2">setOnClickListener</span><span style="color:#719e07">(</span><span style="color:#dc322f">int</span> id<span style="color:#719e07">,</span> View<span style="color:#719e07">.</span>OnClickListener listener<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-            getView<span style="color:#719e07">(</span>id<span style="color:#719e07">)</span><span style="color:#719e07">.</span>setOnClickListener<span style="color:#719e07">(</span>listener<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+            getView<span style="color:#719e07">(</span>id<span style="color:#719e07">).</span>setOnClickListener<span style="color:#719e07">(</span>listener<span style="color:#719e07">);</span>
             <span style="color:#719e07">return</span> <span style="color:#719e07">this</span><span style="color:#719e07">;</span>
         <span style="color:#719e07">}</span>
 
@@ -645,7 +645,7 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 </span><span style="color:#586e75">         * 设置可见
 </span><span style="color:#586e75">         */</span>
         <span style="color:#268bd2">public</span> ViewHolder <span style="color:#268bd2">setVisibility</span><span style="color:#719e07">(</span><span style="color:#dc322f">int</span> id<span style="color:#719e07">,</span> <span style="color:#dc322f">int</span> visible<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-            getView<span style="color:#719e07">(</span>id<span style="color:#719e07">)</span><span style="color:#719e07">.</span>setVisibility<span style="color:#719e07">(</span>visible<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+            getView<span style="color:#719e07">(</span>id<span style="color:#719e07">).</span>setVisibility<span style="color:#719e07">(</span>visible<span style="color:#719e07">);</span>
             <span style="color:#719e07">return</span> <span style="color:#719e07">this</span><span style="color:#719e07">;</span>
         <span style="color:#719e07">}</span>
 
@@ -653,7 +653,7 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 </span><span style="color:#586e75">         * 设置标签
 </span><span style="color:#586e75">         */</span>
         <span style="color:#268bd2">public</span> ViewHolder <span style="color:#268bd2">setTag</span><span style="color:#719e07">(</span><span style="color:#dc322f">int</span> id<span style="color:#719e07">,</span> Object obj<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-            getView<span style="color:#719e07">(</span>id<span style="color:#719e07">)</span><span style="color:#719e07">.</span>setTag<span style="color:#719e07">(</span>obj<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+            getView<span style="color:#719e07">(</span>id<span style="color:#719e07">).</span>setTag<span style="color:#719e07">(</span>obj<span style="color:#719e07">);</span>
             <span style="color:#719e07">return</span> <span style="color:#719e07">this</span><span style="color:#719e07">;</span>
         <span style="color:#719e07">}</span>
 
@@ -667,15 +667,15 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 </span><span style="color:#586e75">         * 1.第一个参数是数据
 </span><span style="color:#586e75">         * 2.第二个参数是item的布局文件
 </span><span style="color:#586e75">         */</span>
-        myAdapter<span style="color:#719e07">=</span><span style="color:#719e07">new</span> MyAdapter<span style="color:#719e07">&lt;</span>Student<span style="color:#719e07">&gt;</span><span style="color:#719e07">(</span>studentArrayList<span style="color:#719e07">,</span>R<span style="color:#719e07">.</span>layout<span style="color:#719e07">.</span>student_item<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+        myAdapter<span style="color:#719e07">=</span><span style="color:#719e07">new</span> MyAdapter<span style="color:#719e07">&lt;</span>Student<span style="color:#719e07">&gt;(</span>studentArrayList<span style="color:#719e07">,</span>R<span style="color:#719e07">.</span>layout<span style="color:#719e07">.</span>student_item<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
             <span style="color:#268bd2">@Override</span>
             <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">bindView</span><span style="color:#719e07">(</span>ViewHolder holder<span style="color:#719e07">,</span> Student obj<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-                holder<span style="color:#719e07">.</span>setImageResource<span style="color:#719e07">(</span>R<span style="color:#719e07">.</span>id<span style="color:#719e07">.</span>img_item<span style="color:#719e07">,</span>obj<span style="color:#719e07">.</span>getPhotoId<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-                holder<span style="color:#719e07">.</span>setText<span style="color:#719e07">(</span>R<span style="color:#719e07">.</span>id<span style="color:#719e07">.</span>tv_name_item<span style="color:#719e07">,</span>obj<span style="color:#719e07">.</span>getName<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-                holder<span style="color:#719e07">.</span>setText<span style="color:#719e07">(</span>R<span style="color:#719e07">.</span>id<span style="color:#719e07">.</span>tv_name_no<span style="color:#719e07">,</span>obj<span style="color:#719e07">.</span>getStuiNo<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+                holder<span style="color:#719e07">.</span>setImageResource<span style="color:#719e07">(</span>R<span style="color:#719e07">.</span>id<span style="color:#719e07">.</span>img_item<span style="color:#719e07">,</span>obj<span style="color:#719e07">.</span>getPhotoId<span style="color:#719e07">());</span>
+                holder<span style="color:#719e07">.</span>setText<span style="color:#719e07">(</span>R<span style="color:#719e07">.</span>id<span style="color:#719e07">.</span>tv_name_item<span style="color:#719e07">,</span>obj<span style="color:#719e07">.</span>getName<span style="color:#719e07">());</span>
+                holder<span style="color:#719e07">.</span>setText<span style="color:#719e07">(</span>R<span style="color:#719e07">.</span>id<span style="color:#719e07">.</span>tv_name_no<span style="color:#719e07">,</span>obj<span style="color:#719e07">.</span>getStuiNo<span style="color:#719e07">());</span>
             <span style="color:#719e07">}</span>
-        <span style="color:#719e07">}</span><span style="color:#719e07">;</span>
-        listView<span style="color:#719e07">.</span>setAdapter<span style="color:#719e07">(</span>myAdapter<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+        <span style="color:#719e07">};</span>
+        listView<span style="color:#719e07">.</span>setAdapter<span style="color:#719e07">(</span>myAdapter<span style="color:#719e07">);</span>
 </code></pre></div><blockquote>
 <p>这里没有细看 改天再看看</p>
 </blockquote>

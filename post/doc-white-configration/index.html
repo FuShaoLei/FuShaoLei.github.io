@@ -61,7 +61,7 @@
 
 
 
-<link rel="stylesheet" href="https://fushaolei.github.io/scss/dark-mode.min.ed17e7506ac79ad26428e2ac35f7129cd134774d75548840407bb957fe545c00.css" integrity="sha256-7RfnUGrHmtJkKOKsNfcSnNE0d011VIhAQHu5V/5UXAA=" media="screen">
+<link rel="stylesheet" href="https://fushaolei.github.io/scss/dark-mode.min.552aae4638a84aa57cf0b195750a49ea9131d3bb621d1ed3ebc9b14b18166536.css" integrity="sha256-VSquRjioSqV88LGVdQpJ6pEx07tiHR7T68mxSxgWZTY=" media="screen">
 
 
 <script src="https://fushaolei.github.io//js/loadCSS.js"></script>
@@ -325,54 +325,54 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 </blockquote>
 <h3 id="可自定义style">可自定义style</h3>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#586e75">############## style ##############</span>
-<span style="color:#719e07">style</span>:
-  <span style="color:#719e07">layout</span>:
-    <span style="color:#719e07">max-width</span>: 1130px <span style="color:#586e75">#总体宽度</span>
-    <span style="color:#719e07">post-max-width</span>: 800px <span style="color:#586e75">#文章内容宽度</span>
-  <span style="color:#719e07">color</span>:
-    <span style="color:#719e07">theme-main</span>: <span style="color:#2aa198">&#34;#1A98FF&#34;</span> <span style="color:#586e75"># 主色调</span>
-    <span style="color:#719e07">theme-secondary</span>: <span style="color:#2aa198">&#34;#DDF0FF&#34;</span> <span style="color:#586e75"># 次色调</span>
-    <span style="color:#719e07">text-main</span>: <span style="color:#2aa198">&#34;#333333&#34;</span> <span style="color:#586e75"># 文字主色调</span>
-    <span style="color:#719e07">text-secondary</span>: <span style="color:#2aa198">&#34;#898FA0&#34;</span> <span style="color:#586e75"># 文字次色调</span>
-  <span style="color:#719e07">animation</span>:
-    <span style="color:#719e07">open</span>: <span style="color:#cb4b16">true</span> <span style="color:#586e75"># 如果开启动画的话会引入animation.css</span>
+<span style="color:#268bd2">style</span>:
+  <span style="color:#268bd2">layout</span>:
+    <span style="color:#268bd2">max-width</span>: 1130px <span style="color:#586e75">#总体宽度</span>
+    <span style="color:#268bd2">post-max-width</span>: 800px <span style="color:#586e75">#文章内容宽度</span>
+  <span style="color:#268bd2">color</span>:
+    <span style="color:#268bd2">theme-main</span>: <span style="color:#2aa198">&#34;#1A98FF&#34;</span> <span style="color:#586e75"># 主色调</span>
+    <span style="color:#268bd2">theme-secondary</span>: <span style="color:#2aa198">&#34;#DDF0FF&#34;</span> <span style="color:#586e75"># 次色调</span>
+    <span style="color:#268bd2">text-main</span>: <span style="color:#2aa198">&#34;#333333&#34;</span> <span style="color:#586e75"># 文字主色调</span>
+    <span style="color:#268bd2">text-secondary</span>: <span style="color:#2aa198">&#34;#898FA0&#34;</span> <span style="color:#586e75"># 文字次色调</span>
+  <span style="color:#268bd2">animation</span>:
+    <span style="color:#268bd2">open</span>: <span style="color:#cb4b16">true</span> <span style="color:#586e75"># 如果开启动画的话会引入animation.css</span>
 </code></pre></div><h3 id="主页配置">主页配置</h3>
 <h4 id="home页和archive可选配置">home页和archive可选配置</h4>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#586e75"># home页可选类型</span>
-<span style="color:#719e07">home</span>:
-  <span style="color:#719e07">type</span>: <span style="color:#2aa198">&#34;img&#34;</span> <span style="color:#586e75"># 主页的类型，可选 home | img | simple</span>
+<span style="color:#268bd2">home</span>:
+  <span style="color:#268bd2">type</span>: <span style="color:#2aa198">&#34;img&#34;</span> <span style="color:#586e75"># 主页的类型，可选 home | img | simple</span>
 
 <span style="color:#586e75"># archive页可选类型</span>
-<span style="color:#719e07">archive</span>:
-  <span style="color:#719e07">type</span>: <span style="color:#2aa198">&#34;simple&#34;</span> <span style="color:#586e75"># archive的类型，可选 img | simple</span>
+<span style="color:#268bd2">archive</span>:
+  <span style="color:#268bd2">type</span>: <span style="color:#2aa198">&#34;simple&#34;</span> <span style="color:#586e75"># archive的类型，可选 img | simple</span>
 </code></pre></div><p>type为home就是一个封面，为img就是图片加标题的形式，simple就是极简模式</p>
 <h3 id="随机cover">随机cover</h3>
 <p>当你懒的找封面而又想用img模式的时候，我为你准备了些随机封面</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#719e07">archive_img_mode</span>:
-  <span style="color:#719e07">default_cover</span>: <span style="color:#586e75">#默认的cover</span>
-    - https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@<span style="color:#2aa198">1.0</span>/cover/<span style="color:#2aa198">01.</span>jpg
-    - https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@<span style="color:#2aa198">1.0</span>/cover/<span style="color:#2aa198">02.</span>jpg
-    - https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@<span style="color:#2aa198">1.0</span>/cover/<span style="color:#2aa198">03.</span>jpg
-    - https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@<span style="color:#2aa198">1.0</span>/cover/<span style="color:#2aa198">04.</span>jpg
-    - https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@<span style="color:#2aa198">1.0</span>/cover/<span style="color:#2aa198">05.</span>jpg
-    - https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@<span style="color:#2aa198">1.0</span>/cover/<span style="color:#2aa198">06.</span>jpg
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#268bd2">archive_img_mode</span>:
+  <span style="color:#268bd2">default_cover</span>: <span style="color:#586e75">#默认的cover</span>
+    - https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/01.jpg
+    - https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/02.jpg
+    - https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/03.jpg
+    - https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/04.jpg
+    - https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/05.jpg
+    - https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/06.jpg
 </code></pre></div><blockquote>
 <p>图片均来自于bing的每日图片，版权归图片原作者所有，我只是搬到了自己的仓库方便使用，如果有侵犯到你的权益，请和我联系 ( •̀ ω •́ )y</p>
 </blockquote>
 <h3 id="浏览器标签页配置">浏览器标签页配置</h3>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#586e75"># icon</span>
-<span style="color:#719e07">icon</span>:  <span style="color:#586e75">#标签页图标，这里可填链接</span>
+<span style="color:#268bd2">icon</span>:  <span style="color:#586e75">#标签页图标，这里可填链接</span>
 <span style="color:#586e75">#  header</span>
-<span style="color:#719e07">site_name</span>: white.
+<span style="color:#268bd2">site_name</span>: white.
 </code></pre></div><h3 id="menu">menu</h3>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#719e07">menu</span>:
-  <span style="color:#719e07">HOME</span>: /
-  <span style="color:#719e07">BLOG</span>: /archives
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#268bd2">menu</span>:
+  <span style="color:#268bd2">HOME</span>: /
+  <span style="color:#268bd2">BLOG</span>: /archives
 </code></pre></div><h3 id="全局搜索">全局搜索</h3>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#586e75">## 本地搜索</span>
-<span style="color:#719e07">search</span>:
-  <span style="color:#719e07">open</span>: <span style="color:#cb4b16">false</span> <span style="color:#586e75"># 是否开启</span>
-  <span style="color:#719e07">page</span>: /search <span style="color:#586e75"># 页面路径（通常命名为search）</span>
+<span style="color:#268bd2">search</span>:
+  <span style="color:#268bd2">open</span>: <span style="color:#cb4b16">false</span> <span style="color:#586e75"># 是否开启</span>
+  <span style="color:#268bd2">page</span>: /search <span style="color:#586e75"># 页面路径（通常命名为search）</span>
 </code></pre></div><p>如果你想使用的话，请先到根目录执行</p>
 <pre><code class="language-npm" data-lang="npm">npm install hexo-generator-search --save
 </code></pre><p>然后新建一个名为search的page</p>
@@ -389,89 +389,89 @@ cover: <span style="color:#cb4b16">#你还可以自定义cover</span>
 <p>当你的home页有用到type home模式的话 请配置此项</p>
 </blockquote>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#586e75"># 自我介绍</span>
-<span style="color:#719e07">intro</span>:
-  <span style="color:#719e07">title</span>: Hi.I<span style="color:#2aa198">&#39;m White.
-</span><span style="color:#2aa198">  sub: &#39;</span>A [White](https://github.com/FuShaoLei/hexo-theme-white) theme for [Hexo](http://hexo.io/)&#39; <span style="color:#586e75"># markdown语法</span>
-  <span style="color:#719e07">avator</span>: https://cdn.jsdelivr.net/gh/fushaolei/img/<span style="color:#2aa198">20200524104925.</span>jpg <span style="color:#586e75">#头像 暂时还没用到</span>
-  <span style="color:#719e07">author</span>: white <span style="color:#586e75">#所有文章的默认作者</span>
+<span style="color:#268bd2">intro</span>:
+  <span style="color:#268bd2">title</span>: Hi.I&#39;m White.
+  <span style="color:#268bd2">sub</span>: <span style="color:#2aa198">&#39;A [White](https://github.com/FuShaoLei/hexo-theme-white) theme for [Hexo](http://hexo.io/)&#39;</span> <span style="color:#586e75"># markdown语法</span>
+  <span style="color:#268bd2">avator</span>: https://cdn.jsdelivr.net/gh/fushaolei/img/20200524104925.jpg <span style="color:#586e75">#头像 暂时还没用到</span>
+  <span style="color:#268bd2">author</span>: white <span style="color:#586e75">#所有文章的默认作者</span>
 </code></pre></div><h3 id="联系方式">联系方式</h3>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#586e75">#联系方式  </span>
 <span style="color:#586e75">#更多图标：https://remixicon.com/</span>
-<span style="color:#719e07">contact</span>:
-  <span style="color:#719e07">Github</span>:
+<span style="color:#268bd2">contact</span>:
+  <span style="color:#268bd2">Github</span>:
     - https://github.com/FuShaoLei/hexo-theme-white
     - ri-github-line
-  <span style="color:#719e07">Email</span>: 
-    - mailto:<span style="color:#2aa198">1563250958</span>@qq.com
+  <span style="color:#268bd2">Email</span>: 
+    - mailto:1563250958@qq.com
     - ri-mail-line
 </code></pre></div><p>格式就是</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#719e07">名字</span>:
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#268bd2">名字</span>:
   - 链接
   - 图标 
 </code></pre></div><p>更多图标请到 <a href="https://remixicon.com/">https://remixicon.com/</a> 搜寻，感谢此图标项目的开源作者<a href="https://github.com/xiaochunjimmy">xiaochunjimmy</a></p>
 <h3 id="文章toc设置">文章toc设置</h3>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#586e75"># 文章toc索引栏设置</span>
-<span style="color:#719e07">toc</span>:
-  <span style="color:#719e07">open</span>: <span style="color:#cb4b16">true</span> <span style="color:#586e75"># 是否开启</span>
-  <span style="color:#719e07">side</span>: <span style="color:#cb4b16">true</span>  <span style="color:#586e75"># 选择toc的位置，填true的话toc将会显示在文章的侧边，填false的话 toc将出现在文章的开头</span>
-  <span style="color:#719e07">max</span>: <span style="color:#2aa198">2</span> <span style="color:#586e75">#最大深度</span>
-  <span style="color:#719e07">min</span>: <span style="color:#2aa198">2</span> <span style="color:#586e75">#最小深度</span>
+<span style="color:#268bd2">toc</span>:
+  <span style="color:#268bd2">open</span>: <span style="color:#cb4b16">true</span> <span style="color:#586e75"># 是否开启</span>
+  <span style="color:#268bd2">side</span>: <span style="color:#cb4b16">true</span>  <span style="color:#586e75"># 选择toc的位置，填true的话toc将会显示在文章的侧边，填false的话 toc将出现在文章的开头</span>
+  <span style="color:#268bd2">max</span>: <span style="color:#2aa198">2</span> <span style="color:#586e75">#最大深度</span>
+  <span style="color:#268bd2">min</span>: <span style="color:#2aa198">2</span> <span style="color:#586e75">#最小深度</span>
 </code></pre></div><p>其中side如果设置为false的话，将会出现在文章的top部分，如果设置为true的话，将会出现在侧边
 min设置的是最小深度，max设置的是最大深度，<del>如上面配置所示，min为2，说明h2索引是至少要出现的，不会出现h1索引 （ 突然不知道怎么表达，</del> 如果不理解的话建议你试试 😂</p>
 <h3 id="highlight">highlight</h3>
-<p>代码高亮，想要使用代码高亮，得先把根目录的<strong><code>_config.yml</code>里的highlight的enable置成false</strong></p>
+<p>代码高亮，想要使用代码高亮，得先把根目录的**<code>_config.yml</code>里的highlight的enable置成false**</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#586e75"># 插件</span>
-<span style="color:#719e07">plugins</span>:
-  <span style="color:#719e07">highlightjs</span>:
-    <span style="color:#719e07">js</span>: https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@<span style="color:#2aa198">9.18</span><span style="color:#2aa198">.1</span>/build/highlight.min.js
-    <span style="color:#719e07">css</span>: https://cdn.jsdelivr.net/npm/highlight.js@<span style="color:#2aa198">10.1</span><span style="color:#2aa198">.1</span>/styles/github.css
+<span style="color:#268bd2">plugins</span>:
+  <span style="color:#268bd2">highlightjs</span>:
+    <span style="color:#268bd2">js</span>: https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js
+    <span style="color:#268bd2">css</span>: https://cdn.jsdelivr.net/npm/highlight.js@10.1.1/styles/github.css
     <span style="color:#586e75"># more: https://www.jsdelivr.com/package/npm/highlight.js?path=styles</span>
 </code></pre></div><p><strong>注：</strong>  hexo 5.0版本此处有bug（2020年8月10日写），就是渲染不出来大括号（<code>{</code>和<code>}</code>）</p>
 <p>这里博主有点懒了，最近事多心烦，就等着hexo官方更新吧 QAQ</p>
 <h3 id="评论系统">评论系统</h3>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#586e75"># 评论系统设置</span>
-<span style="color:#719e07">comments</span>:
-  <span style="color:#719e07">open</span>: <span style="color:#cb4b16">false</span> <span style="color:#586e75">#是否开启评论系统</span>
-  <span style="color:#719e07">system</span>: gitalk <span style="color:#586e75">#选择评论系统 可选 valine gitalk livere</span>
+<span style="color:#268bd2">comments</span>:
+  <span style="color:#268bd2">open</span>: <span style="color:#cb4b16">false</span> <span style="color:#586e75">#是否开启评论系统</span>
+  <span style="color:#268bd2">system</span>: gitalk <span style="color:#586e75">#选择评论系统 可选 valine gitalk livere</span>
   <span style="color:#586e75"># Valine</span>
-  <span style="color:#719e07">valine</span>:
-    <span style="color:#719e07">appid</span>: <span style="color:#586e75">#Leancloud应用的AppID  这里和下面的要换成你自己的啊QAQ</span>
-    <span style="color:#719e07">appkey</span>: <span style="color:#586e75">#Leancloud应用的AppKey</span>
-    <span style="color:#719e07">verify</span>: <span style="color:#cb4b16">false</span> <span style="color:#586e75">#验证码</span>
-    <span style="color:#719e07">notify</span>: <span style="color:#cb4b16">true</span> <span style="color:#586e75">#评论回复提醒</span>
-    <span style="color:#719e07">avatar</span>: robohash <span style="color:#586e75">#评论列表头像样式：&#39;&#39;/mm/identicon/monsterid/wavatar/retro/hide</span>
+  <span style="color:#268bd2">valine</span>:
+    <span style="color:#268bd2">appid</span>: <span style="color:#586e75">#Leancloud应用的AppID  这里和下面的要换成你自己的啊QAQ</span>
+    <span style="color:#268bd2">appkey</span>: <span style="color:#586e75">#Leancloud应用的AppKey</span>
+    <span style="color:#268bd2">verify</span>: <span style="color:#cb4b16">false</span> <span style="color:#586e75">#验证码</span>
+    <span style="color:#268bd2">notify</span>: <span style="color:#cb4b16">true</span> <span style="color:#586e75">#评论回复提醒</span>
+    <span style="color:#268bd2">avatar</span>: robohash <span style="color:#586e75">#评论列表头像样式：&#39;&#39;/mm/identicon/monsterid/wavatar/retro/hide</span>
     <span style="color:#586e75">#头像类型可见： https://valine.js.org/avatar.html</span>
-    <span style="color:#719e07">placeholder</span>: 留下你来过的痕迹~ <span style="color:#586e75">#评论框占位符</span>
+    <span style="color:#268bd2">placeholder</span>: 留下你来过的痕迹~ <span style="color:#586e75">#评论框占位符</span>
   <span style="color:#586e75"># Gitalk</span>
-  <span style="color:#719e07">gitalk</span>:
-    <span style="color:#719e07">owner</span>:  <span style="color:#586e75">#Github 用户名,</span>
-    <span style="color:#719e07">repo</span>:  <span style="color:#586e75">#储存评论issue的github仓库名</span>
-    <span style="color:#719e07">admin</span>:  <span style="color:#586e75">#Github 用户名</span>
-    <span style="color:#719e07">clientID</span>:  <span style="color:#586e75">#`Github Application clientID`</span>
-    <span style="color:#719e07">clientSecret</span>: <span style="color:#586e75">#`Github Application clientSecret`</span>
+  <span style="color:#268bd2">gitalk</span>:
+    <span style="color:#268bd2">owner</span>:  <span style="color:#586e75">#Github 用户名,</span>
+    <span style="color:#268bd2">repo</span>:  <span style="color:#586e75">#储存评论issue的github仓库名</span>
+    <span style="color:#268bd2">admin</span>:  <span style="color:#586e75">#Github 用户名</span>
+    <span style="color:#268bd2">clientID</span>:  <span style="color:#586e75">#`Github Application clientID`</span>
+    <span style="color:#268bd2">clientSecret</span>: <span style="color:#586e75">#`Github Application clientSecret`</span>
   <span style="color:#586e75">#livere</span>
-  <span style="color:#719e07">livere</span>: <span style="color:#586e75"># 前往 http://livere.com/ 申请账号</span>
-    <span style="color:#719e07">dataId</span>: city <span style="color:#586e75">#免费版本city</span>
-    <span style="color:#719e07">dataUid</span>: <span style="color:#586e75">#安装代码中 data-uid 后面数据</span>
+  <span style="color:#268bd2">livere</span>: <span style="color:#586e75"># 前往 http://livere.com/ 申请账号</span>
+    <span style="color:#268bd2">dataId</span>: city <span style="color:#586e75">#免费版本city</span>
+    <span style="color:#268bd2">dataUid</span>: <span style="color:#586e75">#安装代码中 data-uid 后面数据</span>
 </code></pre></div><p>这里的话相关教程大家网上搜就好了。这里就不赘诉了</p>
 <blockquote>
 <p>还是写一些gitalk的坑吧，一个是repo这里 写的应该是<strong>仓库名</strong>，而不是仓库链接或者其他的东西，然后gitalk要上线部署一次才可以，md文件名字最好用英文来命名，如果用中文的话，超出50个字符将会初始化失败</p>
 </blockquote>
 <h3 id="其他">其他</h3>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#586e75"># 页脚</span>
-<span style="color:#719e07">footer</span>: Power by [Hexo](http://hexo.io/) Theme by [White](https://github.com/FuShaoLei/hexo-theme-white) <span style="color:#586e75"># markdown语法</span>
+<span style="color:#268bd2">footer</span>: Power by [Hexo](http://hexo.io/) Theme by [White](https://github.com/FuShaoLei/hexo-theme-white) <span style="color:#586e75"># markdown语法</span>
 
 <span style="color:#586e75">#有分类时是否开启menu分类页和自定义名字</span>
-<span style="color:#719e07">menu_categories</span>:
-  <span style="color:#719e07">open</span>: <span style="color:#cb4b16">true</span>
-  <span style="color:#719e07">name</span>: 分类
+<span style="color:#268bd2">menu_categories</span>:
+  <span style="color:#268bd2">open</span>: <span style="color:#cb4b16">true</span>
+  <span style="color:#268bd2">name</span>: 分类
 
 <span style="color:#586e75">#可自定义归档标签页名字 </span>
-<span style="color:#719e07">archive_tab_name</span>: Blog
+<span style="color:#268bd2">archive_tab_name</span>: Blog
 
 <span style="color:#586e75">#图片懒加载</span>
-<span style="color:#719e07">lazyload</span>:
-  <span style="color:#719e07">open</span>: <span style="color:#cb4b16">true</span> <span style="color:#586e75">#是否开启</span>
+<span style="color:#268bd2">lazyload</span>:
+  <span style="color:#268bd2">open</span>: <span style="color:#cb4b16">true</span> <span style="color:#586e75">#是否开启</span>
 </code></pre></div><p>这里就不bb了 大家应该看的懂</p>
 <h2 id="进阶使用">进阶使用</h2>
 <h3 id="平滑升级">平滑升级</h3>

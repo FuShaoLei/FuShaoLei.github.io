@@ -51,20 +51,20 @@
 &lt;p&gt;类似的有很多，其实这我一开始也没理解为什么要空格，其实一 是为了提高阅读性，二呢也是为了提高可维护性&lt;/p&gt;
 &lt;h2 id=&#34;简化代码&#34;&gt;简化代码&lt;/h2&gt;
 &lt;p&gt;想起了一个这几天发生的事情，哈哈，就是我要判断一个布尔值是不是为true嘛，然后我居然写了这样的代码&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;isShow &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#cb4b16&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-    &lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;isShow &lt;span style=&#34;color:#719e07&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#cb4b16&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;){&lt;/span&gt;
+    &lt;span style=&#34;color:#719e07&#34;&gt;.....&lt;/span&gt;
 &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;哈哈 现在想起来真是好笑，像是刚学会飞的小鸟，笨拙的扑棱着翅膀&lt;/p&gt;
 &lt;p&gt;其实还有一些可以简化的代码，比如&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;boolean&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;isOk&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;String name&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-    &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;mName&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;equal&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;name&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;boolean&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;isOk&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;String name&lt;span style=&#34;color:#719e07&#34;&gt;){&lt;/span&gt;
+    &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;mName&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;equal&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;name&lt;span style=&#34;color:#719e07&#34;&gt;)){&lt;/span&gt;
         &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#cb4b16&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
     &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
     &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#cb4b16&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
 &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;其实不就是想判断是否相等嘛，其实可以直接返回的，不用这么麻烦，这种冗余的代码表示我就犯过几次。。。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;boolean&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;isOk&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;String name&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-    &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; mName&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;equal&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;name&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;boolean&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;isOk&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;String name&lt;span style=&#34;color:#719e07&#34;&gt;){&lt;/span&gt;
+    &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; mName&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;equal&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;name&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
 &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;类似的代码还有很多，还有什么三元运算符之类的， 就不一一例举了&lt;/p&gt;
 &lt;h2 id=&#34;让自己更加意识到自己的不足&#34;&gt;让自己更加意识到自己的不足&lt;/h2&gt;
@@ -72,8 +72,8 @@
 &lt;h3 id=&#34;判断string类型和另一个string类型的时候&#34;&gt;判断String类型和另一个String类型的时候&lt;/h3&gt;
 &lt;p&gt;这个是比较无语的错误&lt;/p&gt;
 &lt;p&gt;我经常写着写着就顺着写成这样了：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;isShow &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-    &lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;isShow &lt;span style=&#34;color:#719e07&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;){&lt;/span&gt;
+    &lt;span style=&#34;color:#719e07&#34;&gt;....&lt;/span&gt;
 &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;实际上，这样的话如果isShow为1的话还是会判为false的，事实上应该用equals去判断是否相等。&lt;/p&gt;
 &lt;h3 id=&#34;思考的太局限&#34;&gt;思考的太局限&lt;/h3&gt;
@@ -419,8 +419,8 @@ mWebView.getSettings().setBlockNetworkImage(false);//解决图片不显示
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;二叉树的存储结构&#34;&gt;二叉树的存储结构&lt;/h3&gt;
 &lt;h4 id=&#34;顺序存储&#34;&gt;顺序存储&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;color:#719e07&#34;&gt;#&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;define MAXTSIZE 100&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;
-&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;#&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;define TElemType char&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;color:#719e07&#34;&gt;#define MAXTSIZE 100
+&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;#define TElemType char
 &lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&lt;/span&gt;
 &lt;span style=&#34;color:#719e07&#34;&gt;typedef&lt;/span&gt; TElemType SqBiTree[MAXTSIZE];
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
@@ -445,7 +445,7 @@ mWebView.getSettings().setBlockNetworkImage(false);//解决图片不显示
 &lt;h4 id=&#34;二叉链表&#34;&gt;二叉链表&lt;/h4&gt;
 &lt;p&gt;每个结点有两个指针指向其左右孩子&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//链式存储结构
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//二叉链表
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//二叉链表
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;typedef&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;struct&lt;/span&gt; BiNode {
     TElemType data;
     &lt;span style=&#34;color:#719e07&#34;&gt;struct&lt;/span&gt; BiNode &lt;span style=&#34;color:#719e07&#34;&gt;*&lt;/span&gt;lchild,&lt;span style=&#34;color:#719e07&#34;&gt;*&lt;/span&gt;rchild;&lt;span style=&#34;color:#586e75&#34;&gt;//左右孩子指针
@@ -478,11 +478,11 @@ mWebView.getSettings().setBlockNetworkImage(false);//解决图片不显示
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; * 若为非空，根，左，右
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; */&lt;/span&gt;
 &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;PreOrderTraverse&lt;/span&gt;(BiTree T) {
-    &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt; (T &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#b58900&#34;&gt;NULL&lt;/span&gt;) &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt;;
+    &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt; (T &lt;span style=&#34;color:#719e07&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#b58900&#34;&gt;NULL&lt;/span&gt;) &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt;;
     &lt;span style=&#34;color:#719e07&#34;&gt;else&lt;/span&gt; {
         visit(T);&lt;span style=&#34;color:#586e75&#34;&gt;//访问根结点
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        PreOrderTraverse(T&lt;span style=&#34;color:#719e07&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt;lchild);&lt;span style=&#34;color:#586e75&#34;&gt;//递归遍历左子树
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        PreOrderTraverse(T&lt;span style=&#34;color:#719e07&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt;rchild);&lt;span style=&#34;color:#586e75&#34;&gt;//递归遍历右子树
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        PreOrderTraverse(T&lt;span style=&#34;color:#719e07&#34;&gt;-&amp;gt;&lt;/span&gt;lchild);&lt;span style=&#34;color:#586e75&#34;&gt;//递归遍历左子树
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        PreOrderTraverse(T&lt;span style=&#34;color:#719e07&#34;&gt;-&amp;gt;&lt;/span&gt;rchild);&lt;span style=&#34;color:#586e75&#34;&gt;//递归遍历右子树
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;    }
 }
 
@@ -492,11 +492,11 @@ mWebView.getSettings().setBlockNetworkImage(false);//解决图片不显示
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; * 若为非空，左，根，右
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; */&lt;/span&gt;
 &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;InOrderTraverse&lt;/span&gt;(BiTree T) {
-    &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt; (T &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#b58900&#34;&gt;NULL&lt;/span&gt;) &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt;;
+    &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt; (T &lt;span style=&#34;color:#719e07&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#b58900&#34;&gt;NULL&lt;/span&gt;) &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt;;
     &lt;span style=&#34;color:#719e07&#34;&gt;else&lt;/span&gt; {
-        InOrderTraverse(T&lt;span style=&#34;color:#719e07&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt;lchild);
+        InOrderTraverse(T&lt;span style=&#34;color:#719e07&#34;&gt;-&amp;gt;&lt;/span&gt;lchild);
         visit(T);
-        InOrderTraverse(T&lt;span style=&#34;color:#719e07&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt;rchild);
+        InOrderTraverse(T&lt;span style=&#34;color:#719e07&#34;&gt;-&amp;gt;&lt;/span&gt;rchild);
     }
 }
 
@@ -506,10 +506,10 @@ mWebView.getSettings().setBlockNetworkImage(false);//解决图片不显示
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; * 若为非空，左，右，根
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; */&lt;/span&gt;
 &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;PostOrderTraverse&lt;/span&gt;(BiTree T) {
-    &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt; (T &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#b58900&#34;&gt;NULL&lt;/span&gt;) &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt;;
+    &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt; (T &lt;span style=&#34;color:#719e07&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#b58900&#34;&gt;NULL&lt;/span&gt;) &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt;;
     &lt;span style=&#34;color:#719e07&#34;&gt;else&lt;/span&gt; {
-        PostOrderTraverse(T&lt;span style=&#34;color:#719e07&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt;lchild);
-        PostOrderTraverse(T&lt;span style=&#34;color:#719e07&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt;rchild);
+        PostOrderTraverse(T&lt;span style=&#34;color:#719e07&#34;&gt;-&amp;gt;&lt;/span&gt;lchild);
+        PostOrderTraverse(T&lt;span style=&#34;color:#719e07&#34;&gt;-&amp;gt;&lt;/span&gt;rchild);
         visit(T);
     }
 }

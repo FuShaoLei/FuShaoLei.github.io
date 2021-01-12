@@ -57,7 +57,7 @@
 
 
 
-<link rel="stylesheet" href="https://fushaolei.github.io/scss/dark-mode.min.ed17e7506ac79ad26428e2ac35f7129cd134774d75548840407bb957fe545c00.css" integrity="sha256-7RfnUGrHmtJkKOKsNfcSnNE0d011VIhAQHu5V/5UXAA=" media="screen">
+<link rel="stylesheet" href="https://fushaolei.github.io/scss/dark-mode.min.552aae4638a84aa57cf0b195750a49ea9131d3bb621d1ed3ebc9b14b18166536.css" integrity="sha256-VSquRjioSqV88LGVdQpJ6pEx07tiHR7T68mxSxgWZTY=" media="screen">
 
 
 <script src="https://fushaolei.github.io//js/loadCSS.js"></script>
@@ -331,34 +331,34 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 <p>好了，想要匹配上，得先连接上服务器</p>
 <h3 id="进行简单连接测试">进行简单连接测试</h3>
 <p>1.android客户端：在子线程中启用socket</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">private</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">initSocket</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-        <span style="color:#719e07">new</span> Thread<span style="color:#719e07">(</span><span style="color:#719e07">new</span> Runnable<span style="color:#719e07">(</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">private</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">initSocket</span><span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
+        <span style="color:#719e07">new</span> Thread<span style="color:#719e07">(</span><span style="color:#719e07">new</span> Runnable<span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
             <span style="color:#268bd2">@Override</span>
-            <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">run</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+            <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">run</span><span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
                 <span style="color:#719e07">try</span> <span style="color:#719e07">{</span>
-                    clientSocket<span style="color:#719e07">=</span><span style="color:#719e07">new</span> Socket<span style="color:#719e07">(</span>IP<span style="color:#719e07">,</span>PORT<span style="color:#719e07">)</span><span style="color:#719e07">;</span><span style="color:#586e75">//这个ip是电脑的ip，端口自己定的
-</span><span style="color:#586e75"></span>                    <span style="color:#719e07">if</span><span style="color:#719e07">(</span>clientSocket<span style="color:#719e07">.</span>isConnected<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">)</span><span style="color:#719e07">{</span><span style="color:#586e75">//进行简单的测试
-</span><span style="color:#586e75"></span>                        Log<span style="color:#719e07">.</span>e<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;成功！&#34;</span><span style="color:#719e07">,</span><span style="color:#2aa198">&#34;已连接到服务器！！&#34;</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+                    clientSocket<span style="color:#719e07">=</span><span style="color:#719e07">new</span> Socket<span style="color:#719e07">(</span>IP<span style="color:#719e07">,</span>PORT<span style="color:#719e07">);</span><span style="color:#586e75">//这个ip是电脑的ip，端口自己定的
+</span><span style="color:#586e75"></span>                    <span style="color:#719e07">if</span><span style="color:#719e07">(</span>clientSocket<span style="color:#719e07">.</span>isConnected<span style="color:#719e07">()){</span><span style="color:#586e75">//进行简单的测试
+</span><span style="color:#586e75"></span>                        Log<span style="color:#719e07">.</span>e<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;成功！&#34;</span><span style="color:#719e07">,</span><span style="color:#2aa198">&#34;已连接到服务器！！&#34;</span><span style="color:#719e07">);</span>
                     <span style="color:#719e07">}</span>
-                    clientSocket<span style="color:#719e07">.</span>close<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-                <span style="color:#719e07">}</span><span style="color:#719e07">catch</span> <span style="color:#719e07">(</span>Exception e<span style="color:#719e07">)</span><span style="color:#719e07">{</span>
-                    e<span style="color:#719e07">.</span>printStackTrace<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+                    clientSocket<span style="color:#719e07">.</span>close<span style="color:#719e07">();</span>
+                <span style="color:#719e07">}</span><span style="color:#719e07">catch</span> <span style="color:#719e07">(</span>Exception e<span style="color:#719e07">){</span>
+                    e<span style="color:#719e07">.</span>printStackTrace<span style="color:#719e07">();</span>
                 <span style="color:#719e07">}</span>
             <span style="color:#719e07">}</span>
-        <span style="color:#719e07">}</span><span style="color:#719e07">)</span><span style="color:#719e07">.</span>start<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+        <span style="color:#719e07">}).</span>start<span style="color:#719e07">();</span>
     <span style="color:#719e07">}</span>
 </code></pre></div><p>2.java服务端,</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#719e07">try</span> <span style="color:#719e07">{</span>
-			serverSocket<span style="color:#719e07">=</span><span style="color:#719e07">new</span> ServerSocket<span style="color:#719e07">(</span>SERVER_PORT<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-			System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;服务端已启动，端口号是: &#34;</span><span style="color:#719e07">+</span>SERVER_PORT<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-			System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;==========等待客户端连接中==========&#34;</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+			serverSocket<span style="color:#719e07">=</span><span style="color:#719e07">new</span> ServerSocket<span style="color:#719e07">(</span>SERVER_PORT<span style="color:#719e07">);</span>
+			System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;服务端已启动，端口号是: &#34;</span><span style="color:#719e07">+</span>SERVER_PORT<span style="color:#719e07">);</span>
+			System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;==========等待客户端连接中==========&#34;</span><span style="color:#719e07">);</span>
 			<span style="color:#719e07">while</span><span style="color:#719e07">(</span><span style="color:#cb4b16">true</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-				Socket socket<span style="color:#719e07">=</span>serverSocket<span style="color:#719e07">.</span>accept<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-				System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;客户端已连接！客户端的IP地址是:&#34;</span><span style="color:#719e07">+</span>socket<span style="color:#719e07">.</span>getInetAddress<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+				Socket socket<span style="color:#719e07">=</span>serverSocket<span style="color:#719e07">.</span>accept<span style="color:#719e07">();</span>
+				System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;客户端已连接！客户端的IP地址是:&#34;</span><span style="color:#719e07">+</span>socket<span style="color:#719e07">.</span>getInetAddress<span style="color:#719e07">());</span>
 			<span style="color:#719e07">}</span>
 		<span style="color:#719e07">}</span> <span style="color:#719e07">catch</span> <span style="color:#719e07">(</span>IOException e<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
 			<span style="color:#586e75">// TODO Auto-generated catch block
-</span><span style="color:#586e75"></span>			e<span style="color:#719e07">.</span>printStackTrace<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+</span><span style="color:#586e75"></span>			e<span style="color:#719e07">.</span>printStackTrace<span style="color:#719e07">();</span>
 		<span style="color:#719e07">}</span>
 </code></pre></div><p>ok 先打开服务端，后打开客户端，关掉windows防火墙，我们进行一下小测试</p>
 <p><img src="https://cdn.jsdelivr.net/gh/fushaolei/img/20200524155439.png" alt="服务端已启动"></p>
@@ -367,16 +367,16 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 <p>已成功连接！</p>
 <p>在给服务端传一个id试试。。</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#719e07">try</span><span style="color:#719e07">{</span>
-            DataOutputStream writer<span style="color:#719e07">=</span><span style="color:#719e07">new</span> DataOutputStream<span style="color:#719e07">(</span>clientSocket<span style="color:#719e07">.</span>getOutputStream<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-            writer<span style="color:#719e07">.</span>writeInt<span style="color:#719e07">(</span>userId<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-        <span style="color:#719e07">}</span><span style="color:#719e07">catch</span> <span style="color:#719e07">(</span>Exception e<span style="color:#719e07">)</span><span style="color:#719e07">{</span>
-            e<span style="color:#719e07">.</span>printStackTrace<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+            DataOutputStream writer<span style="color:#719e07">=</span><span style="color:#719e07">new</span> DataOutputStream<span style="color:#719e07">(</span>clientSocket<span style="color:#719e07">.</span>getOutputStream<span style="color:#719e07">());</span>
+            writer<span style="color:#719e07">.</span>writeInt<span style="color:#719e07">(</span>userId<span style="color:#719e07">);</span>
+        <span style="color:#719e07">}</span><span style="color:#719e07">catch</span> <span style="color:#719e07">(</span>Exception e<span style="color:#719e07">){</span>
+            e<span style="color:#719e07">.</span>printStackTrace<span style="color:#719e07">();</span>
         <span style="color:#719e07">}</span>
 </code></pre></div><p>服务端进行接受</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">reader<span style="color:#719e07">=</span><span style="color:#719e07">new</span> DataInputStream<span style="color:#719e07">(</span>socket<span style="color:#719e07">.</span>getInputStream<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">reader<span style="color:#719e07">=</span><span style="color:#719e07">new</span> DataInputStream<span style="color:#719e07">(</span>socket<span style="color:#719e07">.</span>getInputStream<span style="color:#719e07">());</span>
 <span style="color:#719e07">while</span><span style="color:#719e07">(</span><span style="color:#cb4b16">true</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-	<span style="color:#dc322f">int</span> id<span style="color:#719e07">=</span>reader<span style="color:#719e07">.</span>readInt<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-	System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;获取到客户端的id是：&#34;</span><span style="color:#719e07">+</span>id<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+	<span style="color:#dc322f">int</span> id<span style="color:#719e07">=</span>reader<span style="color:#719e07">.</span>readInt<span style="color:#719e07">();</span>
+	System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;获取到客户端的id是：&#34;</span><span style="color:#719e07">+</span>id<span style="color:#719e07">);</span>
 <span style="color:#719e07">}</span>
 </code></pre></div><p>同样也可以接受成功。</p>
 <p>好了 ，接下来可以考虑匹配的问题了。</p>
@@ -399,19 +399,19 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 		<span style="color:#719e07">this</span><span style="color:#719e07">.</span>socket<span style="color:#719e07">=</span>socket<span style="color:#719e07">;</span>
 	<span style="color:#719e07">}</span>
 	
-	<span style="color:#268bd2">public</span> <span style="color:#dc322f">int</span> <span style="color:#268bd2">getId</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+	<span style="color:#268bd2">public</span> <span style="color:#dc322f">int</span> <span style="color:#268bd2">getId</span><span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
 		<span style="color:#719e07">return</span> id<span style="color:#719e07">;</span>
 	<span style="color:#719e07">}</span>
 	<span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">setId</span><span style="color:#719e07">(</span><span style="color:#dc322f">int</span> id<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
 		<span style="color:#719e07">this</span><span style="color:#719e07">.</span>id <span style="color:#719e07">=</span> id<span style="color:#719e07">;</span>
 	<span style="color:#719e07">}</span>
-	<span style="color:#268bd2">public</span> <span style="color:#dc322f">int</span> <span style="color:#268bd2">getFriendid</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+	<span style="color:#268bd2">public</span> <span style="color:#dc322f">int</span> <span style="color:#268bd2">getFriendid</span><span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
 		<span style="color:#719e07">return</span> friendid<span style="color:#719e07">;</span>
 	<span style="color:#719e07">}</span>
 	<span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">setFriendid</span><span style="color:#719e07">(</span><span style="color:#dc322f">int</span> friendid<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
 		<span style="color:#719e07">this</span><span style="color:#719e07">.</span>friendid <span style="color:#719e07">=</span> friendid<span style="color:#719e07">;</span>
 	<span style="color:#719e07">}</span>
-	<span style="color:#268bd2">public</span> Socket <span style="color:#268bd2">getSocket</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+	<span style="color:#268bd2">public</span> Socket <span style="color:#268bd2">getSocket</span><span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
 		<span style="color:#719e07">return</span> socket<span style="color:#719e07">;</span>
 	<span style="color:#719e07">}</span>
 	<span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">setSocket</span><span style="color:#719e07">(</span>Socket socket<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
@@ -419,48 +419,48 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 	<span style="color:#719e07">}</span>
 
 	<span style="color:#268bd2">@Override</span>
-	<span style="color:#268bd2">public</span> String <span style="color:#268bd2">toString</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+	<span style="color:#268bd2">public</span> String <span style="color:#268bd2">toString</span><span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
 		<span style="color:#719e07">return</span> <span style="color:#2aa198">&#34;SocketClass [id=&#34;</span> <span style="color:#719e07">+</span> id <span style="color:#719e07">+</span> <span style="color:#2aa198">&#34;, friendid=&#34;</span> <span style="color:#719e07">+</span> friendid <span style="color:#719e07">+</span> <span style="color:#2aa198">&#34;]&#34;</span><span style="color:#719e07">;</span>
 	<span style="color:#719e07">}</span>
 <span style="color:#719e07">}</span>
 
 </code></pre></div><h4 id="二新建匹配方法">二，新建匹配方法</h4>
 <p>放在获取客户端id的后面</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">reader<span style="color:#719e07">=</span><span style="color:#719e07">new</span> DataInputStream<span style="color:#719e07">(</span>socket<span style="color:#719e07">.</span>getInputStream<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">reader<span style="color:#719e07">=</span><span style="color:#719e07">new</span> DataInputStream<span style="color:#719e07">(</span>socket<span style="color:#719e07">.</span>getInputStream<span style="color:#719e07">());</span>
 <span style="color:#719e07">while</span><span style="color:#719e07">(</span><span style="color:#cb4b16">true</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-	<span style="color:#dc322f">int</span> id<span style="color:#719e07">=</span>reader<span style="color:#719e07">.</span>readInt<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-	System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;获取到客户端的id是：&#34;</span><span style="color:#719e07">+</span>id<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-	socketList<span style="color:#719e07">.</span>add<span style="color:#719e07">(</span><span style="color:#719e07">new</span> SocketClass<span style="color:#719e07">(</span>id<span style="color:#719e07">,</span> socket<span style="color:#719e07">)</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span><span style="color:#586e75">//添加进List里去备用
-</span><span style="color:#586e75"></span>	match<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span><span style="color:#586e75">//由于是在while（true）循环里，所以会一直等待匹配
+	<span style="color:#dc322f">int</span> id<span style="color:#719e07">=</span>reader<span style="color:#719e07">.</span>readInt<span style="color:#719e07">();</span>
+	System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;获取到客户端的id是：&#34;</span><span style="color:#719e07">+</span>id<span style="color:#719e07">);</span>
+	socketList<span style="color:#719e07">.</span>add<span style="color:#719e07">(</span><span style="color:#719e07">new</span> SocketClass<span style="color:#719e07">(</span>id<span style="color:#719e07">,</span> socket<span style="color:#719e07">));</span><span style="color:#586e75">//添加进List里去备用
+</span><span style="color:#586e75"></span>	match<span style="color:#719e07">();</span><span style="color:#586e75">//由于是在while（true）循环里，所以会一直等待匹配
 </span><span style="color:#586e75"></span><span style="color:#719e07">}</span> 
 
 </code></pre></div><p>匹配方法</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">	<span style="color:#586e75">//开始匹配
-</span><span style="color:#586e75"></span>	<span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">match</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+</span><span style="color:#586e75"></span>	<span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">match</span><span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
 <span style="color:#586e75">//		System.out.println(socketList.get(0).toString());//int默认值是0
 </span><span style="color:#586e75"></span>		<span style="color:#586e75">//大于或2才开始，否则就不能匹配咯
-</span><span style="color:#586e75"></span>		<span style="color:#719e07">if</span><span style="color:#719e07">(</span>socketList<span style="color:#719e07">.</span>size<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">&gt;</span><span style="color:#719e07">=</span>2<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-			System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;开始匹配前的状态&#34;</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+</span><span style="color:#586e75"></span>		<span style="color:#719e07">if</span><span style="color:#719e07">(</span>socketList<span style="color:#719e07">.</span>size<span style="color:#719e07">()&gt;=</span>2<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+			System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;开始匹配前的状态&#34;</span><span style="color:#719e07">);</span>
 			<span style="color:#719e07">for</span><span style="color:#719e07">(</span>SocketClass mSocket<span style="color:#719e07">:</span>socketList<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-				System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span>mSocket<span style="color:#719e07">.</span>toString<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+				System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span>mSocket<span style="color:#719e07">.</span>toString<span style="color:#719e07">());</span>
 			<span style="color:#719e07">}</span>
-			<span style="color:#719e07">for</span><span style="color:#719e07">(</span><span style="color:#dc322f">int</span> i<span style="color:#719e07">=</span>0<span style="color:#719e07">;</span>i<span style="color:#719e07">&lt;</span>socketList<span style="color:#719e07">.</span>size<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>i<span style="color:#719e07">+</span><span style="color:#719e07">+</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-				<span style="color:#719e07">if</span><span style="color:#719e07">(</span>socketList<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span>i<span style="color:#719e07">)</span><span style="color:#719e07">.</span>getFriendid<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">=</span><span style="color:#719e07">=</span>0<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+			<span style="color:#719e07">for</span><span style="color:#719e07">(</span><span style="color:#dc322f">int</span> i<span style="color:#719e07">=</span>0<span style="color:#719e07">;</span>i<span style="color:#719e07">&lt;</span>socketList<span style="color:#719e07">.</span>size<span style="color:#719e07">();</span>i<span style="color:#719e07">++)</span> <span style="color:#719e07">{</span>
+				<span style="color:#719e07">if</span><span style="color:#719e07">(</span>socketList<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span>i<span style="color:#719e07">).</span>getFriendid<span style="color:#719e07">()==</span>0<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
                     <span style="color:#586e75">//friendId(int)的基本默认值是0，所以，如果等于0的话说明没有，则进行匹配操作
-</span><span style="color:#586e75"></span>					<span style="color:#719e07">for</span><span style="color:#719e07">(</span><span style="color:#dc322f">int</span> j<span style="color:#719e07">=</span>i<span style="color:#719e07">+</span>1<span style="color:#719e07">;</span>j<span style="color:#719e07">&lt;</span>socketList<span style="color:#719e07">.</span>size<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>j<span style="color:#719e07">+</span><span style="color:#719e07">+</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-						<span style="color:#719e07">if</span><span style="color:#719e07">(</span>socketList<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span>j<span style="color:#719e07">)</span><span style="color:#719e07">.</span>getFriendid<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">=</span><span style="color:#719e07">=</span>0<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+</span><span style="color:#586e75"></span>					<span style="color:#719e07">for</span><span style="color:#719e07">(</span><span style="color:#dc322f">int</span> j<span style="color:#719e07">=</span>i<span style="color:#719e07">+</span>1<span style="color:#719e07">;</span>j<span style="color:#719e07">&lt;</span>socketList<span style="color:#719e07">.</span>size<span style="color:#719e07">();</span>j<span style="color:#719e07">++)</span> <span style="color:#719e07">{</span>
+						<span style="color:#719e07">if</span><span style="color:#719e07">(</span>socketList<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span>j<span style="color:#719e07">).</span>getFriendid<span style="color:#719e07">()==</span>0<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
                             <span style="color:#586e75">//如果在此循环里，也有一个friendId为0的话，就进行两两匹配
-</span><span style="color:#586e75"></span>							socketList<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span>i<span style="color:#719e07">)</span><span style="color:#719e07">.</span>setFriendid<span style="color:#719e07">(</span>socketList<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span>j<span style="color:#719e07">)</span><span style="color:#719e07">.</span>getId<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-							socketList<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span>j<span style="color:#719e07">)</span><span style="color:#719e07">.</span>setFriendid<span style="color:#719e07">(</span>socketList<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span>i<span style="color:#719e07">)</span><span style="color:#719e07">.</span>getId<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+</span><span style="color:#586e75"></span>							socketList<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span>i<span style="color:#719e07">).</span>setFriendid<span style="color:#719e07">(</span>socketList<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span>j<span style="color:#719e07">).</span>getId<span style="color:#719e07">());</span>
+							socketList<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span>j<span style="color:#719e07">).</span>setFriendid<span style="color:#719e07">(</span>socketList<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span>i<span style="color:#719e07">).</span>getId<span style="color:#719e07">());</span>
 						<span style="color:#719e07">}</span>
 					<span style="color:#719e07">}</span>
 					
 				<span style="color:#719e07">}</span>
 				
 			<span style="color:#719e07">}</span>
-			System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;匹配后的状态&#34;</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+			System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;匹配后的状态&#34;</span><span style="color:#719e07">);</span>
 		<span style="color:#719e07">for</span><span style="color:#719e07">(</span>SocketClass mSocket<span style="color:#719e07">:</span>socketList<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-			System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span>mSocket<span style="color:#719e07">.</span>toString<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+			System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span>mSocket<span style="color:#719e07">.</span>toString<span style="color:#719e07">());</span>
 		<span style="color:#719e07">}</span>
 		<span style="color:#719e07">}</span>
 		

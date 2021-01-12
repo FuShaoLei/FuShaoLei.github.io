@@ -67,7 +67,7 @@ deploy: type: git repository: git@github.com:FuShaoLei/FuShaoLei.github.io.git b
 
 
 
-<link rel="stylesheet" href="https://fushaolei.github.io/scss/dark-mode.min.ed17e7506ac79ad26428e2ac35f7129cd134774d75548840407bb957fe545c00.css" integrity="sha256-7RfnUGrHmtJkKOKsNfcSnNE0d011VIhAQHu5V/5UXAA=" media="screen">
+<link rel="stylesheet" href="https://fushaolei.github.io/scss/dark-mode.min.552aae4638a84aa57cf0b195750a49ea9131d3bb621d1ed3ebc9b14b18166536.css" integrity="sha256-VSquRjioSqV88LGVdQpJ6pEx07tiHR7T68mxSxgWZTY=" media="screen">
 
 
 <script src="https://fushaolei.github.io//js/loadCSS.js"></script>
@@ -338,10 +338,10 @@ hexo s  ## 本地预览，在浏览器中输入localhost:4000看看效果
 <p>在github中，以此<code>setting</code>-&gt;<code>SSH and GPG keys</code>-&gt;添加一个新的SSH key（key就填公钥）（可允许<code>ssh -T git@github.com</code>测试成功或不成功）</p>
 <h3 id="配置hexo">配置hexo</h3>
 <p>复制<code>&lt;用户名&gt;.github.io</code>仓库中的ssh链接备用，然后hexo根目录的<code>_config.yml</code>这样配置：</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#719e07">deploy</span>:
-  <span style="color:#719e07">type</span>: git
-  <span style="color:#719e07">repository</span>: git@github.com:FuShaoLei/FuShaoLei.github.io.git
-  <span style="color:#719e07">branch</span>: master
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#268bd2">deploy</span>:
+  <span style="color:#268bd2">type</span>: git
+  <span style="color:#268bd2">repository</span>: git@github.com:FuShaoLei/FuShaoLei.github.io.git
+  <span style="color:#268bd2">branch</span>: master
 </code></pre></div><p>然后还要再安装一个东西</p>
 <pre><code class="language-npm" data-lang="npm">npm install hexo-deployer-git --save
 </code></pre><p>到这就大功告成啦~</p>

@@ -73,7 +73,7 @@
 
 
 
-<link rel="stylesheet" href="https://fushaolei.github.io/scss/dark-mode.min.ed17e7506ac79ad26428e2ac35f7129cd134774d75548840407bb957fe545c00.css" integrity="sha256-7RfnUGrHmtJkKOKsNfcSnNE0d011VIhAQHu5V/5UXAA=" media="screen">
+<link rel="stylesheet" href="https://fushaolei.github.io/scss/dark-mode.min.552aae4638a84aa57cf0b195750a49ea9131d3bb621d1ed3ebc9b14b18166536.css" integrity="sha256-VSquRjioSqV88LGVdQpJ6pEx07tiHR7T68mxSxgWZTY=" media="screen">
 
 
 <script src="https://fushaolei.github.io//js/loadCSS.js"></script>
@@ -382,21 +382,21 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 </span><span style="color:#586e75"> * 3. 通知所有订阅者更新的信息
 </span><span style="color:#586e75"> */</span>
 <span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">Subject</span> <span style="color:#719e07">{</span>
-    <span style="color:#268bd2">private</span> List<span style="color:#719e07">&lt;</span>User<span style="color:#719e07">&gt;</span> userList<span style="color:#719e07">=</span><span style="color:#719e07">new</span> ArrayList<span style="color:#719e07">&lt;</span><span style="color:#719e07">&gt;</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+    <span style="color:#268bd2">private</span> List<span style="color:#719e07">&lt;</span>User<span style="color:#719e07">&gt;</span> userList<span style="color:#719e07">=</span><span style="color:#719e07">new</span> ArrayList<span style="color:#719e07">&lt;&gt;();</span>
 
     <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">add</span><span style="color:#719e07">(</span>User weixinUser<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-        userList<span style="color:#719e07">.</span>add<span style="color:#719e07">(</span>weixinUser<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+        userList<span style="color:#719e07">.</span>add<span style="color:#719e07">(</span>weixinUser<span style="color:#719e07">);</span>
     <span style="color:#719e07">}</span>
 
 
     <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">delete</span><span style="color:#719e07">(</span>User weixinUser<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-        userList<span style="color:#719e07">.</span>remove<span style="color:#719e07">(</span>weixinUser<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+        userList<span style="color:#719e07">.</span>remove<span style="color:#719e07">(</span>weixinUser<span style="color:#719e07">);</span>
     <span style="color:#719e07">}</span>
 
 
     <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">notify</span><span style="color:#719e07">(</span>String message<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-        <span style="color:#719e07">for</span> <span style="color:#719e07">(</span>User user<span style="color:#719e07">:</span>userList<span style="color:#719e07">)</span><span style="color:#719e07">{</span><span style="color:#586e75">//更新消息后 ，循环订阅者list，提醒更新
-</span><span style="color:#586e75"></span>            user<span style="color:#719e07">.</span>update<span style="color:#719e07">(</span>message<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+        <span style="color:#719e07">for</span> <span style="color:#719e07">(</span>User user<span style="color:#719e07">:</span>userList<span style="color:#719e07">){</span><span style="color:#586e75">//更新消息后 ，循环订阅者list，提醒更新
+</span><span style="color:#586e75"></span>            user<span style="color:#719e07">.</span>update<span style="color:#719e07">(</span>message<span style="color:#719e07">);</span>
         <span style="color:#719e07">}</span>
     <span style="color:#719e07">}</span>
 <span style="color:#719e07">}</span>
@@ -413,28 +413,28 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 
 
     <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">update</span><span style="color:#719e07">(</span>String message<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-        System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span>name<span style="color:#719e07">+</span><span style="color:#2aa198">&#34; &#34;</span><span style="color:#719e07">+</span>message<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+        System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span>name<span style="color:#719e07">+</span><span style="color:#2aa198">&#34; &#34;</span><span style="color:#719e07">+</span>message<span style="color:#719e07">);</span>
     <span style="color:#719e07">}</span>
 <span style="color:#719e07">}</span>
 
 </code></pre></div><p>测试一下</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">Test</span> <span style="color:#719e07">{</span>
-    <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span><span style="color:#719e07">(</span>String<span style="color:#719e07">[</span><span style="color:#719e07">]</span> args<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-        Subject subject<span style="color:#719e07">=</span><span style="color:#719e07">new</span> Subject<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-        User user1<span style="color:#719e07">=</span><span style="color:#719e07">new</span> User<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;嘎嘎嘎&#34;</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-        User user2<span style="color:#719e07">=</span><span style="color:#719e07">new</span> User<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;咕咕咕&#34;</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-        User user3<span style="color:#719e07">=</span><span style="color:#719e07">new</span> User<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;嘻嘻嘻&#34;</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+    <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span><span style="color:#719e07">(</span>String<span style="color:#719e07">[]</span> args<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+        Subject subject<span style="color:#719e07">=</span><span style="color:#719e07">new</span> Subject<span style="color:#719e07">();</span>
+        User user1<span style="color:#719e07">=</span><span style="color:#719e07">new</span> User<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;嘎嘎嘎&#34;</span><span style="color:#719e07">);</span>
+        User user2<span style="color:#719e07">=</span><span style="color:#719e07">new</span> User<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;咕咕咕&#34;</span><span style="color:#719e07">);</span>
+        User user3<span style="color:#719e07">=</span><span style="color:#719e07">new</span> User<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;嘻嘻嘻&#34;</span><span style="color:#719e07">);</span>
 
         <span style="color:#586e75">//添加
-</span><span style="color:#586e75"></span>        subject<span style="color:#719e07">.</span>add<span style="color:#719e07">(</span>user1<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-        subject<span style="color:#719e07">.</span>add<span style="color:#719e07">(</span>user2<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-        subject<span style="color:#719e07">.</span>add<span style="color:#719e07">(</span>user3<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+</span><span style="color:#586e75"></span>        subject<span style="color:#719e07">.</span>add<span style="color:#719e07">(</span>user1<span style="color:#719e07">);</span>
+        subject<span style="color:#719e07">.</span>add<span style="color:#719e07">(</span>user2<span style="color:#719e07">);</span>
+        subject<span style="color:#719e07">.</span>add<span style="color:#719e07">(</span>user3<span style="color:#719e07">);</span>
 
-        subject<span style="color:#719e07">.</span>notify<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;朕更新啦！&#34;</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-        System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;===================&#34;</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+        subject<span style="color:#719e07">.</span>notify<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;朕更新啦！&#34;</span><span style="color:#719e07">);</span>
+        System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;===================&#34;</span><span style="color:#719e07">);</span>
         <span style="color:#586e75">//删除一个订阅者
-</span><span style="color:#586e75"></span>        subject<span style="color:#719e07">.</span>delete<span style="color:#719e07">(</span>user2<span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-        subject<span style="color:#719e07">.</span>notify<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;朕又更新啦！&#34;</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+</span><span style="color:#586e75"></span>        subject<span style="color:#719e07">.</span>delete<span style="color:#719e07">(</span>user2<span style="color:#719e07">);</span>
+        subject<span style="color:#719e07">.</span>notify<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;朕又更新啦！&#34;</span><span style="color:#719e07">);</span>
 
     <span style="color:#719e07">}</span>
 <span style="color:#719e07">}</span>
@@ -452,7 +452,7 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 </span><span style="color:#586e75"> * 一，定义一个抽象类
 </span><span style="color:#586e75"> */</span>
 <span style="color:#268bd2">public</span> <span style="color:#268bd2">interface</span> <span style="color:#268bd2">IStrategy</span> <span style="color:#719e07">{</span>
-    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">fighting</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">fighting</span><span style="color:#719e07">();</span>
 <span style="color:#719e07">}</span>
 </code></pre></div><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#586e75">/**
 </span><span style="color:#586e75"> * 二，定义一些具体实现类
@@ -463,8 +463,8 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 </span><span style="color:#586e75"> */</span>
 <span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">Bow</span> <span style="color:#268bd2">implements</span> IStrategy <span style="color:#719e07">{</span>
     <span style="color:#268bd2">@Override</span>
-    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">fighting</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-        System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;施冷箭&#34;</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">fighting</span><span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
+        System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;施冷箭&#34;</span><span style="color:#719e07">);</span>
     <span style="color:#719e07">}</span>
 <span style="color:#719e07">}</span>
 <span style="color:#586e75">/**
@@ -472,8 +472,8 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 </span><span style="color:#586e75"> */</span>
 <span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">Cannon</span> <span style="color:#268bd2">implements</span> IStrategy <span style="color:#719e07">{</span>
     <span style="color:#268bd2">@Override</span>
-    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">fighting</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-        System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;开炮！&#34;</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">fighting</span><span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
+        System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;开炮！&#34;</span><span style="color:#719e07">);</span>
     <span style="color:#719e07">}</span>
 <span style="color:#719e07">}</span>
 <span style="color:#586e75">/**
@@ -481,8 +481,8 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 </span><span style="color:#586e75"> */</span>
 <span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">Knife</span> <span style="color:#268bd2">implements</span> IStrategy <span style="color:#719e07">{</span>
     <span style="color:#268bd2">@Override</span>
-    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">fighting</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-        System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;使刀中&#34;</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">fighting</span><span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
+        System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;使刀中&#34;</span><span style="color:#719e07">);</span>
     <span style="color:#719e07">}</span>
 <span style="color:#719e07">}</span>
 </code></pre></div><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#586e75">/**
@@ -491,29 +491,29 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 <span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">Context</span> <span style="color:#719e07">{</span>
     <span style="color:#268bd2">private</span> IStrategy strategy<span style="color:#719e07">;</span>
 
-    <span style="color:#268bd2">public</span> <span style="color:#268bd2">Context</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+    <span style="color:#268bd2">public</span> <span style="color:#268bd2">Context</span><span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
     <span style="color:#719e07">}</span>
 
     <span style="color:#586e75">//为的是方便调用，方便转换
 </span><span style="color:#586e75"></span>    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">setStrategy</span><span style="color:#719e07">(</span>IStrategy strategy<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
         <span style="color:#719e07">this</span><span style="color:#719e07">.</span>strategy <span style="color:#719e07">=</span> strategy<span style="color:#719e07">;</span>
     <span style="color:#719e07">}</span>
-    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">fight</span><span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">{</span>
-        <span style="color:#719e07">this</span><span style="color:#719e07">.</span>strategy<span style="color:#719e07">.</span>fighting<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">fight</span><span style="color:#719e07">(){</span>
+        <span style="color:#719e07">this</span><span style="color:#719e07">.</span>strategy<span style="color:#719e07">.</span>fighting<span style="color:#719e07">();</span>
     <span style="color:#719e07">}</span>
 <span style="color:#719e07">}</span>
 </code></pre></div><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#586e75">/**
 </span><span style="color:#586e75"> * 测试
 </span><span style="color:#586e75"> */</span>
 <span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">Test</span> <span style="color:#719e07">{</span>
-    <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span><span style="color:#719e07">(</span>String<span style="color:#719e07">[</span><span style="color:#719e07">]</span> args<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-        Context context<span style="color:#719e07">=</span><span style="color:#719e07">new</span> Context<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-        context<span style="color:#719e07">.</span>setStrategy<span style="color:#719e07">(</span><span style="color:#719e07">new</span> Bow<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-        context<span style="color:#719e07">.</span>fight<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-        context<span style="color:#719e07">.</span>setStrategy<span style="color:#719e07">(</span><span style="color:#719e07">new</span> Cannon<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-        context<span style="color:#719e07">.</span>fight<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-        context<span style="color:#719e07">.</span>setStrategy<span style="color:#719e07">(</span><span style="color:#719e07">new</span> Knife<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
-        context<span style="color:#719e07">.</span>fight<span style="color:#719e07">(</span><span style="color:#719e07">)</span><span style="color:#719e07">;</span>
+    <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span><span style="color:#719e07">(</span>String<span style="color:#719e07">[]</span> args<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+        Context context<span style="color:#719e07">=</span><span style="color:#719e07">new</span> Context<span style="color:#719e07">();</span>
+        context<span style="color:#719e07">.</span>setStrategy<span style="color:#719e07">(</span><span style="color:#719e07">new</span> Bow<span style="color:#719e07">());</span>
+        context<span style="color:#719e07">.</span>fight<span style="color:#719e07">();</span>
+        context<span style="color:#719e07">.</span>setStrategy<span style="color:#719e07">(</span><span style="color:#719e07">new</span> Cannon<span style="color:#719e07">());</span>
+        context<span style="color:#719e07">.</span>fight<span style="color:#719e07">();</span>
+        context<span style="color:#719e07">.</span>setStrategy<span style="color:#719e07">(</span><span style="color:#719e07">new</span> Knife<span style="color:#719e07">());</span>
+        context<span style="color:#719e07">.</span>fight<span style="color:#719e07">();</span>
     <span style="color:#719e07">}</span>
 <span style="color:#719e07">}</span>
 </code></pre></div>

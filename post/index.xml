@@ -6,11 +6,7 @@
     <description>Recent content in Posts on Sorryfu Blog.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 10 Jan 2021 12:14:48 +0800</lastBuildDate>
-    
-	<atom:link href="https://fushaolei.github.io/post/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 10 Jan 2021 12:14:48 +0800</lastBuildDate><atom:link href="https://fushaolei.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>我的常用软件</title>
       <link>https://fushaolei.github.io/post/reinstall-sys/</link>
@@ -244,7 +240,7 @@ mWebView.getSettings().setJavaScriptEnabled(true);//启用js mWebView.getSetting
 （可以缺少某个叶子节点）
 特点
  叶子只能分布在层次最大的两层上 对任一结点，如果其右子树的最大层次为 i，则其左子树的最大层次必为 i 或 i+1   关系
- 满二叉树 一定是 完全二叉树 完全二叉树 不一定是 满二叉树   二叉树的存储结构 顺序存储 #define MAXTSIZE 100#define TElemType char typedef TElemType SqBiTree[MAXTSIZE];   实现：按满二叉树的结点层次编号，依次存放二叉树中的数据元素</description>
+ 满二叉树 一定是 完全二叉树 完全二叉树 不一定是 满二叉树   二叉树的存储结构 顺序存储 #define MAXTSIZE 100 #define TElemType char  typedef TElemType SqBiTree[MAXTSIZE];   实现：按满二叉树的结点层次编号，依次存放二叉树中的数据元素</description>
     </item>
     
     <item>
@@ -320,7 +316,7 @@ fun main(args: Array&amp;lt;String&amp;gt;) { val name = &amp;#34;Kotlin&amp;#34
       
       <guid>https://fushaolei.github.io/post/core-java-note-1/</guid>
       <description>仅仅是边读边记的笔记，因为不像是某些资料，这本书不是成“体系”的，比较混乱，所以，索性都记录到一个md文件里咯
- 1.第一个程序 public class Hello { public static void main(String[] args) { System.out.println(&amp;#34;Hello World&amp;#34;); } }  public（访问修饰符） 用于控制对所修饰的类或对象或字段的访问级别 class表示这是一个类，Hello则是这个类的类名 main方法是所有程序的入口 大括号表示方法体的开始与结束  2.注释 //单行注释  /* 多行注释，（不能嵌套使用） */ /** * 文档注释 * 可用于自动的生成文档 */ 3.数据类型    基本类型 位数 字节 默认值     int 32 4 0   short 16 2 0   long 64 8 0L   byte 8 1 0   char 16 2 &#39;u0000&amp;rsquo;   float 32 4 0f   double 64 8 0d   boolean 1  false    4.</description>
+ 1.第一个程序 public class Hello { public static void main(String[] args) { System.out.println(&amp;#34;Hello World&amp;#34;); } }  public（访问修饰符） 用于控制对所修饰的类或对象或字段的访问级别 class表示这是一个类，Hello则是这个类的类名 main方法是所有程序的入口 大括号表示方法体的开始与结束  2.注释 //单行注释  /* 多行注释，（不能嵌套使用） */ /** * 文档注释 * 可用于自动的生成文档 */ 3.数据类型    基本类型 位数 字节 默认值     int 32 4 0   short 16 2 0   long 64 8 0L   byte 8 1 0   char 16 2 &amp;lsquo;u0000&amp;rsquo;   float 32 4 0f   double 64 8 0d   boolean 1  false    4.</description>
     </item>
     
     <item>
@@ -429,7 +425,7 @@ fun main(args: Array&amp;lt;String&amp;gt;) { val name = &amp;#34;Kotlin&amp;#34
 贴一个文档：https://docs.spring.io/spring/docs/current/spring-framework-reference/index.html
  第一个程序 IoC和DI的概念  IoC：控制反转（设计原则）由容器主动将资源推送到它所管理的组件里，组件要有接受资源的方式 DI：依赖注入（IoC的典型实现）   好了，光知道这个思想其实没什么用，下面开始编码
 步骤
- 创建maven项目 在pom.xml中添加相应的依赖 👴忘了   pom.xml里的依赖 &amp;lt;!--Spring核心基础依赖--&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-core&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;5.0.2.RELEASE&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-context&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;5.0.2.RELEASE&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-beans&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;5.0.2.RELEASE&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-expression&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;5.0.2.RELEASE&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;!--日志相关--&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;commons-logging&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;commons-logging&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.2&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;log4j&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;log4j&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.2.17&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.testng&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;testng&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;RELEASE&amp;lt;/version&amp;gt; &amp;lt;scope&amp;gt;compile&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; 3种配置元数据的方法 基于Xml的配置 &amp;lt;beans xmlns=&amp;#34;http://www.springframework.org/schema/beans&amp;#34; xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; xmlns:context=&amp;#34;http://www.springframework.org/schema/context&amp;#34; xsi:schemaLocation=&amp;#34;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd&amp;#34;&amp;gt; &amp;lt;!--id写什么都行 只要保证唯一就行，在Spring容器中用id来调用--&amp;gt; &amp;lt;!</description>
+ 创建maven项目 在pom.xml中添加相应的依赖 👴忘了   pom.xml里的依赖 &amp;lt;!--Spring核心基础依赖--&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-core&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;5.0.2.RELEASE&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-context&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;5.0.2.RELEASE&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-beans&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;5.0.2.RELEASE&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-expression&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;5.0.2.RELEASE&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;!--日志相关--&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;commons-logging&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;commons-logging&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.2&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;log4j&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;log4j&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.2.17&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.testng&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;testng&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;RELEASE&amp;lt;/version&amp;gt; &amp;lt;scope&amp;gt;compile&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; 3种配置元数据的方法 基于Xml的配置 &amp;lt;beans xmlns=&amp;#34;http://www.springframework.org/schema/beans&amp;#34; xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; xmlns:context=&amp;#34;http://www.springframework.org/schema/context&amp;#34; xsi:schemaLocation=&amp;#34;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd&amp;#34;&amp;gt; &amp;lt;!-- id写什么都行 只要保证唯一就行，在Spring容器中用id来调用--&amp;gt; &amp;lt;!</description>
     </item>
     
     <item>
@@ -519,7 +515,7 @@ fun main(args: Array&amp;lt;String&amp;gt;) { val name = &amp;#34;Kotlin&amp;#34
       <description>基础语法  简介：Java是由Sun公司于1995年5月推出的面向对象程序设计语言和Java平台的总称
  基本结构 public class Hello {//public访问修饰符 class表示这是一个类，Hello则是这个类的类名 	public static void main(String[] args) {//main方法是程序的入口 	System.out.println(&amp;#34;Hello World&amp;#34;);//执行的语句 	} } 注释 /* 块注释 */ //行注释 /** * 文档注释 */ 输入/输出 输入System.in，输出System.out
 输入 需借助Scanner对象读取System.in的输入 示例：
-import java.util.Scanner; public class Hello { public static void main(String[] args) { Scanner input=new Scanner(System.in); System.out.println(&amp;#34;请输入一个数字&amp;#34;); int num=input.nextInt(); System.out.println(&amp;#34;你输入的数字是：&amp;#34;+num); } } 输出 System.out.println(&amp;#34;Hi&amp;#34;);//输出后面有一个换行符 System.out.print(&amp;#34;Hi&amp;#34;); System.out.printf(&amp;#34;Hi&amp;#34;); 基本数据类型    基本类型 位数 字节 默认值 对应的包装器类     int 32 4 0 Integer   short 16 2 0 Short   long 64 8 0L Long   byte 8 1 0 Byte   char 16 2 &#39;u0000&amp;rsquo; Character   float 32 4 0f Float   double 64 8 0d Double   boolean 1  false Boolean     注意:</description>
+import java.util.Scanner; public class Hello { public static void main(String[] args) { Scanner input=new Scanner(System.in); System.out.println(&amp;#34;请输入一个数字&amp;#34;); int num=input.nextInt(); System.out.println(&amp;#34;你输入的数字是：&amp;#34;+num); } } 输出 System.out.println(&amp;#34;Hi&amp;#34;);//输出后面有一个换行符 System.out.print(&amp;#34;Hi&amp;#34;); System.out.printf(&amp;#34;Hi&amp;#34;); 基本数据类型    基本类型 位数 字节 默认值 对应的包装器类     int 32 4 0 Integer   short 16 2 0 Short   long 64 8 0L Long   byte 8 1 0 Byte   char 16 2 &amp;lsquo;u0000&amp;rsquo; Character   float 32 4 0f Float   double 64 8 0d Double   boolean 1  false Boolean     注意:</description>
     </item>
     
     <item>

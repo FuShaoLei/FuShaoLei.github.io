@@ -21,10 +21,10 @@
 &lt;p&gt;之前大一还是大二学过，现在都忘光光了QAQ，如今为了复习数据结构要用到，所以要重新学过，以下都是我在菜鸟教程中学习的比较，附上一个地址：https://www.runoob.com/cprogramming/c-tutorial.html&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;第一个c语言程序&#34;&gt;第一个c语言程序&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;color:#719e07&#34;&gt;#&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;include&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;color:#719e07&#34;&gt;#include&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//预处理
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;main&lt;/span&gt;(&lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt;) {&lt;span style=&#34;color:#586e75&#34;&gt;//所有程序的入口
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;	printf(&lt;span style=&#34;color:#2aa198&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;Hello World&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;&lt;/span&gt;);&lt;span style=&#34;color:#586e75&#34;&gt;//打印
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;	printf(&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;Hello World&amp;#34;&lt;/span&gt;);&lt;span style=&#34;color:#586e75&#34;&gt;//打印
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;0&lt;/span&gt;;
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;基本数据类型&#34;&gt;基本数据类型&lt;/h2&gt;
@@ -101,9 +101,9 @@
     &lt;span style=&#34;color:#719e07&#34;&gt;val&lt;/span&gt; name  = &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;Kotlin&amp;#34;&lt;/span&gt;
     &lt;span style=&#34;color:#719e07&#34;&gt;var&lt;/span&gt; a = &lt;span style=&#34;color:#2aa198&#34;&gt;2&lt;/span&gt;
     &lt;span style=&#34;color:#719e07&#34;&gt;var&lt;/span&gt; b = &lt;span style=&#34;color:#2aa198&#34;&gt;3&lt;/span&gt;
-    println(&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;Hello $name&amp;#34;&lt;/span&gt;)
-    println(&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;Hello ${if(a&amp;gt;b) &amp;#34;&lt;/span&gt;a大于b&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34; else &amp;#34;&lt;/span&gt;a小于b&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;}&amp;#34;&lt;/span&gt;)
-    println(&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;Hello ${if(a&amp;gt;b) a else b}&amp;#34;&lt;/span&gt;)&lt;span style=&#34;color:#586e75&#34;&gt;//甚至可以注入变量，这也太方便了
+    println(&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;Hello &lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;$name&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;&lt;/span&gt;)
+    println(&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;Hello &lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;${if(a&amp;gt;b) &amp;#34;a大于b&amp;#34; else &amp;#34;a小于b&amp;#34;}&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;&lt;/span&gt;)
+    println(&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;Hello &lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;${if(a&amp;gt;b) a else b}&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;&lt;/span&gt;)&lt;span style=&#34;color:#586e75&#34;&gt;//甚至可以注入变量，这也太方便了
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;}
 &lt;span style=&#34;color:#586e75&#34;&gt;//输出
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;Hello Kotlin
@@ -117,13 +117,13 @@ Hello &lt;span style=&#34;color:#2aa198&#34;&gt;3&lt;/span&gt;
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#719e07&#34;&gt;var&lt;/span&gt; isMarried: Boolean&lt;span style=&#34;color:#586e75&#34;&gt;//可写属性，有getter和setter方法
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;)
 &lt;span style=&#34;color:#586e75&#34;&gt;//简写:
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//class Person(val name: String, var isMarried: Boolean)
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//class Person(val name: String, var isMarried: Boolean)
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;使用&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;&lt;span style=&#34;color:#719e07&#34;&gt;fun&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;main&lt;/span&gt;(args: Array&amp;lt;String&amp;gt;) {
     &lt;span style=&#34;color:#719e07&#34;&gt;val&lt;/span&gt; p = Person(&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;令狐冲&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#719e07&#34;&gt;false&lt;/span&gt;)&lt;span style=&#34;color:#586e75&#34;&gt;//直接的调用了构造器，没有像Java一样的new关键字
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;    println(&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;isMarried的值是：${p.isMarried}&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;    println(&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;isMarried的值是：&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;${p.isMarried}&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;&lt;/span&gt;)
     p.isMarried = &lt;span style=&#34;color:#719e07&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//因为是isMarried是可写属性的，所以可用直接更改它的值
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;    println(&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;isMarried的值是：${p.isMarried}&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;    println(&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;isMarried的值是：&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;${p.isMarried}&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;&lt;/span&gt;)
 }
 &lt;span style=&#34;color:#586e75&#34;&gt;//输出
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;isMarried的值是：&lt;span style=&#34;color:#719e07&#34;&gt;false&lt;/span&gt;
@@ -132,14 +132,14 @@ isMarried的值是：&lt;span style=&#34;color:#719e07&#34;&gt;true&lt;/span&gt;
 &lt;h2 id=&#34;when&#34;&gt;when&lt;/h2&gt;
 &lt;p&gt;在kotlin里，when可以有多种用法&lt;/p&gt;
 &lt;p&gt;第一种用法，相当于java中的switch语句&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;fun &lt;span style=&#34;color:#268bd2&#34;&gt;main&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;args&lt;span style=&#34;color:#719e07&#34;&gt;:&lt;/span&gt; Array&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&lt;/span&gt;String&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-    println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;getStatus&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;1&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;fun &lt;span style=&#34;color:#268bd2&#34;&gt;main&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;args&lt;span style=&#34;color:#719e07&#34;&gt;:&lt;/span&gt; Array&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&lt;/span&gt;String&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+    println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;getStatus&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;1&lt;span style=&#34;color:#719e07&#34;&gt;))&lt;/span&gt;
 &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-fun &lt;span style=&#34;color:#268bd2&#34;&gt;getStatus&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;num&lt;span style=&#34;color:#719e07&#34;&gt;:&lt;/span&gt; Int&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; when&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;num&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-    1 &lt;span style=&#34;color:#719e07&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;优秀&amp;#34;&lt;/span&gt;
-    2 &lt;span style=&#34;color:#719e07&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;棒&amp;#34;&lt;/span&gt;
-    3 &lt;span style=&#34;color:#719e07&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;稀巴烂&amp;#34;&lt;/span&gt;
-    &lt;span style=&#34;color:#719e07&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;未知&amp;#34;&lt;/span&gt;
+fun &lt;span style=&#34;color:#268bd2&#34;&gt;getStatus&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;num&lt;span style=&#34;color:#719e07&#34;&gt;:&lt;/span&gt; Int&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; when&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;num&lt;span style=&#34;color:#719e07&#34;&gt;){&lt;/span&gt;
+    1 &lt;span style=&#34;color:#719e07&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;优秀&amp;#34;&lt;/span&gt;
+    2 &lt;span style=&#34;color:#719e07&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;棒&amp;#34;&lt;/span&gt;
+    3 &lt;span style=&#34;color:#719e07&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;稀巴烂&amp;#34;&lt;/span&gt;
+    &lt;span style=&#34;color:#719e07&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;未知&amp;#34;&lt;/span&gt;
 &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
 &lt;span style=&#34;color:#586e75&#34;&gt;//输出
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;优秀
@@ -204,8 +204,8 @@ fun &lt;span style=&#34;color:#268bd2&#34;&gt;getStatus&lt;/span&gt;&lt;span sty
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;1第一个程序&#34;&gt;1.第一个程序&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;Hello&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-	&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;main&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;String&lt;span style=&#34;color:#719e07&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;]&lt;/span&gt; args&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-		System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;Hello World&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+	&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;main&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;String&lt;span style=&#34;color:#719e07&#34;&gt;[]&lt;/span&gt; args&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+		System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;Hello World&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
 	&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
 &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
@@ -264,7 +264,7 @@ fun &lt;span style=&#34;color:#268bd2&#34;&gt;getStatus&lt;/span&gt;&lt;span sty
 &lt;td&gt;&lt;code&gt;char&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;16&lt;/td&gt;
 &lt;td&gt;2&lt;/td&gt;
-&lt;td&gt;&#39;u0000&amp;rsquo;&lt;/td&gt;
+&lt;td&gt;&amp;lsquo;u0000&amp;rsquo;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;float&lt;/code&gt;&lt;/td&gt;
@@ -307,7 +307,7 @@ String name &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; &lt;span st
 &lt;p&gt;作用：限制变量的取值范围&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;如下：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;    &lt;span style=&#34;color:#268bd2&#34;&gt;enum&lt;/span&gt; Size &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;SMALL&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;MEDIUM&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;LARGE&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;EXTRA_LARGE&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;    &lt;span style=&#34;color:#268bd2&#34;&gt;enum&lt;/span&gt; Size &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;SMALL&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;MEDIUM&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;LARGE&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;EXTRA_LARGE&lt;span style=&#34;color:#719e07&#34;&gt;};&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;那么&lt;code&gt;Size&lt;/code&gt;类型的变量只能取里边的值&lt;/p&gt;
 &lt;h2 id=&#34;5运算符&#34;&gt;5.运算符&lt;/h2&gt;
 &lt;h3 id=&#34;算术运算符&#34;&gt;算术运算符&lt;/h3&gt;
@@ -361,56 +361,56 @@ String name &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; &lt;span st
 &lt;h2 id=&#34;6字符串&#34;&gt;6.字符串&lt;/h2&gt;
 &lt;p&gt;先跳过，待补充&lt;/p&gt;
 &lt;h2 id=&#34;7输入与输出&#34;&gt;7.输入与输出&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;Scanner input&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; Scanner&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;in&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;请输入一个数字&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; num&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;input&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;nextInt&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//输入
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;你输入的数字是：&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;num&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//输出
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;Scanner input&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; Scanner&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;in&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
+System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;请输入一个数字&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
+&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; num&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;input&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;nextInt&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//输入
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;你输入的数字是：&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;num&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//输出
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;8控制流程&#34;&gt;8.控制流程&lt;/h2&gt;
 &lt;h4 id=&#34;条件分支流程&#34;&gt;条件分支流程&lt;/h4&gt;
 &lt;p&gt;普通分支语句&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;        &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; a &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; 1&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
         &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; b &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; 2&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
         &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;a &lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt; b&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-            System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;a大于b&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//如果a大于b则执行这个语句
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;a &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; b&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-            System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;a等于b&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//如果a等于b则执行这个语句
+            System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;a大于b&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//如果a大于b则执行这个语句
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;a &lt;span style=&#34;color:#719e07&#34;&gt;==&lt;/span&gt; b&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+            System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;a等于b&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//如果a等于b则执行这个语句
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-            System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;a小于b&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//否则就a小于b，当以上两种情况都不是的时候执行
+            System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;a小于b&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//否则就a小于b，当以上两种情况都不是的时候执行
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;条件多分支语句&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;		&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; g&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;2&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
 		&lt;span style=&#34;color:#719e07&#34;&gt;switch&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;g&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-		&lt;span style=&#34;color:#719e07&#34;&gt;case&lt;/span&gt; 1&lt;span style=&#34;color:#719e07&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-			System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;是1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//当g是1时执行
+		&lt;span style=&#34;color:#719e07&#34;&gt;case&lt;/span&gt; 1&lt;span style=&#34;color:#719e07&#34;&gt;:{&lt;/span&gt;
+			System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;是1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//当g是1时执行
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;			&lt;span style=&#34;color:#719e07&#34;&gt;break&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
 		&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-		&lt;span style=&#34;color:#719e07&#34;&gt;case&lt;/span&gt; 2&lt;span style=&#34;color:#719e07&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-			System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;是2&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//当g是2时执行
+		&lt;span style=&#34;color:#719e07&#34;&gt;case&lt;/span&gt; 2&lt;span style=&#34;color:#719e07&#34;&gt;:{&lt;/span&gt;
+			System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;是2&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//当g是2时执行
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;			&lt;span style=&#34;color:#719e07&#34;&gt;break&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
 		&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-		&lt;span style=&#34;color:#719e07&#34;&gt;default&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-			System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;都不是&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//当以上情况都不是的时候执行
+		&lt;span style=&#34;color:#719e07&#34;&gt;default&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;:{&lt;/span&gt;
+			System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;都不是&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//当以上情况都不是的时候执行
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;			&lt;span style=&#34;color:#719e07&#34;&gt;break&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
 		&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
 		&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;循环流程&#34;&gt;循环流程&lt;/h4&gt;
 &lt;p&gt;根据条件，反复执行某些操作&lt;/p&gt;
 &lt;h5 id=&#34;for&#34;&gt;&lt;code&gt;for&lt;/code&gt;&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;	&lt;span style=&#34;color:#719e07&#34;&gt;for&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; i&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;0&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&lt;/span&gt;5&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//int i=0是初始值，i&amp;lt;5是循环条件。i++是循环后更新i的值，然后进入下一轮循环
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;		System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;循环第&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;次&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;	&lt;span style=&#34;color:#719e07&#34;&gt;for&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; i&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;0&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&lt;/span&gt;5&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;++)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//int i=0是初始值，i&amp;lt;5是循环条件。i++是循环后更新i的值，然后进入下一轮循环
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;		System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;循环第&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;次&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
 	&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;while&#34;&gt;&lt;code&gt;while&lt;/code&gt;&lt;/h5&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;		&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; u&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;5&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
 		&lt;span style=&#34;color:#719e07&#34;&gt;while&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;u&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt;0&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//当为true时执行
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;			System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;u=&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;u&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-			&lt;span style=&#34;color:#719e07&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;-&lt;/span&gt;u&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;			System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;u=&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;u&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
+			&lt;span style=&#34;color:#719e07&#34;&gt;--&lt;/span&gt;u&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
 		&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;dowhile&#34;&gt;&lt;code&gt;do&lt;/code&gt;..&lt;code&gt;while&lt;/code&gt;&lt;/h5&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;		&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; p&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;0&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
 		&lt;span style=&#34;color:#719e07&#34;&gt;do&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//无条件进入循环
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;			&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;p&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-			System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;p=&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;p&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-		&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;while&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;p&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&lt;/span&gt;5&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//首先执行一次循环体后进行判断，若为true则继续进行下去
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;			&lt;span style=&#34;color:#719e07&#34;&gt;++&lt;/span&gt;p&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+			System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;p=&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;p&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
+		&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;while&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;p&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&lt;/span&gt;5&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//首先执行一次循环体后进行判断，若为true则继续进行下去
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;for-each增强型for循环&#34;&gt;&lt;code&gt;for each&lt;/code&gt;（增强型&lt;code&gt;for&lt;/code&gt;循环）&lt;/h5&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#719e07&#34;&gt;for&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt; 类型 变量名&lt;span style=&#34;color:#719e07&#34;&gt;:&lt;/span&gt; 数组或集合 &lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
 循环体
@@ -426,14 +426,14 @@ System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=
 &lt;h2 id=&#34;10数组&#34;&gt;10.数组&lt;/h2&gt;
 &lt;p&gt;存储一组具有&lt;strong&gt;相同数据类型&lt;/strong&gt;的数据元素的有序集合&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#586e75&#34;&gt;// 声明
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; num&lt;span style=&#34;color:#719e07&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;]&lt;/span&gt; sum&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; num&lt;span style=&#34;color:#719e07&#34;&gt;[];&lt;/span&gt;
+&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;[]&lt;/span&gt; sum&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
 &lt;span style=&#34;color:#586e75&#34;&gt;// 静态初始化
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; num&lt;span style=&#34;color:#719e07&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;1&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;2&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;3&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;4&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;5&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; num&lt;span style=&#34;color:#719e07&#34;&gt;[]={&lt;/span&gt;1&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;2&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;3&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;4&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;5&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
 &lt;span style=&#34;color:#586e75&#34;&gt;//动态初始化
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; num&lt;span style=&#34;color:#719e07&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;[&lt;/span&gt;5&lt;span style=&#34;color:#719e07&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//预先分配内存空间
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;for&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; i&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;0&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&lt;/span&gt;5&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-	num&lt;span style=&#34;color:#719e07&#34;&gt;[&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;*&lt;/span&gt;3&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; num&lt;span style=&#34;color:#719e07&#34;&gt;[]=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;[&lt;/span&gt;5&lt;span style=&#34;color:#719e07&#34;&gt;];&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//预先分配内存空间
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;for&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; i&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;0&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&lt;/span&gt;5&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;++){&lt;/span&gt;
+	num&lt;span style=&#34;color:#719e07&#34;&gt;[&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;]=&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;*&lt;/span&gt;3&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
 &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://fushaolei.github.io/post/core-java-note-1/ - </description>
         </item>
@@ -469,14 +469,14 @@ System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; * 定义一个接口
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; */&lt;/span&gt;
 &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;interface&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;IStudent&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-    String &lt;span style=&#34;color:#268bd2&#34;&gt;getName&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+    String &lt;span style=&#34;color:#268bd2&#34;&gt;getName&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;
 &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#586e75&#34;&gt;/**
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; * 继承实现这个接口
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; */&lt;/span&gt;
 &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;Student&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;implements&lt;/span&gt; IStudent&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//此时IStudent是父类，Student是子类
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#268bd2&#34;&gt;@Override&lt;/span&gt;
-    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; String &lt;span style=&#34;color:#268bd2&#34;&gt;getName&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; String &lt;span style=&#34;color:#268bd2&#34;&gt;getName&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
         &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;任我行&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
     &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
 &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
@@ -484,10 +484,10 @@ System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; * 测试一下
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; */&lt;/span&gt;
 &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;Test&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;main&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;String&lt;span style=&#34;color:#719e07&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;]&lt;/span&gt; args&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;main&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;String&lt;span style=&#34;color:#719e07&#34;&gt;[]&lt;/span&gt; args&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
         IStudent iStudent&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-        iStudent&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; Student&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//父类引用指向子类的对象，这里做了向上转型
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;学生的名字是：&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;iStudent&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getName&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//打印结果：学生的名字是：任我行
+        iStudent&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; Student&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//父类引用指向子类的对象，这里做了向上转型
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;学生的名字是：&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;iStudent&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getName&lt;span style=&#34;color:#719e07&#34;&gt;());&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//打印结果：学生的名字是：任我行
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
 &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;解耦&#34;&gt;解耦&lt;/h3&gt;
@@ -507,25 +507,25 @@ System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; */&lt;/span&gt;
 &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;interface&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;IView&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
     &lt;span style=&#34;color:#586e75&#34;&gt;//1. 获取用户的输入信息
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; User &lt;span style=&#34;color:#268bd2&#34;&gt;getViewUser&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; User &lt;span style=&#34;color:#268bd2&#34;&gt;getViewUser&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;
     &lt;span style=&#34;color:#586e75&#34;&gt;//2. 登录成功的操作
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;loginSuceess&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;loginSuceess&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;
     &lt;span style=&#34;color:#586e75&#34;&gt;//3. 登录失败后的操作
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;loginFail&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;loginFail&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;
 &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#586e75&#34;&gt;/**
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; * Model层的需求
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; */&lt;/span&gt;
 &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;interface&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;IModel&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
      &lt;span style=&#34;color:#586e75&#34;&gt;//判断信息是否正确
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;     &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;boolean&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;isOk&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;User user&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;     &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;boolean&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;isOk&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;User user&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
 &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#586e75&#34;&gt;/**
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; * presenter层的需求
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; */&lt;/span&gt;
 &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;interface&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;IPresenter&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
     &lt;span style=&#34;color:#586e75&#34;&gt;//登录操作
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;login&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;login&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;
 &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;好了，接口写完，现在去实现接口：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;
@@ -538,44 +538,44 @@ System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;
     &lt;span style=&#34;color:#268bd2&#34;&gt;@Override&lt;/span&gt;
     &lt;span style=&#34;color:#268bd2&#34;&gt;protected&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;onCreate&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;Bundle savedInstanceState&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-        &lt;span style=&#34;color:#268bd2&#34;&gt;super&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;onCreate&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;savedInstanceState&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-        setContentView&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;layout&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;activity_main&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+        &lt;span style=&#34;color:#268bd2&#34;&gt;super&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;onCreate&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;savedInstanceState&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
+        setContentView&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;layout&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;activity_main&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
 
-        mUsername &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; findViewById&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;et_username&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-        mPassword &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; findViewById&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;et_password&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-        mButton &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; findViewById&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;btn_login&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+        mUsername &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; findViewById&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;et_username&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
+        mPassword &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; findViewById&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;et_password&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
+        mButton &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; findViewById&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;btn_login&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
 
-        iPresenter &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; Presenter&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//父类引用指向子类对象，向上转型，这个this指向的是View本身，也就是是传入了一个IView的子类对象
+        iPresenter &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; Presenter&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//父类引用指向子类对象，向上转型，这个this指向的是View本身，也就是是传入了一个IView的子类对象
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#586e75&#34;&gt;//此时Presenter同时持有Model层和View层的对象
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        mButton&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;setOnClickListener&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; android&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;view&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;View&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;OnClickListener&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        mButton&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;setOnClickListener&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; android&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;view&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;View&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;OnClickListener&lt;span style=&#34;color:#719e07&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
             &lt;span style=&#34;color:#268bd2&#34;&gt;@Override&lt;/span&gt;
             &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;onClick&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;android&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;view&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;View v&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-                iPresenter&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;login&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//此操作会执行Pressenter对象的login方法
+                iPresenter&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;login&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//此操作会执行Pressenter对象的login方法
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;            &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+        &lt;span style=&#34;color:#719e07&#34;&gt;});&lt;/span&gt;
     &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
 
     &lt;span style=&#34;color:#586e75&#34;&gt;//实现IView的需求
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#268bd2&#34;&gt;@Override&lt;/span&gt;
-    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; User &lt;span style=&#34;color:#268bd2&#34;&gt;getViewUser&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; User&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;mUsername&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getText&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;toString&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;mPassword&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getText&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;toString&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; User &lt;span style=&#34;color:#268bd2&#34;&gt;getViewUser&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; User&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;mUsername&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getText&lt;span style=&#34;color:#719e07&#34;&gt;().&lt;/span&gt;toString&lt;span style=&#34;color:#719e07&#34;&gt;(),&lt;/span&gt;mPassword&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getText&lt;span style=&#34;color:#719e07&#34;&gt;().&lt;/span&gt;toString&lt;span style=&#34;color:#719e07&#34;&gt;());&lt;/span&gt;
     &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
 
     &lt;span style=&#34;color:#268bd2&#34;&gt;@Override&lt;/span&gt;
-    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;loginSuceess&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-        Toast&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;makeText&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;登录成功！&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; Toast&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;LENGTH_SHORT&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;show&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;loginSuceess&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+        Toast&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;makeText&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;登录成功！&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; Toast&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;LENGTH_SHORT&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;show&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;
     &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
 
     &lt;span style=&#34;color:#268bd2&#34;&gt;@Override&lt;/span&gt;
-    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;loginFail&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-        Toast&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;makeText&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;登录失败！&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; Toast&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;LENGTH_SHORT&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;show&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;loginFail&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+        Toast&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;makeText&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;登录失败！&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; Toast&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;LENGTH_SHORT&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;show&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;
     &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
 &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;Model&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;implements&lt;/span&gt; IModel&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
     &lt;span style=&#34;color:#586e75&#34;&gt;//IModel的需求
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#268bd2&#34;&gt;@Override&lt;/span&gt;
     &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;boolean&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;isOk&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;User user&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;user&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getUsername&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;equals&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;root&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&amp;amp;&lt;/span&gt;user&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getPassword&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;equals&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;123&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;user&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getUsername&lt;span style=&#34;color:#719e07&#34;&gt;().&lt;/span&gt;equals&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;root&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&amp;amp;&amp;amp;&lt;/span&gt;user&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getPassword&lt;span style=&#34;color:#719e07&#34;&gt;().&lt;/span&gt;equals&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;123&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)){&lt;/span&gt;
             &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#cb4b16&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
         &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
         &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#cb4b16&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
@@ -588,17 +588,17 @@ System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=
     &lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; IView iView&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
 
     &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;Presenter&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;IView iView&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;iModel &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; Model&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//向上转型
+        &lt;span style=&#34;color:#719e07&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;iModel &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; Model&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//向上转型
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#719e07&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;iView &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; iView&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//向上转型
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
 
     &lt;span style=&#34;color:#586e75&#34;&gt;//IPresenter的需求
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#268bd2&#34;&gt;@Override&lt;/span&gt;
-    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;login&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//当View层点击button的时候，将会调用到这个方法
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;iModel&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;isOk&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;iView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getViewUser&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-            iView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;loginSuceess&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//执行view层的loginSuceess
+    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;login&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//当View层点击button的时候，将会调用到这个方法
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;iModel&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;isOk&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;iView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getViewUser&lt;span style=&#34;color:#719e07&#34;&gt;())){&lt;/span&gt;
+            iView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;loginSuceess&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//执行view层的loginSuceess
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-            iView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;loginFail&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//执行view层的loginFail
+            iView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;loginFail&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//执行view层的loginFail
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
     &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
 &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
@@ -771,30 +771,30 @@ System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;left&#34;&gt;HashMap&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;HashSet&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;HashMap&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;HashSet&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;HashMap实现了&lt;strong&gt;Map接口&lt;/strong&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;HashSet实现了&lt;strong&gt;Set接口&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;HashMap实现了&lt;strong&gt;Map接口&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;HashSet实现了&lt;strong&gt;Set接口&lt;/strong&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;HashMap储存键值对&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;HashSet仅仅存储对象&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;HashMap储存键值对&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;HashSet仅仅存储对象&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;使用put()方法将元素放入map中&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;使用add()方法将元素放入set中&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;使用put()方法将元素放入map中&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;使用add()方法将元素放入set中&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;HashMap中使用键对象来计算hashcode值&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;HashSet使用成员对象来计算hashcode值，对于两个对象来说hashcode可能相同，所以equals()方法用来判断对象的相等性，如果两个对象不同的话，那么返回false&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;HashMap中使用键对象来计算hashcode值&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;HashSet使用成员对象来计算hashcode值，对于两个对象来说hashcode可能相同，所以equals()方法用来判断对象的相等性，如果两个对象不同的话，那么返回false&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;HashMap比较快，因为是使用唯一的键来获取对象&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;HashSet较HashMap来说比较慢&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;HashMap比较快，因为是使用唯一的键来获取对象&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;HashSet较HashMap来说比较慢&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -1099,30 +1099,30 @@ System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;left&#34;&gt;HashMap&lt;/th&gt;
-&lt;th align=&#34;center&#34;&gt;HashSet&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;HashMap&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;HashSet&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;HashMap实现了&lt;strong&gt;Map接口&lt;/strong&gt;&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;HashSet实现了&lt;strong&gt;Set接口&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;HashMap实现了&lt;strong&gt;Map接口&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;HashSet实现了&lt;strong&gt;Set接口&lt;/strong&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;HashMap储存键值对&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;HashSet仅仅存储对象&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;HashMap储存键值对&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;HashSet仅仅存储对象&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;使用put()方法将元素放入map中&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;使用add()方法将元素放入set中&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;使用put()方法将元素放入map中&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;使用add()方法将元素放入set中&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;HashMap中使用键对象来计算hashcode值&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;HashSet使用成员对象来计算hashcode值，对于两个对象来说hashcode可能相同，所以equals()方法用来判断对象的相等性，如果两个对象不同的话，那么返回false&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;HashMap中使用键对象来计算hashcode值&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;HashSet使用成员对象来计算hashcode值，对于两个对象来说hashcode可能相同，所以equals()方法用来判断对象的相等性，如果两个对象不同的话，那么返回false&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;HashMap比较快，因为是使用唯一的键来获取对象&lt;/td&gt;
-&lt;td align=&#34;center&#34;&gt;HashSet较HashMap来说比较慢&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;HashMap比较快，因为是使用唯一的键来获取对象&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;HashSet较HashMap来说比较慢&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -1350,53 +1350,53 @@ System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20200920224635.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;将以下的代码复制粘贴&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;color:#586e75&#34;&gt;# workflow name&lt;/span&gt;
-&lt;span style=&#34;color:#719e07&#34;&gt;name&lt;/span&gt;: Hexo Blog CI
+&lt;span style=&#34;color:#268bd2&#34;&gt;name&lt;/span&gt;: Hexo Blog CI
 
 &lt;span style=&#34;color:#586e75&#34;&gt;# master branch on push, auto run&lt;/span&gt;
-&lt;span style=&#34;color:#719e07&#34;&gt;on&lt;/span&gt;: 
-  &lt;span style=&#34;color:#719e07&#34;&gt;push&lt;/span&gt;:
-    &lt;span style=&#34;color:#719e07&#34;&gt;branches&lt;/span&gt;:
+&lt;span style=&#34;color:#268bd2&#34;&gt;on&lt;/span&gt;: 
+  &lt;span style=&#34;color:#268bd2&#34;&gt;push&lt;/span&gt;:
+    &lt;span style=&#34;color:#268bd2&#34;&gt;branches&lt;/span&gt;:
       - master
       
-&lt;span style=&#34;color:#719e07&#34;&gt;jobs&lt;/span&gt;:
-  &lt;span style=&#34;color:#719e07&#34;&gt;build&lt;/span&gt;: 
-    &lt;span style=&#34;color:#719e07&#34;&gt;runs-on&lt;/span&gt;: ubuntu-latest 
+&lt;span style=&#34;color:#268bd2&#34;&gt;jobs&lt;/span&gt;:
+  &lt;span style=&#34;color:#268bd2&#34;&gt;build&lt;/span&gt;: 
+    &lt;span style=&#34;color:#268bd2&#34;&gt;runs-on&lt;/span&gt;: ubuntu-latest 
         
-    &lt;span style=&#34;color:#719e07&#34;&gt;steps&lt;/span&gt;:
+    &lt;span style=&#34;color:#268bd2&#34;&gt;steps&lt;/span&gt;:
     &lt;span style=&#34;color:#586e75&#34;&gt;# check it to your workflow can access it&lt;/span&gt;
     &lt;span style=&#34;color:#586e75&#34;&gt;# from: https://github.com/actions/checkout&lt;/span&gt;
-    - &lt;span style=&#34;color:#719e07&#34;&gt;name&lt;/span&gt;: Checkout Repository master branch
-      &lt;span style=&#34;color:#719e07&#34;&gt;uses&lt;/span&gt;: actions/checkout@master 
+    - &lt;span style=&#34;color:#268bd2&#34;&gt;name&lt;/span&gt;: Checkout Repository master branch
+      &lt;span style=&#34;color:#268bd2&#34;&gt;uses&lt;/span&gt;: actions/checkout@master 
       
     &lt;span style=&#34;color:#586e75&#34;&gt;# from: https://github.com/actions/setup-node  &lt;/span&gt;
-    - &lt;span style=&#34;color:#719e07&#34;&gt;name&lt;/span&gt;: Setup Node.js &lt;span style=&#34;color:#2aa198&#34;&gt;12.&lt;/span&gt;x 
-      &lt;span style=&#34;color:#719e07&#34;&gt;uses&lt;/span&gt;: actions/setup-node@master
-      &lt;span style=&#34;color:#719e07&#34;&gt;with&lt;/span&gt;:
-        &lt;span style=&#34;color:#719e07&#34;&gt;node-version&lt;/span&gt;: &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;12.x&amp;#34;&lt;/span&gt;
+    - &lt;span style=&#34;color:#268bd2&#34;&gt;name&lt;/span&gt;: Setup Node.js 12.x 
+      &lt;span style=&#34;color:#268bd2&#34;&gt;uses&lt;/span&gt;: actions/setup-node@master
+      &lt;span style=&#34;color:#268bd2&#34;&gt;with&lt;/span&gt;:
+        &lt;span style=&#34;color:#268bd2&#34;&gt;node-version&lt;/span&gt;: &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;12.x&amp;#34;&lt;/span&gt;
     
-    - &lt;span style=&#34;color:#719e07&#34;&gt;name&lt;/span&gt;: Setup Hexo Dependencies
-      &lt;span style=&#34;color:#719e07&#34;&gt;run&lt;/span&gt;: &lt;span style=&#34;color:#2aa198&#34;&gt;|
-&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;       &lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;npm install hexo-cli -g&lt;/span&gt;
-        npm install
+    - &lt;span style=&#34;color:#268bd2&#34;&gt;name&lt;/span&gt;: Setup Hexo Dependencies
+      &lt;span style=&#34;color:#268bd2&#34;&gt;run&lt;/span&gt;: |&lt;span style=&#34;color:#2aa198&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;        npm install hexo-cli -g
+&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;        npm install&lt;/span&gt;        
     
-    - &lt;span style=&#34;color:#719e07&#34;&gt;name&lt;/span&gt;: Setup Deploy Private Key
-      &lt;span style=&#34;color:#719e07&#34;&gt;env&lt;/span&gt;:
-        &lt;span style=&#34;color:#719e07&#34;&gt;HEXO_DEPLOY_PRIVATE_KEY&lt;/span&gt;: ${{ secrets.HEXO_DEPLOY_PRIVATE_KEY }}
-      &lt;span style=&#34;color:#719e07&#34;&gt;run&lt;/span&gt;: &lt;span style=&#34;color:#2aa198&#34;&gt;|
-&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;       &lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;mkdir -p ~/.ssh/&lt;/span&gt;
-        echo &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;$HEXO_DEPLOY_PRIVATE_KEY&amp;#34;&lt;/span&gt; &amp;gt; ~/.ssh/id_rsa 
-        chmod &lt;span style=&#34;color:#2aa198&#34;&gt;600&lt;/span&gt; ~/.ssh/id_rsa
-        ssh-keyscan github.com &amp;gt;&amp;gt; ~/.ssh/known_hosts
-        
-    - &lt;span style=&#34;color:#719e07&#34;&gt;name&lt;/span&gt;: Setup Git Infomation
-      &lt;span style=&#34;color:#719e07&#34;&gt;run&lt;/span&gt;: &lt;span style=&#34;color:#2aa198&#34;&gt;| 
-&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;       &lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;git config --global user.name &amp;#39;&amp;lt;你的用户名&amp;gt;&amp;#39; &lt;/span&gt;
-        git config --global user.email &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;&amp;lt;你登录的email&amp;gt;&amp;#39;&lt;/span&gt;
-    - &lt;span style=&#34;color:#719e07&#34;&gt;name&lt;/span&gt;: Deploy Hexo 
-      &lt;span style=&#34;color:#719e07&#34;&gt;run&lt;/span&gt;: &lt;span style=&#34;color:#2aa198&#34;&gt;|
-&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;       &lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt; &lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;hexo clean&lt;/span&gt;
-        hexo generate 
-        hexo deploy
+    - &lt;span style=&#34;color:#268bd2&#34;&gt;name&lt;/span&gt;: Setup Deploy Private Key
+      &lt;span style=&#34;color:#268bd2&#34;&gt;env&lt;/span&gt;:
+        &lt;span style=&#34;color:#268bd2&#34;&gt;HEXO_DEPLOY_PRIVATE_KEY&lt;/span&gt;: ${{ secrets.HEXO_DEPLOY_PRIVATE_KEY }}
+      &lt;span style=&#34;color:#268bd2&#34;&gt;run&lt;/span&gt;: |&lt;span style=&#34;color:#2aa198&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;        mkdir -p ~/.ssh/
+&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;        echo &amp;#34;$HEXO_DEPLOY_PRIVATE_KEY&amp;#34; &amp;gt; ~/.ssh/id_rsa 
+&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;        chmod 600 ~/.ssh/id_rsa
+&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;        ssh-keyscan github.com &amp;gt;&amp;gt; ~/.ssh/known_hosts
+&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;        &lt;/span&gt;        
+    - &lt;span style=&#34;color:#268bd2&#34;&gt;name&lt;/span&gt;: Setup Git Infomation
+      &lt;span style=&#34;color:#268bd2&#34;&gt;run&lt;/span&gt;: | 
+        git config --global user.name &amp;#39;&amp;lt;你的用户名&amp;gt;&amp;#39; 
+        git config --global user.email &amp;#39;&amp;lt;你登录的email&amp;gt;&amp;#39;
+    - &lt;span style=&#34;color:#268bd2&#34;&gt;name&lt;/span&gt;: Deploy Hexo 
+      &lt;span style=&#34;color:#268bd2&#34;&gt;run&lt;/span&gt;: |&lt;span style=&#34;color:#2aa198&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;        hexo clean
+&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;        hexo generate 
+&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;        hexo deploy&lt;/span&gt;        
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;仔细看这段代码，里边要填上你的用户名和邮箱&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;DONE!大功告成啦，到这里可以去测试一下，修改修改某个文章标题，看看是否有效果&lt;/p&gt;
 &lt;p&gt;好了，利用GitHub action实现自动部署这一步已经完成了&lt;/p&gt;
