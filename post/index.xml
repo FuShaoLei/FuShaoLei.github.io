@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Sorryfu Blog.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 10 Jan 2021 12:14:48 +0800</lastBuildDate><atom:link href="https://fushaolei.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://fushaolei.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>常用Git指令</title>
+      <link>https://fushaolei.github.io/post/common-git/</link>
+      <pubDate>Tue, 12 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/post/common-git/</guid>
+      <description>前言 我于去年的二月份开始学习git，而后又经历了许多事情 。。。 这篇文章也是我不再折腾博客，专注写文章的开头</description>
+    </item>
+    
     <item>
       <title>我的常用软件</title>
       <link>https://fushaolei.github.io/post/reinstall-sys/</link>

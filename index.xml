@@ -5,9 +5,24 @@
     <description>Recent content on Sorryfu Blog.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 10 Jan 2021 12:14:48 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 12 Jan 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://fushaolei.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>常用Git指令</title>
+        <link>https://fushaolei.github.io/post/common-git/</link>
+        <pubDate>Tue, 12 Jan 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/common-git/</guid>
+        <description>Sorryfu Blog. https://fushaolei.github.io/post/common-git/ -&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;我于去年的二月份开始学习git，而后又经历了许多事情
+。。。
+这篇文章也是我不再折腾博客，专注写文章的开头&lt;/p&gt;
+- https://fushaolei.github.io/post/common-git/ - </description>
+        </item>
     
     
     
@@ -353,112 +368,6 @@
         
         <guid>https://fushaolei.github.io/post/android-multi-text/</guid>
         <description>Sorryfu Blog. https://fushaolei.github.io/post/android-multi-text/ -- https://fushaolei.github.io/post/android-multi-text/ - </description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Recyclerview多样式混合布局</title>
-        <link>https://fushaolei.github.io/post/recyclerview-multi-style/</link>
-        <pubDate>Tue, 08 Dec 2020 22:04:03 +0000</pubDate>
-        
-        <guid>https://fushaolei.github.io/post/recyclerview-multi-style/</guid>
-        <description>Sorryfu Blog. https://fushaolei.github.io/post/recyclerview-multi-style/ -&lt;blockquote&gt;
-&lt;p&gt;问题：已知字段中会有一个名为&lt;code&gt;layoutStyle&lt;/code&gt;的字段来控制布局的样式，求解这个recyclerview的adapter如何写&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;嘶，看到这个题目真是眉头一紧，因为对&lt;code&gt;recyclerview&lt;/code&gt;不是很熟悉（当然对listview也不是很熟悉），哎 怎么办捏，他妈的。先照着网上的方法抄了以下，暂时如此，改天回头把&lt;code&gt;recyclerview&lt;/code&gt;的代码读读&lt;/p&gt;
-&lt;p&gt;直接贴最重要的Aadpter方法了，其他都是次要的&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;MyAdapter&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;extends&lt;/span&gt; RecyclerView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;Adapter &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;final&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; TYPE_ONE &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; 1&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;final&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; TYPE_TWO &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; 2&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-
-    &lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; List&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&lt;/span&gt;Bean&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt; beanList &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; ArrayList&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
-
-    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;MyAdapter&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;List&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&lt;/span&gt;Bean&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt; beanList&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;beanList &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; beanList&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-
-    &lt;span style=&#34;color:#268bd2&#34;&gt;@NonNull&lt;/span&gt;
-    &lt;span style=&#34;color:#268bd2&#34;&gt;@Override&lt;/span&gt;
-    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; RecyclerView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;ViewHolder &lt;span style=&#34;color:#268bd2&#34;&gt;onCreateViewHolder&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;@NonNull&lt;/span&gt; ViewGroup parent&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; viewType&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-        View view&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;switch&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;viewType&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;case&lt;/span&gt; TYPE_ONE&lt;span style=&#34;color:#719e07&#34;&gt;:&lt;/span&gt;
-&lt;span style=&#34;color:#586e75&#34;&gt;//                view  = View.inflate(parent.getContext(), R.layout.item_type_one,null);
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;                view &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; LayoutInflater&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;from&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;parent&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getContext&lt;span style=&#34;color:#719e07&#34;&gt;()).&lt;/span&gt;inflate&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;layout&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;item_type_one&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;parent&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#cb4b16&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-                &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; OneViewHolder&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;view&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;case&lt;/span&gt; TYPE_TWO&lt;span style=&#34;color:#719e07&#34;&gt;:&lt;/span&gt;
-&lt;span style=&#34;color:#586e75&#34;&gt;//                view  = View.inflate(parent.getContext(), R.layout.item_type_two,null);
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;                view &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; LayoutInflater&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;from&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;parent&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getContext&lt;span style=&#34;color:#719e07&#34;&gt;()).&lt;/span&gt;inflate&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;layout&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;item_type_two&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;parent&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#cb4b16&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-                &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; TwoViewHolder&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;view&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#cb4b16&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-
-    &lt;span style=&#34;color:#268bd2&#34;&gt;@Override&lt;/span&gt;
-    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;onBindViewHolder&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;@NonNull&lt;/span&gt; RecyclerView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;ViewHolder holder&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;final&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; position&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;holder &lt;span style=&#34;color:#719e07&#34;&gt;instanceof&lt;/span&gt; OneViewHolder&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;((&lt;/span&gt;OneViewHolder&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; holder&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;mCover&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;setImageResource&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;beanList&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;get&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;position&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;getPic&lt;span style=&#34;color:#719e07&#34;&gt;());&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;((&lt;/span&gt;OneViewHolder&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; holder&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;mDesc&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;setText&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;beanList&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;get&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;position&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;getDesc&lt;span style=&#34;color:#719e07&#34;&gt;());&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;((&lt;/span&gt;OneViewHolder&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; holder&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;mTitle&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;setText&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;beanList&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;get&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;position&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;getTitle&lt;span style=&#34;color:#719e07&#34;&gt;());&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;holder &lt;span style=&#34;color:#719e07&#34;&gt;instanceof&lt;/span&gt; TwoViewHolder&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;((&lt;/span&gt;TwoViewHolder&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; holder&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;mAvator&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;setImageResource&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;beanList&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;get&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;position&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;getPic&lt;span style=&#34;color:#719e07&#34;&gt;());&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;((&lt;/span&gt;TwoViewHolder&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; holder&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;mName&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;setText&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;beanList&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;get&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;position&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;getName&lt;span style=&#34;color:#719e07&#34;&gt;());&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;((&lt;/span&gt;TwoViewHolder&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; holder&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;mButton&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;setOnClickListener&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; View&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;OnClickListener&lt;span style=&#34;color:#719e07&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-                &lt;span style=&#34;color:#268bd2&#34;&gt;@Override&lt;/span&gt;
-                &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;onClick&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;View v&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-                    Log&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;e&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;==&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;你点击的是第 &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;position&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34; 项&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-                 &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;});&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-
-    &lt;span style=&#34;color:#268bd2&#34;&gt;@Override&lt;/span&gt;
-    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;getItemViewType&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; position&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-        &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; layoutStyle &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; beanList&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;get&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;position&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;getLayoutStyle&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;switch&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;layoutStyle&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;case&lt;/span&gt; 1&lt;span style=&#34;color:#719e07&#34;&gt;:&lt;/span&gt;
-                &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; TYPE_ONE&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;case&lt;/span&gt; 2&lt;span style=&#34;color:#719e07&#34;&gt;:&lt;/span&gt;
-                &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; TYPE_TWO&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; 0&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-
-    &lt;span style=&#34;color:#268bd2&#34;&gt;@Override&lt;/span&gt;
-    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;getItemCount&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; beanList&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;size&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;
-    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-
-    &lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;OneViewHolder&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;extends&lt;/span&gt; RecyclerView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;ViewHolder&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-        &lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; ImageView mCover&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-        &lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; TextView mDesc&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-        &lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; TextView mTitle&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-
-        &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;OneViewHolder&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;@NonNull&lt;/span&gt; View itemView&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-            &lt;span style=&#34;color:#268bd2&#34;&gt;super&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;itemView&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-            mCover &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; itemView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;findViewById&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;iv_cover&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-            mDesc &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; itemView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;findViewById&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;tv_desc&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-            mTitle &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; itemView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;findViewById&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;tv_title&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-    &lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;TwoViewHolder&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;extends&lt;/span&gt; RecyclerView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;ViewHolder&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-        &lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; ImageView mAvator&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-        &lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; TextView mName&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-        &lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; Button mButton&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-
-        &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;TwoViewHolder&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;@NonNull&lt;/span&gt; View itemView&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-            &lt;span style=&#34;color:#268bd2&#34;&gt;super&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;itemView&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-            mAvator &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; itemView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;findViewById&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;iv_avator&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-            mName &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; itemView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;findViewById&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;tv_name&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-            mButton &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; itemView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;findViewById&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;btn_btn&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;里面还遇到了一个问题，未解决&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//                view  = View.inflate(parent.getContext(), R.layout.item_type_two,null);
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;                view &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; LayoutInflater&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;from&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;parent&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getContext&lt;span style=&#34;color:#719e07&#34;&gt;()).&lt;/span&gt;inflate&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;layout&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;item_type_two&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;parent&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#cb4b16&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这两个方法都能弄出视图来，可是，第一个方法呈现的视图是紧凑的，也就是我的&lt;code&gt;margin&lt;/code&gt;值是无效的&amp;hellip;.留个坑&lt;/p&gt;- https://fushaolei.github.io/post/recyclerview-multi-style/ - </description>
         </item>
     
     
