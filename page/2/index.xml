@@ -12,126 +12,6 @@
     
     
         <item>
-        <title>Recyclerview多样式混合布局</title>
-        <link>https://fushaolei.github.io/post/recyclerview-multi-style/</link>
-        <pubDate>Tue, 08 Dec 2020 22:04:03 +0000</pubDate>
-        
-        <guid>https://fushaolei.github.io/post/recyclerview-multi-style/</guid>
-        <description>Sorryfu Blog. https://fushaolei.github.io/post/recyclerview-multi-style/ -&lt;blockquote&gt;
-&lt;p&gt;问题：已知字段中会有一个名为&lt;code&gt;layoutStyle&lt;/code&gt;的字段来控制布局的样式，求解这个recyclerview的adapter如何写&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;嘶，看到这个题目真是眉头一紧，因为对&lt;code&gt;recyclerview&lt;/code&gt;不是很熟悉（当然对listview也不是很熟悉），哎 怎么办捏，他妈的。先照着网上的方法抄了以下，暂时如此，改天回头把&lt;code&gt;recyclerview&lt;/code&gt;的代码读读&lt;/p&gt;
-&lt;p&gt;直接贴最重要的Aadpter方法了，其他都是次要的&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;MyAdapter&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;extends&lt;/span&gt; RecyclerView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;Adapter &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;final&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; TYPE_ONE &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; 1&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;final&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; TYPE_TWO &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; 2&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-
-    &lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; List&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&lt;/span&gt;Bean&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt; beanList &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; ArrayList&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
-
-    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;MyAdapter&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;List&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&lt;/span&gt;Bean&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt; beanList&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;beanList &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; beanList&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-
-    &lt;span style=&#34;color:#268bd2&#34;&gt;@NonNull&lt;/span&gt;
-    &lt;span style=&#34;color:#268bd2&#34;&gt;@Override&lt;/span&gt;
-    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; RecyclerView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;ViewHolder &lt;span style=&#34;color:#268bd2&#34;&gt;onCreateViewHolder&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;@NonNull&lt;/span&gt; ViewGroup parent&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; viewType&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-        View view&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;switch&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;viewType&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;case&lt;/span&gt; TYPE_ONE&lt;span style=&#34;color:#719e07&#34;&gt;:&lt;/span&gt;
-&lt;span style=&#34;color:#586e75&#34;&gt;//                view  = View.inflate(parent.getContext(), R.layout.item_type_one,null);
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;                view &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; LayoutInflater&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;from&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;parent&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getContext&lt;span style=&#34;color:#719e07&#34;&gt;()).&lt;/span&gt;inflate&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;layout&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;item_type_one&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;parent&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#cb4b16&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-                &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; OneViewHolder&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;view&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;case&lt;/span&gt; TYPE_TWO&lt;span style=&#34;color:#719e07&#34;&gt;:&lt;/span&gt;
-&lt;span style=&#34;color:#586e75&#34;&gt;//                view  = View.inflate(parent.getContext(), R.layout.item_type_two,null);
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;                view &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; LayoutInflater&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;from&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;parent&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getContext&lt;span style=&#34;color:#719e07&#34;&gt;()).&lt;/span&gt;inflate&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;layout&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;item_type_two&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;parent&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#cb4b16&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-                &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; TwoViewHolder&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;view&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#cb4b16&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-
-    &lt;span style=&#34;color:#268bd2&#34;&gt;@Override&lt;/span&gt;
-    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;onBindViewHolder&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;@NonNull&lt;/span&gt; RecyclerView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;ViewHolder holder&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;final&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; position&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;holder &lt;span style=&#34;color:#719e07&#34;&gt;instanceof&lt;/span&gt; OneViewHolder&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;((&lt;/span&gt;OneViewHolder&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; holder&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;mCover&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;setImageResource&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;beanList&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;get&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;position&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;getPic&lt;span style=&#34;color:#719e07&#34;&gt;());&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;((&lt;/span&gt;OneViewHolder&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; holder&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;mDesc&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;setText&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;beanList&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;get&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;position&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;getDesc&lt;span style=&#34;color:#719e07&#34;&gt;());&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;((&lt;/span&gt;OneViewHolder&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; holder&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;mTitle&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;setText&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;beanList&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;get&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;position&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;getTitle&lt;span style=&#34;color:#719e07&#34;&gt;());&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;holder &lt;span style=&#34;color:#719e07&#34;&gt;instanceof&lt;/span&gt; TwoViewHolder&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;((&lt;/span&gt;TwoViewHolder&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; holder&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;mAvator&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;setImageResource&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;beanList&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;get&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;position&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;getPic&lt;span style=&#34;color:#719e07&#34;&gt;());&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;((&lt;/span&gt;TwoViewHolder&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; holder&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;mName&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;setText&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;beanList&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;get&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;position&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;getName&lt;span style=&#34;color:#719e07&#34;&gt;());&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;((&lt;/span&gt;TwoViewHolder&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; holder&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;mButton&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;setOnClickListener&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; View&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;OnClickListener&lt;span style=&#34;color:#719e07&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-                &lt;span style=&#34;color:#268bd2&#34;&gt;@Override&lt;/span&gt;
-                &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;onClick&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;View v&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-                    Log&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;e&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;==&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;你点击的是第 &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;position&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34; 项&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-                 &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;});&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-
-    &lt;span style=&#34;color:#268bd2&#34;&gt;@Override&lt;/span&gt;
-    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;getItemViewType&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; position&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-        &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; layoutStyle &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; beanList&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;get&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;position&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;getLayoutStyle&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;switch&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;layoutStyle&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;case&lt;/span&gt; 1&lt;span style=&#34;color:#719e07&#34;&gt;:&lt;/span&gt;
-                &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; TYPE_ONE&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;case&lt;/span&gt; 2&lt;span style=&#34;color:#719e07&#34;&gt;:&lt;/span&gt;
-                &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; TYPE_TWO&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; 0&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-
-    &lt;span style=&#34;color:#268bd2&#34;&gt;@Override&lt;/span&gt;
-    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;getItemCount&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; beanList&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;size&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;
-    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-
-    &lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;OneViewHolder&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;extends&lt;/span&gt; RecyclerView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;ViewHolder&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-        &lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; ImageView mCover&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-        &lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; TextView mDesc&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-        &lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; TextView mTitle&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-
-        &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;OneViewHolder&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;@NonNull&lt;/span&gt; View itemView&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-            &lt;span style=&#34;color:#268bd2&#34;&gt;super&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;itemView&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-            mCover &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; itemView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;findViewById&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;iv_cover&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-            mDesc &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; itemView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;findViewById&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;tv_desc&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-            mTitle &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; itemView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;findViewById&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;tv_title&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-    &lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;TwoViewHolder&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;extends&lt;/span&gt; RecyclerView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;ViewHolder&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-        &lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; ImageView mAvator&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-        &lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; TextView mName&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-        &lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; Button mButton&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-
-        &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;TwoViewHolder&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;@NonNull&lt;/span&gt; View itemView&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-            &lt;span style=&#34;color:#268bd2&#34;&gt;super&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;itemView&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-            mAvator &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; itemView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;findViewById&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;iv_avator&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-            mName &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; itemView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;findViewById&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;tv_name&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-            mButton &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; itemView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;findViewById&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;btn_btn&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;里面还遇到了一个问题，未解决&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//                view  = View.inflate(parent.getContext(), R.layout.item_type_two,null);
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;                view &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; LayoutInflater&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;from&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;parent&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getContext&lt;span style=&#34;color:#719e07&#34;&gt;()).&lt;/span&gt;inflate&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;layout&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;item_type_two&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;parent&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#cb4b16&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这两个方法都能弄出视图来，可是，第一个方法呈现的视图是紧凑的，也就是我的&lt;code&gt;margin&lt;/code&gt;值是无效的&amp;hellip;.留个坑&lt;/p&gt;- https://fushaolei.github.io/post/recyclerview-multi-style/ - </description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Android连接HTTP时有问题</title>
-        <link>https://fushaolei.github.io/post/android-no-network-security-config/</link>
-        <pubDate>Sun, 29 Nov 2020 22:21:11 +0000</pubDate>
-        
-        <guid>https://fushaolei.github.io/post/android-no-network-security-config/</guid>
-        <description>Sorryfu Blog. https://fushaolei.github.io/post/android-no-network-security-config/ -&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;p&gt;今天做毕业设计的登录模块的时候，要在本地的服务器上取资源，结果就发生了这个错误&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;NetworkSecurityConfig: No Network Security Config specified, using platform default
-&lt;/code&gt;&lt;/pre&gt;- https://fushaolei.github.io/post/android-no-network-security-config/ - </description>
-        </item>
-    
-    
-    
-        <item>
         <title>实习小结</title>
         <link>https://fushaolei.github.io/post/sina-work-knowledge/</link>
         <pubDate>Wed, 25 Nov 2020 00:16:03 +0000</pubDate>
@@ -452,7 +332,7 @@ mWebView.getSettings().setBlockNetworkImage(false);//解决图片不显示
 &lt;li&gt;QQ：1563250958&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;关于本站&#34;&gt;关于本站&lt;/h2&gt;
-&lt;p&gt;主要用于记录所学的东西，前端，后端，Android什么的，比较杂，因为我还是一个正在成长的菜狗啊啊啊啊，当然不排除会有一些日常的感悟啊，经历啊什么的（当然 有一些文字我自己都不想重复看，因为感觉很羞耻2333），各位看官请便&lt;/p&gt;
+&lt;p&gt;主要用于记录所学的东西，前端，后端，Android什么的，比较杂，因为我还是一个正在成长的菜狗啊啊啊啊，当然不排除会有一些日常的感悟啊，经历啊什么的（当然 有一些文字我自己都不想重复看，因为感觉很羞耻2333），&lt;del&gt;各位看官请便&lt;/del&gt;，其实看博客的最多的还是自己吧，因为要复习啊什么的，现在博文蛮混乱的，因为懒，还有 喜欢开坑，不喜欢填坑（；´д｀）ゞ（真是个臭毛病），总之，这是一个自娱自乐的站点。&lt;/p&gt;
 &lt;h2 id=&#34;建站历史&#34;&gt;建站历史&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;2019/04/01 &lt;code&gt;hexo&lt;/code&gt;引擎 &lt;code&gt;next&lt;/code&gt;主题，部署在&lt;code&gt;github&lt;/code&gt;上&lt;/li&gt;
@@ -476,6 +356,7 @@ mWebView.getSettings().setBlockNetworkImage(false);//解决图片不显示
 &lt;li&gt;2020/12/05 换成了默认的主题 &lt;code&gt;landscape&lt;/code&gt;，兜兜转转，还是回到了原点&lt;/li&gt;
 &lt;li&gt;2020/12/15 换成了&lt;code&gt;hueman&lt;/code&gt;主题，暂时关闭了评论系统&lt;/li&gt;
 &lt;li&gt;2021/01/08 换成了构建速度更快的&lt;code&gt;hugo&lt;/code&gt;框架，采用&lt;code&gt;Diary&lt;/code&gt;主题模板建站&lt;/li&gt;
+&lt;li&gt;开通了&lt;code&gt;disqus&lt;/code&gt;评论系统&lt;/li&gt;
 &lt;/ul&gt;
 - https://fushaolei.github.io/about/ - </description>
         </item>
@@ -741,6 +622,294 @@ Subscribers: #订阅者
 &lt;/tbody&gt;
 &lt;/table&gt;
 - https://fushaolei.github.io/post/git-in-work/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>RelativeLayout中的属性</title>
+        <link>https://fushaolei.github.io/post/android-relativelayout-att/</link>
+        <pubDate>Sun, 18 Oct 2020 23:13:16 +0000</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/android-relativelayout-att/</guid>
+        <description>Sorryfu Blog. https://fushaolei.github.io/post/android-relativelayout-att/ -&lt;h2 id=&#34;与parent相对的属性&#34;&gt;与parent相对的属性&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;属性&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignParentTop&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示widget的&lt;strong&gt;顶部&lt;/strong&gt;和Container的&lt;strong&gt;顶部&lt;/strong&gt;对齐。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignParentBottom&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示widget的&lt;strong&gt;底部&lt;/strong&gt;和Container的&lt;strong&gt;底部&lt;/strong&gt;对齐。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignParentStart&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示widget的左边和Container的起始边缘对齐。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignParentEnd&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示widget的&lt;strong&gt;左边&lt;/strong&gt;和Container的结束边缘对齐。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignParentLeft&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示widget的&lt;strong&gt;左边&lt;/strong&gt;和Container的&lt;strong&gt;左边&lt;/strong&gt;对齐。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignParentRight&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示widget的&lt;strong&gt;右边&lt;/strong&gt;和Container的&lt;strong&gt;右边&lt;/strong&gt;对齐。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_centerInParent&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示widget处于Container平面上的&lt;strong&gt;正中间&lt;/strong&gt;。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignWithParentIfMissing&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;若设置true，则当该控件layout_toLeftOf, layout_toRightOf等找不到相对的参考widget时，就以父container为参考。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;与widget相对的布局&#34;&gt;与widget相对的布局&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;属性&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_above&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示该widget位于参数值标识的widget的上方。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_below&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示该widget位于参数值标识的widget的下方。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignTop&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示该widget的&lt;strong&gt;顶部&lt;/strong&gt;与参数值标识的widget的&lt;strong&gt;顶部&lt;/strong&gt;对齐。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignBottom&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示该widget的&lt;strong&gt;底部&lt;/strong&gt;与参数值标识的widget的**底部*8对齐。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignStart&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示该widget的&lt;strong&gt;起始边缘&lt;/strong&gt;与参数值标识的widget的&lt;strong&gt;起始边缘&lt;/strong&gt;对齐。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignEnd&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示该widget的&lt;strong&gt;结束边缘&lt;/strong&gt;与参数值标识的widget的&lt;strong&gt;结束边缘&lt;/strong&gt;对齐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignLeft&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示该widget的&lt;strong&gt;左边&lt;/strong&gt;与参数值标识的widget的&lt;strong&gt;左边&lt;/strong&gt;对齐。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignRight&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示该widget的&lt;strong&gt;右边&lt;/strong&gt;参数值标识的widget的&lt;strong&gt;右边&lt;/strong&gt;对齐。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_centerHorizontal&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示widget处于Container&lt;strong&gt;水平方向上的中间&lt;/strong&gt;。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_centerVertical&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示widget处于Container&lt;strong&gt;垂直方向上的中间&lt;/strong&gt;。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_alignBaseline&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示该widget的BaseLine与参数值标识的widget的BaseLine对齐。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_toLeftOf&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示该widget&lt;strong&gt;位于参数值标识的widget的左方&lt;/strong&gt;。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_toRightOf&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;表示该widget&lt;strong&gt;位于参数值标识的widget的右方&lt;/strong&gt;。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_toStartOf&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;🚩表示该widget&lt;strong&gt;结束边缘&lt;/strong&gt;与参数值标识的widget的&lt;strong&gt;起始边缘&lt;/strong&gt;对齐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;layout_toEndOf&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;🚩表示该widget&lt;strong&gt;起始边缘&lt;/strong&gt;与参数值标识的widget的&lt;strong&gt;结束边缘&lt;/strong&gt;对齐&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+- https://fushaolei.github.io/post/android-relativelayout-att/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Android MVP模式笔记</title>
+        <link>https://fushaolei.github.io/post/android-mvp/</link>
+        <pubDate>Tue, 06 Oct 2020 13:34:37 +0000</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/android-mvp/</guid>
+        <description>Sorryfu Blog. https://fushaolei.github.io/post/android-mvp/ -&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;以前有学过，感觉理解不了，然后又用不到，然后就不了了之了 QAQ，现在因为实习公司的项目有用到，如果不学的话感觉根本看不懂项目（其实学完之后还是看不懂😂），所以就重新学过，顺便记录一下&lt;/p&gt;
+&lt;h3 id=&#34;2021年1月13日补充&#34;&gt;2021年1月13日补充&lt;/h3&gt;
+&lt;p&gt;当初想的窄了，从细枝末节入手，缺乏一个全局的观念，现在想起来，其实下面所说的预备知识，其实是为&lt;strong&gt;优化&lt;/strong&gt;MVP模式所服务的。&lt;/p&gt;
+&lt;h2 id=&#34;预备知识&#34;&gt;预备知识&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;面向接口的编程思想&lt;/li&gt;
+&lt;li&gt;向上转型的概念&lt;/li&gt;
+&lt;li&gt;解耦&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;面向接口编程&#34;&gt;面向接口编程&lt;/h3&gt;
+&lt;p&gt;先复习一下接口的概念：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;在Java程序设计语言中，接口不是类，而是对希望符合这个接口的类的一组需求（出自《Java核心卷一》p222页）
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;说白了，接口就是一组&lt;strong&gt;需求&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;而面向接口编程呢，就是在开始开发前，先定义好接口（可以理解为先列出一组需求），然后再进行开发&lt;/p&gt;
+&lt;h3 id=&#34;向上转型&#34;&gt;向上转型&lt;/h3&gt;
+&lt;p&gt;即&lt;strong&gt;父类引用指向子类对象&lt;/strong&gt;（即&lt;strong&gt;多态&lt;/strong&gt;），看完下面的代码应该更好理解些&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;interface&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;IStudent&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+    String &lt;span style=&#34;color:#268bd2&#34;&gt;getName&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;Student&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;implements&lt;/span&gt; IStudent&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//此时IStudent是父类，Student是子类
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#268bd2&#34;&gt;@Override&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; String &lt;span style=&#34;color:#268bd2&#34;&gt;getName&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;任我行&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;Test&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;main&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;String&lt;span style=&#34;color:#719e07&#34;&gt;[]&lt;/span&gt; args&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+        IStudent iStudent&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+        iStudent&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; Student&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//父类引用指向子类的对象，这里做了向上转型
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;学生的名字是：&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;iStudent&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getName&lt;span style=&#34;color:#719e07&#34;&gt;());&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//打印结果：学生的名字是：任我行
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;解耦&#34;&gt;解耦&lt;/h3&gt;
+&lt;p&gt;解耦即降低依赖性&lt;/p&gt;
+&lt;h2 id=&#34;mvp模式&#34;&gt;MVP模式&lt;/h2&gt;
+&lt;p&gt;Actually，我觉得MVP模式的灵魂就是presenter层同时持有view层和model层的&lt;strong&gt;引用&lt;/strong&gt;（请联系上边的向上转型的概念）。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;照此逻辑，我们简单实现一个常见的登录模块。根据&lt;strong&gt;面向接口编程&lt;/strong&gt;，我们首先列出我们的接口（需求）：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#586e75&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; * View层的需求
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; */&lt;/span&gt;
+&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;interface&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;IView&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#586e75&#34;&gt;//1. 获取用户的输入信息
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; User &lt;span style=&#34;color:#268bd2&#34;&gt;getViewUser&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;
+    &lt;span style=&#34;color:#586e75&#34;&gt;//2. 登录成功的操作
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;loginSuceess&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;
+    &lt;span style=&#34;color:#586e75&#34;&gt;//3. 登录失败后的操作
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;loginFail&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#586e75&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; * Model层的需求
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; */&lt;/span&gt;
+&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;interface&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;IModel&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+     &lt;span style=&#34;color:#586e75&#34;&gt;//判断信息是否正确
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;     &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;boolean&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;isOk&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;User user&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#586e75&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; * presenter层的需求
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; */&lt;/span&gt;
+&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;interface&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;IPresenter&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#586e75&#34;&gt;//登录操作
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;login&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;好了，接口写完，现在去实现接口：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;
+&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;View&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;extends&lt;/span&gt; AppCompatActivity &lt;span style=&#34;color:#268bd2&#34;&gt;implements&lt;/span&gt; IView&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; EditText mUsername&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; EditText mPassword&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; Button mButton&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+
+    &lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; IPresenter iPresenter&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//present的引用
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;@Override&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;protected&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;onCreate&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;Bundle savedInstanceState&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#268bd2&#34;&gt;super&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;onCreate&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;savedInstanceState&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
+        setContentView&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;layout&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;activity_main&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
+
+        mUsername &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; findViewById&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;et_username&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
+        mPassword &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; findViewById&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;et_password&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
+        mButton &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; findViewById&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;btn_login&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
+
+        iPresenter &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; Presenter&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//父类引用指向子类对象，向上转型，这个this指向的是View本身，也就是是传入了一个IView的子类对象
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#586e75&#34;&gt;//此时Presenter同时持有Model层和View层的对象
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        mButton&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;setOnClickListener&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; android&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;view&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;View&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;OnClickListener&lt;span style=&#34;color:#719e07&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+            &lt;span style=&#34;color:#268bd2&#34;&gt;@Override&lt;/span&gt;
+            &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;onClick&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;android&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;view&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;View v&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+                iPresenter&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;login&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//此操作会执行Pressenter对象的login方法
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;            &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+        &lt;span style=&#34;color:#719e07&#34;&gt;});&lt;/span&gt;
+    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+
+    &lt;span style=&#34;color:#586e75&#34;&gt;//实现IView的需求
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#268bd2&#34;&gt;@Override&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; User &lt;span style=&#34;color:#268bd2&#34;&gt;getViewUser&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; User&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;mUsername&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getText&lt;span style=&#34;color:#719e07&#34;&gt;().&lt;/span&gt;toString&lt;span style=&#34;color:#719e07&#34;&gt;(),&lt;/span&gt;mPassword&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getText&lt;span style=&#34;color:#719e07&#34;&gt;().&lt;/span&gt;toString&lt;span style=&#34;color:#719e07&#34;&gt;());&lt;/span&gt;
+    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+
+    &lt;span style=&#34;color:#268bd2&#34;&gt;@Override&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;loginSuceess&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+        Toast&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;makeText&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;登录成功！&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; Toast&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;LENGTH_SHORT&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;show&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;
+    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+
+    &lt;span style=&#34;color:#268bd2&#34;&gt;@Override&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;loginFail&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+        Toast&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;makeText&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;登录失败！&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; Toast&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;LENGTH_SHORT&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;show&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;
+    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;Model&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;implements&lt;/span&gt; IModel&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#586e75&#34;&gt;//IModel的需求
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#268bd2&#34;&gt;@Override&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;boolean&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;isOk&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;User user&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;user&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getUsername&lt;span style=&#34;color:#719e07&#34;&gt;().&lt;/span&gt;equals&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;root&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&amp;amp;&amp;amp;&lt;/span&gt;user&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getPassword&lt;span style=&#34;color:#719e07&#34;&gt;().&lt;/span&gt;equals&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;123&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)){&lt;/span&gt;
+            &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#cb4b16&#34;&gt;true&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+        &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#cb4b16&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;我觉得mvp模式的核心在此&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//presenter层，联系model和view的枢纽
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;Presenter&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;implements&lt;/span&gt; IPresenter &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; IModel iModel&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; IView iView&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+
+    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;Presenter&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;IView iView&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#719e07&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;iModel &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; Model&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//向上转型
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#719e07&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;iView &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; iView&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//向上转型
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+
+    &lt;span style=&#34;color:#586e75&#34;&gt;//IPresenter的需求
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#268bd2&#34;&gt;@Override&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;login&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//当View层点击button的时候，将会调用到这个方法
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;iModel&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;isOk&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;iView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getViewUser&lt;span style=&#34;color:#719e07&#34;&gt;())){&lt;/span&gt;
+            iView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;loginSuceess&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//执行view层的loginSuceess
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+            iView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;loginFail&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//执行view层的loginFail
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;model，view，presenter的接口，就像是三条引子，把它们联系在了一起&lt;/p&gt;
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;肥肠感谢这些参考资料的作者(≧∀≦)ゞ（重点推荐第一篇，讲的太好了）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://mp.weixin.qq.com/s/DuNbl3V4gZY-ZCETbhZGug&#34;&gt;一步步带你精通MVP&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://juejin.im/post/6844903720036073480&#34;&gt;Android MVP架构从入门到精通-真枪实弹&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.csdn.net/lmj623565791/article/details/46596109?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522160170643419724836748193%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;amp;request_id=160170643419724836748193&amp;amp;biz_id=0&amp;amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_click~default-3-46596109.first_rank_ecpm_v3_pc_rank_v2&amp;amp;utm_term=android+mvp&amp;amp;spm=1018.2118.3001.4187&#34;&gt;浅谈 MVP in Android&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.csdn.net/chenssy/article/details/12786385?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522160169439719724835832063%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;amp;request_id=160169439719724835832063&amp;amp;biz_id=0&amp;amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v3~pc_rank_v2-1-12786385.first_rank_ecpm_v3_pc_rank_v2&amp;amp;utm_term=%E5%A4%9A%E6%80%81&amp;amp;spm=1018.2118.3001.4187&#34;&gt;java提高篇（三）&amp;mdash;&amp;ndash;理解java的三大特性之多态&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.csdn.net/Cyy19970527/article/details/83177996?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522160171051919725255500190%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;amp;request_id=160171051919725255500190&amp;amp;biz_id=0&amp;amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v3~pc_rank_v2-2-83177996.first_rank_ecpm_v3_pc_rank_v2&amp;amp;utm_term=%E9%9D%A2%E5%90%91%E6%8E%A5%E5%8F%A3%E7%BC%96%E7%A8%8B&amp;amp;spm=1018.2118.3001.4187&#34;&gt;面向接口编程思想(的好处)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/34026164&#34;&gt;Java的向上转型与向下转型&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+- https://fushaolei.github.io/post/android-mvp/ - </description>
         </item>
     
     

@@ -17,7 +17,10 @@
 
 
 <meta property="og:title" content="Android面试必知必会" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="Android 一， Android的四大组件  所有android应用都是由四大组件组成的：Activity，BroadcastReceiver，Service，ContentProvider
+  Activity：最基本的组件，一个就是一个屏幕，通常都被实现为一个独立的类 BroadcastReceiver：使用它对外部事件进行过滤，接收并做出响应 Service：一个服务是具有一个较长生命周期且没有用户界面的程序。 ContentProvider：使一个应用程序的指定数据集可以提供给其他应用程序。  二，Activity的生命周期  参考文章：深入理解Activity的生命周期
+    方法 作用     onCreate 进行初始化工作，此时Activity还在后台，不可见   onStart 此时Actvity已经可见，但是还没出现在前台，不可交互   onResume 此时Activity出现在前台并可交互   onPause 当Activity要跳到另一个Activity或应用正常退出时都会执行这个方法。此时Activity在前台并可见   onStop 此时Activity已经不可见了，（但是Activity对象还在内存中，没有被销毁）   onDestroy 这个阶段Activity被销毁   onRestart restart表示重新开始，Activity在这时可见，当用户按Home键切换到桌面后又切回来或者从后一个Activity切回前一个Activity就会触发这个方法。这里一般不做什么操作。    三，Activity的四个启动方法  给👴整懵逼了，看都看不懂
+    启动模式 说明     standard 标准模式，每创建一个Activity，都会在任务栈中添加一个实例   singleTop 栈顶复用，如果打开的Activity在任务栈顶，就不在创建，直接复用，如果不在栈顶，就重新创建一个   singleTask 栈内复用，如果打开的Activity在任务栈中，就删除此Activity上面所有的Activity，知道该Activity在栈顶，如果打开的Activity没在任务栈中，直接创建一个新的Activity实例入栈   singleInstance 全局唯一（单例模式），给每一个Activity创建一个任务栈，独占一个栈，打开Activity的时候就对所有的任务进行查询，如果有此Activity，直接复用，不用重新创建    四，Fragment的生命周期    方法 作用     onAttach() Fragment和Activity建立关联的时候调用，被附加到Activity中去。   onCreate() 系统会在创建Fragment时调用此方法。可以初始化一段资源文件等等。   onCreateView() 系统会在Fragment首次绘制其用户界面时调用此方法。 要想为Fragment绘制 UI，从该方法中返回的 View 必须是Fragment布局的根视图。如果Fragment未提供 UI，您可以返回 null。   onViewCreated() 在Fragment被绘制后，调用此方法，可以初始化控件资源。   onActivityCreated() 当onCreate()，onCreateView()，onViewCreated()方法执行完后调用，也就是Activity被渲染绘制出来后。   onPause() 系统将此方法作为用户离开Fragment的第一个信号（但并不总是意味着此Fragment会被销毁）进行调用。 通常可以在此方法内确认在当前用户会话结束后仍然有效的任何更改（因为用户可能不会返回）。   onDestroyView() Fragment中的布局被移除时调用。   onDetach() Fragment和Activity解除关联的时候调用。    五，service的生命周期 通过startService方式启动服务  onCreate：首次创建服务时由系统调用 onStartCommand：每次客户端通过调用显式启动服务时 onDestroy  通过bindService方式启动服务  onCreate：首次创建服务时由系统调用 onBind：绑定服务 onUnBind：解绑服务 onDestroy  Java 一，==和equal的区别 先讲==" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://fushaolei.github.io/post/android-interview/" />
 <meta property="article:published_time" content="2020-10-01T11:56:39+00:00" />
@@ -29,7 +32,10 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Android面试必知必会"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:description" content="Android 一， Android的四大组件  所有android应用都是由四大组件组成的：Activity，BroadcastReceiver，Service，ContentProvider
+  Activity：最基本的组件，一个就是一个屏幕，通常都被实现为一个独立的类 BroadcastReceiver：使用它对外部事件进行过滤，接收并做出响应 Service：一个服务是具有一个较长生命周期且没有用户界面的程序。 ContentProvider：使一个应用程序的指定数据集可以提供给其他应用程序。  二，Activity的生命周期  参考文章：深入理解Activity的生命周期
+    方法 作用     onCreate 进行初始化工作，此时Activity还在后台，不可见   onStart 此时Actvity已经可见，但是还没出现在前台，不可交互   onResume 此时Activity出现在前台并可交互   onPause 当Activity要跳到另一个Activity或应用正常退出时都会执行这个方法。此时Activity在前台并可见   onStop 此时Activity已经不可见了，（但是Activity对象还在内存中，没有被销毁）   onDestroy 这个阶段Activity被销毁   onRestart restart表示重新开始，Activity在这时可见，当用户按Home键切换到桌面后又切回来或者从后一个Activity切回前一个Activity就会触发这个方法。这里一般不做什么操作。    三，Activity的四个启动方法  给👴整懵逼了，看都看不懂
+    启动模式 说明     standard 标准模式，每创建一个Activity，都会在任务栈中添加一个实例   singleTop 栈顶复用，如果打开的Activity在任务栈顶，就不在创建，直接复用，如果不在栈顶，就重新创建一个   singleTask 栈内复用，如果打开的Activity在任务栈中，就删除此Activity上面所有的Activity，知道该Activity在栈顶，如果打开的Activity没在任务栈中，直接创建一个新的Activity实例入栈   singleInstance 全局唯一（单例模式），给每一个Activity创建一个任务栈，独占一个栈，打开Activity的时候就对所有的任务进行查询，如果有此Activity，直接复用，不用重新创建    四，Fragment的生命周期    方法 作用     onAttach() Fragment和Activity建立关联的时候调用，被附加到Activity中去。   onCreate() 系统会在创建Fragment时调用此方法。可以初始化一段资源文件等等。   onCreateView() 系统会在Fragment首次绘制其用户界面时调用此方法。 要想为Fragment绘制 UI，从该方法中返回的 View 必须是Fragment布局的根视图。如果Fragment未提供 UI，您可以返回 null。   onViewCreated() 在Fragment被绘制后，调用此方法，可以初始化控件资源。   onActivityCreated() 当onCreate()，onCreateView()，onViewCreated()方法执行完后调用，也就是Activity被渲染绘制出来后。   onPause() 系统将此方法作为用户离开Fragment的第一个信号（但并不总是意味着此Fragment会被销毁）进行调用。 通常可以在此方法内确认在当前用户会话结束后仍然有效的任何更改（因为用户可能不会返回）。   onDestroyView() Fragment中的布局被移除时调用。   onDetach() Fragment和Activity解除关联的时候调用。    五，service的生命周期 通过startService方式启动服务  onCreate：首次创建服务时由系统调用 onStartCommand：每次客户端通过调用显式启动服务时 onDestroy  通过bindService方式启动服务  onCreate：首次创建服务时由系统调用 onBind：绑定服务 onUnBind：解绑服务 onDestroy  Java 一，==和equal的区别 先讲=="/>
 
 
 
@@ -664,6 +670,7 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
 </ul>
 </li>
 </ul>
+
                     
                     <HR width="100%" id="EOF">
 		    <p style="color:#777;">最后修改于 2020-10-01</p>

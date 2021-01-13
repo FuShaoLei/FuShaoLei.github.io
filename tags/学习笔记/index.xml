@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Android on Sorryfu Blog.</title>
-    <link>https://fushaolei.github.io/tags/android/</link>
-    <description>Recent content in Android on Sorryfu Blog.</description>
+    <title>学习笔记 on Sorryfu Blog.</title>
+    <link>https://fushaolei.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+    <description>Recent content in 学习笔记 on Sorryfu Blog.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 08 Dec 2020 22:04:03 +0000</lastBuildDate><atom:link href="https://fushaolei.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://fushaolei.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Recyclerview多样式混合布局</title>
-      <link>https://fushaolei.github.io/post/recyclerview-multi-style/</link>
-      <pubDate>Tue, 08 Dec 2020 22:04:03 +0000</pubDate>
+      <title>常用Git指令</title>
+      <link>https://fushaolei.github.io/post/common-git/</link>
+      <pubDate>Tue, 12 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://fushaolei.github.io/post/recyclerview-multi-style/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;问题：已知字段中会有一个名为&lt;code&gt;layoutStyle&lt;/code&gt;的字段来控制布局的样式，求解这个recyclerview的adapter如何写&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;嘶，看到这个题目真是眉头一紧，因为对&lt;code&gt;recyclerview&lt;/code&gt;不是很熟悉（当然对listview也不是很熟悉），哎 怎么办捏，他妈的。先照着网上的方法抄了以下，暂时如此，改天回头把&lt;code&gt;recyclerview&lt;/code&gt;的代码读读&lt;/p&gt;</description>
+      <guid>https://fushaolei.github.io/post/common-git/</guid>
+      <description>指令 说明     git add . 将修改放入暂存区   git status 查看状态   git log 查看commit版本号   git reset --hard 版本号 版本回退，hard强制回退，soft的话会保留修改   git stash 将修改保存起来   git stash save &amp;quot;xxx&amp;quot; 将修改保存起来，并设置这个保存的标签   git stash apply stash@{x} 将修改移出来        懒的写了，待补充。。。</description>
     </item>
     
     <item>

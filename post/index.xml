@@ -13,7 +13,7 @@
       <pubDate>Tue, 12 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://fushaolei.github.io/post/common-git/</guid>
-      <description>前言 我于去年的二月份开始学习git，而后又经历了许多事情 。。。 这篇文章也是我不再折腾博客，专注写文章的开头</description>
+      <description>指令 说明     git add . 将修改放入暂存区   git status 查看状态   git log 查看commit版本号   git reset --hard 版本号 版本回退，hard强制回退，soft的话会保留修改   git stash 将修改保存起来   git stash save &amp;quot;xxx&amp;quot; 将修改保存起来，并设置这个保存的标签   git stash apply stash@{x} 将修改移出来        懒的写了，待补充。。。</description>
     </item>
     
     <item>
@@ -103,17 +103,18 @@ URL的组成：协议类型://服务器地址[:端口号] 路径
 吃在新浪 在新浪，我这个日常实习生唯一的福利就是 早餐会减免六块钱了。
 所以我早晨吃的特别饱，然后午餐就可以少吃一些，省些钱。（写到这里，眼前浮现的是以往大手大脚花钱的自己，泪，夺眶而出QAQ）
 下面放两个我很喜欢的早餐搭配
- 刚开始为了吃早餐我还起的挺早的，后面因为赖床，就没吃了QAQ
+豆腐脑+吐司煎蛋（随便起的名）+南瓜饼
+紫米粥+咸菜+肉包+凉糕（应该是这么叫的吧）  刚开始为了吃早餐我还起的挺早的，后面因为赖床，就没吃了QAQ
  然后午餐晚餐一般一顿都要二十以上这样，最便宜的西红柿鸡蛋面都要14块钱，哎，穷学生伤不起啊。不过后面发现了麻辣烫可以便宜些，于是也有吃过一段时间的麻辣烫哈哈。后期，基本都是两个菜配一碗饭了，肉根本不敢点，一碗肉就将近二十了，简直可怕。
  想想在学校的食堂，吃一顿饭也就七块钱，来到这里钱包都被榨干了(╯‵□′)╯︵┻━┻
  玩在新浪 新浪的第一层布置了娱乐区，有健身房，舞蹈房，动感单车，还有台球桌，桌上足球等娱乐项目，像我一般都是午饭和晚饭后去打打台球，一两个月下来，Android技术没有涨多少，台球技术倒是进步了很多哈哈哈哈
 日常工作 我所实习的岗位是 新浪新闻客户端，那我日常实习就是大佬给我分配需求，然后我去做就可以了（通常大佬都会给一些比较容易的活。。），有那么大概一个流程，如下
- 确认需求（有时候还要找产品进行确认） 开发（其实大多时间都是在等编译。。） code review（这时候大佬会看我写的代码，然后指出哪里哪里不对什么的，修改后再此review，通过后才能进行下一步） 交给测试进行分支测试（有时候有些bug测试都测不出来。。） 有bug的话改bug，没有的话就测试会交给产品进行确认 产品确认完毕就可以合入主分支了，然后进行集成测试  这里放张commit的截图
+ 确认需求（有时候还要找产品进行确认） 开发（其实大多时间都是在等编译。。） code review（这时候大佬会看我写的代码，然后指出哪里哪里不对什么的，修改后再此review，通过后才能进行下一步） 交给测试进行分支测试（有时候有些bug测试都测不出来。。） 有bug的话改bug，没有的话就测试会交给产品进行确认 产品确认完毕就可以合入主分支了，然后进行集成测试  这里放张commit的截图（就不献丑了~）
  这里要吐槽一下，那么大的公司居然不给实习生发个电脑。。只能用着自己的那个垃圾电脑，每次build都要半个小时(╯‵□′)╯︵┻━┻ 每天都是在等待build中度过。。。难受的一批，这也是我离职的一部分原因，受不了了
  工资 给的真的少，还特么扣税，我一个月的工资扣完税后只剩 2500 这样，这可是北京啊。反正我已经倒贴了好多，每个月光租房就花去了1700，剩下的没多少了。如果你也想来新浪实习的话，请慎重考虑！
 实习体会与收获 第一次实习就到了这样蛮不错的公司，我感觉自己真是个幸运儿哈哈。然后组里的大佬也都蛮照顾我的，尤其带我的那个大佬说过一句让我印象深刻的话，他说 我们写的代码是写给人看的，确实，这个项目会不断的修修改改，当别人修改到你的代码的时候，不知道你在写什么，想要干什么，这样的话就得从头来过了，直接的增加了代码的维护成本。所以，工作中，我也严格要求自己，让自己的代码变得易读又简洁，就也是我每一次写代码的目标。 通过这次实习，除了学会了基本的工作流程以外，在日常开发中也让我重新认识了一些概念，比如面向对象开发啊，如何体现到代码中去，比如Android的布局啊，怎么样效率才高啊，又比如listview的view复用机制，这些都是我以前从未去了解或者去接触 实践过的。同时，还让我意识到了自己的基础是多么的薄弱，还需加强。 总体来说，收获满满啊
  因为要回学校考试，再加上我受不了我那个破电脑的编译速度以及一些其他原因，十二月份的某一天，我便从新浪离职了。经历了两个多月的历练，我完成了学生到打工人的身份上的转变，从此 我也是一名社畜啦~
- </description>
+ 走啦！有缘再见！愿各位都有个美好的前程！</description>
     </item>
     
     <item>
@@ -129,15 +130,6 @@ URL的组成：协议类型://服务器地址[:端口号] 路径
     </item>
     
     <item>
-      <title>Android图文混排的实现</title>
-      <link>https://fushaolei.github.io/post/android-multi-text/</link>
-      <pubDate>Fri, 11 Dec 2020 23:57:30 +0000</pubDate>
-      
-      <guid>https://fushaolei.github.io/post/android-multi-text/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Recyclerview多样式混合布局</title>
       <link>https://fushaolei.github.io/post/recyclerview-multi-style/</link>
       <pubDate>Tue, 08 Dec 2020 22:04:03 +0000</pubDate>
@@ -147,16 +139,6 @@ URL的组成：协议类型://服务器地址[:端口号] 路径
 &lt;p&gt;问题：已知字段中会有一个名为&lt;code&gt;layoutStyle&lt;/code&gt;的字段来控制布局的样式，求解这个recyclerview的adapter如何写&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;嘶，看到这个题目真是眉头一紧，因为对&lt;code&gt;recyclerview&lt;/code&gt;不是很熟悉（当然对listview也不是很熟悉），哎 怎么办捏，他妈的。先照着网上的方法抄了以下，暂时如此，改天回头把&lt;code&gt;recyclerview&lt;/code&gt;的代码读读&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Android连接HTTP时有问题</title>
-      <link>https://fushaolei.github.io/post/android-no-network-security-config/</link>
-      <pubDate>Sun, 29 Nov 2020 22:21:11 +0000</pubDate>
-      
-      <guid>https://fushaolei.github.io/post/android-no-network-security-config/</guid>
-      <description>前言 今天做毕业设计的登录模块的时候，要在本地的服务器上取资源，结果就发生了这个错误
-NetworkSecurityConfig: No Network Security Config specified, using platform default </description>
     </item>
     
     <item>
@@ -288,14 +270,21 @@ mWebView.getSettings().setJavaScriptEnabled(true);//启用js mWebView.getSetting
     </item>
     
     <item>
-      <title>C语言基础</title>
-      <link>https://fushaolei.github.io/post/c-base/</link>
-      <pubDate>Thu, 15 Oct 2020 23:34:07 +0000</pubDate>
+      <title>Android MVP模式笔记</title>
+      <link>https://fushaolei.github.io/post/android-mvp/</link>
+      <pubDate>Tue, 06 Oct 2020 13:34:37 +0000</pubDate>
       
-      <guid>https://fushaolei.github.io/post/c-base/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;之前大一还是大二学过，现在都忘光光了QAQ，如今为了复习数据结构要用到，所以要重新学过，以下都是我在菜鸟教程中学习的比较，附上一个地址：https://www.runoob.com/cprogramming/c-tutorial.html&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <guid>https://fushaolei.github.io/post/android-mvp/</guid>
+      <description>前言 以前有学过，感觉理解不了，然后又用不到，然后就不了了之了 QAQ，现在因为实习公司的项目有用到，如果不学的话感觉根本看不懂项目（其实学完之后还是看不懂😂），所以就重新学过，顺便记录一下
+2021年1月13日补充 当初想的窄了，从细枝末节入手，缺乏一个全局的观念，现在想起来，其实下面所说的预备知识，其实是为优化MVP模式所服务的。
+预备知识  面向接口的编程思想 向上转型的概念 解耦  面向接口编程 先复习一下接口的概念：
+在Java程序设计语言中，接口不是类，而是对希望符合这个接口的类的一组需求（出自《Java核心卷一》p222页） 说白了，接口就是一组需求
+而面向接口编程呢，就是在开始开发前，先定义好接口（可以理解为先列出一组需求），然后再进行开发
+向上转型 即父类引用指向子类对象（即多态），看完下面的代码应该更好理解些
+public interface IStudent { String getName(); } public class Student implements IStudent{//此时IStudent是父类，Student是子类  @Override public String getName() { return &amp;#34;任我行&amp;#34;; } } public class Test { public static void main(String[] args) { IStudent iStudent; iStudent=new Student();//父类引用指向子类的对象，这里做了向上转型  System.out.println(&amp;#34;学生的名字是：&amp;#34;+iStudent.getName());//打印结果：学生的名字是：任我行  } } 解耦 解耦即降低依赖性
+MVP模式 Actually，我觉得MVP模式的灵魂就是presenter层同时持有view层和model层的引用（请联系上边的向上转型的概念）。
+ 照此逻辑，我们简单实现一个常见的登录模块。根据面向接口编程，我们首先列出我们的接口（需求）：
+/** * View层的需求 */ public interface IView { //1.</description>
     </item>
     
     <item>
@@ -329,22 +318,6 @@ fun main(args: Array&amp;lt;String&amp;gt;) { val name = &amp;#34;Kotlin&amp;#34
     </item>
     
     <item>
-      <title>浅谈Android MVP模式</title>
-      <link>https://fushaolei.github.io/post/android-mvp/</link>
-      <pubDate>Tue, 06 Oct 2020 13:34:37 +0000</pubDate>
-      
-      <guid>https://fushaolei.github.io/post/android-mvp/</guid>
-      <description>前言  以前有学过，感觉理解不了，然后又用不到，然后就不了了之了 QAQ，现在因为实习公司的项目有用到，如果不学的话感觉根本看不懂项目（其实学完之后还是看不懂哈哈哈），所以就重新学过，顺面记录一下
- 预备知识 通过这一次的学习，以前没有学懂，或者没有理解的东西都显露出来了，说到低还是自己太菜了QAQ，不废话，我认为想要理解好MVP模式就先得了解以下的知识
- 面向接口的编程思想 向上转型的概念 解耦的含义，思想（这里的理解不太深）  ok 如果你不懂的话请往下看、
-面向接口编程 先复习一下接口的概念：
-在Java程序设计语言中，接口不是类，而是对希望符合这个接口的类的一组需求（出自《Java核心卷一》p222页） 说白了，接口就是一组需求
-而面向接口编程呢，就是在开始开发前，先定义好接口（可以理解为先列出一组需求），然后再进行开发
-向上转型 即父类引用指向子类对象，看完下面的代码应该更好理解些
-/** * 定义一个接口 */ public interface IStudent { String getName(); } /** * 继承实现这个接口 */ public class Student implements IStudent{//此时IStudent是父类，Student是子类  @Override public String getName() { return &amp;#34;任我行&amp;#34;; } } /** * 测试一下 */ public class Test { public static void main(String[] args) { IStudent iStudent; iStudent=new Student();//父类引用指向子类的对象，这里做了向上转型  System.</description>
-    </item>
-    
-    <item>
       <title>Java面试必知必会</title>
       <link>https://fushaolei.github.io/post/java-interview-note/</link>
       <pubDate>Thu, 01 Oct 2020 12:11:32 +0000</pubDate>
@@ -361,7 +334,10 @@ fun main(args: Array&amp;lt;String&amp;gt;) { val name = &amp;#34;Kotlin&amp;#34
       <pubDate>Thu, 01 Oct 2020 11:56:39 +0000</pubDate>
       
       <guid>https://fushaolei.github.io/post/android-interview/</guid>
-      <description></description>
+      <description>Android 一， Android的四大组件  所有android应用都是由四大组件组成的：Activity，BroadcastReceiver，Service，ContentProvider
+  Activity：最基本的组件，一个就是一个屏幕，通常都被实现为一个独立的类 BroadcastReceiver：使用它对外部事件进行过滤，接收并做出响应 Service：一个服务是具有一个较长生命周期且没有用户界面的程序。 ContentProvider：使一个应用程序的指定数据集可以提供给其他应用程序。  二，Activity的生命周期  参考文章：深入理解Activity的生命周期
+    方法 作用     onCreate 进行初始化工作，此时Activity还在后台，不可见   onStart 此时Actvity已经可见，但是还没出现在前台，不可交互   onResume 此时Activity出现在前台并可交互   onPause 当Activity要跳到另一个Activity或应用正常退出时都会执行这个方法。此时Activity在前台并可见   onStop 此时Activity已经不可见了，（但是Activity对象还在内存中，没有被销毁）   onDestroy 这个阶段Activity被销毁   onRestart restart表示重新开始，Activity在这时可见，当用户按Home键切换到桌面后又切回来或者从后一个Activity切回前一个Activity就会触发这个方法。这里一般不做什么操作。    三，Activity的四个启动方法  给👴整懵逼了，看都看不懂
+    启动模式 说明     standard 标准模式，每创建一个Activity，都会在任务栈中添加一个实例   singleTop 栈顶复用，如果打开的Activity在任务栈顶，就不在创建，直接复用，如果不在栈顶，就重新创建一个   singleTask 栈内复用，如果打开的Activity在任务栈中，就删除此Activity上面所有的Activity，知道该Activity在栈顶，如果打开的Activity没在任务栈中，直接创建一个新的Activity实例入栈   singleInstance 全局唯一（单例模式），给每一个Activity创建一个任务栈，独占一个栈，打开Activity的时候就对所有的任务进行查询，如果有此Activity，直接复用，不用重新创建    四，Fragment的生命周期    方法 作用     onAttach() Fragment和Activity建立关联的时候调用，被附加到Activity中去。   onCreate() 系统会在创建Fragment时调用此方法。可以初始化一段资源文件等等。   onCreateView() 系统会在Fragment首次绘制其用户界面时调用此方法。 要想为Fragment绘制 UI，从该方法中返回的 View 必须是Fragment布局的根视图。如果Fragment未提供 UI，您可以返回 null。   onViewCreated() 在Fragment被绘制后，调用此方法，可以初始化控件资源。   onActivityCreated() 当onCreate()，onCreateView()，onViewCreated()方法执行完后调用，也就是Activity被渲染绘制出来后。   onPause() 系统将此方法作为用户离开Fragment的第一个信号（但并不总是意味着此Fragment会被销毁）进行调用。 通常可以在此方法内确认在当前用户会话结束后仍然有效的任何更改（因为用户可能不会返回）。   onDestroyView() Fragment中的布局被移除时调用。   onDetach() Fragment和Activity解除关联的时候调用。    五，service的生命周期 通过startService方式启动服务  onCreate：首次创建服务时由系统调用 onStartCommand：每次客户端通过调用显式启动服务时 onDestroy  通过bindService方式启动服务  onCreate：首次创建服务时由系统调用 onBind：绑定服务 onUnBind：解绑服务 onDestroy  Java 一，==和equal的区别 先讲==</description>
     </item>
     
     <item>
@@ -682,9 +658,18 @@ deploy: type: git repository: git@github.com:FuShaoLei/FuShaoLei.github.io.git b
       <pubDate>Wed, 20 May 2020 14:25:02 +0000</pubDate>
       
       <guid>https://fushaolei.github.io/post/android-make-double-game/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;项目有涉及到双人联机游戏的机制，这之前都没有做过类似的东西，现在什么都是从零开始，故开此文记录&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+      <description>项目有涉及到双人联机游戏的机制，这之前都没有做过类似的东西，现在什么都是从零开始，故开此文记录
+（陈年往事，虽没有什么参考价值，没多大用处，但我就是想留着这篇文章）
+ 前言 我觉得的联机游戏流程是：
+ 点击“双人游戏” 进入匹配  匹配失败👉结束 匹配成功👉进入3   建立可靠连接 系统出题，双方答题，根据对错实时更新ui  其中2，3是最重要的点，所谓可靠链接，难点在于怎么样使两个真机通过服务端链接，这时我想到了socket ，这就涉及到网络中怎么传输数据的问题了
+由于游戏的性质我还要考虑以下问题
+ 怎么保证题目的一致性 如何自动匹配 怎么保证A方传的数据到了B方那里？ 怎么保证一个客户端就匹配另一个客户端，并且不会被第三个客户端匹配到（保证一一对应） 互相之间要传什么数据  额 ，好乱啊，虽然一瞬间考虑了那么多，但还是觉得无从下手。
+昨天又想到了一些，对于如何自动匹配，我想到的是，如果客户端有传friendID的话，则于这个friendID进行匹配，如果没有的话，则进行自动匹配。好了，思考了这么多，该动手进行实现了。首先 ，是匹配机制的实现。
+匹配机制 首先，每个用户都会有专属的唯一的一个id，我们可以以id进行标识，这大大方便了我们。
+好了，想要匹配上，得先连接上服务器
+进行简单连接测试 1.android客户端：在子线程中启用socket
+private void initSocket() { new Thread(new Runnable() { @Override public void run() { try { clientSocket=new Socket(IP,PORT);//这个ip是电脑的ip，端口自己定的  if(clientSocket.isConnected()){//进行简单的测试  Log.e(&amp;#34;成功！&amp;#34;,&amp;#34;已连接到服务器！！&amp;#34;); } clientSocket.close(); }catch (Exception e){ e.printStackTrace(); } } }).start(); } 2.java服务端,
+try { serverSocket=new ServerSocket(SERVER_PORT); System.</description>
     </item>
     
     <item>

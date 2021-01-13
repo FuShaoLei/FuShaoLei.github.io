@@ -17,7 +17,7 @@
 
 
 <meta property="og:title" content="常用Git指令" />
-<meta property="og:description" content="前言 我于去年的二月份开始学习git，而后又经历了许多事情 。。。 这篇文章也是我不再折腾博客，专注写文章的开头" />
+<meta property="og:description" content="指令 说明     git add . 将修改放入暂存区   git status 查看状态   git log 查看commit版本号   git reset --hard 版本号 版本回退，hard强制回退，soft的话会保留修改   git stash 将修改保存起来   git stash save &quot;xxx&quot; 将修改保存起来，并设置这个保存的标签   git stash apply stash@{x} 将修改移出来        懒的写了，待补充。。。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://fushaolei.github.io/post/common-git/" />
 <meta property="article:published_time" content="2021-01-12T00:00:00+00:00" />
@@ -29,7 +29,7 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="常用Git指令"/>
-<meta name="twitter:description" content="前言 我于去年的二月份开始学习git，而后又经历了许多事情 。。。 这篇文章也是我不再折腾博客，专注写文章的开头"/>
+<meta name="twitter:description" content="指令 说明     git add . 将修改放入暂存区   git status 查看状态   git log 查看commit版本号   git reset --hard 版本号 版本回退，hard强制回退，soft的话会保留修改   git stash 将修改保存起来   git stash save &quot;xxx&quot; 将修改保存起来，并设置这个保存的标签   git stash apply stash@{x} 将修改移出来        懒的写了，待补充。。。"/>
 
 
 
@@ -284,6 +284,15 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
                         
 
                         
+                            Tags:  
+                            
+                                <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0">学习笔记</a>
+                                &nbsp;
+                            
+                                <a href="/tags/git">Git</a>
+                                &nbsp;
+                            
+                        
                         
                     </div>
                 </div>
@@ -293,10 +302,49 @@ Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> b
                 
                 <div class="post-body" v-pre>
                 
-                    <h2 id="前言">前言</h2>
-<p>我于去年的二月份开始学习git，而后又经历了许多事情
-。。。
-这篇文章也是我不再折腾博客，专注写文章的开头</p>
+                    <table>
+<thead>
+<tr>
+<th>指令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git add .</code></td>
+<td>将修改放入暂存区</td>
+</tr>
+<tr>
+<td><code>git status</code></td>
+<td>查看状态</td>
+</tr>
+<tr>
+<td><code>git log</code></td>
+<td>查看commit版本号</td>
+</tr>
+<tr>
+<td><code>git reset --hard 版本号</code></td>
+<td>版本回退，hard强制回退，soft的话会保留修改</td>
+</tr>
+<tr>
+<td><code>git stash</code></td>
+<td>将修改保存起来</td>
+</tr>
+<tr>
+<td><code>git stash save &quot;xxx&quot;</code></td>
+<td>将修改保存起来，并设置这个保存的标签</td>
+</tr>
+<tr>
+<td><code>git stash apply stash@{x}</code></td>
+<td>将修改移出来</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>懒的写了，待补充。。。</p>
 
                     
                     <HR width="100%" id="EOF">

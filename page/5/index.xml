@@ -12,478 +12,6 @@
     
     
         <item>
-        <title>Linux虚拟机安装记录</title>
-        <link>https://fushaolei.github.io/post/linux-install/</link>
-        <pubDate>Thu, 09 Jul 2020 16:53:45 +0000</pubDate>
-        
-        <guid>https://fushaolei.github.io/post/linux-install/</guid>
-        <description>Sorryfu Blog. https://fushaolei.github.io/post/linux-install/ -&lt;blockquote&gt;
-&lt;p&gt;直接开搞&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;前期准备&#34;&gt;前期准备&lt;/h2&gt;
-&lt;h3 id=&#34;下载vmware&#34;&gt;下载vmware&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.vmware.com/cn/products/workstation-player/workstation-player-evaluation.html&#34;&gt;https://www.vmware.com/cn/products/workstation-player/workstation-player-evaluation.html&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;下载ubuntu镜像&#34;&gt;下载ubuntu镜像&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;http://mirrors.ustc.edu.cn/&#34;&gt;http://mirrors.ustc.edu.cn/&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;开始安装&#34;&gt;开始安装&lt;/h2&gt;
-&lt;h3 id=&#34;点击创建虚拟机&#34;&gt;点击创建虚拟机&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img2/20200709231234.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;配置用户名和密码&#34;&gt;配置用户名和密码&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img2/20200709232838.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;配置虚拟机路径&#34;&gt;配置虚拟机路径&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img2/20200709232944.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;配置虚拟机&#34;&gt;配置虚拟机&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img2/20200709233022.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img2/20200709233124.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;点击完成后&#34;&gt;点击完成后&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;这一步会蛮久的，我等的心态都快炸了&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img2/20200709233221.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img2/20200709233237.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;这里这个vmware tool我并没有安装好，好像是个可以托本地的东西进入虚拟机的东西？&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;下载源更换&#34;&gt;下载源更换&lt;/h3&gt;
-&lt;p&gt;参考：https://blog.csdn.net/YooLcx/article/details/104527734&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;可以让你下载东西时更快些&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;大功告成啦&#34;&gt;大功告成啦&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img2/20200709233715.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;话说这个壁纸好好看哦&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;写博客写到这里，我居然想不起今天下午突然想安装linux的原因了，，是为了学习吧^^&lt;/p&gt;
-&lt;p&gt;另外，本博客的图片上传工具使用的是我新开发的Imagic，稳定性杠杆滴，比picgo强多了，虽然说现在Imagic的界面很丑，也没有相册管理功能，但至少，我用我学来的知识，为自己带来了便利，即所谓技术服务于人类&lt;/p&gt;
-&lt;/blockquote&gt;
-- https://fushaolei.github.io/post/linux-install/ - </description>
-        </item>
-    
-    
-    
-        <item>
-        <title>java打造一个图片上传工具</title>
-        <link>https://fushaolei.github.io/post/java-make-a-image-upload/</link>
-        <pubDate>Fri, 03 Jul 2020 12:25:29 +0000</pubDate>
-        
-        <guid>https://fushaolei.github.io/post/java-make-a-image-upload/</guid>
-        <description>Sorryfu Blog. https://fushaolei.github.io/post/java-make-a-image-upload/ -&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;p&gt;hexo博客，图片是个问题，有一种方法是，把图片放在一个文件夹里，和hexo一起部署，然后博客里用相对路径来引用，这里有个问题，假如博客迁移，或者想转平台发布的时候，每次图片都要找出来然后再贴上去，这真是大大的不便啊。还好后来发现了picgo这个软件，做为资深白嫖党，&lt;strong&gt;picgo+github+jsDelivr&lt;/strong&gt;的组合做图床简直香的不要不要的，但是，我发现，用picgo来上传图片到github并不稳定，然后我又是个急性子，有时候想上传一张图片的时候给我报错，我特么能忍吗，所以想自己动手丰衣足食&lt;/p&gt;
-&lt;h2 id=&#34;尝试一调用github-api&#34;&gt;尝试一：调用github api&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;原因是昨天玩travelling 的时候看见了这篇文章：&lt;a href=&#34;https://fx7.top/index.php/archives/91/&#34;&gt;Java调用Github API实现上传文件到Github仓库&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;心血来潮，跟着作者写demo，不过弄完了我发现，调用github api这种方法上传简单txt文件的没问题的，上传图片之类的问题就大了，因为&lt;code&gt;content&lt;/code&gt;要求的是&lt;code&gt;base64&lt;/code&gt;格式嘛，然后图片的&lt;code&gt;base64&lt;/code&gt;格式出来的字符串就长的不行，每次都失败（回传了个422错误码），无语，然后 我还发现，这东西还特么的不稳定，有时候会&lt;code&gt;connection reset&lt;/code&gt;链接错误，看到这个时我才明白，为什么picgo上传到gihub会不稳定，也可能是我网的问题，我问Hexo群里，都是蛮稳定的，不知道为什么我这个很不稳定&lt;/p&gt;
-&lt;p&gt;第一次尝试 失败&lt;/p&gt;
-&lt;h2 id=&#34;尝试二jgit&#34;&gt;尝试二：Jgit&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;Jgit&lt;/code&gt;是一个由Eclipse基金会开发、用于操作git的纯Java库。（也就是可以用java进行&lt;code&gt;git add .&lt;/code&gt;，&lt;code&gt;git commit -m &amp;quot;update&amp;quot;&lt;/code&gt;等操作）于是我搜这搜那，终于在今天的上午写成了一个demo，完美实现了&lt;code&gt;git add .&lt;/code&gt;,&lt;code&gt;git commit -m &amp;quot;update&amp;quot;&lt;/code&gt;，&lt;code&gt;git push&lt;/code&gt;三连。不过这样还不够，少了一些b格，然后就琢磨着怎么搞一个界面出来，于是接触道理swing，反正啥也不哦那个，就东拼拼，西凑凑，弄了一个东西出来，可以实现拖拽上传，成果如下&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/ImagitcTest/test.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;完美实现上传！在这里要特别感谢测试工具人——&lt;a href=&#34;https://www.cnblogs.com/occlive/&#34;&gt;策酱&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;此项目的github地址：https://github.com/FuShaoLei/Imagic
-虽然界面是有些丑啦，但是用起来可比picgo流畅多了，没出现过什么卡顿现象&lt;/p&gt;
-&lt;p&gt;第二次尝试 成功了^^&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;补充一下思路啊，就是拖拽图片后获取绝对路径，根据绝对路径来复制到本地的git仓库，然后再git三连到远程仓库，然后组合连接返回就好&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;畅想&#34;&gt;畅想&lt;/h3&gt;
-&lt;p&gt;未来准备给Imagic加上更多的功能，因为我的定位就是专门为github上传图片的，然后可以返回一个自动组成的jsDelivr加速链接，也打算用Swing开发，不用javaFX了（也会考虑）
-先列举一些以后要添加的功能&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;图片管理（复制链接，删除图片，修改图片名，批量删除，批量添加等）&lt;/li&gt;
-&lt;li&gt;自带截图（我一般都是用的qq截图，这样太麻烦了，每次截图都要打开qq，多low啊）&lt;/li&gt;
-&lt;li&gt;自带录取gif图（打算参考参考greenTogif的源码）&lt;/li&gt;
-&lt;/ul&gt;
-- https://fushaolei.github.io/post/java-make-a-image-upload/ - </description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Listview学习</title>
-        <link>https://fushaolei.github.io/post/android-listview/</link>
-        <pubDate>Wed, 24 Jun 2020 08:37:32 +0000</pubDate>
-        
-        <guid>https://fushaolei.github.io/post/android-listview/</guid>
-        <description>Sorryfu Blog. https://fushaolei.github.io/post/android-listview/ -&lt;blockquote&gt;
-&lt;p&gt;Listview是入门android的重点，当初浅尝辄止，不是很理解原理，如今重新来过，希望有不一样的感悟&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
-&lt;h3 id=&#34;adapterview&#34;&gt;AdapterView&lt;/h3&gt;
-&lt;p&gt;容器控件，其整体效果由每一个子元素内容决定，子元素的形式由Adapter决定。
-常见子类：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;ListView 垂直列表&lt;/li&gt;
-&lt;li&gt;GridView 网格列表&lt;/li&gt;
-&lt;li&gt;Spinner 下拉列表&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;待显示的数据如何传递给AdapterView中的Item？&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;准备数据 （数据和item是匹配的）&lt;/li&gt;
-&lt;li&gt;借助Adapter来实现数据与View之间的数据传递。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;adapter&#34;&gt;Adapter&lt;/h3&gt;
-&lt;p&gt;将数据显示到视图上，数据和视图之间交互的中介。&lt;/p&gt;
-&lt;h3 id=&#34;图解&#34;&gt;图解&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img/20200624094442.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;作用&#34;&gt;作用&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;将数据和视图分开了，数据改变时，不需要修改视图组件，只需更新Adapter&lt;/li&gt;
-&lt;li&gt;对于同一组数据，可以显示为不同的视图形式&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;常用adapter&#34;&gt;常用Adapter&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;ArrayAdapter：最简单的适配器，数据源为文本字符串数组。&lt;/li&gt;
-&lt;li&gt;SimpleAdapter：简单适配器，数据源结构比较复杂，一般为List&lt;!-- raw HTML omitted --&gt;类型对象。&lt;/li&gt;
-&lt;li&gt;SimpleCursorAdapter：游标适配器，数据源一般为数据库中（SQLite）的数据。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;自定义适配器&lt;/strong&gt;：更灵活的适配器，数据源不定（由用户自行指定），需要继承BaseAdapter抽象类。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;实际项目中，自定义适配器用的比较多&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;基本流程&#34;&gt;基本流程&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;准备数据源&lt;/li&gt;
-&lt;li&gt;准备AdapterView每一个子项（item）的视图布局。&lt;/li&gt;
-&lt;li&gt;创建Adapter（&lt;strong&gt;连接数据源和视图布局&lt;/strong&gt;）。&lt;/li&gt;
-&lt;li&gt;为指定AdapterView视图组件绑定适配器。&lt;/li&gt;
-&lt;li&gt;为AdapterView绑定（item）事件监听器。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;自定义adapter&#34;&gt;自定义Adapter&lt;/h2&gt;
-&lt;h3 id=&#34;基础样式&#34;&gt;基础样式&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#586e75&#34;&gt;/**
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; * 继承BaseAdapter后需要完成四个方法
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; * 1. getCount() 获得数据的条数
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; * 2. getItem(int position) 获取每个item显示的数据对象
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; * 3. getItemId(int position) 获取每个item的id的值
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; * 4. getView(int position, View convertView, ViewGroup parent) 获取item的视图对象
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; */&lt;/span&gt;
-&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;MyAdapter&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;extends&lt;/span&gt; BaseAdapter &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-    &lt;span style=&#34;color:#586e75&#34;&gt;/**
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;     * 三个必要的东西：
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;     * 1.环境上下文
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;     * 2.数据源 类型
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;     * 3. item布局文件
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;     */&lt;/span&gt;
-    &lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; Context mContext&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-    &lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; List&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&lt;/span&gt;Student&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt; students &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; ArrayList&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
-    &lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; itemLinearRes&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-
-    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;MyAdapter&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;Context mContext&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; List&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&lt;/span&gt;Student&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt; students&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; itemLinearRes&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;mContext &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; mContext&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;students &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; students&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;itemLinearRes &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; itemLinearRes&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-
-    &lt;span style=&#34;color:#268bd2&#34;&gt;@Override&lt;/span&gt;
-    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;getCount&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//获得数据的条数
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#cb4b16&#34;&gt;null&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;!=&lt;/span&gt; students&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; students&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;size&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; 0&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-
-    &lt;span style=&#34;color:#268bd2&#34;&gt;@Override&lt;/span&gt;
-    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; Object &lt;span style=&#34;color:#268bd2&#34;&gt;getItem&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; position&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//获取每个item显示的数据对象
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#cb4b16&#34;&gt;null&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;!=&lt;/span&gt; students&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; students&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;get&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;position&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#cb4b16&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-
-    &lt;span style=&#34;color:#268bd2&#34;&gt;@Override&lt;/span&gt;
-    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;long&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;getItemId&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; position&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//获取每个item的id的值
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; position&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-
-    &lt;span style=&#34;color:#268bd2&#34;&gt;@Override&lt;/span&gt;
-    &lt;span style=&#34;color:#586e75&#34;&gt;//获取item的视图对象
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#586e75&#34;&gt;/**
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;     * 1.position 表示条数
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;     * 2.convertView每一个item的视图对象（通过手动的加载布局文件来创建出视图对象）
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;     * 3.parent ListView本身
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;     */&lt;/span&gt;
-    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; View &lt;span style=&#34;color:#268bd2&#34;&gt;getView&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; position&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; View convertView&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; ViewGroup parent&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-        &lt;span style=&#34;color:#586e75&#34;&gt;//1. 加载item的布局文件来创建出item的视图对象
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#586e75&#34;&gt;//这一步其实和setContentView一样
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#586e75&#34;&gt;// LayoutInflater布局填充器
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;convertView &lt;span style=&#34;color:#719e07&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#cb4b16&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//当converView为空时才加载
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;            LayoutInflater inflater &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; LayoutInflater&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;from&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;mContext&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//创建布局填充其
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;            convertView &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; inflater&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;inflate&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;itemLinearRes&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#cb4b16&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//可加载布局文件
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-&lt;span style=&#34;color:#586e75&#34;&gt;//  上面两行可以简化写成这样 convertView=LayoutInflater.from(mContext).inflate(itemLinearRes,null);
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;
-        &lt;span style=&#34;color:#586e75&#34;&gt;//2. 获取item控件的引用
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        ImageView img &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; convertView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;findViewById&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;img_item&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-        TextView name &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; convertView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;findViewById&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;tv_name_item&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-        TextView no &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; convertView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;findViewById&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;tv_name_no&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-
-        &lt;span style=&#34;color:#586e75&#34;&gt;//3.设置控件内容
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        img&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;setImageResource&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;students&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;get&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;position&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;getPhotoId&lt;span style=&#34;color:#719e07&#34;&gt;());&lt;/span&gt;
-        name&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;setText&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;students&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;get&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;position&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;getName&lt;span style=&#34;color:#719e07&#34;&gt;());&lt;/span&gt;
-        no&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;setText&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;students&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;get&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;position&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;getStuiNo&lt;span style=&#34;color:#719e07&#34;&gt;());&lt;/span&gt;
-
-        &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; convertView&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//return视图
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;改良一重用&#34;&gt;改良一：重用&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;在&lt;code&gt;MyAdapter&lt;/code&gt;中定义一个&lt;code&gt;class&lt;/code&gt;在里边写item里的控件&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;ViewHolder&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//通常取名为ViewHolder
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        ImageView vImg&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-        TextView vName&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-        TextView vNum&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后部分东西就可以复用啦，好像也没有上什么改良的东西。。。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;    &lt;span style=&#34;color:#586e75&#34;&gt;/**
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;     * 改良过后
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;     */&lt;/span&gt;
-    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; View &lt;span style=&#34;color:#268bd2&#34;&gt;getView&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; position&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; View convertView&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; ViewGroup parent&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-        ViewHolder viewHolder&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#cb4b16&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;==&lt;/span&gt;convertView&lt;span style=&#34;color:#719e07&#34;&gt;){&lt;/span&gt;
-            convertView&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;LayoutInflater&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;from&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;mContext&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;inflate&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;itemLinearRes&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#cb4b16&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-            viewHolder&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; ViewHolder&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;
-            viewHolder&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;vImg&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;convertView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;findViewById&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;img_item&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-            viewHolder&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;vName&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;convertView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;findViewById&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;tv_name_item&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-            viewHolder&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;vNum&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;convertView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;findViewById&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;tv_name_no&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-            convertView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;setTag&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;viewHolder&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//将ViewHolder存储到convertView中
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-            viewHolder&lt;span style=&#34;color:#719e07&#34;&gt;=(&lt;/span&gt;ViewHolder&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; convertView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getTag&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-        viewHolder&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;vImg&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;setImageResource&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;students&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;get&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;position&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;getPhotoId&lt;span style=&#34;color:#719e07&#34;&gt;());&lt;/span&gt;
-        viewHolder&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;vName&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;setText&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;students&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;get&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;position&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;getName&lt;span style=&#34;color:#719e07&#34;&gt;());&lt;/span&gt;
-        viewHolder&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;vNum&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;setText&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;students&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;get&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;position&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;getStuiNo&lt;span style=&#34;color:#719e07&#34;&gt;());&lt;/span&gt;
-
-        &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; convertView&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//return视图
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;构建万能的baseadapter&#34;&gt;构建万能的BaseAdapter&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;这是在菜鸟教程里看到的，文章指路：&lt;a href=&#34;https://www.runoob.com/w3cnote/android-tutorial-customer-baseadapter.html&#34;&gt;构建一个可复用的自定义BaseAdapter&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#719e07&#34;&gt;import&lt;/span&gt; android.content.Context&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-&lt;span style=&#34;color:#719e07&#34;&gt;import&lt;/span&gt; android.util.SparseArray&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-&lt;span style=&#34;color:#719e07&#34;&gt;import&lt;/span&gt; android.view.LayoutInflater&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-&lt;span style=&#34;color:#719e07&#34;&gt;import&lt;/span&gt; android.view.View&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-&lt;span style=&#34;color:#719e07&#34;&gt;import&lt;/span&gt; android.view.ViewGroup&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-&lt;span style=&#34;color:#719e07&#34;&gt;import&lt;/span&gt; android.widget.BaseAdapter&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-&lt;span style=&#34;color:#719e07&#34;&gt;import&lt;/span&gt; android.widget.ImageView&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-&lt;span style=&#34;color:#719e07&#34;&gt;import&lt;/span&gt; android.widget.TextView&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-
-&lt;span style=&#34;color:#719e07&#34;&gt;import&lt;/span&gt; java.util.ArrayList&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-
-&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;abstract&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;MyAdapter&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&lt;/span&gt;T&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;extends&lt;/span&gt; BaseAdapter &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-
-    &lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; ArrayList&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&lt;/span&gt;T&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt; mData&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-    &lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; mLayoutRes&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;           &lt;span style=&#34;color:#586e75&#34;&gt;//布局id
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;    
-    &lt;span style=&#34;color:#586e75&#34;&gt;/**
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;     * @param mData 数据
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;     * @param mLayoutRes item的布局文件
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;     */&lt;/span&gt;
-    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;MyAdapter&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;ArrayList&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&lt;/span&gt;T&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt; mData&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; mLayoutRes&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;mData &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; mData&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;mLayoutRes &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; mLayoutRes&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-
-    &lt;span style=&#34;color:#268bd2&#34;&gt;@Override&lt;/span&gt;
-    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;getCount&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; mData &lt;span style=&#34;color:#719e07&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#cb4b16&#34;&gt;null&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;?&lt;/span&gt; mData&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;size&lt;span style=&#34;color:#719e07&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;:&lt;/span&gt; 0&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-
-    &lt;span style=&#34;color:#268bd2&#34;&gt;@Override&lt;/span&gt;
-    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; T &lt;span style=&#34;color:#268bd2&#34;&gt;getItem&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; position&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; mData&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;get&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;position&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-
-    &lt;span style=&#34;color:#268bd2&#34;&gt;@Override&lt;/span&gt;
-    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;long&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;getItemId&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; position&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; position&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-
-    &lt;span style=&#34;color:#268bd2&#34;&gt;@Override&lt;/span&gt;
-    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; View &lt;span style=&#34;color:#268bd2&#34;&gt;getView&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; position&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; View convertView&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; ViewGroup parent&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-        ViewHolder holder &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; ViewHolder&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;bind&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;parent&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getContext&lt;span style=&#34;color:#719e07&#34;&gt;(),&lt;/span&gt; convertView&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; parent&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; mLayoutRes
-                &lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; position&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-        bindView&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;holder&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; getItem&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;position&lt;span style=&#34;color:#719e07&#34;&gt;));&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; holder&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getItemView&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;
-    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-
-    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;abstract&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;bindView&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;ViewHolder holder&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; T obj&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-
-    &lt;span style=&#34;color:#586e75&#34;&gt;//添加一个元素
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;add&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;T data&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;mData &lt;span style=&#34;color:#719e07&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#cb4b16&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-            mData &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; ArrayList&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-        mData&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;add&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;data&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-        notifyDataSetChanged&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;
-    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-
-    &lt;span style=&#34;color:#586e75&#34;&gt;//往特定位置，添加一个元素
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;add&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; position&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; T data&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;mData &lt;span style=&#34;color:#719e07&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#cb4b16&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-            mData &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; ArrayList&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-        mData&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;add&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;position&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; data&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-        notifyDataSetChanged&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;
-    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-
-    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;remove&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;T data&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;mData &lt;span style=&#34;color:#719e07&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#cb4b16&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-            mData&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;remove&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;data&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-        notifyDataSetChanged&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;
-    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-
-    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;remove&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; position&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;mData &lt;span style=&#34;color:#719e07&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#cb4b16&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-            mData&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;remove&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;position&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-        notifyDataSetChanged&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;
-    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-
-    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;clear&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;mData &lt;span style=&#34;color:#719e07&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#cb4b16&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-            mData&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;clear&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-        notifyDataSetChanged&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;
-    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-
-
-    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;ViewHolder&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-
-        &lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; SparseArray&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&lt;/span&gt;View&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt; mViews&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;   &lt;span style=&#34;color:#586e75&#34;&gt;//存储ListView 的 item中的View
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; View item&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;                  &lt;span style=&#34;color:#586e75&#34;&gt;//存放convertView
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; position&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;               &lt;span style=&#34;color:#586e75&#34;&gt;//游标
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; Context context&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;            &lt;span style=&#34;color:#586e75&#34;&gt;//Context上下文
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;
-        &lt;span style=&#34;color:#586e75&#34;&gt;//构造方法，完成相关初始化
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;ViewHolder&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;Context context&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; ViewGroup parent&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; layoutRes&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-            mViews &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; SparseArray&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;context &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; context&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-            View convertView &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; LayoutInflater&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;from&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;context&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;inflate&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;layoutRes&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; parent&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#cb4b16&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-            convertView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;setTag&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-            item &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; convertView&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-
-        &lt;span style=&#34;color:#586e75&#34;&gt;//绑定ViewHolder与item
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;static&lt;/span&gt; ViewHolder &lt;span style=&#34;color:#268bd2&#34;&gt;bind&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;Context context&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; View convertView&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; ViewGroup parent&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;
-                                      &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; layoutRes&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; position&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-            ViewHolder holder&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;convertView &lt;span style=&#34;color:#719e07&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#cb4b16&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-                holder &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; ViewHolder&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;context&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; parent&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; layoutRes&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-                holder &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;ViewHolder&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; convertView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getTag&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;
-                holder&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;item &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; convertView&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-            holder&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;position &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; position&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; holder&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-
-        &lt;span style=&#34;color:#268bd2&#34;&gt;@SuppressWarnings&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;unchecked&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt;
-        &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&lt;/span&gt;T &lt;span style=&#34;color:#268bd2&#34;&gt;extends&lt;/span&gt; View&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt; T &lt;span style=&#34;color:#268bd2&#34;&gt;getView&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; id&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-            T t &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;T&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; mViews&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;get&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;t &lt;span style=&#34;color:#719e07&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#cb4b16&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-                t &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;T&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; item&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;findViewById&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-                mViews&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;put&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; t&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; t&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-
-
-        &lt;span style=&#34;color:#586e75&#34;&gt;/**
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;         * 获取当前条目
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;         */&lt;/span&gt;
-        &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; View &lt;span style=&#34;color:#268bd2&#34;&gt;getItemView&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; item&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-
-        &lt;span style=&#34;color:#586e75&#34;&gt;/**
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;         * 获取条目位置
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;         */&lt;/span&gt;
-        &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;getItemPosition&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; position&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-
-        &lt;span style=&#34;color:#586e75&#34;&gt;/**
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;         * 设置文字
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;         */&lt;/span&gt;
-        &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; ViewHolder &lt;span style=&#34;color:#268bd2&#34;&gt;setText&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; id&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; CharSequence text&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-            View view &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; getView&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;view &lt;span style=&#34;color:#719e07&#34;&gt;instanceof&lt;/span&gt; TextView&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-                &lt;span style=&#34;color:#719e07&#34;&gt;((&lt;/span&gt;TextView&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; view&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;setText&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;text&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-
-        &lt;span style=&#34;color:#586e75&#34;&gt;/**
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;         * 设置图片
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;         */&lt;/span&gt;
-        &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; ViewHolder &lt;span style=&#34;color:#268bd2&#34;&gt;setImageResource&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; id&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; drawableRes&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-            View view &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; getView&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;view &lt;span style=&#34;color:#719e07&#34;&gt;instanceof&lt;/span&gt; ImageView&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-                &lt;span style=&#34;color:#719e07&#34;&gt;((&lt;/span&gt;ImageView&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; view&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;setImageResource&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;drawableRes&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-                view&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;setBackgroundResource&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;drawableRes&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-
-
-        &lt;span style=&#34;color:#586e75&#34;&gt;/**
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;         * 设置点击监听
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;         */&lt;/span&gt;
-        &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; ViewHolder &lt;span style=&#34;color:#268bd2&#34;&gt;setOnClickListener&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; id&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; View&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;OnClickListener listener&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-            getView&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;setOnClickListener&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;listener&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-
-        &lt;span style=&#34;color:#586e75&#34;&gt;/**
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;         * 设置可见
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;         */&lt;/span&gt;
-        &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; ViewHolder &lt;span style=&#34;color:#268bd2&#34;&gt;setVisibility&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; id&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; visible&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-            getView&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;setVisibility&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;visible&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-
-        &lt;span style=&#34;color:#586e75&#34;&gt;/**
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;         * 设置标签
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;         */&lt;/span&gt;
-        &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; ViewHolder &lt;span style=&#34;color:#268bd2&#34;&gt;setTag&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; id&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; Object obj&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-            getView&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;).&lt;/span&gt;setTag&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;obj&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-
-        &lt;span style=&#34;color:#586e75&#34;&gt;//其他方法可自行扩展
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-
-&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;使用示范&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;        &lt;span style=&#34;color:#586e75&#34;&gt;/**
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;         * 1.第一个参数是数据
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;         * 2.第二个参数是item的布局文件
-&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;         */&lt;/span&gt;
-        myAdapter&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; MyAdapter&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&lt;/span&gt;Student&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;(&lt;/span&gt;studentArrayList&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;layout&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;student_item&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-            &lt;span style=&#34;color:#268bd2&#34;&gt;@Override&lt;/span&gt;
-            &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;bindView&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;ViewHolder holder&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt; Student obj&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
-                holder&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;setImageResource&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;img_item&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;obj&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getPhotoId&lt;span style=&#34;color:#719e07&#34;&gt;());&lt;/span&gt;
-                holder&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;setText&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;tv_name_item&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;obj&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getName&lt;span style=&#34;color:#719e07&#34;&gt;());&lt;/span&gt;
-                holder&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;setText&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;R&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;id&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;tv_name_no&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;obj&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getStuiNo&lt;span style=&#34;color:#719e07&#34;&gt;());&lt;/span&gt;
-            &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-        &lt;span style=&#34;color:#719e07&#34;&gt;};&lt;/span&gt;
-        listView&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;setAdapter&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;myAdapter&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;这里没有细看 改天再看看&lt;/p&gt;
-&lt;/blockquote&gt;
-- https://fushaolei.github.io/post/android-listview/ - </description>
-        </item>
-    
-    
-    
-        <item>
         <title>如何创建一个Hexo博客</title>
         <link>https://fushaolei.github.io/post/how-to-make-a-hexo-blog/</link>
         <pubDate>Sun, 21 Jun 2020 00:38:22 +0000</pubDate>
@@ -667,6 +195,7 @@ hexo s  ## 本地预览，在浏览器中输入localhost:4000看看效果
         <guid>https://fushaolei.github.io/post/android-make-double-game/</guid>
         <description>Sorryfu Blog. https://fushaolei.github.io/post/android-make-double-game/ -&lt;blockquote&gt;
 &lt;p&gt;项目有涉及到双人联机游戏的机制，这之前都没有做过类似的东西，现在什么都是从零开始，故开此文记录&lt;/p&gt;
+&lt;p&gt;（陈年往事，虽没有什么参考价值，没多大用处，但我就是想留着这篇文章）&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;我觉得的联机游戏流程是：&lt;/p&gt;
@@ -845,7 +374,8 @@ hexo s  ## 本地预览，在浏览器中输入localhost:4000看看效果
 &lt;li&gt;B方接收后判断并更新UI，同上&lt;/li&gt;
 &lt;li&gt;后答完题的人向服务端发送信息请求题目，重复以上&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;这里其实涉及到了一个传输问题，开始的时候（服务端）用了一些奇奇怪怪的方法，后来了解到json数据，如果key值不存在的话，取得的是null，这就大大方便了我们，以json作为传输对象也大大简化了逻辑。比如，想更新对方的ui信息时，服务端，传一个key为otherID值为19的json数据过客户端，然后客户端接受后判断key为otherID是否存在，若存在，则更新ui，若不存在，则执行其他逻辑，也就是可以以这个key作为判断条件，判断执行什么逻辑，例如更新题目ui啊，接受到对方的答案啊之类的&lt;/p&gt;- https://fushaolei.github.io/post/android-make-double-game/ - </description>
+&lt;p&gt;这里其实涉及到了一个传输问题，开始的时候（服务端）用了一些奇奇怪怪的方法，后来了解到json数据，如果key值不存在的话，取得的是null，这就大大方便了我们，以json作为传输对象也大大简化了逻辑。比如，想更新对方的ui信息时，服务端，传一个key为otherID值为19的json数据过客户端，然后客户端接受后判断key为otherID是否存在，若存在，则更新ui，若不存在，则执行其他逻辑，也就是可以以这个key作为判断条件，判断执行什么逻辑，例如更新题目ui啊，接受到对方的答案啊之类的&lt;/p&gt;
+- https://fushaolei.github.io/post/android-make-double-game/ - </description>
         </item>
     
     
@@ -1052,6 +582,239 @@ hexo s  ## 本地预览，在浏览器中输入localhost:4000看看效果
 &lt;span style=&#34;color:#268bd2&#34;&gt;logo&lt;/span&gt;: https://cdn.jsdelivr.net/gh/fushaolei/img/20200524104925.jpg
 &lt;span style=&#34;color:#268bd2&#34;&gt;des&lt;/span&gt;: What a fucking life.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://fushaolei.github.io/link/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Git学习笔记</title>
+        <link>https://fushaolei.github.io/post/git-note/</link>
+        <pubDate>Mon, 03 Feb 2020 10:55:36 +0000</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/git-note/</guid>
+        <description>Sorryfu Blog. https://fushaolei.github.io/post/git-note/ -&lt;blockquote&gt;
+&lt;p&gt;使用Git是程序员必备的一个技能，虽然以前有跟着老师学过，但是一知半解，所以重新学过，本文记录了我学习Git的全过程&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;参考教程&#34;&gt;参考教程&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;学习教程：&lt;a href=&#34;https://www.liaoxuefeng.com/wiki/896043488029600&#34;&gt;廖雪峰的Git教程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;测试：&lt;a href=&#34;https://learngitbranching.js.org/&#34;&gt;learngitbranching&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;笔记&#34;&gt;笔记&lt;/h2&gt;
+&lt;h3 id=&#34;简介&#34;&gt;🥝简介&lt;/h3&gt;
+&lt;p&gt;由Linus用c语言开发的分布式版本控制系统&lt;/p&gt;
+&lt;h3 id=&#34;版本穿梭&#34;&gt;💉版本穿梭&lt;/h3&gt;
+&lt;p&gt;可先用&lt;code&gt;git log&lt;/code&gt;指令查看一下有几个版本提交到了仓库里
+&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzQ0MDcucG5n?x-oss-process=image/format,png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;或用&lt;code&gt;git log --pretty=oneline&lt;/code&gt;可以简单的看到版本号&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzQ3NDkucG5n?x-oss-process=image/format,png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;版本倒退回过去&#34;&gt;版本倒退（回过去）&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;git reset --hard ?&lt;/code&gt;&lt;br&gt;
+&lt;strong&gt;?里&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以填&lt;code&gt;HEAD^&lt;/code&gt;标识上个版本，上上个版本就是&lt;code&gt;HEAD^^&lt;/code&gt;，假如更上的话就是&lt;code&gt;HEAD~100&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;也可以直接填版本号，只要写前几个就行，比如上面直接写&lt;code&gt;git reset --hard 9410f&lt;/code&gt;就会退回到上一个版本了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzQ5MDEucG5n?x-oss-process=image/format,png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;版本恢复去未来&#34;&gt;版本恢复（去未来）&lt;/h4&gt;
+&lt;p&gt;首先查看一下历史信息&lt;code&gt;git reflog&lt;/code&gt;,然后根据版本号写&lt;code&gt;git reset --hard 版本号&lt;/code&gt;,就这么简单😋&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzUwMjIucG5n?x-oss-process=image/format,png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;工作区和暂存区&#34;&gt;🛀工作区和暂存区&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;git add 文件&lt;/code&gt;指令是把文件修改添加到暂存区
+而&lt;code&gt;git commit -m &amp;quot;XXXX&amp;quot;&lt;/code&gt;就是往分支上提交更改&lt;/p&gt;
+&lt;h4 id=&#34;撤销修改&#34;&gt;撤销修改&lt;/h4&gt;
+&lt;h5 id=&#34;撤销未被git-add的修改&#34;&gt;撤销未被&lt;code&gt;git add&lt;/code&gt;的修改&lt;/h5&gt;
+&lt;p&gt;&lt;code&gt;git checkout -- file&lt;/code&gt;可以把&lt;code&gt;file&lt;/code&gt;在工作区的修改全部撤销
+这里出现了两种情况&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;未&lt;code&gt;git add&lt;/code&gt;，那么将恢复到未被修改的样子&lt;/li&gt;
+&lt;li&gt;已&lt;code&gt;git add&lt;/code&gt;，然后又修改了一下，那么将恢复到&lt;code&gt;git add&lt;/code&gt;后的样子，就是恢复到最近一次&lt;code&gt;git add&lt;/code&gt;后的样子&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;撤销提交到git-add的修改&#34;&gt;撤销提交到&lt;code&gt;git add&lt;/code&gt;的修改&lt;/h5&gt;
+&lt;p&gt;这里分两步走：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;首先要把在暂存区的给提出来，&lt;code&gt;git restore --staged file&lt;/code&gt;，也就是恢复到未提交修改的状态&lt;/li&gt;
+&lt;li&gt;然后在&lt;code&gt;git checkout -- file&lt;/code&gt; 把在工作区的修改（&lt;code&gt;git restore --staged file&lt;/code&gt;提出来的）全部撤销&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;注：&lt;/strong&gt;
+由于git更新换代，所以这里与廖老师的有些出入，关于&lt;code&gt;git restore --staged file&lt;/code&gt;的功能如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU0MzMucG5n?x-oss-process=image/format,png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;删除文件&#34;&gt;删除文件&lt;/h4&gt;
+&lt;h5 id=&#34;删错了&#34;&gt;删错了&lt;/h5&gt;
+&lt;p&gt;可以用&lt;code&gt;git checkout -- file（被删文件名）&lt;/code&gt;来恢复那个被删文件&lt;/p&gt;
+&lt;h5 id=&#34;确实要删&#34;&gt;确实要删&lt;/h5&gt;
+&lt;p&gt;直接&lt;code&gt;git rm file（要删文件名）&lt;/code&gt;，然后再&lt;code&gt;git commit &lt;/code&gt;提交修改，就行了&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一些想法：这里的&lt;code&gt;git rm file&lt;/code&gt;实际上也是将要做的修改提交到暂存区，然后&lt;code&gt;git commit&lt;/code&gt;才提交修改，因此如果这里想反悔的话，可以用&lt;code&gt;git restore --staged file&lt;/code&gt;把在暂存区的修改给撤销掉
+&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU1MDUucG5n?x-oss-process=image/format,png&#34; alt=&#34;&#34;&gt;
+由图很简单的知道，绿色就代表放入了暂存区，红色就代表未放入&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;由上面许许多多案列可以知道，git操作时，总是先在暂存区里进行操作，然后再提交到分支上🔑&lt;/p&gt;
+&lt;h3 id=&#34;分支管理&#34;&gt;🤳分支管理&lt;/h3&gt;
+&lt;h4 id=&#34;创建-合并分支&#34;&gt;创建 合并分支&lt;/h4&gt;
+&lt;h5 id=&#34;创建&#34;&gt;创建&lt;/h5&gt;
+&lt;p&gt;&lt;code&gt;git switch -c &amp;lt;branch~name&amp;gt;&lt;/code&gt;可以创建然后并转换到这个分支上
+&lt;code&gt;git switch &amp;lt;branch~name&amp;gt;&lt;/code&gt;可用于切换分支，&lt;code&gt;git branch&lt;/code&gt;可以看到已有分支，前面带一个&lt;code&gt;*&lt;/code&gt;的表示现在所在的分支
+&lt;code&gt;git branch -d &amp;lt;branch~name&amp;gt;&lt;/code&gt;这个指令用于删除分支，前提是切换到了其他分支，
+如下
+&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU1MjgucG5n?x-oss-process=image/format,png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h5 id=&#34;关于合并&#34;&gt;关于合并&lt;/h5&gt;
+&lt;p&gt;&lt;code&gt;git merge &amp;lt;branch~name&amp;gt;&lt;/code&gt;合并分支，&lt;strong&gt;产生的冲突只发生在当前的分支上&lt;/strong&gt;&lt;/p&gt;
+&lt;h6 id=&#34;合并冲突与解决方法&#34;&gt;🔥合并冲突与解决方法&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;产生原因：分支与分支在同一个地方（有待研究）的&lt;strong&gt;不同修改&lt;/strong&gt;导致合并时的冲突,这时只能手动的修改冲突的地方，并提交&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;产生冲突后：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU1NTQucG5n?x-oss-process=image/format,png&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU2MTEucG5n?x-oss-process=image/format,png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这时只能手动修改后提交（&lt;code&gt;git add&lt;/code&gt;， &lt;code&gt;git commit&lt;/code&gt;）&lt;/p&gt;
+&lt;p&gt;提交完后可通过 &lt;code&gt;git log --graph --pretty=oneline --abbrev-commit&lt;/code&gt;查看合并的情况
+&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU3MzYucG5n?x-oss-process=image/format,png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;简单总结一下，合并产生的冲突&lt;strong&gt;只能手动解决后提交&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;终于明白上学期和别人合写App时会出现的&lt;code&gt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;HEAD&lt;/code&gt;标识了😋&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;####### 💧合并分支时的模式&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;普通的&lt;code&gt;git merge &amp;lt;branch~name&amp;gt;&lt;/code&gt; 优先采用&lt;code&gt;Fast forward&lt;/code&gt;模式，不会记录分支信息&lt;/li&gt;
+&lt;li&gt;用&lt;code&gt;git merge --no-ff -m &amp;quot;xxxx&amp;quot; &amp;lt;branch~name&amp;gt;&lt;/code&gt;会禁用&lt;code&gt;Fast forward&lt;/code&gt;模式 则会记录分支&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU4MDgucG5n?x-oss-process=image/format,png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;bug分支&#34;&gt;BUG分支&lt;/h4&gt;
+&lt;p&gt;修复bug时，通过创建新的分支来进行修复，然后合并到&lt;code&gt;master&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;当工作现场没有完成的时候👉&lt;code&gt;git stash&lt;/code&gt;隐藏工作现场以方便修改bug，用&lt;code&gt;git stash list&lt;/code&gt;可查看隐藏的东西，当修复完后可用&lt;code&gt;git stash pop&lt;/code&gt;来进行恢复&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注：&lt;/strong&gt; &lt;code&gt;git stash pop&lt;/code&gt;（恢复工作现场并删除隐藏）=&lt;code&gt;git stash apply&lt;/code&gt;（恢复工作现场）+&lt;code&gt;git stash drop&lt;/code&gt;（删除隐藏）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;有的时候需要一个个恢复工作现场&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU4MzIucG5n?x-oss-process=image/format,png&#34; alt=&#34;&#34;&gt;
+那就应该先&lt;code&gt;git stash list&lt;/code&gt;查看一下隐藏的列表，再&lt;code&gt;git stash apply stash@{x}&lt;/code&gt;恢复，然后还有&lt;code&gt;git stash drop&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h5 id=&#34;在master修复的bug的操作复制到其他分支上&#34;&gt;在master修复的bug的操作复制到其他分支上&lt;/h5&gt;
+&lt;p&gt;在要复制到的分支（此分支得先&lt;code&gt;commit&lt;/code&gt;后再操作）上：&lt;code&gt;git cherry-pick  &amp;lt;commit码&amp;gt;&lt;/code&gt;这里的 &lt;code&gt;&amp;lt;commit~码&amp;gt;&lt;/code&gt;是指修复bug的分支的commit号，就像下面这张图的&lt;code&gt;34bbddd&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU5NDkucG5n?x-oss-process=image/format,png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDcwMDAxNTUucG5n?x-oss-process=image/format,png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;多人协作待重读未总结&#34;&gt;📌多人协作(待重读，未总结)&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;git remote -v&lt;/code&gt;可以查看远程库的信息，可以发现，若本地的分支如不推送到远程，对其他人是不可见的，可用&lt;code&gt;git push origin &amp;lt;branch~name&amp;gt;&lt;/code&gt;来推送，如果失败可以先&lt;code&gt;git pull&lt;/code&gt;然后再修改什么的，在本地创建和远程分支对应的分支，使用&lt;code&gt;git checkout -b branch-name origin/branch-name&lt;/code&gt;，本地和远程分支的名称最好一致；
+建立本地分支和远程分支的关联，使用&lt;code&gt;git branch --set-upstream branch-name origin/branch-name&lt;/code&gt;
+从远程抓取分支，使用&lt;code&gt;git pull&lt;/code&gt;，如果有冲突，要先处理冲突。&lt;/p&gt;
+&lt;h4 id=&#34;rebase未理解&#34;&gt;📌rebase(未理解)&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;git rebase&lt;/code&gt;操作可以把本地未push的分叉提交历史整理成直线；&lt;/p&gt;
+&lt;h3 id=&#34;指令总结&#34;&gt;🍻指令总结&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;指令&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git init&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;初始化&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git status&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;查看状态&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git diff .&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;可以查看具体被修改了那些内容（应在&lt;code&gt;git add .&lt;/code&gt;前使用）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git log&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;可以查看有几个版本提交到仓库里&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git log --pretty=oneline&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;同上，不过简化了些&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git reflog&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;可以查看每一次命令（可以看到版本号）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;gir reset --hard 版本号&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;版本退回或回溯&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git add 文件名&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;把修改放到暂存区&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git commit -m &amp;quot;xxxxx&amp;quot;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;一次性把暂存区的所有修改提交到分支上&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git checkout -- &amp;lt;file~name&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;可把未&lt;code&gt;git add&lt;/code&gt;的文件修改全部撤销&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git retore --staged &amp;lt;file~name&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;把&lt;code&gt;&amp;lt;file~name&amp;gt;&lt;/code&gt;在暂存区的东西移出(到工作区，也就是可以进行&lt;code&gt;git checkout -- &amp;lt;file~name&amp;gt;&lt;/code&gt;操作)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git rm &amp;lt;file~name&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;删除file文件，并提交修改到暂存区中&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git switch &amp;lt;branch~name&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;切换分支&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git switch -c &amp;lt;branch~name&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;创建并切换到新的分支&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git branch&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;查看已有分支，带&lt;code&gt;*&lt;/code&gt;的是现所在分支&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git branch -d &amp;lt;branch~name&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;删除分支（前提是已&lt;code&gt;switch&lt;/code&gt;到其他分支上）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git branch -D &amp;lt;branch~name&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;删除分支,强行删除&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git merge &amp;lt;branch~name&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;合并分支（优先采用&lt;code&gt;Fast forward&lt;/code&gt;模式）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git merge --no-ff -m &amp;quot;xxxx&amp;quot; &amp;lt;branch~name&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;合并分支（禁用&lt;code&gt;Fast forward&lt;/code&gt;模式）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git log --graph --pretty=oneline --abbrev-commit&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;查看合并情况&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git stash&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;隐藏工作现场&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git stash list&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;可查看&lt;code&gt;stash&lt;/code&gt;的东西&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git stash pop&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;恢复工作现场，注：&lt;code&gt;git stash pop&lt;/code&gt;=&lt;code&gt;git stash apply&lt;/code&gt;+&lt;code&gt;git stash drop&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git cherry-pick  &amp;lt;commit码&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;复制操作&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git remote&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;查看远程库的信息，用&lt;code&gt;git remote -v&lt;/code&gt;可以看到更详细的信息&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git push origin &amp;lt;branch~name&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;推送名为&lt;code&gt;&amp;lt;branch~name&amp;gt;&lt;/code&gt;的分支&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;- https://fushaolei.github.io/post/git-note/ - </description>
         </item>
     
     
