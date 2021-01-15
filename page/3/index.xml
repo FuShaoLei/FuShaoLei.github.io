@@ -5,30 +5,9 @@
     <description>Recent content on Sorryfu Blog.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 12 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 14 Jan 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://fushaolei.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    
-        <item>
-        <title>Kindle备忘</title>
-        <link>https://fushaolei.github.io/post/kindle-dont-forget/</link>
-        <pubDate>Tue, 06 Oct 2020 13:34:37 +0000</pubDate>
-        
-        <guid>https://fushaolei.github.io/post/kindle-dont-forget/</guid>
-        <description>Sorryfu Blog. https://fushaolei.github.io/post/kindle-dont-forget/ -&lt;h2 id=&#34;优化设置&#34;&gt;优化设置&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://jingyan.baidu.com/article/19192ad8b0afebe53e5707cc.html&#34;&gt;怎么去掉Kindle的广告&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;书籍资源&#34;&gt;书籍资源&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.amazon.cn/Kindle%E7%94%B5%E5%AD%90%E4%B9%A6/b?ie=UTF8&amp;amp;node=116169071&amp;amp;ref_=sa_menu_top_ebook&#34;&gt;亚马逊官网&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://blah.me/&#34;&gt;Blah书城&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.jiumodiary.com/&#34;&gt;鸠摩搜索&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-- https://fushaolei.github.io/post/kindle-dont-forget/ - </description>
-        </item>
     
     
     
@@ -159,15 +138,16 @@ fun &lt;span style=&#34;color:#268bd2&#34;&gt;getStatus&lt;/span&gt;&lt;span sty
     
     
         <item>
-        <title>《Java核心技术》读书笔记</title>
-        <link>https://fushaolei.github.io/post/core-java-note-1/</link>
+        <title>《Java核心技术I》读书笔记</title>
+        <link>https://fushaolei.github.io/post/core-java-note/</link>
         <pubDate>Tue, 06 Oct 2020 13:34:37 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/core-java-note-1/</guid>
-        <description>Sorryfu Blog. https://fushaolei.github.io/post/core-java-note-1/ -&lt;blockquote&gt;
-&lt;p&gt;仅仅是边读边记的笔记，因为不像是某些资料，这本书不是成“体系”的，比较混乱，所以，索性都记录到一个md文件里咯&lt;/p&gt;
+        <guid>https://fushaolei.github.io/post/core-java-note/</guid>
+        <description>Sorryfu Blog. https://fushaolei.github.io/post/core-java-note/ -&lt;blockquote&gt;
+&lt;p&gt;仅仅是边读边记的笔记，因为不像是某些资料，这本书并不是成“体系”的，比较“混乱”，所以，索性都记录到一个md文件里咯&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;1第一个程序&#34;&gt;1.第一个程序&lt;/h2&gt;
+&lt;h2 id=&#34;java的基本程序设计结构&#34;&gt;Java的基本程序设计结构&lt;/h2&gt;
+&lt;h3 id=&#34;1第一个程序&#34;&gt;1.第一个程序&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;Hello&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
 	&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;main&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;String&lt;span style=&#34;color:#719e07&#34;&gt;[]&lt;/span&gt; args&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
 		System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;Hello World&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
@@ -179,7 +159,7 @@ fun &lt;span style=&#34;color:#268bd2&#34;&gt;getStatus&lt;/span&gt;&lt;span sty
 &lt;li&gt;main方法是所有程序的&lt;strong&gt;入口&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;大括号表示方法体的开始与结束&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;2注释&#34;&gt;2.注释&lt;/h2&gt;
+&lt;h3 id=&#34;2注释&#34;&gt;2.注释&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//单行注释
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;
 &lt;span style=&#34;color:#586e75&#34;&gt;/*
@@ -190,7 +170,7 @@ fun &lt;span style=&#34;color:#268bd2&#34;&gt;getStatus&lt;/span&gt;&lt;span sty
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; * 文档注释
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; * 可用于自动的生成文档
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; */&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;3数据类型&#34;&gt;3.数据类型&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;3数据类型&#34;&gt;3.数据类型&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -251,31 +231,31 @@ fun &lt;span style=&#34;color:#268bd2&#34;&gt;getStatus&lt;/span&gt;&lt;span sty
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&#34;4变量与常量&#34;&gt;4.变量与常量&lt;/h2&gt;
-&lt;h3 id=&#34;变量&#34;&gt;变量&lt;/h3&gt;
-&lt;h4 id=&#34;声明变量&#34;&gt;声明变量&lt;/h4&gt;
+&lt;h3 id=&#34;4变量与常量&#34;&gt;4.变量与常量&lt;/h3&gt;
+&lt;h4 id=&#34;变量&#34;&gt;变量&lt;/h4&gt;
+&lt;h5 id=&#34;声明变量&#34;&gt;声明变量&lt;/h5&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; a&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
 String name&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;即 以&lt;code&gt;变量类型&lt;/code&gt;  &lt;code&gt;变量名&lt;/code&gt;这种形式来声明一个变量&lt;/p&gt;
-&lt;h4 id=&#34;变量初始化&#34;&gt;变量初始化&lt;/h4&gt;
+&lt;h5 id=&#34;变量初始化&#34;&gt;变量初始化&lt;/h5&gt;
 &lt;p&gt;声明一个变量后，必须用赋值语句对变量进行&lt;strong&gt;显式初始化&lt;/strong&gt;，如下&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; a &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; 0&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
 String name &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;任我行&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;常量&#34;&gt;常量&lt;/h3&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;常量&#34;&gt;常量&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;常量就是值不会变的变量&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;可用&lt;code&gt;final&lt;/code&gt;关键字来修饰常量，而且通常此常量名为大写&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;final&lt;/span&gt; String BAIDU_URL &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;www.baidu.com&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;枚举类型&#34;&gt;枚举类型&lt;/h3&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;枚举类型&#34;&gt;枚举类型&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;作用：限制变量的取值范围&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;如下：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;    &lt;span style=&#34;color:#268bd2&#34;&gt;enum&lt;/span&gt; Size &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;SMALL&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;MEDIUM&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;LARGE&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;EXTRA_LARGE&lt;span style=&#34;color:#719e07&#34;&gt;};&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;那么&lt;code&gt;Size&lt;/code&gt;类型的变量只能取里边的值&lt;/p&gt;
-&lt;h2 id=&#34;5运算符&#34;&gt;5.运算符&lt;/h2&gt;
-&lt;h3 id=&#34;算术运算符&#34;&gt;算术运算符&lt;/h3&gt;
+&lt;h3 id=&#34;5运算符&#34;&gt;5.运算符&lt;/h3&gt;
+&lt;h4 id=&#34;算术运算符&#34;&gt;算术运算符&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -306,12 +286,12 @@ String name &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; &lt;span st
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h3 id=&#34;类型转换&#34;&gt;类型转换&lt;/h3&gt;
+&lt;h4 id=&#34;类型转换&#34;&gt;类型转换&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;如参与运算的两个数类型不一致，则结果为较大类型的整型&lt;/li&gt;
 &lt;li&gt;强制转换：(有可能损失信息)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;其他运算符&#34;&gt;其他运算符&lt;/h3&gt;
+&lt;h4 id=&#34;其他运算符&#34;&gt;其他运算符&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;二元运算符：例如&lt;code&gt;x+=4;&lt;/code&gt;，运算符放于等号左边&lt;/li&gt;
 &lt;li&gt;自增自减运算符
@@ -323,15 +303,15 @@ String name &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; &lt;span st
 &lt;li&gt;关系运算符：如&lt;code&gt;==&lt;/code&gt;,&lt;code&gt;!=&lt;/code&gt;，&lt;code&gt;&amp;gt;=&lt;/code&gt;之类的，还有&lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt;和&lt;code&gt;||&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;三元运算符：&lt;code&gt;x&amp;gt;0 ? true : false&lt;/code&gt;如表达式为真，则为&lt;code&gt;true&lt;/code&gt;，如假则为&lt;code&gt;false&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;6字符串&#34;&gt;6.字符串&lt;/h2&gt;
+&lt;h3 id=&#34;6字符串&#34;&gt;6.字符串&lt;/h3&gt;
 &lt;p&gt;先跳过，待补充&lt;/p&gt;
-&lt;h2 id=&#34;7输入与输出&#34;&gt;7.输入与输出&lt;/h2&gt;
+&lt;h3 id=&#34;7输入与输出&#34;&gt;7.输入与输出&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;Scanner input&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; Scanner&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;in&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
 System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;请输入一个数字&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
 &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; num&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;input&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;nextInt&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//输入
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;你输入的数字是：&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;num&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//输出
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;8控制流程&#34;&gt;8.控制流程&lt;/h2&gt;
-&lt;h4 id=&#34;条件分支流程&#34;&gt;条件分支流程&lt;/h4&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;8控制流程&#34;&gt;8.控制流程&lt;/h3&gt;
+&lt;h5 id=&#34;条件分支流程&#34;&gt;条件分支流程&lt;/h5&gt;
 &lt;p&gt;普通分支语句&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;        &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; a &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; 1&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
         &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; b &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; 2&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
@@ -358,37 +338,37 @@ System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;			&lt;span style=&#34;color:#719e07&#34;&gt;break&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
 		&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
 		&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;循环流程&#34;&gt;循环流程&lt;/h4&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;循环流程&#34;&gt;循环流程&lt;/h5&gt;
 &lt;p&gt;根据条件，反复执行某些操作&lt;/p&gt;
-&lt;h5 id=&#34;for&#34;&gt;&lt;code&gt;for&lt;/code&gt;&lt;/h5&gt;
+&lt;h6 id=&#34;for&#34;&gt;&lt;code&gt;for&lt;/code&gt;&lt;/h6&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;	&lt;span style=&#34;color:#719e07&#34;&gt;for&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; i&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;0&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&lt;/span&gt;5&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;++)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//int i=0是初始值，i&amp;lt;5是循环条件。i++是循环后更新i的值，然后进入下一轮循环
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;		System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;循环第&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;次&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
 	&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;while&#34;&gt;&lt;code&gt;while&lt;/code&gt;&lt;/h5&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h6 id=&#34;while&#34;&gt;&lt;code&gt;while&lt;/code&gt;&lt;/h6&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;		&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; u&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;5&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
 		&lt;span style=&#34;color:#719e07&#34;&gt;while&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;u&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt;0&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//当为true时执行
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;			System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;u=&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;u&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
 			&lt;span style=&#34;color:#719e07&#34;&gt;--&lt;/span&gt;u&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
 		&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;dowhile&#34;&gt;&lt;code&gt;do&lt;/code&gt;..&lt;code&gt;while&lt;/code&gt;&lt;/h5&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h6 id=&#34;dowhile&#34;&gt;&lt;code&gt;do&lt;/code&gt;..&lt;code&gt;while&lt;/code&gt;&lt;/h6&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;		&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; p&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;0&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
 		&lt;span style=&#34;color:#719e07&#34;&gt;do&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//无条件进入循环
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;			&lt;span style=&#34;color:#719e07&#34;&gt;++&lt;/span&gt;p&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
 			System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;p=&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;p&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
 		&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;while&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;p&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&lt;/span&gt;5&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;//首先执行一次循环体后进行判断，若为true则继续进行下去
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;for-each增强型for循环&#34;&gt;&lt;code&gt;for each&lt;/code&gt;（增强型&lt;code&gt;for&lt;/code&gt;循环）&lt;/h5&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h6 id=&#34;for-each增强型for循环&#34;&gt;&lt;code&gt;for each&lt;/code&gt;（增强型&lt;code&gt;for&lt;/code&gt;循环）&lt;/h6&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#719e07&#34;&gt;for&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt; 类型 变量名&lt;span style=&#34;color:#719e07&#34;&gt;:&lt;/span&gt; 数组或集合 &lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
 循环体
 &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;与普通for循环的区别：for each循环语句的循环变量将会遍历数组中的每个元素，而不是下标值&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;9大数&#34;&gt;9.大数&lt;/h2&gt;
+&lt;h3 id=&#34;9大数&#34;&gt;9.大数&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;BigInteger&lt;/code&gt;实现任意精度的整数运算&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;BigDecimal&lt;/code&gt;实现任意精度的浮点数运算&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;10数组&#34;&gt;10.数组&lt;/h2&gt;
+&lt;h3 id=&#34;10数组&#34;&gt;10.数组&lt;/h3&gt;
 &lt;p&gt;存储一组具有&lt;strong&gt;相同数据类型&lt;/strong&gt;的数据元素的有序集合&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#586e75&#34;&gt;// 声明
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; num&lt;span style=&#34;color:#719e07&#34;&gt;[];&lt;/span&gt;
@@ -400,7 +380,73 @@ System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;for&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; i&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;0&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&lt;/span&gt;5&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;++){&lt;/span&gt;
 	num&lt;span style=&#34;color:#719e07&#34;&gt;[&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;]=&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;*&lt;/span&gt;3&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
 &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://fushaolei.github.io/post/core-java-note-1/ - </description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;对象与类&#34;&gt;对象与类&lt;/h2&gt;
+&lt;h3 id=&#34;1面向对象&#34;&gt;1.面向对象&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;面向对象编程&lt;/strong&gt;，是一种通过&lt;strong&gt;对象&lt;/strong&gt;的方式，把&lt;strong&gt;现实世界映射到计算机模型&lt;/strong&gt;的一种编程方法。&lt;/li&gt;
+&lt;li&gt;面向对象程序设计：程序由对象来组成&lt;/li&gt;
+&lt;li&gt;类：构造对象的模板或蓝图&lt;/li&gt;
+&lt;li&gt;对象：类的实例化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;类和对象的关系好比 模具 和 具体的用模具实际做出来的东西&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;2使用预定义类&#34;&gt;2.使用预定义类&lt;/h3&gt;
+&lt;h4 id=&#34;构造器&#34;&gt;构造器&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;用来构造并初始化对象的一种特殊的方法&lt;/li&gt;
+&lt;li&gt;构造器的名字应该与类名相同&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这里要明确一个东西，比方说，我定义了一个类叫做&lt;code&gt;Animal&lt;/code&gt;，然后做了如下的操作&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;Animal mAnimal&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;此时，&lt;code&gt;mAnimal&lt;/code&gt;叫做对象变量，它是一个&lt;strong&gt;变量&lt;/strong&gt;，&lt;strong&gt;不是一个对象&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;然后做如下操作&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;mAnimal &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; Animal&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;此时&lt;code&gt;mAnimal&lt;/code&gt;&lt;strong&gt;引用了一个对象&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;3用户自定义类&#34;&gt;3.用户自定义类&lt;/h3&gt;
+&lt;h4 id=&#34;隐式参数与显示参数&#34;&gt;隐式参数与显示参数&lt;/h4&gt;
+&lt;p&gt;一句话，隐式参数是调用方法的对象本身（在方法中可用&lt;code&gt;this&lt;/code&gt;来表示），显示参数是方法名后面的数值&lt;/p&gt;
+&lt;h3 id=&#34;4静态字段和静态方法&#34;&gt;4.静态字段和静态方法&lt;/h3&gt;
+&lt;h4 id=&#34;静态字段&#34;&gt;静态字段&lt;/h4&gt;
+&lt;p&gt;静态字段即用&lt;code&gt;static&lt;/code&gt;修饰的字段，静态字段是属于&lt;strong&gt;类&lt;/strong&gt;，不属于单个任何对象的&lt;/p&gt;
+&lt;h4 id=&#34;静态方法&#34;&gt;静态方法&lt;/h4&gt;
+&lt;p&gt;用&lt;code&gt;static&lt;/code&gt;修饰的方法，属于类，不属于对象，即在静态方法中不能使用&lt;code&gt;this&lt;/code&gt;关键字&lt;/p&gt;
+&lt;h3 id=&#34;5方法参数&#34;&gt;5.方法参数&lt;/h3&gt;
+&lt;p&gt;跳过&lt;/p&gt;
+&lt;h3 id=&#34;6对象构造&#34;&gt;6.对象构造&lt;/h3&gt;
+&lt;h4 id=&#34;重载&#34;&gt;重载&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;方法签名：方法名和参数列表描述了一个方法&lt;/li&gt;
+&lt;li&gt;重载即是出现了多个方法，有相同的名字，但是不同的参数，程序会在调用方法时根据参数类型来选择使用哪一个方法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;7包&#34;&gt;7.包&lt;/h3&gt;
+&lt;p&gt;使用包来确保类名的唯一性&lt;/p&gt;
+&lt;p&gt;静态导入&lt;/p&gt;
+&lt;h2 id=&#34;继承&#34;&gt;继承&lt;/h2&gt;
+&lt;h3 id=&#34;类子类超类&#34;&gt;类，子类，超类&lt;/h3&gt;
+&lt;h4 id=&#34;总结this和super的含义&#34;&gt;总结：&lt;code&gt;this&lt;/code&gt;和&lt;code&gt;super&lt;/code&gt;的含义&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;this&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;一是指隐式参数的调用&lt;/li&gt;
+&lt;li&gt;二是指调用该类的其他构造器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;super&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;一是调用超类的方法&lt;/li&gt;
+&lt;li&gt;二 是调用超类的构造器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;总结java中4种访问修饰符&#34;&gt;总结：Java中4种访问修饰符&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;private&lt;/code&gt;：仅对本类可见&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;public&lt;/code&gt;：对外部完全可见&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;protected&lt;/code&gt;：对本包及所有子类可见&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;默认（无需修饰符）&lt;/code&gt;：对本包可见&lt;/li&gt;
+&lt;/ul&gt;
+- https://fushaolei.github.io/post/core-java-note/ - </description>
         </item>
     
     
@@ -1423,6 +1469,184 @@ Spring容器中（自动分配的id首字母是小写的），当扫描到@Resou
 &lt;li&gt;有什么感悟，遇到过什么难题 , 有些地方的实现为什么要这样实现而不是那样实现啊&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;（更新中(‾◡◝)）&lt;/p&gt;- https://fushaolei.github.io/post/interview-water/ - </description>
+        </item>
+    
+    
+    
+        <item>
+        <title>MyBatis笔记</title>
+        <link>https://fushaolei.github.io/post/mybatis-note/</link>
+        <pubDate>Fri, 14 Aug 2020 14:12:12 +0000</pubDate>
+        
+        <guid>https://fushaolei.github.io/post/mybatis-note/</guid>
+        <description>Sorryfu Blog. https://fushaolei.github.io/post/mybatis-note/ -&lt;blockquote&gt;
+&lt;p&gt;这框架是大三下学期的课程了，当时学的时候是用的eclipse的，现在换用IDEA 遇到了许多的坑，特此记录，然后，这也是个从零开始学mybatis的博文，为了期末考试，也为了巩固自己的编码基础，特写此文.
+&lt;strong&gt;注：编码环境&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;IDEA 2020.1&lt;/li&gt;
+&lt;li&gt;Mysql 8.0.20&lt;/li&gt;
+&lt;li&gt;全部都是Maven项目（为方便引入jar包）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;外加一个官网指路👉https://mybatis.org/mybatis-3/&lt;/p&gt;
+&lt;p&gt;还有一个自己学mybatis时敲过的全部代码：https://github.com/FuShaoLei/FrameDemo/tree/master/Mybatis&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;第一个项目&#34;&gt;第一个项目&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;分为以下几步&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;创建一个maven项目&lt;/li&gt;
+&lt;li&gt;配置包，编译&lt;/li&gt;
+&lt;li&gt;创建entity类，以及映射器接口和SQL映射XML文件&lt;/li&gt;
+&lt;li&gt;创建mybatis的 xml配置文件并关联SQL映射XML文件&lt;/li&gt;
+&lt;li&gt;测试&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;👴哭了，第一次配置太麻烦了&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;导入jar包&#34;&gt;导入jar包&lt;/h3&gt;
+&lt;p&gt;由于我是maven项目，根据官方的文档 ，只需在pom.xml中添加相应的东西即可&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;dependencies&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.mybatis&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;mybatis&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;3.5.5&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;mysql&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;mysql-connector-java&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;8.0.20&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/dependencies&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;从-xml-中构建-sqlsessionfactory&#34;&gt;从 XML 中构建 SqlSessionFactory&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;**每个基于 MyBatis 的应用都是以一个 SqlSessionFactory 的实例为核心的。**SqlSessionFactory 的实例可以通过 SqlSessionFactoryBuilder 获得。而 SqlSessionFactoryBuilder 则可以从 XML 配置文件或一个预先配置的 Configuration 实例来构建出 SqlSessionFactory 实例。(官方原话)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;由上面可知，要创建一个xml配置文件，为的是构建SqlSessionFactory实例。根据官方给的xml配置文件示例进行修改即可&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34; ?&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;!DOCTYPE configuration
+&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;        PUBLIC &amp;#34;-//mybatis.org//DTD Config 3.0//EN&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;        &amp;#34;http://mybatis.org/dtd/mybatis-3-config.dtd&amp;#34;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;configuration&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;settings&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;setting&lt;/span&gt; name=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;logImpl&amp;#34;&lt;/span&gt; value=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;STDOUT_LOGGING&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/settings&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;environments&lt;/span&gt; default=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;dev&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;environment&lt;/span&gt; id=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;dev&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;transactionManager&lt;/span&gt; type=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;JDBC&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;/&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;dataSource&lt;/span&gt; type=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;POOLED&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;
+                &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;property&lt;/span&gt; name=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;driver&amp;#34;&lt;/span&gt; value=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;com.mysql.cj.jdbc.Driver&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;/&amp;gt;&lt;/span&gt;
+                &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;property&lt;/span&gt; name=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;url&amp;#34;&lt;/span&gt;
+                          value=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;jdbc:mysql://localhost:3306/mybatis_db?useUnicode=true&amp;amp;amp;characterEncoding=utf-8&amp;amp;amp;serverTimezone=GMT&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;/&amp;gt;&lt;/span&gt;
+                &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;property&lt;/span&gt; name=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;username&amp;#34;&lt;/span&gt; value=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;root&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;/&amp;gt;&lt;/span&gt;
+                &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;property&lt;/span&gt; name=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;password&amp;#34;&lt;/span&gt; value=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;18389621811&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;/&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/dataSource&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/environment&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/environments&amp;gt;&lt;/span&gt;
+
+    &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;mappers&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;mapper&lt;/span&gt; resource=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;com/mapper/StudentMapper.xml&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/mappers&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/configuration&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;要注意的是那个name为url的value值，有name为driver的value值，mysql5.0和mysql8.0的配置不太一样！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;好了到这里已经编写好了xml文件，接下来是构建SqlSessionFactory，根据老师的教学，编写MybatisUtil&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#586e75&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; * 从 XML 中构建 SqlSessionFactory
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; */&lt;/span&gt;
+&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;MybatisUtil&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;static&lt;/span&gt; SqlSessionFactory sessionFactory&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+        InputStream is&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
+        &lt;span style=&#34;color:#719e07&#34;&gt;try&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+            is&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; Resources&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getResourceAsStream&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;mybatis-config.xml&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
+            sessionFactory &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;new&lt;/span&gt; SqlSessionFactoryBuilder&lt;span style=&#34;color:#719e07&#34;&gt;().&lt;/span&gt;build&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;is&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
+        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;catch&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;IOException e&lt;span style=&#34;color:#719e07&#34;&gt;){&lt;/span&gt;
+            e&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;printStackTrace&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;
+        &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;static&lt;/span&gt; SqlSession &lt;span style=&#34;color:#268bd2&#34;&gt;getSession&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(){&lt;/span&gt;
+        &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; sessionFactory&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;openSession&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;
+    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;通过阅读以上代码可知，MybatisUtil这个类暴露了一个&lt;code&gt;getSession()&lt;/code&gt;方法供使用这个&lt;code&gt;sessionFactory.openSession();&lt;/code&gt;这个是什么意思呢？ 👴也不懂啊 woc&lt;/p&gt;
+&lt;h3 id=&#34;测试&#34;&gt;测试&lt;/h3&gt;
+&lt;p&gt;然后就可以进行简单的测试了，具体看代码&lt;/p&gt;
+&lt;p&gt;在这里说个坑。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;推荐阅读：https://blog.csdn.net/qq_23184291/article/details/78089115&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;算了 👴不想说了，反正就是要往pom.xml中添加&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;build&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;resources&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;resource&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;directory&amp;gt;&lt;/span&gt;src/main/java&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/directory&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;includes&amp;gt;&lt;/span&gt;
+                &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;include&amp;gt;&lt;/span&gt;**/*.xml&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/include&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/includes&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/resource&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/resources&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/build&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;简单的crud&#34;&gt;简单的CRUD&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;随便贴些代码，具体还得看项目&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;映射器接口&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#586e75&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; * 实现简单的CRUD
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt; */&lt;/span&gt;
+&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;interface&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;StudentMapper&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#586e75&#34;&gt;//增
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;insertStudentNoReturnId&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;Student student&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;insertStudentAndReturnId&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;Student student&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
+    &lt;span style=&#34;color:#586e75&#34;&gt;//删
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;deleteStudent&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; id&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
+    &lt;span style=&#34;color:#586e75&#34;&gt;//改
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;updateStudent&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;String sex&lt;span style=&#34;color:#719e07&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; id&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
+
+    &lt;span style=&#34;color:#586e75&#34;&gt;//查
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; List&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&lt;/span&gt;Student&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;selectAllStudent&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;();&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; Student &lt;span style=&#34;color:#268bd2&#34;&gt;selectStudent&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; id&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;SQL映射XML文件&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34; ?&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;!DOCTYPE mapper
+&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;        PUBLIC &amp;#34;-//mybatis.org//DTD Mapper 3.0//EN&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;        &amp;#34;http://mybatis.org/dtd/mybatis-3-mapper.dtd&amp;#34;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;mapper&lt;/span&gt; namespace=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;com.mapper.StudentMapper&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#586e75&#34;&gt;&amp;lt;!--增--&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;insert&lt;/span&gt; id=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;insertStudentNoReturnId&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;
+        insert into students(name,sex) values (#{name},#{sex})
+    &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/insert&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#586e75&#34;&gt;&amp;lt;!--如果想在执行插入操作以后返回表中的主键值，需要在映射文件中insert元素中加上如下两个属性--&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;insert&lt;/span&gt; id=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;insertStudentAndReturnId&amp;#34;&lt;/span&gt; useGeneratedKeys=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;true&amp;#34;&lt;/span&gt; keyProperty=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;
+        insert into students(name,sex) values (#{name},#{sex})
+        &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;selectKey&lt;/span&gt; resultType=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;int&amp;#34;&lt;/span&gt; keyProperty=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt; order=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;AFTER&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;
+            select last_insert_id()
+        &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/selectKey&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/insert&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#586e75&#34;&gt;&amp;lt;!--删--&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;delete&lt;/span&gt; id=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;deleteStudent&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;
+        delete from students where id=#{id}
+    &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/delete&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#586e75&#34;&gt;&amp;lt;!--改--&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#586e75&#34;&gt;&amp;lt;!--跟据id修改性别 (￣▽￣)&amp;#34;--&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;update&lt;/span&gt; id=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;updateStudent&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;
+        update students set sex=#{arg0} where id=#{arg1}
+    &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/update&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#586e75&#34;&gt;&amp;lt;!--查--&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;select&lt;/span&gt; id=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;selectAllStudent&amp;#34;&lt;/span&gt; resultType=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;com.entity.Student&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;
+        select * from students
+    &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/select&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;select&lt;/span&gt; id=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;selectStudent&amp;#34;&lt;/span&gt; resultType=&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;com.entity.Student&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;gt;&lt;/span&gt;
+        select * from students where id = #{id}
+    &lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/select&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#268bd2&#34;&gt;&amp;lt;/mapper&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这里要说明的一点是，那个插入后放回的值不是id，二十它影响的行数，如果要获取id的话
+（除了需要改动映射的xml文件），直接getId即可，如下&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; returnId &lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt; studentMapper&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;insertStudentAndReturnId&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;student2&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
+&lt;span style=&#34;color:#586e75&#34;&gt;//插入后直接student2.getId()即可
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;println&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34;影响的行数是：&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt; returnId&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#34; 新插入的id是：&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;student2&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;getId&lt;span style=&#34;color:#719e07&#34;&gt;());&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://fushaolei.github.io/post/mybatis-note/ - </description>
         </item>
     
     
