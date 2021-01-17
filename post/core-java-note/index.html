@@ -451,6 +451,7 @@ String name <span style="color:#719e07">=</span> <span style="color:#2aa198">&#3
 <li>关系运算符：如<code>==</code>,<code>!=</code>，<code>&gt;=</code>之类的，还有<code>&amp;&amp;</code>和<code>||</code></li>
 <li>三元运算符：<code>x&gt;0 ? true : false</code>如表达式为真，则为<code>true</code>，如假则为<code>false</code></li>
 </ul>
+<p>短路（<code>&amp;&amp;</code>和<code>||</code>运算符的逻辑）：如果第一个操作数已经能够确定表达式的值，第二个操作数就不必再计算了</p>
 <h3 id="6字符串">6.字符串</h3>
 <p>先跳过，待补充</p>
 <h3 id="7输入与输出">7.输入与输出</h3>
@@ -571,8 +572,8 @@ System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span
 <p>使用包来确保类名的唯一性</p>
 <p>静态导入</p>
 <h2 id="继承">继承</h2>
-<h3 id="类子类超类">类，子类，超类</h3>
-<h4 id="总结this和super的含义">总结：<code>this</code>和<code>super</code>的含义</h4>
+<h3 id="1类子类超类">1.类，子类，超类</h3>
+<h4 id="this和super的含义"><code>this</code>和<code>super</code>的含义</h4>
 <ul>
 <li><code>this</code>
 <ul>
@@ -587,13 +588,88 @@ System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span
 </ul>
 </li>
 </ul>
-<h4 id="总结java中4种访问修饰符">总结：Java中4种访问修饰符</h4>
+<h4 id="java中4种访问修饰符">Java中4种访问修饰符</h4>
 <ul>
 <li><code>private</code>：仅对本类可见</li>
 <li><code>public</code>：对外部完全可见</li>
 <li><code>protected</code>：对本包及所有子类可见</li>
 <li><code>默认（无需修饰符）</code>：对本包可见</li>
 </ul>
+<h4 id="多态">多态</h4>
+<p>一个对象变量可以指示多种实际类型的现象称为多态</p>
+<p>替换原则：程序中出现超类对象的任何地方都可以使用子类对象替换。例如：可将子类对象赋给超类变量</p>
+<p>重载解析：。。。</p>
+<p>动态绑定与静态绑定：</p>
+<ul>
+<li>动态绑定：在运行时能够自动地选择恰当的方法（调用的方法依赖隐式参数的实际类型）</li>
+<li>静态绑定：用<code>private</code>，<code>static</code>，<code>final</code>修饰的方法，编译器将准确的知道该调用哪个方法</li>
+</ul>
+<h4 id="强制类型转换">强制类型转换</h4>
+<p>唯一原因：要在暂时忽视对象的实际类型之后使用对象的全部功能。</p>
+<p>可用<code>instanceof</code>操作符来判断所属类型</p>
+<h4 id="抽象类">抽象类</h4>
+<p>更具有一般性的，只用作派生其他类的基类，而不是用来构造实例的类</p>
+<p>可以包含字段和具体方法</p>
+<p>不能被实例化</p>
+<h3 id="2object所有类的超类">2.<code>Object</code>：所有类的超类</h3>
+<p><code>Object</code>类是Java中所有类的氏族，每个类都自动的继承自<code>Object</code>类</p>
+<p><strong>在Java中，只有基本类型不是对象</strong>。</p>
+<h3 id="4对象包装器和自动装箱拆箱">4.对象包装器和自动装箱拆箱</h3>
+<h4 id="对象包装器">对象包装器</h4>
+<p>因为基本类型不是对象，但有时候又需要把基本类型转换成对象来使用，所以就出现了对象包装器这个概念。</p>
+<table>
+<thead>
+<tr>
+<th>基本类型</th>
+<th>对应的包装器类</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td><code>Integer</code></td>
+</tr>
+<tr>
+<td><code>long</code></td>
+<td><code>Long</code></td>
+</tr>
+<tr>
+<td><code>float</code></td>
+<td><code>Float</code></td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td><code>Double</code></td>
+</tr>
+<tr>
+<td><code>short</code></td>
+<td><code>Short</code></td>
+</tr>
+<tr>
+<td><code>byte</code></td>
+<td><code>Byte</code></td>
+</tr>
+<tr>
+<td><code>char</code></td>
+<td><code>Character</code></td>
+</tr>
+<tr>
+<td><code>boolean</code></td>
+<td><code>Boolean</code></td>
+</tr>
+</tbody>
+</table>
+<p>包装器类是<code>final</code>的</p>
+<h4 id="自动装箱与自动拆箱">自动装箱与自动拆箱</h4>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">        List<span style="color:#719e07">&lt;</span>Integer<span style="color:#719e07">&gt;</span> list <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ArrayList<span style="color:#719e07">&lt;&gt;();</span>
+        list<span style="color:#719e07">.</span>add<span style="color:#719e07">(</span>2<span style="color:#719e07">);</span>
+</code></pre></div><p>如上面给出的例子，<code>list</code>添加一个元素的时候，元素类型本该是<code>Integer</code>类型，可是<code>2</code>只是个<code>int</code>类型，不过没关系，<code>list.add(2)</code>将自动的变成<code>list.add(Integer.valueOf(2))</code>，这种变换称为<strong>自动装箱</strong></p>
+<p>同样的，如果想将一个<code>Integer</code>对象赋给一个<code>int</code>值时，将会<strong>自动拆箱</strong></p>
+<h2 id="接口lambda表达式与内部类">接口，lambda表达式与内部类</h2>
+<h3 id="1接口">1.接口</h3>
+<p>在Java程序设计语言中，接口不是类，而是对希望符合这个接口类的一组需求</p>
+<p>接口中的所有方法都自动是<code>public</code>方法</p>
+<p>接口绝不会有实例字段</p>
 
                     
                     <HR width="100%" id="EOF">
