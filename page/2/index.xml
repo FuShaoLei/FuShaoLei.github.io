@@ -319,7 +319,7 @@ mWebView.getSettings().setBlockNetworkImage(false);//解决图片不显示
         
         <guid>https://fushaolei.github.io/about/</guid>
         <description>Sorryfu Blog. https://fushaolei.github.io/about/ -&lt;h2 id=&#34;关于我&#34;&gt;关于我&lt;/h2&gt;
-&lt;p&gt;一介凡人，喜好编程，看书，写作，偶尔网抑云&lt;/p&gt;
+&lt;p&gt;一介凡人，喜好编程，游戏，看书，写作，偶尔网抑云&lt;/p&gt;
 &lt;h3 id=&#34;联系方式&#34;&gt;联系方式&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;github主页：https://github.com/FuShaoLei&lt;/li&gt;
@@ -332,18 +332,18 @@ mWebView.getSettings().setBlockNetworkImage(false);//解决图片不显示
 &lt;li&gt;QQ：1563250958&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;关于本站&#34;&gt;关于本站&lt;/h2&gt;
-&lt;p&gt;主要用于记录所学的东西，前端，后端，Android什么的，比较杂，因为我还是一个正在成长的菜狗啊啊啊啊，当然不排除会有一些日常的感悟啊，经历啊什么的（当然 有一些文字我自己都不想重复看，因为感觉很羞耻2333），&lt;del&gt;各位看官请便&lt;/del&gt;，其实看博客的最多的还是自己吧，因为要复习啊什么的，现在博文蛮混乱的，因为懒，还有 喜欢开坑，不喜欢填坑（；´д｀）ゞ（真是个臭毛病），总之，这是一个自娱自乐的站点。&lt;/p&gt;
+&lt;p&gt;主要用于记录所学的东西，前端，后端，Android什么的，比较杂，因为我还是一个正在成长的菜狗啊啊啊啊，当然不排除会有一些日常的感悟啊，经历啊什么的（当然 有一些文字我自己都不想重复看，因为感觉很羞耻2333），&lt;del&gt;各位看官请便&lt;/del&gt;，其实看博客的最多的还是自己吧，因为要复习啊什么的，不过现在博文蛮混乱的，因为懒，还有 喜欢开坑，不喜欢填坑（；´д｀）ゞ（真是个臭毛病），总之，这是一个自娱自乐的站点。&lt;/p&gt;
 &lt;h2 id=&#34;建站历史&#34;&gt;建站历史&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;2019/04/01 &lt;code&gt;hexo&lt;/code&gt;引擎 &lt;code&gt;next&lt;/code&gt;主题，部署在&lt;code&gt;github&lt;/code&gt;上&lt;/li&gt;
 &lt;li&gt;2019/04/04 添加了看板娘，头像选择等花里胡哨的特效&lt;/li&gt;
-&lt;li&gt;然后写了几篇水文，就弃之不管了&lt;/li&gt;
+&lt;li&gt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash; 然后写了几篇水文，就弃之不管了&lt;/li&gt;
 &lt;li&gt;2020/01/23 删掉原来的库，重新建站，换成了&lt;code&gt;icarus&lt;/code&gt;主题&lt;/li&gt;
 &lt;li&gt;2020/03/01 因为很想要一款自己的主题，走上了开发hexo主题的道路&lt;/li&gt;
 &lt;li&gt;2020/05/05 先后开发了&lt;code&gt;hexo-theme-hiya&lt;/code&gt; 和 &lt;code&gt;hexo-theme-anyway&lt;/code&gt;主题&lt;/li&gt;
 &lt;li&gt;2020/05/10 &lt;code&gt;hexo-theme-hiya&lt;/code&gt;被官方收录&lt;/li&gt;
 &lt;li&gt;2020/05/15 心态爆炸，&lt;code&gt;hexo-theme-hiya&lt;/code&gt;和&lt;code&gt;hexo-theme-anyway&lt;/code&gt;弃之不管了&lt;/li&gt;
-&lt;li&gt;2020/05/19 重新建站，用的&lt;code&gt;Volantis&lt;/code&gt;主题，部署在github pages上&lt;/li&gt;
+&lt;li&gt;2020/05/19 重新建站，用的&lt;code&gt;Volantis&lt;/code&gt;主题，部署在&lt;code&gt;github pages&lt;/code&gt;上&lt;/li&gt;
 &lt;li&gt;2020/05/31 新建&lt;code&gt;vuepress&lt;/code&gt;站，用的&lt;code&gt;vuepress-theme-vdoing&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;2020/06/07 在阿里云买了一年的域名&lt;code&gt;sorryfu.top&lt;/code&gt;使用权&lt;/li&gt;
 &lt;li&gt;2020/06/09 把&lt;code&gt;vuepress&lt;/code&gt;笔记本上的内容都搬运到了博客上&lt;/li&gt;
@@ -356,7 +356,7 @@ mWebView.getSettings().setBlockNetworkImage(false);//解决图片不显示
 &lt;li&gt;2020/12/05 换成了默认的主题 &lt;code&gt;landscape&lt;/code&gt;，兜兜转转，还是回到了原点&lt;/li&gt;
 &lt;li&gt;2020/12/15 换成了&lt;code&gt;hueman&lt;/code&gt;主题，暂时关闭了评论系统&lt;/li&gt;
 &lt;li&gt;2021/01/08 换成了构建速度更快的&lt;code&gt;hugo&lt;/code&gt;框架，采用&lt;code&gt;Diary&lt;/code&gt;主题模板建站&lt;/li&gt;
-&lt;li&gt;开通了&lt;code&gt;disqus&lt;/code&gt;评论系统&lt;/li&gt;
+&lt;li&gt;2020/01/14 开通了&lt;code&gt;disqus&lt;/code&gt;评论系统&lt;/li&gt;
 &lt;/ul&gt;
 - https://fushaolei.github.io/about/ - </description>
         </item>

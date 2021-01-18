@@ -18,7 +18,7 @@
         
         <guid>https://fushaolei.github.io/post/core-java-note/</guid>
         <description>Sorryfu Blog. https://fushaolei.github.io/post/core-java-note/ -&lt;blockquote&gt;
-&lt;p&gt;仅仅是边读边记的笔记，因为不像是某些资料，这本书并不是成“体系”的，比较“混乱”，所以，索性都记录到一个md文件里咯&lt;/p&gt;
+&lt;p&gt;仅仅是边读边记的笔记，因为不像是某些资料，这本书并不是成“体系”的，比较“混乱”，所以，索性都记录到一个md文件里咯（看的比较随意，有些难的或者偏的都直接跳过了😜，看第二遍的时候再补回来 maybe。。。）&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;java的基本程序设计结构&#34;&gt;Java的基本程序设计结构&lt;/h2&gt;
 &lt;h3 id=&#34;1第一个程序&#34;&gt;1.第一个程序&lt;/h3&gt;
@@ -393,9 +393,12 @@ System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=
 &lt;p&gt;同样的，如果想将一个&lt;code&gt;Integer&lt;/code&gt;对象赋给一个&lt;code&gt;int&lt;/code&gt;值时，将会&lt;strong&gt;自动拆箱&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&#34;接口lambda表达式与内部类&#34;&gt;接口，lambda表达式与内部类&lt;/h2&gt;
 &lt;h3 id=&#34;1接口&#34;&gt;1.接口&lt;/h3&gt;
-&lt;p&gt;在Java程序设计语言中，接口不是类，而是对希望符合这个接口类的一组需求&lt;/p&gt;
-&lt;p&gt;接口中的所有方法都自动是&lt;code&gt;public&lt;/code&gt;方法&lt;/p&gt;
+&lt;p&gt;在Java程序设计语言中，接口不是类，而是对希望符合这个接口类的一组&lt;strong&gt;需求&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;接口中的所有方法都自动是&lt;code&gt;public&lt;/code&gt;方法（但是实现接口时，必须把方法声明为&lt;code&gt;public&lt;/code&gt;）&lt;/p&gt;
+&lt;p&gt;接口中的字段总是&lt;code&gt;public static final&lt;/code&gt;的&lt;/p&gt;
 &lt;p&gt;接口绝不会有实例字段&lt;/p&gt;
+&lt;p&gt;接口同样不能被实例化，但是接口变量可以引用&lt;strong&gt;实现了这个接口&lt;/strong&gt;的类对象&lt;/p&gt;
+&lt;p&gt;一个类只能有一个超类，但可以实现&lt;code&gt;多个接口&lt;/code&gt;&lt;/p&gt;
 - https://fushaolei.github.io/post/core-java-note/ - </description>
         </item>
     
