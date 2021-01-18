@@ -356,7 +356,7 @@ mWebView.getSettings().setBlockNetworkImage(false);//解决图片不显示
 &lt;li&gt;2020/12/05 换成了默认的主题 &lt;code&gt;landscape&lt;/code&gt;，兜兜转转，还是回到了原点&lt;/li&gt;
 &lt;li&gt;2020/12/15 换成了&lt;code&gt;hueman&lt;/code&gt;主题，暂时关闭了评论系统&lt;/li&gt;
 &lt;li&gt;2021/01/08 换成了构建速度更快的&lt;code&gt;hugo&lt;/code&gt;框架，采用&lt;code&gt;Diary&lt;/code&gt;主题模板建站&lt;/li&gt;
-&lt;li&gt;2020/01/14 开通了&lt;code&gt;disqus&lt;/code&gt;评论系统&lt;/li&gt;
+&lt;li&gt;2021/01/14 开通了&lt;code&gt;disqus&lt;/code&gt;评论系统&lt;/li&gt;
 &lt;/ul&gt;
 - https://fushaolei.github.io/about/ - </description>
         </item>
