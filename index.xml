@@ -18,9 +18,9 @@
         
         <guid>https://fushaolei.github.io/post/core-java-note/</guid>
         <description>Sorryfu Blog. https://fushaolei.github.io/post/core-java-note/ -&lt;blockquote&gt;
-&lt;p&gt;仅仅是边读边记的笔记，因为不像是某些资料，这本书并不是成“体系”的，比较“混乱”，所以，索性都记录到一个md文件里咯（看的比较随意，有些难的或者偏的都直接跳过了😜，看第二遍的时候再补回来 maybe。。。）&lt;/p&gt;
+&lt;p&gt;仅仅是边读边记的笔记，因为不像是某些资料，这本书并不是成“体系”的，比较“混乱”，所以，索性都记录到一个md文件里咯（看的比较随意，除了第一第二章外，有些难的或者偏也都直接跳过了😜，看第二遍的时候再补回来吧 maybe。。。）&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;java的基本程序设计结构&#34;&gt;Java的基本程序设计结构&lt;/h2&gt;
+&lt;h2 id=&#34;第-3-章-java的基本程序设计结构&#34;&gt;第 3 章 	Java的基本程序设计结构&lt;/h2&gt;
 &lt;h3 id=&#34;1第一个程序&#34;&gt;1.第一个程序&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;Hello&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
 	&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#dc322f&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;main&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;String&lt;span style=&#34;color:#719e07&#34;&gt;[]&lt;/span&gt; args&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
@@ -255,7 +255,7 @@ System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=
 &lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;for&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#dc322f&#34;&gt;int&lt;/span&gt; i&lt;span style=&#34;color:#719e07&#34;&gt;=&lt;/span&gt;0&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&lt;/span&gt;5&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;++){&lt;/span&gt;
 	num&lt;span style=&#34;color:#719e07&#34;&gt;[&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;]=&lt;/span&gt;i&lt;span style=&#34;color:#719e07&#34;&gt;*&lt;/span&gt;3&lt;span style=&#34;color:#719e07&#34;&gt;;&lt;/span&gt;
 &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;对象与类&#34;&gt;对象与类&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;第-4-章对象与类&#34;&gt;第 4 章	对象与类&lt;/h2&gt;
 &lt;h3 id=&#34;1面向对象&#34;&gt;1.面向对象&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;面向对象编程&lt;/strong&gt;，是一种通过&lt;strong&gt;对象&lt;/strong&gt;的方式，把&lt;strong&gt;现实世界映射到计算机模型&lt;/strong&gt;的一种编程方法。&lt;/li&gt;
@@ -297,7 +297,7 @@ System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=
 &lt;h3 id=&#34;7包&#34;&gt;7.包&lt;/h3&gt;
 &lt;p&gt;使用包来确保类名的唯一性&lt;/p&gt;
 &lt;p&gt;静态导入&lt;/p&gt;
-&lt;h2 id=&#34;继承&#34;&gt;继承&lt;/h2&gt;
+&lt;h2 id=&#34;第-5-章继承&#34;&gt;第 5 章	继承&lt;/h2&gt;
 &lt;h3 id=&#34;1类子类超类&#34;&gt;1.类，子类，超类&lt;/h3&gt;
 &lt;h4 id=&#34;this和super的含义&#34;&gt;&lt;code&gt;this&lt;/code&gt;和&lt;code&gt;super&lt;/code&gt;的含义&lt;/h4&gt;
 &lt;ul&gt;
@@ -391,7 +391,7 @@ System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=
         list&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;add&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;2&lt;span style=&#34;color:#719e07&#34;&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如上面给出的例子，&lt;code&gt;list&lt;/code&gt;添加一个元素的时候，元素类型本该是&lt;code&gt;Integer&lt;/code&gt;类型，可是&lt;code&gt;2&lt;/code&gt;只是个&lt;code&gt;int&lt;/code&gt;类型，不过没关系，&lt;code&gt;list.add(2)&lt;/code&gt;将自动的变成&lt;code&gt;list.add(Integer.valueOf(2))&lt;/code&gt;，这种变换称为&lt;strong&gt;自动装箱&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;同样的，如果想将一个&lt;code&gt;Integer&lt;/code&gt;对象赋给一个&lt;code&gt;int&lt;/code&gt;值时，将会&lt;strong&gt;自动拆箱&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;接口lambda表达式与内部类&#34;&gt;接口，lambda表达式与内部类&lt;/h2&gt;
+&lt;h2 id=&#34;第-6-章接口lambda表达式与内部类&#34;&gt;第 6 章	接口，lambda表达式与内部类&lt;/h2&gt;
 &lt;h3 id=&#34;1接口&#34;&gt;1.接口&lt;/h3&gt;
 &lt;p&gt;在Java程序设计语言中，接口不是类，而是对希望符合这个接口类的一组&lt;strong&gt;需求&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;接口中的所有方法都自动是&lt;code&gt;public&lt;/code&gt;方法（但是实现接口时，必须把方法声明为&lt;code&gt;public&lt;/code&gt;）&lt;/p&gt;
@@ -399,6 +399,16 @@ System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=
 &lt;p&gt;接口绝不会有实例字段&lt;/p&gt;
 &lt;p&gt;接口同样不能被实例化，但是接口变量可以引用&lt;strong&gt;实现了这个接口&lt;/strong&gt;的类对象&lt;/p&gt;
 &lt;p&gt;一个类只能有一个超类，但可以实现&lt;code&gt;多个接口&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2lambda表达式&#34;&gt;2.lambda表达式&lt;/h3&gt;
+&lt;p&gt;先跳过，看的云里雾里的@_@&lt;/p&gt;
+&lt;h3 id=&#34;3内部类&#34;&gt;3.内部类&lt;/h3&gt;
+&lt;p&gt;定义在另一个类中的类&lt;/p&gt;
+&lt;p&gt;原因：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;内部类可以对同一包中的其他类隐藏&lt;/li&gt;
+&lt;li&gt;内部类方法可以访问外部类的私有属性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;未完待续（2021年1月19日）&lt;/p&gt;
 - https://fushaolei.github.io/post/core-java-note/ - </description>
         </item>
     
