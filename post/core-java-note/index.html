@@ -673,7 +673,7 @@ System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span
 <p>接口绝不会有实例字段</p>
 <p>接口同样不能被实例化，但是接口变量可以引用<strong>实现了这个接口</strong>的类对象</p>
 <p>一个类只能有一个超类，但可以实现<code>多个接口</code></p>
-<h3 id="2lambda表达式">2.lambda表达式</h3>
+<h3 id="2lambda表达式">2.<code>lambda</code>表达式</h3>
 <p>先跳过，看的云里雾里的@_@</p>
 <h3 id="3内部类">3.内部类</h3>
 <p>定义在另一个类中的类</p>
@@ -682,7 +682,30 @@ System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span
 <li>内部类可以对同一包中的其他类隐藏</li>
 <li>内部类方法可以访问外部类的私有属性</li>
 </ul>
-<p>未完待续（2021年1月19日）</p>
+<p><strong>常规内部类中可以有<code>static</code>字段（但也都必须是<code>final</code>），但是不能有<code>static</code>方法</strong></p>
+<h4 id="局部内部类">局部内部类</h4>
+<p>在一个方法中局部地定义这个类</p>
+<p>声明局部类时不能有访问说明符（<code>public</code>等）</p>
+<p>对外界完全隐藏</p>
+<h4 id="静态内部类">静态内部类</h4>
+<p>内部类不需要访问外围类对象，就应该使用静态内部类</p>
+<p><strong>静态内部类可以有静态字段和静态方法</strong></p>
+<p>在接口中声明的内部类自动是<code>static</code>和<code>public</code></p>
+<h2 id="第-7-章异常断言和日志">第 7 章	异常，断言和日志</h2>
+<p>派生于<code>Error</code>类或<code>RuntimeException</code>类的所有异常称为<strong>非检查型异常</strong></p>
+<p>所有其他异常称为<strong>检查型异常</strong></p>
+<p>这一章的剩余部分先略过，先不看</p>
+<h2 id="第-8-章泛型程序设计">第 8 章	泛型程序设计</h2>
+<p><strong>泛型方法</strong>：可以在普通类型中定义，也可在泛型类中定义</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">ArrayAlg</span> <span style="color:#719e07">{</span>
+    <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#719e07">&lt;</span>T<span style="color:#719e07">&gt;</span> T <span style="color:#268bd2">getMiddle</span><span style="color:#719e07">(</span>T<span style="color:#719e07">...</span> a<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+        <span style="color:#719e07">return</span> a<span style="color:#719e07">[</span>a<span style="color:#719e07">.</span>length <span style="color:#719e07">/</span> 2<span style="color:#719e07">];</span>
+    <span style="color:#719e07">}</span>
+<span style="color:#719e07">}</span>
+</code></pre></div><p><strong>限定类型</strong>： 限定<code>T</code>只能是限定类型的子类型</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#719e07">&lt;</span>T <span style="color:#268bd2">extends</span> Comparable<span style="color:#719e07">&gt;</span>
+<span style="color:#719e07">&lt;</span>T <span style="color:#268bd2">extends</span> Comparable <span style="color:#719e07">&amp;</span> Serializable<span style="color:#719e07">&gt;</span> <span style="color:#586e75">//甚至是多个限定
+</span></code></pre></div><p><strong>类型擦除</strong>：指的是定义了一个泛型类型，都会自动提供一个相应的原始类型。（原始类型用第一个限定来替换类型变量，如无限定，则替换为<code>Object</code>类型）</p>
 
                     
                     <HR width="100%" id="EOF">

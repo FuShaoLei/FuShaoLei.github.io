@@ -399,7 +399,7 @@ System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=
 &lt;p&gt;接口绝不会有实例字段&lt;/p&gt;
 &lt;p&gt;接口同样不能被实例化，但是接口变量可以引用&lt;strong&gt;实现了这个接口&lt;/strong&gt;的类对象&lt;/p&gt;
 &lt;p&gt;一个类只能有一个超类，但可以实现&lt;code&gt;多个接口&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;2lambda表达式&#34;&gt;2.lambda表达式&lt;/h3&gt;
+&lt;h3 id=&#34;2lambda表达式&#34;&gt;2.&lt;code&gt;lambda&lt;/code&gt;表达式&lt;/h3&gt;
 &lt;p&gt;先跳过，看的云里雾里的@_@&lt;/p&gt;
 &lt;h3 id=&#34;3内部类&#34;&gt;3.内部类&lt;/h3&gt;
 &lt;p&gt;定义在另一个类中的类&lt;/p&gt;
@@ -408,7 +408,30 @@ System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=
 &lt;li&gt;内部类可以对同一包中的其他类隐藏&lt;/li&gt;
 &lt;li&gt;内部类方法可以访问外部类的私有属性&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;未完待续（2021年1月19日）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;常规内部类中可以有&lt;code&gt;static&lt;/code&gt;字段（但也都必须是&lt;code&gt;final&lt;/code&gt;），但是不能有&lt;code&gt;static&lt;/code&gt;方法&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;局部内部类&#34;&gt;局部内部类&lt;/h4&gt;
+&lt;p&gt;在一个方法中局部地定义这个类&lt;/p&gt;
+&lt;p&gt;声明局部类时不能有访问说明符（&lt;code&gt;public&lt;/code&gt;等）&lt;/p&gt;
+&lt;p&gt;对外界完全隐藏&lt;/p&gt;
+&lt;h4 id=&#34;静态内部类&#34;&gt;静态内部类&lt;/h4&gt;
+&lt;p&gt;内部类不需要访问外围类对象，就应该使用静态内部类&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;静态内部类可以有静态字段和静态方法&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在接口中声明的内部类自动是&lt;code&gt;static&lt;/code&gt;和&lt;code&gt;public&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;第-7-章异常断言和日志&#34;&gt;第 7 章	异常，断言和日志&lt;/h2&gt;
+&lt;p&gt;派生于&lt;code&gt;Error&lt;/code&gt;类或&lt;code&gt;RuntimeException&lt;/code&gt;类的所有异常称为&lt;strong&gt;非检查型异常&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;所有其他异常称为&lt;strong&gt;检查型异常&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这一章的剩余部分先略过，先不看&lt;/p&gt;
+&lt;h2 id=&#34;第-8-章泛型程序设计&#34;&gt;第 8 章	泛型程序设计&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;泛型方法&lt;/strong&gt;：可以在普通类型中定义，也可在泛型类中定义&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;ArrayAlg&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#268bd2&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&lt;/span&gt;T&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt; T &lt;span style=&#34;color:#268bd2&#34;&gt;getMiddle&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;(&lt;/span&gt;T&lt;span style=&#34;color:#719e07&#34;&gt;...&lt;/span&gt; a&lt;span style=&#34;color:#719e07&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#719e07&#34;&gt;return&lt;/span&gt; a&lt;span style=&#34;color:#719e07&#34;&gt;[&lt;/span&gt;a&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;length &lt;span style=&#34;color:#719e07&#34;&gt;/&lt;/span&gt; 2&lt;span style=&#34;color:#719e07&#34;&gt;];&lt;/span&gt;
+    &lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;限定类型&lt;/strong&gt;： 限定&lt;code&gt;T&lt;/code&gt;只能是限定类型的子类型&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&lt;/span&gt;T &lt;span style=&#34;color:#268bd2&#34;&gt;extends&lt;/span&gt; Comparable&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&lt;/span&gt;T &lt;span style=&#34;color:#268bd2&#34;&gt;extends&lt;/span&gt; Comparable &lt;span style=&#34;color:#719e07&#34;&gt;&amp;amp;&lt;/span&gt; Serializable&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#586e75&#34;&gt;//甚至是多个限定
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;类型擦除&lt;/strong&gt;：指的是定义了一个泛型类型，都会自动提供一个相应的原始类型。（原始类型用第一个限定来替换类型变量，如无限定，则替换为&lt;code&gt;Object&lt;/code&gt;类型）&lt;/p&gt;
 - https://fushaolei.github.io/post/core-java-note/ - </description>
         </item>
     
@@ -528,8 +551,8 @@ System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=
 &lt;li&gt;&lt;a href=&#34;https://typora.io/&#34;&gt;&lt;code&gt;Typora &lt;/code&gt;&lt;/a&gt;：用于书写markdown&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://git-scm.com/&#34;&gt;&lt;code&gt;Git &lt;/code&gt;&lt;/a&gt;：用于上传代码到远端的工具&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://code.visualstudio.com/&#34;&gt;&lt;code&gt;VScode&lt;/code&gt;&lt;/a&gt; ：用于开发&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.sumatrapdfreader.org/free-pdf-reader.html&#34;&gt;Sumatra PDF阅读器&lt;/a&gt;：一款小巧的pdf阅读器，缺点是颜值太低咯QAQ&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;网址&#34;&gt;网址&lt;/h3&gt;
 - https://fushaolei.github.io/post/reinstall-sys/ - </description>
         </item>
     
