@@ -706,7 +706,10 @@ System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#719e07">&lt;</span>T <span style="color:#268bd2">extends</span> Comparable<span style="color:#719e07">&gt;</span>
 <span style="color:#719e07">&lt;</span>T <span style="color:#268bd2">extends</span> Comparable <span style="color:#719e07">&amp;</span> Serializable<span style="color:#719e07">&gt;</span> <span style="color:#586e75">//甚至是多个限定
 </span></code></pre></div><p><strong>类型擦除</strong>：指的是定义了一个泛型类型，都会自动提供一个相应的原始类型。（原始类型用第一个限定来替换类型变量，如无限定，则替换为<code>Object</code>类型）</p>
-
+<p><strong>通配符（<code>?</code>）</strong>：</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#719e07">&lt;?</span> <span style="color:#268bd2">extends</span> Employee<span style="color:#719e07">&gt;</span> <span style="color:#586e75">//表示参数类型是Employee的子类
+</span><span style="color:#586e75"></span><span style="color:#719e07">&lt;?</span> <span style="color:#268bd2">super</span> Employee<span style="color:#719e07">&gt;</span> <span style="color:#586e75">//表示参数类型是Employee的超类
+</span></code></pre></div>
                     
                     <HR width="100%" id="EOF">
 		    <p style="color:#777;">最后修改于 2021-01-15</p>

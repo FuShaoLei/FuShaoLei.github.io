@@ -432,7 +432,10 @@ System&lt;span style=&#34;color:#719e07&#34;&gt;.&lt;/span&gt;out&lt;span style=
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&lt;/span&gt;T &lt;span style=&#34;color:#268bd2&#34;&gt;extends&lt;/span&gt; Comparable&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;&lt;/span&gt;T &lt;span style=&#34;color:#268bd2&#34;&gt;extends&lt;/span&gt; Comparable &lt;span style=&#34;color:#719e07&#34;&gt;&amp;amp;&lt;/span&gt; Serializable&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#586e75&#34;&gt;//甚至是多个限定
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;类型擦除&lt;/strong&gt;：指的是定义了一个泛型类型，都会自动提供一个相应的原始类型。（原始类型用第一个限定来替换类型变量，如无限定，则替换为&lt;code&gt;Object&lt;/code&gt;类型）&lt;/p&gt;
-- https://fushaolei.github.io/post/core-java-note/ - </description>
+&lt;p&gt;&lt;strong&gt;通配符（&lt;code&gt;?&lt;/code&gt;）&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;?&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;extends&lt;/span&gt; Employee&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#586e75&#34;&gt;//表示参数类型是Employee的子类
+&lt;/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&amp;lt;?&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;super&lt;/span&gt; Employee&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#586e75&#34;&gt;//表示参数类型是Employee的超类
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;- https://fushaolei.github.io/post/core-java-note/ - </description>
         </item>
     
     
