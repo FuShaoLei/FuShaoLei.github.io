@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='这框架是大三下学期的课程了，当时学的时候是用的eclipse的，现在换用IDEA 遇到了许多的坑，特此记录，然后，这也是个从零开始学mybatis的博文，为了期末考试，也为了巩固自己的编码基础，特写此文. 注：编码环境
+ IDEA 2020.1 Mysql 8.0.20 全部都是Maven项目（为方便引入jar包）  外加一个官网指路👉https://mybatis.org/mybatis-3/
+还有一个自己学mybatis时敲过的全部代码：https://github.com/FuShaoLei/FrameDemo/tree/master/Mybatis
+ 第一个项目  分为以下几步
+ 创建一个maven项目 配置包，编译 创建entity类，以及映射器接口和SQL映射XML文件 创建mybatis的 xml配置文件并关联SQL映射XML文件 测试  👴哭了，第一次配置太麻烦了
+ 导入jar包 由于我是maven项目，根据官方的文档 ，只需在pom.xml中添加相应的东西即可
+&amp;lt;dependencies&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.mybatis&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mybatis&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.5.5&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;mysql&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mysql-connector-java&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;8.0.20&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;/dependencies&amp;gt; 从 XML 中构建 SqlSessionFactory  **每个基于 MyBatis 的应用都是以一个 SqlSessionFactory 的实例为核心的。**SqlSessionFactory 的实例可以通过 SqlSessionFactoryBuilder 获得。而 SqlSessionFactoryBuilder 则可以从 XML 配置文件或一个预先配置的 Configuration 实例来构建出 SqlSessionFactory 实例。(官方原话)
+ 由上面可知，要创建一个xml配置文件，为的是构建SqlSessionFactory实例。根据官方给的xml配置文件示例进行修改即可
+&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34; ?&amp;gt; &amp;lt;!DOCTYPE configuration PUBLIC &amp;#34;-//mybatis.'><title>MyBatis笔记</title>
+
+<link rel='canonical' href='https://fushaolei.github.io/post/mybatis-note/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='MyBatis笔记'>
+<meta property='og:description' content='这框架是大三下学期的课程了，当时学的时候是用的eclipse的，现在换用IDEA 遇到了许多的坑，特此记录，然后，这也是个从零开始学mybatis的博文，为了期末考试，也为了巩固自己的编码基础，特写此文. 注：编码环境
+ IDEA 2020.1 Mysql 8.0.20 全部都是Maven项目（为方便引入jar包）  外加一个官网指路👉https://mybatis.org/mybatis-3/
+还有一个自己学mybatis时敲过的全部代码：https://github.com/FuShaoLei/FrameDemo/tree/master/Mybatis
+ 第一个项目  分为以下几步
+ 创建一个maven项目 配置包，编译 创建entity类，以及映射器接口和SQL映射XML文件 创建mybatis的 xml配置文件并关联SQL映射XML文件 测试  👴哭了，第一次配置太麻烦了
+ 导入jar包 由于我是maven项目，根据官方的文档 ，只需在pom.xml中添加相应的东西即可
+&amp;lt;dependencies&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.mybatis&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mybatis&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.5.5&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;mysql&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mysql-connector-java&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;8.0.20&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;/dependencies&amp;gt; 从 XML 中构建 SqlSessionFactory  **每个基于 MyBatis 的应用都是以一个 SqlSessionFactory 的实例为核心的。**SqlSessionFactory 的实例可以通过 SqlSessionFactoryBuilder 获得。而 SqlSessionFactoryBuilder 则可以从 XML 配置文件或一个预先配置的 Configuration 实例来构建出 SqlSessionFactory 实例。(官方原话)
+ 由上面可知，要创建一个xml配置文件，为的是构建SqlSessionFactory实例。根据官方给的xml配置文件示例进行修改即可
+&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34; ?&amp;gt; &amp;lt;!DOCTYPE configuration PUBLIC &amp;#34;-//mybatis.'>
+<meta property='og:url' content='https://fushaolei.github.io/post/mybatis-note/'>
+<meta property='og:site_name' content='任我行'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2020-08-14T14:12:12&#43;00:00'/><meta property='article:modified_time' content='2020-08-14T14:12:12&#43;00:00'/>
+<meta name="twitter:title" content="MyBatis笔记">
+<meta name="twitter:description" content="这框架是大三下学期的课程了，当时学的时候是用的eclipse的，现在换用IDEA 遇到了许多的坑，特此记录，然后，这也是个从零开始学mybatis的博文，为了期末考试，也为了巩固自己的编码基础，特写此文. 注：编码环境
+ IDEA 2020.1 Mysql 8.0.20 全部都是Maven项目（为方便引入jar包）  外加一个官网指路👉https://mybatis.org/mybatis-3/
+还有一个自己学mybatis时敲过的全部代码：https://github.com/FuShaoLei/FrameDemo/tree/master/Mybatis
+ 第一个项目  分为以下几步
+ 创建一个maven项目 配置包，编译 创建entity类，以及映射器接口和SQL映射XML文件 创建mybatis的 xml配置文件并关联SQL映射XML文件 测试  👴哭了，第一次配置太麻烦了
+ 导入jar包 由于我是maven项目，根据官方的文档 ，只需在pom.xml中添加相应的东西即可
+&amp;lt;dependencies&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.mybatis&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mybatis&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.5.5&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;mysql&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mysql-connector-java&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;8.0.20&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;/dependencies&amp;gt; 从 XML 中构建 SqlSessionFactory  **每个基于 MyBatis 的应用都是以一个 SqlSessionFactory 的实例为核心的。**SqlSessionFactory 的实例可以通过 SqlSessionFactoryBuilder 获得。而 SqlSessionFactoryBuilder 则可以从 XML 配置文件或一个预先配置的 Configuration 实例来构建出 SqlSessionFactory 实例。(官方原话)
+ 由上面可知，要创建一个xml配置文件，为的是构建SqlSessionFactory实例。根据官方给的xml配置文件示例进行修改即可
+&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34; ?&amp;gt; &amp;lt;!DOCTYPE configuration PUBLIC &amp;#34;-//mybatis.">
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/fushaolei/img/20200524104925.jpg" />
+
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "auto");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.body.dataset.scheme = 'dark';
+        } else {
+            document.body.dataset.scheme = 'light';
+        }
+    })();
+</script><div class="container main-container flex on-phone--column extended article-page with-toolbar">
+            <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            <figure class="site-avatar">
+                
+                    <img src="https://cdn.jsdelivr.net/gh/fushaolei/img/20200524104925.jpg" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+
+                
+                    <span class="emoji">😘</span>
+                
+            </figure>
+        
+        <h1 class="site-name"><a href="https://fushaolei.github.io/">任我行</a></h1>
+        <h2 class="site-description">一个正在成长的小菜狗</h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>首页</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/about'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/link'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                
+                <span>友链</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='https://travellings.now.sh/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>开往</span>
+            </a>
+        </li>
+        
+
+        
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    <div id="article-toolbar">
+        <a href="https://fushaolei.github.io/" class="back-home">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+            <span>Back</span>
+        </a>
+    </div>
+
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/tech/" >
+                Tech
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/post/mybatis-note/">MyBatis笔记</a>
+    </h2>
+
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">Aug 14, 2020</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+    <blockquote>
+<p>这框架是大三下学期的课程了，当时学的时候是用的eclipse的，现在换用IDEA 遇到了许多的坑，特此记录，然后，这也是个从零开始学mybatis的博文，为了期末考试，也为了巩固自己的编码基础，特写此文.
+<strong>注：编码环境</strong></p>
+<ul>
+<li>IDEA 2020.1</li>
+<li>Mysql 8.0.20</li>
+<li>全部都是Maven项目（为方便引入jar包）</li>
+</ul>
+<p>外加一个官网指路👉https://mybatis.org/mybatis-3/</p>
+<p>还有一个自己学mybatis时敲过的全部代码：https://github.com/FuShaoLei/FrameDemo/tree/master/Mybatis</p>
+</blockquote>
+<h2 id="第一个项目">第一个项目</h2>
+<blockquote>
+<p>分为以下几步</p>
+<ol>
+<li>创建一个maven项目</li>
+<li>配置包，编译</li>
+<li>创建entity类，以及映射器接口和SQL映射XML文件</li>
+<li>创建mybatis的 xml配置文件并关联SQL映射XML文件</li>
+<li>测试</li>
+</ol>
+<p>👴哭了，第一次配置太麻烦了</p>
+</blockquote>
+<h3 id="导入jar包">导入jar包</h3>
+<p>由于我是maven项目，根据官方的文档 ，只需在pom.xml中添加相应的东西即可</p>
+<div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependencies&gt;</span>
+    <span class="nt">&lt;dependency&gt;</span>
+        <span class="nt">&lt;groupId&gt;</span>org.mybatis<span class="nt">&lt;/groupId&gt;</span>
+        <span class="nt">&lt;artifactId&gt;</span>mybatis<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;version&gt;</span>3.5.5<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;/dependency&gt;</span>
+    <span class="nt">&lt;dependency&gt;</span>
+        <span class="nt">&lt;groupId&gt;</span>mysql<span class="nt">&lt;/groupId&gt;</span>
+        <span class="nt">&lt;artifactId&gt;</span>mysql-connector-java<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;version&gt;</span>8.0.20<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;/dependency&gt;</span>
+<span class="nt">&lt;/dependencies&gt;</span>
+</code></pre></div><h3 id="从-xml-中构建-sqlsessionfactory">从 XML 中构建 SqlSessionFactory</h3>
+<blockquote>
+<p>**每个基于 MyBatis 的应用都是以一个 SqlSessionFactory 的实例为核心的。**SqlSessionFactory 的实例可以通过 SqlSessionFactoryBuilder 获得。而 SqlSessionFactoryBuilder 则可以从 XML 配置文件或一个预先配置的 Configuration 实例来构建出 SqlSessionFactory 实例。(官方原话)</p>
+</blockquote>
+<p>由上面可知，要创建一个xml配置文件，为的是构建SqlSessionFactory实例。根据官方给的xml配置文件示例进行修改即可</p>
+<div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; ?&gt;</span>
+<span class="cp">&lt;!DOCTYPE configuration
+</span><span class="cp">        PUBLIC &#34;-//mybatis.org//DTD Config 3.0//EN&#34;
+</span><span class="cp">        &#34;http://mybatis.org/dtd/mybatis-3-config.dtd&#34;&gt;</span>
+<span class="nt">&lt;configuration&gt;</span>
+    <span class="nt">&lt;settings&gt;</span>
+        <span class="nt">&lt;setting</span> <span class="na">name=</span><span class="s">&#34;logImpl&#34;</span> <span class="na">value=</span><span class="s">&#34;STDOUT_LOGGING&#34;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/settings&gt;</span>
+    <span class="nt">&lt;environments</span> <span class="na">default=</span><span class="s">&#34;dev&#34;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;environment</span> <span class="na">id=</span><span class="s">&#34;dev&#34;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;transactionManager</span> <span class="na">type=</span><span class="s">&#34;JDBC&#34;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;dataSource</span> <span class="na">type=</span><span class="s">&#34;POOLED&#34;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&#34;driver&#34;</span> <span class="na">value=</span><span class="s">&#34;com.mysql.cj.jdbc.Driver&#34;</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&#34;url&#34;</span>
+                          <span class="na">value=</span><span class="s">&#34;jdbc:mysql://localhost:3306/mybatis_db?useUnicode=true&amp;amp;characterEncoding=utf-8&amp;amp;serverTimezone=GMT&#34;</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&#34;username&#34;</span> <span class="na">value=</span><span class="s">&#34;root&#34;</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&#34;password&#34;</span> <span class="na">value=</span><span class="s">&#34;18389621811&#34;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;/dataSource&gt;</span>
+        <span class="nt">&lt;/environment&gt;</span>
+    <span class="nt">&lt;/environments&gt;</span>
+
+    <span class="nt">&lt;mappers&gt;</span>
+        <span class="nt">&lt;mapper</span> <span class="na">resource=</span><span class="s">&#34;com/mapper/StudentMapper.xml&#34;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/mappers&gt;</span>
+<span class="nt">&lt;/configuration&gt;</span>
+</code></pre></div><blockquote>
+<p>要注意的是那个name为url的value值，有name为driver的value值，mysql5.0和mysql8.0的配置不太一样！</p>
+</blockquote>
+<p>好了到这里已经编写好了xml文件，接下来是构建SqlSessionFactory，根据老师的教学，编写MybatisUtil</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="cm">/**
+</span><span class="cm"> * 从 XML 中构建 SqlSessionFactory
+</span><span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MybatisUtil</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="n">SqlSessionFactory</span> <span class="n">sessionFactory</span><span class="o">;</span>
+    <span class="kd">static</span> <span class="o">{</span>
+        <span class="n">InputStream</span> <span class="n">is</span><span class="o">;</span>
+        <span class="k">try</span> <span class="o">{</span>
+            <span class="n">is</span><span class="o">=</span> <span class="n">Resources</span><span class="o">.</span><span class="na">getResourceAsStream</span><span class="o">(</span><span class="s">&#34;mybatis-config.xml&#34;</span><span class="o">);</span>
+            <span class="n">sessionFactory</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SqlSessionFactoryBuilder</span><span class="o">().</span><span class="na">build</span><span class="o">(</span><span class="n">is</span><span class="o">);</span>
+        <span class="o">}</span><span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">e</span><span class="o">){</span>
+            <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="n">SqlSession</span> <span class="nf">getSession</span><span class="o">(){</span>
+        <span class="k">return</span> <span class="n">sessionFactory</span><span class="o">.</span><span class="na">openSession</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><p>通过阅读以上代码可知，MybatisUtil这个类暴露了一个<code>getSession()</code>方法供使用这个<code>sessionFactory.openSession();</code>这个是什么意思呢？ 👴也不懂啊 woc</p>
+<h3 id="测试">测试</h3>
+<p>然后就可以进行简单的测试了，具体看代码</p>
+<p>在这里说个坑。</p>
+<blockquote>
+<p>推荐阅读：https://blog.csdn.net/qq_23184291/article/details/78089115</p>
+</blockquote>
+<p>算了 👴不想说了，反正就是要往pom.xml中添加</p>
+<div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;build&gt;</span>
+    <span class="nt">&lt;resources&gt;</span>
+        <span class="nt">&lt;resource&gt;</span>
+            <span class="nt">&lt;directory&gt;</span>src/main/java<span class="nt">&lt;/directory&gt;</span>
+            <span class="nt">&lt;includes&gt;</span>
+                <span class="nt">&lt;include&gt;</span>**/*.xml<span class="nt">&lt;/include&gt;</span>
+            <span class="nt">&lt;/includes&gt;</span>
+        <span class="nt">&lt;/resource&gt;</span>
+    <span class="nt">&lt;/resources&gt;</span>
+<span class="nt">&lt;/build&gt;</span>
+</code></pre></div><h2 id="简单的crud">简单的CRUD</h2>
+<blockquote>
+<p>随便贴些代码，具体还得看项目</p>
+</blockquote>
+<p>映射器接口</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="cm">/**
+</span><span class="cm"> * 实现简单的CRUD
+</span><span class="cm"> */</span>
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">StudentMapper</span> <span class="o">{</span>
+    <span class="c1">//增
+</span><span class="c1"></span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">insertStudentNoReturnId</span><span class="o">(</span><span class="n">Student</span> <span class="n">student</span><span class="o">);</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">insertStudentAndReturnId</span><span class="o">(</span><span class="n">Student</span> <span class="n">student</span><span class="o">);</span>
+    <span class="c1">//删
+</span><span class="c1"></span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">deleteStudent</span><span class="o">(</span><span class="kt">int</span> <span class="n">id</span><span class="o">);</span>
+    <span class="c1">//改
+</span><span class="c1"></span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">updateStudent</span><span class="o">(</span><span class="n">String</span> <span class="n">sex</span><span class="o">,</span><span class="kt">int</span> <span class="n">id</span><span class="o">);</span>
+
+    <span class="c1">//查
+</span><span class="c1"></span>    <span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Student</span><span class="o">&gt;</span> <span class="nf">selectAllStudent</span><span class="o">();</span>
+    <span class="kd">public</span> <span class="n">Student</span> <span class="nf">selectStudent</span><span class="o">(</span><span class="kt">int</span> <span class="n">id</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div><p>SQL映射XML文件</p>
+<div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; ?&gt;</span>
+<span class="cp">&lt;!DOCTYPE mapper
+</span><span class="cp">        PUBLIC &#34;-//mybatis.org//DTD Mapper 3.0//EN&#34;
+</span><span class="cp">        &#34;http://mybatis.org/dtd/mybatis-3-mapper.dtd&#34;&gt;</span>
+<span class="nt">&lt;mapper</span> <span class="na">namespace=</span><span class="s">&#34;com.mapper.StudentMapper&#34;</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!--增--&gt;</span>
+    <span class="nt">&lt;insert</span> <span class="na">id=</span><span class="s">&#34;insertStudentNoReturnId&#34;</span><span class="nt">&gt;</span>
+        insert into students(name,sex) values (#{name},#{sex})
+    <span class="nt">&lt;/insert&gt;</span>
+    <span class="c">&lt;!--如果想在执行插入操作以后返回表中的主键值，需要在映射文件中insert元素中加上如下两个属性--&gt;</span>
+    <span class="nt">&lt;insert</span> <span class="na">id=</span><span class="s">&#34;insertStudentAndReturnId&#34;</span> <span class="na">useGeneratedKeys=</span><span class="s">&#34;true&#34;</span> <span class="na">keyProperty=</span><span class="s">&#34;id&#34;</span><span class="nt">&gt;</span>
+        insert into students(name,sex) values (#{name},#{sex})
+        <span class="nt">&lt;selectKey</span> <span class="na">resultType=</span><span class="s">&#34;int&#34;</span> <span class="na">keyProperty=</span><span class="s">&#34;id&#34;</span> <span class="na">order=</span><span class="s">&#34;AFTER&#34;</span><span class="nt">&gt;</span>
+            select last_insert_id()
+        <span class="nt">&lt;/selectKey&gt;</span>
+    <span class="nt">&lt;/insert&gt;</span>
+    <span class="c">&lt;!--删--&gt;</span>
+    <span class="nt">&lt;delete</span> <span class="na">id=</span><span class="s">&#34;deleteStudent&#34;</span><span class="nt">&gt;</span>
+        delete from students where id=#{id}
+    <span class="nt">&lt;/delete&gt;</span>
+    <span class="c">&lt;!--改--&gt;</span>
+    <span class="c">&lt;!--跟据id修改性别 (￣▽￣)&#34;--&gt;</span>
+    <span class="nt">&lt;update</span> <span class="na">id=</span><span class="s">&#34;updateStudent&#34;</span><span class="nt">&gt;</span>
+        update students set sex=#{arg0} where id=#{arg1}
+    <span class="nt">&lt;/update&gt;</span>
+    <span class="c">&lt;!--查--&gt;</span>
+    <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">&#34;selectAllStudent&#34;</span> <span class="na">resultType=</span><span class="s">&#34;com.entity.Student&#34;</span><span class="nt">&gt;</span>
+        select * from students
+    <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">&#34;selectStudent&#34;</span> <span class="na">resultType=</span><span class="s">&#34;com.entity.Student&#34;</span><span class="nt">&gt;</span>
+        select * from students where id = #{id}
+    <span class="nt">&lt;/select&gt;</span>
+<span class="nt">&lt;/mapper&gt;</span>
+</code></pre></div><p>这里要说明的一点是，那个插入后放回的值不是id，二十它影响的行数，如果要获取id的话
+（除了需要改动映射的xml文件），直接getId即可，如下</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">returnId</span> <span class="o">=</span> <span class="n">studentMapper</span><span class="o">.</span><span class="na">insertStudentAndReturnId</span><span class="o">(</span><span class="n">student2</span><span class="o">);</span>
+<span class="c1">//插入后直接student2.getId()即可
+</span><span class="c1"></span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;影响的行数是：&#34;</span> <span class="o">+</span> <span class="n">returnId</span><span class="o">+</span><span class="s">&#34; 新插入的id是：&#34;</span><span class="o">+</span><span class="n">student2</span><span class="o">.</span><span class="na">getId</span><span class="o">());</span>
+</code></pre></div>
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+</aside>
+
+
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "fushaolei" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2021 任我行
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.0.1">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
+            </main>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"
+    integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin="anonymous"></script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

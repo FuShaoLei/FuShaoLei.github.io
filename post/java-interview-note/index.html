@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=' 面试题以及答案，有些是我经历过的面试题，有些是收集自网上的，水平有限，如果你有更好的答案欢迎和我交流！
+'><title>Java面试必知必会</title>
+
+<link rel='canonical' href='https://fushaolei.github.io/post/java-interview-note/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Java面试必知必会'>
+<meta property='og:description' content=' 面试题以及答案，有些是我经历过的面试题，有些是收集自网上的，水平有限，如果你有更好的答案欢迎和我交流！
+'>
+<meta property='og:url' content='https://fushaolei.github.io/post/java-interview-note/'>
+<meta property='og:site_name' content='任我行'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2020-10-01T12:11:32&#43;00:00'/><meta property='article:modified_time' content='2020-10-01T12:11:32&#43;00:00'/>
+<meta name="twitter:title" content="Java面试必知必会">
+<meta name="twitter:description" content=" 面试题以及答案，有些是我经历过的面试题，有些是收集自网上的，水平有限，如果你有更好的答案欢迎和我交流！
+">
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/fushaolei/img/20200524104925.jpg" />
+
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "auto");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.body.dataset.scheme = 'dark';
+        } else {
+            document.body.dataset.scheme = 'light';
+        }
+    })();
+</script><div class="container main-container flex on-phone--column extended article-page with-toolbar">
+            <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            <figure class="site-avatar">
+                
+                    <img src="https://cdn.jsdelivr.net/gh/fushaolei/img/20200524104925.jpg" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+
+                
+                    <span class="emoji">😘</span>
+                
+            </figure>
+        
+        <h1 class="site-name"><a href="https://fushaolei.github.io/">任我行</a></h1>
+        <h2 class="site-description">一个正在成长的小菜狗</h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>首页</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/about'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/link'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                
+                <span>友链</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='https://travellings.now.sh/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>开往</span>
+            </a>
+        </li>
+        
+
+        
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    <div id="article-toolbar">
+        <a href="https://fushaolei.github.io/" class="back-home">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+            <span>Back</span>
+        </a>
+    </div>
+
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/tech/" >
+                Tech
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/post/java-interview-note/">Java面试必知必会</a>
+    </h2>
+
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">Oct 01, 2020</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+    <blockquote>
+<p>面试题以及答案，有些是我经历过的面试题，有些是收集自网上的，水平有限，如果你有更好的答案欢迎和我交流！</p>
+</blockquote>
+<h2 id="java基础">Java基础</h2>
+<h3 id="一和equal的区别">一，==和equal的区别</h3>
+<p>先讲==</p>
+<ul>
+<li>如果是基本类型话，比较的是值</li>
+<li>如果是引用数据类型的话，比较的是他们在内存中的地址值</li>
+</ul>
+<p>然后是equal</p>
+<ul>
+<li>引用类型：默认情况下，比较的是地址值。</li>
+</ul>
+<h3 id="二stringbufffer与stringbuilder的区别">二，stringbufffer与stringbuilder的区别</h3>
+<ul>
+<li>StringBuffer是<strong>线程安全</strong>的</li>
+<li>StringBuilder是<strong>非线程安全</strong>的（简单来说就是StringBuilder的append方法没有实现同步锁synchronized机制，而StringBuffer实现了，这也是StringBuffer效率比较低的原因）</li>
+</ul>
+<h4 id="扩展什么叫线程安全什么叫线程不安全">扩展：什么叫线程安全，什么叫线程不安全</h4>
+<ul>
+<li><strong>线程安全</strong>
+<ul>
+<li>就是<strong>多线程</strong>访问时，采用了加锁机制，当一个线程访问该类的某个数据时，进行保护，其他线程不能进行访问直到该线程<strong>读/写</strong>完，其他线程才可使用。不会出现数据不一致或者数据污染。</li>
+</ul>
+</li>
+<li><strong>线程不安全</strong>
+<ul>
+<li>就是<strong>不提供数据访问保护</strong>，有可能出现多个线程先后更改数据造成所得到的数据是脏数据。</li>
+</ul>
+</li>
+</ul>
+<h3 id="三listsetmap的区别">三，List，Set，Map的区别</h3>
+<ul>
+<li><code>List</code>的元素以线性方式存储，可以存放重复对象</li>
+<li><code>Set</code>中的对象不按特定(HashCode)的方式排序，并且没有重复对象</li>
+<li><code>Map</code>是一种把键对象和值对象映射的集合，它的每一个元素都包含一个键对象和值对象，是无序的</li>
+</ul>
+<h3 id="四重载和重写有什么区别">四，重载和重写有什么区别</h3>
+<ul>
+<li>重载：是在一个类里面，方法名字相同，<strong>而参数不同，返回类型也可以不同</strong> 的方法</li>
+<li>重写：在子类存在方法与父类的方法的名字相同，<strong>且参数的个数一样，返回值类型也一样</strong>的方法</li>
+</ul>
+<h3 id="五请简述面向对象">五，请简述面向对象</h3>
+<ul>
+<li>封装：把一个<strong>对象的属性私有化，同时提供一些可以被外界访问的属性的方法</strong></li>
+<li>继承：继承是指<strong>当A类继承B类时（关键字<code>extends</code>），A类就自动获得B类的所有功能</strong></li>
+<li>多态：<strong>针对某个类型的方法调用，其真正执行的方法取决于运行时期实际类型的方法</strong> （重载，重写）</li>
+</ul>
+<h3 id="六抽象和接口的区别">六，抽象和接口的区别</h3>
+<ul>
+<li>最大的一个区别：就是<code>interface</code>中只能定义方法，而不能有方法的实现，而在<code>abstract class</code>中则可以既有方法的具体实现，又有 没有具体实现的抽象方法</li>
+<li>一个类只能有一个继承类，但可以实现多个接口</li>
+</ul>
+<h3 id="七arraylist和linkedlist有什么区别">七，ArrayList和LinkedList有什么区别</h3>
+<ul>
+<li><strong>ArrayList</strong>：底层数据结构是<strong>数组</strong>，查询快，增删慢，线程不安全，效率高，可以存储重复元素</li>
+<li><strong>LinkedList</strong> 底层数据结构是<strong>链表</strong>，查询慢，增删快，线程不安全，效率高，可以存储重复元素</li>
+</ul>
+<h4 id="扩展一数组和链表有什么区别">扩展一：数组和链表有什么区别</h4>
+<ul>
+<li>数组是基于索引的数据结构，其中每个元素与索引相关联。</li>
+<li>链表 依赖于引用，其中每个节点由数据和对前一个和下一个元素的引用组成。</li>
+</ul>
+<h3 id="八基本类型">八，基本类型</h3>
+<table>
+<thead>
+<tr>
+<th>基本类型</th>
+<th>位数</th>
+<th>字节</th>
+<th>默认值</th>
+<th>对应的包装器类</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td>32</td>
+<td>4</td>
+<td>0</td>
+<td><code>Integer</code></td>
+</tr>
+<tr>
+<td><code>short</code></td>
+<td>16</td>
+<td>2</td>
+<td>0</td>
+<td><code>Short</code></td>
+</tr>
+<tr>
+<td><code>long</code></td>
+<td>64</td>
+<td>8</td>
+<td>0L</td>
+<td><code>Long</code></td>
+</tr>
+<tr>
+<td><code>byte</code></td>
+<td>8</td>
+<td>1</td>
+<td>0</td>
+<td><code>Byte</code></td>
+</tr>
+<tr>
+<td><code>char</code></td>
+<td>16</td>
+<td>2</td>
+<td>&lsquo;u0000&rsquo;</td>
+<td><code>Character</code></td>
+</tr>
+<tr>
+<td><code>float</code></td>
+<td>32</td>
+<td>4</td>
+<td>0f</td>
+<td><code>Float</code></td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td>64</td>
+<td>8</td>
+<td>0d</td>
+<td><code>Double</code></td>
+</tr>
+<tr>
+<td><code>boolean</code></td>
+<td>1</td>
+<td></td>
+<td>false</td>
+<td><code>Boolean</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注意:</p>
+</blockquote>
+<ol>
+<li>Java 里使用<code>long</code>类型的数据一定要在数值后面加上<strong>L</strong>，否则将作为整型解析</li>
+<li>char a = &lsquo;h&rsquo; char :单引号，String a = &ldquo;hello&rdquo; ：双引号</li>
+</ol>
+<h3 id="九hashset和hashmap的区别">九，HashSet和HashMap的区别</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">HashMap</th>
+<th style="text-align:center">HashSet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">HashMap实现了<strong>Map接口</strong></td>
+<td style="text-align:center">HashSet实现了<strong>Set接口</strong></td>
+</tr>
+<tr>
+<td style="text-align:left">HashMap储存键值对</td>
+<td style="text-align:center">HashSet仅仅存储对象</td>
+</tr>
+<tr>
+<td style="text-align:left">使用put()方法将元素放入map中</td>
+<td style="text-align:center">使用add()方法将元素放入set中</td>
+</tr>
+<tr>
+<td style="text-align:left">HashMap中使用键对象来计算hashcode值</td>
+<td style="text-align:center">HashSet使用成员对象来计算hashcode值，对于两个对象来说hashcode可能相同，所以equals()方法用来判断对象的相等性，如果两个对象不同的话，那么返回false</td>
+</tr>
+<tr>
+<td style="text-align:left">HashMap比较快，因为是使用唯一的键来获取对象</td>
+<td style="text-align:center">HashSet较HashMap来说比较慢</td>
+</tr>
+</tbody>
+</table>
+<h3 id="十如何实现多线程">十，如何实现多线程</h3>
+<ul>
+<li>继承Thread类</li>
+<li>实现Runnable接口</li>
+</ul>
+<h2 id="spring框架">Spring框架</h2>
+<h3 id="一spring-bean-的生命周期">一，Spring Bean 的生命周期</h3>
+<h3 id="二springmvc的工作原理">二，SpringMVC的工作原理</h3>
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+</aside>
+
+
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "fushaolei" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2021 任我行
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.0.1">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
+            </main>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"
+    integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin="anonymous"></script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

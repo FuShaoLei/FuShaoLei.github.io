@@ -9,10 +9,10 @@
     <lastBuildDate>Tue, 12 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://fushaolei.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>常用Git指令</title>
-      <link>https://fushaolei.github.io/post/%E5%B8%B8%E7%94%A8git%E6%8C%87%E4%BB%A4/</link>
+      <link>https://fushaolei.github.io/post/common-git/</link>
       <pubDate>Tue, 12 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://fushaolei.github.io/post/%E5%B8%B8%E7%94%A8git%E6%8C%87%E4%BB%A4/</guid>
+      <guid>https://fushaolei.github.io/post/common-git/</guid>
       <description>指令 说明     git add . 将修改放入暂存区   git status 查看状态   git log 查看commit版本号   git reset --hard 版本号 版本回退，hard强制回退，soft的话会保留修改   git stash 将修改保存起来   git stash save &amp;quot;xxx&amp;quot; 将修改保存起来，并设置这个保存的标签   git stash apply stash@{x} 将修改移出来        懒的写了，待补充。。。</description>
     </item>
     

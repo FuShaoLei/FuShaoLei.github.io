@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='基础语法  简介：Java是由Sun公司于1995年5月推出的面向对象程序设计语言和Java平台的总称
+ 基本结构 public class Hello {//public访问修饰符 class表示这是一个类，Hello则是这个类的类名 	public static void main(String[] args) {//main方法是程序的入口 	System.out.println(&amp;#34;Hello World&amp;#34;);//执行的语句 	} } 注释 /* 块注释 */ //行注释 /** * 文档注释 */ 输入/输出 输入System.in，输出System.out
+输入 需借助Scanner对象读取System.in的输入 示例：
+import java.util.Scanner; public class Hello { public static void main(String[] args) { Scanner input=new Scanner(System.in); System.out.println(&amp;#34;请输入一个数字&amp;#34;); int num=input.nextInt(); System.out.println(&amp;#34;你输入的数字是：&amp;#34;&#43;num); } } 输出 System.out.println(&amp;#34;Hi&amp;#34;);//输出后面有一个换行符 System.out.print(&amp;#34;Hi&amp;#34;); System.out.printf(&amp;#34;Hi&amp;#34;); 基本数据类型    基本类型 位数 字节 默认值 对应的包装器类     int 32 4 0 Integer   short 16 2 0 Short   long 64 8 0L Long   byte 8 1 0 Byte   char 16 2 &amp;lsquo;u0000&amp;rsquo; Character   float 32 4 0f Float   double 64 8 0d Double   boolean 1  false Boolean     注意:'><title>Java基础</title>
+
+<link rel='canonical' href='https://fushaolei.github.io/post/java-base-note/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Java基础'>
+<meta property='og:description' content='基础语法  简介：Java是由Sun公司于1995年5月推出的面向对象程序设计语言和Java平台的总称
+ 基本结构 public class Hello {//public访问修饰符 class表示这是一个类，Hello则是这个类的类名 	public static void main(String[] args) {//main方法是程序的入口 	System.out.println(&amp;#34;Hello World&amp;#34;);//执行的语句 	} } 注释 /* 块注释 */ //行注释 /** * 文档注释 */ 输入/输出 输入System.in，输出System.out
+输入 需借助Scanner对象读取System.in的输入 示例：
+import java.util.Scanner; public class Hello { public static void main(String[] args) { Scanner input=new Scanner(System.in); System.out.println(&amp;#34;请输入一个数字&amp;#34;); int num=input.nextInt(); System.out.println(&amp;#34;你输入的数字是：&amp;#34;&#43;num); } } 输出 System.out.println(&amp;#34;Hi&amp;#34;);//输出后面有一个换行符 System.out.print(&amp;#34;Hi&amp;#34;); System.out.printf(&amp;#34;Hi&amp;#34;); 基本数据类型    基本类型 位数 字节 默认值 对应的包装器类     int 32 4 0 Integer   short 16 2 0 Short   long 64 8 0L Long   byte 8 1 0 Byte   char 16 2 &amp;lsquo;u0000&amp;rsquo; Character   float 32 4 0f Float   double 64 8 0d Double   boolean 1  false Boolean     注意:'>
+<meta property='og:url' content='https://fushaolei.github.io/post/java-base-note/'>
+<meta property='og:site_name' content='任我行'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2020-08-04T11:32:08&#43;00:00'/><meta property='article:modified_time' content='2020-08-04T11:32:08&#43;00:00'/>
+<meta name="twitter:title" content="Java基础">
+<meta name="twitter:description" content="基础语法  简介：Java是由Sun公司于1995年5月推出的面向对象程序设计语言和Java平台的总称
+ 基本结构 public class Hello {//public访问修饰符 class表示这是一个类，Hello则是这个类的类名 	public static void main(String[] args) {//main方法是程序的入口 	System.out.println(&amp;#34;Hello World&amp;#34;);//执行的语句 	} } 注释 /* 块注释 */ //行注释 /** * 文档注释 */ 输入/输出 输入System.in，输出System.out
+输入 需借助Scanner对象读取System.in的输入 示例：
+import java.util.Scanner; public class Hello { public static void main(String[] args) { Scanner input=new Scanner(System.in); System.out.println(&amp;#34;请输入一个数字&amp;#34;); int num=input.nextInt(); System.out.println(&amp;#34;你输入的数字是：&amp;#34;&#43;num); } } 输出 System.out.println(&amp;#34;Hi&amp;#34;);//输出后面有一个换行符 System.out.print(&amp;#34;Hi&amp;#34;); System.out.printf(&amp;#34;Hi&amp;#34;); 基本数据类型    基本类型 位数 字节 默认值 对应的包装器类     int 32 4 0 Integer   short 16 2 0 Short   long 64 8 0L Long   byte 8 1 0 Byte   char 16 2 &amp;lsquo;u0000&amp;rsquo; Character   float 32 4 0f Float   double 64 8 0d Double   boolean 1  false Boolean     注意:">
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/fushaolei/img/20200524104925.jpg" />
+
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "auto");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.body.dataset.scheme = 'dark';
+        } else {
+            document.body.dataset.scheme = 'light';
+        }
+    })();
+</script><div class="container main-container flex on-phone--column extended article-page with-toolbar">
+            <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            <figure class="site-avatar">
+                
+                    <img src="https://cdn.jsdelivr.net/gh/fushaolei/img/20200524104925.jpg" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+
+                
+                    <span class="emoji">😘</span>
+                
+            </figure>
+        
+        <h1 class="site-name"><a href="https://fushaolei.github.io/">任我行</a></h1>
+        <h2 class="site-description">一个正在成长的小菜狗</h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>首页</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/about'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/link'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                
+                <span>友链</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='https://travellings.now.sh/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>开往</span>
+            </a>
+        </li>
+        
+
+        
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    <div id="article-toolbar">
+        <a href="https://fushaolei.github.io/" class="back-home">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+            <span>Back</span>
+        </a>
+    </div>
+
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/tech/" >
+                Tech
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/post/java-base-note/">Java基础</a>
+    </h2>
+
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">Aug 04, 2020</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+    <h2 id="基础语法">基础语法</h2>
+<blockquote>
+<p>简介：Java是由Sun公司于1995年5月推出的面向对象程序设计语言和Java平台的总称</p>
+</blockquote>
+<h3 id="基本结构">基本结构</h3>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Hello</span> <span class="o">{</span><span class="c1">//public访问修饰符 class表示这是一个类，Hello则是这个类的类名
+</span><span class="c1"></span>	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span><span class="c1">//main方法是程序的入口
+</span><span class="c1"></span>		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Hello World&#34;</span><span class="o">);</span><span class="c1">//执行的语句
+</span><span class="c1"></span>	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><h3 id="注释">注释</h3>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="cm">/*
+</span><span class="cm">块注释
+</span><span class="cm"> */</span>
+<span class="c1">//行注释
+</span><span class="c1"></span><span class="cm">/**
+</span><span class="cm"> * 文档注释
+</span><span class="cm"> */</span>
+</code></pre></div><h3 id="输入输出">输入/输出</h3>
+<p>输入<code>System.in</code>，输出<code>System.out</code></p>
+<h4 id="输入">输入</h4>
+<p>需借助<code>Scanner</code>对象读取<code>System.in</code>的输入
+示例：</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Hello</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="n">Scanner</span> <span class="n">input</span><span class="o">=</span><span class="k">new</span> <span class="n">Scanner</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;请输入一个数字&#34;</span><span class="o">);</span>
+		<span class="kt">int</span> <span class="n">num</span><span class="o">=</span><span class="n">input</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;你输入的数字是：&#34;</span><span class="o">+</span><span class="n">num</span><span class="o">);</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre></div><h4 id="输出">输出</h4>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Hi&#34;</span><span class="o">);</span><span class="c1">//输出后面有一个换行符
+</span><span class="c1"></span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">&#34;Hi&#34;</span><span class="o">);</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">&#34;Hi&#34;</span><span class="o">);</span>
+</code></pre></div><h3 id="基本数据类型">基本数据类型</h3>
+<table>
+<thead>
+<tr>
+<th>基本类型</th>
+<th>位数</th>
+<th>字节</th>
+<th>默认值</th>
+<th>对应的包装器类</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td>32</td>
+<td>4</td>
+<td>0</td>
+<td><code>Integer</code></td>
+</tr>
+<tr>
+<td><code>short</code></td>
+<td>16</td>
+<td>2</td>
+<td>0</td>
+<td><code>Short</code></td>
+</tr>
+<tr>
+<td><code>long</code></td>
+<td>64</td>
+<td>8</td>
+<td>0L</td>
+<td><code>Long</code></td>
+</tr>
+<tr>
+<td><code>byte</code></td>
+<td>8</td>
+<td>1</td>
+<td>0</td>
+<td><code>Byte</code></td>
+</tr>
+<tr>
+<td><code>char</code></td>
+<td>16</td>
+<td>2</td>
+<td>&lsquo;u0000&rsquo;</td>
+<td><code>Character</code></td>
+</tr>
+<tr>
+<td><code>float</code></td>
+<td>32</td>
+<td>4</td>
+<td>0f</td>
+<td><code>Float</code></td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td>64</td>
+<td>8</td>
+<td>0d</td>
+<td><code>Double</code></td>
+</tr>
+<tr>
+<td><code>boolean</code></td>
+<td>1</td>
+<td></td>
+<td>false</td>
+<td><code>Boolean</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注意:</p>
+<ol>
+<li>Java 里使用<code>long</code>类型的数据一定要在数值后面加上<strong>L</strong>，否则将作为整型解析</li>
+<li>char a = &lsquo;h&rsquo;char :单引号，String a = &ldquo;hello&rdquo; ：双引号</li>
+</ol>
+</blockquote>
+<h3 id="变量与常量">变量与常量</h3>
+<h4 id="变量">变量</h4>
+<ul>
+<li>可以反复赋值</li>
+<li>定义变量：<code>变量类型</code>+<code>变量名</code>=<code>初始值</code></li>
+</ul>
+<p>示例</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">num</span><span class="o">;</span><span class="c1">//只声明变量，没有初始化
+</span><span class="c1"></span><span class="kt">int</span> <span class="n">nums</span> <span class="o">=</span> <span class="n">3</span><span class="o">;</span><span class="c1">//声明变量并初始化
+</span></code></pre></div><h4 id="常量">常量</h4>
+<ul>
+<li>定义初始化后不可以再次赋值</li>
+<li>定义常量：变量前加一个<code>final</code>修饰符</li>
+</ul>
+<blockquote>
+<p>常量名通常全部大写,例如：<code>final int PINUM=3.14</code></p>
+</blockquote>
+<h3 id="整数运算">整数运算</h3>
+<ul>
+<li>除：<code>/</code></li>
+<li>取余：<code>%</code> (获得余数)</li>
+<li>自增/自减：<code>++</code>/<code>--</code>
+<ul>
+<li><code>++n</code>/<code>--n</code>：先<code>+</code>/<code>-</code> 1再引用<code>n</code></li>
+<li><code>n++</code>/<code>n--</code>：先引用<code>n</code>再<code>+</code>/<code>-</code> 1</li>
+</ul>
+</li>
+<li>移位运算：</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">7</span><span class="o">;</span>       <span class="c1">// 00000000 00000000 00000000 00000111 = 7
+</span><span class="c1"></span><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="n">n</span> <span class="o">&lt;&lt;</span> <span class="n">1</span><span class="o">;</span>  <span class="c1">// 00000000 00000000 00000000 00001110 = 14
+</span><span class="c1"></span><span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">1</span><span class="o">;</span>  <span class="c1">// 00000000 00000000 00000000 00000011 = 3
+</span></code></pre></div><ul>
+<li>位运算
+<ul>
+<li>与：<code>&amp;</code>，都为1结果才为1</li>
+<li>或：<code>|</code>，任意一个为1结果就为1</li>
+<li>非：<code>~</code>，一元运算符，例如<code>~0=1</code> , <code>~1=0</code></li>
+<li>异或：<code>^</code>,两个数不同时为1，例如<code>n=0^1</code>为1</li>
+</ul>
+</li>
+</ul>
+<h4 id="运算优先级从高到低依次是">运算优先级，从高到低依次是</h4>
+<ul>
+<li><code>( )</code></li>
+<li><code>!</code> <code>~</code> <code>++</code> <code>--</code></li>
+<li><code>*</code> <code>/</code> <code>%</code></li>
+<li><code>+</code> <code>-</code></li>
+<li><code>&lt;&lt;</code>  <code>&gt;&gt;</code> <code>&gt;&gt;&gt;</code></li>
+<li><code>&amp;</code></li>
+<li><code>|</code></li>
+<li><code>+=</code> <code>-=</code> <code>*=</code> <code>/=</code></li>
+</ul>
+<h4 id="类型转换">类型转换</h4>
+<ul>
+<li>如参与运算的两个数类型不一致，则结果为较大类型的整型</li>
+<li>强制转换：(有时候会得到错误的结果)</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">12345</span><span class="o">;</span>
+<span class="kt">short</span> <span class="n">s</span> <span class="o">=(</span><span class="kt">short</span><span class="o">)</span><span class="n">i</span><span class="o">;</span>
+</code></pre></div><h3 id="流程控制">流程控制</h3>
+<h4 id="条件分支流程">条件分支流程</h4>
+<p>普通分支语句</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">a</span><span class="o">=</span><span class="n">1</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">b</span><span class="o">=</span><span class="n">2</span><span class="o">;</span>
+<span class="k">if</span><span class="o">(</span><span class="n">a</span><span class="o">&gt;</span><span class="n">b</span><span class="o">){</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;a大于b&#34;</span><span class="o">)</span><span class="c1">//如果a大于b则执行这个语句
+</span><span class="c1"></span><span class="o">}</span><span class="k">else</span> <span class="k">if</span><span class="o">(</span><span class="n">a</span><span class="o">==</span><span class="n">b</span><span class="o">){</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;a等于b&#34;</span><span class="o">)</span><span class="c1">//如果a等于b则执行这个语句
+</span><span class="c1"></span><span class="o">}</span><span class="n">esle</span><span class="o">{</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;a小于b&#34;</span><span class="o">)</span><span class="c1">//否则就a小于b，当以上两种情况都不是的时候执行
+</span><span class="c1"></span><span class="o">}</span>
+</code></pre></div><p>条件多分支语句</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java">		<span class="kt">int</span> <span class="n">g</span><span class="o">=</span><span class="n">2</span><span class="o">;</span>
+		<span class="k">switch</span><span class="o">(</span><span class="n">g</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">case</span> <span class="n">1</span><span class="o">:{</span>
+			<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;是1&#34;</span><span class="o">);</span><span class="c1">//当g是1时执行
+</span><span class="c1"></span>			<span class="k">break</span><span class="o">;</span>
+		<span class="o">}</span>
+		<span class="k">case</span> <span class="n">2</span><span class="o">:{</span>
+			<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;是2&#34;</span><span class="o">);</span><span class="c1">//当g是2时执行
+</span><span class="c1"></span>			<span class="k">break</span><span class="o">;</span>
+		<span class="o">}</span>
+		<span class="k">default</span><span class="o">:{</span>
+			<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;都不是&#34;</span><span class="o">);</span><span class="c1">//当以上情况都不是的时候执行
+</span><span class="c1"></span>			<span class="k">break</span><span class="o">;</span>
+		<span class="o">}</span>
+		<span class="o">}</span>
+</code></pre></div><h4 id="循环流程">循环流程</h4>
+<p>根据条件，反复执行某些操作</p>
+<h5 id="for"><code>for</code></h5>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java">	<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">5</span><span class="o">;</span><span class="n">i</span><span class="o">++)</span> <span class="o">{</span><span class="c1">//int i=0是初始值，i&lt;5是循环条件。i++是循环后更新i的值，然后进入下一轮循环
+</span><span class="c1"></span>		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;循环第&#34;</span><span class="o">+</span><span class="n">i</span><span class="o">+</span><span class="s">&#34;次&#34;</span><span class="o">);</span>
+	<span class="o">}</span>
+</code></pre></div><h5 id="while"><code>while</code></h5>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java">		<span class="kt">int</span> <span class="n">u</span><span class="o">=</span><span class="n">5</span><span class="o">;</span>
+		<span class="k">while</span><span class="o">(</span><span class="n">u</span><span class="o">&gt;</span><span class="n">0</span><span class="o">)</span> <span class="o">{</span><span class="c1">//当为true时执行
+</span><span class="c1"></span>			<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;u=&#34;</span><span class="o">+</span><span class="n">u</span><span class="o">);</span>
+			<span class="o">--</span><span class="n">u</span><span class="o">;</span>
+		<span class="o">}</span>
+</code></pre></div><h5 id="dowhile"><code>do</code>..<code>while</code></h5>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java">		<span class="kt">int</span> <span class="n">p</span><span class="o">=</span><span class="n">0</span><span class="o">;</span>
+		<span class="k">do</span> <span class="o">{</span><span class="c1">//无条件进入循环
+</span><span class="c1"></span>			<span class="o">++</span><span class="n">p</span><span class="o">;</span>
+			<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;p=&#34;</span><span class="o">+</span><span class="n">p</span><span class="o">);</span>
+		<span class="o">}</span><span class="k">while</span><span class="o">(</span><span class="n">p</span><span class="o">&lt;</span><span class="n">5</span><span class="o">);</span><span class="c1">//首先执行一次循环体后进行判断，若为true则继续进行下去
+</span></code></pre></div><h5 id="增强型for">增强型<code>for</code></h5>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="k">for</span> <span class="o">(</span> <span class="n">类型</span> <span class="n">变量名</span><span class="o">:</span> <span class="n">数组或集合</span> <span class="o">)</span> <span class="o">{</span>
+<span class="n">循环体</span>
+<span class="o">}</span>
+
+</code></pre></div><h3 id="数组">数组</h3>
+<p>存储一组具有<strong>相同数据类型</strong>的数据元素的有序集合</p>
+<h4 id="一维数组">一维数组</h4>
+<h5 id="声明">声明</h5>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">num</span><span class="o">[];</span>
+<span class="kt">int</span><span class="o">[]</span> <span class="n">sum</span><span class="o">;</span>
+</code></pre></div><h5 id="初始化">初始化</h5>
+<blockquote>
+<p>未初始化就不能使用</p>
+</blockquote>
+<h6 id="静态初始化">静态初始化</h6>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">num</span><span class="o">[]={</span><span class="n">1</span><span class="o">,</span><span class="n">2</span><span class="o">,</span><span class="n">3</span><span class="o">,</span><span class="n">4</span><span class="o">,</span><span class="n">5</span><span class="o">}</span>
+</code></pre></div><h6 id="动态初始化">动态初始化</h6>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">num</span><span class="o">[]=</span><span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">5</span><span class="o">];</span><span class="c1">//预先分配内存空间
+</span><span class="c1"></span><span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">5</span><span class="o">;</span><span class="n">i</span><span class="o">++){</span>
+	<span class="n">num</span><span class="o">[</span><span class="n">i</span><span class="o">]=</span><span class="n">i</span><span class="o">*</span><span class="n">3</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div><h4 id="二维数组">二维数组</h4>
+<h5 id="声明-1">声明</h5>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kt">int</span><span class="o">[][]</span> <span class="n">array1</span><span class="o">;</span>
+<span class="kt">int</span><span class="o">[]</span> <span class="n">array2</span><span class="o">[];</span>
+<span class="kt">int</span> <span class="n">array3</span><span class="o">[][];</span>
+</code></pre></div><h6 id="静态初始化-1">静态初始化</h6>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">num</span><span class="o">[][]={{</span><span class="n">1</span><span class="o">,</span><span class="n">2</span><span class="o">},{</span><span class="n">3</span><span class="o">,</span><span class="n">4</span><span class="o">}}</span>
+</code></pre></div><h6 id="动态初始化-1">动态初始化</h6>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">num</span><span class="o">[][]=</span><span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">3</span><span class="o">][</span><span class="n">2</span><span class="o">];</span><span class="c1">//预先分配内存空间
+</span><span class="c1"></span><span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">3</span><span class="o">;</span><span class="n">i</span><span class="o">++){</span>
+	<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="n">0</span><span class="o">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">2</span><span class="o">;</span><span class="n">j</span><span class="o">++){</span>
+		<span class="n">num</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]=</span><span class="n">i</span><span class="o">+</span><span class="n">2</span><span class="o">;</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">3</span><span class="o">;</span><span class="n">i</span><span class="o">++){</span>
+	<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;第&#34;</span><span class="o">+</span><span class="n">i</span><span class="o">+</span><span class="s">&#34;个是&#34;</span><span class="o">);</span>
+	<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="n">0</span><span class="o">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">2</span><span class="o">;</span><span class="n">j</span><span class="o">++){</span>
+		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">num</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]);</span> 
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><h2 id="面向对象">面向对象</h2>
+<blockquote>
+<p>面向对象的大三特性就是封装 继承 多态了，下面逐一进行理解
+推荐阅读：<a class="link" href="https://blog.csdn.net/jianyuerensheng/article/details/51602015"  target="_blank" rel="noopener"
+    >面向对象编程三大特性&mdash;&mdash;封装、继承、多态</a></p>
+</blockquote>
+<h3 id="基础知识">基础知识</h3>
+<p><strong>面向对象编程</strong>，是一种通过<strong>对象</strong>的方式，把<strong>现实世界映射到计算机模型</strong>的一种编程方法。</p>
+<ul>
+<li>方法重载：指多个方法的方法名相同，但各自的参数不同；</li>
+</ul>
+<h3 id="封装">封装</h3>
+<ol>
+<li>封装是把一个<strong>对象的属性私有化，同时提供一些可以被外界访问的属性的方法</strong>（例如常见的getter setter方法）</li>
+<li>特性（好处）：
+<ul>
+<li>实现信息隐藏</li>
+<li>隐藏了具体实现细节</li>
+<li>使某些成员设为私有从而提高了安全性和可靠性。</li>
+</ul>
+</li>
+</ol>
+<h3 id="继承">继承</h3>
+<ol>
+<li>继承是指<strong>当A类继承B类时（关键字<code>extends</code>），A类就自动获得B类的所有功能</strong>，体现了代码的复用性。</li>
+<li>但是，<strong>子类无法访问父类的<code>private</code>字段或方法</strong>，这时候只需把<code>private</code>改成<code>protected</code>就好，对于<code>protected</code>而言，它指明就类用户而言，他是<code>private</code>，<strong>但是对于任何继承与此类的子类而言或者其他任何位于同一个包的类而言，他却是可以访问的。</strong></li>
+<li><strong>子类不会继承任何父类的方法</strong>，这是必须用<code>super()</code>（有可能会有参数），来去<strong>调用父类</strong>的构造方法</li>
+<li><strong>向上转型</strong>（这里理解的不是很透彻。。），把一个子类类型安全地变为父类类型的赋值，例如<code>Person p = new Student();//Student/继承自Person，当这样操作时，Student会自动向上转型为Person（这里不太理解。。）</code></li>
+</ol>
+<h3 id="多态">多态</h3>
+<ol>
+<li><strong>针对某个类型的方法调用，其真正执行的方法取决于运行时期实际类型的方法</strong></li>
+</ol>
+<h2 id="抽象类和接口">抽象类和接口</h2>
+<h3 id="抽象类">抽象类</h3>
+<blockquote>
+<p>关键字：<code>abstract</code></p>
+</blockquote>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">//定义一个抽象类
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">Animal</span> <span class="o">{</span>
+    <span class="c1">//可在抽抽象类中定义方法，需要在抽象类中实现
+</span><span class="c1"></span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">sleep</span><span class="o">(){</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;睡觉&#34;</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="c1">//也可定义一个抽象方法，继承这个抽象类必须要实现这个抽象方法
+</span><span class="c1"></span>    <span class="kd">public</span> <span class="kd">abstract</span> <span class="kt">void</span> <span class="nf">eat</span><span class="o">();</span>
+<span class="o">}</span>
+
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">//继承抽象类，则必须实现这个抽象方法
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Cat</span> <span class="kd">extends</span> <span class="n">Animal</span><span class="o">{</span>
+    <span class="c1">//实现抽象类中的方法
+</span><span class="c1"></span>    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">eat</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;我喜欢恰鱼&#34;</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">Animal</span> <span class="n">cat</span><span class="o">=</span><span class="k">new</span> <span class="n">Cat</span><span class="o">();</span>
+        <span class="n">cat</span><span class="o">.</span><span class="na">sleep</span><span class="o">();</span><span class="c1">//可用抽象类中内置的方法
+</span><span class="c1"></span>        <span class="n">cat</span><span class="o">.</span><span class="na">eat</span><span class="o">();</span><span class="c1">//也可用继承抽象类后实现的抽象方法
+</span><span class="c1"></span>    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><h3 id="接口">接口</h3>
+<blockquote>
+<p>关键字 ：<code>interface</code></p>
+</blockquote>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">//定义一个接口类
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Eat</span> <span class="o">{</span>
+    <span class="kt">void</span> <span class="nf">i_can_eat</span><span class="o">();</span><span class="c1">//定义一个接口方法
+</span><span class="c1"></span><span class="o">}</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">//实现这个接口类（非继承）
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Cat</span> <span class="kd">implements</span> <span class="n">Eat</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">i_can_eat</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;我可以吃鱼~&#34;</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">Cat</span> <span class="n">cat</span><span class="o">=</span><span class="k">new</span> <span class="n">Cat</span><span class="o">();</span>
+        <span class="n">cat</span><span class="o">.</span><span class="na">i_can_eat</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><h3 id="两者的区别">两者的区别</h3>
+<ul>
+<li>最大的一个区别：就是<code>interface</code>中只能定义方法，而不能有方法的实现，而在<code>abstract class</code>中则可以既有方法的具体实现，又有没有具体实现的抽象方法</li>
+<li>一个类只能有一个继承类，但可以实现多个接口</li>
+</ul>
+<h2 id="枚举">枚举</h2>
+<blockquote>
+<p>这东西给我的感觉就像一个数组一样，只能用里面定义的东西</p>
+</blockquote>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="o">{</span>
+    <span class="c1">//定义一个枚举类
+</span><span class="c1"></span>    <span class="kd">enum</span> <span class="n">People</span><span class="o">{</span><span class="n">MAN</span><span class="o">,</span><span class="n">WOMAN</span><span class="o">}</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">//枚举就是在一个类里定义几个静态变量，每个变量都是这个类的实例。
+</span><span class="c1"></span>        <span class="n">People</span> <span class="n">people</span><span class="o">=</span><span class="n">People</span><span class="o">.</span><span class="na">MAN</span><span class="o">;</span><span class="c1">//实例化
+</span><span class="c1"></span>        <span class="k">switch</span> <span class="o">(</span><span class="n">people</span><span class="o">){</span>
+            <span class="k">case</span> <span class="n">MAN</span><span class="o">:{</span>
+                <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;我是一个男滴&#34;</span><span class="o">);</span>
+                <span class="k">break</span><span class="o">;</span>
+            <span class="o">}</span>
+            <span class="k">case</span> <span class="n">WOMAN</span><span class="o">:{</span>
+                <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;我是一个女滴&#34;</span><span class="o">);</span>
+                <span class="k">break</span><span class="o">;</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><h2 id="异常">异常</h2>
+<p><img src="https://cdn.jsdelivr.net/gh/fushaolei/img2/20200716223838.jpg" alt=""  /></p>
+<blockquote>
+<p>对于异常java提供了两种常见的解决方式</p>
+</blockquote>
+<ul>
+<li>捕获异常</li>
+<li>抛出异常</li>
+</ul>
+<h3 id="捕获异常">捕获异常</h3>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="k">try</span> <span class="o">{</span>
+    <span class="c1">//接受监视的程序块,在此区域内发生的异常,
+</span><span class="c1"></span><span class="o">}</span><span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">){</span><span class="c1">//要处理的异常种类和标识符
+</span><span class="c1"></span>    <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span><span class="c1">//处理异常
+</span><span class="c1"></span><span class="o">}</span><span class="c1">//如果想捕获多个异常，加入多个catch语句即可
+</span></code></pre></div><blockquote>
+<p>在catch后还可以加入<code>finally</code>语句，这是一个总被执行的代码块，可用来回收资源等</p>
+</blockquote>
+<h3 id="抛出异常">抛出异常</h3>
+<blockquote>
+<p>一个方法不处理它产生的异常,而是沿着调用层次向上传递，由调用它的方法来处理这些异常，叫抛出异常。</p>
+</blockquote>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="k">throw</span> <span class="o">(</span><span class="n">异常对象</span><span class="o">)</span>
+</code></pre></div><h2 id="字符串">字符串</h2>
+<h3 id="基本概念">基本概念</h3>
+<p>定义：n个字符组成的序列</p>
+<h4 id="初始化-1">初始化</h4>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java">        <span class="c1">//两种初始化方法
+</span><span class="c1"></span>        <span class="n">String</span> <span class="n">name1</span><span class="o">=</span><span class="s">&#34;xiaoming&#34;</span><span class="o">;</span>
+        <span class="n">String</span> <span class="n">name2</span><span class="o">=</span><span class="k">new</span> <span class="n">String</span><span class="o">(</span><span class="s">&#34;xiaogang&#34;</span><span class="o">);</span>
+</code></pre></div><blockquote>
+<p>Sting类是final的，无法被继承</p>
+</blockquote>
+<h4 id="字符串类">字符串类</h4>
+<ul>
+<li>字符串常量类</li>
+<li><code>java.lang.String</code></li>
+<li>字符串变量类</li>
+<li><code>java.lang.StringBuffer</code></li>
+<li><code>java.lang.StringBuilder</code></li>
+<li>字符串分隔解析类</li>
+<li><code>java.util.StringTokenizer</code></li>
+</ul>
+<h3 id="stringbuffer"><code>StringBuffer</code></h3>
+<blockquote>
+<p>字符串变量类</p>
+</blockquote>
+<ul>
+<li>StringBuffer对象的值可以修改</li>
+<li>主要用于对字符串做大量修改的操作时</li>
+</ul>
+<h3 id="stringbuider"><code>StringBuider</code></h3>
+<p>StringBuilder类与StringBuffer类的方法调用是一致的。</p>
+<h4 id="区别">区别：</h4>
+<ul>
+<li>StringBuffer是线程安全的</li>
+<li>StringBuilder是非线程安全的</li>
+</ul>
+<h2 id="容器和泛型">容器和泛型</h2>
+<h3 id="容器">容器</h3>
+<blockquote>
+<p>也可叫集合类</p>
+</blockquote>
+<h3 id="list"><code>List</code></h3>
+<blockquote>
+<p>关心的是索引</p>
+</blockquote>
+<ul>
+<li>对象按索引存储</li>
+<li>可以存储重复元素</li>
+<li>具有与索引相关的一套方法</li>
+</ul>
+<p>实现类</p>
+<ul>
+<li><code>ArrayList</code>：动态数组</li>
+<li>快速迭代，少量插入删除</li>
+<li><code>LinkedList</code>：链表</li>
+<li>迭代速度慢，快速插入删除</li>
+</ul>
+<h4 id="set"><code>Set</code></h4>
+<blockquote>
+<p>最简单的几何，关心唯一性</p>
+</blockquote>
+<ul>
+<li>对象无序存储</li>
+<li>不能存储重复的元素</li>
+</ul>
+<p>实现类</p>
+<ul>
+<li><code>HashSet</code></li>
+<li><code>LinkedHashSet</code></li>
+<li><code>TreeSet</code></li>
+</ul>
+<h4 id="queue"><code>Queue</code></h4>
+<blockquote>
+<p>只允许在表的前端（front，队头）进行删除操作，而在表的后端（rear，队尾）进行插入操作</p>
+</blockquote>
+<h4 id="map"><code>Map</code></h4>
+<ul>
+<li>对象以键－值对（key-value）存储</li>
+<li>key不允许有重复，value允许有重复</li>
+</ul>
+<p>实现类</p>
+<ul>
+<li><code>HashMap</code> 非线程安全</li>
+<li><code>TreeMap</code></li>
+<li><code>LinkedHashMap</code></li>
+</ul>
+<h3 id="泛型">泛型</h3>
+<blockquote>
+<p>为了提高代码的重用性，用通用的数据类型Object来实现</p>
+</blockquote>
+<ul>
+<li>Java 中的泛型只接受引用类型作为类型参数。</li>
+</ul>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+</aside>
+
+
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "fushaolei" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2021 任我行
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.0.1">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
+            </main>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"
+    integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin="anonymous"></script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

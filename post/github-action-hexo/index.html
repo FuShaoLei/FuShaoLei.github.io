@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='零，前言 hexo 是一款快速、简洁且高效的静态博客框架，因为它的高可定制性，所以深受各个程序员的喜爱，我也曾一头扎进去研究过，先后开发了white和hiya主题，在使用过程中，也渐渐的发现了一些问题
+情景一，当浏览自己某篇博客时发现了一些错误之后想要马上修改时，将要经历经历一下步骤
+ 在本地的hexo博客文件夹中找到source/_post文件夹 找到那个md文件，打开 修改 然后还要经历hexo clean,hexo g，hexo d  情景二，当想要马上写一篇博客时，需要经历以下步骤
+ 在博客根目录中hexo n &amp;quot;博客名&amp;quot; 点击进入source/_post文件夹中找到这个md文件并打开 写博客 然后还要经历hexo clean,hexo g，hexo d三连  以上过程想必使用过hexo博客的人都经历过吧？不知道你们什么感觉，反正这对于我这种急性子的人来说简直是忍不了(╯‵□′)╯︵┻━┻，而且每次写完博客啊，修改完博客啊之类的，还必须经历过hexo clean,hexo g，hexo d才可以将博客推送到网上去，这玩意我一开始还有耐心，现在就不行了(ノ｀Д)ノ，幸好后来发现了github action可以实现自动部署，再结合自己以往开发hexo主题的经验，做出来了可以在线新建博客或者修改博客的功能（具体可参观我的博客），效果如下：
+新建文章
+修改文章
+就这样，利用github action交给github去做hexo clean,hexo g，hexo d三连，很方便的实现了新建文章和修改文章，即优雅，又方便，那么这又是如何做到的呢？下面我将分为两个部分来说明，第一部分是如何结合github action来实现自动部署，第二部分是如何点击某个按钮后进入新建文章页，和修改文章页。
+一，使用github aciton实现自动部署 1.在github新建一个仓库，专门用来存放源文件，我的源文件如下，供各位参考
+ 什么？你不会要先git clone到本地后，再将源文件复制粘贴到里面再上传吧？这也太low太笨拙了吧哈哈哈，咳咳，如果你不会将本地仓库关联到远程仓库的话，请按下边步骤进行
+ 在hexo源文件夹中 hexo init  进行初始化 关联远程仓库 git remote add origin git@github.com:&amp;lt;你的用户名&amp;gt;/&amp;lt;存放源文件的仓库名&amp;gt;.git git pull --rebase origin master和远程仓库进行一个同步 然后依次进行git add .，git commit -m &amp;quot;init repo&amp;quot;，git push -u origin master ，然后就大功告成啦  上传好的源文件在github中如下'><title>GitHub &#43; Action实现在线写作</title>
+
+<link rel='canonical' href='https://fushaolei.github.io/post/github-action-hexo/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='GitHub &#43; Action实现在线写作'>
+<meta property='og:description' content='零，前言 hexo 是一款快速、简洁且高效的静态博客框架，因为它的高可定制性，所以深受各个程序员的喜爱，我也曾一头扎进去研究过，先后开发了white和hiya主题，在使用过程中，也渐渐的发现了一些问题
+情景一，当浏览自己某篇博客时发现了一些错误之后想要马上修改时，将要经历经历一下步骤
+ 在本地的hexo博客文件夹中找到source/_post文件夹 找到那个md文件，打开 修改 然后还要经历hexo clean,hexo g，hexo d  情景二，当想要马上写一篇博客时，需要经历以下步骤
+ 在博客根目录中hexo n &amp;quot;博客名&amp;quot; 点击进入source/_post文件夹中找到这个md文件并打开 写博客 然后还要经历hexo clean,hexo g，hexo d三连  以上过程想必使用过hexo博客的人都经历过吧？不知道你们什么感觉，反正这对于我这种急性子的人来说简直是忍不了(╯‵□′)╯︵┻━┻，而且每次写完博客啊，修改完博客啊之类的，还必须经历过hexo clean,hexo g，hexo d才可以将博客推送到网上去，这玩意我一开始还有耐心，现在就不行了(ノ｀Д)ノ，幸好后来发现了github action可以实现自动部署，再结合自己以往开发hexo主题的经验，做出来了可以在线新建博客或者修改博客的功能（具体可参观我的博客），效果如下：
+新建文章
+修改文章
+就这样，利用github action交给github去做hexo clean,hexo g，hexo d三连，很方便的实现了新建文章和修改文章，即优雅，又方便，那么这又是如何做到的呢？下面我将分为两个部分来说明，第一部分是如何结合github action来实现自动部署，第二部分是如何点击某个按钮后进入新建文章页，和修改文章页。
+一，使用github aciton实现自动部署 1.在github新建一个仓库，专门用来存放源文件，我的源文件如下，供各位参考
+ 什么？你不会要先git clone到本地后，再将源文件复制粘贴到里面再上传吧？这也太low太笨拙了吧哈哈哈，咳咳，如果你不会将本地仓库关联到远程仓库的话，请按下边步骤进行
+ 在hexo源文件夹中 hexo init  进行初始化 关联远程仓库 git remote add origin git@github.com:&amp;lt;你的用户名&amp;gt;/&amp;lt;存放源文件的仓库名&amp;gt;.git git pull --rebase origin master和远程仓库进行一个同步 然后依次进行git add .，git commit -m &amp;quot;init repo&amp;quot;，git push -u origin master ，然后就大功告成啦  上传好的源文件在github中如下'>
+<meta property='og:url' content='https://fushaolei.github.io/post/github-action-hexo/'>
+<meta property='og:site_name' content='任我行'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2020-09-21T22:01:51&#43;00:00'/><meta property='article:modified_time' content='2020-09-21T22:01:51&#43;00:00'/>
+<meta name="twitter:title" content="GitHub &#43; Action实现在线写作">
+<meta name="twitter:description" content="零，前言 hexo 是一款快速、简洁且高效的静态博客框架，因为它的高可定制性，所以深受各个程序员的喜爱，我也曾一头扎进去研究过，先后开发了white和hiya主题，在使用过程中，也渐渐的发现了一些问题
+情景一，当浏览自己某篇博客时发现了一些错误之后想要马上修改时，将要经历经历一下步骤
+ 在本地的hexo博客文件夹中找到source/_post文件夹 找到那个md文件，打开 修改 然后还要经历hexo clean,hexo g，hexo d  情景二，当想要马上写一篇博客时，需要经历以下步骤
+ 在博客根目录中hexo n &amp;quot;博客名&amp;quot; 点击进入source/_post文件夹中找到这个md文件并打开 写博客 然后还要经历hexo clean,hexo g，hexo d三连  以上过程想必使用过hexo博客的人都经历过吧？不知道你们什么感觉，反正这对于我这种急性子的人来说简直是忍不了(╯‵□′)╯︵┻━┻，而且每次写完博客啊，修改完博客啊之类的，还必须经历过hexo clean,hexo g，hexo d才可以将博客推送到网上去，这玩意我一开始还有耐心，现在就不行了(ノ｀Д)ノ，幸好后来发现了github action可以实现自动部署，再结合自己以往开发hexo主题的经验，做出来了可以在线新建博客或者修改博客的功能（具体可参观我的博客），效果如下：
+新建文章
+修改文章
+就这样，利用github action交给github去做hexo clean,hexo g，hexo d三连，很方便的实现了新建文章和修改文章，即优雅，又方便，那么这又是如何做到的呢？下面我将分为两个部分来说明，第一部分是如何结合github action来实现自动部署，第二部分是如何点击某个按钮后进入新建文章页，和修改文章页。
+一，使用github aciton实现自动部署 1.在github新建一个仓库，专门用来存放源文件，我的源文件如下，供各位参考
+ 什么？你不会要先git clone到本地后，再将源文件复制粘贴到里面再上传吧？这也太low太笨拙了吧哈哈哈，咳咳，如果你不会将本地仓库关联到远程仓库的话，请按下边步骤进行
+ 在hexo源文件夹中 hexo init  进行初始化 关联远程仓库 git remote add origin git@github.com:&amp;lt;你的用户名&amp;gt;/&amp;lt;存放源文件的仓库名&amp;gt;.git git pull --rebase origin master和远程仓库进行一个同步 然后依次进行git add .，git commit -m &amp;quot;init repo&amp;quot;，git push -u origin master ，然后就大功告成啦  上传好的源文件在github中如下">
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/fushaolei/img/20200524104925.jpg" />
+
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "auto");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.body.dataset.scheme = 'dark';
+        } else {
+            document.body.dataset.scheme = 'light';
+        }
+    })();
+</script><div class="container main-container flex on-phone--column extended article-page with-toolbar">
+            <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            <figure class="site-avatar">
+                
+                    <img src="https://cdn.jsdelivr.net/gh/fushaolei/img/20200524104925.jpg" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+
+                
+                    <span class="emoji">😘</span>
+                
+            </figure>
+        
+        <h1 class="site-name"><a href="https://fushaolei.github.io/">任我行</a></h1>
+        <h2 class="site-description">一个正在成长的小菜狗</h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>首页</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/about'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/link'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                
+                <span>友链</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='https://travellings.now.sh/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>开往</span>
+            </a>
+        </li>
+        
+
+        
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    <div id="article-toolbar">
+        <a href="https://fushaolei.github.io/" class="back-home">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+            <span>Back</span>
+        </a>
+    </div>
+
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <h2 class="article-title">
+        <a href="/post/github-action-hexo/">GitHub &#43; Action实现在线写作</a>
+    </h2>
+
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">Sep 21, 2020</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+    <h2 id="零前言">零，前言</h2>
+<p><a class="link" href="https://hexo.io/"  target="_blank" rel="noopener"
+    >hexo</a> 是一款快速、简洁且高效的静态博客框架，因为它的高可定制性，所以深受各个程序员的喜爱，我也曾一头扎进去研究过，先后开发了white和hiya主题，在使用过程中，也渐渐的发现了一些问题</p>
+<p>情景一，当浏览自己某篇博客时发现了一些错误之后想要马上修改时，将要经历经历一下步骤</p>
+<ol>
+<li>在本地的hexo博客文件夹中找到<code>source/_post</code>文件夹</li>
+<li>找到那个md文件，打开</li>
+<li>修改</li>
+<li>然后还要经历<code>hexo clean</code>,<code>hexo g</code>，<code>hexo d</code></li>
+</ol>
+<p>情景二，当想要马上写一篇博客时，需要经历以下步骤</p>
+<ol>
+<li>在博客根目录中<code>hexo n &quot;博客名&quot;</code></li>
+<li>点击进入<code>source/_post</code>文件夹中找到这个md文件并打开</li>
+<li>写博客</li>
+<li>然后还要经历<code>hexo clean</code>,<code>hexo g</code>，<code>hexo d</code>三连</li>
+</ol>
+<p>以上过程想必使用过hexo博客的人都经历过吧？不知道你们什么感觉，反正这对于我这种急性子的人来说简直是忍不了(╯‵□′)╯︵┻━┻，而且每次写完博客啊，修改完博客啊之类的，还必须经历过<code>hexo clean</code>,<code>hexo g</code>，<code>hexo d</code>才可以将博客推送到网上去，这玩意我一开始还有耐心，现在就不行了(ノ｀Д)ノ，幸好后来发现了github action可以实现自动部署，再结合自己以往开发hexo主题的经验，做出来了可以在线新建博客或者修改博客的功能（具体可参观我的<a class="link" href="https://fushaolei.github.io/"  target="_blank" rel="noopener"
+    >博客</a>），效果如下：</p>
+<p>新建文章</p>
+<p><img src="https://cdn.jsdelivr.net/gh/fushaolei/img/20200920220049.gif" alt=""  /></p>
+<p>修改文章</p>
+<p><img src="https://cdn.jsdelivr.net/gh/fushaolei/img/20200920220327.gif" alt=""  /></p>
+<p>就这样，利用github action交给github去做<code>hexo clean</code>,<code>hexo g</code>，<code>hexo d</code>三连，很方便的实现了新建文章和修改文章，即优雅，又方便，那么这又是如何做到的呢？下面我将分为两个部分来说明，第一部分是如何结合github action来实现自动部署，第二部分是如何点击某个按钮后进入新建文章页，和修改文章页。</p>
+<h2 id="一使用github-aciton实现自动部署">一，使用github aciton实现自动部署</h2>
+<p>1.<strong>在github新建一个仓库，专门用来存放源文件</strong>，我的源文件如下，供各位参考</p>
+<p><img src="https://cdn.jsdelivr.net/gh/fushaolei/img/20200920221609.png" alt=""  /></p>
+<blockquote>
+<p>什么？你不会要先git clone到本地后，再将源文件复制粘贴到里面再上传吧？这也太low太笨拙了吧哈哈哈，咳咳，如果你不会将本地仓库关联到远程仓库的话，请按下边步骤进行</p>
+<ol>
+<li>在hexo源文件夹中 <code>hexo init </code> 进行初始化</li>
+<li>关联远程仓库 <code>git remote add origin git@github.com:&lt;你的用户名&gt;/&lt;存放源文件的仓库名&gt;.git</code></li>
+<li><code>git pull --rebase origin master</code>和远程仓库进行一个同步</li>
+<li>然后依次进行<code>git add .</code>，<code>git commit -m &quot;init repo&quot;</code>，<code>git push -u origin master</code> ，然后就大功告成啦</li>
+</ol>
+<p>上传好的源文件在github中如下</p>
+<p><img src="https://cdn.jsdelivr.net/gh/fushaolei/img/20200921000040.png" alt=""  /></p>
+</blockquote>
+<p><strong>注意：如theme文件夹中主题文件中有<code>.git文件</code>，请将其删除在上传</strong></p>
+<p>2.添加私钥和公钥</p>
+<p>在<code>C:\Users\用户名\.ssh</code>中可找到</p>
+<p><img src="https://cdn.jsdelivr.net/gh/fushaolei/img2/20200920221956.png" alt=""  /></p>
+<ul>
+<li>公钥的配置（正常来说应该是配置过了），直接在这个<a class="link" href="https://github.com/settings/keys"  target="_blank" rel="noopener"
+    >链接</a>点击那个new SSH key就可配置</li>
+<li>私钥的配置，点击 <a href="https://github.com/">https://github.com/</a>&lt;你的用户名&gt;/&lt;存放源文件的仓库名&gt;/settings/secrets，新建私钥，注意，这里的名称要填<code>HEXO_DEPLOY_PRIVATE_KEY</code></li>
+</ul>
+<p>3.添加github action</p>
+<p><img src="https://cdn.jsdelivr.net/gh/fushaolei/img/20200920224635.png" alt=""  /></p>
+<p>将以下的代码复制粘贴</p>
+<div class="highlight"><pre class="chroma"><code class="language-yml" data-lang="yml"><span class="c"># workflow name</span><span class="w">
+</span><span class="w"></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Hexo Blog CI</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="c"># master branch on push, auto run</span><span class="w">
+</span><span class="w"></span><span class="nt">on</span><span class="p">:</span><span class="w"> 
+</span><span class="w">  </span><span class="nt">push</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">master</span><span class="w">
+</span><span class="w">      
+</span><span class="w"></span><span class="nt">jobs</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">build</span><span class="p">:</span><span class="w"> 
+</span><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l">ubuntu-latest </span><span class="w">
+</span><span class="w">        
+</span><span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="c"># check it to your workflow can access it</span><span class="w">
+</span><span class="w">    </span><span class="c"># from: https://github.com/actions/checkout</span><span class="w">
+</span><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Checkout Repository master branch</span><span class="w">
+</span><span class="w">      </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/checkout@master </span><span class="w">
+</span><span class="w">      
+</span><span class="w">    </span><span class="c"># from: https://github.com/actions/setup-node  </span><span class="w">
+</span><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Setup Node.js 12.x </span><span class="w">
+</span><span class="w">      </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/setup-node@master</span><span class="w">
+</span><span class="w">      </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span><span class="nt">node-version</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;12.x&#34;</span><span class="w">
+</span><span class="w">    
+</span><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Setup Hexo Dependencies</span><span class="w">
+</span><span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
+</span><span class="sd">        npm install hexo-cli -g
+</span><span class="sd">        npm install</span><span class="w">        
+</span><span class="w">    
+</span><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Setup Deploy Private Key</span><span class="w">
+</span><span class="w">      </span><span class="nt">env</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span><span class="nt">HEXO_DEPLOY_PRIVATE_KEY</span><span class="p">:</span><span class="w"> </span><span class="l">${{ secrets.HEXO_DEPLOY_PRIVATE_KEY }}</span><span class="w">
+</span><span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
+</span><span class="sd">        mkdir -p ~/.ssh/
+</span><span class="sd">        echo &#34;$HEXO_DEPLOY_PRIVATE_KEY&#34; &gt; ~/.ssh/id_rsa 
+</span><span class="sd">        chmod 600 ~/.ssh/id_rsa
+</span><span class="sd">        ssh-keyscan github.com &gt;&gt; ~/.ssh/known_hosts
+</span><span class="sd">        </span><span class="w">        
+</span><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Setup Git Infomation</span><span class="w">
+</span><span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l">| </span><span class="w">
+</span><span class="w">        </span><span class="l">git config --global user.name &#39;&lt;你的用户名&gt;&#39; </span><span class="w">
+</span><span class="w">        </span><span class="l">git config --global user.email &#39;&lt;你登录的email&gt;&#39;</span><span class="w">
+</span><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Deploy Hexo </span><span class="w">
+</span><span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
+</span><span class="sd">        hexo clean
+</span><span class="sd">        hexo generate 
+</span><span class="sd">        hexo deploy</span><span class="w">        
+</span></code></pre></div><p><strong>仔细看这段代码，里边要填上你的用户名和邮箱</strong></p>
+<p>DONE!大功告成啦，到这里可以去测试一下，修改修改某个文章标题，看看是否有效果</p>
+<p>好了，利用GitHub action实现自动部署这一步已经完成了</p>
+<h2 id="二设置点击进入新建或编辑">二，设置点击进入新建或编辑</h2>
+<blockquote>
+<p>如果你是一名hexo主题开发者的话，这一步对你来说就是无比的简单了，如果你是一名小白的话 也没关系，跟着我的步骤，稍微有些耐心，应该不是什么问题</p>
+</blockquote>
+<h3 id="新建文章">新建文章</h3>
+<p>其实完成了第一步，这一步就捉襟见肘了，无非就是点击一个按钮后跳转到<strong>存放hexo源文件仓库的<code>source/_posts</code>路径的新建页面</strong>，比如我，链接就是 <a href="https://github.com/FuShaoLei/auto-blog/new/master/source/_posts">https://github.com/FuShaoLei/auto-blog/new/master/source/_posts</a> ，效果如下</p>
+<p><img src="https://cdn.jsdelivr.net/gh/fushaolei/img/20200920220049.gif" alt=""  /></p>
+<p>放一个模板： <code>https://github.com/&lt;你的用户名&gt;/&lt;存放博客源文件的仓库名&gt;/new/master/source/_posts</code></p>
+<p>就是一个链接而已，你可以把它放在menu中，或者任何你想放的地方</p>
+<h3 id="修改文章">修改文章</h3>
+<p><strong>修改文章本质就是修改源文件中的<code>source/_posts</code>目录下的md文件</strong></p>
+<p>而这个md是与path路径有关的，不过一般文章的path路径都类似<code>/2020/08/09/doc-white/</code>这样的，有一个日期的前缀，而且有一个斜杠，所以一般要经历以下步骤，</p>
+<ol>
+<li>去除这个post的path路径中的数字和斜杠</li>
+<li>加上前缀<code>https://github.com/&lt;你的用户名&gt;/&lt;存放源文件的仓库名&gt;/edit/master/source/_posts/</code></li>
+<li>加上后缀<code>.md</code></li>
+<li>组合成类似<code>https://github.com/&lt;你的用户名&gt;/&lt;存放源文件的仓库名&gt;/edit/master/source/_posts/&lt;文章名&gt;.md</code> 的链接即可</li>
+</ol>
+<p>下面以<code>ejs</code>举例（在<code>post.ejs</code>中）</p>
+<pre><code class="language-ejs" data-lang="ejs">
+&lt;%
+&lt;!-- 这个js函数是抄的，见笑 --&gt;
+function trimNumber(str){
+    return str.replace(/\d+/g,'').replace(/\//g,'');
+}
+%&gt;
+&lt;article id=&quot;post&quot;&gt;
+  &lt;h1&gt;&lt;%= page.title%&gt;&lt;/h1&gt;
+  &lt;%-page.content%&gt;
+  &lt;a  href=&quot;https://github.com/FuShaoLei/auto-blog/edit/master/source/_posts/&lt;%=trimNumber(page.path)%&gt;.md&quot;&gt;Edit Post&lt;/a&gt;
+&lt;/article&gt;
+
+</code></pre><p>好了，之后点击那个新增的超链接后 就会跳转到你想要修改的文章了，效果如下</p>
+<p><img src="https://cdn.jsdelivr.net/gh/fushaolei/img/20200920220327.gif" alt=""  /></p>
+<p>这样一来，当你新增或修改文章并点击那个<code>git commit</code>后，都会出发github action，然后它就会帮你进行hexo三连，也就是自动部署啦</p>
+<h2 id="三后记">三，后记</h2>
+<p>如果你按照以上的步骤一一做完后，你就可以得到一个可以在线编辑的hexo网站了，这其中当然也有些缺点咯，比如下面两个</p>
+<ul>
+<li>修改完后触发编译，需要等待一段时间（其实这属于鸡蛋里挑骨头了hhhh</li>
+<li>想要上传图片的时候有一些不方便</li>
+</ul>
+<h3 id="参考文章">参考文章</h3>
+<ul>
+<li><a class="link" href="https://blog.csdn.net/u012208219/article/details/106883054?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522160061139819195188346686%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=160061139819195188346686&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v3~pc_rank_v3-1-106883054.pc_ecpm_v3_pc_rank_v3&amp;utm_term=github&#43;action&#43;%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2hexo&amp;spm=1018.2118.3001.4187"  target="_blank" rel="noopener"
+    >利用GitHub+Actions自动部署Hexo博客</a></li>
+</ul>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+</aside>
+
+
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "fushaolei" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2021 任我行
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.0.1">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
+            </main>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"
+    integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin="anonymous"></script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

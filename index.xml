@@ -8,10 +8,10 @@
         <language>en-us</language>
         <lastBuildDate>Fri, 15 Jan 2021 13:34:37 +0000</lastBuildDate><atom:link href="https://fushaolei.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>《Java核心技术I》读书笔记</title>
-        <link>https://fushaolei.github.io/post/java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AFi%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
+        <link>https://fushaolei.github.io/post/core-java-note/</link>
         <pubDate>Fri, 15 Jan 2021 13:34:37 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AFi%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid>
+        <guid>https://fushaolei.github.io/post/core-java-note/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;仅仅是边读边记的笔记，因为不像是某些资料，这本书并不是成“体系”的，比较“混乱”，所以，索性都记录到一个md文件里咯（看的比较随意，除了第一第二章外，有些难的或者偏也都直接跳过了😜，看第二遍的时候再补回来吧 maybe。。。）&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -434,10 +434,10 @@
         </item>
         <item>
         <title>fragment has not been attached yet</title>
-        <link>https://fushaolei.github.io/post/fragment-has-not-been-attached-yet/</link>
+        <link>https://fushaolei.github.io/post/android-graduation-design-question/</link>
         <pubDate>Thu, 14 Jan 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/fragment-has-not-been-attached-yet/</guid>
+        <guid>https://fushaolei.github.io/post/android-graduation-design-question/</guid>
         <description>&lt;h2 id=&#34;问题描述&#34;&gt;问题描述&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;recreate&lt;/code&gt;之后&lt;code&gt;fragment has not been attached yet&lt;/code&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;2021-01-14 21:56:18.796 6790-6790/com.fushaolei.project_android W/System.err: java.lang.IllegalStateException: Fragment HomeFragment{e7339f (41a0caf3-9453-416a-afca-b16aff063bfa)} has not been attached yet.
@@ -462,10 +462,10 @@
         </item>
         <item>
         <title>常用Git指令</title>
-        <link>https://fushaolei.github.io/post/%E5%B8%B8%E7%94%A8git%E6%8C%87%E4%BB%A4/</link>
+        <link>https://fushaolei.github.io/post/common-git/</link>
         <pubDate>Tue, 12 Jan 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/%E5%B8%B8%E7%94%A8git%E6%8C%87%E4%BB%A4/</guid>
+        <guid>https://fushaolei.github.io/post/common-git/</guid>
         <description>&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -513,10 +513,10 @@
         </item>
         <item>
         <title>我的常用软件</title>
-        <link>https://fushaolei.github.io/post/%E6%88%91%E7%9A%84%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6/</link>
+        <link>https://fushaolei.github.io/post/reinstall-sys/</link>
         <pubDate>Sun, 10 Jan 2021 12:14:48 +0800</pubDate>
         
-        <guid>https://fushaolei.github.io/post/%E6%88%91%E7%9A%84%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6/</guid>
+        <guid>https://fushaolei.github.io/post/reinstall-sys/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;因为自己会不定时的会重置电脑（因为处女座的一些奇怪特性？），所以写下此文备用&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -581,10 +581,10 @@
         </item>
         <item>
         <title>日常用到IDE小技巧汇总</title>
-        <link>https://fushaolei.github.io/post/%E6%97%A5%E5%B8%B8%E7%94%A8%E5%88%B0ide%E5%B0%8F%E6%8A%80%E5%B7%A7%E6%B1%87%E6%80%BB/</link>
+        <link>https://fushaolei.github.io/post/ide-skill/</link>
         <pubDate>Tue, 05 Jan 2021 10:48:35 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/%E6%97%A5%E5%B8%B8%E7%94%A8%E5%88%B0ide%E5%B0%8F%E6%8A%80%E5%B7%A7%E6%B1%87%E6%80%BB/</guid>
+        <guid>https://fushaolei.github.io/post/ide-skill/</guid>
         <description>&lt;h2 id=&#34;android-studio&#34;&gt;Android Studio&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;ctrl + alt + ←&lt;/code&gt; 返回光标的上一个位置&lt;/li&gt;
@@ -674,10 +674,10 @@
         </item>
         <item>
         <title>在新浪实习是一种什么体验？</title>
-        <link>https://fushaolei.github.io/post/%E5%9C%A8%E6%96%B0%E6%B5%AA%E5%AE%9E%E4%B9%A0%E6%98%AF%E4%B8%80%E7%A7%8D%E4%BB%80%E4%B9%88%E4%BD%93%E9%AA%8C/</link>
+        <link>https://fushaolei.github.io/post/work-in-sina/</link>
         <pubDate>Tue, 15 Dec 2020 15:07:39 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/%E5%9C%A8%E6%96%B0%E6%B5%AA%E5%AE%9E%E4%B9%A0%E6%98%AF%E4%B8%80%E7%A7%8D%E4%BB%80%E4%B9%88%E4%BD%93%E9%AA%8C/</guid>
+        <guid>https://fushaolei.github.io/post/work-in-sina/</guid>
         <description>&lt;h2 id=&#34;初见&#34;&gt;初见&lt;/h2&gt;
 &lt;p&gt;新浪大厦位于海淀区西北旺东路10号院8号楼，旁边就是网易，百度，腾讯等大厂，刚刚来公司的时候看的这个场景还是蛮震撼的。离我租的宿舍大概三四公里这样，然后每天我都要骑那么二三十分钟的车才能到这里（就当作锻炼了）&lt;/p&gt;
 &lt;blockquote&gt;
@@ -736,10 +736,10 @@
         </item>
         <item>
         <title>故宫游记</title>
-        <link>https://fushaolei.github.io/post/%E6%95%85%E5%AE%AB%E6%B8%B8%E8%AE%B0/</link>
+        <link>https://fushaolei.github.io/post/life-travel-in-gugong/</link>
         <pubDate>Mon, 14 Dec 2020 16:53:37 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/%E6%95%85%E5%AE%AB%E6%B8%B8%E8%AE%B0/</guid>
+        <guid>https://fushaolei.github.io/post/life-travel-in-gugong/</guid>
         <description>&lt;p&gt;来北京实习也已经有两个多月了，但是因为这个学期选了三门课 要做网上的作业，然后又因为懒，再加上天气变冷了，虽然一直在北京，但从未出去玩过。眼看下个星期就要离职了，这时不出去玩更待何时？&lt;/p&gt;
 &lt;p&gt;于是，在十二月十二号的早晨十点，我遍乘坐地铁，去往故宫了。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -755,10 +755,10 @@
         </item>
         <item>
         <title>Recyclerview多样式混合布局</title>
-        <link>https://fushaolei.github.io/post/recyclerview%E5%A4%9A%E6%A0%B7%E5%BC%8F%E6%B7%B7%E5%90%88%E5%B8%83%E5%B1%80/</link>
+        <link>https://fushaolei.github.io/post/recyclerview-multi-style/</link>
         <pubDate>Tue, 08 Dec 2020 22:04:03 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/recyclerview%E5%A4%9A%E6%A0%B7%E5%BC%8F%E6%B7%B7%E5%90%88%E5%B8%83%E5%B1%80/</guid>
+        <guid>https://fushaolei.github.io/post/recyclerview-multi-style/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;问题：已知字段中会有一个名为&lt;code&gt;layoutStyle&lt;/code&gt;的字段来控制布局的样式，求解这个recyclerview的adapter如何写&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -858,10 +858,10 @@
         </item>
         <item>
         <title>实习小结</title>
-        <link>https://fushaolei.github.io/post/%E5%AE%9E%E4%B9%A0%E5%B0%8F%E7%BB%93/</link>
+        <link>https://fushaolei.github.io/post/sina-work-knowledge/</link>
         <pubDate>Wed, 25 Nov 2020 00:16:03 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/%E5%AE%9E%E4%B9%A0%E5%B0%8F%E7%BB%93/</guid>
+        <guid>https://fushaolei.github.io/post/sina-work-knowledge/</guid>
         <description>&lt;p&gt;时间飞逝，不知不觉在新浪已经待了快两个月了（android实习），从懵懂无知的小白到懵懂无知的小白，可谓经历颇多啊，下面就来小结下这两个月来的收获&lt;/p&gt;
 &lt;h2 id=&#34;布局性能的优化&#34;&gt;布局性能的优化&lt;/h2&gt;
 &lt;h3 id=&#34;减少层级&#34;&gt;减少层级&lt;/h3&gt;
@@ -917,10 +917,10 @@
         </item>
         <item>
         <title>数据结构：图</title>
-        <link>https://fushaolei.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9B%BE/</link>
+        <link>https://fushaolei.github.io/post/data-structure-map/</link>
         <pubDate>Tue, 24 Nov 2020 22:28:25 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9B%BE/</guid>
+        <guid>https://fushaolei.github.io/post/data-structure-map/</guid>
         <description>&lt;h2 id=&#34;图的定义和术语&#34;&gt;图的定义和术语&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;图 顶点和边的集合&lt;/li&gt;
@@ -946,10 +946,10 @@
         </item>
         <item>
         <title>通过一个小小开源项目获取jetbrains license的经历</title>
-        <link>https://fushaolei.github.io/post/%E9%80%9A%E8%BF%87%E4%B8%80%E4%B8%AA%E5%B0%8F%E5%B0%8F%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E8%8E%B7%E5%8F%96jetbrains-license%E7%9A%84%E7%BB%8F%E5%8E%86/</link>
+        <link>https://fushaolei.github.io/post/get-the-jetbrains-license/</link>
         <pubDate>Sat, 21 Nov 2020 22:41:39 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/%E9%80%9A%E8%BF%87%E4%B8%80%E4%B8%AA%E5%B0%8F%E5%B0%8F%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E8%8E%B7%E5%8F%96jetbrains-license%E7%9A%84%E7%BB%8F%E5%8E%86/</guid>
+        <guid>https://fushaolei.github.io/post/get-the-jetbrains-license/</guid>
         <description>&lt;h2 id=&#34;楔子&#34;&gt;楔子&lt;/h2&gt;
 &lt;p&gt;对于大多数收费软件，例如ps，pr，idea等等之类的，我大多数是白嫖，需要授权码的话就去网上随便一搜，遍地都是，一个不行就换下一个，总之 总是能找到可以用的。诸如此类的事情，数不胜数。甚至老师当时教springboot的时候（要用IDEA），就直接提供破解方法给我们了。。原因呢，很简单，因为我们学生无力购买这花费高昂的软件，然后又想使用，所以不得不用盗版的了，这也是情有可原的，再一个是，白嫖是人类的天性（也不能说是全部），就算软件的价格在可以承担的范围内，仍会有人去用盗版的，为什么，因为有免费的谁会去花钱呐哈哈哈。当然。当时安装IDEA的时候我也用的盗版，软件到期时间直接他吗的干到2089年😂估计那个时候我已经驾鹤西去了。&lt;/p&gt;
 &lt;p&gt;然后不知道怎么，在网上了解到，可以通过学生的身份去申请使用权，可是我没有学生邮箱啊，学校没发。。然后又了解到可以用自己的开源项目去申请，刚好手中有一个hexo主题的项目，hexo-theme-white，这主题也注入了自己好多的心血，今年七月开的坑，虽然已经暂停维护一个月了，不过已有六十多颗star，有将近二十个fork，还收到了4，5个PR，还是蛮开心的，第一次维护项目，那感觉真是奇妙啊，每一次被star都是对我的肯定，然后我还建了个群（不过现在已经解散了，感觉没什么用），大家讨论来讨论去的，还是蛮开心的，因为感觉自己的东西被别人认可了，那感觉真不是一时的开心，而是持续的，有时候可用偷偷躲在被窝里笑的开心哈哈哈&lt;/p&gt;
@@ -975,10 +975,10 @@
         </item>
         <item>
         <title>踩坑日记</title>
-        <link>https://fushaolei.github.io/post/%E8%B8%A9%E5%9D%91%E6%97%A5%E8%AE%B0/</link>
+        <link>https://fushaolei.github.io/post/error-note/</link>
         <pubDate>Thu, 05 Nov 2020 20:23:35 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/%E8%B8%A9%E5%9D%91%E6%97%A5%E8%AE%B0/</guid>
+        <guid>https://fushaolei.github.io/post/error-note/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;一把辛酸泪&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1149,10 +1149,10 @@ mWebView.getSettings().setBlockNetworkImage(false);//解决图片不显示
         </item>
         <item>
         <title>数据结构：树和二叉树</title>
-        <link>https://fushaolei.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%A0%91%E5%92%8C%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
+        <link>https://fushaolei.github.io/post/data-structure-tree/</link>
         <pubDate>Sat, 31 Oct 2020 12:42:57 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%A0%91%E5%92%8C%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
+        <guid>https://fushaolei.github.io/post/data-structure-tree/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;补课&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1292,10 +1292,10 @@ mWebView.getSettings().setBlockNetworkImage(false);//解决图片不显示
         </item>
         <item>
         <title>新浪工作流程小记录</title>
-        <link>https://fushaolei.github.io/post/%E6%96%B0%E6%B5%AA%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B%E5%B0%8F%E8%AE%B0%E5%BD%95/</link>
+        <link>https://fushaolei.github.io/post/sina-workflow/</link>
         <pubDate>Wed, 21 Oct 2020 19:34:54 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/%E6%96%B0%E6%B5%AA%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B%E5%B0%8F%E8%AE%B0%E5%BD%95/</guid>
+        <guid>https://fushaolei.github.io/post/sina-workflow/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;小记录&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1363,10 +1363,10 @@ Subscribers: #订阅者
         </item>
         <item>
         <title>工作中常用到的git指令</title>
-        <link>https://fushaolei.github.io/post/%E5%B7%A5%E4%BD%9C%E4%B8%AD%E5%B8%B8%E7%94%A8%E5%88%B0%E7%9A%84git%E6%8C%87%E4%BB%A4/</link>
+        <link>https://fushaolei.github.io/post/git-in-work/</link>
         <pubDate>Tue, 20 Oct 2020 17:04:26 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/%E5%B7%A5%E4%BD%9C%E4%B8%AD%E5%B8%B8%E7%94%A8%E5%88%B0%E7%9A%84git%E6%8C%87%E4%BB%A4/</guid>
+        <guid>https://fushaolei.github.io/post/git-in-work/</guid>
         <description>&lt;h2 id=&#34;推送分支并建立连接&#34;&gt;推送分支并建立连接&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -1403,10 +1403,10 @@ Subscribers: #订阅者
         </item>
         <item>
         <title>RelativeLayout中的属性</title>
-        <link>https://fushaolei.github.io/post/relativelayout%E4%B8%AD%E7%9A%84%E5%B1%9E%E6%80%A7/</link>
+        <link>https://fushaolei.github.io/post/android-relativelayout-att/</link>
         <pubDate>Sun, 18 Oct 2020 23:13:16 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/relativelayout%E4%B8%AD%E7%9A%84%E5%B1%9E%E6%80%A7/</guid>
+        <guid>https://fushaolei.github.io/post/android-relativelayout-att/</guid>
         <description>&lt;h2 id=&#34;与parent相对的属性&#34;&gt;与parent相对的属性&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -1525,10 +1525,10 @@ Subscribers: #订阅者
         </item>
         <item>
         <title>Android MVP模式笔记</title>
-        <link>https://fushaolei.github.io/post/android-mvp%E6%A8%A1%E5%BC%8F%E7%AC%94%E8%AE%B0/</link>
+        <link>https://fushaolei.github.io/post/android-mvp/</link>
         <pubDate>Tue, 06 Oct 2020 13:34:37 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/android-mvp%E6%A8%A1%E5%BC%8F%E7%AC%94%E8%AE%B0/</guid>
+        <guid>https://fushaolei.github.io/post/android-mvp/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;以前有学过，感觉理解不了，然后又用不到，然后就不了了之了 QAQ，现在因为实习公司的项目有用到，如果不学的话感觉根本看不懂项目（其实学完之后还是看不懂😂），所以就重新学过，顺便记录一下&lt;/p&gt;
 &lt;h3 id=&#34;2021年1月13日补充&#34;&gt;2021年1月13日补充&lt;/h3&gt;
@@ -1691,10 +1691,10 @@ Subscribers: #订阅者
         </item>
         <item>
         <title>Kindle备忘</title>
-        <link>https://fushaolei.github.io/post/kindle%E5%A4%87%E5%BF%98/</link>
+        <link>https://fushaolei.github.io/post/kindle-dont-forget/</link>
         <pubDate>Tue, 06 Oct 2020 13:34:37 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/kindle%E5%A4%87%E5%BF%98/</guid>
+        <guid>https://fushaolei.github.io/post/kindle-dont-forget/</guid>
         <description>&lt;h2 id=&#34;优化设置&#34;&gt;优化设置&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://jingyan.baidu.com/article/19192ad8b0afebe53e5707cc.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -1713,10 +1713,10 @@ Subscribers: #订阅者
         </item>
         <item>
         <title>Kotlin基本要素</title>
-        <link>https://fushaolei.github.io/post/kotlin%E5%9F%BA%E6%9C%AC%E8%A6%81%E7%B4%A0/</link>
+        <link>https://fushaolei.github.io/post/kotlin-note-base-element/</link>
         <pubDate>Tue, 06 Oct 2020 13:34:37 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/kotlin%E5%9F%BA%E6%9C%AC%E8%A6%81%E7%B4%A0/</guid>
+        <guid>https://fushaolei.github.io/post/kotlin-note-base-element/</guid>
         <description>&lt;h2 id=&#34;第一个kotlin程序&#34;&gt;第一个Kotlin程序&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;&lt;span class=&#34;k&#34;&gt;fun&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Array&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//以fun关键字定义函数体
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Hello World&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//省略了分号
@@ -1836,10 +1836,10 @@ Subscribers: #订阅者
         </item>
         <item>
         <title>Java面试必知必会</title>
-        <link>https://fushaolei.github.io/post/java%E9%9D%A2%E8%AF%95%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A/</link>
+        <link>https://fushaolei.github.io/post/java-interview-note/</link>
         <pubDate>Thu, 01 Oct 2020 12:11:32 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/java%E9%9D%A2%E8%AF%95%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A/</guid>
+        <guid>https://fushaolei.github.io/post/java-interview-note/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;面试题以及答案，有些是我经历过的面试题，有些是收集自网上的，水平有限，如果你有更好的答案欢迎和我交流！&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -2023,10 +2023,10 @@ Subscribers: #订阅者
         </item>
         <item>
         <title>Android面试必知必会</title>
-        <link>https://fushaolei.github.io/post/android%E9%9D%A2%E8%AF%95%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A/</link>
+        <link>https://fushaolei.github.io/post/android-interview/</link>
         <pubDate>Thu, 01 Oct 2020 11:56:39 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/android%E9%9D%A2%E8%AF%95%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A/</guid>
+        <guid>https://fushaolei.github.io/post/android-interview/</guid>
         <description>&lt;h2 id=&#34;android&#34;&gt;Android&lt;/h2&gt;
 &lt;h3 id=&#34;一-android的四大组件&#34;&gt;一， Android的四大组件&lt;/h3&gt;
 &lt;blockquote&gt;
@@ -2399,10 +2399,10 @@ Subscribers: #订阅者
         </item>
         <item>
         <title>Git Commit规范化</title>
-        <link>https://fushaolei.github.io/post/git-commit%E8%A7%84%E8%8C%83%E5%8C%96/</link>
+        <link>https://fushaolei.github.io/post/git-commit-note/</link>
         <pubDate>Wed, 30 Sep 2020 22:09:46 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/git-commit%E8%A7%84%E8%8C%83%E5%8C%96/</guid>
+        <guid>https://fushaolei.github.io/post/git-commit-note/</guid>
         <description>&lt;h2 id=&#34;规范化格式&#34;&gt;规范化格式&lt;/h2&gt;
 &lt;p&gt;公式：&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-git&#34; data-lang=&#34;git&#34;&gt;&amp;lt;type&amp;gt;: &amp;lt;subject&amp;gt;
@@ -2447,10 +2447,10 @@ Subscribers: #订阅者
         </item>
         <item>
         <title>新浪之旅</title>
-        <link>https://fushaolei.github.io/post/%E6%96%B0%E6%B5%AA%E4%B9%8B%E6%97%85/</link>
+        <link>https://fushaolei.github.io/post/sina-travel/</link>
         <pubDate>Mon, 28 Sep 2020 22:23:14 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/%E6%96%B0%E6%B5%AA%E4%B9%8B%E6%97%85/</guid>
+        <guid>https://fushaolei.github.io/post/sina-travel/</guid>
         <description>&lt;h2 id=&#34;楔子&#34;&gt;楔子&lt;/h2&gt;
 &lt;p&gt;有心情再写d=====(￣▽￣*)b&lt;/p&gt;
 &lt;h2 id=&#34;初入北京&#34;&gt;初入北京&lt;/h2&gt;
@@ -2504,10 +2504,10 @@ Subscribers: #订阅者
         </item>
         <item>
         <title>GitHub &#43; Action实现在线写作</title>
-        <link>https://fushaolei.github.io/post/github-action%E5%AE%9E%E7%8E%B0%E5%9C%A8%E7%BA%BF%E5%86%99%E4%BD%9C/</link>
+        <link>https://fushaolei.github.io/post/github-action-hexo/</link>
         <pubDate>Mon, 21 Sep 2020 22:01:51 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/github-action%E5%AE%9E%E7%8E%B0%E5%9C%A8%E7%BA%BF%E5%86%99%E4%BD%9C/</guid>
+        <guid>https://fushaolei.github.io/post/github-action-hexo/</guid>
         <description>&lt;h2 id=&#34;零前言&#34;&gt;零，前言&lt;/h2&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://hexo.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;hexo&lt;/a&gt; 是一款快速、简洁且高效的静态博客框架，因为它的高可定制性，所以深受各个程序员的喜爱，我也曾一头扎进去研究过，先后开发了white和hiya主题，在使用过程中，也渐渐的发现了一些问题&lt;/p&gt;
@@ -2659,10 +2659,10 @@ function trimNumber(str){
         </item>
         <item>
         <title>Spring笔记</title>
-        <link>https://fushaolei.github.io/post/spring%E7%AC%94%E8%AE%B0/</link>
+        <link>https://fushaolei.github.io/post/spring-note/</link>
         <pubDate>Mon, 17 Aug 2020 09:27:43 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/spring%E7%AC%94%E8%AE%B0/</guid>
+        <guid>https://fushaolei.github.io/post/spring-note/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;很早之前就听说过这个框架了，但是今年二月份才开始学╰(￣ω￣ｏ)，未必是有些晚了，现在又重新学期，有了之前学idea的经验，应该也不是什么问题&lt;/p&gt;
 &lt;p&gt;贴一个文档：https://docs.spring.io/spring/docs/current/spring-framework-reference/index.html&lt;/p&gt;
@@ -2817,10 +2817,10 @@ Spring容器中（自动分配的id首字母是小写的），当扫描到@Resou
         </item>
         <item>
         <title>面试流程</title>
-        <link>https://fushaolei.github.io/post/%E9%9D%A2%E8%AF%95%E6%B5%81%E7%A8%8B/</link>
+        <link>https://fushaolei.github.io/post/interview-water/</link>
         <pubDate>Fri, 14 Aug 2020 15:57:53 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/%E9%9D%A2%E8%AF%95%E6%B5%81%E7%A8%8B/</guid>
+        <guid>https://fushaolei.github.io/post/interview-water/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;其实说是android面试，其实更多的会问到许多java的知识，毕竟基础嘛，实习生面试还是以基础为主（我猜的），然后这篇文章会融合之前写过的东西，从面试流程开始。此文的面试题有的是我经历过的，有的是网上的一些，为方便复习总结，收集于此。学术不精，如有错误，请与我联系改正 ( •̀ ω •́ )✧&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -2844,10 +2844,10 @@ Spring容器中（自动分配的id首字母是小写的），当扫描到@Resou
         </item>
         <item>
         <title>MyBatis笔记</title>
-        <link>https://fushaolei.github.io/post/mybatis%E7%AC%94%E8%AE%B0/</link>
+        <link>https://fushaolei.github.io/post/mybatis-note/</link>
         <pubDate>Fri, 14 Aug 2020 14:12:12 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/mybatis%E7%AC%94%E8%AE%B0/</guid>
+        <guid>https://fushaolei.github.io/post/mybatis-note/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;这框架是大三下学期的课程了，当时学的时候是用的eclipse的，现在换用IDEA 遇到了许多的坑，特此记录，然后，这也是个从零开始学mybatis的博文，为了期末考试，也为了巩固自己的编码基础，特写此文.
 &lt;strong&gt;注：编码环境&lt;/strong&gt;&lt;/p&gt;
@@ -3019,10 +3019,10 @@ Spring容器中（自动分配的id首字母是小写的），当扫描到@Resou
         </item>
         <item>
         <title>排序算法</title>
-        <link>https://fushaolei.github.io/post/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</link>
+        <link>https://fushaolei.github.io/post/sort-algorithm/</link>
         <pubDate>Thu, 13 Aug 2020 19:34:10 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</guid>
+        <guid>https://fushaolei.github.io/post/sort-algorithm/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;更新中(づ￣ 3￣)づ&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -3194,10 +3194,10 @@ Spring容器中（自动分配的id首字母是小写的），当扫描到@Resou
         </item>
         <item>
         <title>常用设计模式</title>
-        <link>https://fushaolei.github.io/post/%E5%B8%B8%E7%94%A8%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
+        <link>https://fushaolei.github.io/post/usually-use-design-pattern/</link>
         <pubDate>Thu, 13 Aug 2020 19:33:06 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/%E5%B8%B8%E7%94%A8%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</guid>
+        <guid>https://fushaolei.github.io/post/usually-use-design-pattern/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;选修课程笔记&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -3403,10 +3403,10 @@ Spring容器中（自动分配的id首字母是小写的），当扫描到@Resou
         </item>
         <item>
         <title>white主题配置</title>
-        <link>https://fushaolei.github.io/post/white%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</link>
+        <link>https://fushaolei.github.io/post/doc-white-configration/</link>
         <pubDate>Sun, 09 Aug 2020 23:31:29 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/white%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</guid>
+        <guid>https://fushaolei.github.io/post/doc-white-configration/</guid>
         <description>&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img2/20200726101450.png&#34; alt=&#34;&#34;  /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;hi-there&#34;&gt;👋Hi there&lt;/h2&gt;
 &lt;p&gt;欢迎使用本主题 ，&lt;strong&gt;White&lt;/strong&gt; 是一个在个性和极简之间徘徊的主题，（因为作者本身性格就是这样的人，而且搞不好心态爆炸会删库跑路（现已跑路。。。），还请喜欢的各位及时fork🤣&lt;/p&gt;
@@ -3592,10 +3592,10 @@ min设置的是最小深度，max设置的是最大深度，&lt;del&gt;如上面
         </item>
         <item>
         <title>Java基础</title>
-        <link>https://fushaolei.github.io/post/java%E5%9F%BA%E7%A1%80/</link>
+        <link>https://fushaolei.github.io/post/java-base-note/</link>
         <pubDate>Tue, 04 Aug 2020 11:32:08 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/java%E5%9F%BA%E7%A1%80/</guid>
+        <guid>https://fushaolei.github.io/post/java-base-note/</guid>
         <description>&lt;h2 id=&#34;基础语法&#34;&gt;基础语法&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;简介：Java是由Sun公司于1995年5月推出的面向对象程序设计语言和Java平台的总称&lt;/p&gt;
@@ -4089,10 +4089,10 @@ min设置的是最小深度，max设置的是最大深度，&lt;del&gt;如上面
         </item>
         <item>
         <title>Flutter入门</title>
-        <link>https://fushaolei.github.io/post/flutter%E5%85%A5%E9%97%A8/</link>
+        <link>https://fushaolei.github.io/post/flutter-note/</link>
         <pubDate>Fri, 17 Jul 2020 15:23:41 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/flutter%E5%85%A5%E9%97%A8/</guid>
+        <guid>https://fushaolei.github.io/post/flutter-note/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;刚开始知道Flutter还是在19年初的时候（？），在学校举办的google开发者大会上知道的，起初也想试试来着，不过他说要按什么环境，我就觉得麻烦就不弄了，直到上次面试威视的时候面试官提及，才想起有这么一个东西，而这时的我已经经历了好多次重装系统（TAT），已经无所畏惧了，程序员嘛，要敢于折腾&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -4136,10 +4136,10 @@ min设置的是最小深度，max设置的是最大深度，&lt;del&gt;如上面
         </item>
         <item>
         <title>Linux安装</title>
-        <link>https://fushaolei.github.io/post/linux%E5%AE%89%E8%A3%85/</link>
+        <link>https://fushaolei.github.io/post/linux-note/</link>
         <pubDate>Mon, 13 Jul 2020 00:17:53 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/linux%E5%AE%89%E8%A3%85/</guid>
+        <guid>https://fushaolei.github.io/post/linux-note/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;参考资料: &lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/qq_23329167/article/details/83856430?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase&amp;amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.nonecase&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Linux常用命令&lt;/a&gt;&lt;/p&gt;
@@ -4274,10 +4274,10 @@ min设置的是最小深度，max设置的是最大深度，&lt;del&gt;如上面
         </item>
         <item>
         <title>Linux虚拟机安装记录</title>
-        <link>https://fushaolei.github.io/post/linux%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85%E8%AE%B0%E5%BD%95/</link>
+        <link>https://fushaolei.github.io/post/linux-install/</link>
         <pubDate>Thu, 09 Jul 2020 16:53:45 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/linux%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85%E8%AE%B0%E5%BD%95/</guid>
+        <guid>https://fushaolei.github.io/post/linux-install/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;直接开搞&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -4321,10 +4321,10 @@ min设置的是最小深度，max设置的是最大深度，&lt;del&gt;如上面
         </item>
         <item>
         <title>java打造一个图片上传工具</title>
-        <link>https://fushaolei.github.io/post/java%E6%89%93%E9%80%A0%E4%B8%80%E4%B8%AA%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E5%B7%A5%E5%85%B7/</link>
+        <link>https://fushaolei.github.io/post/java-make-a-image-upload/</link>
         <pubDate>Fri, 03 Jul 2020 12:25:29 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/java%E6%89%93%E9%80%A0%E4%B8%80%E4%B8%AA%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E5%B7%A5%E5%85%B7/</guid>
+        <guid>https://fushaolei.github.io/post/java-make-a-image-upload/</guid>
         <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;hexo博客，图片是个问题，有一种方法是，把图片放在一个文件夹里，和hexo一起部署，然后博客里用相对路径来引用，这里有个问题，假如博客迁移，或者想转平台发布的时候，每次图片都要找出来然后再贴上去，这真是大大的不便啊。还好后来发现了picgo这个软件，做为资深白嫖党，&lt;strong&gt;picgo+github+jsDelivr&lt;/strong&gt;的组合做图床简直香的不要不要的，但是，我发现，用picgo来上传图片到github并不稳定，然后我又是个急性子，有时候想上传一张图片的时候给我报错，我特么能忍吗，所以想自己动手丰衣足食&lt;/p&gt;
 &lt;h2 id=&#34;尝试一调用github-api&#34;&gt;尝试一：调用github api&lt;/h2&gt;
@@ -4357,10 +4357,10 @@ min设置的是最小深度，max设置的是最大深度，&lt;del&gt;如上面
         </item>
         <item>
         <title>Listview学习</title>
-        <link>https://fushaolei.github.io/post/listview%E5%AD%A6%E4%B9%A0/</link>
+        <link>https://fushaolei.github.io/post/android-listview/</link>
         <pubDate>Wed, 24 Jun 2020 08:37:32 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/listview%E5%AD%A6%E4%B9%A0/</guid>
+        <guid>https://fushaolei.github.io/post/android-listview/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;Listview是入门android的重点，当初浅尝辄止，不是很理解原理，如今重新来过，希望有不一样的感悟&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -4740,10 +4740,10 @@ min设置的是最小深度，max设置的是最大深度，&lt;del&gt;如上面
         </item>
         <item>
         <title>如何创建一个Hexo博客</title>
-        <link>https://fushaolei.github.io/post/%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAhexo%E5%8D%9A%E5%AE%A2/</link>
+        <link>https://fushaolei.github.io/post/how-to-make-a-hexo-blog/</link>
         <pubDate>Sun, 21 Jun 2020 00:38:22 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAhexo%E5%8D%9A%E5%AE%A2/</guid>
+        <guid>https://fushaolei.github.io/post/how-to-make-a-hexo-blog/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;自用教程&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -4784,10 +4784,10 @@ hexo s  ## 本地预览，在浏览器中输入localhost:4000看看效果
         </item>
         <item>
         <title>IDEA食用小记</title>
-        <link>https://fushaolei.github.io/post/idea%E9%A3%9F%E7%94%A8%E5%B0%8F%E8%AE%B0/</link>
+        <link>https://fushaolei.github.io/post/idea-note/</link>
         <pubDate>Sun, 14 Jun 2020 21:36:08 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/idea%E9%A3%9F%E7%94%A8%E5%B0%8F%E8%AE%B0/</guid>
+        <guid>https://fushaolei.github.io/post/idea-note/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;哭唧唧，用惯了eclispe的我用起idea就像一个傻子，现在记录一下，以免忘记
 所用版本：idea 2020.1&lt;/p&gt;
@@ -4829,10 +4829,10 @@ hexo s  ## 本地预览，在浏览器中输入localhost:4000看看效果
         </item>
         <item>
         <title>Hexo博客备份过程记录</title>
-        <link>https://fushaolei.github.io/post/hexo%E5%8D%9A%E5%AE%A2%E5%A4%87%E4%BB%BD%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/</link>
+        <link>https://fushaolei.github.io/post/hexo-backup/</link>
         <pubDate>Sun, 31 May 2020 11:18:27 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/hexo%E5%8D%9A%E5%AE%A2%E5%A4%87%E4%BB%BD%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/</guid>
+        <guid>https://fushaolei.github.io/post/hexo-backup/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;小记录&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -4874,10 +4874,10 @@ hexo s  ## 本地预览，在浏览器中输入localhost:4000看看效果
         </item>
         <item>
         <title>解决git clone超慢速度的问题</title>
-        <link>https://fushaolei.github.io/post/%E8%A7%A3%E5%86%B3git-clone%E8%B6%85%E6%85%A2%E9%80%9F%E5%BA%A6%E7%9A%84%E9%97%AE%E9%A2%98/</link>
+        <link>https://fushaolei.github.io/post/solve-the-slow-git-clone/</link>
         <pubDate>Thu, 28 May 2020 20:26:06 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/%E8%A7%A3%E5%86%B3git-clone%E8%B6%85%E6%85%A2%E9%80%9F%E5%BA%A6%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
+        <guid>https://fushaolei.github.io/post/solve-the-slow-git-clone/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;思路是用码云进行clone后修改配置文件以对应到github上&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -4907,10 +4907,10 @@ hexo s  ## 本地预览，在浏览器中输入localhost:4000看看效果
         </item>
         <item>
         <title>Android制作双人联机游戏</title>
-        <link>https://fushaolei.github.io/post/android%E5%88%B6%E4%BD%9C%E5%8F%8C%E4%BA%BA%E8%81%94%E6%9C%BA%E6%B8%B8%E6%88%8F/</link>
+        <link>https://fushaolei.github.io/post/android-make-double-game/</link>
         <pubDate>Wed, 20 May 2020 14:25:02 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/android%E5%88%B6%E4%BD%9C%E5%8F%8C%E4%BA%BA%E8%81%94%E6%9C%BA%E6%B8%B8%E6%88%8F/</guid>
+        <guid>https://fushaolei.github.io/post/android-make-double-game/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;项目有涉及到双人联机游戏的机制，这之前都没有做过类似的东西，现在什么都是从零开始，故开此文记录&lt;/p&gt;
 &lt;p&gt;（陈年往事，虽没有什么参考价值，没多大用处，但我就是想留着这篇文章）&lt;/p&gt;
@@ -5097,10 +5097,10 @@ hexo s  ## 本地预览，在浏览器中输入localhost:4000看看效果
         </item>
         <item>
         <title>flex布局笔记</title>
-        <link>https://fushaolei.github.io/post/flex%E5%B8%83%E5%B1%80%E7%AC%94%E8%AE%B0/</link>
+        <link>https://fushaolei.github.io/post/html-flex/</link>
         <pubDate>Sat, 25 Apr 2020 18:10:39 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/flex%E5%B8%83%E5%B1%80%E7%AC%94%E8%AE%B0/</guid>
+        <guid>https://fushaolei.github.io/post/html-flex/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;因为要仿照一个网站做一款hexo主题，发现里边有很多flex布局，自己照葫芦画瓢很是费劲，不如系统学过，反正也不是很费时间。。下面开始&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -5185,10 +5185,10 @@ hexo s  ## 本地预览，在浏览器中输入localhost:4000看看效果
         </item>
         <item>
         <title>Git学习笔记</title>
-        <link>https://fushaolei.github.io/post/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+        <link>https://fushaolei.github.io/post/git-note/</link>
         <pubDate>Mon, 03 Feb 2020 10:55:36 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+        <guid>https://fushaolei.github.io/post/git-note/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;使用Git是程序员必备的一个技能，虽然以前有跟着老师学过，但是一知半解，所以重新学过，本文记录了我学习Git的全过程&lt;/p&gt;
 &lt;/blockquote&gt;
