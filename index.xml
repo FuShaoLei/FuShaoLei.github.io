@@ -541,7 +541,9 @@
 &lt;h3 id=&#34;软件&#34;&gt;软件&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.huorong.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;火绒&lt;/a&gt;&lt;/li&gt;
+    &gt;火绒&lt;/a&gt;：用来杀毒的，虽然可能没什么毒。。&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.xunlei.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;迅雷&lt;/a&gt;：对 你没看错，就是迅雷，虽然他广告多，但是有时在浏览器上下不动的东西在迅雷上会莫名的下的很快&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.jetbrains.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;code&gt;JetBrains系列产品&lt;/code&gt;&lt;/a&gt;
 &lt;ul&gt;
@@ -549,18 +551,35 @@
     &gt;IDEA&lt;/a&gt;：&lt;a class=&#34;link&#34; href=&#34;https://fushaolei.github.io/post/idea-note/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;配置maven&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.jetbrains.com/datagrip/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;DataGrip&lt;/a&gt;&lt;/li&gt;
+    &gt;DataGrip&lt;/a&gt;：数据库管理&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Android Studio&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/studio&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;Android Studio&lt;/code&gt;&lt;/a&gt;：Android 开发者必用软件&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://typora.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;code&gt;Typora &lt;/code&gt;&lt;/a&gt;：用于书写markdown&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://git-scm.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;code&gt;Git &lt;/code&gt;&lt;/a&gt;：用于上传代码到远端的工具&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://code.visualstudio.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;&lt;code&gt;VScode&lt;/code&gt;&lt;/a&gt; ：用于开发&lt;/li&gt;
+    &gt;&lt;code&gt;VScode&lt;/code&gt;&lt;/a&gt; ：用于开发，几乎什么格式的都能打开，再加上各种各样的神奇插件，这个软件简直无敌&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.sumatrapdfreader.org/free-pdf-reader.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Sumatra PDF阅读器&lt;/a&gt;：一款小巧的pdf阅读器，缺点是颜值太低咯QAQ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;网址&#34;&gt;网址&lt;/h3&gt;
+&lt;h4 id=&#34;kindle相关&#34;&gt;kindle相关&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;优化设置&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://jingyan.baidu.com/article/19192ad8b0afebe53e5707cc.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;怎么去掉Kindle的广告&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;书籍资源&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.amazon.cn/Kindle%E7%94%B5%E5%AD%90%E4%B9%A6/b?ie=UTF8&amp;amp;node=116169071&amp;amp;ref_=sa_menu_top_ebook&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;亚马逊官网&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blah.me/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Blah书城&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.jiumodiary.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;鸠摩搜索&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         </item>
@@ -1686,28 +1705,6 @@ Subscribers: #订阅者
     &gt;面向接口编程思想(的好处)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/34026164&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Java的向上转型与向下转型&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        </item>
-        <item>
-        <title>Kindle备忘</title>
-        <link>https://fushaolei.github.io/post/kindle-dont-forget/</link>
-        <pubDate>Tue, 06 Oct 2020 13:34:37 +0000</pubDate>
-        
-        <guid>https://fushaolei.github.io/post/kindle-dont-forget/</guid>
-        <description>&lt;h2 id=&#34;优化设置&#34;&gt;优化设置&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://jingyan.baidu.com/article/19192ad8b0afebe53e5707cc.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;怎么去掉Kindle的广告&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;书籍资源&#34;&gt;书籍资源&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.amazon.cn/Kindle%E7%94%B5%E5%AD%90%E4%B9%A6/b?ie=UTF8&amp;amp;node=116169071&amp;amp;ref_=sa_menu_top_ebook&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;亚马逊官网&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://blah.me/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Blah书城&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.jiumodiary.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;鸠摩搜索&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         </item>

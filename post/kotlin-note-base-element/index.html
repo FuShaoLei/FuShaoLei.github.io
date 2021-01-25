@@ -13,7 +13,7 @@ fun main(args: Array&amp;lt;String&amp;gt;) { val name = &amp;#34;Kotlin&amp;#34
 fun main(args: Array&amp;lt;String&amp;gt;) { val name = &amp;#34;Kotlin&amp;#34; var a = 2 var b = 3 println(&amp;#34;Hello $name&amp;#34;) println(&amp;#34;Hello ${if(a&amp;gt;b) &amp;#34;a大于b&amp;#34; else &amp;#34;a小于b&amp;#34;}&amp;#34;) println(&amp;#34;Hello ${if(a&amp;gt;b) a else b}&amp;#34;)//甚至可以注入变量，这也太方便了 } //输出 Hello Kotlin Hello a小于b Hello 3 类和属性 声明一个类'>
 <meta property='og:url' content='https://fushaolei.github.io/post/kotlin-note-base-element/'>
 <meta property='og:site_name' content='任我行'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2020-10-06T13:34:37&#43;00:00'/><meta property='article:modified_time' content='2020-10-06T13:34:37&#43;00:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Kotlin' /><meta property='article:tag' content='Android' /><meta property='article:published_time' content='2020-10-06T13:34:37&#43;00:00'/><meta property='article:modified_time' content='2020-10-06T13:34:37&#43;00:00'/>
 <meta name="twitter:title" content="Kotlin基本要素">
 <meta name="twitter:description" content="第一个Kotlin程序 fun main(args: Array&amp;lt;String&amp;gt;) {//以fun关键字定义函数体  println(&amp;#34;Hello World&amp;#34;)//省略了分号  println(&amp;#34;较大的是：&amp;#34;&#43;max(2,1)) println(&amp;#34;较大的是：&amp;#34;&#43;max2(4,3)) } fun max(a:Int,b:Int): Int{//先写参数名，再写参数类型  return if(a&amp;gt;b) a else b//在kotlin中，if是表达式，这里类似java中的三元运算符 } //另一种写法： fun max2(a:Int,b:Int):Int = if (a&amp;gt;b) a else b //这里max和max2的:Int可以省略，编译器会帮你分析表达式体函数，并把它的类型作为函数返回类型 变量 关键字
  val：不可变引用（相当于Java的加上了final关键字） var 可变引用  val a = 3//编译器会把int类型作为变量a的类型  var b = &amp;#34;gulugulu&amp;#34;//b的类型是String  var c:Char c = &amp;#39;x&amp;#39; 字符串模板 可用$或${}来注入到字符串中
@@ -167,14 +167,6 @@ fun main(args: Array&amp;lt;String&amp;gt;) { val name = &amp;#34;Kotlin&amp;#34
 
     <div class="article-details">
     
-    <header class="article-category">
-        
-            <a href="/categories/tech/" >
-                Tech
-            </a>
-        
-    </header>
-    
 
     <h2 class="article-title">
         <a href="/post/kotlin-note-base-element/">Kotlin基本要素</a>
@@ -315,6 +307,14 @@ fun main(args: Array&amp;lt;String&amp;gt;) { val name = &amp;#34;Kotlin&amp;#34
 
     <footer class="article-footer">
     
+    <section class="article-tags">
+        
+            <a href="/tags/kotlin/">Kotlin</a>
+        
+            <a href="/tags/android/">Android</a>
+        
+    </section>
+
 
     
     <section class="article-copyright">
