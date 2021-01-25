@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Life on Sorryfu Blog.</title>
+    <title>Life on 任我行</title>
     <link>https://fushaolei.github.io/categories/life/</link>
-    <description>Recent content in Life on Sorryfu Blog.</description>
+    <description>Recent content in Life on 任我行</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
+    <language>en-us</language>
     <lastBuildDate>Tue, 15 Dec 2020 15:07:39 +0000</lastBuildDate><atom:link href="https://fushaolei.github.io/categories/life/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在新浪实习是一种什么体验？</title>
-      <link>https://fushaolei.github.io/post/work-in-sina/</link>
+      <link>https://fushaolei.github.io/post/%E5%9C%A8%E6%96%B0%E6%B5%AA%E5%AE%9E%E4%B9%A0%E6%98%AF%E4%B8%80%E7%A7%8D%E4%BB%80%E4%B9%88%E4%BD%93%E9%AA%8C/</link>
       <pubDate>Tue, 15 Dec 2020 15:07:39 +0000</pubDate>
       
-      <guid>https://fushaolei.github.io/post/work-in-sina/</guid>
+      <guid>https://fushaolei.github.io/post/%E5%9C%A8%E6%96%B0%E6%B5%AA%E5%AE%9E%E4%B9%A0%E6%98%AF%E4%B8%80%E7%A7%8D%E4%BB%80%E4%B9%88%E4%BD%93%E9%AA%8C/</guid>
       <description>初见 新浪大厦位于海淀区西北旺东路10号院8号楼，旁边就是网易，百度，腾讯等大厂，刚刚来公司的时候看的这个场景还是蛮震撼的。离我租的宿舍大概三四公里这样，然后每天我都要骑那么二三十分钟的车才能到这里（就当作锻炼了）
  坐过一次公司的大巴，太特么晕了@_@，差点吐在车里，此后就再也没有坐过。。。
  办完入职手续后，组里的leader便来接我了，然后就是安环境(用于code review的环境)，然后熟悉熟悉代码什么的。中午的时候还是大佬们带我去吃的午饭，然后逛逛新浪大厦什么的，熟悉熟悉环境。
@@ -37,10 +37,10 @@
     
     <item>
       <title>故宫游记</title>
-      <link>https://fushaolei.github.io/post/life-travel-in-gugong/</link>
+      <link>https://fushaolei.github.io/post/%E6%95%85%E5%AE%AB%E6%B8%B8%E8%AE%B0/</link>
       <pubDate>Mon, 14 Dec 2020 16:53:37 +0000</pubDate>
       
-      <guid>https://fushaolei.github.io/post/life-travel-in-gugong/</guid>
+      <guid>https://fushaolei.github.io/post/%E6%95%85%E5%AE%AB%E6%B8%B8%E8%AE%B0/</guid>
       <description>来北京实习也已经有两个多月了，但是因为这个学期选了三门课 要做网上的作业，然后又因为懒，再加上天气变冷了，虽然一直在北京，但从未出去玩过。眼看下个星期就要离职了，这时不出去玩更待何时？
 于是，在十二月十二号的早晨十点，我遍乘坐地铁，去往故宫了。
  然而，，快到故宫的时候我才发现我没带身份证，还有学生证也没带。。不过也没关系，照样顺利进去了..
@@ -49,10 +49,10 @@
     
     <item>
       <title>通过一个小小开源项目获取jetbrains license的经历</title>
-      <link>https://fushaolei.github.io/post/get-the-jetbrains-license/</link>
+      <link>https://fushaolei.github.io/post/%E9%80%9A%E8%BF%87%E4%B8%80%E4%B8%AA%E5%B0%8F%E5%B0%8F%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E8%8E%B7%E5%8F%96jetbrains-license%E7%9A%84%E7%BB%8F%E5%8E%86/</link>
       <pubDate>Sat, 21 Nov 2020 22:41:39 +0000</pubDate>
       
-      <guid>https://fushaolei.github.io/post/get-the-jetbrains-license/</guid>
+      <guid>https://fushaolei.github.io/post/%E9%80%9A%E8%BF%87%E4%B8%80%E4%B8%AA%E5%B0%8F%E5%B0%8F%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E8%8E%B7%E5%8F%96jetbrains-license%E7%9A%84%E7%BB%8F%E5%8E%86/</guid>
       <description>楔子 对于大多数收费软件，例如ps，pr，idea等等之类的，我大多数是白嫖，需要授权码的话就去网上随便一搜，遍地都是，一个不行就换下一个，总之 总是能找到可以用的。诸如此类的事情，数不胜数。甚至老师当时教springboot的时候（要用IDEA），就直接提供破解方法给我们了。。原因呢，很简单，因为我们学生无力购买这花费高昂的软件，然后又想使用，所以不得不用盗版的了，这也是情有可原的，再一个是，白嫖是人类的天性（也不能说是全部），就算软件的价格在可以承担的范围内，仍会有人去用盗版的，为什么，因为有免费的谁会去花钱呐哈哈哈。当然。当时安装IDEA的时候我也用的盗版，软件到期时间直接他吗的干到2089年😂估计那个时候我已经驾鹤西去了。
 然后不知道怎么，在网上了解到，可以通过学生的身份去申请使用权，可是我没有学生邮箱啊，学校没发。。然后又了解到可以用自己的开源项目去申请，刚好手中有一个hexo主题的项目，hexo-theme-white，这主题也注入了自己好多的心血，今年七月开的坑，虽然已经暂停维护一个月了，不过已有六十多颗star，有将近二十个fork，还收到了4，5个PR，还是蛮开心的，第一次维护项目，那感觉真是奇妙啊，每一次被star都是对我的肯定，然后我还建了个群（不过现在已经解散了，感觉没什么用），大家讨论来讨论去的，还是蛮开心的，因为感觉自己的东西被别人认可了，那感觉真不是一时的开心，而是持续的，有时候可用偷偷躲在被窝里笑的开心哈哈哈
 初试 抱着试一试的心态，我打开了这个网址 https://www.jetbrains.com/zh-cn/community/opensource/ 点击申请后进入申请界面申请即可，注意开源项目必须是持续开发三个月的项目，当时我就用了我从六七月份开始开坑的hexo主题hexo-theme-white项目进行申请，虽然只是一个小小的html项目，但是里边也侵入了我很多的心血和时间，不过我感到蛮快乐的，因为自己的开源项目得到了许多人的肯定（截至目前有70多颗Star了），然后这中间也有建立过QQ群，然后也和我的“用户”交流什么的啊，同时也得到了一些PR，啊，这感觉真是奇妙啊
@@ -65,19 +65,19 @@
     
     <item>
       <title>Kindle备忘</title>
-      <link>https://fushaolei.github.io/post/kindle-dont-forget/</link>
+      <link>https://fushaolei.github.io/post/kindle%E5%A4%87%E5%BF%98/</link>
       <pubDate>Tue, 06 Oct 2020 13:34:37 +0000</pubDate>
       
-      <guid>https://fushaolei.github.io/post/kindle-dont-forget/</guid>
+      <guid>https://fushaolei.github.io/post/kindle%E5%A4%87%E5%BF%98/</guid>
       <description>优化设置  怎么去掉Kindle的广告  书籍资源  亚马逊官网 Blah书城 鸠摩搜索  </description>
     </item>
     
     <item>
       <title>新浪之旅</title>
-      <link>https://fushaolei.github.io/post/sina-travel/</link>
+      <link>https://fushaolei.github.io/post/%E6%96%B0%E6%B5%AA%E4%B9%8B%E6%97%85/</link>
       <pubDate>Mon, 28 Sep 2020 22:23:14 +0000</pubDate>
       
-      <guid>https://fushaolei.github.io/post/sina-travel/</guid>
+      <guid>https://fushaolei.github.io/post/%E6%96%B0%E6%B5%AA%E4%B9%8B%E6%97%85/</guid>
       <description>楔子 有心情再写d=====(￣▽￣*)b
 初入北京 最重要的就是找房子咯，一开始我是在58同城上面找的，结果不是黑中介就是离公司太远了，糟心，然后在朋友的推荐下去了自如APP上找房，看着比58上正规多了，但是太特么贵了，最便宜的也要1900一个月，而且离公司还远，经过了多方搜索后终于在暖房公众号中找到了想要的房子，离公司大概四公里，然后也相对较便宜，在这里也安利一下暖房公众号。（顺面说一下，初入北京的时候是我上铺接待并收留我的，这里也特地感谢他！
 新浪每日小计(～￣▽￣)～ 9.29 今天是蛮重要的一天的，说来玄幻，我以为什么都准备好了，谁知道，天有不测风云，29号那天本来应该是开心的一天，但是却下起了小雨，没错，我没准备雨伞！！！！紧张！，结果七点钟就起床了，然后带着书包小跑着去比较近的小卖部买了一个雨伞（雨伞！突然想起来了，忘记在共享单车上了卧槽QAQ），然后因为紧张，起的太早了，到公司门口的时候才8点半这样，然后offer上说是9点半报道的，虽是这么说，但不可能这么晚吧？但是去太早了感觉也不太行，然后在街头站到8点45时，我终于耐不住了，就进去报道了，一开始前台让我签个名然后给了我一张卡，然后就去等着，等着专人来报道的，一直等到了九点二十这样，然后就是签合同，签保密证书啊，什么什么之类的。然后就是我们部门的人来接我啦(￣▽￣)&amp;quot;，我一直想象的实习之旅便要开始了，我开心的原地起飞。终于到了办公室了，大佬给我指定了工位，紧接着就是搭环境啦（搭到下班），然后熟悉熟悉代码（我天(╯‵□′)╯︵┻━┻根本看不懂），熟悉熟悉工作流程（根据需求开发，测试，修代码 等等）

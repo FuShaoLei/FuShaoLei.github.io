@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='第一个Kotlin程序 fun main(args: Array&amp;lt;String&amp;gt;) {//以fun关键字定义函数体  println(&amp;#34;Hello World&amp;#34;)//省略了分号  println(&amp;#34;较大的是：&amp;#34;&#43;max(2,1)) println(&amp;#34;较大的是：&amp;#34;&#43;max2(4,3)) } fun max(a:Int,b:Int): Int{//先写参数名，再写参数类型  return if(a&amp;gt;b) a else b//在kotlin中，if是表达式，这里类似java中的三元运算符 } //另一种写法： fun max2(a:Int,b:Int):Int = if (a&amp;gt;b) a else b //这里max和max2的:Int可以省略，编译器会帮你分析表达式体函数，并把它的类型作为函数返回类型 变量 关键字
+ val：不可变引用（相当于Java的加上了final关键字） var 可变引用  val a = 3//编译器会把int类型作为变量a的类型  var b = &amp;#34;gulugulu&amp;#34;//b的类型是String  var c:Char c = &amp;#39;x&amp;#39; 字符串模板 可用$或${}来注入到字符串中
+fun main(args: Array&amp;lt;String&amp;gt;) { val name = &amp;#34;Kotlin&amp;#34; var a = 2 var b = 3 println(&amp;#34;Hello $name&amp;#34;) println(&amp;#34;Hello ${if(a&amp;gt;b) &amp;#34;a大于b&amp;#34; else &amp;#34;a小于b&amp;#34;}&amp;#34;) println(&amp;#34;Hello ${if(a&amp;gt;b) a else b}&amp;#34;)//甚至可以注入变量，这也太方便了 } //输出 Hello Kotlin Hello a小于b Hello 3 类和属性 声明一个类'><title>Kotlin基本要素</title>
+
+<link rel='canonical' href='https://fushaolei.github.io/post/kotlin%E5%9F%BA%E6%9C%AC%E8%A6%81%E7%B4%A0/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Kotlin基本要素'>
+<meta property='og:description' content='第一个Kotlin程序 fun main(args: Array&amp;lt;String&amp;gt;) {//以fun关键字定义函数体  println(&amp;#34;Hello World&amp;#34;)//省略了分号  println(&amp;#34;较大的是：&amp;#34;&#43;max(2,1)) println(&amp;#34;较大的是：&amp;#34;&#43;max2(4,3)) } fun max(a:Int,b:Int): Int{//先写参数名，再写参数类型  return if(a&amp;gt;b) a else b//在kotlin中，if是表达式，这里类似java中的三元运算符 } //另一种写法： fun max2(a:Int,b:Int):Int = if (a&amp;gt;b) a else b //这里max和max2的:Int可以省略，编译器会帮你分析表达式体函数，并把它的类型作为函数返回类型 变量 关键字
+ val：不可变引用（相当于Java的加上了final关键字） var 可变引用  val a = 3//编译器会把int类型作为变量a的类型  var b = &amp;#34;gulugulu&amp;#34;//b的类型是String  var c:Char c = &amp;#39;x&amp;#39; 字符串模板 可用$或${}来注入到字符串中
+fun main(args: Array&amp;lt;String&amp;gt;) { val name = &amp;#34;Kotlin&amp;#34; var a = 2 var b = 3 println(&amp;#34;Hello $name&amp;#34;) println(&amp;#34;Hello ${if(a&amp;gt;b) &amp;#34;a大于b&amp;#34; else &amp;#34;a小于b&amp;#34;}&amp;#34;) println(&amp;#34;Hello ${if(a&amp;gt;b) a else b}&amp;#34;)//甚至可以注入变量，这也太方便了 } //输出 Hello Kotlin Hello a小于b Hello 3 类和属性 声明一个类'>
+<meta property='og:url' content='https://fushaolei.github.io/post/kotlin%E5%9F%BA%E6%9C%AC%E8%A6%81%E7%B4%A0/'>
+<meta property='og:site_name' content='任我行'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2020-10-06T13:34:37&#43;00:00'/><meta property='article:modified_time' content='2020-10-06T13:34:37&#43;00:00'/>
+<meta name="twitter:title" content="Kotlin基本要素">
+<meta name="twitter:description" content="第一个Kotlin程序 fun main(args: Array&amp;lt;String&amp;gt;) {//以fun关键字定义函数体  println(&amp;#34;Hello World&amp;#34;)//省略了分号  println(&amp;#34;较大的是：&amp;#34;&#43;max(2,1)) println(&amp;#34;较大的是：&amp;#34;&#43;max2(4,3)) } fun max(a:Int,b:Int): Int{//先写参数名，再写参数类型  return if(a&amp;gt;b) a else b//在kotlin中，if是表达式，这里类似java中的三元运算符 } //另一种写法： fun max2(a:Int,b:Int):Int = if (a&amp;gt;b) a else b //这里max和max2的:Int可以省略，编译器会帮你分析表达式体函数，并把它的类型作为函数返回类型 变量 关键字
+ val：不可变引用（相当于Java的加上了final关键字） var 可变引用  val a = 3//编译器会把int类型作为变量a的类型  var b = &amp;#34;gulugulu&amp;#34;//b的类型是String  var c:Char c = &amp;#39;x&amp;#39; 字符串模板 可用$或${}来注入到字符串中
+fun main(args: Array&amp;lt;String&amp;gt;) { val name = &amp;#34;Kotlin&amp;#34; var a = 2 var b = 3 println(&amp;#34;Hello $name&amp;#34;) println(&amp;#34;Hello ${if(a&amp;gt;b) &amp;#34;a大于b&amp;#34; else &amp;#34;a小于b&amp;#34;}&amp;#34;) println(&amp;#34;Hello ${if(a&amp;gt;b) a else b}&amp;#34;)//甚至可以注入变量，这也太方便了 } //输出 Hello Kotlin Hello a小于b Hello 3 类和属性 声明一个类">
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/fushaolei/img/20200524104925.jpg" />
+
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "auto");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.body.dataset.scheme = 'dark';
+        } else {
+            document.body.dataset.scheme = 'light';
+        }
+    })();
+</script><div class="container main-container flex on-phone--column extended article-page with-toolbar">
+            <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            <figure class="site-avatar">
+                
+                    <img src="https://cdn.jsdelivr.net/gh/fushaolei/img/20200524104925.jpg" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+
+                
+                    <span class="emoji">😘</span>
+                
+            </figure>
+        
+        <h1 class="site-name"><a href="https://fushaolei.github.io/">任我行</a></h1>
+        <h2 class="site-description">一个正在成长的小菜狗</h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/about'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/link'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                
+                <span>Link</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='https://travellings.now.sh/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Travelling</span>
+            </a>
+        </li>
+        
+
+        
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    <div id="article-toolbar">
+        <a href="https://fushaolei.github.io/" class="back-home">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+            <span>Back</span>
+        </a>
+    </div>
+
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/tech/" >
+                Tech
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/post/kotlin%E5%9F%BA%E6%9C%AC%E8%A6%81%E7%B4%A0/">Kotlin基本要素</a>
+    </h2>
+
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">Oct 06, 2020</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+    <h2 id="第一个kotlin程序">第一个Kotlin程序</h2>
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">fun</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="p">:</span> <span class="n">Array</span><span class="p">&lt;</span><span class="n">String</span><span class="p">&gt;)</span> <span class="p">{</span><span class="c1">//以fun关键字定义函数体
+</span><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Hello World&#34;</span><span class="p">)</span><span class="c1">//省略了分号
+</span><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="s2">&#34;较大的是：&#34;</span><span class="p">+</span><span class="n">max</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">1</span><span class="p">))</span>
+    <span class="n">println</span><span class="p">(</span><span class="s2">&#34;较大的是：&#34;</span><span class="p">+</span><span class="n">max2</span><span class="p">(</span><span class="m">4</span><span class="p">,</span><span class="m">3</span><span class="p">))</span>
+<span class="p">}</span>
+<span class="k">fun</span> <span class="nf">max</span><span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="n">Int</span><span class="p">,</span><span class="n">b</span><span class="p">:</span><span class="n">Int</span><span class="p">):</span> <span class="n">Int</span><span class="p">{</span><span class="c1">//先写参数名，再写参数类型
+</span><span class="c1"></span>    <span class="k">return</span> <span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="p">&gt;</span><span class="n">b</span><span class="p">)</span> <span class="n">a</span> <span class="k">else</span> <span class="n">b</span><span class="c1">//在kotlin中，if是表达式，这里类似java中的三元运算符
+</span><span class="c1"></span><span class="p">}</span>
+<span class="c1">//另一种写法：
+</span><span class="c1"></span><span class="k">fun</span> <span class="nf">max2</span><span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="n">Int</span><span class="p">,</span><span class="n">b</span><span class="p">:</span><span class="n">Int</span><span class="p">):</span><span class="n">Int</span> <span class="p">=</span> <span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="p">&gt;</span><span class="n">b</span><span class="p">)</span> <span class="n">a</span> <span class="k">else</span> <span class="n">b</span>
+<span class="c1">//这里max和max2的:Int可以省略，编译器会帮你分析表达式体函数，并把它的类型作为函数返回类型
+</span></code></pre></div><h2 id="变量">变量</h2>
+<p>关键字</p>
+<ul>
+<li><code>val</code>：不可变引用（相当于Java的加上了final关键字）</li>
+<li><code>var</code> 可变引用</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="k">val</span> <span class="py">a</span> <span class="p">=</span> <span class="m">3</span><span class="c1">//编译器会把int类型作为变量a的类型
+</span><span class="c1"></span>    <span class="k">var</span> <span class="py">b</span> <span class="p">=</span> <span class="s2">&#34;gulugulu&#34;</span><span class="c1">//b的类型是String
+</span><span class="c1"></span>    <span class="k">var</span> <span class="py">c</span><span class="p">:</span><span class="n">Char</span>
+    <span class="n">c</span> <span class="p">=</span> <span class="sc">&#39;x&#39;</span>
+</code></pre></div><h2 id="字符串模板">字符串模板</h2>
+<p>可用<code>$</code>或<code>${}</code>来注入到字符串中</p>
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">fun</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="p">:</span> <span class="n">Array</span><span class="p">&lt;</span><span class="n">String</span><span class="p">&gt;)</span> <span class="p">{</span>
+    <span class="k">val</span> <span class="py">name</span>  <span class="p">=</span> <span class="s2">&#34;Kotlin&#34;</span>
+    <span class="k">var</span> <span class="py">a</span> <span class="p">=</span> <span class="m">2</span>
+    <span class="k">var</span> <span class="py">b</span> <span class="p">=</span> <span class="m">3</span>
+    <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Hello </span><span class="si">$name</span><span class="s2">&#34;</span><span class="p">)</span>
+    <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Hello </span><span class="si">${if(a&gt;b) &#34;a大于b&#34; else &#34;a小于b&#34;}</span><span class="s2">&#34;</span><span class="p">)</span>
+    <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Hello </span><span class="si">${if(a&gt;b) a else b}</span><span class="s2">&#34;</span><span class="p">)</span><span class="c1">//甚至可以注入变量，这也太方便了
+</span><span class="c1"></span><span class="p">}</span>
+<span class="c1">//输出
+</span><span class="c1"></span><span class="n">Hello</span> <span class="n">Kotlin</span>
+<span class="n">Hello</span> <span class="n">a</span><span class="err">小于</span><span class="n">b</span>
+<span class="n">Hello</span> <span class="m">3</span>
+</code></pre></div><h2 id="类和属性">类和属性</h2>
+<p>声明一个类</p>
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">class</span> <span class="nc">Person</span><span class="p">(</span>
+        <span class="c1">//当声明了属性之后，就生成了对应的访问器
+</span><span class="c1"></span>        <span class="k">val</span> <span class="py">name</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span><span class="c1">//只读属性，所有只有getter方法
+</span><span class="c1"></span>        <span class="k">var</span> <span class="py">isMarried</span><span class="p">:</span> <span class="n">Boolean</span><span class="c1">//可写属性，有getter和setter方法
+</span><span class="c1"></span><span class="p">)</span>
+<span class="c1">//简写:
+</span><span class="c1">//class Person(val name: String, var isMarried: Boolean)
+</span></code></pre></div><p>使用</p>
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">fun</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="p">:</span> <span class="n">Array</span><span class="p">&lt;</span><span class="n">String</span><span class="p">&gt;)</span> <span class="p">{</span>
+    <span class="k">val</span> <span class="py">p</span> <span class="p">=</span> <span class="n">Person</span><span class="p">(</span><span class="s2">&#34;令狐冲&#34;</span><span class="p">,</span><span class="k">false</span><span class="p">)</span><span class="c1">//直接的调用了构造器，没有像Java一样的new关键字
+</span><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="s2">&#34;isMarried的值是：</span><span class="si">${p.isMarried}</span><span class="s2">&#34;</span><span class="p">)</span>
+    <span class="n">p</span><span class="p">.</span><span class="n">isMarried</span> <span class="p">=</span> <span class="k">true</span><span class="c1">//因为是isMarried是可写属性的，所以可用直接更改它的值
+</span><span class="c1"></span>    <span class="n">println</span><span class="p">(</span><span class="s2">&#34;isMarried的值是：</span><span class="si">${p.isMarried}</span><span class="s2">&#34;</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="c1">//输出
+</span><span class="c1"></span><span class="n">isMarried</span><span class="err">的值是：</span><span class="k">false</span>
+<span class="n">isMarried</span><span class="err">的值是：</span><span class="k">true</span>
+</code></pre></div><p>可以发现，只要简单的定义了类，编译器就会帮助我们生成相应的getter和setter以及构造方法，这相比于java真是大大滴方便啊</p>
+<h2 id="when">when</h2>
+<p>在kotlin里，when可以有多种用法</p>
+<p>第一种用法，相当于java中的switch语句</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">fun</span> <span class="nf">main</span><span class="o">(</span><span class="n">args</span><span class="o">:</span> <span class="n">Array</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;)</span> <span class="o">{</span>
+    <span class="n">println</span><span class="o">(</span><span class="n">getStatus</span><span class="o">(</span><span class="n">1</span><span class="o">))</span>
+<span class="o">}</span>
+<span class="n">fun</span> <span class="nf">getStatus</span><span class="o">(</span><span class="n">num</span><span class="o">:</span> <span class="n">Int</span><span class="o">)</span> <span class="o">=</span> <span class="n">when</span><span class="o">(</span><span class="n">num</span><span class="o">){</span>
+    <span class="n">1</span> <span class="o">-&gt;</span> <span class="s">&#34;优秀&#34;</span>
+    <span class="n">2</span> <span class="o">-&gt;</span> <span class="s">&#34;棒&#34;</span>
+    <span class="n">3</span> <span class="o">-&gt;</span> <span class="s">&#34;稀巴烂&#34;</span>
+    <span class="k">else</span> <span class="o">-&gt;</span> <span class="s">&#34;未知&#34;</span>
+<span class="o">}</span>
+<span class="c1">//输出
+</span><span class="c1"></span><span class="n">优秀</span>
+</code></pre></div><p>第二种用法。。emmm改天写</p>
+<h2 id="空安全设定">空安全设定</h2>
+<ul>
+<li>
+<p>不可空类型</p>
+</li>
+<li>
+<p>可空类型</p>
+</li>
+</ul>
+<h2 id="一些关键字">一些关键字</h2>
+<table>
+<thead>
+<tr>
+<th>关键字</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>is</code></td>
+<td>用is来检查一个变量是否是某种类型，当检查过之后，后面就可以把它当作你检查过的类型来使用</td>
+</tr>
+<tr>
+<td><code>as</code></td>
+<td>表示特定类型的显示转换</td>
+</tr>
+<tr>
+<td><code>:</code></td>
+<td>通过冒号来继承一个类（会有一个括号），或一个接口（无括号）</td>
+</tr>
+<tr>
+<td><code>!!.</code></td>
+<td>强行调用符</td>
+</tr>
+<tr>
+<td><code>?.</code></td>
+<td>安全调用符，调用时会判断是不是为空，有空则不执行</td>
+</tr>
+<tr>
+<td><code>lateinit</code></td>
+<td>使用之前初始化</td>
+</tr>
+</tbody>
+</table>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+</aside>
+
+
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "fushaolei" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2021 任我行
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.0.1">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
+            </main>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"
+    integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin="anonymous"></script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

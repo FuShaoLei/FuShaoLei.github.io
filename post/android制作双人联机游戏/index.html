@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='项目有涉及到双人联机游戏的机制，这之前都没有做过类似的东西，现在什么都是从零开始，故开此文记录
+（陈年往事，虽没有什么参考价值，没多大用处，但我就是想留着这篇文章）
+ 前言 我觉得的联机游戏流程是：
+ 点击“双人游戏” 进入匹配  匹配失败👉结束 匹配成功👉进入3   建立可靠连接 系统出题，双方答题，根据对错实时更新ui  其中2，3是最重要的点，所谓可靠链接，难点在于怎么样使两个真机通过服务端链接，这时我想到了socket ，这就涉及到网络中怎么传输数据的问题了
+由于游戏的性质我还要考虑以下问题
+ 怎么保证题目的一致性 如何自动匹配 怎么保证A方传的数据到了B方那里？ 怎么保证一个客户端就匹配另一个客户端，并且不会被第三个客户端匹配到（保证一一对应） 互相之间要传什么数据  额 ，好乱啊，虽然一瞬间考虑了那么多，但还是觉得无从下手。
+昨天又想到了一些，对于如何自动匹配，我想到的是，如果客户端有传friendID的话，则于这个friendID进行匹配，如果没有的话，则进行自动匹配。好了，思考了这么多，该动手进行实现了。首先 ，是匹配机制的实现。
+匹配机制 首先，每个用户都会有专属的唯一的一个id，我们可以以id进行标识，这大大方便了我们。
+好了，想要匹配上，得先连接上服务器
+进行简单连接测试 1.android客户端：在子线程中启用socket
+private void initSocket() { new Thread(new Runnable() { @Override public void run() { try { clientSocket=new Socket(IP,PORT);//这个ip是电脑的ip，端口自己定的  if(clientSocket.isConnected()){//进行简单的测试  Log.e(&amp;#34;成功！&amp;#34;,&amp;#34;已连接到服务器！！&amp;#34;); } clientSocket.close(); }catch (Exception e){ e.printStackTrace(); } } }).start(); } 2.java服务端,
+try { serverSocket=new ServerSocket(SERVER_PORT); System.'><title>Android制作双人联机游戏</title>
+
+<link rel='canonical' href='https://fushaolei.github.io/post/android%E5%88%B6%E4%BD%9C%E5%8F%8C%E4%BA%BA%E8%81%94%E6%9C%BA%E6%B8%B8%E6%88%8F/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Android制作双人联机游戏'>
+<meta property='og:description' content='项目有涉及到双人联机游戏的机制，这之前都没有做过类似的东西，现在什么都是从零开始，故开此文记录
+（陈年往事，虽没有什么参考价值，没多大用处，但我就是想留着这篇文章）
+ 前言 我觉得的联机游戏流程是：
+ 点击“双人游戏” 进入匹配  匹配失败👉结束 匹配成功👉进入3   建立可靠连接 系统出题，双方答题，根据对错实时更新ui  其中2，3是最重要的点，所谓可靠链接，难点在于怎么样使两个真机通过服务端链接，这时我想到了socket ，这就涉及到网络中怎么传输数据的问题了
+由于游戏的性质我还要考虑以下问题
+ 怎么保证题目的一致性 如何自动匹配 怎么保证A方传的数据到了B方那里？ 怎么保证一个客户端就匹配另一个客户端，并且不会被第三个客户端匹配到（保证一一对应） 互相之间要传什么数据  额 ，好乱啊，虽然一瞬间考虑了那么多，但还是觉得无从下手。
+昨天又想到了一些，对于如何自动匹配，我想到的是，如果客户端有传friendID的话，则于这个friendID进行匹配，如果没有的话，则进行自动匹配。好了，思考了这么多，该动手进行实现了。首先 ，是匹配机制的实现。
+匹配机制 首先，每个用户都会有专属的唯一的一个id，我们可以以id进行标识，这大大方便了我们。
+好了，想要匹配上，得先连接上服务器
+进行简单连接测试 1.android客户端：在子线程中启用socket
+private void initSocket() { new Thread(new Runnable() { @Override public void run() { try { clientSocket=new Socket(IP,PORT);//这个ip是电脑的ip，端口自己定的  if(clientSocket.isConnected()){//进行简单的测试  Log.e(&amp;#34;成功！&amp;#34;,&amp;#34;已连接到服务器！！&amp;#34;); } clientSocket.close(); }catch (Exception e){ e.printStackTrace(); } } }).start(); } 2.java服务端,
+try { serverSocket=new ServerSocket(SERVER_PORT); System.'>
+<meta property='og:url' content='https://fushaolei.github.io/post/android%E5%88%B6%E4%BD%9C%E5%8F%8C%E4%BA%BA%E8%81%94%E6%9C%BA%E6%B8%B8%E6%88%8F/'>
+<meta property='og:site_name' content='任我行'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2020-05-20T14:25:02&#43;00:00'/><meta property='article:modified_time' content='2020-05-20T14:25:02&#43;00:00'/>
+<meta name="twitter:title" content="Android制作双人联机游戏">
+<meta name="twitter:description" content="项目有涉及到双人联机游戏的机制，这之前都没有做过类似的东西，现在什么都是从零开始，故开此文记录
+（陈年往事，虽没有什么参考价值，没多大用处，但我就是想留着这篇文章）
+ 前言 我觉得的联机游戏流程是：
+ 点击“双人游戏” 进入匹配  匹配失败👉结束 匹配成功👉进入3   建立可靠连接 系统出题，双方答题，根据对错实时更新ui  其中2，3是最重要的点，所谓可靠链接，难点在于怎么样使两个真机通过服务端链接，这时我想到了socket ，这就涉及到网络中怎么传输数据的问题了
+由于游戏的性质我还要考虑以下问题
+ 怎么保证题目的一致性 如何自动匹配 怎么保证A方传的数据到了B方那里？ 怎么保证一个客户端就匹配另一个客户端，并且不会被第三个客户端匹配到（保证一一对应） 互相之间要传什么数据  额 ，好乱啊，虽然一瞬间考虑了那么多，但还是觉得无从下手。
+昨天又想到了一些，对于如何自动匹配，我想到的是，如果客户端有传friendID的话，则于这个friendID进行匹配，如果没有的话，则进行自动匹配。好了，思考了这么多，该动手进行实现了。首先 ，是匹配机制的实现。
+匹配机制 首先，每个用户都会有专属的唯一的一个id，我们可以以id进行标识，这大大方便了我们。
+好了，想要匹配上，得先连接上服务器
+进行简单连接测试 1.android客户端：在子线程中启用socket
+private void initSocket() { new Thread(new Runnable() { @Override public void run() { try { clientSocket=new Socket(IP,PORT);//这个ip是电脑的ip，端口自己定的  if(clientSocket.isConnected()){//进行简单的测试  Log.e(&amp;#34;成功！&amp;#34;,&amp;#34;已连接到服务器！！&amp;#34;); } clientSocket.close(); }catch (Exception e){ e.printStackTrace(); } } }).start(); } 2.java服务端,
+try { serverSocket=new ServerSocket(SERVER_PORT); System.">
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/fushaolei/img/20200524104925.jpg" />
+
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "auto");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.body.dataset.scheme = 'dark';
+        } else {
+            document.body.dataset.scheme = 'light';
+        }
+    })();
+</script><div class="container main-container flex on-phone--column extended article-page with-toolbar">
+            <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            <figure class="site-avatar">
+                
+                    <img src="https://cdn.jsdelivr.net/gh/fushaolei/img/20200524104925.jpg" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+
+                
+                    <span class="emoji">😘</span>
+                
+            </figure>
+        
+        <h1 class="site-name"><a href="https://fushaolei.github.io/">任我行</a></h1>
+        <h2 class="site-description">一个正在成长的小菜狗</h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/about'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/link'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                
+                <span>Link</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='https://travellings.now.sh/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Travelling</span>
+            </a>
+        </li>
+        
+
+        
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    <div id="article-toolbar">
+        <a href="https://fushaolei.github.io/" class="back-home">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+            <span>Back</span>
+        </a>
+    </div>
+
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/tech/" >
+                Tech
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/post/android%E5%88%B6%E4%BD%9C%E5%8F%8C%E4%BA%BA%E8%81%94%E6%9C%BA%E6%B8%B8%E6%88%8F/">Android制作双人联机游戏</a>
+    </h2>
+
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">May 20, 2020</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+    <blockquote>
+<p>项目有涉及到双人联机游戏的机制，这之前都没有做过类似的东西，现在什么都是从零开始，故开此文记录</p>
+<p>（陈年往事，虽没有什么参考价值，没多大用处，但我就是想留着这篇文章）</p>
+</blockquote>
+<h2 id="前言">前言</h2>
+<p>我觉得的联机游戏流程是：</p>
+<ol>
+<li>点击“双人游戏”</li>
+<li>进入匹配
+<ul>
+<li>匹配失败👉结束</li>
+<li>匹配成功👉进入3</li>
+</ul>
+</li>
+<li>建立可靠连接</li>
+<li>系统出题，双方答题，根据对错实时更新ui</li>
+</ol>
+<p>其中2，3是最重要的点，所谓可靠链接，难点在于怎么样使两个真机通过服务端链接，这时我想到了socket ，这就涉及到网络中怎么传输数据的问题了</p>
+<p>由于游戏的性质我还要考虑以下问题</p>
+<ul>
+<li>怎么保证题目的一致性</li>
+<li>如何自动匹配</li>
+<li>怎么保证A方传的数据到了B方那里？</li>
+<li>怎么保证一个客户端就匹配另一个客户端，并且不会被第三个客户端匹配到（保证一一对应）</li>
+<li>互相之间要传什么数据</li>
+</ul>
+<p>额 ，好乱啊，虽然一瞬间考虑了那么多，但还是觉得无从下手。</p>
+<p>昨天又想到了一些，对于如何自动匹配，我想到的是，如果客户端有传friendID的话，则于这个friendID进行匹配，如果没有的话，则进行自动匹配。好了，思考了这么多，该动手进行实现了。首先 ，是匹配机制的实现。</p>
+<h2 id="匹配机制">匹配机制</h2>
+<p>首先，每个用户都会有<strong>专属的唯一的</strong>一个id，我们可以以id进行标识，这大大方便了我们。</p>
+<p>好了，想要匹配上，得先连接上服务器</p>
+<h3 id="进行简单连接测试">进行简单连接测试</h3>
+<p>1.android客户端：在子线程中启用socket</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="kt">void</span> <span class="nf">initSocket</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">new</span> <span class="n">Thread</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+                <span class="k">try</span> <span class="o">{</span>
+                    <span class="n">clientSocket</span><span class="o">=</span><span class="k">new</span> <span class="n">Socket</span><span class="o">(</span><span class="n">IP</span><span class="o">,</span><span class="n">PORT</span><span class="o">);</span><span class="c1">//这个ip是电脑的ip，端口自己定的
+</span><span class="c1"></span>                    <span class="k">if</span><span class="o">(</span><span class="n">clientSocket</span><span class="o">.</span><span class="na">isConnected</span><span class="o">()){</span><span class="c1">//进行简单的测试
+</span><span class="c1"></span>                        <span class="n">Log</span><span class="o">.</span><span class="na">e</span><span class="o">(</span><span class="s">&#34;成功！&#34;</span><span class="o">,</span><span class="s">&#34;已连接到服务器！！&#34;</span><span class="o">);</span>
+                    <span class="o">}</span>
+                    <span class="n">clientSocket</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+                <span class="o">}</span><span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">){</span>
+                    <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+        <span class="o">}).</span><span class="na">start</span><span class="o">();</span>
+    <span class="o">}</span>
+</code></pre></div><p>2.java服务端,</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="k">try</span> <span class="o">{</span>
+			<span class="n">serverSocket</span><span class="o">=</span><span class="k">new</span> <span class="n">ServerSocket</span><span class="o">(</span><span class="n">SERVER_PORT</span><span class="o">);</span>
+			<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;服务端已启动，端口号是: &#34;</span><span class="o">+</span><span class="n">SERVER_PORT</span><span class="o">);</span>
+			<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;==========等待客户端连接中==========&#34;</span><span class="o">);</span>
+			<span class="k">while</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+				<span class="n">Socket</span> <span class="n">socket</span><span class="o">=</span><span class="n">serverSocket</span><span class="o">.</span><span class="na">accept</span><span class="o">();</span>
+				<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;客户端已连接！客户端的IP地址是:&#34;</span><span class="o">+</span><span class="n">socket</span><span class="o">.</span><span class="na">getInetAddress</span><span class="o">());</span>
+			<span class="o">}</span>
+		<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+			<span class="c1">// TODO Auto-generated catch block
+</span><span class="c1"></span>			<span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+		<span class="o">}</span>
+</code></pre></div><p>ok 先打开服务端，后打开客户端，关掉windows防火墙，我们进行一下小测试</p>
+<p><img src="https://cdn.jsdelivr.net/gh/fushaolei/img/20200524155439.png" alt="服务端已启动"  /></p>
+<p>然后打开android端。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/fushaolei/img/20200524155719.png" alt="测试成功！"  /></p>
+<p>已成功连接！</p>
+<p>在给服务端传一个id试试。。</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="k">try</span><span class="o">{</span>
+            <span class="n">DataOutputStream</span> <span class="n">writer</span><span class="o">=</span><span class="k">new</span> <span class="n">DataOutputStream</span><span class="o">(</span><span class="n">clientSocket</span><span class="o">.</span><span class="na">getOutputStream</span><span class="o">());</span>
+            <span class="n">writer</span><span class="o">.</span><span class="na">writeInt</span><span class="o">(</span><span class="n">userId</span><span class="o">);</span>
+        <span class="o">}</span><span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">){</span>
+            <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+        <span class="o">}</span>
+</code></pre></div><p>服务端进行接受</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">reader</span><span class="o">=</span><span class="k">new</span> <span class="n">DataInputStream</span><span class="o">(</span><span class="n">socket</span><span class="o">.</span><span class="na">getInputStream</span><span class="o">());</span>
+<span class="k">while</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+	<span class="kt">int</span> <span class="n">id</span><span class="o">=</span><span class="n">reader</span><span class="o">.</span><span class="na">readInt</span><span class="o">();</span>
+	<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;获取到客户端的id是：&#34;</span><span class="o">+</span><span class="n">id</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div><p>同样也可以接受成功。</p>
+<p>好了 ，接下来可以考虑匹配的问题了。</p>
+<h3 id="如何匹配">如何匹配</h3>
+<p>首先，封装成类，方便我们调用，然后，一个id唯一对应一个socket 又有唯一的friendID，在互传数据时要进行双向验证，也就是，在只有互相是对方的friendID的情况下，才能互发数据。
+如何匹配？当有一个新的id进入时（游戏结束后会删除，也就是有一个新的游戏请求就是一个新的id），在自定义的类里进行循环，如果没有friendID则进行匹配，上面讲到了，实际上这里匹配的实质就是： 把friendID设置成对方的ID，不知道在这里你想明白没有。（其实这些是我边写此文时边想到的，写字果然能促进人的思考啊(。・∀・)ノ）</p>
+<p>按照上面的思路，我们可以一步一步进行实现</p>
+<h4 id="一新建类">一，新建类</h4>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nn">com</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">java.net.Socket</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SocketClass</span> <span class="o">{</span>
+	<span class="kd">private</span> <span class="kt">int</span> <span class="n">id</span><span class="o">;</span><span class="c1">//本体的id
+</span><span class="c1"></span>	<span class="kd">private</span> <span class="kt">int</span> <span class="n">friendid</span><span class="o">;</span><span class="c1">//待匹配id
+</span><span class="c1"></span>	<span class="kd">private</span> <span class="n">Socket</span> <span class="n">socket</span><span class="o">;</span><span class="c1">//socket
+</span><span class="c1"></span>	
+	<span class="kd">public</span> <span class="nf">SocketClass</span><span class="o">(</span><span class="kt">int</span> <span class="n">id</span><span class="o">,</span><span class="n">Socket</span> <span class="n">socket</span><span class="o">)</span> <span class="o">{</span><span class="c1">//friendid默认是0
+</span><span class="c1"></span>		<span class="k">this</span><span class="o">.</span><span class="na">id</span><span class="o">=</span><span class="n">id</span><span class="o">;</span>
+		<span class="k">this</span><span class="o">.</span><span class="na">socket</span><span class="o">=</span><span class="n">socket</span><span class="o">;</span>
+	<span class="o">}</span>
+	
+	<span class="kd">public</span> <span class="kt">int</span> <span class="nf">getId</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">id</span><span class="o">;</span>
+	<span class="o">}</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setId</span><span class="o">(</span><span class="kt">int</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">this</span><span class="o">.</span><span class="na">id</span> <span class="o">=</span> <span class="n">id</span><span class="o">;</span>
+	<span class="o">}</span>
+	<span class="kd">public</span> <span class="kt">int</span> <span class="nf">getFriendid</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">friendid</span><span class="o">;</span>
+	<span class="o">}</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setFriendid</span><span class="o">(</span><span class="kt">int</span> <span class="n">friendid</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">this</span><span class="o">.</span><span class="na">friendid</span> <span class="o">=</span> <span class="n">friendid</span><span class="o">;</span>
+	<span class="o">}</span>
+	<span class="kd">public</span> <span class="n">Socket</span> <span class="nf">getSocket</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">socket</span><span class="o">;</span>
+	<span class="o">}</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setSocket</span><span class="o">(</span><span class="n">Socket</span> <span class="n">socket</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">this</span><span class="o">.</span><span class="na">socket</span> <span class="o">=</span> <span class="n">socket</span><span class="o">;</span>
+	<span class="o">}</span>
+
+	<span class="nd">@Override</span>
+	<span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="s">&#34;SocketClass [id=&#34;</span> <span class="o">+</span> <span class="n">id</span> <span class="o">+</span> <span class="s">&#34;, friendid=&#34;</span> <span class="o">+</span> <span class="n">friendid</span> <span class="o">+</span> <span class="s">&#34;]&#34;</span><span class="o">;</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre></div><h4 id="二新建匹配方法">二，新建匹配方法</h4>
+<p>放在获取客户端id的后面</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">reader</span><span class="o">=</span><span class="k">new</span> <span class="n">DataInputStream</span><span class="o">(</span><span class="n">socket</span><span class="o">.</span><span class="na">getInputStream</span><span class="o">());</span>
+<span class="k">while</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+	<span class="kt">int</span> <span class="n">id</span><span class="o">=</span><span class="n">reader</span><span class="o">.</span><span class="na">readInt</span><span class="o">();</span>
+	<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;获取到客户端的id是：&#34;</span><span class="o">+</span><span class="n">id</span><span class="o">);</span>
+	<span class="n">socketList</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">SocketClass</span><span class="o">(</span><span class="n">id</span><span class="o">,</span> <span class="n">socket</span><span class="o">));</span><span class="c1">//添加进List里去备用
+</span><span class="c1"></span>	<span class="n">match</span><span class="o">();</span><span class="c1">//由于是在while（true）循环里，所以会一直等待匹配
+</span><span class="c1"></span><span class="o">}</span> 
+
+</code></pre></div><p>匹配方法</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java">	<span class="c1">//开始匹配
+</span><span class="c1"></span>	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">match</span><span class="o">()</span> <span class="o">{</span>
+<span class="c1">//		System.out.println(socketList.get(0).toString());//int默认值是0
+</span><span class="c1"></span>		<span class="c1">//大于或2才开始，否则就不能匹配咯
+</span><span class="c1"></span>		<span class="k">if</span><span class="o">(</span><span class="n">socketList</span><span class="o">.</span><span class="na">size</span><span class="o">()&gt;=</span><span class="n">2</span><span class="o">)</span> <span class="o">{</span>
+			<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;开始匹配前的状态&#34;</span><span class="o">);</span>
+			<span class="k">for</span><span class="o">(</span><span class="n">SocketClass</span> <span class="n">mSocket</span><span class="o">:</span><span class="n">socketList</span><span class="o">)</span> <span class="o">{</span>
+				<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">mSocket</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+			<span class="o">}</span>
+			<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">socketList</span><span class="o">.</span><span class="na">size</span><span class="o">();</span><span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+				<span class="k">if</span><span class="o">(</span><span class="n">socketList</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">).</span><span class="na">getFriendid</span><span class="o">()==</span><span class="n">0</span><span class="o">)</span> <span class="o">{</span>
+                    <span class="c1">//friendId(int)的基本默认值是0，所以，如果等于0的话说明没有，则进行匹配操作
+</span><span class="c1"></span>					<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="n">1</span><span class="o">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">socketList</span><span class="o">.</span><span class="na">size</span><span class="o">();</span><span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
+						<span class="k">if</span><span class="o">(</span><span class="n">socketList</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">j</span><span class="o">).</span><span class="na">getFriendid</span><span class="o">()==</span><span class="n">0</span><span class="o">)</span> <span class="o">{</span>
+                            <span class="c1">//如果在此循环里，也有一个friendId为0的话，就进行两两匹配
+</span><span class="c1"></span>							<span class="n">socketList</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">).</span><span class="na">setFriendid</span><span class="o">(</span><span class="n">socketList</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">j</span><span class="o">).</span><span class="na">getId</span><span class="o">());</span>
+							<span class="n">socketList</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">j</span><span class="o">).</span><span class="na">setFriendid</span><span class="o">(</span><span class="n">socketList</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">).</span><span class="na">getId</span><span class="o">());</span>
+						<span class="o">}</span>
+					<span class="o">}</span>
+					
+				<span class="o">}</span>
+				
+			<span class="o">}</span>
+			<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;匹配后的状态&#34;</span><span class="o">);</span>
+		<span class="k">for</span><span class="o">(</span><span class="n">SocketClass</span> <span class="n">mSocket</span><span class="o">:</span><span class="n">socketList</span><span class="o">)</span> <span class="o">{</span>
+			<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">mSocket</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+		<span class="o">}</span>
+		<span class="o">}</span>
+		
+	<span class="o">}</span>
+</code></pre></div><p>测试一下，，匹配成功！！！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/fushaolei/img/20200524193753.png" alt="匹配机制成功！"  /></p>
+<p>喜大普奔。我们终于完成了匹配机制，到这里，在看看前言我所写的，我们现在只剩下最后一步了，接下来进入关于游戏ui更新的部分。</p>
+<h2 id="同步ui">同步UI</h2>
+<p>这部分也蛮简单的（才怪~），A方答题后更新A方的UI，然后把A的回答传到服务器后传给B方以更新B方的UI，B方同样如此，重要的要保证题目一致，也就是，当每次答题开始时，服务端会向A方B方发送题目以及答案。</p>
+<p>同步UI要走以下流程，为了简单考虑，就先不考虑有一方中途推出的情况了。</p>
+<ol>
+<li>（与服务器建立连接）匹配后 服务器向双方发送对方的id，两客户端更新对方UI信息（头像啊，名字之类的）（如何保证只发送一次？）✅</li>
+<li>由其中一方向服务器发送信息 请求题目，服务器同时向双方发送题目以及答案✅</li>
+<li>双方客户端更新题目UI✅</li>
+<li>A方答题后，更新A方UI ，并把回答发送到服务器转发给B方</li>
+<li>B方接收后判断并更新UI，同上</li>
+<li>后答完题的人向服务端发送信息请求题目，重复以上</li>
+</ol>
+<p>这里其实涉及到了一个传输问题，开始的时候（服务端）用了一些奇奇怪怪的方法，后来了解到json数据，如果key值不存在的话，取得的是null，这就大大方便了我们，以json作为传输对象也大大简化了逻辑。比如，想更新对方的ui信息时，服务端，传一个key为otherID值为19的json数据过客户端，然后客户端接受后判断key为otherID是否存在，若存在，则更新ui，若不存在，则执行其他逻辑，也就是可以以这个key作为判断条件，判断执行什么逻辑，例如更新题目ui啊，接受到对方的答案啊之类的</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+</aside>
+
+
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "fushaolei" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2021 任我行
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.0.1">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
+            </main>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"
+    integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin="anonymous"></script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

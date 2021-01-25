@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>读书笔记 on Sorryfu Blog.</title>
+    <title>读书笔记 on 任我行</title>
     <link>https://fushaolei.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
-    <description>Recent content in 读书笔记 on Sorryfu Blog.</description>
+    <description>Recent content in 读书笔记 on 任我行</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
+    <language>en-us</language>
     <lastBuildDate>Fri, 15 Jan 2021 13:34:37 +0000</lastBuildDate><atom:link href="https://fushaolei.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>《Java核心技术I》读书笔记</title>
-      <link>https://fushaolei.github.io/post/core-java-note/</link>
+      <link>https://fushaolei.github.io/post/java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AFi%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Fri, 15 Jan 2021 13:34:37 +0000</pubDate>
       
-      <guid>https://fushaolei.github.io/post/core-java-note/</guid>
+      <guid>https://fushaolei.github.io/post/java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AFi%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid>
       <description>仅仅是边读边记的笔记，因为不像是某些资料，这本书并不是成“体系”的，比较“混乱”，所以，索性都记录到一个md文件里咯（看的比较随意，除了第一第二章外，有些难的或者偏也都直接跳过了😜，看第二遍的时候再补回来吧 maybe。。。）
  第 3 章 Java的基本程序设计结构 1.第一个程序 public class Hello { public static void main(String[] args) { System.out.println(&amp;#34;Hello World&amp;#34;); } }  public（访问修饰符） 用于控制对所修饰的类或对象或字段的访问级别 class表示这是一个类，Hello则是这个类的类名 main方法是所有程序的入口 大括号表示方法体的开始与结束  2.注释 //单行注释  /* 多行注释，（不能嵌套使用） */ /** * 文档注释 * 可用于自动的生成文档 */ 3.数据类型    基本类型 位数 字节 默认值     int 32 4 0   short 16 2 0   long 64 8 0L   byte 8 1 0   char 16 2 &amp;lsquo;u0000&amp;rsquo;   float 32 4 0f   double 64 8 0d   boolean 1  false    4.</description>
     </item>

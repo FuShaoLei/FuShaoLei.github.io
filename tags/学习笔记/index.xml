@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>学习笔记 on Sorryfu Blog.</title>
+    <title>学习笔记 on 任我行</title>
     <link>https://fushaolei.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
-    <description>Recent content in 学习笔记 on Sorryfu Blog.</description>
+    <description>Recent content in 学习笔记 on 任我行</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
+    <language>en-us</language>
     <lastBuildDate>Tue, 12 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://fushaolei.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>常用Git指令</title>
-      <link>https://fushaolei.github.io/post/common-git/</link>
+      <link>https://fushaolei.github.io/post/%E5%B8%B8%E7%94%A8git%E6%8C%87%E4%BB%A4/</link>
       <pubDate>Tue, 12 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://fushaolei.github.io/post/common-git/</guid>
+      <guid>https://fushaolei.github.io/post/%E5%B8%B8%E7%94%A8git%E6%8C%87%E4%BB%A4/</guid>
       <description>指令 说明     git add . 将修改放入暂存区   git status 查看状态   git log 查看commit版本号   git reset --hard 版本号 版本回退，hard强制回退，soft的话会保留修改   git stash 将修改保存起来   git stash save &amp;quot;xxx&amp;quot; 将修改保存起来，并设置这个保存的标签   git stash apply stash@{x} 将修改移出来        懒的写了，待补充。。。</description>
     </item>
     
     <item>
       <title>Android MVP模式笔记</title>
-      <link>https://fushaolei.github.io/post/android-mvp/</link>
+      <link>https://fushaolei.github.io/post/android-mvp%E6%A8%A1%E5%BC%8F%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Tue, 06 Oct 2020 13:34:37 +0000</pubDate>
       
-      <guid>https://fushaolei.github.io/post/android-mvp/</guid>
+      <guid>https://fushaolei.github.io/post/android-mvp%E6%A8%A1%E5%BC%8F%E7%AC%94%E8%AE%B0/</guid>
       <description>前言 以前有学过，感觉理解不了，然后又用不到，然后就不了了之了 QAQ，现在因为实习公司的项目有用到，如果不学的话感觉根本看不懂项目（其实学完之后还是看不懂😂），所以就重新学过，顺便记录一下
 2021年1月13日补充 当初想的窄了，从细枝末节入手，缺乏一个全局的观念，现在想起来，其实下面所说的预备知识，其实是为优化MVP模式所服务的。
 预备知识  面向接口的编程思想 向上转型的概念 解耦  面向接口编程 先复习一下接口的概念：

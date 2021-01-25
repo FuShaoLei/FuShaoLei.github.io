@@ -13,11 +13,6 @@
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/</loc>
-    <lastmod>2021-01-15T13:34:37+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://fushaolei.github.io/tags/</loc>
     <lastmod>2021-01-15T13:34:37+00:00</lastmod>
   </url>
@@ -28,7 +23,12 @@
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/core-java-note/</loc>
+    <loc>https://fushaolei.github.io/post/java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AFi%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2021-01-15T13:34:37+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://fushaolei.github.io/</loc>
     <lastmod>2021-01-15T13:34:37+00:00</lastmod>
   </url>
   
@@ -43,7 +43,7 @@
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/android-graduation-design-question/</loc>
+    <loc>https://fushaolei.github.io/post/fragment-has-not-been-attached-yet/</loc>
     <lastmod>2021-01-14T00:00:00+00:00</lastmod>
   </url>
   
@@ -68,12 +68,12 @@
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/common-git/</loc>
+    <loc>https://fushaolei.github.io/post/%E5%B8%B8%E7%94%A8git%E6%8C%87%E4%BB%A4/</loc>
     <lastmod>2021-01-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/reinstall-sys/</loc>
+    <loc>https://fushaolei.github.io/post/%E6%88%91%E7%9A%84%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6/</loc>
     <lastmod>2021-01-10T12:14:48+08:00</lastmod>
   </url>
   
@@ -83,7 +83,7 @@
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/ide-skill/</loc>
+    <loc>https://fushaolei.github.io/post/%E6%97%A5%E5%B8%B8%E7%94%A8%E5%88%B0ide%E5%B0%8F%E6%8A%80%E5%B7%A7%E6%B1%87%E6%80%BB/</loc>
     <lastmod>2021-01-05T10:48:35+00:00</lastmod>
   </url>
   
@@ -98,7 +98,7 @@
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/work-in-sina/</loc>
+    <loc>https://fushaolei.github.io/post/%E5%9C%A8%E6%96%B0%E6%B5%AA%E5%AE%9E%E4%B9%A0%E6%98%AF%E4%B8%80%E7%A7%8D%E4%BB%80%E4%B9%88%E4%BD%93%E9%AA%8C/</loc>
     <lastmod>2020-12-15T15:07:39+00:00</lastmod>
   </url>
   
@@ -108,7 +108,7 @@
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/life-travel-in-gugong/</loc>
+    <loc>https://fushaolei.github.io/post/%E6%95%85%E5%AE%AB%E6%B8%B8%E8%AE%B0/</loc>
     <lastmod>2020-12-14T16:53:37+00:00</lastmod>
   </url>
   
@@ -118,27 +118,27 @@
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/recyclerview-multi-style/</loc>
+    <loc>https://fushaolei.github.io/post/recyclerview%E5%A4%9A%E6%A0%B7%E5%BC%8F%E6%B7%B7%E5%90%88%E5%B8%83%E5%B1%80/</loc>
     <lastmod>2020-12-08T22:04:03+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/sina-work-knowledge/</loc>
+    <loc>https://fushaolei.github.io/post/%E5%AE%9E%E4%B9%A0%E5%B0%8F%E7%BB%93/</loc>
     <lastmod>2020-11-25T00:16:03+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/data-structure-map/</loc>
+    <loc>https://fushaolei.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9B%BE/</loc>
     <lastmod>2020-11-24T22:28:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/get-the-jetbrains-license/</loc>
+    <loc>https://fushaolei.github.io/post/%E9%80%9A%E8%BF%87%E4%B8%80%E4%B8%AA%E5%B0%8F%E5%B0%8F%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E8%8E%B7%E5%8F%96jetbrains-license%E7%9A%84%E7%BB%8F%E5%8E%86/</loc>
     <lastmod>2020-11-21T22:41:39+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/error-note/</loc>
+    <loc>https://fushaolei.github.io/post/%E8%B8%A9%E5%9D%91%E6%97%A5%E8%AE%B0/</loc>
     <lastmod>2020-11-05T20:23:35+00:00</lastmod>
   </url>
   
@@ -148,37 +148,47 @@
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/data-structure-tree/</loc>
+    <loc>https://fushaolei.github.io/link/</loc>
     <lastmod>2020-10-31T12:42:57+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/sina-workflow/</loc>
+    <loc>https://fushaolei.github.io/page/</loc>
+    <lastmod>2020-10-31T12:42:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://fushaolei.github.io/post/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%A0%91%E5%92%8C%E4%BA%8C%E5%8F%89%E6%A0%91/</loc>
+    <lastmod>2020-10-31T12:42:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://fushaolei.github.io/post/%E6%96%B0%E6%B5%AA%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B%E5%B0%8F%E8%AE%B0%E5%BD%95/</loc>
     <lastmod>2020-10-21T19:34:54+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/git-in-work/</loc>
+    <loc>https://fushaolei.github.io/post/%E5%B7%A5%E4%BD%9C%E4%B8%AD%E5%B8%B8%E7%94%A8%E5%88%B0%E7%9A%84git%E6%8C%87%E4%BB%A4/</loc>
     <lastmod>2020-10-20T17:04:26+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/android-relativelayout-att/</loc>
+    <loc>https://fushaolei.github.io/post/relativelayout%E4%B8%AD%E7%9A%84%E5%B1%9E%E6%80%A7/</loc>
     <lastmod>2020-10-18T23:13:16+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/android-mvp/</loc>
+    <loc>https://fushaolei.github.io/post/android-mvp%E6%A8%A1%E5%BC%8F%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2020-10-06T13:34:37+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/kindle-dont-forget/</loc>
+    <loc>https://fushaolei.github.io/post/kindle%E5%A4%87%E5%BF%98/</loc>
     <lastmod>2020-10-06T13:34:37+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/kotlin-note-base-element/</loc>
+    <loc>https://fushaolei.github.io/post/kotlin%E5%9F%BA%E6%9C%AC%E8%A6%81%E7%B4%A0/</loc>
     <lastmod>2020-10-06T13:34:37+00:00</lastmod>
   </url>
   
@@ -188,128 +198,132 @@
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/java-interview-note/</loc>
+    <loc>https://fushaolei.github.io/post/java%E9%9D%A2%E8%AF%95%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A/</loc>
     <lastmod>2020-10-01T12:11:32+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/android-interview/</loc>
+    <loc>https://fushaolei.github.io/post/android%E9%9D%A2%E8%AF%95%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A/</loc>
     <lastmod>2020-10-01T11:56:39+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/git-commit-note/</loc>
+    <loc>https://fushaolei.github.io/post/git-commit%E8%A7%84%E8%8C%83%E5%8C%96/</loc>
     <lastmod>2020-09-30T22:09:46+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/sina-travel/</loc>
+    <loc>https://fushaolei.github.io/post/%E6%96%B0%E6%B5%AA%E4%B9%8B%E6%97%85/</loc>
     <lastmod>2020-09-28T22:23:14+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/github-action-hexo/</loc>
+    <loc>https://fushaolei.github.io/post/github-action%E5%AE%9E%E7%8E%B0%E5%9C%A8%E7%BA%BF%E5%86%99%E4%BD%9C/</loc>
     <lastmod>2020-09-21T22:01:51+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/spring-note/</loc>
+    <loc>https://fushaolei.github.io/post/spring%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2020-08-17T09:27:43+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/interview-water/</loc>
+    <loc>https://fushaolei.github.io/post/%E9%9D%A2%E8%AF%95%E6%B5%81%E7%A8%8B/</loc>
     <lastmod>2020-08-14T15:57:53+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/mybatis-note/</loc>
+    <loc>https://fushaolei.github.io/post/mybatis%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2020-08-14T14:12:12+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/sort-algorithm/</loc>
+    <loc>https://fushaolei.github.io/post/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2020-08-13T19:34:10+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/usually-use-design-pattern/</loc>
+    <loc>https://fushaolei.github.io/post/%E5%B8%B8%E7%94%A8%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
     <lastmod>2020-08-13T19:33:06+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/doc-white-configration/</loc>
+    <loc>https://fushaolei.github.io/post/white%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2020-08-09T23:31:29+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/java-base-note/</loc>
+    <loc>https://fushaolei.github.io/post/java%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2020-08-04T11:32:08+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/flutter-note/</loc>
+    <loc>https://fushaolei.github.io/post/flutter%E5%85%A5%E9%97%A8/</loc>
     <lastmod>2020-07-17T15:23:41+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/linux-note/</loc>
+    <loc>https://fushaolei.github.io/post/linux%E5%AE%89%E8%A3%85/</loc>
     <lastmod>2020-07-13T00:17:53+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/linux-install/</loc>
+    <loc>https://fushaolei.github.io/post/linux%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85%E8%AE%B0%E5%BD%95/</loc>
     <lastmod>2020-07-09T16:53:45+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/java-make-a-image-upload/</loc>
+    <loc>https://fushaolei.github.io/post/java%E6%89%93%E9%80%A0%E4%B8%80%E4%B8%AA%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2020-07-03T12:25:29+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/android-listview/</loc>
+    <loc>https://fushaolei.github.io/post/listview%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2020-06-24T08:37:32+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/how-to-make-a-hexo-blog/</loc>
+    <loc>https://fushaolei.github.io/post/%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAhexo%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2020-06-21T00:38:22+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/idea-note/</loc>
+    <loc>https://fushaolei.github.io/post/idea%E9%A3%9F%E7%94%A8%E5%B0%8F%E8%AE%B0/</loc>
     <lastmod>2020-06-14T21:36:08+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/hexo-backup/</loc>
+    <loc>https://fushaolei.github.io/post/hexo%E5%8D%9A%E5%AE%A2%E5%A4%87%E4%BB%BD%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/</loc>
     <lastmod>2020-05-31T11:18:27+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/solve-the-slow-git-clone/</loc>
+    <loc>https://fushaolei.github.io/post/%E8%A7%A3%E5%86%B3git-clone%E8%B6%85%E6%85%A2%E9%80%9F%E5%BA%A6%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
     <lastmod>2020-05-28T20:26:06+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/android-make-double-game/</loc>
+    <loc>https://fushaolei.github.io/post/android%E5%88%B6%E4%BD%9C%E5%8F%8C%E4%BA%BA%E8%81%94%E6%9C%BA%E6%B8%B8%E6%88%8F/</loc>
     <lastmod>2020-05-20T14:25:02+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/html-flex/</loc>
+    <loc>https://fushaolei.github.io/post/flex%E5%B8%83%E5%B1%80%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2020-04-25T18:10:39+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/link/</loc>
-    <lastmod>2020-02-10T10:34:08+00:00</lastmod>
+    <loc>https://fushaolei.github.io/post/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2020-02-03T10:55:36+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/post/git-note/</loc>
-    <lastmod>2020-02-03T10:55:36+00:00</lastmod>
+    <loc>https://fushaolei.github.io/archives/</loc>
+    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://fushaolei.github.io/search/</loc>
   </url>
   
 </urlset>

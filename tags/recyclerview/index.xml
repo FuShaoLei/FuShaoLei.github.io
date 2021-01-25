@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Recyclerview on Sorryfu Blog.</title>
+    <title>Recyclerview on 任我行</title>
     <link>https://fushaolei.github.io/tags/recyclerview/</link>
-    <description>Recent content in Recyclerview on Sorryfu Blog.</description>
+    <description>Recent content in Recyclerview on 任我行</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
+    <language>en-us</language>
     <lastBuildDate>Tue, 08 Dec 2020 22:04:03 +0000</lastBuildDate><atom:link href="https://fushaolei.github.io/tags/recyclerview/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Recyclerview多样式混合布局</title>
-      <link>https://fushaolei.github.io/post/recyclerview-multi-style/</link>
+      <link>https://fushaolei.github.io/post/recyclerview%E5%A4%9A%E6%A0%B7%E5%BC%8F%E6%B7%B7%E5%90%88%E5%B8%83%E5%B1%80/</link>
       <pubDate>Tue, 08 Dec 2020 22:04:03 +0000</pubDate>
       
-      <guid>https://fushaolei.github.io/post/recyclerview-multi-style/</guid>
+      <guid>https://fushaolei.github.io/post/recyclerview%E5%A4%9A%E6%A0%B7%E5%BC%8F%E6%B7%B7%E5%90%88%E5%B8%83%E5%B1%80/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;问题：已知字段中会有一个名为&lt;code&gt;layoutStyle&lt;/code&gt;的字段来控制布局的样式，求解这个recyclerview的adapter如何写&lt;/p&gt;
 &lt;/blockquote&gt;

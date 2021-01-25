@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Android 一， Android的四大组件  所有android应用都是由四大组件组成的：Activity，BroadcastReceiver，Service，ContentProvider
+  Activity：最基本的组件，一个就是一个屏幕，通常都被实现为一个独立的类 BroadcastReceiver：使用它对外部事件进行过滤，接收并做出响应 Service：一个服务是具有一个较长生命周期且没有用户界面的程序。 ContentProvider：使一个应用程序的指定数据集可以提供给其他应用程序。  二，Activity的生命周期  参考文章：深入理解Activity的生命周期
+    方法 作用     onCreate 进行初始化工作，此时Activity还在后台，不可见   onStart 此时Actvity已经可见，但是还没出现在前台，不可交互   onResume 此时Activity出现在前台并可交互   onPause 当Activity要跳到另一个Activity或应用正常退出时都会执行这个方法。此时Activity在前台并可见   onStop 此时Activity已经不可见了，（但是Activity对象还在内存中，没有被销毁）   onDestroy 这个阶段Activity被销毁   onRestart restart表示重新开始，Activity在这时可见，当用户按Home键切换到桌面后又切回来或者从后一个Activity切回前一个Activity就会触发这个方法。这里一般不做什么操作。    三，Activity的四个启动方法  给👴整懵逼了，看都看不懂
+    启动模式 说明     standard 标准模式，每创建一个Activity，都会在任务栈中添加一个实例   singleTop 栈顶复用，如果打开的Activity在任务栈顶，就不在创建，直接复用，如果不在栈顶，就重新创建一个   singleTask 栈内复用，如果打开的Activity在任务栈中，就删除此Activity上面所有的Activity，知道该Activity在栈顶，如果打开的Activity没在任务栈中，直接创建一个新的Activity实例入栈   singleInstance 全局唯一（单例模式），给每一个Activity创建一个任务栈，独占一个栈，打开Activity的时候就对所有的任务进行查询，如果有此Activity，直接复用，不用重新创建    四，Fragment的生命周期    方法 作用     onAttach() Fragment和Activity建立关联的时候调用，被附加到Activity中去。   onCreate() 系统会在创建Fragment时调用此方法。可以初始化一段资源文件等等。   onCreateView() 系统会在Fragment首次绘制其用户界面时调用此方法。 要想为Fragment绘制 UI，从该方法中返回的 View 必须是Fragment布局的根视图。如果Fragment未提供 UI，您可以返回 null。   onViewCreated() 在Fragment被绘制后，调用此方法，可以初始化控件资源。   onActivityCreated() 当onCreate()，onCreateView()，onViewCreated()方法执行完后调用，也就是Activity被渲染绘制出来后。   onPause() 系统将此方法作为用户离开Fragment的第一个信号（但并不总是意味着此Fragment会被销毁）进行调用。 通常可以在此方法内确认在当前用户会话结束后仍然有效的任何更改（因为用户可能不会返回）。   onDestroyView() Fragment中的布局被移除时调用。   onDetach() Fragment和Activity解除关联的时候调用。    五，service的生命周期 通过startService方式启动服务  onCreate：首次创建服务时由系统调用 onStartCommand：每次客户端通过调用显式启动服务时 onDestroy  通过bindService方式启动服务  onCreate：首次创建服务时由系统调用 onBind：绑定服务 onUnBind：解绑服务 onDestroy  Java 一，==和equal的区别 先讲=='><title>Android面试必知必会</title>
+
+<link rel='canonical' href='https://fushaolei.github.io/post/android%E9%9D%A2%E8%AF%95%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Android面试必知必会'>
+<meta property='og:description' content='Android 一， Android的四大组件  所有android应用都是由四大组件组成的：Activity，BroadcastReceiver，Service，ContentProvider
+  Activity：最基本的组件，一个就是一个屏幕，通常都被实现为一个独立的类 BroadcastReceiver：使用它对外部事件进行过滤，接收并做出响应 Service：一个服务是具有一个较长生命周期且没有用户界面的程序。 ContentProvider：使一个应用程序的指定数据集可以提供给其他应用程序。  二，Activity的生命周期  参考文章：深入理解Activity的生命周期
+    方法 作用     onCreate 进行初始化工作，此时Activity还在后台，不可见   onStart 此时Actvity已经可见，但是还没出现在前台，不可交互   onResume 此时Activity出现在前台并可交互   onPause 当Activity要跳到另一个Activity或应用正常退出时都会执行这个方法。此时Activity在前台并可见   onStop 此时Activity已经不可见了，（但是Activity对象还在内存中，没有被销毁）   onDestroy 这个阶段Activity被销毁   onRestart restart表示重新开始，Activity在这时可见，当用户按Home键切换到桌面后又切回来或者从后一个Activity切回前一个Activity就会触发这个方法。这里一般不做什么操作。    三，Activity的四个启动方法  给👴整懵逼了，看都看不懂
+    启动模式 说明     standard 标准模式，每创建一个Activity，都会在任务栈中添加一个实例   singleTop 栈顶复用，如果打开的Activity在任务栈顶，就不在创建，直接复用，如果不在栈顶，就重新创建一个   singleTask 栈内复用，如果打开的Activity在任务栈中，就删除此Activity上面所有的Activity，知道该Activity在栈顶，如果打开的Activity没在任务栈中，直接创建一个新的Activity实例入栈   singleInstance 全局唯一（单例模式），给每一个Activity创建一个任务栈，独占一个栈，打开Activity的时候就对所有的任务进行查询，如果有此Activity，直接复用，不用重新创建    四，Fragment的生命周期    方法 作用     onAttach() Fragment和Activity建立关联的时候调用，被附加到Activity中去。   onCreate() 系统会在创建Fragment时调用此方法。可以初始化一段资源文件等等。   onCreateView() 系统会在Fragment首次绘制其用户界面时调用此方法。 要想为Fragment绘制 UI，从该方法中返回的 View 必须是Fragment布局的根视图。如果Fragment未提供 UI，您可以返回 null。   onViewCreated() 在Fragment被绘制后，调用此方法，可以初始化控件资源。   onActivityCreated() 当onCreate()，onCreateView()，onViewCreated()方法执行完后调用，也就是Activity被渲染绘制出来后。   onPause() 系统将此方法作为用户离开Fragment的第一个信号（但并不总是意味着此Fragment会被销毁）进行调用。 通常可以在此方法内确认在当前用户会话结束后仍然有效的任何更改（因为用户可能不会返回）。   onDestroyView() Fragment中的布局被移除时调用。   onDetach() Fragment和Activity解除关联的时候调用。    五，service的生命周期 通过startService方式启动服务  onCreate：首次创建服务时由系统调用 onStartCommand：每次客户端通过调用显式启动服务时 onDestroy  通过bindService方式启动服务  onCreate：首次创建服务时由系统调用 onBind：绑定服务 onUnBind：解绑服务 onDestroy  Java 一，==和equal的区别 先讲=='>
+<meta property='og:url' content='https://fushaolei.github.io/post/android%E9%9D%A2%E8%AF%95%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A/'>
+<meta property='og:site_name' content='任我行'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2020-10-01T11:56:39&#43;00:00'/><meta property='article:modified_time' content='2020-10-01T11:56:39&#43;00:00'/>
+<meta name="twitter:title" content="Android面试必知必会">
+<meta name="twitter:description" content="Android 一， Android的四大组件  所有android应用都是由四大组件组成的：Activity，BroadcastReceiver，Service，ContentProvider
+  Activity：最基本的组件，一个就是一个屏幕，通常都被实现为一个独立的类 BroadcastReceiver：使用它对外部事件进行过滤，接收并做出响应 Service：一个服务是具有一个较长生命周期且没有用户界面的程序。 ContentProvider：使一个应用程序的指定数据集可以提供给其他应用程序。  二，Activity的生命周期  参考文章：深入理解Activity的生命周期
+    方法 作用     onCreate 进行初始化工作，此时Activity还在后台，不可见   onStart 此时Actvity已经可见，但是还没出现在前台，不可交互   onResume 此时Activity出现在前台并可交互   onPause 当Activity要跳到另一个Activity或应用正常退出时都会执行这个方法。此时Activity在前台并可见   onStop 此时Activity已经不可见了，（但是Activity对象还在内存中，没有被销毁）   onDestroy 这个阶段Activity被销毁   onRestart restart表示重新开始，Activity在这时可见，当用户按Home键切换到桌面后又切回来或者从后一个Activity切回前一个Activity就会触发这个方法。这里一般不做什么操作。    三，Activity的四个启动方法  给👴整懵逼了，看都看不懂
+    启动模式 说明     standard 标准模式，每创建一个Activity，都会在任务栈中添加一个实例   singleTop 栈顶复用，如果打开的Activity在任务栈顶，就不在创建，直接复用，如果不在栈顶，就重新创建一个   singleTask 栈内复用，如果打开的Activity在任务栈中，就删除此Activity上面所有的Activity，知道该Activity在栈顶，如果打开的Activity没在任务栈中，直接创建一个新的Activity实例入栈   singleInstance 全局唯一（单例模式），给每一个Activity创建一个任务栈，独占一个栈，打开Activity的时候就对所有的任务进行查询，如果有此Activity，直接复用，不用重新创建    四，Fragment的生命周期    方法 作用     onAttach() Fragment和Activity建立关联的时候调用，被附加到Activity中去。   onCreate() 系统会在创建Fragment时调用此方法。可以初始化一段资源文件等等。   onCreateView() 系统会在Fragment首次绘制其用户界面时调用此方法。 要想为Fragment绘制 UI，从该方法中返回的 View 必须是Fragment布局的根视图。如果Fragment未提供 UI，您可以返回 null。   onViewCreated() 在Fragment被绘制后，调用此方法，可以初始化控件资源。   onActivityCreated() 当onCreate()，onCreateView()，onViewCreated()方法执行完后调用，也就是Activity被渲染绘制出来后。   onPause() 系统将此方法作为用户离开Fragment的第一个信号（但并不总是意味着此Fragment会被销毁）进行调用。 通常可以在此方法内确认在当前用户会话结束后仍然有效的任何更改（因为用户可能不会返回）。   onDestroyView() Fragment中的布局被移除时调用。   onDetach() Fragment和Activity解除关联的时候调用。    五，service的生命周期 通过startService方式启动服务  onCreate：首次创建服务时由系统调用 onStartCommand：每次客户端通过调用显式启动服务时 onDestroy  通过bindService方式启动服务  onCreate：首次创建服务时由系统调用 onBind：绑定服务 onUnBind：解绑服务 onDestroy  Java 一，==和equal的区别 先讲==">
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/fushaolei/img/20200524104925.jpg" />
+
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "auto");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.body.dataset.scheme = 'dark';
+        } else {
+            document.body.dataset.scheme = 'light';
+        }
+    })();
+</script><div class="container main-container flex on-phone--column extended article-page with-toolbar">
+            <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            <figure class="site-avatar">
+                
+                    <img src="https://cdn.jsdelivr.net/gh/fushaolei/img/20200524104925.jpg" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+
+                
+                    <span class="emoji">😘</span>
+                
+            </figure>
+        
+        <h1 class="site-name"><a href="https://fushaolei.github.io/">任我行</a></h1>
+        <h2 class="site-description">一个正在成长的小菜狗</h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/about'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/link'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                
+                <span>Link</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='https://travellings.now.sh/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Travelling</span>
+            </a>
+        </li>
+        
+
+        
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    <div id="article-toolbar">
+        <a href="https://fushaolei.github.io/" class="back-home">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+            <span>Back</span>
+        </a>
+    </div>
+
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/tech/" >
+                Tech
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/post/android%E9%9D%A2%E8%AF%95%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A/">Android面试必知必会</a>
+    </h2>
+
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">Oct 01, 2020</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+    <h2 id="android">Android</h2>
+<h3 id="一-android的四大组件">一， Android的四大组件</h3>
+<blockquote>
+<p>所有android应用都是由四大组件组成的：Activity，BroadcastReceiver，Service，ContentProvider</p>
+</blockquote>
+<ul>
+<li>Activity：最基本的组件，一个就是一个屏幕，通常都被实现为一个独立的类</li>
+<li>BroadcastReceiver：使用它对外部事件进行过滤，接收并做出响应</li>
+<li>Service：一个服务是具有一个较长生命周期且没有用户界面的程序。</li>
+<li>ContentProvider：使一个应用程序的指定数据集可以提供给其他应用程序。</li>
+</ul>
+<h3 id="二activity的生命周期">二，Activity的生命周期</h3>
+<blockquote>
+<p>参考文章：<a class="link" href="https://www.jianshu.com/p/fb44584daee3"  target="_blank" rel="noopener"
+    >深入理解Activity的生命周期</a></p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/fushaolei/img/20200607214328.png" alt=""  /></p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>onCreate</code></td>
+<td>进行初始化工作，此时<strong>Activity还在后台，不可见</strong></td>
+</tr>
+<tr>
+<td><code>onStart</code></td>
+<td>此时Actvity<strong>已经可见</strong>，但是还没出现在前台，<strong>不可交互</strong></td>
+</tr>
+<tr>
+<td><code>onResume</code></td>
+<td>此时Activity出现在前台并<strong>可交互</strong></td>
+</tr>
+<tr>
+<td><code>onPause</code></td>
+<td>当Activity要跳到另一个Activity或应用正常退出时都会执行这个方法。此时Activity在<strong>前台</strong>并可见</td>
+</tr>
+<tr>
+<td><code>onStop</code></td>
+<td>此时Activity已经<strong>不可见</strong>了，（但是Activity对象还在内存中，没有被销毁）</td>
+</tr>
+<tr>
+<td><code>onDestroy</code></td>
+<td>这个阶段Activity被销毁</td>
+</tr>
+<tr>
+<td><code>onRestart</code></td>
+<td>restart表示重新开始，Activity在这时<strong>可见</strong>，当用户按Home键切换到桌面后又切回来或者从后一个Activity切回前一个Activity就会触发这个方法。这里一般不做什么操作。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="三activity的四个启动方法">三，Activity的四个启动方法</h3>
+<blockquote>
+<p><del>给👴整懵逼了，看都看不懂</del></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>启动模式</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>standard</td>
+<td><strong>标准模式</strong>，每创建一个Activity，都会在任务栈中添加一个实例</td>
+</tr>
+<tr>
+<td>singleTop</td>
+<td><strong>栈顶复用</strong>，如果打开的Activity在任务栈顶，就不在创建，直接复用，如果不在栈顶，就重新创建一个</td>
+</tr>
+<tr>
+<td>singleTask</td>
+<td><strong>栈内复用</strong>，如果打开的Activity在任务栈中，就删除此Activity上面所有的Activity，知道该Activity在栈顶，如果打开的Activity没在任务栈中，直接创建一个新的Activity实例入栈</td>
+</tr>
+<tr>
+<td>singleInstance</td>
+<td><strong>全局唯一</strong>（单例模式），给每一个Activity创建一个任务栈，<strong>独占一个栈</strong>，打开Activity的时候就对所有的任务进行查询，如果有此Activity，直接复用，不用重新创建</td>
+</tr>
+</tbody>
+</table>
+<h3 id="四fragment的生命周期">四，Fragment的生命周期</h3>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>onAttach()</code></td>
+<td>Fragment<strong>和Activity建立关联</strong>的时候调用，被附加到Activity中去。</td>
+</tr>
+<tr>
+<td><code>onCreate()</code></td>
+<td>系统会在创建Fragment时调用此方法。可以<strong>初始化一段资源文件</strong>等等。</td>
+</tr>
+<tr>
+<td><code>onCreateView()</code></td>
+<td>系统会在Fragment<strong>首次绘制其用户界面时调用此方法</strong>。 要想为Fragment绘制 UI，从该方法中返回的 View 必须是Fragment布局的根视图。如果Fragment未提供 UI，您可以返回 null。</td>
+</tr>
+<tr>
+<td><code>onViewCreated()</code></td>
+<td>在Fragment被绘制后，调用此方法，可以<strong>初始化控件资源</strong>。</td>
+</tr>
+<tr>
+<td><code>onActivityCreated()</code></td>
+<td>当onCreate()，onCreateView()，onViewCreated()方法执行完后调用，也就是Activity被渲染绘制出来后。</td>
+</tr>
+<tr>
+<td><code>onPause()</code></td>
+<td>系统将此方法作为用户离开Fragment的第一个信号（但并不总是意味着此Fragment会被销毁）进行调用。 通常可以在此方法内确认在当前用户会话结束后仍然有效的任何更改（因为用户可能不会返回）。</td>
+</tr>
+<tr>
+<td><code>onDestroyView()</code></td>
+<td>Fragment中的布局<strong>被移除</strong>时调用。</td>
+</tr>
+<tr>
+<td><code>onDetach()</code></td>
+<td>Fragment和Activity解除关联的时候调用。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="五service的生命周期">五，service的生命周期</h3>
+<h4 id="通过startservice方式启动服务">通过startService方式启动服务</h4>
+<ol>
+<li>onCreate：首次创建服务时由系统调用</li>
+<li>onStartCommand：每次客户端通过调用显式启动服务时</li>
+<li>onDestroy</li>
+</ol>
+<h4 id="通过bindservice方式启动服务">通过bindService方式启动服务</h4>
+<ol>
+<li>onCreate：首次创建服务时由系统调用</li>
+<li>onBind：绑定服务</li>
+<li>onUnBind：解绑服务</li>
+<li>onDestroy</li>
+</ol>
+<h2 id="java">Java</h2>
+<h3 id="一和equal的区别">一，==和equal的区别</h3>
+<p>先讲==</p>
+<ul>
+<li>如果是基本类型话，比较的是值</li>
+<li>如果是引用数据类型的话，比较的是他们在内存中的地址值</li>
+</ul>
+<p>然后是equal</p>
+<ul>
+<li>引用类型：默认情况下，比较的是地址值。</li>
+</ul>
+<h3 id="二stringbufffer与stringbuilder的区别">二，stringbufffer与stringbuilder的区别</h3>
+<ul>
+<li>StringBuffer是<strong>线程安全</strong>的</li>
+<li>StringBuilder是<strong>非线程安全</strong>的（简单来说就是StringBuilder的append方法没有实现同步锁synchronized机制，而StringBuffer实现了，这也是StringBuffer效率比较低的原因）</li>
+</ul>
+<h4 id="扩展什么叫线程安全什么叫线程不安全">扩展：什么叫线程安全，什么叫线程不安全</h4>
+<ul>
+<li><strong>线程安全</strong>
+<ul>
+<li>就是<strong>多线程</strong>访问时，采用了加锁机制，当一个线程访问该类的某个数据时，进行保护，其他线程不能进行访问直到该线程<strong>读/写</strong>完，其他线程才可使用。不会出现数据不一致或者数据污染。</li>
+</ul>
+</li>
+<li><strong>线程不安全</strong>
+<ul>
+<li>就是<strong>不提供数据访问保护</strong>，有可能出现多个线程先后更改数据造成所得到的数据是脏数据。</li>
+</ul>
+</li>
+</ul>
+<h3 id="三listsetmap的区别">三，List，Set，Map的区别</h3>
+<ul>
+<li><code>List</code>的元素以线性方式存储，可以存放重复对象</li>
+<li><code>Set</code>中的对象不按特定(HashCode)的方式排序，并且没有重复对象</li>
+<li><code>Map</code>是一种把键对象和值对象映射的集合，它的每一个元素都包含一个键对象和值对象，是无序的</li>
+</ul>
+<h3 id="四重载和重写有什么区别">四，重载和重写有什么区别</h3>
+<ul>
+<li>重载：是在一个类里面，方法名字相同，<strong>而参数不同，返回类型也可以不同</strong> 的方法</li>
+<li>重写：在子类存在方法与父类的方法的名字相同，<strong>且参数的个数一样，返回值类型也一样</strong>的方法</li>
+</ul>
+<h3 id="五请简述面向对象">五，请简述面向对象</h3>
+<ul>
+<li>封装：把一个<strong>对象的属性私有化，同时提供一些可以被外界访问的属性的方法</strong></li>
+<li>继承：继承是指<strong>当A类继承B类时（关键字<code>extends</code>），A类就自动获得B类的所有功能</strong></li>
+<li>多态：<strong>针对某个类型的方法调用，其真正执行的方法取决于运行时期实际类型的方法</strong> （重载，重写）</li>
+</ul>
+<h3 id="六抽象和接口的区别">六，抽象和接口的区别</h3>
+<ul>
+<li>最大的一个区别：就是<code>interface</code>中只能定义方法，而不能有方法的实现，而在<code>abstract class</code>中则可以既有方法的具体实现，又有 没有具体实现的抽象方法</li>
+<li>一个类只能有一个继承类，但可以实现多个接口</li>
+</ul>
+<h3 id="七arraylist和linkedlist有什么区别">七，ArrayList和LinkedList有什么区别</h3>
+<ul>
+<li><strong>ArrayList</strong>：底层数据结构是<strong>数组</strong>，查询快，增删慢，线程不安全，效率高，可以存储重复元素</li>
+<li><strong>LinkedList</strong> 底层数据结构是<strong>链表</strong>，查询慢，增删快，线程不安全，效率高，可以存储重复元素</li>
+</ul>
+<h4 id="扩展一数组和链表有什么区别">扩展一：数组和链表有什么区别</h4>
+<ul>
+<li>数组是基于索引的数据结构，其中每个元素与索引相关联。</li>
+<li>链表 依赖于引用，其中每个节点由数据和对前一个和下一个元素的引用组成。</li>
+</ul>
+<h3 id="八基本类型">八，基本类型</h3>
+<table>
+<thead>
+<tr>
+<th>基本类型</th>
+<th>位数</th>
+<th>字节</th>
+<th>默认值</th>
+<th>对应的包装器类</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td>32</td>
+<td>4</td>
+<td>0</td>
+<td><code>Integer</code></td>
+</tr>
+<tr>
+<td><code>short</code></td>
+<td>16</td>
+<td>2</td>
+<td>0</td>
+<td><code>Short</code></td>
+</tr>
+<tr>
+<td><code>long</code></td>
+<td>64</td>
+<td>8</td>
+<td>0L</td>
+<td><code>Long</code></td>
+</tr>
+<tr>
+<td><code>byte</code></td>
+<td>8</td>
+<td>1</td>
+<td>0</td>
+<td><code>Byte</code></td>
+</tr>
+<tr>
+<td><code>char</code></td>
+<td>16</td>
+<td>2</td>
+<td>&lsquo;u0000&rsquo;</td>
+<td><code>Character</code></td>
+</tr>
+<tr>
+<td><code>float</code></td>
+<td>32</td>
+<td>4</td>
+<td>0f</td>
+<td><code>Float</code></td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td>64</td>
+<td>8</td>
+<td>0d</td>
+<td><code>Double</code></td>
+</tr>
+<tr>
+<td><code>boolean</code></td>
+<td>1</td>
+<td></td>
+<td>false</td>
+<td><code>Boolean</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注意:</p>
+</blockquote>
+<ol>
+<li>Java 里使用<code>long</code>类型的数据一定要在数值后面加上<strong>L</strong>，否则将作为整型解析</li>
+<li>char a = &lsquo;h&rsquo; char :单引号，String a = &ldquo;hello&rdquo; ：双引号</li>
+</ol>
+<h2 id="九hashset和hashmap的区别">九，HashSet和HashMap的区别</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">HashMap</th>
+<th style="text-align:center">HashSet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">HashMap实现了<strong>Map接口</strong></td>
+<td style="text-align:center">HashSet实现了<strong>Set接口</strong></td>
+</tr>
+<tr>
+<td style="text-align:left">HashMap储存键值对</td>
+<td style="text-align:center">HashSet仅仅存储对象</td>
+</tr>
+<tr>
+<td style="text-align:left">使用put()方法将元素放入map中</td>
+<td style="text-align:center">使用add()方法将元素放入set中</td>
+</tr>
+<tr>
+<td style="text-align:left">HashMap中使用键对象来计算hashcode值</td>
+<td style="text-align:center">HashSet使用成员对象来计算hashcode值，对于两个对象来说hashcode可能相同，所以equals()方法用来判断对象的相等性，如果两个对象不同的话，那么返回false</td>
+</tr>
+<tr>
+<td style="text-align:left">HashMap比较快，因为是使用唯一的键来获取对象</td>
+<td style="text-align:center">HashSet较HashMap来说比较慢</td>
+</tr>
+</tbody>
+</table>
+<h3 id="十如何实现多线程">十，如何实现多线程</h3>
+<ul>
+<li>继承Thread类</li>
+<li>实现Runnable接口</li>
+</ul>
+<h2 id="网络原理">网络原理</h2>
+<h3 id="一http和https的区别">一，Http和Https的区别</h3>
+<ul>
+<li>Http协议以<strong>明文方式</strong>发送内容，安全性较差，80端口</li>
+<li>Https是在Http下加入SSL层进行加密，安全性高，443端口</li>
+</ul>
+<h3 id="二get和post有什么区别">二，Get和Post有什么区别</h3>
+<ul>
+<li>Get：当客户端要从服务器中读取某个资源时用Get，Get参数通过URL传递，传递的参数有长度限制，不能用来传敏感信息</li>
+<li>Post：当客户端要给服务器提供信息较多的时候可用Post，Post将请求参数封装在HTTP请求数据中，可以传输大量数据，传参方式也比Get更安全</li>
+</ul>
+<h3 id="三tcp和udp有什么区别">三，TCP和UDP有什么区别</h3>
+<ul>
+<li>TCP：面向连接的可靠传输协议
+<ul>
+<li>发送数据前必须建立连接</li>
+<li>提供可靠交付</li>
+<li>面向字节流</li>
+<li>有拥塞控制机制</li>
+<li>仅支持一对一</li>
+<li>首部开销大</li>
+</ul>
+</li>
+<li>UDP：非连接协议
+<ul>
+<li>发送数据前不需要建立连接</li>
+<li>尽最大努力交付，不保证可靠传输</li>
+<li>面向报文</li>
+<li>无拥塞控制</li>
+<li>支持一对一，多对一，多对一，多对多</li>
+<li>首部开销小</li>
+</ul>
+</li>
+</ul>
+<h3 id="四简单解释下tcp建立连接的三次握手和断开连接的四次挥手">四，简单解释下TCP建立连接的三次握手和断开连接的四次挥手</h3>
+<ul>
+<li>三次握手
+<ul>
+<li>A向B发送请求，告知B：我要和你通信</li>
+<li>B收到A的请求后，返回消息给A：我收到你的请求了，你可以传数据了</li>
+<li>A收到后再发送一个确认应答，确认已收到B的数据段，三次握手完成</li>
+</ul>
+</li>
+<li>四次挥手
+<ul>
+<li>A向b提出停止连接的请求</li>
+<li>B收到请求后确认连接将关闭</li>
+<li>B再提出反方向的关闭请求给A</li>
+<li>A对B的请求进行确认，四次挥手结束</li>
+</ul>
+</li>
+</ul>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+</aside>
+
+
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "fushaolei" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2021 任我行
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.0.1">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
+            </main>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"
+    integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin="anonymous"></script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

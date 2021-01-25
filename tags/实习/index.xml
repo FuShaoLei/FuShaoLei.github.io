@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>实习 on Sorryfu Blog.</title>
+    <title>实习 on 任我行</title>
     <link>https://fushaolei.github.io/tags/%E5%AE%9E%E4%B9%A0/</link>
-    <description>Recent content in 实习 on Sorryfu Blog.</description>
+    <description>Recent content in 实习 on 任我行</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
+    <language>en-us</language>
     <lastBuildDate>Tue, 15 Dec 2020 15:07:39 +0000</lastBuildDate><atom:link href="https://fushaolei.github.io/tags/%E5%AE%9E%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在新浪实习是一种什么体验？</title>
-      <link>https://fushaolei.github.io/post/work-in-sina/</link>
+      <link>https://fushaolei.github.io/post/%E5%9C%A8%E6%96%B0%E6%B5%AA%E5%AE%9E%E4%B9%A0%E6%98%AF%E4%B8%80%E7%A7%8D%E4%BB%80%E4%B9%88%E4%BD%93%E9%AA%8C/</link>
       <pubDate>Tue, 15 Dec 2020 15:07:39 +0000</pubDate>
       
-      <guid>https://fushaolei.github.io/post/work-in-sina/</guid>
+      <guid>https://fushaolei.github.io/post/%E5%9C%A8%E6%96%B0%E6%B5%AA%E5%AE%9E%E4%B9%A0%E6%98%AF%E4%B8%80%E7%A7%8D%E4%BB%80%E4%B9%88%E4%BD%93%E9%AA%8C/</guid>
       <description>初见 新浪大厦位于海淀区西北旺东路10号院8号楼，旁边就是网易，百度，腾讯等大厂，刚刚来公司的时候看的这个场景还是蛮震撼的。离我租的宿舍大概三四公里这样，然后每天我都要骑那么二三十分钟的车才能到这里（就当作锻炼了）
  坐过一次公司的大巴，太特么晕了@_@，差点吐在车里，此后就再也没有坐过。。。
  办完入职手续后，组里的leader便来接我了，然后就是安环境(用于code review的环境)，然后熟悉熟悉代码什么的。中午的时候还是大佬们带我去吃的午饭，然后逛逛新浪大厦什么的，熟悉熟悉环境。
