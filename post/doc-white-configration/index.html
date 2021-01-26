@@ -23,7 +23,7 @@ archive_img_mode:default_cover:#默认的cover- https://cdn.jsdelivr.net/gh/fush
  浏览器标签页配置 # iconicon:#标签页图标，这里可填链接# headersite_name:white.menu menu:HOME:/BLOG:/archives全局搜索 ## 本地搜索search:open:false# 是否开启page:/search# 页面路径（通常命名为search）如果你想使用的话，请先到根目录执行'>
 <meta property='og:url' content='https://fushaolei.github.io/post/doc-white-configration/'>
 <meta property='og:site_name' content='任我行'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2020-08-09T23:31:29&#43;00:00'/><meta property='article:modified_time' content='2020-08-09T23:31:29&#43;00:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hexo' /><meta property='article:published_time' content='2020-08-09T23:31:29&#43;00:00'/><meta property='article:modified_time' content='2020-08-09T23:31:29&#43;00:00'/><meta property='og:image' content='https://cdn.jsdelivr.net/gh/fushaolei/img2/20200726101450.png' />
 <meta name="twitter:title" content="white主题配置">
 <meta name="twitter:description" content="👋Hi there 欢迎使用本主题 ，White 是一个在个性和极简之间徘徊的主题，（因为作者本身性格就是这样的人，而且搞不好心态爆炸会删库跑路（现已跑路。。。），还请喜欢的各位及时fork🤣
 如果你喜欢这款主题的话，不妨给我一个star 感激不尽！
@@ -32,7 +32,8 @@ archive_img_mode:default_cover:#默认的cover- https://cdn.jsdelivr.net/gh/fush
  可自定义style ############## style ##############style:layout:max-width:1130px#总体宽度post-max-width:800px#文章内容宽度color:theme-main:&amp;#34;#1A98FF&amp;#34;# 主色调theme-secondary:&amp;#34;#DDF0FF&amp;#34;# 次色调text-main:&amp;#34;#333333&amp;#34;# 文字主色调text-secondary:&amp;#34;#898FA0&amp;#34;# 文字次色调animation:open:true# 如果开启动画的话会引入animation.css主页配置 home页和archive可选配置 # home页可选类型home:type:&amp;#34;img&amp;#34;# 主页的类型，可选 home | img | simple# archive页可选类型archive:type:&amp;#34;simple&amp;#34;# archive的类型，可选 img | simpletype为home就是一个封面，为img就是图片加标题的形式，simple就是极简模式
 随机cover 当你懒的找封面而又想用img模式的时候，我为你准备了些随机封面
 archive_img_mode:default_cover:#默认的cover- https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/01.jpg- https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/02.jpg- https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/03.jpg- https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/04.jpg- https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/05.jpg- https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/06.jpg 图片均来自于bing的每日图片，版权归图片原作者所有，我只是搬到了自己的仓库方便使用，如果有侵犯到你的权益，请和我联系 ( •̀ ω •́ )y
- 浏览器标签页配置 # iconicon:#标签页图标，这里可填链接# headersite_name:white.menu menu:HOME:/BLOG:/archives全局搜索 ## 本地搜索search:open:false# 是否开启page:/search# 页面路径（通常命名为search）如果你想使用的话，请先到根目录执行">
+ 浏览器标签页配置 # iconicon:#标签页图标，这里可填链接# headersite_name:white.menu menu:HOME:/BLOG:/archives全局搜索 ## 本地搜索search:open:false# 是否开启page:/search# 页面路径（通常命名为search）如果你想使用的话，请先到根目录执行"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://cdn.jsdelivr.net/gh/fushaolei/img2/20200726101450.png' />
     <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/fushaolei/img/20200524104925.jpg" />
 
     </head>
@@ -177,8 +178,16 @@ archive_img_mode:default_cover:#默认的cover- https://cdn.jsdelivr.net/gh/fush
         </a>
     </div>
 
-    <article class="main-article">
+    <article class="has-image main-article">
     <header class="article-header">
+        <div class="article-image">
+            <a href="/post/doc-white-configration/">
+                
+                    <img src="https://cdn.jsdelivr.net/gh/fushaolei/img2/20200726101450.png" loading="lazy" alt="Featured image of post white主题配置" />
+                
+            </a>
+        </div>
+    
 
     <div class="article-details">
     
@@ -388,6 +397,12 @@ min设置的是最小深度，max设置的是最大深度，<del>如上面配置
 
     <footer class="article-footer">
     
+    <section class="article-tags">
+        
+            <a href="/tags/hexo/">Hexo</a>
+        
+    </section>
+
 
     
     <section class="article-copyright">

@@ -13,25 +13,7 @@
       <pubDate>Tue, 12 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://fushaolei.github.io/post/common-git/</guid>
-      <description>指令 说明     git add . 将修改放入暂存区   git status 查看状态   git log 查看commit版本号   git reset --hard 版本号 版本回退，hard强制回退，soft的话会保留修改   git stash 将修改保存起来   git stash save &amp;quot;xxx&amp;quot; 将修改保存起来，并设置这个保存的标签   git stash apply stash@{x} 将修改移出来        懒的写了，待补充。。。</description>
-    </item>
-    
-    <item>
-      <title>Android MVP模式笔记</title>
-      <link>https://fushaolei.github.io/post/android-mvp/</link>
-      <pubDate>Tue, 06 Oct 2020 13:34:37 +0000</pubDate>
-      
-      <guid>https://fushaolei.github.io/post/android-mvp/</guid>
-      <description>前言 以前有学过，感觉理解不了，然后又用不到，然后就不了了之了 QAQ，现在因为实习公司的项目有用到，如果不学的话感觉根本看不懂项目（其实学完之后还是看不懂😂），所以就重新学过，顺便记录一下
-2021年1月13日补充 当初想的窄了，从细枝末节入手，缺乏一个全局的观念，现在想起来，其实下面所说的预备知识，其实是为优化MVP模式所服务的。
-预备知识  面向接口的编程思想 向上转型的概念 解耦  面向接口编程 先复习一下接口的概念：
-在Java程序设计语言中，接口不是类，而是对希望符合这个接口的类的一组需求（出自《Java核心卷一》p222页） 说白了，接口就是一组需求
-而面向接口编程呢，就是在开始开发前，先定义好接口（可以理解为先列出一组需求），然后再进行开发
-向上转型 即父类引用指向子类对象（即多态），看完下面的代码应该更好理解些
-public interface IStudent { String getName(); } public class Student implements IStudent{//此时IStudent是父类，Student是子类  @Override public String getName() { return &amp;#34;任我行&amp;#34;; } } public class Test { public static void main(String[] args) { IStudent iStudent; iStudent=new Student();//父类引用指向子类的对象，这里做了向上转型  System.out.println(&amp;#34;学生的名字是：&amp;#34;+iStudent.getName());//打印结果：学生的名字是：任我行  } } 解耦 解耦即降低依赖性
-MVP模式 Actually，我觉得MVP模式的灵魂就是presenter层同时持有view层和model层的引用（请联系上边的向上转型的概念）。
- 照此逻辑，我们简单实现一个常见的登录模块。根据面向接口编程，我们首先列出我们的接口（需求）：
-/** * View层的需求 */ public interface IView { //1.</description>
+      <description>   指令 说明     git add . 将修改放入暂存区   git status 查看状态   git log 查看commit版本号   git reset --hard 版本号 版本回退，hard强制回退，soft的话会保留修改   git stash 将修改保存起来   git stash save &amp;quot;xxx&amp;quot; 将修改保存起来，并设置这个保存的标签   git stash apply stash@{x} 将修改移出来   git branch -vv 查看本地分支是否与远端分支建立了连接   git push origin &amp;lt;分支名&amp;gt;:&amp;lt;分支名&amp;gt; 仅仅将本地分支推送到远端分支， 注意:这个操作只是单纯的把本地的分支推送到远端,尚未建立连接   git push --set-upstream origin &amp;lt;分支名&amp;gt; 将本地分支推送到远端分支并建立连接   git checkout -b &amp;lt;分支名&amp;gt; origin/&amp;lt;分支名&amp;gt; 拉取远程分支到本地（本地与远程建立连接，前提是本地已经有其他分支了）    </description>
     </item>
     
   </channel>

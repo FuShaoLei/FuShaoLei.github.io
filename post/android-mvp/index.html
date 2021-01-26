@@ -10,11 +10,11 @@
 public interface IStudent { String getName(); } public class Student implements IStudent{//此时IStudent是父类，Student是子类  @Override public String getName() { return &amp;#34;任我行&amp;#34;; } } public class Test { public static void main(String[] args) { IStudent iStudent; iStudent=new Student();//父类引用指向子类的对象，这里做了向上转型  System.out.println(&amp;#34;学生的名字是：&amp;#34;&#43;iStudent.getName());//打印结果：学生的名字是：任我行  } } 解耦 解耦即降低依赖性
 MVP模式 Actually，我觉得MVP模式的灵魂就是presenter层同时持有view层和model层的引用（请联系上边的向上转型的概念）。
  照此逻辑，我们简单实现一个常见的登录模块。根据面向接口编程，我们首先列出我们的接口（需求）：
-/** * View层的需求 */ public interface IView { //1.'><title>Android MVP模式笔记</title>
+/** * View层的需求 */ public interface IView { //1.'><title>Android MVP模式</title>
 
 <link rel='canonical' href='https://fushaolei.github.io/post/android-mvp/'>
 
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Android MVP模式笔记'>
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Android MVP模式'>
 <meta property='og:description' content='前言 以前有学过，感觉理解不了，然后又用不到，然后就不了了之了 QAQ，现在因为实习公司的项目有用到，如果不学的话感觉根本看不懂项目（其实学完之后还是看不懂😂），所以就重新学过，顺便记录一下
 2021年1月13日补充 当初想的窄了，从细枝末节入手，缺乏一个全局的观念，现在想起来，其实下面所说的预备知识，其实是为优化MVP模式所服务的。
 预备知识  面向接口的编程思想 向上转型的概念 解耦  面向接口编程 先复习一下接口的概念：
@@ -27,8 +27,8 @@ MVP模式 Actually，我觉得MVP模式的灵魂就是presenter层同时持有vi
 /** * View层的需求 */ public interface IView { //1.'>
 <meta property='og:url' content='https://fushaolei.github.io/post/android-mvp/'>
 <meta property='og:site_name' content='任我行'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='设计模式' /><meta property='article:tag' content='Android' /><meta property='article:tag' content='学习笔记' /><meta property='article:published_time' content='2020-10-06T13:34:37&#43;00:00'/><meta property='article:modified_time' content='2020-10-06T13:34:37&#43;00:00'/>
-<meta name="twitter:title" content="Android MVP模式笔记">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='设计模式' /><meta property='article:tag' content='Android' /><meta property='article:published_time' content='2020-10-06T13:34:37&#43;00:00'/><meta property='article:modified_time' content='2020-10-06T13:34:37&#43;00:00'/>
+<meta name="twitter:title" content="Android MVP模式">
 <meta name="twitter:description" content="前言 以前有学过，感觉理解不了，然后又用不到，然后就不了了之了 QAQ，现在因为实习公司的项目有用到，如果不学的话感觉根本看不懂项目（其实学完之后还是看不懂😂），所以就重新学过，顺便记录一下
 2021年1月13日补充 当初想的窄了，从细枝末节入手，缺乏一个全局的观念，现在想起来，其实下面所说的预备知识，其实是为优化MVP模式所服务的。
 预备知识  面向接口的编程思想 向上转型的概念 解耦  面向接口编程 先复习一下接口的概念：
@@ -188,17 +188,9 @@ MVP模式 Actually，我觉得MVP模式的灵魂就是presenter层同时持有vi
 
     <div class="article-details">
     
-    <header class="article-category">
-        
-            <a href="/categories/tech/" >
-                Tech
-            </a>
-        
-    </header>
-    
 
     <h2 class="article-title">
-        <a href="/post/android-mvp/">Android MVP模式笔记</a>
+        <a href="/post/android-mvp/">Android MVP模式</a>
     </h2>
 
     <footer class="article-time">
@@ -385,8 +377,6 @@ MVP模式 Actually，我觉得MVP模式的灵魂就是presenter层同时持有vi
         
             <a href="/tags/android/">Android</a>
         
-            <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
-        
     </section>
 
 
@@ -409,68 +399,6 @@ MVP模式 Actually，我觉得MVP模式的灵魂就是presenter层同时持有vi
 
     <aside class="related-contents--wrapper">
     
-    
-        <h2 class="section-title">相关文章</h2>
-        <div class="related-contents">
-            <div class="article-list--compact">
-                
-                    <article>
-    <a href="/post/java-interview-note/">
-        <div class="article-details">
-            <h2 class="article-title">Java面试必知必会</h2>
-            <footer class="article-time">
-                <time datetime='2020-10-01T12:11:32Z'>Oct 01, 2020</time>
-            </footer>
-        </div>
-    </a>
-</article>
-                
-                    <article>
-    <a href="/post/android-interview/">
-        <div class="article-details">
-            <h2 class="article-title">Android面试必知必会</h2>
-            <footer class="article-time">
-                <time datetime='2020-10-01T11:56:39Z'>Oct 01, 2020</time>
-            </footer>
-        </div>
-    </a>
-</article>
-                
-                    <article>
-    <a href="/post/git-commit-note/">
-        <div class="article-details">
-            <h2 class="article-title">Git Commit规范化</h2>
-            <footer class="article-time">
-                <time datetime='2020-09-30T22:09:46Z'>Sep 30, 2020</time>
-            </footer>
-        </div>
-    </a>
-</article>
-                
-                    <article>
-    <a href="/post/spring-note/">
-        <div class="article-details">
-            <h2 class="article-title">Spring笔记</h2>
-            <footer class="article-time">
-                <time datetime='2020-08-17T09:27:43Z'>Aug 17, 2020</time>
-            </footer>
-        </div>
-    </a>
-</article>
-                
-                    <article>
-    <a href="/post/interview-water/">
-        <div class="article-details">
-            <h2 class="article-title">面试流程</h2>
-            <footer class="article-time">
-                <time datetime='2020-08-14T15:57:53Z'>Aug 14, 2020</time>
-            </footer>
-        </div>
-    </a>
-</article>
-                
-            </div>
-        </div>
     
 </aside>
 
