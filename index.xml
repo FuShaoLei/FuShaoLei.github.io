@@ -1596,7 +1596,7 @@ function trimNumber(str){
         <pubDate>Sun, 09 Aug 2020 23:31:29 +0000</pubDate>
         
         <guid>https://fushaolei.github.io/post/doc-white-configration/</guid>
-        <description>&lt;img src="https://cdn.jsdelivr.net/gh/fushaolei/img2/20200726101450.png" alt="Featured image of post white主题配置" /&gt;&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img2/20200726101450.png&#34; alt=&#34;&#34;  /&gt;&lt;/p&gt;
+        <description>&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/fushaolei/img2/20200726101450.png&#34; alt=&#34;&#34;  /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;hi-there&#34;&gt;👋Hi there&lt;/h2&gt;
 &lt;p&gt;欢迎使用本主题 ，&lt;strong&gt;White&lt;/strong&gt; 是一个在个性和极简之间徘徊的主题，（因为作者本身性格就是这样的人，而且搞不好心态爆炸会删库跑路（现已跑路。。。），还请喜欢的各位及时fork🤣&lt;/p&gt;
 &lt;p&gt;如果你喜欢这款主题的话，不妨给我一个star 感激不尽！&lt;/p&gt;

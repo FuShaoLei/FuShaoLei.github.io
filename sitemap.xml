@@ -103,22 +103,12 @@
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/categories/</loc>
-    <lastmod>2020-12-08T22:04:03+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://fushaolei.github.io/tags/recyclerview/</loc>
     <lastmod>2020-12-08T22:04:03+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://fushaolei.github.io/post/recyclerview-multi-style/</loc>
-    <lastmod>2020-12-08T22:04:03+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://fushaolei.github.io/categories/tech/</loc>
     <lastmod>2020-12-08T22:04:03+00:00</lastmod>
   </url>
   
@@ -235,6 +225,10 @@
   <url>
     <loc>https://fushaolei.github.io/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://fushaolei.github.io/categories/</loc>
   </url>
   
   <url>
