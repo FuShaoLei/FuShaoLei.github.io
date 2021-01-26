@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Fri, 15 Jan 2021 13:34:37 +0000</lastBuildDate><atom:link href="https://fushaolei.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>《Java核心技术I》读书笔记</title>
+        <title>《Java核心技术I》笔记</title>
         <link>https://fushaolei.github.io/post/core-java-note/</link>
         <pubDate>Fri, 15 Jan 2021 13:34:37 +0000</pubDate>
         
@@ -1313,12 +1313,13 @@ Subscribers: #订阅者
 </description>
         </item>
         <item>
-        <title>Kotlin基本要素</title>
-        <link>https://fushaolei.github.io/post/kotlin-note-base-element/</link>
+        <title>《Kotlin实战》笔记</title>
+        <link>https://fushaolei.github.io/post/kotlin-in-action-note/</link>
         <pubDate>Tue, 06 Oct 2020 13:34:37 +0000</pubDate>
         
-        <guid>https://fushaolei.github.io/post/kotlin-note-base-element/</guid>
-        <description>&lt;h2 id=&#34;第一个kotlin程序&#34;&gt;第一个Kotlin程序&lt;/h2&gt;
+        <guid>https://fushaolei.github.io/post/kotlin-in-action-note/</guid>
+        <description>&lt;h2 id=&#34;第-2章-kotlin基础&#34;&gt;第 2章	 Kotlin基础&lt;/h2&gt;
+&lt;h3 id=&#34;第一个kotlin程序&#34;&gt;第一个Kotlin程序&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;&lt;span class=&#34;k&#34;&gt;fun&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Array&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//以fun关键字定义函数体
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Hello World&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//省略了分号
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;较大的是：&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;max&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
@@ -1330,7 +1331,7 @@ Subscribers: #订阅者
 &lt;span class=&#34;c1&#34;&gt;//另一种写法：
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;fun&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;max2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Int&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;//这里max和max2的:Int可以省略，编译器会帮你分析表达式体函数，并把它的类型作为函数返回类型
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;变量&#34;&gt;变量&lt;/h2&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;变量&#34;&gt;变量&lt;/h3&gt;
 &lt;p&gt;关键字&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;val&lt;/code&gt;：不可变引用（相当于Java的加上了final关键字）&lt;/li&gt;
@@ -1340,7 +1341,7 @@ Subscribers: #订阅者
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;k&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;py&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;gulugulu&amp;#34;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//b的类型是String
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;k&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;py&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Char&lt;/span&gt;
     &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;sc&#34;&gt;&amp;#39;x&amp;#39;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;字符串模板&#34;&gt;字符串模板&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;字符串模板&#34;&gt;字符串模板&lt;/h3&gt;
 &lt;p&gt;可用&lt;code&gt;$&lt;/code&gt;或&lt;code&gt;${}&lt;/code&gt;来注入到字符串中&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;&lt;span class=&#34;k&#34;&gt;fun&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Array&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
     &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;py&#34;&gt;name&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Kotlin&amp;#34;&lt;/span&gt;
@@ -1354,7 +1355,7 @@ Subscribers: #订阅者
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Hello&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Kotlin&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;Hello&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;小于&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;Hello&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;类和属性&#34;&gt;类和属性&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;类和属性&#34;&gt;类和属性&lt;/h3&gt;
 &lt;p&gt;声明一个类&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Person&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
         &lt;span class=&#34;c1&#34;&gt;//当声明了属性之后，就生成了对应的访问器
@@ -1374,7 +1375,7 @@ Subscribers: #订阅者
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;isMarried&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;的值是：&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;false&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;isMarried&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;的值是：&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;true&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;可以发现，只要简单的定义了类，编译器就会帮助我们生成相应的getter和setter以及构造方法，这相比于java真是大大滴方便啊&lt;/p&gt;
-&lt;h2 id=&#34;when&#34;&gt;when&lt;/h2&gt;
+&lt;h3 id=&#34;when&#34;&gt;when&lt;/h3&gt;
 &lt;p&gt;在kotlin里，when可以有多种用法&lt;/p&gt;
 &lt;p&gt;第一种用法，相当于java中的switch语句&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;fun&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Array&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
@@ -1389,7 +1390,7 @@ Subscribers: #订阅者
 &lt;span class=&#34;c1&#34;&gt;//输出
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;优秀&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;第二种用法。。emmm改天写&lt;/p&gt;
-&lt;h2 id=&#34;空安全设定&#34;&gt;空安全设定&lt;/h2&gt;
+&lt;h3 id=&#34;空安全设定&#34;&gt;空安全设定&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;不可空类型&lt;/p&gt;
@@ -1398,7 +1399,7 @@ Subscribers: #订阅者
 &lt;p&gt;可空类型&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;一些关键字&#34;&gt;一些关键字&lt;/h2&gt;
+&lt;h3 id=&#34;一些关键字&#34;&gt;一些关键字&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
