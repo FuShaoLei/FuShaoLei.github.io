@@ -58,23 +58,7 @@ mWebView.getSettings().setJavaScriptEnabled(true);//启用js mWebView.getSetting
  使用RelativeLayout布局时各种乱七八糟的属性  总结如下
  与parent相对的属性    属性 说明     layout_alignParentTop 表示widget的顶部和Container的顶部对齐。   layout_alignParentBottom 表示widget的底部和Container的底部对齐。   layout_alignParentStart 表示widget的左边和Container的起始边缘对齐。   layout_alignParentEnd 表示widget的左边和Container的结束边缘对齐。   layout_alignParentLeft 表示widget的左边和Container的左边对齐。   layout_alignParentRight 表示widget的右边和Container的右边对齐。   layout_centerInParent 表示widget处于Container平面上的正中间。   layout_alignWithParentIfMissing 若设置true，则当该控件layout_toLeftOf, layout_toRightOf等找不到相对的参考widget时，就以父container为参考。    与widget相对的布局    属性 说明     layout_above 表示该widget位于参数值标识的widget的上方。   layout_below 表示该widget位于参数值标识的widget的下方。   layout_alignTop 表示该widget的顶部与参数值标识的widget的顶部对齐。   layout_alignBottom 表示该widget的底部与参数值标识的widget的**底部*8对齐。   layout_alignStart 表示该widget的起始边缘与参数值标识的widget的起始边缘对齐。   layout_alignEnd 表示该widget的结束边缘与参数值标识的widget的结束边缘对齐   layout_alignLeft 表示该widget的左边与参数值标识的widget的左边对齐。   layout_alignRight 表示该widget的右边参数值标识的widget的右边对齐。   layout_centerHorizontal 表示widget处于Container水平方向上的中间。   layout_centerVertical 表示widget处于Container垂直方向上的中间。   layout_alignBaseline 表示该widget的BaseLine与参数值标识的widget的BaseLine对齐。   layout_toLeftOf 表示该widget位于参数值标识的widget的左方。   layout_toRightOf 表示该widget位于参数值标识的widget的右方。   layout_toStartOf 🚩表示该widget结束边缘与参数值标识的widget的起始边缘对齐   layout_toEndOf 🚩表示该widget起始边缘与参数值标识的widget的结束边缘对齐    延时  场景：（android）点击首页的listview里的item后进入详情页时进行锚点（用户看不到锚点动作）">
     <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/fushaolei/img/20200524104925.jpg" />
-<style>
-    :root {
-        --article-font-family: "Noto Serif SC", var(--base-font-family);
-    }
-</style>
 
-<script>
-		(function () {
-		    const customFont = document.createElement('link');
-		    customFont.href = "<https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap>";
-		
-		    customFont.type = "text/css";
-		    customFont.rel = "stylesheet";
-		
-		    document.head.appendChild(customFont);
-		}());
-</script>
     </head>
     <body class="">
     <script>

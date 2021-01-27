@@ -28,23 +28,7 @@
 图解 作用  将数据和视图分开了，数据改变时，不需要修改视图组件，只需更新Adapter 对于同一组数据，可以显示为不同的视图形式  常用Adapter  ArrayAdapter：最简单的适配器，数据源为文本字符串数组。 SimpleAdapter：简单适配器，数据源结构比较复杂，一般为List类型对象。 SimpleCursorAdapter：游标适配器，数据源一般为数据库中（SQLite）的数据。 自定义适配器：更灵活的适配器，数据源不定（由用户自行指定），需要继承BaseAdapter抽象类。   实际项目中，自定义适配器用的比较多
  基本流程  准备数据源 准备AdapterView每一个子项（item）的视图布局。 创建Adapter（连接数据源和视图布局）。 为指定AdapterView视图组件绑定适配器。 为AdapterView绑定（item）事件监听器。  自定义Adapter 基础样式 /** * 继承BaseAdapter后需要完成四个方法 * 1. getCount() 获得数据的条数 * 2. getItem(int position) 获取每个item显示的数据对象 * 3. getItemId(int position) 获取每个item的id的值 * 4. getView(int position, View convertView, ViewGroup parent) 获取item的视图对象 */ public class MyAdapter extends BaseAdapter { /** * 三个必要的东西： * 1.">
     <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/fushaolei/img/20200524104925.jpg" />
-<style>
-    :root {
-        --article-font-family: "Noto Serif SC", var(--base-font-family);
-    }
-</style>
 
-<script>
-		(function () {
-		    const customFont = document.createElement('link');
-		    customFont.href = "<https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap>";
-		
-		    customFont.type = "text/css";
-		    customFont.rel = "stylesheet";
-		
-		    document.head.appendChild(customFont);
-		}());
-</script>
     </head>
     <body class="">
     <script>
