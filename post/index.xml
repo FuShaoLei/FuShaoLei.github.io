@@ -46,7 +46,7 @@
       
       <guid>https://fushaolei.github.io/post/reinstall-sys/</guid>
       <description> 因为自己会不定时的会重置电脑（因为处女座的一些奇怪特性？），所以写下此文备用
- 1.win10设置  全屏幕显示“开始”菜单  2.环境相关  JDK环境配置 Git安装与配置，配置ssh MySQL安装与配置，坑  3.常用软件及网址 软件  火绒：用来杀毒的，虽然可能没什么毒。。 迅雷：对 你没看错，就是迅雷，虽然他广告多，但是有时在浏览器上下不动的东西在迅雷上会莫名的下的很快 JetBrains系列产品  IDEA：配置maven DataGrip：数据库管理   Android Studio：Android 开发者必用软件 Typora ：用于书写markdown Git ：用于上传代码到远端的工具 VScode ：用于开发，几乎什么格式的都能打开，再加上各种各样的神奇插件，这个软件简直无敌 Sumatra PDF阅读器：一款小巧的pdf阅读器，缺点是颜值太低咯QAQ  网址 kindle相关 优化设置
+ 1.win10设置  全屏幕显示“开始”菜单  2.环境相关  JDK环境配置 Git安装与配置，配置ssh MySQL安装与配置，坑  3.常用软件及网址 软件  火绒：用来杀毒的，虽然可能没什么毒。。 迅雷：对 你没看错，就是迅雷，虽然他广告多，但是有时在浏览器上下不动的东西在迅雷上会莫名的下的很快 JetBrains系列产品  IDEA：配置maven DataGrip：数据库管理   Android Studio：Android 开发者必用软件 Typora ：用于书写markdown Git ：用于上传代码到远端的工具 VScode ：用于开发，几乎什么格式的都能打开，再加上各种各样的神奇插件，这个软件简直无敌 Sumatra PDF阅读器：一款小巧的pdf阅读器，缺点是颜值太低咯QAQ Free Download Manager：用于下载youtube上的视频 Charles：用于抓包  网址 kindle相关 优化设置
  怎么去掉Kindle的广告  书籍资源
  亚马逊官网 Blah书城 鸠摩搜索  </description>
     </item>

@@ -599,7 +599,44 @@
 <p><strong>通配符（<code>?</code>）</strong>：</p>
 <div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="o">&lt;?</span> <span class="kd">extends</span> <span class="n">Employee</span><span class="o">&gt;</span> <span class="c1">//表示参数类型是Employee的子类
 </span><span class="c1"></span><span class="o">&lt;?</span> <span class="kd">super</span> <span class="n">Employee</span><span class="o">&gt;</span> <span class="c1">//表示参数类型是Employee的超类
-</span></code></pre></div>
+</span></code></pre></div><h2 id="第-12-章并发">第 12 章	并发</h2>
+<p>多线程：一个程序可以同时运行多个线程</p>
+<p>多进程和多线程的区别：每个进程都拥有自己的一整套变量，而线程则<strong>共享数据</strong></p>
+<p><strong>新建线程的两种方式</strong></p>
+<p>一：新建类实现<code>Runnable</code>接口（完成<code>run</code>方法），然后赋给一个<code>Thread</code>对象</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java">    <span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">MyRun</span> <span class="kd">implements</span> <span class="n">Runnable</span> <span class="o">{</span>
+
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;MyRun&#34;</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="c1">// 使用
+</span><span class="c1"></span>        <span class="n">Runnable</span> <span class="n">r</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MyRun</span><span class="o">();</span>
+        <span class="n">Thread</span> <span class="n">thread1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Thread</span><span class="o">(</span><span class="n">r</span><span class="o">);</span>
+        <span class="n">thread1</span><span class="o">.</span><span class="na">start</span><span class="o">();</span>
+</code></pre></div><p>二：建立一个<code>Thread</code>的子类</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java">    <span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">MyThread</span> <span class="kd">extends</span> <span class="n">Thread</span> <span class="o">{</span>
+
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+            <span class="kd">super</span><span class="o">.</span><span class="na">run</span><span class="o">();</span>
+            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;MyThread&#34;</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="c1">// 使用
+</span><span class="c1"></span>        <span class="n">Thread</span> <span class="n">thread2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MyThread</span><span class="o">();</span>
+        <span class="n">thread2</span><span class="o">.</span><span class="na">start</span><span class="o">();</span>
+</code></pre></div><h3 id="线程的状态">线程的状态</h3>
+<ul>
+<li><code>New</code></li>
+<li><code>Runnable</code></li>
+<li><code>Blocked</code></li>
+<li><code>Waiting</code></li>
+<li><code>Timed waiting</code></li>
+<li><code>Terminated</code></li>
+</ul>
+
 </section>
 
 
