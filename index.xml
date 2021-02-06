@@ -460,13 +460,16 @@
         &lt;span class=&#34;n&#34;&gt;thread2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;start&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;线程的状态&#34;&gt;线程的状态&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;New&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Runnable&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Blocked&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Waiting&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Timed waiting&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Terminated&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;New&lt;/code&gt;：新建&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Runnable&lt;/code&gt;：可运行（可能正在运行也可能没有运行）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Blocked&lt;/code&gt;：阻塞&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Waiting&lt;/code&gt;：等待&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Timed waiting&lt;/code&gt;：计时等待&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Terminated&lt;/code&gt;：终止&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;synchronized&lt;/code&gt;关键字&lt;/p&gt;
+&lt;p&gt;从Java1.0版开始，Java中的每个对象都有一个内部锁。如果一个方法声明时有 synchronized 关键字，那么，要调用这个方法，线程必须获得内部对象锁&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;volatile&lt;/code&gt;修饰符：用来修饰字段，可以让多线程安全地读取一个字段&lt;/p&gt;
 </description>
         </item>
         <item>

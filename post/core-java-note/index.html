@@ -629,13 +629,16 @@
         <span class="n">thread2</span><span class="o">.</span><span class="na">start</span><span class="o">();</span>
 </code></pre></div><h3 id="线程的状态">线程的状态</h3>
 <ul>
-<li><code>New</code></li>
-<li><code>Runnable</code></li>
-<li><code>Blocked</code></li>
-<li><code>Waiting</code></li>
-<li><code>Timed waiting</code></li>
-<li><code>Terminated</code></li>
+<li><code>New</code>：新建</li>
+<li><code>Runnable</code>：可运行（可能正在运行也可能没有运行）</li>
+<li><code>Blocked</code>：阻塞</li>
+<li><code>Waiting</code>：等待</li>
+<li><code>Timed waiting</code>：计时等待</li>
+<li><code>Terminated</code>：终止</li>
 </ul>
+<p><code>synchronized</code>关键字</p>
+<p>从Java1.0版开始，Java中的每个对象都有一个内部锁。如果一个方法声明时有 synchronized 关键字，那么，要调用这个方法，线程必须获得内部对象锁</p>
+<p><code>volatile</code>修饰符：用来修饰字段，可以让多线程安全地读取一个字段</p>
 
 </section>
 
