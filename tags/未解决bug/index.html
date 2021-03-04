@@ -39,25 +39,7 @@
 		
 
 		
-			<article>
-	<h2><a href="https://fushaolei.github.io/post/android-graduation-design-question/">fragment has not been attached yet</a></h2>
-	<time>2021年14月01日</time>
-	
-	<a href="/tags/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1">毕业设计</a>
-	
-	<a href="/tags/android">Android</a>
-	
-	<a href="/tags/%E6%9C%AA%E8%A7%A3%E5%86%B3bug">未解决bug</a>
-	
-	<div>
-		问题描述 recreate之后fragment has not been attached yet
-2021-01-14 21:56:18.796 6790-6790/com.fushaolei.project_android W/System.err: java.lang.IllegalStateException: Fragment HomeFragment{e7339f (41a0caf3-9453-416a-afca-b16aff063bfa)} has not been attached yet. 2021-01-14 21:56:18.796 6790-6790/com.fushaolei.project_android W/System.err: at androidx.fragment.app.Fragment.getChildFragmentManager(Fragment.java:923)  场景：在进行日夜间模式切换的时候会用到recreate重启Activity，然后因为有一个fragment里又嵌套这viewpager，需要用到getChildFragmentManager（时机是在frament生命周期onViewCreated()中进行的）。如上，recreate发生了报错
- 点进getChildFragmentManager后你会发现
-给👴整自闭了
-推荐阅读  Android提升篇系列：Activity recreate(Activity 重新创建/自我恢复)机制（一） Fragment官方文档 问题解决：Fragment not attached to Activity Android 基礎的 Fragment 使用方式  
-		
-	</div>
-</article>
+			 <li><a href="https://fushaolei.github.io/post/android-graduation-design-question/">fragment has not been attached yet</a></li>
 
 		
 		<div>
