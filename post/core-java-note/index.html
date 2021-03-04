@@ -401,21 +401,21 @@
     <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;a小于b&#34;</span><span class="o">);</span><span class="c1">//否则就a小于b，当以上两种情况都不是的时候执行
 </span><span class="c1"></span><span class="o">}</span>
 </code></pre></div><p>条件多分支语句</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java">		<span class="kt">int</span> <span class="n">g</span><span class="o">=</span><span class="n">2</span><span class="o">;</span>
-		<span class="k">switch</span><span class="o">(</span><span class="n">g</span><span class="o">)</span> <span class="o">{</span>
-		<span class="k">case</span> <span class="n">1</span><span class="o">:{</span>
-			<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;是1&#34;</span><span class="o">);</span><span class="c1">//当g是1时执行
-</span><span class="c1"></span>			<span class="k">break</span><span class="o">;</span>
-		<span class="o">}</span>
-		<span class="k">case</span> <span class="n">2</span><span class="o">:{</span>
-			<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;是2&#34;</span><span class="o">);</span><span class="c1">//当g是2时执行
-</span><span class="c1"></span>			<span class="k">break</span><span class="o">;</span>
-		<span class="o">}</span>
-		<span class="k">default</span><span class="o">:{</span>
-			<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;都不是&#34;</span><span class="o">);</span><span class="c1">//当以上情况都不是的时候执行
-</span><span class="c1"></span>			<span class="k">break</span><span class="o">;</span>
-		<span class="o">}</span>
-		<span class="o">}</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">g</span><span class="o">=</span><span class="n">2</span><span class="o">;</span>
+<span class="k">switch</span><span class="o">(</span><span class="n">g</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">case</span> <span class="n">1</span><span class="o">:{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;是1&#34;</span><span class="o">);</span><span class="c1">//当g是1时执行
+</span><span class="c1"></span>        <span class="k">break</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="k">case</span> <span class="n">2</span><span class="o">:{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;是2&#34;</span><span class="o">);</span><span class="c1">//当g是2时执行
+</span><span class="c1"></span>        <span class="k">break</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="k">default</span><span class="o">:{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;都不是&#34;</span><span class="o">);</span><span class="c1">//当以上情况都不是的时候执行
+</span><span class="c1"></span>        <span class="k">break</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
 </code></pre></div><h5 id="循环流程">循环流程</h5>
 <p>根据条件，反复执行某些操作</p>
 <h6 id="for"><code>for</code></h6>
@@ -439,8 +439,21 @@
 <span class="n">循环体</span>
 <span class="o">}</span>
 </code></pre></div><blockquote>
-<p>与普通for循环的区别：for each循环语句的循环变量将会遍历数组中的每个元素，而不是下标值</p>
+<p>与普通for循环的区别：<strong>for each循环语句的循环变量将会遍历数组中的每个元素，而不是下标值</strong></p>
 </blockquote>
+<h4 id="中断控制流程的语句">中断控制流程的语句</h4>
+<p><strong>break</strong>：跳出一个switch case 或者一个循环</p>
+<p><strong>带标签的break</strong>：</p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="n">1</span><span class="o">;</span>
+<span class="nl">read_data:</span> <span class="c1">// 标签名（放在希望跳出的最外层的循环之前），后面跟着冒号
+</span><span class="c1"></span><span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">a</span> <span class="o">==</span> <span class="n">1</span><span class="o">)</span> <span class="k">break</span> <span class="n">read_data</span><span class="o">;</span><span class="c1">// break后要带着标签
+</span><span class="c1"></span>    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;in&#34;</span><span class="o">);</span>
+<span class="o">}</span>
+<span class="c1">// 当里边发生了break read_data就会跳到下面这个语句
+</span><span class="c1"></span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;out&#34;</span><span class="o">);</span>
+</code></pre></div><p>主要用在一些嵌套很深的循环语句中，希望发生失误后完全跳出循环体</p>
+<p><strong>continue</strong>：将控制转移到最内层循环的首部</p>
 <h3 id="9大数">9.大数</h3>
 <ul>
 <li><code>BigInteger</code>实现任意精度的整数运算</li>
