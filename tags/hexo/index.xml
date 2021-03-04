@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hexo on Sorryfu Site</title>
+    <title>Hexo on 任我行</title>
     <link>https://fushaolei.github.io/tags/hexo/</link>
-    <description>Recent content in Hexo on Sorryfu Site</description>
+    <description>Recent content in Hexo on 任我行</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 21 Sep 2020 22:01:51 +0000</lastBuildDate><atom:link href="https://fushaolei.github.io/tags/hexo/index.xml" rel="self" type="application/rss+xml" />
@@ -35,7 +35,10 @@
 如果你喜欢这款主题的话，不妨给我一个star 感激不尽！
 安装  方便备份和更新
   fork 本项目 git clone https://github.com/&amp;lt;你的用户名&amp;gt;/hexo-theme-white.git themes/white 修改根目录下的_config.yml 为theme: white  主题配置  其实config文件里写的很明白了，现在就重新列一下，添加一些不必要的说明
- 可自定义style ############## style ############## style: layout: max-width: 1130px #总体宽度 post-max-width: 800px #文章内容宽度 color: theme-main: &amp;#34;#1A98FF&amp;#34; # 主色调 theme-secondary: &amp;#34;#DDF0FF&amp;#34; # 次色调 text-main: &amp;#34;#333333&amp;#34; # 文字主色调 text-secondary: &amp;#34;#898FA0&amp;#34; # 文字次色调 animation: open: true # 如果开启动画的话会引入animation.css 主页配置 home页和archive可选配置 # home页可选类型 home: type: &amp;#34;img&amp;#34; # 主页的类型，可选 home | img | simple # archive页可选类型 archive: type: &amp;#34;simple&amp;#34; # archive的类型，可选 img | simple type为home就是一个封面，为img就是图片加标题的形式，simple就是极简模式</description>
+ 可自定义style ############## style ##############style:layout:max-width:1130px#总体宽度post-max-width:800px#文章内容宽度color:theme-main:&amp;#34;#1A98FF&amp;#34;# 主色调theme-secondary:&amp;#34;#DDF0FF&amp;#34;# 次色调text-main:&amp;#34;#333333&amp;#34;# 文字主色调text-secondary:&amp;#34;#898FA0&amp;#34;# 文字次色调animation:open:true# 如果开启动画的话会引入animation.css主页配置 home页和archive可选配置 # home页可选类型home:type:&amp;#34;img&amp;#34;# 主页的类型，可选 home | img | simple# archive页可选类型archive:type:&amp;#34;simple&amp;#34;# archive的类型，可选 img | simpletype为home就是一个封面，为img就是图片加标题的形式，simple就是极简模式
+随机cover 当你懒的找封面而又想用img模式的时候，我为你准备了些随机封面
+archive_img_mode:default_cover:#默认的cover- https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/01.jpg- https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/02.jpg- https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/03.jpg- https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/04.jpg- https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/05.jpg- https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/06.jpg 图片均来自于bing的每日图片，版权归图片原作者所有，我只是搬到了自己的仓库方便使用，如果有侵犯到你的权益，请和我联系 ( •̀ ω •́ )y
+ 浏览器标签页配置 # iconicon:#标签页图标，这里可填链接# headersite_name:white.menu menu:HOME:/BLOG:/archives全局搜索 ## 本地搜索search:open:false# 是否开启page:/search# 页面路径（通常命名为search）如果你想使用的话，请先到根目录执行</description>
     </item>
     
   </channel>
