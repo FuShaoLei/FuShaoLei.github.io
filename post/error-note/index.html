@@ -1,235 +1,46 @@
 <!DOCTYPE html>
 <html lang="en-us">
-    <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='一把辛酸泪
- 使用OKHttp 3 时 出现java.lang.BootstrapMethodError: Exception from call site #0 bootstrap method
-解决方式：在build.gradle中添加以下代码 Java8的新特性
-compileOptions{ sourceCompatibility JavaVersion.VERSION_1_8 targetCompatibility JavaVersion.VERSION_1_8 }  参考: https://blog.csdn.net/qq_32425789/article/details/88838587
- 使用RxJava时 observeOn(AndroidSchedulers.mainThread())报错
- 待定，这个最后是直接复制别人的解决的。。。
- 使用Arouter时 出现：android.content.ActivityNotFoundException: Unable to find explicit activity class
-原因是没有给新增的activity注册
- 因为定义了一个基类的activity，然后在复用的时候忘记注册新增的activity了（之前都是使用android studio自带的创建方法创建的，它会帮你自动注册，这次没有这样，也怪自己太粗心大意，在这里翻车了QAQ）
- 参数未传进来
-有以下几种情况会造成这样的情况
- 未在onCreate()方法里 进行 ARouter.getInstance().inject(this); 未在onCreate()方法里进行值的判断（存疑）  使用webview时 图片加载不出来
-在AndroidManifest文件中加入android:usesCleartextTraffic=&amp;quot;true&amp;quot;，然后按如下代码设置webview
-mWebView.getSettings().setJavaScriptEnabled(true);//启用js mWebView.getSettings().setBlockNetworkImage(false);//解决图片不显示  参考：https://blog.csdn.net/u013320868/article/details/52837671
- 使用RelativeLayout布局时各种乱七八糟的属性  总结如下
- 与parent相对的属性    属性 说明     layout_alignParentTop 表示widget的顶部和Container的顶部对齐。   layout_alignParentBottom 表示widget的底部和Container的底部对齐。   layout_alignParentStart 表示widget的左边和Container的起始边缘对齐。   layout_alignParentEnd 表示widget的左边和Container的结束边缘对齐。   layout_alignParentLeft 表示widget的左边和Container的左边对齐。   layout_alignParentRight 表示widget的右边和Container的右边对齐。   layout_centerInParent 表示widget处于Container平面上的正中间。   layout_alignWithParentIfMissing 若设置true，则当该控件layout_toLeftOf, layout_toRightOf等找不到相对的参考widget时，就以父container为参考。    与widget相对的布局    属性 说明     layout_above 表示该widget位于参数值标识的widget的上方。   layout_below 表示该widget位于参数值标识的widget的下方。   layout_alignTop 表示该widget的顶部与参数值标识的widget的顶部对齐。   layout_alignBottom 表示该widget的底部与参数值标识的widget的**底部*8对齐。   layout_alignStart 表示该widget的起始边缘与参数值标识的widget的起始边缘对齐。   layout_alignEnd 表示该widget的结束边缘与参数值标识的widget的结束边缘对齐   layout_alignLeft 表示该widget的左边与参数值标识的widget的左边对齐。   layout_alignRight 表示该widget的右边参数值标识的widget的右边对齐。   layout_centerHorizontal 表示widget处于Container水平方向上的中间。   layout_centerVertical 表示widget处于Container垂直方向上的中间。   layout_alignBaseline 表示该widget的BaseLine与参数值标识的widget的BaseLine对齐。   layout_toLeftOf 表示该widget位于参数值标识的widget的左方。   layout_toRightOf 表示该widget位于参数值标识的widget的右方。   layout_toStartOf 🚩表示该widget结束边缘与参数值标识的widget的起始边缘对齐   layout_toEndOf 🚩表示该widget起始边缘与参数值标识的widget的结束边缘对齐    延时  场景：（android）点击首页的listview里的item后进入详情页时进行锚点（用户看不到锚点动作）'><title>踩坑日记</title>
-
-<link rel='canonical' href='https://fushaolei.github.io/post/error-note/'>
-
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='踩坑日记'>
-<meta property='og:description' content='一把辛酸泪
- 使用OKHttp 3 时 出现java.lang.BootstrapMethodError: Exception from call site #0 bootstrap method
-解决方式：在build.gradle中添加以下代码 Java8的新特性
-compileOptions{ sourceCompatibility JavaVersion.VERSION_1_8 targetCompatibility JavaVersion.VERSION_1_8 }  参考: https://blog.csdn.net/qq_32425789/article/details/88838587
- 使用RxJava时 observeOn(AndroidSchedulers.mainThread())报错
- 待定，这个最后是直接复制别人的解决的。。。
- 使用Arouter时 出现：android.content.ActivityNotFoundException: Unable to find explicit activity class
-原因是没有给新增的activity注册
- 因为定义了一个基类的activity，然后在复用的时候忘记注册新增的activity了（之前都是使用android studio自带的创建方法创建的，它会帮你自动注册，这次没有这样，也怪自己太粗心大意，在这里翻车了QAQ）
- 参数未传进来
-有以下几种情况会造成这样的情况
- 未在onCreate()方法里 进行 ARouter.getInstance().inject(this); 未在onCreate()方法里进行值的判断（存疑）  使用webview时 图片加载不出来
-在AndroidManifest文件中加入android:usesCleartextTraffic=&amp;quot;true&amp;quot;，然后按如下代码设置webview
-mWebView.getSettings().setJavaScriptEnabled(true);//启用js mWebView.getSettings().setBlockNetworkImage(false);//解决图片不显示  参考：https://blog.csdn.net/u013320868/article/details/52837671
- 使用RelativeLayout布局时各种乱七八糟的属性  总结如下
- 与parent相对的属性    属性 说明     layout_alignParentTop 表示widget的顶部和Container的顶部对齐。   layout_alignParentBottom 表示widget的底部和Container的底部对齐。   layout_alignParentStart 表示widget的左边和Container的起始边缘对齐。   layout_alignParentEnd 表示widget的左边和Container的结束边缘对齐。   layout_alignParentLeft 表示widget的左边和Container的左边对齐。   layout_alignParentRight 表示widget的右边和Container的右边对齐。   layout_centerInParent 表示widget处于Container平面上的正中间。   layout_alignWithParentIfMissing 若设置true，则当该控件layout_toLeftOf, layout_toRightOf等找不到相对的参考widget时，就以父container为参考。    与widget相对的布局    属性 说明     layout_above 表示该widget位于参数值标识的widget的上方。   layout_below 表示该widget位于参数值标识的widget的下方。   layout_alignTop 表示该widget的顶部与参数值标识的widget的顶部对齐。   layout_alignBottom 表示该widget的底部与参数值标识的widget的**底部*8对齐。   layout_alignStart 表示该widget的起始边缘与参数值标识的widget的起始边缘对齐。   layout_alignEnd 表示该widget的结束边缘与参数值标识的widget的结束边缘对齐   layout_alignLeft 表示该widget的左边与参数值标识的widget的左边对齐。   layout_alignRight 表示该widget的右边参数值标识的widget的右边对齐。   layout_centerHorizontal 表示widget处于Container水平方向上的中间。   layout_centerVertical 表示widget处于Container垂直方向上的中间。   layout_alignBaseline 表示该widget的BaseLine与参数值标识的widget的BaseLine对齐。   layout_toLeftOf 表示该widget位于参数值标识的widget的左方。   layout_toRightOf 表示该widget位于参数值标识的widget的右方。   layout_toStartOf 🚩表示该widget结束边缘与参数值标识的widget的起始边缘对齐   layout_toEndOf 🚩表示该widget起始边缘与参数值标识的widget的结束边缘对齐    延时  场景：（android）点击首页的listview里的item后进入详情页时进行锚点（用户看不到锚点动作）'>
-<meta property='og:url' content='https://fushaolei.github.io/post/error-note/'>
-<meta property='og:site_name' content='任我行'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2020-11-05T20:23:35&#43;00:00'/><meta property='article:modified_time' content='2020-11-05T20:23:35&#43;00:00'/>
-<meta name="twitter:title" content="踩坑日记">
-<meta name="twitter:description" content="一把辛酸泪
- 使用OKHttp 3 时 出现java.lang.BootstrapMethodError: Exception from call site #0 bootstrap method
-解决方式：在build.gradle中添加以下代码 Java8的新特性
-compileOptions{ sourceCompatibility JavaVersion.VERSION_1_8 targetCompatibility JavaVersion.VERSION_1_8 }  参考: https://blog.csdn.net/qq_32425789/article/details/88838587
- 使用RxJava时 observeOn(AndroidSchedulers.mainThread())报错
- 待定，这个最后是直接复制别人的解决的。。。
- 使用Arouter时 出现：android.content.ActivityNotFoundException: Unable to find explicit activity class
-原因是没有给新增的activity注册
- 因为定义了一个基类的activity，然后在复用的时候忘记注册新增的activity了（之前都是使用android studio自带的创建方法创建的，它会帮你自动注册，这次没有这样，也怪自己太粗心大意，在这里翻车了QAQ）
- 参数未传进来
-有以下几种情况会造成这样的情况
- 未在onCreate()方法里 进行 ARouter.getInstance().inject(this); 未在onCreate()方法里进行值的判断（存疑）  使用webview时 图片加载不出来
-在AndroidManifest文件中加入android:usesCleartextTraffic=&amp;quot;true&amp;quot;，然后按如下代码设置webview
-mWebView.getSettings().setJavaScriptEnabled(true);//启用js mWebView.getSettings().setBlockNetworkImage(false);//解决图片不显示  参考：https://blog.csdn.net/u013320868/article/details/52837671
- 使用RelativeLayout布局时各种乱七八糟的属性  总结如下
- 与parent相对的属性    属性 说明     layout_alignParentTop 表示widget的顶部和Container的顶部对齐。   layout_alignParentBottom 表示widget的底部和Container的底部对齐。   layout_alignParentStart 表示widget的左边和Container的起始边缘对齐。   layout_alignParentEnd 表示widget的左边和Container的结束边缘对齐。   layout_alignParentLeft 表示widget的左边和Container的左边对齐。   layout_alignParentRight 表示widget的右边和Container的右边对齐。   layout_centerInParent 表示widget处于Container平面上的正中间。   layout_alignWithParentIfMissing 若设置true，则当该控件layout_toLeftOf, layout_toRightOf等找不到相对的参考widget时，就以父container为参考。    与widget相对的布局    属性 说明     layout_above 表示该widget位于参数值标识的widget的上方。   layout_below 表示该widget位于参数值标识的widget的下方。   layout_alignTop 表示该widget的顶部与参数值标识的widget的顶部对齐。   layout_alignBottom 表示该widget的底部与参数值标识的widget的**底部*8对齐。   layout_alignStart 表示该widget的起始边缘与参数值标识的widget的起始边缘对齐。   layout_alignEnd 表示该widget的结束边缘与参数值标识的widget的结束边缘对齐   layout_alignLeft 表示该widget的左边与参数值标识的widget的左边对齐。   layout_alignRight 表示该widget的右边参数值标识的widget的右边对齐。   layout_centerHorizontal 表示widget处于Container水平方向上的中间。   layout_centerVertical 表示widget处于Container垂直方向上的中间。   layout_alignBaseline 表示该widget的BaseLine与参数值标识的widget的BaseLine对齐。   layout_toLeftOf 表示该widget位于参数值标识的widget的左方。   layout_toRightOf 表示该widget位于参数值标识的widget的右方。   layout_toStartOf 🚩表示该widget结束边缘与参数值标识的widget的起始边缘对齐   layout_toEndOf 🚩表示该widget起始边缘与参数值标识的widget的结束边缘对齐    延时  场景：（android）点击首页的listview里的item后进入详情页时进行锚点（用户看不到锚点动作）">
-    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/fushaolei/img/20200524104925.jpg" />
-
-    </head>
-    <body class="">
-    <script>
-        (function() {
-            const colorSchemeKey = 'StackColorScheme';
-            localStorage.setItem(colorSchemeKey, "auto");
-        })();
-    </script><script>
-    (function() {
-        const colorSchemeKey = 'StackColorScheme';
-        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
-        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
-
-        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
-            
-
-            document.body.dataset.scheme = 'dark';
-        } else {
-            document.body.dataset.scheme = 'light';
-        }
-    })();
-</script><div class="container main-container flex on-phone--column extended article-page with-toolbar">
-            <aside class="sidebar left-sidebar sticky">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
-        <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-        </span>
-    </button>
-
-    <header class="site-info">
-        
-            <figure class="site-avatar">
-                
-                    <img src="https://cdn.jsdelivr.net/gh/fushaolei/img/20200524104925.jpg" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
-                
-
-                
-            </figure>
-        
-        <h1 class="site-name"><a href="https://fushaolei.github.io/">任我行</a></h1>
-        <h2 class="site-description">一个正在成长的小菜狗</h2>
-    </header>
-
-    <ol class="menu" id="main-menu">
-        
-        
-        
-
-        <li >
-            <a href='/'>
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <polyline points="5 12 3 12 12 3 21 12 19 12" />
-  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
-  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
-</svg>
-
-
-
-                
-                <span>首页</span>
-            </a>
-        </li>
-        
-        
-
-        <li >
-            <a href='/about'>
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="7" r="4" />
-  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-</svg>
-
-
-
-                
-                <span>关于</span>
-            </a>
-        </li>
-        
-        
-
-        <li >
-            <a href='/link'>
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <line x1="5" y1="9" x2="19" y2="9" />
-  <line x1="5" y1="15" x2="19" y2="15" />
-  <line x1="11" y1="4" x2="7" y2="20" />
-  <line x1="17" y1="4" x2="13" y2="20" />
-</svg>
-
-
-
-                
-                <span>友链</span>
-            </a>
-        </li>
-        
-        
-
-        <li >
-            <a href='https://travellings.now.sh/'>
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
-  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
-</svg>
-
-
-
-                
-                <span>开往</span>
-            </a>
-        </li>
-        
-
-        
-    </ol>
-</aside>
-
-            <main class="main full-width">
-    <div id="article-toolbar">
-        <a href="https://fushaolei.github.io/" class="back-home">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <polyline points="15 6 9 12 15 18" />
-</svg>
-
-
-
-            <span>Back</span>
-        </a>
-    </div>
-
-    <article class="main-article">
-    <header class="article-header">
-
-    <div class="article-details">
-    
-
-    <h2 class="article-title">
-        <a href="/post/error-note/">踩坑日记</a>
-    </h2>
-
-    <footer class="article-time">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-        <time class="article-time--published">Nov 05, 2020</time>
-    </footer></div>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>踩坑日记</title>
+	
+	
+	<link rel="stylesheet" href="/css/style.css">
+	
+</head>
+<body class="markdown-body">
+	<div class="container">
+	<header>
+	<a href="https://fushaolei.github.io/">Sorryfu Site</a>
+	
+	<nav>
+		<ul>
+			
+			<li class="menu-li"><a href="/about">关于</a></li>
+			
+			<li class="menu-li"><a href="/link">友链</a></li>
+			
+			<li class="menu-li"><a href="https://travellings.now.sh/">开往</a></li>
+			
+		</ul>
+	</nav>
+	
 </header>
 
-    <section class="article-content">
-    <blockquote>
+	
+	<main>
+		<article>
+			<h1>踩坑日记</h1>
+			<time>2020年05月11日</time>
+			<div>
+				<blockquote>
 <p>一把辛酸泪</p>
 </blockquote>
 <h2 id="使用okhttp-3-时">使用OKHttp 3 时</h2>
 <p>出现java.lang.BootstrapMethodError: Exception from call site #0 bootstrap method</p>
-<p>解决方式：在build.gradle中添加以下代码 <a class="link" href="https://developer.android.com/studio/write/java8-support"  target="_blank" rel="noopener"
-    >Java8的新特性</a></p>
+<p>解决方式：在build.gradle中添加以下代码 <a href="https://developer.android.com/studio/write/java8-support">Java8的新特性</a></p>
 <pre><code>compileOptions{
     sourceCompatibility JavaVersion.VERSION_1_8
     targetCompatibility JavaVersion.VERSION_1_8
@@ -390,178 +201,16 @@ mWebView.getSettings().setBlockNetworkImage(false);//解决图片不显示
 <p>待补充</p>
 </blockquote>
 
-</section>
+			</div>
+			
+			
+		</article>
+	</main>
 
-
-    <footer class="article-footer">
-    
-
-    
-    <section class="article-copyright">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
-</svg>
-
-
-
-        <span>Licensed under CC BY-NC-SA 4.0</span>
-    </section>
-    </footer>
-
-    
-</article>
-
-    <aside class="related-contents--wrapper">
-    
-    
-</aside>
-
-
-    
-        
-    <div class="disqus-container">
-    <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "fushaolei" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-
-<style>
-    .disqus-container {
-        background-color: var(--card-background);
-        border-radius: var(--card-border-radius);
-        box-shadow: var(--shadow-l1);
-        padding: var(--card-padding);
-    }
-</style>
-
-<script>
-    window.addEventListener('onColorSchemeChange', (e) => {
-        if (DISQUS) {
-            DISQUS.reset({
-                reload: true
-            });
-        }
-    })
-</script>
-
-    
-
-    <footer class="site-footer">
-    <section class="copyright">
-        &copy; 
-        
-            2020 - 
-        
-        2021 任我行
-    </section>
-    
-    <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.0.1">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
-    </section>
+	<footer>
+	<p>&copy; 2021 <a href="https://fushaolei.github.io/">Sorryfu Site</a></p>
 </footer>
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
-    
-    <div class="pswp__bg"></div>
-
-    
-    <div class="pswp__scroll-wrap">
-
-        
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                
-                
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                        <div class="pswp__preloader__cut">
-                            <div class="pswp__preloader__donut"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
-            </main>
-        </div>
-        <script src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"
-    integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin="anonymous"></script><script type="text/javascript" src="/ts/main.js" defer></script>
-<script>
-    (function () {
-        const customFont = document.createElement('link');
-        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
-
-        customFont.type = "text/css";
-        customFont.rel = "stylesheet";
-
-        document.head.appendChild(customFont);
-    }());
-</script>
-
-    </body>
+	</div>
+</body>
 </html>

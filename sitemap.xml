@@ -13,17 +13,17 @@
   </url>
   
   <url>
+    <loc>https://fushaolei.github.io/</loc>
+    <lastmod>2021-01-15T13:34:37+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://fushaolei.github.io/tags/</loc>
     <lastmod>2021-01-15T13:34:37+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://fushaolei.github.io/post/core-java-note/</loc>
-    <lastmod>2021-01-15T13:34:37+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://fushaolei.github.io/</loc>
     <lastmod>2021-01-15T13:34:37+00:00</lastmod>
   </url>
   
@@ -128,11 +128,6 @@
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/page/</loc>
-    <lastmod>2020-10-31T12:42:57+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://fushaolei.github.io/about/</loc>
     <lastmod>2020-10-31T12:42:57+00:00</lastmod>
   </url>
@@ -223,16 +218,7 @@
   </url>
   
   <url>
-    <loc>https://fushaolei.github.io/archives/</loc>
-    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://fushaolei.github.io/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://fushaolei.github.io/search/</loc>
   </url>
   
 </urlset>
