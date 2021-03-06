@@ -1,204 +1,226 @@
 <!DOCTYPE html>
-<html lang="en-us">
-    <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=' 使用Git是程序员必备的一个技能，虽然以前有跟着老师学过，但是一知半解，所以重新学过，本文记录了我学习Git的全过程
-'><title>Git学习笔记</title>
+<html lang="zh-CN">
+    <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+    <meta charset="UTF-8" />
 
-<link rel='canonical' href='https://fushaolei.github.io/post/git-note/'>
+    <meta name="generator" content="Hugo 0.80.0" /><meta name="theme-color" content="#fff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
 
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Git学习笔记'>
-<meta property='og:description' content=' 使用Git是程序员必备的一个技能，虽然以前有跟着老师学过，但是一知半解，所以重新学过，本文记录了我学习Git的全过程
-'>
-<meta property='og:url' content='https://fushaolei.github.io/post/git-note/'>
-<meta property='og:site_name' content='任我行'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Git' /><meta property='article:published_time' content='2020-02-03T10:55:36&#43;00:00'/><meta property='article:modified_time' content='2020-02-03T10:55:36&#43;00:00'/>
-<meta name="twitter:title" content="Git学习笔记">
-<meta name="twitter:description" content=" 使用Git是程序员必备的一个技能，虽然以前有跟着老师学过，但是一知半解，所以重新学过，本文记录了我学习Git的全过程
-">
-    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/fushaolei/img/20200524104925.jpg" />
+    <title>Git学习笔记 | Sorryfu Site</title>
 
-    </head>
-    <body class="">
-    <script>
-        (function() {
-            const colorSchemeKey = 'StackColorScheme';
-            localStorage.setItem(colorSchemeKey, "auto");
-        })();
-    </script><script>
-    (function() {
-        const colorSchemeKey = 'StackColorScheme';
-        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
-        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+    <link rel="stylesheet" href="/css/meme.min.a2c7c77ea470505a2311c144518e034c4524d3e9601c9128b2d794ab0e266102.css"/>
 
-        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
-            
+    
+    
+        <script src="/js/meme.min.f936694a66257ff5d62ce2cc69be181f3f41519f7754c902363df674dcf35228.js"></script>
 
-            document.body.dataset.scheme = 'dark';
-        } else {
-            document.body.dataset.scheme = 'light';
-        }
-    })();
-</script><div class="container main-container flex on-phone--column extended article-page with-toolbar">
-            <aside class="sidebar left-sidebar sticky">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
-        <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-        </span>
-    </button>
-
-    <header class="site-info">
-        
-            <figure class="site-avatar">
-                
-                    <img src="https://cdn.jsdelivr.net/gh/fushaolei/img/20200524104925.jpg" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
-                
-
-                
-            </figure>
-        
-        <h1 class="site-name"><a href="https://fushaolei.github.io/">任我行</a></h1>
-        <h2 class="site-description">一个正在成长的小菜狗</h2>
-    </header>
-
-    <ol class="menu" id="main-menu">
-        
-        
-        
-
-        <li >
-            <a href='/'>
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <polyline points="5 12 3 12 12 3 21 12 19 12" />
-  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
-  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
-</svg>
-
-
-
-                
-                <span>首页</span>
-            </a>
-        </li>
-        
-        
-
-        <li >
-            <a href='/about'>
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="7" r="4" />
-  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-</svg>
-
-
-
-                
-                <span>关于</span>
-            </a>
-        </li>
-        
-        
-
-        <li >
-            <a href='/link'>
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <line x1="5" y1="9" x2="19" y2="9" />
-  <line x1="5" y1="15" x2="19" y2="15" />
-  <line x1="11" y1="4" x2="7" y2="20" />
-  <line x1="17" y1="4" x2="13" y2="20" />
-</svg>
-
-
-
-                
-                <span>友链</span>
-            </a>
-        </li>
-        
-        
-
-        <li >
-            <a href='https://travellings.now.sh/'>
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
-  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
-</svg>
-
-
-
-                
-                <span>开往</span>
-            </a>
-        </li>
-        
-
-        
-    </ol>
-</aside>
-
-            <main class="main full-width">
-    <div id="article-toolbar">
-        <a href="https://fushaolei.github.io/" class="back-home">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <polyline points="15 6 9 12 15 18" />
-</svg>
-
-
-
-            <span>Back</span>
-        </a>
-    </div>
-
-    <article class="main-article">
-    <header class="article-header">
-
-    <div class="article-details">
     
 
-    <h2 class="article-title">
-        <a href="/post/git-note/">Git学习笔记</a>
-    </h2>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <footer class="article-time">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" media="print" onload="this.media='all'" />
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" /></noscript>
+
+    <meta name="author" content="" /><meta name="description" content=" 使用Git是程序员必备的一个技能，虽然以前有跟着老师学过，但是一知半解，所以重新学过，本文记录了我学习Git的全过程
+……" />
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Sorryfu Site" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Sorryfu Site" />
+    <meta name="msapplication-starturl" content="../../" />
+    <meta name="msapplication-TileColor" content="#fff" />
+    <meta name="msapplication-TileImage" content="../../icons/mstile-150x150.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    
+    
+
+    
+    <link rel="canonical" href="https://example.com/post/git-note/" />
+    
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "datePublished": "2020-02-03T10:55:36+00:00",
+        "dateModified": "2021-03-06T10:04:13+00:00",
+        "url": "https://example.com/post/git-note/",
+        "headline": "Git学习笔记",
+        "description": " 使用Git是程序员必备的一个技能，虽然以前有跟着老师学过，但是一知半解，所以重新学过，本文记录了我学习Git的全过程\n……",
+        "inLanguage" : "zh-CN",
+        "articleSection": "post",
+        "wordCount":  2544 ,
+        "image": ["https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzQ0MDcucG5n?x-oss-process=image/format,png","https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzQ3NDkucG5n?x-oss-process=image/format,png","https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzQ5MDEucG5n?x-oss-process=image/format,png","https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzUwMjIucG5n?x-oss-process=image/format,png","https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU0MzMucG5n?x-oss-process=image/format,png","https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU1MDUucG5n?x-oss-process=image/format,png","https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU1MjgucG5n?x-oss-process=image/format,png","https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU1NTQucG5n?x-oss-process=image/format,png","https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU2MTEucG5n?x-oss-process=image/format,png","https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU3MzYucG5n?x-oss-process=image/format,png","https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU4MDgucG5n?x-oss-process=image/format,png","https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU4MzIucG5n?x-oss-process=image/format,png","https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU5NDkucG5n?x-oss-process=image/format,png","https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDcwMDAxNTUucG5n?x-oss-process=image/format,png"],
+        "author": {
+            "@type": "Person",
+            "url": "https://example.com/",
+            
+        },
+        "license": "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Sorryfu Site",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://example.com/icons/apple-touch-icon.png"
+            },
+            "url": "https://example.com/"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebSite",
+            "@id": "https://example.com/"
+        }
+    }
+</script>
+
+    
+
+<meta name="twitter:card" content="summary_large_image" />
 
 
 
-        <time class="article-time--published">Feb 03, 2020</time>
-    </footer></div>
-</header>
+    
 
-    <section class="article-content">
-    <blockquote>
+
+
+<meta property="og:title" content="Git学习笔记" />
+<meta property="og:description" content=" 使用Git是程序员必备的一个技能，虽然以前有跟着老师学过，但是一知半解，所以重新学过，本文记录了我学习Git的全过程
+……" />
+<meta property="og:url" content="https://example.com/post/git-note/" />
+<meta property="og:site_name" content="Sorryfu Site" />
+<meta property="og:locale" content="zh" /><meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzQ0MDcucG5n?x-oss-process=image/format,png" />
+<meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2020-02-03T10:55:36&#43;00:00" />
+    <meta property="article:modified_time" content="2021-03-06T10:04:13&#43;00:00" />
+    
+    <meta property="article:section" content="post" />
+
+
+
+    
+</head>
+
+    <body>
+        <div class="container">
+            
+    <header class="header">
+        
+            <div class="header-wrapper">
+                <div class="header-inner single">
+                    
+    <div class="site-brand">
+        
+            <a href="/" class="brand">Sorryfu Site</a>
+        
+    </div>
+
+                    <nav class="nav">
+    <ul class="menu" id="menu">
+        
+            
+        
+        
+        
+        
+            
+                <li class="menu-item"><a href="/page/about/"><span class="menu-item-name">关于</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="/page/link/"><span class="menu-item-name">友链</span></a>
+                </li>
+            
+        
+    </ul>
+</nav>
+
+                    
+                </div>
+            </div>
+            
+    <input type="checkbox" id="nav-toggle" aria-hidden="true" />
+    <label for="nav-toggle" class="nav-toggle"></label>
+    <label for="nav-toggle" class="nav-curtain"></label>
+
+
+        
+    </header>
+
+
+
+
+            
+            
+    <main class="main single" id="main">
+    <div class="main-inner">
+
+        
+
+        <article class="content post h-entry" data-align="justify" data-type="post" data-toc-num="true">
+
+            <h1 class="post-title p-name">Git学习笔记</h1>
+
+            
+
+            
+                
+            
+
+            
+                
+
+<div class="post-meta">
+    
+        
+        <time datetime="2020-02-03T10:55:36&#43;00:00" class="post-meta-item published dt-published"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;2020.2.3</time>
+    
+    
+    
+    
+        
+        
+        
+            
+        
+    
+    
+    
+    
+    
+</div>
+
+            
+
+            <div class="post-body e-content">
+              <blockquote>
 <p>使用Git是程序员必备的一个技能，虽然以前有跟着老师学过，但是一知半解，所以重新学过，本文记录了我学习Git的全过程</p>
 </blockquote>
 <h2 id="参考教程">参考教程</h2>
 <ul>
-<li>学习教程：<a class="link" href="https://www.liaoxuefeng.com/wiki/896043488029600"  target="_blank" rel="noopener"
-    >廖雪峰的Git教程</a></li>
-<li>测试：<a class="link" href="https://learngitbranching.js.org/"  target="_blank" rel="noopener"
-    >learngitbranching</a></li>
+<li>学习教程：<a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">廖雪峰的Git教程</a></li>
+<li>测试：<a href="https://learngitbranching.js.org/" target="_blank" rel="noopener">learngitbranching</a></li>
 </ul>
 <h2 id="笔记">笔记</h2>
 <h3 id="简介">🥝简介</h3>
 <p>由Linus用c语言开发的分布式版本控制系统</p>
 <h3 id="版本穿梭">💉版本穿梭</h3>
 <p>可先用<code>git log</code>指令查看一下有几个版本提交到了仓库里
-<img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzQ0MDcucG5n?x-oss-process=image/format,png" alt="1"  /></p>
+<img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzQ0MDcucG5n?x-oss-process=image/format,png" alt="1"></p>
 <p>或用<code>git log --pretty=oneline</code>可以简单的看到版本号</p>
-<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzQ3NDkucG5n?x-oss-process=image/format,png" alt=""  /></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzQ3NDkucG5n?x-oss-process=image/format,png" alt=""></p>
 <h4 id="版本倒退回过去">版本倒退（回过去）</h4>
 <p><code>git reset --hard ?</code><br>
 <strong>?里</strong></p>
@@ -206,10 +228,10 @@
 <li>可以填<code>HEAD^</code>标识上个版本，上上个版本就是<code>HEAD^^</code>，假如更上的话就是<code>HEAD~100</code></li>
 <li>也可以直接填版本号，只要写前几个就行，比如上面直接写<code>git reset --hard 9410f</code>就会退回到上一个版本了</li>
 </ul>
-<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzQ5MDEucG5n?x-oss-process=image/format,png" alt=""  /></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzQ5MDEucG5n?x-oss-process=image/format,png" alt=""></p>
 <h4 id="版本恢复去未来">版本恢复（去未来）</h4>
 <p>首先查看一下历史信息<code>git reflog</code>,然后根据版本号写<code>git reset --hard 版本号</code>,就这么简单😋</p>
-<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzUwMjIucG5n?x-oss-process=image/format,png" alt=""  /></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzUwMjIucG5n?x-oss-process=image/format,png" alt=""></p>
 <h3 id="工作区和暂存区">🛀工作区和暂存区</h3>
 <p><code>git add 文件</code>指令是把文件修改添加到暂存区
 而<code>git commit -m &quot;XXXX&quot;</code>就是往分支上提交更改</p>
@@ -229,7 +251,7 @@
 </ul>
 <p><strong>注：</strong>
 由于git更新换代，所以这里与廖老师的有些出入，关于<code>git restore --staged file</code>的功能如下：</p>
-<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU0MzMucG5n?x-oss-process=image/format,png" alt=""  /></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU0MzMucG5n?x-oss-process=image/format,png" alt=""></p>
 <h4 id="删除文件">删除文件</h4>
 <h5 id="删错了">删错了</h5>
 <p>可以用<code>git checkout -- file（被删文件名）</code>来恢复那个被删文件</p>
@@ -237,7 +259,7 @@
 <p>直接<code>git rm file（要删文件名）</code>，然后再<code>git commit </code>提交修改，就行了</p>
 <blockquote>
 <p>一些想法：这里的<code>git rm file</code>实际上也是将要做的修改提交到暂存区，然后<code>git commit</code>才提交修改，因此如果这里想反悔的话，可以用<code>git restore --staged file</code>把在暂存区的修改给撤销掉
-<img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU1MDUucG5n?x-oss-process=image/format,png" alt=""  />
+<img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU1MDUucG5n?x-oss-process=image/format,png" alt="">
 由图很简单的知道，绿色就代表放入了暂存区，红色就代表未放入</p>
 </blockquote>
 <p>由上面许许多多案列可以知道，git操作时，总是先在暂存区里进行操作，然后再提交到分支上🔑</p>
@@ -248,7 +270,7 @@
 <code>git switch &lt;branch~name&gt;</code>可用于切换分支，<code>git branch</code>可以看到已有分支，前面带一个<code>*</code>的表示现在所在的分支
 <code>git branch -d &lt;branch~name&gt;</code>这个指令用于删除分支，前提是切换到了其他分支，
 如下
-<img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU1MjgucG5n?x-oss-process=image/format,png" alt=""  /></p>
+<img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU1MjgucG5n?x-oss-process=image/format,png" alt=""></p>
 <h5 id="关于合并">关于合并</h5>
 <p><code>git merge &lt;branch~name&gt;</code>合并分支，<strong>产生的冲突只发生在当前的分支上</strong></p>
 <h6 id="合并冲突与解决方法">🔥合并冲突与解决方法</h6>
@@ -256,11 +278,11 @@
 <p>产生原因：分支与分支在同一个地方（有待研究）的<strong>不同修改</strong>导致合并时的冲突,这时只能手动的修改冲突的地方，并提交</p>
 </blockquote>
 <p>产生冲突后：</p>
-<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU1NTQucG5n?x-oss-process=image/format,png" alt=""  />
-<img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU2MTEucG5n?x-oss-process=image/format,png" alt=""  /></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU1NTQucG5n?x-oss-process=image/format,png" alt="">
+<img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU2MTEucG5n?x-oss-process=image/format,png" alt=""></p>
 <p>这时只能手动修改后提交（<code>git add</code>， <code>git commit</code>）</p>
 <p>提交完后可通过 <code>git log --graph --pretty=oneline --abbrev-commit</code>查看合并的情况
-<img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU3MzYucG5n?x-oss-process=image/format,png" alt=""  /></p>
+<img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU3MzYucG5n?x-oss-process=image/format,png" alt=""></p>
 <p>简单总结一下，合并产生的冲突<strong>只能手动解决后提交</strong></p>
 <blockquote>
 <p>终于明白上学期和别人合写App时会出现的<code>&lt;&lt;&lt;&lt;&lt;&lt;HEAD</code>标识了😋</p>
@@ -270,21 +292,21 @@
 <li>普通的<code>git merge &lt;branch~name&gt;</code> 优先采用<code>Fast forward</code>模式，不会记录分支信息</li>
 <li>用<code>git merge --no-ff -m &quot;xxxx&quot; &lt;branch~name&gt;</code>会禁用<code>Fast forward</code>模式 则会记录分支</li>
 </ul>
-<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU4MDgucG5n?x-oss-process=image/format,png" alt=""  /></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU4MDgucG5n?x-oss-process=image/format,png" alt=""></p>
 <h4 id="bug分支">BUG分支</h4>
 <p>修复bug时，通过创建新的分支来进行修复，然后合并到<code>master</code></p>
 <p>当工作现场没有完成的时候👉<code>git stash</code>隐藏工作现场以方便修改bug，用<code>git stash list</code>可查看隐藏的东西，当修复完后可用<code>git stash pop</code>来进行恢复</p>
 <blockquote>
 <p><strong>注：</strong> <code>git stash pop</code>（恢复工作现场并删除隐藏）=<code>git stash apply</code>（恢复工作现场）+<code>git stash drop</code>（删除隐藏）</p>
 <blockquote>
-<p>有的时候需要一个个恢复工作现场<img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU4MzIucG5n?x-oss-process=image/format,png" alt=""  />
+<p>有的时候需要一个个恢复工作现场<img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU4MzIucG5n?x-oss-process=image/format,png" alt="">
 那就应该先<code>git stash list</code>查看一下隐藏的列表，再<code>git stash apply stash@{x}</code>恢复，然后还有<code>git stash drop</code></p>
 </blockquote>
 </blockquote>
 <h5 id="在master修复的bug的操作复制到其他分支上">在master修复的bug的操作复制到其他分支上</h5>
 <p>在要复制到的分支（此分支得先<code>commit</code>后再操作）上：<code>git cherry-pick  &lt;commit码&gt;</code>这里的 <code>&lt;commit~码&gt;</code>是指修复bug的分支的commit号，就像下面这张图的<code>34bbddd</code></p>
-<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU5NDkucG5n?x-oss-process=image/format,png" alt=""  /></p>
-<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDcwMDAxNTUucG5n?x-oss-process=image/format,png" alt=""  /></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDYyMzU5NDkucG5n?x-oss-process=image/format,png" alt=""></p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2Z1c2hhb2xlaS9pbWcvMjAyMDA1MDcwMDAxNTUucG5n?x-oss-process=image/format,png" alt=""></p>
 <h4 id="多人协作待重读未总结">📌多人协作(待重读，未总结)</h4>
 <p><code>git remote -v</code>可以查看远程库的信息，可以发现，若本地的分支如不推送到远程，对其他人是不可见的，可用<code>git push origin &lt;branch~name&gt;</code>来推送，如果失败可以先<code>git pull</code>然后再修改什么的，在本地创建和远程分支对应的分支，使用<code>git checkout -b branch-name origin/branch-name</code>，本地和远程分支的名称最好一致；
 建立本地分支和远程分支的关联，使用<code>git branch --set-upstream branch-name origin/branch-name</code>
@@ -292,7 +314,7 @@
 <h4 id="rebase未理解">📌rebase(未理解)</h4>
 <p><code>git rebase</code>操作可以把本地未push的分叉提交历史整理成直线；</p>
 <h3 id="指令总结">🍻指令总结</h3>
-<table>
+<div class="table-container"><table>
 <thead>
 <tr>
 <th style="text-align:center">指令</th>
@@ -405,203 +427,144 @@
 <td style="text-align:center">推送名为<code>&lt;branch~name&gt;</code>的分支</td>
 </tr>
 </tbody>
-</table>
-</section>
+</table></div>
+            </div>
 
-
-    <footer class="article-footer">
+            
     
-    <section class="article-tags">
-        
-            <a href="/tags/git/">Git</a>
-        
-    </section>
-
-
     
-    <section class="article-copyright">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
-</svg>
 
 
 
-        <span>Licensed under CC BY-NC-SA 4.0</span>
-    </section>
+        </article>
+
+        
+
+        
+
+
+        
+
+
+        
+
+
+        
+    
+    
+        <div class="related-posts">
+            <h2 class="related-title">相关文章：</h2>
+            <ul class="related-list">
+                
+                    <li class="related-item">
+                        <a href="/post/common-git/" class="related-link">常用Git指令</a>
+                    </li>
+                
+            </ul>
+        </div>
+    
+
+
+
+        
+    
+        <div class="post-tags">
+            
+                
+                
+                
+                
+                    
+                    <a href="/tags/git/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>Git</a>
+                
+            
+        </div>
+    
+
+
+
+        
+
+
+        
+
+
+        
+    
+        
+        
+    
+    
+    
+    
+        <ul class="post-nav">
+            
+                <li class="post-nav-prev">
+                    <a href="/post/idea-note/" rel="prev">&lt; IDEA</a>
+                </li>
+            
+            
+        </ul>
+    
+
+
+
+        
+
+
+    </div>
+</main>
+
+
+            
+    <div id="back-to-top" class="back-to-top">
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon arrow-up"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg></a>
+    </div>
+
+
+            
+    <footer id="footer" class="footer">
+        <div class="footer-inner">
+            <div class="site-info">©&nbsp;2019–2021&nbsp;</div><div class="powered-by">Powered by <a href="https://github.com/gohugoio/hugo" target="_blank" rel="noopener">Hugo</a> | Theme is <a href="https://github.com/reuixiy/hugo-theme-meme" target="_blank" rel="noopener">MemE</a></div><div class="site-copyright"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></div>
+
+            
+
+
+            
+        </div>
     </footer>
 
-    
-</article>
 
-    <aside class="related-contents--wrapper">
-    
-    
-        <h2 class="section-title">相关文章</h2>
-        <div class="related-contents">
-            <div class="article-list--compact">
-                
-                    <article>
-    <a href="/post/common-git/">
-        <div class="article-details">
-            <h2 class="article-title">常用Git指令</h2>
-            <footer class="article-time">
-                <time datetime='2021-01-12T00:00:00Z'>Jan 12, 2021</time>
-            </footer>
         </div>
-    </a>
-</article>
-                
-            </div>
-        </div>
-    
-</aside>
-
-
-    
         
-    <div class="disqus-container">
-    <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "fushaolei" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
 
-<style>
-    .disqus-container {
-        background-color: var(--card-background);
-        border-radius: var(--card-border-radius);
-        box-shadow: var(--shadow-l1);
-        padding: var(--card-padding);
-    }
-</style>
+        
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
 
 <script>
-    window.addEventListener('onColorSchemeChange', (e) => {
-        if (DISQUS) {
-            DISQUS.reset({
-                reload: true
-            });
-        }
+    mediumZoom(document.querySelectorAll('div.post-body img'), {
+        background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
     })
 </script>
 
-    
 
-    <footer class="site-footer">
-    <section class="copyright">
-        &copy; 
-        
-            2020 - 
-        
-        2021 任我行
-    </section>
-    
-    <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.0.1">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
-    </section>
-</footer>
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
-    
-    <div class="pswp__bg"></div>
 
-    
-    <div class="pswp__scroll-wrap">
+    <script src="https://cdn.jsdelivr.net/npm/instant.page@5.1.0/instantpage.min.js" type="module" defer></script>
 
-        
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
 
-        
-        <div class="pswp__ui pswp__ui--hidden">
 
-            <div class="pswp__top-bar">
 
-                
 
-                <div class="pswp__counter"></div>
 
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                
-                
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                        <div class="pswp__preloader__cut">
-                            <div class="pswp__preloader__donut"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
-            </main>
-        </div>
-        <script src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"
-    integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin="anonymous"></script><script type="text/javascript" src="/ts/main.js" defer></script>
-<script>
-    (function () {
-        const customFont = document.createElement('link');
-        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
-
-        customFont.type = "text/css";
-        customFont.rel = "stylesheet";
-
-        document.head.appendChild(customFont);
-    }());
-</script>
 
     </body>
 </html>

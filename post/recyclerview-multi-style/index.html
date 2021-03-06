@@ -1,195 +1,308 @@
 <!DOCTYPE html>
-<html lang="en-us">
-    <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=' 问题：已知字段中会有一个名为layoutStyle的字段来控制布局的样式，求解这个recyclerview的adapter如何写
- 嘶，看到这个题目真是眉头一紧，因为对recyclerview不是很熟悉（当然对listview也不是很熟悉），哎 怎么办捏，他妈的。先照着网上的方法抄了以下，暂时如此，改天回头把recyclerview的代码读读
-'><title>Recyclerview多样式混合布局</title>
+<html lang="zh-CN">
+    <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+    <meta charset="UTF-8" />
 
-<link rel='canonical' href='https://fushaolei.github.io/post/recyclerview-multi-style/'>
+    <meta name="generator" content="Hugo 0.80.0" /><meta name="theme-color" content="#fff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
 
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Recyclerview多样式混合布局'>
-<meta property='og:description' content=' 问题：已知字段中会有一个名为layoutStyle的字段来控制布局的样式，求解这个recyclerview的adapter如何写
- 嘶，看到这个题目真是眉头一紧，因为对recyclerview不是很熟悉（当然对listview也不是很熟悉），哎 怎么办捏，他妈的。先照着网上的方法抄了以下，暂时如此，改天回头把recyclerview的代码读读
-'>
-<meta property='og:url' content='https://fushaolei.github.io/post/recyclerview-multi-style/'>
-<meta property='og:site_name' content='任我行'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Android' /><meta property='article:tag' content='Recyclerview' /><meta property='article:published_time' content='2020-12-08T22:04:03&#43;00:00'/><meta property='article:modified_time' content='2020-12-08T22:04:03&#43;00:00'/>
-<meta name="twitter:title" content="Recyclerview多样式混合布局">
-<meta name="twitter:description" content=" 问题：已知字段中会有一个名为layoutStyle的字段来控制布局的样式，求解这个recyclerview的adapter如何写
- 嘶，看到这个题目真是眉头一紧，因为对recyclerview不是很熟悉（当然对listview也不是很熟悉），哎 怎么办捏，他妈的。先照着网上的方法抄了以下，暂时如此，改天回头把recyclerview的代码读读
-">
-    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/fushaolei/img/20200524104925.jpg" />
+    <title>Recyclerview多样式混合布局 | Sorryfu Site</title>
 
-    </head>
-    <body class="">
-    <script>
-        (function() {
-            const colorSchemeKey = 'StackColorScheme';
-            localStorage.setItem(colorSchemeKey, "auto");
-        })();
-    </script><script>
-    (function() {
-        const colorSchemeKey = 'StackColorScheme';
-        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
-        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+    <link rel="stylesheet" href="/css/meme.min.a2c7c77ea470505a2311c144518e034c4524d3e9601c9128b2d794ab0e266102.css"/>
 
-        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
-            
+    
+    
+        <script src="/js/meme.min.f936694a66257ff5d62ce2cc69be181f3f41519f7754c902363df674dcf35228.js"></script>
 
-            document.body.dataset.scheme = 'dark';
-        } else {
-            document.body.dataset.scheme = 'light';
-        }
-    })();
-</script><div class="container main-container flex on-phone--column extended article-page with-toolbar">
-            <aside class="sidebar left-sidebar sticky">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
-        <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-        </span>
-    </button>
-
-    <header class="site-info">
-        
-            <figure class="site-avatar">
-                
-                    <img src="https://cdn.jsdelivr.net/gh/fushaolei/img/20200524104925.jpg" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
-                
-
-                
-            </figure>
-        
-        <h1 class="site-name"><a href="https://fushaolei.github.io/">任我行</a></h1>
-        <h2 class="site-description">一个正在成长的小菜狗</h2>
-    </header>
-
-    <ol class="menu" id="main-menu">
-        
-        
-        
-
-        <li >
-            <a href='/'>
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <polyline points="5 12 3 12 12 3 21 12 19 12" />
-  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
-  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
-</svg>
-
-
-
-                
-                <span>首页</span>
-            </a>
-        </li>
-        
-        
-
-        <li >
-            <a href='/about'>
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="7" r="4" />
-  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-</svg>
-
-
-
-                
-                <span>关于</span>
-            </a>
-        </li>
-        
-        
-
-        <li >
-            <a href='/link'>
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <line x1="5" y1="9" x2="19" y2="9" />
-  <line x1="5" y1="15" x2="19" y2="15" />
-  <line x1="11" y1="4" x2="7" y2="20" />
-  <line x1="17" y1="4" x2="13" y2="20" />
-</svg>
-
-
-
-                
-                <span>友链</span>
-            </a>
-        </li>
-        
-        
-
-        <li >
-            <a href='https://travellings.now.sh/'>
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
-  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
-</svg>
-
-
-
-                
-                <span>开往</span>
-            </a>
-        </li>
-        
-
-        
-    </ol>
-</aside>
-
-            <main class="main full-width">
-    <div id="article-toolbar">
-        <a href="https://fushaolei.github.io/" class="back-home">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <polyline points="15 6 9 12 15 18" />
-</svg>
-
-
-
-            <span>Back</span>
-        </a>
-    </div>
-
-    <article class="main-article">
-    <header class="article-header">
-
-    <div class="article-details">
     
 
-    <h2 class="article-title">
-        <a href="/post/recyclerview-multi-style/">Recyclerview多样式混合布局</a>
-    </h2>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <footer class="article-time">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" media="print" onload="this.media='all'" />
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" /></noscript>
+
+    <meta name="author" content="" /><meta name="description" content=" 问题：已知字段中会有一个名为layoutStyle的字段来控制布局的样式，求解这个recyclerview的adapter如何写
+ 嘶，看到这个题目真是眉头一紧，因为对recyclerview不是很熟悉（当然对listview也不是很熟悉），哎 怎么办捏，他妈的。先照着网上的方法抄了以下，暂时如此，改天回头把recyclerview的代码读读
+……" />
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Sorryfu Site" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Sorryfu Site" />
+    <meta name="msapplication-starturl" content="../../" />
+    <meta name="msapplication-TileColor" content="#fff" />
+    <meta name="msapplication-TileImage" content="../../icons/mstile-150x150.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    
+    
+
+    
+    <link rel="canonical" href="https://example.com/post/recyclerview-multi-style/" />
+    
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "datePublished": "2020-12-08T22:04:03+00:00",
+        "dateModified": "2021-03-06T10:04:13+00:00",
+        "url": "https://example.com/post/recyclerview-multi-style/",
+        "headline": "Recyclerview多样式混合布局",
+        "description": " 问题：已知字段中会有一个名为layoutStyle的字段来控制布局的样式，求解这个recyclerview的adapter如何写\n 嘶，看到这个题目真是眉头一紧，因为对recyclerview不是很熟悉（当然对listview也不是很熟悉），哎 怎么办捏，他妈的。先照着网上的方法抄了以下，暂时如此，改天回头把recyclerview的代码读读\n……",
+        "inLanguage" : "zh-CN",
+        "articleSection": "post",
+        "wordCount":  619 ,
+        "image": "https://example.com/icons/apple-touch-icon.png",
+        "author": {
+            "@type": "Person",
+            "url": "https://example.com/",
+            
+        },
+        "license": "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Sorryfu Site",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://example.com/icons/apple-touch-icon.png"
+            },
+            "url": "https://example.com/"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebSite",
+            "@id": "https://example.com/"
+        }
+    }
+</script>
+
+    
+
+<meta name="twitter:card" content="summary" />
+
+
+    
 
 
 
-        <time class="article-time--published">Dec 08, 2020</time>
-    </footer></div>
-</header>
+<meta property="og:title" content="Recyclerview多样式混合布局" />
+<meta property="og:description" content=" 问题：已知字段中会有一个名为layoutStyle的字段来控制布局的样式，求解这个recyclerview的adapter如何写
+ 嘶，看到这个题目真是眉头一紧，因为对recyclerview不是很熟悉（当然对listview也不是很熟悉），哎 怎么办捏，他妈的。先照着网上的方法抄了以下，暂时如此，改天回头把recyclerview的代码读读
+……" />
+<meta property="og:url" content="https://example.com/post/recyclerview-multi-style/" />
+<meta property="og:site_name" content="Sorryfu Site" />
+<meta property="og:locale" content="zh" /><meta property="og:image" content="https://example.com/icons/apple-touch-icon.png" />
+    <meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2020-12-08T22:04:03&#43;00:00" />
+    <meta property="article:modified_time" content="2021-03-06T10:04:13&#43;00:00" />
+    
+    <meta property="article:section" content="post" />
 
-    <section class="article-content">
-    <blockquote>
+
+
+    
+</head>
+
+    <body>
+        <div class="container">
+            
+    <header class="header">
+        
+            <div class="header-wrapper">
+                <div class="header-inner single">
+                    
+    <div class="site-brand">
+        
+            <a href="/" class="brand">Sorryfu Site</a>
+        
+    </div>
+
+                    <nav class="nav">
+    <ul class="menu" id="menu">
+        
+            
+        
+        
+        
+        
+            
+                <li class="menu-item"><a href="/page/about/"><span class="menu-item-name">关于</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="/page/link/"><span class="menu-item-name">友链</span></a>
+                </li>
+            
+        
+    </ul>
+</nav>
+
+                    
+                </div>
+            </div>
+            
+    <input type="checkbox" id="nav-toggle" aria-hidden="true" />
+    <label for="nav-toggle" class="nav-toggle"></label>
+    <label for="nav-toggle" class="nav-curtain"></label>
+
+
+        
+    </header>
+
+
+
+
+            
+            
+    <main class="main single" id="main">
+    <div class="main-inner">
+
+        
+
+        <article class="content post h-entry" data-align="justify" data-type="post" data-toc-num="true">
+
+            <h1 class="post-title p-name">Recyclerview多样式混合布局</h1>
+
+            
+
+            
+                
+            
+
+            
+                
+
+<div class="post-meta">
+    
+        
+        <time datetime="2020-12-08T22:04:03&#43;00:00" class="post-meta-item published dt-published"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;2020.12.8</time>
+    
+    
+    
+    
+        
+        
+        
+            
+        
+    
+    
+    
+    
+    
+</div>
+
+            
+
+            <div class="post-body e-content">
+              <blockquote>
 <p>问题：已知字段中会有一个名为<code>layoutStyle</code>的字段来控制布局的样式，求解这个recyclerview的adapter如何写</p>
 </blockquote>
 <p>嘶，看到这个题目真是眉头一紧，因为对<code>recyclerview</code>不是很熟悉（当然对listview也不是很熟悉），哎 怎么办捏，他妈的。先照着网上的方法抄了以下，暂时如此，改天回头把<code>recyclerview</code>的代码读读</p>
 <p>直接贴最重要的Aadpter方法了，其他都是次要的</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyAdapter</span> <span class="kd">extends</span> <span class="n">RecyclerView</span><span class="o">.</span><span class="na">Adapter</span> <span class="o">{</span>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span><span class="lnt">83
+</span><span class="lnt">84
+</span><span class="lnt">85
+</span><span class="lnt">86
+</span><span class="lnt">87
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyAdapter</span> <span class="kd">extends</span> <span class="n">RecyclerView</span><span class="o">.</span><span class="na">Adapter</span> <span class="o">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">TYPE_ONE</span> <span class="o">=</span> <span class="n">1</span><span class="o">;</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">TYPE_TWO</span> <span class="o">=</span> <span class="n">2</span><span class="o">;</span>
 
@@ -276,241 +389,181 @@
         <span class="o">}</span>
     <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div><p>里面还遇到了一个问题，未解决</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">//                view  = View.inflate(parent.getContext(), R.layout.item_type_two,null);
+</code></pre></td></tr></table></div>
+</div>
+</div><p>里面还遇到了一个问题，未解决</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">//                view  = View.inflate(parent.getContext(), R.layout.item_type_two,null);
 </span><span class="c1"></span>                <span class="n">view</span> <span class="o">=</span> <span class="n">LayoutInflater</span><span class="o">.</span><span class="na">from</span><span class="o">(</span><span class="n">parent</span><span class="o">.</span><span class="na">getContext</span><span class="o">()).</span><span class="na">inflate</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">item_type_two</span><span class="o">,</span><span class="n">parent</span><span class="o">,</span><span class="kc">false</span><span class="o">);</span>
-</code></pre></div><p>这两个方法都能弄出视图来，可是，第一个方法呈现的视图是紧凑的，也就是我的<code>margin</code>值是无效的&hellip;.留个坑</p>
-</section>
+</code></pre></td></tr></table></div>
+</div>
+</div><p>这两个方法都能弄出视图来，可是，第一个方法呈现的视图是紧凑的，也就是我的<code>margin</code>值是无效的....留个坑</p>
+            </div>
 
-
-    <footer class="article-footer">
+            
     
-    <section class="article-tags">
-        
-            <a href="/tags/android/">Android</a>
-        
-            <a href="/tags/recyclerview/">Recyclerview</a>
-        
-    </section>
-
-
     
-    <section class="article-copyright">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
-</svg>
 
 
 
-        <span>Licensed under CC BY-NC-SA 4.0</span>
-    </section>
+        </article>
+
+        
+
+        
+
+
+        
+
+
+        
+
+
+        
+    
+    
+        <div class="related-posts">
+            <h2 class="related-title">相关文章：</h2>
+            <ul class="related-list">
+                
+                    <li class="related-item">
+                        <a href="/post/android-mvp/" class="related-link">Android MVP模式</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/post/kotlin-in-action-note/" class="related-link">《Kotlin实战》笔记</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/post/android-listview/" class="related-link">Listview</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/post/android-graduation-design-question/" class="related-link">fragment has not been attached yet</a>
+                    </li>
+                
+            </ul>
+        </div>
+    
+
+
+
+        
+    
+        <div class="post-tags">
+            
+                
+                
+                
+                
+                    
+                    <a href="/tags/android/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>Android</a>
+                
+            
+                
+                
+                
+                
+                    
+                    <a href="/tags/recyclerview/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>Recyclerview</a>
+                
+            
+        </div>
+    
+
+
+
+        
+
+
+        
+
+
+        
+    
+        
+        
+    
+    
+    
+    
+        <ul class="post-nav">
+            
+                <li class="post-nav-prev">
+                    <a href="/post/life-travel-in-gugong/" rel="prev">&lt; 游故宫</a>
+                </li>
+            
+            
+                <li class="post-nav-next">
+                    <a href="/post/sina-work-knowledge/" rel="next">实习阶段性小结 &gt;</a>
+                </li>
+            
+        </ul>
+    
+
+
+
+        
+
+
+    </div>
+</main>
+
+
+            
+    <div id="back-to-top" class="back-to-top">
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon arrow-up"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg></a>
+    </div>
+
+
+            
+    <footer id="footer" class="footer">
+        <div class="footer-inner">
+            <div class="site-info">©&nbsp;2019–2021&nbsp;</div><div class="powered-by">Powered by <a href="https://github.com/gohugoio/hugo" target="_blank" rel="noopener">Hugo</a> | Theme is <a href="https://github.com/reuixiy/hugo-theme-meme" target="_blank" rel="noopener">MemE</a></div><div class="site-copyright"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></div>
+
+            
+
+
+            
+        </div>
     </footer>
 
-    
-</article>
 
-    <aside class="related-contents--wrapper">
-    
-    
-        <h2 class="section-title">相关文章</h2>
-        <div class="related-contents">
-            <div class="article-list--compact">
-                
-                    <article>
-    <a href="/post/android-graduation-design-question/">
-        <div class="article-details">
-            <h2 class="article-title">fragment has not been attached yet</h2>
-            <footer class="article-time">
-                <time datetime='2021-01-14T00:00:00Z'>Jan 14, 2021</time>
-            </footer>
         </div>
-    </a>
-</article>
-                
-                    <article>
-    <a href="/post/android-mvp/">
-        <div class="article-details">
-            <h2 class="article-title">Android MVP模式</h2>
-            <footer class="article-time">
-                <time datetime='2020-10-06T13:34:37Z'>Oct 06, 2020</time>
-            </footer>
-        </div>
-    </a>
-</article>
-                
-                    <article>
-    <a href="/post/kotlin-in-action-note/">
-        <div class="article-details">
-            <h2 class="article-title">《Kotlin实战》笔记</h2>
-            <footer class="article-time">
-                <time datetime='2020-10-06T13:34:37Z'>Oct 06, 2020</time>
-            </footer>
-        </div>
-    </a>
-</article>
-                
-                    <article>
-    <a href="/post/android-listview/">
-        <div class="article-details">
-            <h2 class="article-title">Listview</h2>
-            <footer class="article-time">
-                <time datetime='2020-06-24T08:37:32Z'>Jun 24, 2020</time>
-            </footer>
-        </div>
-    </a>
-</article>
-                
-            </div>
-        </div>
-    
-</aside>
-
-
-    
         
-    <div class="disqus-container">
-    <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "fushaolei" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
 
-<style>
-    .disqus-container {
-        background-color: var(--card-background);
-        border-radius: var(--card-border-radius);
-        box-shadow: var(--shadow-l1);
-        padding: var(--card-padding);
-    }
-</style>
+        
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
 
 <script>
-    window.addEventListener('onColorSchemeChange', (e) => {
-        if (DISQUS) {
-            DISQUS.reset({
-                reload: true
-            });
-        }
+    mediumZoom(document.querySelectorAll('div.post-body img'), {
+        background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
     })
 </script>
 
-    
 
-    <footer class="site-footer">
-    <section class="copyright">
-        &copy; 
-        
-            2020 - 
-        
-        2021 任我行
-    </section>
-    
-    <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.0.1">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
-    </section>
-</footer>
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
-    
-    <div class="pswp__bg"></div>
 
-    
-    <div class="pswp__scroll-wrap">
+    <script src="https://cdn.jsdelivr.net/npm/instant.page@5.1.0/instantpage.min.js" type="module" defer></script>
 
-        
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
 
-        
-        <div class="pswp__ui pswp__ui--hidden">
 
-            <div class="pswp__top-bar">
 
-                
 
-                <div class="pswp__counter"></div>
 
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                
-                
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                        <div class="pswp__preloader__cut">
-                            <div class="pswp__preloader__donut"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
-            </main>
-        </div>
-        <script src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"
-    integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin="anonymous"></script><script type="text/javascript" src="/ts/main.js" defer></script>
-<script>
-    (function () {
-        const customFont = document.createElement('link');
-        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
-
-        customFont.type = "text/css";
-        customFont.rel = "stylesheet";
-
-        document.head.appendChild(customFont);
-    }());
-</script>
 
     </body>
 </html>
