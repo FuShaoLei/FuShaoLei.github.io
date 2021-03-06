@@ -4,21 +4,21 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Sorryfu Site</title>
     <subtitle type="html">Sorryfu的个人博客</subtitle>
-    <updated>2021-03-06T18:32:19&#43;00:00</updated>
-    <id>https://example.com/</id>
-    <link rel="alternate" type="text/html" href="https://example.com/" />
-    <link rel="self" type="application/atom&#43;xml" href="https://example.com/atom.xml" />
+    <updated>2021-03-06T18:37:33&#43;00:00</updated>
+    <id>https://fushaolei.vercel.app/</id>
+    <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/" />
+    <link rel="self" type="application/atom&#43;xml" href="https://fushaolei.vercel.app/atom.xml" />
     
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.80.0">Hugo</generator>
         <entry>
             <title type="text">Java关键字总结</title>
-            <link rel="alternate" type="text/html" href="https://example.com/post/java-keyword/" />
-            <id>https://example.com/post/java-keyword/</id>
-            <updated>2021-03-06T18:32:16&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/java-keyword/" />
+            <id>https://fushaolei.vercel.app/post/java-keyword/</id>
+            <updated>2021-03-06T18:37:30&#43;00:00</updated>
             <published>2021-03-03T13:34:37&#43;00:00</published>
             <author>
-                    <uri>https://example.com/</uri>
+                    <uri>https://fushaolei.vercel.app/</uri>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">关键字 说明 class 定义一个类</summary>
             
@@ -50,13 +50,13 @@
                             
                             
                             
-                                <category scheme="https://example.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" term="读书笔记" label="读书笔记" />
+                                <category scheme="https://fushaolei.vercel.app/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" term="读书笔记" label="读书笔记" />
                             
                         
                             
                             
                             
-                                <category scheme="https://example.com/tags/java/" term="Java" label="Java" />
+                                <category scheme="https://fushaolei.vercel.app/tags/java/" term="Java" label="Java" />
                             
                         
                     
@@ -66,12 +66,12 @@
     
         <entry>
             <title type="text">《Java核心技术I》笔记</title>
-            <link rel="alternate" type="text/html" href="https://example.com/post/core-java-note/" />
-            <id>https://example.com/post/core-java-note/</id>
-            <updated>2021-03-06T18:32:16&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/core-java-note/" />
+            <id>https://fushaolei.vercel.app/post/core-java-note/</id>
+            <updated>2021-03-06T18:37:30&#43;00:00</updated>
             <published>2021-01-15T13:34:37&#43;00:00</published>
             <author>
-                    <uri>https://example.com/</uri>
+                    <uri>https://fushaolei.vercel.app/</uri>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">日期 说明 2021/01/31 读完了第一遍，边读边记，看的比较随意，除了第一第二章外，有些难的或者偏也都……</summary>
             
@@ -883,13 +883,13 @@
                             
                             
                             
-                                <category scheme="https://example.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" term="读书笔记" label="读书笔记" />
+                                <category scheme="https://fushaolei.vercel.app/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" term="读书笔记" label="读书笔记" />
                             
                         
                             
                             
                             
-                                <category scheme="https://example.com/tags/java/" term="Java" label="Java" />
+                                <category scheme="https://fushaolei.vercel.app/tags/java/" term="Java" label="Java" />
                             
                         
                     
@@ -899,12 +899,12 @@
     
         <entry>
             <title type="text">fragment has not been attached yet</title>
-            <link rel="alternate" type="text/html" href="https://example.com/post/android-graduation-design-question/" />
-            <id>https://example.com/post/android-graduation-design-question/</id>
-            <updated>2021-03-06T18:32:16&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/android-graduation-design-question/" />
+            <id>https://fushaolei.vercel.app/post/android-graduation-design-question/</id>
+            <updated>2021-03-06T18:37:30&#43;00:00</updated>
             <published>2021-01-14T00:00:00&#43;00:00</published>
             <author>
-                    <uri>https://example.com/</uri>
+                    <uri>https://fushaolei.vercel.app/</uri>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">问题描述 recreate之后fragment has not been attached yet 2021-01-14 21:56:18.796 6790-6790/com.fushaolei.project_android W/System.err: java.lang.IllegalStateException: Fragment HomeFragment{e7339f (41a0caf3-9453-416a-afca-b16aff063bfa)} has not been attached yet. 2021-01-14 21:56:18.796……</summary>
             
@@ -938,19 +938,19 @@
                             
                             
                             
-                                <category scheme="https://example.com/tags/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/" term="毕业设计" label="毕业设计" />
+                                <category scheme="https://fushaolei.vercel.app/tags/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/" term="毕业设计" label="毕业设计" />
                             
                         
                             
                             
                             
-                                <category scheme="https://example.com/tags/android/" term="Android" label="Android" />
+                                <category scheme="https://fushaolei.vercel.app/tags/android/" term="Android" label="Android" />
                             
                         
                             
                             
                             
-                                <category scheme="https://example.com/tags/%E6%9C%AA%E8%A7%A3%E5%86%B3bug/" term="未解决bug" label="未解决bug" />
+                                <category scheme="https://fushaolei.vercel.app/tags/%E6%9C%AA%E8%A7%A3%E5%86%B3bug/" term="未解决bug" label="未解决bug" />
                             
                         
                     
@@ -960,12 +960,12 @@
     
         <entry>
             <title type="text">常用Git指令</title>
-            <link rel="alternate" type="text/html" href="https://example.com/post/common-git/" />
-            <id>https://example.com/post/common-git/</id>
-            <updated>2021-03-06T18:32:16&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/common-git/" />
+            <id>https://fushaolei.vercel.app/post/common-git/</id>
+            <updated>2021-03-06T18:37:30&#43;00:00</updated>
             <published>2021-01-12T00:00:00&#43;00:00</published>
             <author>
-                    <uri>https://example.com/</uri>
+                    <uri>https://fushaolei.vercel.app/</uri>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">指令 说明 git add . 将修改放入暂存区 git status 查看状态 git log 查看commit版本号 git reset --hard 版本号 版本……</summary>
             
@@ -1037,13 +1037,13 @@
                             
                             
                             
-                                <category scheme="https://example.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" term="学习笔记" label="学习笔记" />
+                                <category scheme="https://fushaolei.vercel.app/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" term="学习笔记" label="学习笔记" />
                             
                         
                             
                             
                             
-                                <category scheme="https://example.com/tags/git/" term="Git" label="Git" />
+                                <category scheme="https://fushaolei.vercel.app/tags/git/" term="Git" label="Git" />
                             
                         
                     
@@ -1053,12 +1053,12 @@
     
         <entry>
             <title type="text">我的常用软件</title>
-            <link rel="alternate" type="text/html" href="https://example.com/post/reinstall-sys/" />
-            <id>https://example.com/post/reinstall-sys/</id>
-            <updated>2021-03-06T18:32:16&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/reinstall-sys/" />
+            <id>https://fushaolei.vercel.app/post/reinstall-sys/</id>
+            <updated>2021-03-06T18:37:30&#43;00:00</updated>
             <published>2021-01-10T12:14:48&#43;08:00</published>
             <author>
-                    <uri>https://example.com/</uri>
+                    <uri>https://fushaolei.vercel.app/</uri>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">因为自己会不定时的会重置电脑（因为处女座的一些奇怪特性？），所以写下此文备用 1.wi……</summary>
             
@@ -1122,12 +1122,12 @@
     
         <entry>
             <title type="text">Hello Hugo</title>
-            <link rel="alternate" type="text/html" href="https://example.com/post/hello-hugo/" />
-            <id>https://example.com/post/hello-hugo/</id>
-            <updated>2021-03-06T18:32:16&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/hello-hugo/" />
+            <id>https://fushaolei.vercel.app/post/hello-hugo/</id>
+            <updated>2021-03-06T18:37:30&#43;00:00</updated>
             <published>2021-01-08T12:54:02&#43;08:00</published>
             <author>
-                    <uri>https://example.com/</uri>
+                    <uri>https://fushaolei.vercel.app/</uri>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Hexo → Hugo</summary>
             
@@ -1153,12 +1153,12 @@
     
         <entry>
             <title type="text">日常用到IDE小技巧汇总</title>
-            <link rel="alternate" type="text/html" href="https://example.com/post/ide-skill/" />
-            <id>https://example.com/post/ide-skill/</id>
-            <updated>2021-03-06T18:32:16&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/ide-skill/" />
+            <id>https://fushaolei.vercel.app/post/ide-skill/</id>
+            <updated>2021-03-06T18:37:30&#43;00:00</updated>
             <published>2021-01-05T10:48:35&#43;00:00</published>
             <author>
-                    <uri>https://example.com/</uri>
+                    <uri>https://fushaolei.vercel.app/</uri>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Android Studio ctrl + alt + ← 返回光标的上一个位置 ctrl + alt + → 返回光标的下一个位置 shift+f6重命……</summary>
             
@@ -1188,7 +1188,7 @@
                             
                             
                             
-                                <category scheme="https://example.com/tags/ide/" term="IDE" label="IDE" />
+                                <category scheme="https://fushaolei.vercel.app/tags/ide/" term="IDE" label="IDE" />
                             
                         
                     
@@ -1198,12 +1198,12 @@
     
         <entry>
             <title type="text">在新浪实习是一种什么体验</title>
-            <link rel="alternate" type="text/html" href="https://example.com/post/work-in-sina/" />
-            <id>https://example.com/post/work-in-sina/</id>
-            <updated>2021-03-06T18:32:16&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/work-in-sina/" />
+            <id>https://fushaolei.vercel.app/post/work-in-sina/</id>
+            <updated>2021-03-06T18:37:30&#43;00:00</updated>
             <published>2020-12-15T15:07:39&#43;00:00</published>
             <author>
-                    <uri>https://example.com/</uri>
+                    <uri>https://fushaolei.vercel.app/</uri>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">机缘 2020年的六月份开始，为应学校的要求，我开始找实习工作，前后历经三个月，个中各……</summary>
             
@@ -1278,7 +1278,7 @@
                             
                             
                             
-                                <category scheme="https://example.com/tags/%E5%AE%9E%E4%B9%A0/" term="实习" label="实习" />
+                                <category scheme="https://fushaolei.vercel.app/tags/%E5%AE%9E%E4%B9%A0/" term="实习" label="实习" />
                             
                         
                     
@@ -1288,12 +1288,12 @@
     
         <entry>
             <title type="text">游故宫</title>
-            <link rel="alternate" type="text/html" href="https://example.com/post/life-travel-in-gugong/" />
-            <id>https://example.com/post/life-travel-in-gugong/</id>
-            <updated>2021-03-06T18:32:16&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/life-travel-in-gugong/" />
+            <id>https://fushaolei.vercel.app/post/life-travel-in-gugong/</id>
+            <updated>2021-03-06T18:37:30&#43;00:00</updated>
             <published>2020-12-14T16:53:37&#43;00:00</published>
             <author>
-                    <uri>https://example.com/</uri>
+                    <uri>https://fushaolei.vercel.app/</uri>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">来北京实习也已经有两个多月了，但是因为这个学期选了三门课 要做网上的作业，然后又因为懒……</summary>
             
@@ -1324,12 +1324,12 @@
     
         <entry>
             <title type="text">Recyclerview多样式混合布局</title>
-            <link rel="alternate" type="text/html" href="https://example.com/post/recyclerview-multi-style/" />
-            <id>https://example.com/post/recyclerview-multi-style/</id>
-            <updated>2021-03-06T18:32:16&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/recyclerview-multi-style/" />
+            <id>https://fushaolei.vercel.app/post/recyclerview-multi-style/</id>
+            <updated>2021-03-06T18:37:30&#43;00:00</updated>
             <published>2020-12-08T22:04:03&#43;00:00</published>
             <author>
-                    <uri>https://example.com/</uri>
+                    <uri>https://fushaolei.vercel.app/</uri>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;问题：已知字段中会有一个名为&lt;code&gt;layoutStyle&lt;/code&gt;的字段来控制布局的样式，求解这个recyclerview的adapter如何写&lt;/p&gt;
@@ -1546,13 +1546,13 @@
                             
                             
                             
-                                <category scheme="https://example.com/tags/android/" term="Android" label="Android" />
+                                <category scheme="https://fushaolei.vercel.app/tags/android/" term="Android" label="Android" />
                             
                         
                             
                             
                             
-                                <category scheme="https://example.com/tags/recyclerview/" term="Recyclerview" label="Recyclerview" />
+                                <category scheme="https://fushaolei.vercel.app/tags/recyclerview/" term="Recyclerview" label="Recyclerview" />
                             
                         
                     
@@ -1562,12 +1562,12 @@
     
         <entry>
             <title type="text">实习阶段性小结</title>
-            <link rel="alternate" type="text/html" href="https://example.com/post/sina-work-knowledge/" />
-            <id>https://example.com/post/sina-work-knowledge/</id>
-            <updated>2021-03-06T18:32:16&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/sina-work-knowledge/" />
+            <id>https://fushaolei.vercel.app/post/sina-work-knowledge/</id>
+            <updated>2021-03-06T18:37:30&#43;00:00</updated>
             <published>2020-11-25T00:16:03&#43;00:00</published>
             <author>
-                    <uri>https://example.com/</uri>
+                    <uri>https://fushaolei.vercel.app/</uri>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">时间飞逝，不知不觉已经实习了快两个月了，从懵懂无知的小白白到懵懂无知的小白，可谓经历……</summary>
             
@@ -1675,7 +1675,7 @@
                             
                             
                             
-                                <category scheme="https://example.com/tags/%E5%AE%9E%E4%B9%A0/" term="实习" label="实习" />
+                                <category scheme="https://fushaolei.vercel.app/tags/%E5%AE%9E%E4%B9%A0/" term="实习" label="实习" />
                             
                         
                     
@@ -1685,12 +1685,12 @@
     
         <entry>
             <title type="text">通过一个小小开源项目获取jetbrains license的经历</title>
-            <link rel="alternate" type="text/html" href="https://example.com/post/get-the-jetbrains-license/" />
-            <id>https://example.com/post/get-the-jetbrains-license/</id>
-            <updated>2021-03-06T18:32:16&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/get-the-jetbrains-license/" />
+            <id>https://fushaolei.vercel.app/post/get-the-jetbrains-license/</id>
+            <updated>2021-03-06T18:37:30&#43;00:00</updated>
             <published>2020-11-21T22:41:39&#43;00:00</published>
             <author>
-                    <uri>https://example.com/</uri>
+                    <uri>https://fushaolei.vercel.app/</uri>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">楔子 对于大多数收费软件，例如ps，pr，idea等等之类的，我大多数是白嫖，需要授权……</summary>
             
@@ -1730,12 +1730,12 @@
     
         <entry>
             <title type="text">踩坑日记</title>
-            <link rel="alternate" type="text/html" href="https://example.com/post/error-note/" />
-            <id>https://example.com/post/error-note/</id>
-            <updated>2021-03-06T18:32:16&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/error-note/" />
+            <id>https://fushaolei.vercel.app/post/error-note/</id>
+            <updated>2021-03-06T18:37:30&#43;00:00</updated>
             <published>2020-11-05T20:23:35&#43;00:00</published>
             <author>
-                    <uri>https://example.com/</uri>
+                    <uri>https://fushaolei.vercel.app/</uri>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">一把辛酸泪 使用OKHttp 3 时 出现java.lang.BootstrapMethod……</summary>
             
@@ -1920,12 +1920,12 @@ mWebView.getSettings().setBlockNetworkImage(false);//解决图片不显示
     
         <entry>
             <title type="text">工作流程记录</title>
-            <link rel="alternate" type="text/html" href="https://example.com/post/sina-workflow/" />
-            <id>https://example.com/post/sina-workflow/</id>
-            <updated>2021-03-06T18:32:16&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/sina-workflow/" />
+            <id>https://fushaolei.vercel.app/post/sina-workflow/</id>
+            <updated>2021-03-06T18:37:30&#43;00:00</updated>
             <published>2020-10-21T19:34:54&#43;00:00</published>
             <author>
-                    <uri>https://example.com/</uri>
+                    <uri>https://fushaolei.vercel.app/</uri>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">小记录 1.确认需求 是否需要后端的接口，是否定好了协议，或者增加了什么字段 是否有设计稿……</summary>
             
@@ -2006,7 +2006,7 @@ Subscribers: #订阅者
                             
                             
                             
-                                <category scheme="https://example.com/tags/%E5%AE%9E%E4%B9%A0/" term="实习" label="实习" />
+                                <category scheme="https://fushaolei.vercel.app/tags/%E5%AE%9E%E4%B9%A0/" term="实习" label="实习" />
                             
                         
                     
@@ -2016,12 +2016,12 @@ Subscribers: #订阅者
     
         <entry>
             <title type="text">Android MVP模式</title>
-            <link rel="alternate" type="text/html" href="https://example.com/post/android-mvp/" />
-            <id>https://example.com/post/android-mvp/</id>
-            <updated>2021-03-06T18:32:16&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/android-mvp/" />
+            <id>https://fushaolei.vercel.app/post/android-mvp/</id>
+            <updated>2021-03-06T18:37:30&#43;00:00</updated>
             <published>2020-10-06T13:34:37&#43;00:00</published>
             <author>
-                    <uri>https://example.com/</uri>
+                    <uri>https://fushaolei.vercel.app/</uri>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">前言 以前有学过，感觉理解不了，然后又用不到，然后就不了了之了 QAQ，现在因为实习公司……</summary>
             
@@ -2360,13 +2360,13 @@ Subscribers: #订阅者
                             
                             
                             
-                                <category scheme="https://example.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" term="设计模式" label="设计模式" />
+                                <category scheme="https://fushaolei.vercel.app/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" term="设计模式" label="设计模式" />
                             
                         
                             
                             
                             
-                                <category scheme="https://example.com/tags/android/" term="Android" label="Android" />
+                                <category scheme="https://fushaolei.vercel.app/tags/android/" term="Android" label="Android" />
                             
                         
                     
@@ -2376,12 +2376,12 @@ Subscribers: #订阅者
     
         <entry>
             <title type="text">《Kotlin实战》笔记</title>
-            <link rel="alternate" type="text/html" href="https://example.com/post/kotlin-in-action-note/" />
-            <id>https://example.com/post/kotlin-in-action-note/</id>
-            <updated>2021-03-06T18:32:16&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/kotlin-in-action-note/" />
+            <id>https://fushaolei.vercel.app/post/kotlin-in-action-note/</id>
+            <updated>2021-03-06T18:37:30&#43;00:00</updated>
             <published>2020-10-06T13:34:37&#43;00:00</published>
             <author>
-                    <uri>https://example.com/</uri>
+                    <uri>https://fushaolei.vercel.app/</uri>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">第 2章 Kotlin基础 第一个Kotlin程序 1 2 3 4 5 6 7 8 9 10 11 fun main(args: Array&amp;lt;String&amp;gt;) {//以fu……</summary>
             
@@ -2605,19 +2605,19 @@ Subscribers: #订阅者
                             
                             
                             
-                                <category scheme="https://example.com/tags/kotlin/" term="Kotlin" label="Kotlin" />
+                                <category scheme="https://fushaolei.vercel.app/tags/kotlin/" term="Kotlin" label="Kotlin" />
                             
                         
                             
                             
                             
-                                <category scheme="https://example.com/tags/android/" term="Android" label="Android" />
+                                <category scheme="https://fushaolei.vercel.app/tags/android/" term="Android" label="Android" />
                             
                         
                             
                             
                             
-                                <category scheme="https://example.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" term="读书笔记" label="读书笔记" />
+                                <category scheme="https://fushaolei.vercel.app/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" term="读书笔记" label="读书笔记" />
                             
                         
                     
@@ -2627,12 +2627,12 @@ Subscribers: #订阅者
     
         <entry>
             <title type="text">GitHub Action实现在线写作</title>
-            <link rel="alternate" type="text/html" href="https://example.com/post/github-action-hexo/" />
-            <id>https://example.com/post/github-action-hexo/</id>
-            <updated>2021-03-06T18:32:16&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/github-action-hexo/" />
+            <id>https://fushaolei.vercel.app/post/github-action-hexo/</id>
+            <updated>2021-03-06T18:37:30&#43;00:00</updated>
             <published>2020-09-21T22:01:51&#43;00:00</published>
             <author>
-                    <uri>https://example.com/</uri>
+                    <uri>https://fushaolei.vercel.app/</uri>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">零，前言 hexo 是一款快速、简洁且高效的静态博客框架，因为它的高可定制性，所以深受各个程序……</summary>
             
@@ -2847,7 +2847,7 @@ function trimNumber(str){
                             
                             
                             
-                                <category scheme="https://example.com/tags/hexo/" term="Hexo" label="Hexo" />
+                                <category scheme="https://fushaolei.vercel.app/tags/hexo/" term="Hexo" label="Hexo" />
                             
                         
                     
@@ -2857,12 +2857,12 @@ function trimNumber(str){
     
         <entry>
             <title type="text">white主题配置</title>
-            <link rel="alternate" type="text/html" href="https://example.com/post/doc-white-configration/" />
-            <id>https://example.com/post/doc-white-configration/</id>
-            <updated>2021-03-06T18:32:16&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/doc-white-configration/" />
+            <id>https://fushaolei.vercel.app/post/doc-white-configration/</id>
+            <updated>2021-03-06T18:37:30&#43;00:00</updated>
             <published>2020-08-09T23:31:29&#43;00:00</published>
             <author>
-                    <uri>https://example.com/</uri>
+                    <uri>https://fushaolei.vercel.app/</uri>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">👋Hi there 欢迎使用本主题 ，White 是一个在个性和极简之间徘徊的主题，（因为作者本身性……</summary>
             
@@ -3254,7 +3254,7 @@ min设置的是最小深度，max设置的是最大深度，&lt;del&gt;如上面
                             
                             
                             
-                                <category scheme="https://example.com/tags/hexo/" term="Hexo" label="Hexo" />
+                                <category scheme="https://fushaolei.vercel.app/tags/hexo/" term="Hexo" label="Hexo" />
                             
                         
                     
@@ -3264,12 +3264,12 @@ min设置的是最小深度，max设置的是最大深度，&lt;del&gt;如上面
     
         <entry>
             <title type="text">Flutter入门</title>
-            <link rel="alternate" type="text/html" href="https://example.com/post/flutter-note/" />
-            <id>https://example.com/post/flutter-note/</id>
-            <updated>2021-03-06T18:32:16&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/flutter-note/" />
+            <id>https://fushaolei.vercel.app/post/flutter-note/</id>
+            <updated>2021-03-06T18:37:30&#43;00:00</updated>
             <published>2020-07-17T15:23:41&#43;00:00</published>
             <author>
-                    <uri>https://example.com/</uri>
+                    <uri>https://fushaolei.vercel.app/</uri>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">刚开始知道Flutter还是在19年初的时候（？），在学校举办的google开发者大……</summary>
             
@@ -3325,7 +3325,7 @@ min设置的是最小深度，max设置的是最大深度，&lt;del&gt;如上面
                             
                             
                             
-                                <category scheme="https://example.com/tags/flutter/" term="Flutter" label="Flutter" />
+                                <category scheme="https://fushaolei.vercel.app/tags/flutter/" term="Flutter" label="Flutter" />
                             
                         
                     
@@ -3335,12 +3335,12 @@ min设置的是最小深度，max设置的是最大深度，&lt;del&gt;如上面
     
         <entry>
             <title type="text">Linux基本操作</title>
-            <link rel="alternate" type="text/html" href="https://example.com/post/linux-note/" />
-            <id>https://example.com/post/linux-note/</id>
-            <updated>2021-03-06T18:32:16&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/linux-note/" />
+            <id>https://fushaolei.vercel.app/post/linux-note/</id>
+            <updated>2021-03-06T18:37:30&#43;00:00</updated>
             <published>2020-07-13T00:17:53&#43;00:00</published>
             <author>
-                    <uri>https://example.com/</uri>
+                    <uri>https://fushaolei.vercel.app/</uri>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">参考资料: Linux常用命令 基础 关机/重启 关机：shutdown -h now 重启：shutd……</summary>
             
@@ -3487,7 +3487,7 @@ min设置的是最小深度，max设置的是最大深度，&lt;del&gt;如上面
                             
                             
                             
-                                <category scheme="https://example.com/tags/linux/" term="Linux" label="Linux" />
+                                <category scheme="https://fushaolei.vercel.app/tags/linux/" term="Linux" label="Linux" />
                             
                         
                     
@@ -3497,12 +3497,12 @@ min设置的是最小深度，max设置的是最大深度，&lt;del&gt;如上面
     
         <entry>
             <title type="text">Linux虚拟机安装记录</title>
-            <link rel="alternate" type="text/html" href="https://example.com/post/linux-install/" />
-            <id>https://example.com/post/linux-install/</id>
-            <updated>2021-03-06T18:32:16&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/linux-install/" />
+            <id>https://fushaolei.vercel.app/post/linux-install/</id>
+            <updated>2021-03-06T18:37:30&#43;00:00</updated>
             <published>2020-07-09T16:53:45&#43;00:00</published>
             <author>
-                    <uri>https://example.com/</uri>
+                    <uri>https://fushaolei.vercel.app/</uri>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">直接开搞 前期准备 下载vmware https://www.vmware.com/cn/products/workstation-player/workstation-player-evaluation.html 下载ubuntu镜像 http://mirrors.ustc.edu.cn/ 开始安装 点击创建虚拟机 配置用……</summary>
             
@@ -3559,7 +3559,7 @@ min设置的是最小深度，max设置的是最大深度，&lt;del&gt;如上面
                             
                             
                             
-                                <category scheme="https://example.com/tags/linux/" term="Linux" label="Linux" />
+                                <category scheme="https://fushaolei.vercel.app/tags/linux/" term="Linux" label="Linux" />
                             
                         
                     
@@ -3569,12 +3569,12 @@ min设置的是最小深度，max设置的是最大深度，&lt;del&gt;如上面
     
         <entry>
             <title type="text">Listview</title>
-            <link rel="alternate" type="text/html" href="https://example.com/post/android-listview/" />
-            <id>https://example.com/post/android-listview/</id>
-            <updated>2021-03-06T18:32:16&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/android-listview/" />
+            <id>https://fushaolei.vercel.app/post/android-listview/</id>
+            <updated>2021-03-06T18:37:30&#43;00:00</updated>
             <published>2020-06-24T08:37:32&#43;00:00</published>
             <author>
-                    <uri>https://example.com/</uri>
+                    <uri>https://fushaolei.vercel.app/</uri>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Listview是入门android的重点，当初浅尝辄止，不是很理解原理，如今重新来……</summary>
             
@@ -4311,7 +4311,7 @@ min设置的是最小深度，max设置的是最大深度，&lt;del&gt;如上面
                             
                             
                             
-                                <category scheme="https://example.com/tags/android/" term="Android" label="Android" />
+                                <category scheme="https://fushaolei.vercel.app/tags/android/" term="Android" label="Android" />
                             
                         
                     
@@ -4321,12 +4321,12 @@ min设置的是最小深度，max设置的是最大深度，&lt;del&gt;如上面
     
         <entry>
             <title type="text">IDEA</title>
-            <link rel="alternate" type="text/html" href="https://example.com/post/idea-note/" />
-            <id>https://example.com/post/idea-note/</id>
-            <updated>2021-03-06T18:32:16&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/idea-note/" />
+            <id>https://fushaolei.vercel.app/post/idea-note/</id>
+            <updated>2021-03-06T18:37:30&#43;00:00</updated>
             <published>2020-06-14T21:36:08&#43;00:00</published>
             <author>
-                    <uri>https://example.com/</uri>
+                    <uri>https://fushaolei.vercel.app/</uri>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">哭唧唧，用惯了eclispe的我用起idea就像一个傻子，现在记录一下，以免忘记 所用……</summary>
             
@@ -4392,7 +4392,7 @@ min设置的是最小深度，max设置的是最大深度，&lt;del&gt;如上面
                             
                             
                             
-                                <category scheme="https://example.com/tags/ide/" term="IDE" label="IDE" />
+                                <category scheme="https://fushaolei.vercel.app/tags/ide/" term="IDE" label="IDE" />
                             
                         
                     
@@ -4402,12 +4402,12 @@ min设置的是最小深度，max设置的是最大深度，&lt;del&gt;如上面
     
         <entry>
             <title type="text">Git学习笔记</title>
-            <link rel="alternate" type="text/html" href="https://example.com/post/git-note/" />
-            <id>https://example.com/post/git-note/</id>
-            <updated>2021-03-06T18:32:16&#43;00:00</updated>
+            <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/git-note/" />
+            <id>https://fushaolei.vercel.app/post/git-note/</id>
+            <updated>2021-03-06T18:37:30&#43;00:00</updated>
             <published>2020-02-03T10:55:36&#43;00:00</published>
             <author>
-                    <uri>https://example.com/</uri>
+                    <uri>https://fushaolei.vercel.app/</uri>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;使用Git是程序员必备的一个技能，虽然以前有跟着老师学过，但是一知半解，所以重新学过，本文记录了我学习Git的全过程&lt;/p&gt;
@@ -4649,7 +4649,7 @@ min设置的是最小深度，max设置的是最大深度，&lt;del&gt;如上面
                             
                             
                             
-                                <category scheme="https://example.com/tags/git/" term="Git" label="Git" />
+                                <category scheme="https://fushaolei.vercel.app/tags/git/" term="Git" label="Git" />
                             
                         
                     

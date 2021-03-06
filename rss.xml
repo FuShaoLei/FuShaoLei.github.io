@@ -8,7 +8,7 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Sorryfu Site</title>
-        <link>https://example.com/</link>
+        <link>https://fushaolei.vercel.app/</link>
         <description>Sorryfu的个人博客</description>
         <generator>Hugo 0.80.0 https://gohugo.io/</generator>
         
@@ -19,15 +19,15 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Sat, 06 Mar 2021 18:32:19 &#43;0000</lastBuildDate>
+        <lastBuildDate>Sat, 06 Mar 2021 18:37:33 &#43;0000</lastBuildDate>
         
-            <atom:link rel="self" type="application/rss&#43;xml" href="https://example.com/rss.xml" />
+            <atom:link rel="self" type="application/rss&#43;xml" href="https://fushaolei.vercel.app/rss.xml" />
         
         
             <item>
                 <title>Java关键字总结</title>
-                <link>https://example.com/post/java-keyword/</link>
-                <guid isPermaLink="true">https://example.com/post/java-keyword/</guid>
+                <link>https://fushaolei.vercel.app/post/java-keyword/</link>
+                <guid isPermaLink="true">https://fushaolei.vercel.app/post/java-keyword/</guid>
                 <pubDate>Wed, 03 Mar 2021 13:34:37 &#43;0000</pubDate>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
@@ -60,13 +60,13 @@
                                 
                                 
                                 
-                                    <category domain="https://example.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</category>
+                                    <category domain="https://fushaolei.vercel.app/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://example.com/tags/java/">Java</category>
+                                    <category domain="https://fushaolei.vercel.app/tags/java/">Java</category>
                                 
                             
                         
@@ -76,8 +76,8 @@
         
             <item>
                 <title>《Java核心技术I》笔记</title>
-                <link>https://example.com/post/core-java-note/</link>
-                <guid isPermaLink="true">https://example.com/post/core-java-note/</guid>
+                <link>https://fushaolei.vercel.app/post/core-java-note/</link>
+                <guid isPermaLink="true">https://fushaolei.vercel.app/post/core-java-note/</guid>
                 <pubDate>Fri, 15 Jan 2021 13:34:37 &#43;0000</pubDate>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
@@ -890,13 +890,13 @@
                                 
                                 
                                 
-                                    <category domain="https://example.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</category>
+                                    <category domain="https://fushaolei.vercel.app/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://example.com/tags/java/">Java</category>
+                                    <category domain="https://fushaolei.vercel.app/tags/java/">Java</category>
                                 
                             
                         
@@ -906,8 +906,8 @@
         
             <item>
                 <title>fragment has not been attached yet</title>
-                <link>https://example.com/post/android-graduation-design-question/</link>
-                <guid isPermaLink="true">https://example.com/post/android-graduation-design-question/</guid>
+                <link>https://fushaolei.vercel.app/post/android-graduation-design-question/</link>
+                <guid isPermaLink="true">https://fushaolei.vercel.app/post/android-graduation-design-question/</guid>
                 <pubDate>Thu, 14 Jan 2021 00:00:00 &#43;0000</pubDate>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
@@ -942,19 +942,19 @@
                                 
                                 
                                 
-                                    <category domain="https://example.com/tags/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/">毕业设计</category>
+                                    <category domain="https://fushaolei.vercel.app/tags/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/">毕业设计</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://example.com/tags/android/">Android</category>
+                                    <category domain="https://fushaolei.vercel.app/tags/android/">Android</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://example.com/tags/%E6%9C%AA%E8%A7%A3%E5%86%B3bug/">未解决bug</category>
+                                    <category domain="https://fushaolei.vercel.app/tags/%E6%9C%AA%E8%A7%A3%E5%86%B3bug/">未解决bug</category>
                                 
                             
                         
@@ -964,8 +964,8 @@
         
             <item>
                 <title>常用Git指令</title>
-                <link>https://example.com/post/common-git/</link>
-                <guid isPermaLink="true">https://example.com/post/common-git/</guid>
+                <link>https://fushaolei.vercel.app/post/common-git/</link>
+                <guid isPermaLink="true">https://fushaolei.vercel.app/post/common-git/</guid>
                 <pubDate>Tue, 12 Jan 2021 00:00:00 &#43;0000</pubDate>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
@@ -1038,13 +1038,13 @@
                                 
                                 
                                 
-                                    <category domain="https://example.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</category>
+                                    <category domain="https://fushaolei.vercel.app/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://example.com/tags/git/">Git</category>
+                                    <category domain="https://fushaolei.vercel.app/tags/git/">Git</category>
                                 
                             
                         
@@ -1054,8 +1054,8 @@
         
             <item>
                 <title>我的常用软件</title>
-                <link>https://example.com/post/reinstall-sys/</link>
-                <guid isPermaLink="true">https://example.com/post/reinstall-sys/</guid>
+                <link>https://fushaolei.vercel.app/post/reinstall-sys/</link>
+                <guid isPermaLink="true">https://fushaolei.vercel.app/post/reinstall-sys/</guid>
                 <pubDate>Sun, 10 Jan 2021 12:14:48 &#43;0800</pubDate>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
@@ -1120,8 +1120,8 @@
         
             <item>
                 <title>Hello Hugo</title>
-                <link>https://example.com/post/hello-hugo/</link>
-                <guid isPermaLink="true">https://example.com/post/hello-hugo/</guid>
+                <link>https://fushaolei.vercel.app/post/hello-hugo/</link>
+                <guid isPermaLink="true">https://fushaolei.vercel.app/post/hello-hugo/</guid>
                 <pubDate>Fri, 08 Jan 2021 12:54:02 &#43;0800</pubDate>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
@@ -1148,8 +1148,8 @@
         
             <item>
                 <title>日常用到IDE小技巧汇总</title>
-                <link>https://example.com/post/ide-skill/</link>
-                <guid isPermaLink="true">https://example.com/post/ide-skill/</guid>
+                <link>https://fushaolei.vercel.app/post/ide-skill/</link>
+                <guid isPermaLink="true">https://fushaolei.vercel.app/post/ide-skill/</guid>
                 <pubDate>Tue, 05 Jan 2021 10:48:35 &#43;0000</pubDate>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
@@ -1180,7 +1180,7 @@
                                 
                                 
                                 
-                                    <category domain="https://example.com/tags/ide/">IDE</category>
+                                    <category domain="https://fushaolei.vercel.app/tags/ide/">IDE</category>
                                 
                             
                         
@@ -1190,8 +1190,8 @@
         
             <item>
                 <title>在新浪实习是一种什么体验</title>
-                <link>https://example.com/post/work-in-sina/</link>
-                <guid isPermaLink="true">https://example.com/post/work-in-sina/</guid>
+                <link>https://fushaolei.vercel.app/post/work-in-sina/</link>
+                <guid isPermaLink="true">https://fushaolei.vercel.app/post/work-in-sina/</guid>
                 <pubDate>Tue, 15 Dec 2020 15:07:39 &#43;0000</pubDate>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
@@ -1267,7 +1267,7 @@
                                 
                                 
                                 
-                                    <category domain="https://example.com/tags/%E5%AE%9E%E4%B9%A0/">实习</category>
+                                    <category domain="https://fushaolei.vercel.app/tags/%E5%AE%9E%E4%B9%A0/">实习</category>
                                 
                             
                         
@@ -1277,8 +1277,8 @@
         
             <item>
                 <title>游故宫</title>
-                <link>https://example.com/post/life-travel-in-gugong/</link>
-                <guid isPermaLink="true">https://example.com/post/life-travel-in-gugong/</guid>
+                <link>https://fushaolei.vercel.app/post/life-travel-in-gugong/</link>
+                <guid isPermaLink="true">https://fushaolei.vercel.app/post/life-travel-in-gugong/</guid>
                 <pubDate>Mon, 14 Dec 2020 16:53:37 &#43;0000</pubDate>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
@@ -1310,8 +1310,8 @@
         
             <item>
                 <title>Recyclerview多样式混合布局</title>
-                <link>https://example.com/post/recyclerview-multi-style/</link>
-                <guid isPermaLink="true">https://example.com/post/recyclerview-multi-style/</guid>
+                <link>https://fushaolei.vercel.app/post/recyclerview-multi-style/</link>
+                <guid isPermaLink="true">https://fushaolei.vercel.app/post/recyclerview-multi-style/</guid>
                 <pubDate>Tue, 08 Dec 2020 22:04:03 &#43;0000</pubDate>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
@@ -1526,13 +1526,13 @@
                                 
                                 
                                 
-                                    <category domain="https://example.com/tags/android/">Android</category>
+                                    <category domain="https://fushaolei.vercel.app/tags/android/">Android</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://example.com/tags/recyclerview/">Recyclerview</category>
+                                    <category domain="https://fushaolei.vercel.app/tags/recyclerview/">Recyclerview</category>
                                 
                             
                         
@@ -1542,8 +1542,8 @@
         
             <item>
                 <title>实习阶段性小结</title>
-                <link>https://example.com/post/sina-work-knowledge/</link>
-                <guid isPermaLink="true">https://example.com/post/sina-work-knowledge/</guid>
+                <link>https://fushaolei.vercel.app/post/sina-work-knowledge/</link>
+                <guid isPermaLink="true">https://fushaolei.vercel.app/post/sina-work-knowledge/</guid>
                 <pubDate>Wed, 25 Nov 2020 00:16:03 &#43;0000</pubDate>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
@@ -1652,7 +1652,7 @@
                                 
                                 
                                 
-                                    <category domain="https://example.com/tags/%E5%AE%9E%E4%B9%A0/">实习</category>
+                                    <category domain="https://fushaolei.vercel.app/tags/%E5%AE%9E%E4%B9%A0/">实习</category>
                                 
                             
                         
@@ -1662,8 +1662,8 @@
         
             <item>
                 <title>通过一个小小开源项目获取jetbrains license的经历</title>
-                <link>https://example.com/post/get-the-jetbrains-license/</link>
-                <guid isPermaLink="true">https://example.com/post/get-the-jetbrains-license/</guid>
+                <link>https://fushaolei.vercel.app/post/get-the-jetbrains-license/</link>
+                <guid isPermaLink="true">https://fushaolei.vercel.app/post/get-the-jetbrains-license/</guid>
                 <pubDate>Sat, 21 Nov 2020 22:41:39 &#43;0000</pubDate>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
@@ -1704,8 +1704,8 @@
         
             <item>
                 <title>踩坑日记</title>
-                <link>https://example.com/post/error-note/</link>
-                <guid isPermaLink="true">https://example.com/post/error-note/</guid>
+                <link>https://fushaolei.vercel.app/post/error-note/</link>
+                <guid isPermaLink="true">https://fushaolei.vercel.app/post/error-note/</guid>
                 <pubDate>Thu, 05 Nov 2020 20:23:35 &#43;0000</pubDate>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
@@ -1891,8 +1891,8 @@ mWebView.getSettings().setBlockNetworkImage(false);//解决图片不显示
         
             <item>
                 <title>工作流程记录</title>
-                <link>https://example.com/post/sina-workflow/</link>
-                <guid isPermaLink="true">https://example.com/post/sina-workflow/</guid>
+                <link>https://fushaolei.vercel.app/post/sina-workflow/</link>
+                <guid isPermaLink="true">https://fushaolei.vercel.app/post/sina-workflow/</guid>
                 <pubDate>Wed, 21 Oct 2020 19:34:54 &#43;0000</pubDate>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
@@ -1974,7 +1974,7 @@ Subscribers: #订阅者
                                 
                                 
                                 
-                                    <category domain="https://example.com/tags/%E5%AE%9E%E4%B9%A0/">实习</category>
+                                    <category domain="https://fushaolei.vercel.app/tags/%E5%AE%9E%E4%B9%A0/">实习</category>
                                 
                             
                         
@@ -1984,8 +1984,8 @@ Subscribers: #订阅者
         
             <item>
                 <title>Android MVP模式</title>
-                <link>https://example.com/post/android-mvp/</link>
-                <guid isPermaLink="true">https://example.com/post/android-mvp/</guid>
+                <link>https://fushaolei.vercel.app/post/android-mvp/</link>
+                <guid isPermaLink="true">https://fushaolei.vercel.app/post/android-mvp/</guid>
                 <pubDate>Tue, 06 Oct 2020 13:34:37 &#43;0000</pubDate>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
@@ -2325,13 +2325,13 @@ Subscribers: #订阅者
                                 
                                 
                                 
-                                    <category domain="https://example.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</category>
+                                    <category domain="https://fushaolei.vercel.app/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://example.com/tags/android/">Android</category>
+                                    <category domain="https://fushaolei.vercel.app/tags/android/">Android</category>
                                 
                             
                         
@@ -2341,8 +2341,8 @@ Subscribers: #订阅者
         
             <item>
                 <title>《Kotlin实战》笔记</title>
-                <link>https://example.com/post/kotlin-in-action-note/</link>
-                <guid isPermaLink="true">https://example.com/post/kotlin-in-action-note/</guid>
+                <link>https://fushaolei.vercel.app/post/kotlin-in-action-note/</link>
+                <guid isPermaLink="true">https://fushaolei.vercel.app/post/kotlin-in-action-note/</guid>
                 <pubDate>Tue, 06 Oct 2020 13:34:37 &#43;0000</pubDate>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
@@ -2567,19 +2567,19 @@ Subscribers: #订阅者
                                 
                                 
                                 
-                                    <category domain="https://example.com/tags/kotlin/">Kotlin</category>
+                                    <category domain="https://fushaolei.vercel.app/tags/kotlin/">Kotlin</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://example.com/tags/android/">Android</category>
+                                    <category domain="https://fushaolei.vercel.app/tags/android/">Android</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://example.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</category>
+                                    <category domain="https://fushaolei.vercel.app/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</category>
                                 
                             
                         
@@ -2589,8 +2589,8 @@ Subscribers: #订阅者
         
             <item>
                 <title>GitHub Action实现在线写作</title>
-                <link>https://example.com/post/github-action-hexo/</link>
-                <guid isPermaLink="true">https://example.com/post/github-action-hexo/</guid>
+                <link>https://fushaolei.vercel.app/post/github-action-hexo/</link>
+                <guid isPermaLink="true">https://fushaolei.vercel.app/post/github-action-hexo/</guid>
                 <pubDate>Mon, 21 Sep 2020 22:01:51 &#43;0000</pubDate>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
@@ -2806,7 +2806,7 @@ function trimNumber(str){
                                 
                                 
                                 
-                                    <category domain="https://example.com/tags/hexo/">Hexo</category>
+                                    <category domain="https://fushaolei.vercel.app/tags/hexo/">Hexo</category>
                                 
                             
                         
@@ -2816,8 +2816,8 @@ function trimNumber(str){
         
             <item>
                 <title>white主题配置</title>
-                <link>https://example.com/post/doc-white-configration/</link>
-                <guid isPermaLink="true">https://example.com/post/doc-white-configration/</guid>
+                <link>https://fushaolei.vercel.app/post/doc-white-configration/</link>
+                <guid isPermaLink="true">https://fushaolei.vercel.app/post/doc-white-configration/</guid>
                 <pubDate>Sun, 09 Aug 2020 23:31:29 &#43;0000</pubDate>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
@@ -3210,7 +3210,7 @@ min设置的是最小深度，max设置的是最大深度，&lt;del&gt;如上面
                                 
                                 
                                 
-                                    <category domain="https://example.com/tags/hexo/">Hexo</category>
+                                    <category domain="https://fushaolei.vercel.app/tags/hexo/">Hexo</category>
                                 
                             
                         
@@ -3220,8 +3220,8 @@ min设置的是最小深度，max设置的是最大深度，&lt;del&gt;如上面
         
             <item>
                 <title>Flutter入门</title>
-                <link>https://example.com/post/flutter-note/</link>
-                <guid isPermaLink="true">https://example.com/post/flutter-note/</guid>
+                <link>https://fushaolei.vercel.app/post/flutter-note/</link>
+                <guid isPermaLink="true">https://fushaolei.vercel.app/post/flutter-note/</guid>
                 <pubDate>Fri, 17 Jul 2020 15:23:41 &#43;0000</pubDate>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
@@ -3278,7 +3278,7 @@ min设置的是最小深度，max设置的是最大深度，&lt;del&gt;如上面
                                 
                                 
                                 
-                                    <category domain="https://example.com/tags/flutter/">Flutter</category>
+                                    <category domain="https://fushaolei.vercel.app/tags/flutter/">Flutter</category>
                                 
                             
                         
@@ -3288,8 +3288,8 @@ min设置的是最小深度，max设置的是最大深度，&lt;del&gt;如上面
         
             <item>
                 <title>Linux基本操作</title>
-                <link>https://example.com/post/linux-note/</link>
-                <guid isPermaLink="true">https://example.com/post/linux-note/</guid>
+                <link>https://fushaolei.vercel.app/post/linux-note/</link>
+                <guid isPermaLink="true">https://fushaolei.vercel.app/post/linux-note/</guid>
                 <pubDate>Mon, 13 Jul 2020 00:17:53 &#43;0000</pubDate>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
@@ -3437,7 +3437,7 @@ min设置的是最小深度，max设置的是最大深度，&lt;del&gt;如上面
                                 
                                 
                                 
-                                    <category domain="https://example.com/tags/linux/">Linux</category>
+                                    <category domain="https://fushaolei.vercel.app/tags/linux/">Linux</category>
                                 
                             
                         
@@ -3447,8 +3447,8 @@ min设置的是最小深度，max设置的是最大深度，&lt;del&gt;如上面
         
             <item>
                 <title>Linux虚拟机安装记录</title>
-                <link>https://example.com/post/linux-install/</link>
-                <guid isPermaLink="true">https://example.com/post/linux-install/</guid>
+                <link>https://fushaolei.vercel.app/post/linux-install/</link>
+                <guid isPermaLink="true">https://fushaolei.vercel.app/post/linux-install/</guid>
                 <pubDate>Thu, 09 Jul 2020 16:53:45 &#43;0000</pubDate>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
@@ -3506,7 +3506,7 @@ min设置的是最小深度，max设置的是最大深度，&lt;del&gt;如上面
                                 
                                 
                                 
-                                    <category domain="https://example.com/tags/linux/">Linux</category>
+                                    <category domain="https://fushaolei.vercel.app/tags/linux/">Linux</category>
                                 
                             
                         
@@ -3516,8 +3516,8 @@ min设置的是最小深度，max设置的是最大深度，&lt;del&gt;如上面
         
             <item>
                 <title>Listview</title>
-                <link>https://example.com/post/android-listview/</link>
-                <guid isPermaLink="true">https://example.com/post/android-listview/</guid>
+                <link>https://fushaolei.vercel.app/post/android-listview/</link>
+                <guid isPermaLink="true">https://fushaolei.vercel.app/post/android-listview/</guid>
                 <pubDate>Wed, 24 Jun 2020 08:37:32 &#43;0000</pubDate>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
@@ -4255,7 +4255,7 @@ min设置的是最小深度，max设置的是最大深度，&lt;del&gt;如上面
                                 
                                 
                                 
-                                    <category domain="https://example.com/tags/android/">Android</category>
+                                    <category domain="https://fushaolei.vercel.app/tags/android/">Android</category>
                                 
                             
                         
@@ -4265,8 +4265,8 @@ min设置的是最小深度，max设置的是最大深度，&lt;del&gt;如上面
         
             <item>
                 <title>IDEA</title>
-                <link>https://example.com/post/idea-note/</link>
-                <guid isPermaLink="true">https://example.com/post/idea-note/</guid>
+                <link>https://fushaolei.vercel.app/post/idea-note/</link>
+                <guid isPermaLink="true">https://fushaolei.vercel.app/post/idea-note/</guid>
                 <pubDate>Sun, 14 Jun 2020 21:36:08 &#43;0000</pubDate>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
@@ -4333,7 +4333,7 @@ min设置的是最小深度，max设置的是最大深度，&lt;del&gt;如上面
                                 
                                 
                                 
-                                    <category domain="https://example.com/tags/ide/">IDE</category>
+                                    <category domain="https://fushaolei.vercel.app/tags/ide/">IDE</category>
                                 
                             
                         
@@ -4343,8 +4343,8 @@ min设置的是最小深度，max设置的是最大深度，&lt;del&gt;如上面
         
             <item>
                 <title>Git学习笔记</title>
-                <link>https://example.com/post/git-note/</link>
-                <guid isPermaLink="true">https://example.com/post/git-note/</guid>
+                <link>https://fushaolei.vercel.app/post/git-note/</link>
+                <guid isPermaLink="true">https://fushaolei.vercel.app/post/git-note/</guid>
                 <pubDate>Mon, 03 Feb 2020 10:55:36 &#43;0000</pubDate>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
@@ -4585,7 +4585,7 @@ min设置的是最小深度，max设置的是最大深度，&lt;del&gt;如上面
                                 
                                 
                                 
-                                    <category domain="https://example.com/tags/git/">Git</category>
+                                    <category domain="https://fushaolei.vercel.app/tags/git/">Git</category>
                                 
                             
                         
