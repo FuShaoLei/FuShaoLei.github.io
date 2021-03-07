@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Sorryfu Site</title>
     <subtitle type="html">Sorryfu的个人博客</subtitle>
-    <updated>2021-03-07T03:36:25&#43;00:00</updated>
+    <updated>2021-03-07T05:03:29&#43;00:00</updated>
     <id>https://fushaolei.vercel.app/</id>
     <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/" />
     <link rel="self" type="application/atom&#43;xml" href="https://fushaolei.vercel.app/atom.xml" />
@@ -15,7 +15,7 @@
             <title type="text">Java关键字总结</title>
             <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/java-keyword/" />
             <id>https://fushaolei.vercel.app/post/java-keyword/</id>
-            <updated>2021-03-07T03:36:22&#43;00:00</updated>
+            <updated>2021-03-07T05:03:26&#43;00:00</updated>
             <published>2021-03-03T13:34:37&#43;00:00</published>
             <author>
                     <uri>https://fushaolei.vercel.app/</uri>
@@ -68,7 +68,7 @@
             <title type="text">《Java核心技术I》笔记</title>
             <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/core-java-note/" />
             <id>https://fushaolei.vercel.app/post/core-java-note/</id>
-            <updated>2021-03-07T03:36:22&#43;00:00</updated>
+            <updated>2021-03-07T05:03:26&#43;00:00</updated>
             <published>2021-01-15T13:34:37&#43;00:00</published>
             <author>
                     <uri>https://fushaolei.vercel.app/</uri>
@@ -901,7 +901,7 @@
             <title type="text">fragment has not been attached yet</title>
             <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/android-graduation-design-question/" />
             <id>https://fushaolei.vercel.app/post/android-graduation-design-question/</id>
-            <updated>2021-03-07T03:36:22&#43;00:00</updated>
+            <updated>2021-03-07T05:03:26&#43;00:00</updated>
             <published>2021-01-14T00:00:00&#43;00:00</published>
             <author>
                     <uri>https://fushaolei.vercel.app/</uri>
@@ -962,7 +962,7 @@
             <title type="text">常用Git指令</title>
             <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/common-git/" />
             <id>https://fushaolei.vercel.app/post/common-git/</id>
-            <updated>2021-03-07T03:36:22&#43;00:00</updated>
+            <updated>2021-03-07T05:03:26&#43;00:00</updated>
             <published>2021-01-12T00:00:00&#43;00:00</published>
             <author>
                     <uri>https://fushaolei.vercel.app/</uri>
@@ -1055,7 +1055,7 @@
             <title type="text">我的常用软件</title>
             <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/reinstall-sys/" />
             <id>https://fushaolei.vercel.app/post/reinstall-sys/</id>
-            <updated>2021-03-07T03:36:22&#43;00:00</updated>
+            <updated>2021-03-07T05:03:26&#43;00:00</updated>
             <published>2021-01-10T12:14:48&#43;08:00</published>
             <author>
                     <uri>https://fushaolei.vercel.app/</uri>
@@ -1124,7 +1124,7 @@
             <title type="text">Hello Hugo</title>
             <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/hello-hugo/" />
             <id>https://fushaolei.vercel.app/post/hello-hugo/</id>
-            <updated>2021-03-07T03:36:22&#43;00:00</updated>
+            <updated>2021-03-07T05:03:26&#43;00:00</updated>
             <published>2021-01-08T12:54:02&#43;08:00</published>
             <author>
                     <uri>https://fushaolei.vercel.app/</uri>
@@ -1155,7 +1155,7 @@
             <title type="text">日常用到IDE小技巧汇总</title>
             <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/ide-skill/" />
             <id>https://fushaolei.vercel.app/post/ide-skill/</id>
-            <updated>2021-03-07T03:36:22&#43;00:00</updated>
+            <updated>2021-03-07T05:03:26&#43;00:00</updated>
             <published>2021-01-05T10:48:35&#43;00:00</published>
             <author>
                     <uri>https://fushaolei.vercel.app/</uri>
@@ -1200,7 +1200,7 @@
             <title type="text">在新浪实习是一种什么体验</title>
             <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/work-in-sina/" />
             <id>https://fushaolei.vercel.app/post/work-in-sina/</id>
-            <updated>2021-03-07T03:36:22&#43;00:00</updated>
+            <updated>2021-03-07T05:03:26&#43;00:00</updated>
             <published>2020-12-15T15:07:39&#43;00:00</published>
             <author>
                     <uri>https://fushaolei.vercel.app/</uri>
@@ -1290,7 +1290,7 @@
             <title type="text">游故宫</title>
             <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/life-travel-in-gugong/" />
             <id>https://fushaolei.vercel.app/post/life-travel-in-gugong/</id>
-            <updated>2021-03-07T03:36:22&#43;00:00</updated>
+            <updated>2021-03-07T05:03:26&#43;00:00</updated>
             <published>2020-12-14T16:53:37&#43;00:00</published>
             <author>
                     <uri>https://fushaolei.vercel.app/</uri>
@@ -1326,19 +1326,14 @@
             <title type="text">Recyclerview多样式混合布局</title>
             <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/recyclerview-multi-style/" />
             <id>https://fushaolei.vercel.app/post/recyclerview-multi-style/</id>
-            <updated>2021-03-07T03:36:22&#43;00:00</updated>
+            <updated>2021-03-07T05:03:26&#43;00:00</updated>
             <published>2020-12-08T22:04:03&#43;00:00</published>
             <author>
                     <uri>https://fushaolei.vercel.app/</uri>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;blockquote&gt;
-&lt;p&gt;问题：已知字段中会有一个名为&lt;code&gt;layoutStyle&lt;/code&gt;的字段来控制布局的样式，求解这个recyclerview的adapter如何写&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;嘶，看到这个题目真是眉头一紧，因为对&lt;code&gt;recyclerview&lt;/code&gt;不是很熟悉（当然对listview也不是很熟悉），哎 怎么办捏，他妈的。先照着网上的方法抄了以下，暂时如此，改天回头把&lt;code&gt;recyclerview&lt;/code&gt;的代码读读&lt;/p&gt;……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;p&gt;问题：已知字段中会有一个名为&lt;code&gt;layoutStyle&lt;/code&gt;的字段来控制布局的样式，求解这个recyclerview的adapter如何写&lt;/p&gt;……</summary>
             
-                <content type="html">&lt;blockquote&gt;
-&lt;p&gt;问题：已知字段中会有一个名为&lt;code&gt;layoutStyle&lt;/code&gt;的字段来控制布局的样式，求解这个recyclerview的adapter如何写&lt;/p&gt;
-&lt;/blockquote&gt;
+                <content type="html">&lt;p&gt;问题：已知字段中会有一个名为&lt;code&gt;layoutStyle&lt;/code&gt;的字段来控制布局的样式，求解这个recyclerview的adapter如何写&lt;/p&gt;
 &lt;p&gt;嘶，看到这个题目真是眉头一紧，因为对&lt;code&gt;recyclerview&lt;/code&gt;不是很熟悉（当然对listview也不是很熟悉），哎 怎么办捏，他妈的。先照着网上的方法抄了以下，暂时如此，改天回头把&lt;code&gt;recyclerview&lt;/code&gt;的代码读读&lt;/p&gt;
 &lt;p&gt;直接贴最重要的Aadpter方法了，其他都是次要的&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -1564,7 +1559,7 @@
             <title type="text">实习阶段性小结</title>
             <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/sina-work-knowledge/" />
             <id>https://fushaolei.vercel.app/post/sina-work-knowledge/</id>
-            <updated>2021-03-07T03:36:22&#43;00:00</updated>
+            <updated>2021-03-07T05:03:26&#43;00:00</updated>
             <published>2020-11-25T00:16:03&#43;00:00</published>
             <author>
                     <uri>https://fushaolei.vercel.app/</uri>
@@ -1687,7 +1682,7 @@
             <title type="text">通过一个小小开源项目获取jetbrains license的经历</title>
             <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/get-the-jetbrains-license/" />
             <id>https://fushaolei.vercel.app/post/get-the-jetbrains-license/</id>
-            <updated>2021-03-07T03:36:22&#43;00:00</updated>
+            <updated>2021-03-07T05:03:26&#43;00:00</updated>
             <published>2020-11-21T22:41:39&#43;00:00</published>
             <author>
                     <uri>https://fushaolei.vercel.app/</uri>
@@ -1732,7 +1727,7 @@
             <title type="text">踩坑日记</title>
             <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/error-note/" />
             <id>https://fushaolei.vercel.app/post/error-note/</id>
-            <updated>2021-03-07T03:36:22&#43;00:00</updated>
+            <updated>2021-03-07T05:03:26&#43;00:00</updated>
             <published>2020-11-05T20:23:35&#43;00:00</published>
             <author>
                     <uri>https://fushaolei.vercel.app/</uri>
@@ -1922,7 +1917,7 @@ mWebView.getSettings().setBlockNetworkImage(false);//解决图片不显示
             <title type="text">工作流程记录</title>
             <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/sina-workflow/" />
             <id>https://fushaolei.vercel.app/post/sina-workflow/</id>
-            <updated>2021-03-07T03:36:22&#43;00:00</updated>
+            <updated>2021-03-07T05:03:26&#43;00:00</updated>
             <published>2020-10-21T19:34:54&#43;00:00</published>
             <author>
                     <uri>https://fushaolei.vercel.app/</uri>
@@ -2018,7 +2013,7 @@ Subscribers: #订阅者
             <title type="text">Android MVP模式</title>
             <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/android-mvp/" />
             <id>https://fushaolei.vercel.app/post/android-mvp/</id>
-            <updated>2021-03-07T03:36:22&#43;00:00</updated>
+            <updated>2021-03-07T05:03:26&#43;00:00</updated>
             <published>2020-10-06T13:34:37&#43;00:00</published>
             <author>
                     <uri>https://fushaolei.vercel.app/</uri>
@@ -2378,7 +2373,7 @@ Subscribers: #订阅者
             <title type="text">《Kotlin实战》笔记</title>
             <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/kotlin-in-action-note/" />
             <id>https://fushaolei.vercel.app/post/kotlin-in-action-note/</id>
-            <updated>2021-03-07T03:36:22&#43;00:00</updated>
+            <updated>2021-03-07T05:03:26&#43;00:00</updated>
             <published>2020-10-06T13:34:37&#43;00:00</published>
             <author>
                     <uri>https://fushaolei.vercel.app/</uri>
@@ -2629,7 +2624,7 @@ Subscribers: #订阅者
             <title type="text">GitHub Action实现在线写作</title>
             <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/github-action-hexo/" />
             <id>https://fushaolei.vercel.app/post/github-action-hexo/</id>
-            <updated>2021-03-07T03:36:22&#43;00:00</updated>
+            <updated>2021-03-07T05:03:26&#43;00:00</updated>
             <published>2020-09-21T22:01:51&#43;00:00</published>
             <author>
                     <uri>https://fushaolei.vercel.app/</uri>
@@ -2859,7 +2854,7 @@ function trimNumber(str){
             <title type="text">white主题配置</title>
             <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/doc-white-configration/" />
             <id>https://fushaolei.vercel.app/post/doc-white-configration/</id>
-            <updated>2021-03-07T03:36:22&#43;00:00</updated>
+            <updated>2021-03-07T05:03:26&#43;00:00</updated>
             <published>2020-08-09T23:31:29&#43;00:00</published>
             <author>
                     <uri>https://fushaolei.vercel.app/</uri>
@@ -3266,7 +3261,7 @@ min设置的是最小深度，max设置的是最大深度，&lt;del&gt;如上面
             <title type="text">Flutter入门</title>
             <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/flutter-note/" />
             <id>https://fushaolei.vercel.app/post/flutter-note/</id>
-            <updated>2021-03-07T03:36:22&#43;00:00</updated>
+            <updated>2021-03-07T05:03:26&#43;00:00</updated>
             <published>2020-07-17T15:23:41&#43;00:00</published>
             <author>
                     <uri>https://fushaolei.vercel.app/</uri>
@@ -3337,7 +3332,7 @@ min设置的是最小深度，max设置的是最大深度，&lt;del&gt;如上面
             <title type="text">Linux基本操作</title>
             <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/linux-note/" />
             <id>https://fushaolei.vercel.app/post/linux-note/</id>
-            <updated>2021-03-07T03:36:22&#43;00:00</updated>
+            <updated>2021-03-07T05:03:26&#43;00:00</updated>
             <published>2020-07-13T00:17:53&#43;00:00</published>
             <author>
                     <uri>https://fushaolei.vercel.app/</uri>
@@ -3499,7 +3494,7 @@ min设置的是最小深度，max设置的是最大深度，&lt;del&gt;如上面
             <title type="text">Linux虚拟机安装记录</title>
             <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/linux-install/" />
             <id>https://fushaolei.vercel.app/post/linux-install/</id>
-            <updated>2021-03-07T03:36:22&#43;00:00</updated>
+            <updated>2021-03-07T05:03:26&#43;00:00</updated>
             <published>2020-07-09T16:53:45&#43;00:00</published>
             <author>
                     <uri>https://fushaolei.vercel.app/</uri>
@@ -3571,7 +3566,7 @@ min设置的是最小深度，max设置的是最大深度，&lt;del&gt;如上面
             <title type="text">Listview</title>
             <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/android-listview/" />
             <id>https://fushaolei.vercel.app/post/android-listview/</id>
-            <updated>2021-03-07T03:36:22&#43;00:00</updated>
+            <updated>2021-03-07T05:03:26&#43;00:00</updated>
             <published>2020-06-24T08:37:32&#43;00:00</published>
             <author>
                     <uri>https://fushaolei.vercel.app/</uri>
@@ -4323,7 +4318,7 @@ min设置的是最小深度，max设置的是最大深度，&lt;del&gt;如上面
             <title type="text">IDEA</title>
             <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/idea-note/" />
             <id>https://fushaolei.vercel.app/post/idea-note/</id>
-            <updated>2021-03-07T03:36:22&#43;00:00</updated>
+            <updated>2021-03-07T05:03:26&#43;00:00</updated>
             <published>2020-06-14T21:36:08&#43;00:00</published>
             <author>
                     <uri>https://fushaolei.vercel.app/</uri>
@@ -4404,7 +4399,7 @@ min设置的是最小深度，max设置的是最大深度，&lt;del&gt;如上面
             <title type="text">Git学习笔记</title>
             <link rel="alternate" type="text/html" href="https://fushaolei.vercel.app/post/git-note/" />
             <id>https://fushaolei.vercel.app/post/git-note/</id>
-            <updated>2021-03-07T03:36:22&#43;00:00</updated>
+            <updated>2021-03-07T05:03:26&#43;00:00</updated>
             <published>2020-02-03T10:55:36&#43;00:00</published>
             <author>
                     <uri>https://fushaolei.vercel.app/</uri>
