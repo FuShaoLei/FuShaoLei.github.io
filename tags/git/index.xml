@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on Sorryfu Site</title>
+    <link>https://fushaolei.vercel.app/tags/git/</link>
+    <description>Recent content in Git on Sorryfu Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 12 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://fushaolei.vercel.app/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>常用Git指令</title>
+      <link>https://fushaolei.vercel.app/posts/common-git/</link>
+      <pubDate>Tue, 12 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://fushaolei.vercel.app/posts/common-git/</guid>
+      <description>   指令 说明     git add . 将修改放入暂存区   git status 查看状态   git log 查看commit版本号   git reset --hard 版本号 版本回退，hard强制回退，soft的话会保留修改   git stash 将修改保存起来   git stash save &amp;quot;xxx&amp;quot; 将修改保存起来，并设置这个保存的标签   git stash apply stash@{x} 将修改移出来   git branch -vv 查看本地分支是否与远端分支建立了连接   git push origin &amp;lt;分支名&amp;gt;:&amp;lt;分支名&amp;gt; 仅仅将本地分支推送到远端分支， 注意:这个操作只是单纯的把本地的分支推送到远端,尚未建立连接   git push --set-upstream origin &amp;lt;分支名&amp;gt; 将本地分支推送到远端分支并建立连接   git checkout -b &amp;lt;分支名&amp;gt; origin/&amp;lt;分支名&amp;gt; 拉取远程分支到本地（本地与远程建立连接，前提是本地已经有其他分支了）    </description>
+    </item>
+    
+    <item>
+      <title>Git学习笔记</title>
+      <link>https://fushaolei.vercel.app/posts/git-note/</link>
+      <pubDate>Mon, 03 Feb 2020 10:55:36 +0000</pubDate>
+      
+      <guid>https://fushaolei.vercel.app/posts/git-note/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;使用Git是程序员必备的一个技能，虽然以前有跟着老师学过，但是一知半解，所以重新学过，本文记录了我学习Git的全过程&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

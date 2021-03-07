@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>毕业设计 on Sorryfu Site</title>
+    <link>https://fushaolei.vercel.app/tags/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/</link>
+    <description>Recent content in 毕业设计 on Sorryfu Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://fushaolei.vercel.app/tags/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>fragment has not been attached yet</title>
+      <link>https://fushaolei.vercel.app/posts/android-graduation-design-question/</link>
+      <pubDate>Thu, 14 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://fushaolei.vercel.app/posts/android-graduation-design-question/</guid>
+      <description>问题描述 recreate之后fragment has not been attached yet
+2021-01-14 21:56:18.796 6790-6790/com.fushaolei.project_android W/System.err: java.lang.IllegalStateException: Fragment HomeFragment{e7339f (41a0caf3-9453-416a-afca-b16aff063bfa)} has not been attached yet. 2021-01-14 21:56:18.796 6790-6790/com.fushaolei.project_android W/System.err: at androidx.fragment.app.Fragment.getChildFragmentManager(Fragment.java:923)  场景：在进行日夜间模式切换的时候会用到recreate重启Activity，然后因为有一个fragment里又嵌套这viewpager，需要用到getChildFragmentManager（时机是在frament生命周期onViewCreated()中进行的）。如上，recreate发生了报错
+ 点进getChildFragmentManager后你会发现
+给👴整自闭了
+推荐阅读  Android提升篇系列：Activity recreate(Activity 重新创建/自我恢复)机制（一） Fragment官方文档 问题解决：Fragment not attached to Activity Android 基礎的 Fragment 使用方式  </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,13 @@
+@import url('./github-css.css');
+
+body{
+    background-color: #FDFDFD;
+}
+.markdown-body{
+    font-family: 'Noto Serif SC', serif;
+    font-size: 1.1em;
+}
+.container{
+    max-width: 800px;
+    margin: 0 auto;
+}

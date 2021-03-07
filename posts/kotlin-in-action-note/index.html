@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>《Kotlin实战》笔记</title>
+	
+	
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="markdown-body">
+	<div class="container">
+	<header>
+	<a href="https://fushaolei.vercel.app/">Sorryfu Site</a>
+	
+	<nav>
+		<ul>
+			
+			<li class="menu-li"><a href="/page/about">关于</a></li>
+			
+			<li class="menu-li"><a href="/page/link">友链</a></li>
+			
+		</ul>
+	</nav>
+	
+	<hr>
+</header>
+
+	
+	<main>
+		<article>
+			<h1>《Kotlin实战》笔记</h1>
+			<div>
+				<h2 id="第-2章-kotlin基础">第 2章	 Kotlin基础</h2>
+<h3 id="第一个kotlin程序">第一个Kotlin程序</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">main</span>(args: Array&lt;String&gt;) {<span style="color:#75715e">//以fun关键字定义函数体
+</span><span style="color:#75715e"></span>    println(<span style="color:#e6db74">&#34;Hello World&#34;</span>)<span style="color:#75715e">//省略了分号
+</span><span style="color:#75715e"></span>    println(<span style="color:#e6db74">&#34;较大的是：&#34;</span>+max(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">1</span>))
+    println(<span style="color:#e6db74">&#34;较大的是：&#34;</span>+max2(<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">3</span>))
+}
+<span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">max</span>(a:Int,b:Int): Int{<span style="color:#75715e">//先写参数名，再写参数类型
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">if</span>(a&gt;b) a <span style="color:#66d9ef">else</span> b<span style="color:#75715e">//在kotlin中，if是表达式，这里类似java中的三元运算符
+</span><span style="color:#75715e"></span>}
+<span style="color:#75715e">//另一种写法：
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">max2</span>(a:Int,b:Int):Int = <span style="color:#66d9ef">if</span> (a&gt;b) a <span style="color:#66d9ef">else</span> b
+<span style="color:#75715e">//这里max和max2的:Int可以省略，编译器会帮你分析表达式体函数，并把它的类型作为函数返回类型
+</span></code></pre></div><h3 id="变量">变量</h3>
+<p>关键字</p>
+<ul>
+<li><code>val</code>：不可变引用（相当于Java的加上了final关键字）</li>
+<li><code>var</code> 可变引用</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">    <span style="color:#66d9ef">val</span> a = <span style="color:#ae81ff">3</span><span style="color:#75715e">//编译器会把int类型作为变量a的类型
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> b = <span style="color:#e6db74">&#34;gulugulu&#34;</span><span style="color:#75715e">//b的类型是String
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> c:Char
+    c = <span style="color:#e6db74">&#39;x&#39;</span>
+</code></pre></div><h3 id="字符串模板">字符串模板</h3>
+<p>可用<code>$</code>或<code>${}</code>来注入到字符串中</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">main</span>(args: Array&lt;String&gt;) {
+    <span style="color:#66d9ef">val</span> name  = <span style="color:#e6db74">&#34;Kotlin&#34;</span>
+    <span style="color:#66d9ef">var</span> a = <span style="color:#ae81ff">2</span>
+    <span style="color:#66d9ef">var</span> b = <span style="color:#ae81ff">3</span>
+    println(<span style="color:#e6db74">&#34;Hello </span><span style="color:#e6db74">$name</span><span style="color:#e6db74">&#34;</span>)
+    println(<span style="color:#e6db74">&#34;Hello </span><span style="color:#e6db74">${if(a&gt;b) &#34;a大于b&#34; else &#34;a小于b&#34;}</span><span style="color:#e6db74">&#34;</span>)
+    println(<span style="color:#e6db74">&#34;Hello </span><span style="color:#e6db74">${if(a&gt;b) a else b}</span><span style="color:#e6db74">&#34;</span>)<span style="color:#75715e">//甚至可以注入变量，这也太方便了
+</span><span style="color:#75715e"></span>}
+<span style="color:#75715e">//输出
+</span><span style="color:#75715e"></span>Hello Kotlin
+Hello a<span style="color:#960050;background-color:#1e0010">小于</span>b
+Hello <span style="color:#ae81ff">3</span>
+</code></pre></div><h3 id="类和属性">类和属性</h3>
+<p>声明一个类</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span>(
+        <span style="color:#75715e">//当声明了属性之后，就生成了对应的访问器
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">val</span> name: String,<span style="color:#75715e">//只读属性，所有只有getter方法
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">var</span> isMarried: Boolean<span style="color:#75715e">//可写属性，有getter和setter方法
+</span><span style="color:#75715e"></span>)
+<span style="color:#75715e">//简写:
+</span><span style="color:#75715e">//class Person(val name: String, var isMarried: Boolean)
+</span></code></pre></div><p>使用</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">main</span>(args: Array&lt;String&gt;) {
+    <span style="color:#66d9ef">val</span> p = Person(<span style="color:#e6db74">&#34;令狐冲&#34;</span>,<span style="color:#66d9ef">false</span>)<span style="color:#75715e">//直接的调用了构造器，没有像Java一样的new关键字
+</span><span style="color:#75715e"></span>    println(<span style="color:#e6db74">&#34;isMarried的值是：</span><span style="color:#e6db74">${p.isMarried}</span><span style="color:#e6db74">&#34;</span>)
+    p.isMarried = <span style="color:#66d9ef">true</span><span style="color:#75715e">//因为是isMarried是可写属性的，所以可用直接更改它的值
+</span><span style="color:#75715e"></span>    println(<span style="color:#e6db74">&#34;isMarried的值是：</span><span style="color:#e6db74">${p.isMarried}</span><span style="color:#e6db74">&#34;</span>)
+}
+<span style="color:#75715e">//输出
+</span><span style="color:#75715e"></span>isMarried<span style="color:#960050;background-color:#1e0010">的值是：</span><span style="color:#66d9ef">false</span>
+isMarried<span style="color:#960050;background-color:#1e0010">的值是：</span><span style="color:#66d9ef">true</span>
+</code></pre></div><p>可以发现，只要简单的定义了类，编译器就会帮助我们生成相应的getter和setter以及构造方法，这相比于java真是大大滴方便啊</p>
+<h3 id="when">when</h3>
+<p>在kotlin里，when可以有多种用法</p>
+<p>第一种用法，相当于java中的switch语句</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">fun <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>args<span style="color:#f92672">:</span> Array<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;)</span> <span style="color:#f92672">{</span>
+    println<span style="color:#f92672">(</span>getStatus<span style="color:#f92672">(</span>1<span style="color:#f92672">))</span>
+<span style="color:#f92672">}</span>
+fun <span style="color:#a6e22e">getStatus</span><span style="color:#f92672">(</span>num<span style="color:#f92672">:</span> Int<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> when<span style="color:#f92672">(</span>num<span style="color:#f92672">){</span>
+    1 <span style="color:#f92672">-&gt;</span> <span style="color:#e6db74">&#34;优秀&#34;</span>
+    2 <span style="color:#f92672">-&gt;</span> <span style="color:#e6db74">&#34;棒&#34;</span>
+    3 <span style="color:#f92672">-&gt;</span> <span style="color:#e6db74">&#34;稀巴烂&#34;</span>
+    <span style="color:#66d9ef">else</span> <span style="color:#f92672">-&gt;</span> <span style="color:#e6db74">&#34;未知&#34;</span>
+<span style="color:#f92672">}</span>
+<span style="color:#75715e">//输出
+</span><span style="color:#75715e"></span>优秀
+</code></pre></div><p>第二种用法。。emmm改天写</p>
+<h3 id="空安全设定">空安全设定</h3>
+<ul>
+<li>
+<p>不可空类型</p>
+</li>
+<li>
+<p>可空类型</p>
+</li>
+</ul>
+<h3 id="一些关键字">一些关键字</h3>
+<table>
+<thead>
+<tr>
+<th>关键字</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>is</code></td>
+<td>用is来检查一个变量是否是某种类型，当检查过之后，后面就可以把它当作你检查过的类型来使用</td>
+</tr>
+<tr>
+<td><code>as</code></td>
+<td>表示特定类型的显示转换</td>
+</tr>
+<tr>
+<td><code>:</code></td>
+<td>通过冒号来继承一个类（会有一个括号），或一个接口（无括号）</td>
+</tr>
+<tr>
+<td><code>!!.</code></td>
+<td>强行调用符</td>
+</tr>
+<tr>
+<td><code>?.</code></td>
+<td>安全调用符，调用时会判断是不是为空，有空则不执行</td>
+</tr>
+<tr>
+<td><code>lateinit</code></td>
+<td>使用之前初始化</td>
+</tr>
+</tbody>
+</table>
+
+			</div>
+			
+			<div>
+				<ul id="tags">
+					
+					<li><a href="/tags/kotlin">Kotlin</a></li>
+					
+					<li><a href="/tags/android">Android</a></li>
+					
+					<li><a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0">读书笔记</a></li>
+					
+				</ul>
+			</div>
+			<script src="https://utteranc.es/client.js"
+				repo="FuShaoLei/blog-comments"
+				issue-term="pathname"
+				theme="github-light"
+				crossorigin="anonymous"
+				async>
+			</script>
+			
+		</article>
+	</main>
+
+	<footer>
+	<p>&copy; 2021 <a href="https://fushaolei.vercel.app/">Sorryfu Site</a></p>
+</footer>
+
+	</div>
+</body>
+</html>

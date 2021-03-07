@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Recyclerview多样式混合布局</title>
+	
+	
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="markdown-body">
+	<div class="container">
+	<header>
+	<a href="https://fushaolei.vercel.app/">Sorryfu Site</a>
+	
+	<nav>
+		<ul>
+			
+			<li class="menu-li"><a href="/page/about">关于</a></li>
+			
+			<li class="menu-li"><a href="/page/link">友链</a></li>
+			
+		</ul>
+	</nav>
+	
+	<hr>
+</header>
+
+	
+	<main>
+		<article>
+			<h1>Recyclerview多样式混合布局</h1>
+			<div>
+				<p>问题：已知字段中会有一个名为<code>layoutStyle</code>的字段来控制布局的样式，求解这个recyclerview的adapter如何写</p>
+<p>嘶，看到这个题目真是眉头一紧，因为对<code>recyclerview</code>不是很熟悉（当然对listview也不是很熟悉），哎 怎么办捏，他妈的。先照着网上的方法抄了以下，暂时如此，改天回头把<code>recyclerview</code>的代码读读</p>
+<p>直接贴最重要的Aadpter方法了，其他都是次要的</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyAdapter</span> <span style="color:#66d9ef">extends</span> RecyclerView<span style="color:#f92672">.</span><span style="color:#a6e22e">Adapter</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> TYPE_ONE <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> TYPE_TWO <span style="color:#f92672">=</span> 2<span style="color:#f92672">;</span>
+
+    <span style="color:#66d9ef">private</span> List<span style="color:#f92672">&lt;</span>Bean<span style="color:#f92672">&gt;</span> beanList <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">MyAdapter</span><span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>Bean<span style="color:#f92672">&gt;</span> beanList<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">beanList</span> <span style="color:#f92672">=</span> beanList<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@NonNull</span>
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> RecyclerView<span style="color:#f92672">.</span><span style="color:#a6e22e">ViewHolder</span> <span style="color:#a6e22e">onCreateViewHolder</span><span style="color:#f92672">(</span><span style="color:#a6e22e">@NonNull</span> ViewGroup parent<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> viewType<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        View view<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">switch</span> <span style="color:#f92672">(</span>viewType<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">case</span> TYPE_ONE<span style="color:#f92672">:</span>
+<span style="color:#75715e">//                view  = View.inflate(parent.getContext(), R.layout.item_type_one,null);
+</span><span style="color:#75715e"></span>                view <span style="color:#f92672">=</span> LayoutInflater<span style="color:#f92672">.</span><span style="color:#a6e22e">from</span><span style="color:#f92672">(</span>parent<span style="color:#f92672">.</span><span style="color:#a6e22e">getContext</span><span style="color:#f92672">()).</span><span style="color:#a6e22e">inflate</span><span style="color:#f92672">(</span>R<span style="color:#f92672">.</span><span style="color:#a6e22e">layout</span><span style="color:#f92672">.</span><span style="color:#a6e22e">item_type_one</span><span style="color:#f92672">,</span>parent<span style="color:#f92672">,</span><span style="color:#66d9ef">false</span><span style="color:#f92672">);</span>
+                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> OneViewHolder<span style="color:#f92672">(</span>view<span style="color:#f92672">);</span>
+            <span style="color:#66d9ef">case</span> TYPE_TWO<span style="color:#f92672">:</span>
+<span style="color:#75715e">//                view  = View.inflate(parent.getContext(), R.layout.item_type_two,null);
+</span><span style="color:#75715e"></span>                view <span style="color:#f92672">=</span> LayoutInflater<span style="color:#f92672">.</span><span style="color:#a6e22e">from</span><span style="color:#f92672">(</span>parent<span style="color:#f92672">.</span><span style="color:#a6e22e">getContext</span><span style="color:#f92672">()).</span><span style="color:#a6e22e">inflate</span><span style="color:#f92672">(</span>R<span style="color:#f92672">.</span><span style="color:#a6e22e">layout</span><span style="color:#f92672">.</span><span style="color:#a6e22e">item_type_two</span><span style="color:#f92672">,</span>parent<span style="color:#f92672">,</span><span style="color:#66d9ef">false</span><span style="color:#f92672">);</span>
+                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> TwoViewHolder<span style="color:#f92672">(</span>view<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onBindViewHolder</span><span style="color:#f92672">(</span><span style="color:#a6e22e">@NonNull</span> RecyclerView<span style="color:#f92672">.</span><span style="color:#a6e22e">ViewHolder</span> holder<span style="color:#f92672">,</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> position<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>holder <span style="color:#66d9ef">instanceof</span> OneViewHolder<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#f92672">((</span>OneViewHolder<span style="color:#f92672">)</span> holder<span style="color:#f92672">).</span><span style="color:#a6e22e">mCover</span><span style="color:#f92672">.</span><span style="color:#a6e22e">setImageResource</span><span style="color:#f92672">(</span>beanList<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>position<span style="color:#f92672">).</span><span style="color:#a6e22e">getPic</span><span style="color:#f92672">());</span>
+            <span style="color:#f92672">((</span>OneViewHolder<span style="color:#f92672">)</span> holder<span style="color:#f92672">).</span><span style="color:#a6e22e">mDesc</span><span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span>beanList<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>position<span style="color:#f92672">).</span><span style="color:#a6e22e">getDesc</span><span style="color:#f92672">());</span>
+            <span style="color:#f92672">((</span>OneViewHolder<span style="color:#f92672">)</span> holder<span style="color:#f92672">).</span><span style="color:#a6e22e">mTitle</span><span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span>beanList<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>position<span style="color:#f92672">).</span><span style="color:#a6e22e">getTitle</span><span style="color:#f92672">());</span>
+        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>holder <span style="color:#66d9ef">instanceof</span> TwoViewHolder<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#f92672">((</span>TwoViewHolder<span style="color:#f92672">)</span> holder<span style="color:#f92672">).</span><span style="color:#a6e22e">mAvator</span><span style="color:#f92672">.</span><span style="color:#a6e22e">setImageResource</span><span style="color:#f92672">(</span>beanList<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>position<span style="color:#f92672">).</span><span style="color:#a6e22e">getPic</span><span style="color:#f92672">());</span>
+            <span style="color:#f92672">((</span>TwoViewHolder<span style="color:#f92672">)</span> holder<span style="color:#f92672">).</span><span style="color:#a6e22e">mName</span><span style="color:#f92672">.</span><span style="color:#a6e22e">setText</span><span style="color:#f92672">(</span>beanList<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>position<span style="color:#f92672">).</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">());</span>
+            <span style="color:#f92672">((</span>TwoViewHolder<span style="color:#f92672">)</span> holder<span style="color:#f92672">).</span><span style="color:#a6e22e">mButton</span><span style="color:#f92672">.</span><span style="color:#a6e22e">setOnClickListener</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> View<span style="color:#f92672">.</span><span style="color:#a6e22e">OnClickListener</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+                <span style="color:#a6e22e">@Override</span>
+                <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onClick</span><span style="color:#f92672">(</span>View v<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                    Log<span style="color:#f92672">.</span><span style="color:#a6e22e">e</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;==&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;你点击的是第 &#34;</span><span style="color:#f92672">+</span>position<span style="color:#f92672">+</span><span style="color:#e6db74">&#34; 项&#34;</span><span style="color:#f92672">);</span>
+                 <span style="color:#f92672">}</span>
+            <span style="color:#f92672">});</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getItemViewType</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> position<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">int</span> layoutStyle <span style="color:#f92672">=</span> beanList<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>position<span style="color:#f92672">).</span><span style="color:#a6e22e">getLayoutStyle</span><span style="color:#f92672">();</span>
+        <span style="color:#66d9ef">switch</span> <span style="color:#f92672">(</span>layoutStyle<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">case</span> 1<span style="color:#f92672">:</span>
+                <span style="color:#66d9ef">return</span> TYPE_ONE<span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">case</span> 2<span style="color:#f92672">:</span>
+                <span style="color:#66d9ef">return</span> TYPE_TWO<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">return</span> 0<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getItemCount</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> beanList<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">OneViewHolder</span> <span style="color:#66d9ef">extends</span> RecyclerView<span style="color:#f92672">.</span><span style="color:#a6e22e">ViewHolder</span><span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">private</span> ImageView mCover<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">private</span> TextView mDesc<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">private</span> TextView mTitle<span style="color:#f92672">;</span>
+
+        <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">OneViewHolder</span><span style="color:#f92672">(</span><span style="color:#a6e22e">@NonNull</span> View itemView<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>itemView<span style="color:#f92672">);</span>
+            mCover <span style="color:#f92672">=</span> itemView<span style="color:#f92672">.</span><span style="color:#a6e22e">findViewById</span><span style="color:#f92672">(</span>R<span style="color:#f92672">.</span><span style="color:#a6e22e">id</span><span style="color:#f92672">.</span><span style="color:#a6e22e">iv_cover</span><span style="color:#f92672">);</span>
+            mDesc <span style="color:#f92672">=</span> itemView<span style="color:#f92672">.</span><span style="color:#a6e22e">findViewById</span><span style="color:#f92672">(</span>R<span style="color:#f92672">.</span><span style="color:#a6e22e">id</span><span style="color:#f92672">.</span><span style="color:#a6e22e">tv_desc</span><span style="color:#f92672">);</span>
+            mTitle <span style="color:#f92672">=</span> itemView<span style="color:#f92672">.</span><span style="color:#a6e22e">findViewById</span><span style="color:#f92672">(</span>R<span style="color:#f92672">.</span><span style="color:#a6e22e">id</span><span style="color:#f92672">.</span><span style="color:#a6e22e">tv_title</span><span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TwoViewHolder</span> <span style="color:#66d9ef">extends</span> RecyclerView<span style="color:#f92672">.</span><span style="color:#a6e22e">ViewHolder</span><span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">private</span> ImageView mAvator<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">private</span> TextView mName<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">private</span> Button mButton<span style="color:#f92672">;</span>
+
+        <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">TwoViewHolder</span><span style="color:#f92672">(</span><span style="color:#a6e22e">@NonNull</span> View itemView<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">super</span><span style="color:#f92672">(</span>itemView<span style="color:#f92672">);</span>
+            mAvator <span style="color:#f92672">=</span> itemView<span style="color:#f92672">.</span><span style="color:#a6e22e">findViewById</span><span style="color:#f92672">(</span>R<span style="color:#f92672">.</span><span style="color:#a6e22e">id</span><span style="color:#f92672">.</span><span style="color:#a6e22e">iv_avator</span><span style="color:#f92672">);</span>
+            mName <span style="color:#f92672">=</span> itemView<span style="color:#f92672">.</span><span style="color:#a6e22e">findViewById</span><span style="color:#f92672">(</span>R<span style="color:#f92672">.</span><span style="color:#a6e22e">id</span><span style="color:#f92672">.</span><span style="color:#a6e22e">tv_name</span><span style="color:#f92672">);</span>
+            mButton <span style="color:#f92672">=</span> itemView<span style="color:#f92672">.</span><span style="color:#a6e22e">findViewById</span><span style="color:#f92672">(</span>R<span style="color:#f92672">.</span><span style="color:#a6e22e">id</span><span style="color:#f92672">.</span><span style="color:#a6e22e">btn_btn</span><span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>里面还遇到了一个问题，未解决</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">//                view  = View.inflate(parent.getContext(), R.layout.item_type_two,null);
+</span><span style="color:#75715e"></span>                view <span style="color:#f92672">=</span> LayoutInflater<span style="color:#f92672">.</span><span style="color:#a6e22e">from</span><span style="color:#f92672">(</span>parent<span style="color:#f92672">.</span><span style="color:#a6e22e">getContext</span><span style="color:#f92672">()).</span><span style="color:#a6e22e">inflate</span><span style="color:#f92672">(</span>R<span style="color:#f92672">.</span><span style="color:#a6e22e">layout</span><span style="color:#f92672">.</span><span style="color:#a6e22e">item_type_two</span><span style="color:#f92672">,</span>parent<span style="color:#f92672">,</span><span style="color:#66d9ef">false</span><span style="color:#f92672">);</span>
+</code></pre></div><p>这两个方法都能弄出视图来，可是，第一个方法呈现的视图是紧凑的，也就是我的<code>margin</code>值是无效的&hellip;.留个坑</p>
+			</div>
+			
+			<div>
+				<ul id="tags">
+					
+					<li><a href="/tags/android">Android</a></li>
+					
+					<li><a href="/tags/recyclerview">Recyclerview</a></li>
+					
+				</ul>
+			</div>
+			<script src="https://utteranc.es/client.js"
+				repo="FuShaoLei/blog-comments"
+				issue-term="pathname"
+				theme="github-light"
+				crossorigin="anonymous"
+				async>
+			</script>
+			
+		</article>
+	</main>
+
+	<footer>
+	<p>&copy; 2021 <a href="https://fushaolei.vercel.app/">Sorryfu Site</a></p>
+</footer>
+
+	</div>
+</body>
+</html>

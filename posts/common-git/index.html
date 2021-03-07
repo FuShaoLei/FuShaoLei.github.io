@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>常用Git指令</title>
+	
+	
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="markdown-body">
+	<div class="container">
+	<header>
+	<a href="https://fushaolei.vercel.app/">Sorryfu Site</a>
+	
+	<nav>
+		<ul>
+			
+			<li class="menu-li"><a href="/page/about">关于</a></li>
+			
+			<li class="menu-li"><a href="/page/link">友链</a></li>
+			
+		</ul>
+	</nav>
+	
+	<hr>
+</header>
+
+	
+	<main>
+		<article>
+			<h1>常用Git指令</h1>
+			<div>
+				<table>
+<thead>
+<tr>
+<th>指令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git add .</code></td>
+<td>将修改放入暂存区</td>
+</tr>
+<tr>
+<td><code>git status</code></td>
+<td>查看状态</td>
+</tr>
+<tr>
+<td><code>git log</code></td>
+<td>查看commit版本号</td>
+</tr>
+<tr>
+<td><code>git reset --hard 版本号</code></td>
+<td>版本回退，hard强制回退，soft的话会保留修改</td>
+</tr>
+<tr>
+<td><code>git stash</code></td>
+<td>将修改保存起来</td>
+</tr>
+<tr>
+<td><code>git stash save &quot;xxx&quot;</code></td>
+<td>将修改保存起来，并设置这个保存的标签</td>
+</tr>
+<tr>
+<td><code>git stash apply stash@{x}</code></td>
+<td>将修改移出来</td>
+</tr>
+<tr>
+<td><code>git branch -vv</code></td>
+<td>查看本地分支是否与远端分支建立了连接</td>
+</tr>
+<tr>
+<td><code>git push origin &lt;分支名&gt;:&lt;分支名&gt;</code></td>
+<td>仅仅将本地分支推送到远端分支， <strong>注意:这个操作只是单纯的把本地的分支推送到远端,尚未建立连接</strong></td>
+</tr>
+<tr>
+<td><code>git push --set-upstream origin &lt;分支名&gt;</code></td>
+<td>将本地分支推送到远端分支并建立连接</td>
+</tr>
+<tr>
+<td><code>git checkout -b &lt;分支名&gt; origin/&lt;分支名&gt;</code></td>
+<td>拉取远程分支到本地（本地与远程建立连接，前提是本地已经有其他分支了）</td>
+</tr>
+</tbody>
+</table>
+
+			</div>
+			
+			<div>
+				<ul id="tags">
+					
+					<li><a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0">学习笔记</a></li>
+					
+					<li><a href="/tags/git">Git</a></li>
+					
+				</ul>
+			</div>
+			<script src="https://utteranc.es/client.js"
+				repo="FuShaoLei/blog-comments"
+				issue-term="pathname"
+				theme="github-light"
+				crossorigin="anonymous"
+				async>
+			</script>
+			
+		</article>
+	</main>
+
+	<footer>
+	<p>&copy; 2021 <a href="https://fushaolei.vercel.app/">Sorryfu Site</a></p>
+</footer>
+
+	</div>
+</body>
+</html>
