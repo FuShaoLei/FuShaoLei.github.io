@@ -7,6 +7,9 @@ body{
     font-family: 'Noto Serif SC', serif;
     font-size: 1.1em;
 }
+.markdown-body table{
+    min-width: 700px;
+}
 .container{
     max-width: 700px;
     margin: 0 auto;
