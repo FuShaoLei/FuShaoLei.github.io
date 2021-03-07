@@ -54,7 +54,7 @@
         "@context": "https://schema.org",
         "@type": "WebPage",
         "datePublished": "2020-10-31T12:42:57+00:00",
-        "dateModified": "2021-03-06T18:37:30+00:00",
+        "dateModified": "2021-03-07T03:36:22+00:00",
         "url": "https://fushaolei.vercel.app/page/link/",
         "name": "友链",
         "description": "这里面有的是单链 有的是双链 ~，有些链接可能已经挂了，但是我并不想把他们删掉，算是留个……",
@@ -352,6 +352,20 @@
         
     
 
+        <div class="load-comments">
+            <div id="load-comments">加载评论</div>
+        </div>
+
+        
+
+        
+
+        
+            <div id="utterances"></div>
+        
+
+    
+
 
 
     </div>
@@ -386,6 +400,36 @@
 
 
 
+
+    
+
+        
+
+        
+
+        
+            <script>
+    function loadComments() {
+        (function() {
+            var utterances = document.getElementById("utterances");
+            var script = document.createElement('script');
+            script.src = 'https://utteranc.es/client.js';
+            script.async = true;
+            script.crossOrigin = 'anonymous';
+            script.setAttribute('repo', 'FuShaoLei\/blog-comments');
+            script.setAttribute('issue-term', 'pathname');
+            const isDark = getCurrentTheme() === 'dark';
+        if (isDark) {
+            script.setAttribute('theme', 'photon-dark');
+        } else {
+            script.setAttribute('theme', 'github-light');
+        }
+            
+            utterances.appendChild(script);
+        })();
+    }
+</script>
+        
 
     
 
