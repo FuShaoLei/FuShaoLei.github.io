@@ -8,12 +8,13 @@
     <language>en-us</language>
     <lastBuildDate>Mon, 21 Sep 2020 22:01:51 +0000</lastBuildDate><atom:link href="https://fushaolei.vercel.app/tags/hexo/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>GitHub Action实现在线写作</title>
+      <title>GitHub Action &#43; Hexo 实现在线写作</title>
       <link>https://fushaolei.vercel.app/posts/github-action-hexo/</link>
       <pubDate>Mon, 21 Sep 2020 22:01:51 +0000</pubDate>
       
       <guid>https://fushaolei.vercel.app/posts/github-action-hexo/</guid>
-      <description>零，前言 hexo 是一款快速、简洁且高效的静态博客框架，因为它的高可定制性，所以深受各个程序员的喜爱，我也曾一头扎进去研究过，先后开发了white和hiya主题，在使用过程中，也渐渐的发现了一些问题
+      <description>心血来潮，研究了一下午，当写完的时候，上网一查，才发现已经有好多人都写过类似的文章了，但我感觉不记录就好像吃了亏什么的，所以，写了一篇蛮常见的文章，以此慰己
+ 零，前言 hexo 是一款快速、简洁且高效的静态博客框架，因为它的高可定制性，所以深受各个程序员的喜爱，我也曾一头扎进去研究过，先后开发了white和hiya主题，在使用过程中，也渐渐的发现了一些问题
 情景一，当浏览自己某篇博客时发现了一些错误之后想要马上修改时，将要经历经历一下步骤
  在本地的hexo博客文件夹中找到source/_post文件夹 找到那个md文件，打开 修改 然后还要经历hexo clean,hexo g，hexo d  情景二，当想要马上写一篇博客时，需要经历以下步骤
  在博客根目录中hexo n &amp;quot;博客名&amp;quot; 点击进入source/_post文件夹中找到这个md文件并打开 写博客 然后还要经历hexo clean,hexo g，hexo d三连  以上过程想必使用过hexo博客的人都经历过吧？不知道你们什么感觉，反正这对于我这种急性子的人来说简直是忍不了(╯‵□′)╯︵┻━┻，而且每次写完博客啊，修改完博客啊之类的，还必须经历过hexo clean,hexo g，hexo d才可以将博客推送到网上去，这玩意我一开始还有耐心，现在就不行了(ノ｀Д)ノ，幸好后来发现了github action可以实现自动部署，再结合自己以往开发hexo主题的经验，做出来了可以在线新建博客或者修改博客的功能（具体可参观我的博客），效果如下：

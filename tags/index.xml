@@ -35,33 +35,6 @@
     </item>
     
     <item>
-      <title>Android</title>
-      <link>https://fushaolei.vercel.app/tags/android/</link>
-      <pubDate>Thu, 14 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://fushaolei.vercel.app/tags/android/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>未解决bug</title>
-      <link>https://fushaolei.vercel.app/tags/%E6%9C%AA%E8%A7%A3%E5%86%B3bug/</link>
-      <pubDate>Thu, 14 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://fushaolei.vercel.app/tags/%E6%9C%AA%E8%A7%A3%E5%86%B3bug/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>毕业设计</title>
-      <link>https://fushaolei.vercel.app/tags/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/</link>
-      <pubDate>Thu, 14 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://fushaolei.vercel.app/tags/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Git</title>
       <link>https://fushaolei.vercel.app/tags/git/</link>
       <pubDate>Tue, 12 Jan 2021 00:00:00 +0000</pubDate>
@@ -94,6 +67,15 @@
       <pubDate>Tue, 15 Dec 2020 15:07:39 +0000</pubDate>
       
       <guid>https://fushaolei.vercel.app/tags/%E5%AE%9E%E4%B9%A0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Android</title>
+      <link>https://fushaolei.vercel.app/tags/android/</link>
+      <pubDate>Tue, 08 Dec 2020 22:04:03 +0000</pubDate>
+      
+      <guid>https://fushaolei.vercel.app/tags/android/</guid>
       <description></description>
     </item>
     
@@ -139,15 +121,6 @@
       <pubDate>Fri, 17 Jul 2020 15:23:41 +0000</pubDate>
       
       <guid>https://fushaolei.vercel.app/tags/flutter/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Linux</title>
-      <link>https://fushaolei.vercel.app/tags/linux/</link>
-      <pubDate>Mon, 13 Jul 2020 00:17:53 +0000</pubDate>
-      
-      <guid>https://fushaolei.vercel.app/tags/linux/</guid>
       <description></description>
     </item>
     

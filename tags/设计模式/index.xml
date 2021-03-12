@@ -8,12 +8,12 @@
     <language>en-us</language>
     <lastBuildDate>Tue, 06 Oct 2020 13:34:37 +0000</lastBuildDate><atom:link href="https://fushaolei.vercel.app/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Android MVP模式</title>
+      <title>Android MVP模式思想</title>
       <link>https://fushaolei.vercel.app/posts/android-mvp/</link>
       <pubDate>Tue, 06 Oct 2020 13:34:37 +0000</pubDate>
       
       <guid>https://fushaolei.vercel.app/posts/android-mvp/</guid>
-      <description>前言 以前有学过，感觉理解不了，然后又用不到，然后就不了了之了 QAQ，现在因为实习公司的项目有用到，如果不学的话感觉根本看不懂项目（其实学完之后还是看不懂😂），所以就重新学过，顺便记录一下
+      <description>前言 以前有学过，感觉理解不了，然后又用不到，然后就不了了之了 ，现在因为实习公司的项目有用到，如果不学的话感觉根本看不懂项目（其实学完之后还是看不懂😂），所以就重新学过，顺便记录一下
 2021年1月13日补充 当初想的窄了，从细枝末节入手，缺乏一个全局的观念，现在想起来，其实下面所说的预备知识，其实是为优化MVP模式所服务的。
 以及，mvp模式只是一个思想，并没有具体的，标准的编码规定
 预备知识  面向接口的编程思想 向上转型的概念 解耦  面向接口编程 先复习一下接口的概念：
