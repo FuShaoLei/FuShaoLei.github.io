@@ -1,8 +1,11 @@
 @import url('./github-css.css');
 
 body{
-    background-color: #FDFDFD;
     --my-max-width:700px;
+    --my-bg-color: #FDFDFD;
+}
+body{
+    background-color: var(--my-bg-color)
 }
 .markdown-body{
     font-family: 'Noto Serif SC', serif;
@@ -17,4 +20,36 @@ body{
 .container{
     max-width: var(--my-max-width);
     margin: 0 auto;
+}
+
+.no-bottom-border h1{
+    border: none;
+}
+
+/* header */
+header{
+    width: 100%;
+    background-color: #F6F8FA;
+    position: fixed;
+    top: 0px;
+}
+.header-box{
+    width: var(--my-max-width);
+    background-color: var(--my-bg-color);
+    margin: 0 auto;
+}
+.header-box div{
+    float: left;
+    margin-right:2%; 
+    margin-top: 0;
+    position: relative;
+    overflow: hidden;
+    line-height: 50px;
+}
+.header-box a{
+    color: #333;
+}
+
+main{
+    margin-top: 70px;
 }
