@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Java on Sorryfu Site</title>
-    <link>https://fushaolei.vercel.app/tags/java/</link>
-    <description>Recent content in Java on Sorryfu Site</description>
+    <title>updating on Sorryfu Site</title>
+    <link>https://fushaolei.vercel.app/tags/updating/</link>
+    <description>Recent content in updating on Sorryfu Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 03 Mar 2021 13:34:37 +0000</lastBuildDate><atom:link href="https://fushaolei.vercel.app/tags/java/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Java关键字总结</title>
-      <link>https://fushaolei.vercel.app/posts/java-keyword/</link>
-      <pubDate>Wed, 03 Mar 2021 13:34:37 +0000</pubDate>
-      
-      <guid>https://fushaolei.vercel.app/posts/java-keyword/</guid>
-      <description>   关键字 说明     class 定义一个类   int 整数类型    </description>
-    </item>
-    
+    <lastBuildDate>Fri, 15 Jan 2021 13:34:37 +0000</lastBuildDate><atom:link href="https://fushaolei.vercel.app/tags/updating/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>《Java核心技术I》笔记</title>
       <link>https://fushaolei.vercel.app/posts/core-java-note/</link>
