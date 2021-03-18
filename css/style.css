@@ -1,7 +1,7 @@
 @import url('./github-css.css');
 
 body{
-    --my-max-width:700px;
+    --my-max-width:670px;
     --my-bg-color: #FDFDFD;
 }
 body{
@@ -29,21 +29,15 @@ body{
 /* header */
 header{
     width: 100%;
-    background-color: #F6F8FA;
-    position: fixed;
-    top: 0px;
 }
 .header-box{
     width: var(--my-max-width);
-    background-color: var(--my-bg-color);
     margin: 0 auto;
 }
 .header-box div{
     float: left;
     margin-right:2%; 
     margin-top: 0;
-    position: relative;
-    overflow: hidden;
     line-height: 50px;
 }
 .header-box a{
