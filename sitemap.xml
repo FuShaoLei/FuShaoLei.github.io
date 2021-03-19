@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://fushaolei.vercel.app/posts/</loc>
+    <loc>https://fushaolei.vercel.app/post/</loc>
     <lastmod>2021-03-10T13:34:37+00:00</lastmod>
   </url>
   
@@ -18,7 +18,7 @@
   </url>
   
   <url>
-    <loc>https://fushaolei.vercel.app/posts/internet-cafe/</loc>
+    <loc>https://fushaolei.vercel.app/post/internet-cafe/</loc>
     <lastmod>2021-03-10T13:34:37+00:00</lastmod>
   </url>
   
@@ -33,7 +33,7 @@
   </url>
   
   <url>
-    <loc>https://fushaolei.vercel.app/posts/java-keyword/</loc>
+    <loc>https://fushaolei.vercel.app/post/java-keyword/</loc>
     <lastmod>2021-03-03T13:34:37+00:00</lastmod>
   </url>
   
@@ -48,7 +48,7 @@
   </url>
   
   <url>
-    <loc>https://fushaolei.vercel.app/posts/core-java-note/</loc>
+    <loc>https://fushaolei.vercel.app/post/core-java-note/</loc>
     <lastmod>2021-01-15T13:34:37+00:00</lastmod>
   </url>
   
@@ -63,17 +63,17 @@
   </url>
   
   <url>
-    <loc>https://fushaolei.vercel.app/posts/common-git/</loc>
+    <loc>https://fushaolei.vercel.app/post/common-git/</loc>
     <lastmod>2021-01-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.vercel.app/posts/useful-software/</loc>
+    <loc>https://fushaolei.vercel.app/post/useful-software/</loc>
     <lastmod>2021-01-10T12:14:48+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.vercel.app/posts/hello-hugo/</loc>
+    <loc>https://fushaolei.vercel.app/post/hello-hugo/</loc>
     <lastmod>2021-01-08T12:54:02+08:00</lastmod>
   </url>
   
@@ -83,12 +83,12 @@
   </url>
   
   <url>
-    <loc>https://fushaolei.vercel.app/posts/ide-skill/</loc>
+    <loc>https://fushaolei.vercel.app/post/ide-skill/</loc>
     <lastmod>2021-01-05T10:48:35+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.vercel.app/posts/work-in-sina/</loc>
+    <loc>https://fushaolei.vercel.app/post/work-in-sina/</loc>
     <lastmod>2020-12-15T15:07:39+00:00</lastmod>
   </url>
   
@@ -98,7 +98,7 @@
   </url>
   
   <url>
-    <loc>https://fushaolei.vercel.app/posts/life-travel-in-gugong/</loc>
+    <loc>https://fushaolei.vercel.app/post/life-travel-in-gugong/</loc>
     <lastmod>2020-12-14T16:53:37+00:00</lastmod>
   </url>
   
@@ -113,22 +113,22 @@
   </url>
   
   <url>
-    <loc>https://fushaolei.vercel.app/posts/recyclerview-multi-style/</loc>
+    <loc>https://fushaolei.vercel.app/post/recyclerview-multi-style/</loc>
     <lastmod>2020-12-08T22:04:03+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.vercel.app/posts/sina-work-knowledge/</loc>
+    <loc>https://fushaolei.vercel.app/post/sina-work-knowledge/</loc>
     <lastmod>2020-11-25T00:16:03+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.vercel.app/posts/get-the-jetbrains-license/</loc>
+    <loc>https://fushaolei.vercel.app/post/get-the-jetbrains-license/</loc>
     <lastmod>2020-11-21T22:41:39+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.vercel.app/posts/error-note/</loc>
+    <loc>https://fushaolei.vercel.app/post/error-note/</loc>
     <lastmod>2020-11-05T20:23:35+00:00</lastmod>
   </url>
   
@@ -148,12 +148,12 @@
   </url>
   
   <url>
-    <loc>https://fushaolei.vercel.app/posts/sina-workflow/</loc>
+    <loc>https://fushaolei.vercel.app/post/sina-workflow/</loc>
     <lastmod>2020-10-21T19:34:54+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.vercel.app/posts/android-mvp/</loc>
+    <loc>https://fushaolei.vercel.app/post/android-mvp/</loc>
     <lastmod>2020-10-06T13:34:37+00:00</lastmod>
   </url>
   
@@ -163,7 +163,7 @@
   </url>
   
   <url>
-    <loc>https://fushaolei.vercel.app/posts/kotlin-in-action-note/</loc>
+    <loc>https://fushaolei.vercel.app/post/kotlin-in-action-note/</loc>
     <lastmod>2020-10-06T13:34:37+00:00</lastmod>
   </url>
   
@@ -173,7 +173,7 @@
   </url>
   
   <url>
-    <loc>https://fushaolei.vercel.app/posts/github-action-hexo/</loc>
+    <loc>https://fushaolei.vercel.app/post/github-action-hexo/</loc>
     <lastmod>2020-09-21T22:01:51+00:00</lastmod>
   </url>
   
@@ -183,7 +183,7 @@
   </url>
   
   <url>
-    <loc>https://fushaolei.vercel.app/posts/doc-white-configration/</loc>
+    <loc>https://fushaolei.vercel.app/post/doc-white-configration/</loc>
     <lastmod>2020-08-09T23:31:29+00:00</lastmod>
   </url>
   
@@ -193,22 +193,22 @@
   </url>
   
   <url>
-    <loc>https://fushaolei.vercel.app/posts/flutter-note/</loc>
+    <loc>https://fushaolei.vercel.app/post/flutter-note/</loc>
     <lastmod>2020-07-17T15:23:41+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.vercel.app/posts/android-listview/</loc>
+    <loc>https://fushaolei.vercel.app/post/android-listview/</loc>
     <lastmod>2020-06-24T08:37:32+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.vercel.app/posts/idea-note/</loc>
+    <loc>https://fushaolei.vercel.app/post/idea-note/</loc>
     <lastmod>2020-06-14T21:36:08+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://fushaolei.vercel.app/posts/git-note/</loc>
+    <loc>https://fushaolei.vercel.app/post/git-note/</loc>
     <lastmod>2020-02-03T10:55:36+00:00</lastmod>
   </url>
   

@@ -9,29 +9,29 @@
     <lastBuildDate>Wed, 03 Mar 2021 13:34:37 +0000</lastBuildDate><atom:link href="https://fushaolei.vercel.app/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Java关键字总结</title>
-      <link>https://fushaolei.vercel.app/posts/java-keyword/</link>
+      <link>https://fushaolei.vercel.app/post/java-keyword/</link>
       <pubDate>Wed, 03 Mar 2021 13:34:37 +0000</pubDate>
       
-      <guid>https://fushaolei.vercel.app/posts/java-keyword/</guid>
+      <guid>https://fushaolei.vercel.app/post/java-keyword/</guid>
       <description>   关键字 说明     class 定义一个类   int 整数类型    </description>
     </item>
     
     <item>
       <title>《Java核心技术I》笔记</title>
-      <link>https://fushaolei.vercel.app/posts/core-java-note/</link>
+      <link>https://fushaolei.vercel.app/post/core-java-note/</link>
       <pubDate>Fri, 15 Jan 2021 13:34:37 +0000</pubDate>
       
-      <guid>https://fushaolei.vercel.app/posts/core-java-note/</guid>
+      <guid>https://fushaolei.vercel.app/post/core-java-note/</guid>
       <description>日期 说明     2021/01/31 读完了第一遍，边读边记，看的比较随意，除了第一第二章外，有些难的或者偏也都直接跳过了😜，看第二遍的时候再补回来吧 maybe。    概述  第 1 章 + 第 2 章 ： 这两章介绍了一些东西，比如Java的发展历史啊，Java的特性啊，以及Java的运行环境等等。特别要说的是，Java是一门面向对象程序设计语言，程序设计语言的成功取决于是否可以实现需要的功能，而不是语法的精巧性。以及JDK（Java Development Kit：Java开发工具包）与JRE（Java Runtime Environment：Java运行时环境） 第 3 章 Java的基本程序设计结构：这一章讲了Java的一些基础知识，比如注释啊，8 种基本类型啊（int,short,long,byte,double,float,boolean,char），变量（如何声明，初始化变量）与常量，运算符（其中还提到了短路的概念），介绍了字符串，输入输出等（这一节其实还讲了Math的一些静态方法，不过我觉得不是很重要，需要的时候可以查嘛，所以这里就不记录了） 第 4 章 对象与类：这一章介绍了面向对象思想，还有类与对象的关系  第 3 章 Java的基本程序设计结构 1.第一个程序 public class Hello { public static void main(String[] args) { System.out.println(&amp;#34;Hello World&amp;#34;); } } 说明
  public（访问修饰符） 用于控制对所修饰的类或对象或字段的访问级别 class表示这是一个类，Hello则是这个类的类名 main方法是所有程序的入口 大括号表示方法体的开始与结束  2.注释 //单行注释  /* 多行注释，（不能嵌套使用） */ /** * 文档注释 * 可用于自动的生成文档 */ 3.</description>
     </item>
     
     <item>
       <title>《Kotlin实战》笔记</title>
-      <link>https://fushaolei.vercel.app/posts/kotlin-in-action-note/</link>
+      <link>https://fushaolei.vercel.app/post/kotlin-in-action-note/</link>
       <pubDate>Tue, 06 Oct 2020 13:34:37 +0000</pubDate>
       
-      <guid>https://fushaolei.vercel.app/posts/kotlin-in-action-note/</guid>
+      <guid>https://fushaolei.vercel.app/post/kotlin-in-action-note/</guid>
       <description>第 2章	Kotlin基础 第一个Kotlin程序 fun main(args: Array&amp;lt;String&amp;gt;) {//以fun关键字定义函数体  println(&amp;#34;Hello World&amp;#34;)//省略了分号  println(&amp;#34;较大的是：&amp;#34;+max(2,1)) println(&amp;#34;较大的是：&amp;#34;+max2(4,3)) } fun max(a:Int,b:Int): Int{//先写参数名，再写参数类型  return if(a&amp;gt;b) a else b//在kotlin中，if是表达式，这里类似java中的三元运算符 } //另一种写法： fun max2(a:Int,b:Int):Int = if (a&amp;gt;b) a else b //这里max和max2的:Int可以省略，编译器会帮你分析表达式体函数，并把它的类型作为函数返回类型 变量 关键字
  val：不可变引用（相当于Java的加上了final关键字） var 可变引用  val a = 3//编译器会把int类型作为变量a的类型  var b = &amp;#34;gulugulu&amp;#34;//b的类型是String  var c:Char c = &amp;#39;x&amp;#39; 字符串模板 可用$或${}来注入到字符串中
 fun main(args: Array&amp;lt;String&amp;gt;) { val name = &amp;#34;Kotlin&amp;#34; var a = 2 var b = 3 println(&amp;#34;Hello $name&amp;#34;) println(&amp;#34;Hello ${if(a&amp;gt;b) &amp;#34;a大于b&amp;#34; else &amp;#34;a小于b&amp;#34;}&amp;#34;) println(&amp;#34;Hello ${if(a&amp;gt;b) a else b}&amp;#34;)//甚至可以注入变量，这也太方便了 } //输出 Hello Kotlin Hello a小于b Hello 3 类和属性 声明一个类</description>

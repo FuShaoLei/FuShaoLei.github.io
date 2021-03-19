@@ -1,7 +1,7 @@
 @import url('./github-css.css');
 
 body{
-    --my-max-width:670px;
+    --my-max-width:610px;
     --my-bg-color: #FDFDFD;
 }
 body{
@@ -17,9 +17,14 @@ body{
 .markdown-body code{
     margin: 0 2px;
 }
+.markdown-body a{
+    color:#333;
+    text-decoration: underline;
+}
 .container{
     max-width: var(--my-max-width);
     margin: 0 auto;
+    padding-bottom: 10px;
 }
 
 .no-bottom-border h1{
@@ -39,9 +44,6 @@ header{
     margin-right:2%; 
     margin-top: 0;
     line-height: 50px;
-}
-.header-box a{
-    color: #333;
 }
 
 main{

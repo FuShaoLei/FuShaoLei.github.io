@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>工作流程记录</title>
+	
+	
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="markdown-body">
+	<header>
+	<div class="header-box">
+		
+		
+		<div>
+			<a href="/">首页</a>
+		</div>
+		
+		<div>
+			<a href="/page/about">关于</a>
+		</div>
+		
+		<div>
+			<a href="/page/link">友链</a>
+		</div>
+		
+		<div>
+			<a href="https://travellings.now.sh/">开往</a>
+		</div>
+		
+	
+	</div>
+</header>
+
+	<div class="container">
+	
+	<main>
+		<article>
+			<center class="no-bottom-border">
+				<h1>工作流程记录</h1>
+			</center>
+			<div class="margin-top">
+				<blockquote>
+<p>小记录</p>
+</blockquote>
+<h2 id="1确认需求">1.确认需求</h2>
+<ul>
+<li>是否需要后端的接口，是否定好了协议，或者增加了什么字段</li>
+<li>是否有设计稿，哪里和哪里对齐什么的</li>
+<li>必要的时候，还要找后端或者产品沟通一下</li>
+</ul>
+<h2 id="2创建新分支">2.创建新分支</h2>
+<p>分支命名</p>
+<ul>
+<li>如果是修bug的就写：<code>issues/fixbug_编号</code></li>
+<li>如果是加新功能的就写：<code>features/版本号/功能_名字</code></li>
+</ul>
+<p>将分支push到远程仓库</p>
+<ul>
+<li><code>git push --set-upstream origin &lt;分支名&gt;</code></li>
+<li>可用<code>git branch -vv</code>指令查看本地分支是否与远程分支建立了连接</li>
+</ul>
+<h2 id="3开发">3.开发</h2>
+<p>要注意写的代码是否有意义，是否有必要</p>
+<h2 id="4code-review">4.code review</h2>
+<p>开发完成后要进行code review，操作如下</p>
+<ul>
+<li>
+<p><code>git add .</code></p>
+</li>
+<li>
+<p><code>git commmit -m &quot;&quot;</code>，格式要求如下</p>
+</li>
+</ul>
+<pre><code>Feature(或是Fix bug之类的): 更改或增加了什么
+
+Summary: jira
+
+Test Plan: 测试计划
+
+Reviewers: 你指定的要帮你code reivew的人，多个人用英文逗号隔开
+
+Subscribers: #订阅者
+</code></pre><ul>
+<li>
+<p>之后执行<code>arc diff</code>指令，（在<code>nano editor</code>里操作指令如下）</p>
+<ol>
+<li><code>ctrl+o</code></li>
+<li><code>alt+d</code></li>
+<li><code>enter</code></li>
+<li><code>ctrl+x</code></li>
+</ol>
+</li>
+</ul>
+<p>然后就告知你指定的人review你的代码，有不好的地方就修改，然后再次<code>arc diff</code>，有人accept后就可用执行<code>arc land</code>指令，这个指令类似<code>git push</code>，就是推送到了远程仓库上</p>
+<h2 id="5提测">5.提测</h2>
+<p>然后就可以交给测试去测试了，有bug的话就修bug，然后再次<code>arc diff</code>,<code>arc land</code>流程，测试通过后就可以交给产品确认，确认完成后就可以合并了</p>
+<h2 id="6合并到devtrunk分支">6.合并到devTrunk分支</h2>
+<ul>
+<li>在<code>devTrunk</code>分支下，<code>git pull origin devTrunk</code></li>
+<li>切换到<strong>要合并的分支下</strong>进行 <code>git rebase devTrunk</code>，如有冲突则进行处理（尚未明白<code>git rebase</code>的功能）</li>
+<li>切回到<code>devTrunk</code>进行 <code>git merge &lt;要合并的分支&gt; --no-ff</code></li>
+<li><code>git push origin devTrunk</code></li>
+</ul>
+<p>到这里基本完成了自己的工作</p>
+
+			</div>
+			
+				
+				<code>
+					<a href="/tags/%E5%AE%9E%E4%B9%A0">#实习</a>
+				</code>
+				
+			
+
+
+		</article>
+	</main>
+
+	</div>
+	
+
+</body>
+</html>

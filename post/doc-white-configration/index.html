@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>white主题配置</title>
+	
+	
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="markdown-body">
+	<header>
+	<div class="header-box">
+		
+		
+		<div>
+			<a href="/">首页</a>
+		</div>
+		
+		<div>
+			<a href="/page/about">关于</a>
+		</div>
+		
+		<div>
+			<a href="/page/link">友链</a>
+		</div>
+		
+		<div>
+			<a href="https://travellings.now.sh/">开往</a>
+		</div>
+		
+	
+	</div>
+</header>
+
+	<div class="container">
+	
+	<main>
+		<article>
+			<center class="no-bottom-border">
+				<h1>white主题配置</h1>
+			</center>
+			<div class="margin-top">
+				<p><img src="https://cdn.jsdelivr.net/gh/fushaolei/img2/20200726101450.png" alt=""></p>
+<h2 id="hi-there">👋Hi there</h2>
+<p>欢迎使用本主题 ，<strong>White</strong> 是一个在个性和极简之间徘徊的主题，（因为作者本身性格就是这样的人，而且搞不好心态爆炸会删库跑路（现已跑路。。。），还请喜欢的各位及时fork🤣</p>
+<p>如果你喜欢这款主题的话，不妨给我一个star 感激不尽！</p>
+<h2 id="安装">安装</h2>
+<blockquote>
+<p>方便备份和更新</p>
+</blockquote>
+<ol>
+<li>fork 本项目</li>
+<li><code>git clone https://github.com/&lt;你的用户名&gt;/hexo-theme-white.git themes/white</code></li>
+<li>修改根目录下的<code>_config.yml</code> 为<code>theme: white</code></li>
+</ol>
+<h2 id="主题配置">主题配置</h2>
+<blockquote>
+<p>其实config文件里写的很明白了，现在就重新列一下，添加一些不必要的说明</p>
+</blockquote>
+<h3 id="可自定义style">可自定义style</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#75715e">############## style ##############</span>
+<span style="color:#f92672">style</span>:
+  <span style="color:#f92672">layout</span>:
+    <span style="color:#f92672">max-width</span>: <span style="color:#ae81ff">1130px</span> <span style="color:#75715e">#总体宽度</span>
+    <span style="color:#f92672">post-max-width</span>: <span style="color:#ae81ff">800px</span> <span style="color:#75715e">#文章内容宽度</span>
+  <span style="color:#f92672">color</span>:
+    <span style="color:#f92672">theme-main</span>: <span style="color:#e6db74">&#34;#1A98FF&#34;</span> <span style="color:#75715e"># 主色调</span>
+    <span style="color:#f92672">theme-secondary</span>: <span style="color:#e6db74">&#34;#DDF0FF&#34;</span> <span style="color:#75715e"># 次色调</span>
+    <span style="color:#f92672">text-main</span>: <span style="color:#e6db74">&#34;#333333&#34;</span> <span style="color:#75715e"># 文字主色调</span>
+    <span style="color:#f92672">text-secondary</span>: <span style="color:#e6db74">&#34;#898FA0&#34;</span> <span style="color:#75715e"># 文字次色调</span>
+  <span style="color:#f92672">animation</span>:
+    <span style="color:#f92672">open</span>: <span style="color:#66d9ef">true</span> <span style="color:#75715e"># 如果开启动画的话会引入animation.css</span>
+</code></pre></div><h3 id="主页配置">主页配置</h3>
+<h4 id="home页和archive可选配置">home页和archive可选配置</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#75715e"># home页可选类型</span>
+<span style="color:#f92672">home</span>:
+  <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;img&#34;</span> <span style="color:#75715e"># 主页的类型，可选 home | img | simple</span>
+
+<span style="color:#75715e"># archive页可选类型</span>
+<span style="color:#f92672">archive</span>:
+  <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;simple&#34;</span> <span style="color:#75715e"># archive的类型，可选 img | simple</span>
+</code></pre></div><p>type为home就是一个封面，为img就是图片加标题的形式，simple就是极简模式</p>
+<h3 id="随机cover">随机cover</h3>
+<p>当你懒的找封面而又想用img模式的时候，我为你准备了些随机封面</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">archive_img_mode</span>:
+  <span style="color:#f92672">default_cover</span>: <span style="color:#75715e">#默认的cover</span>
+    - <span style="color:#ae81ff">https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/01.jpg</span>
+    - <span style="color:#ae81ff">https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/02.jpg</span>
+    - <span style="color:#ae81ff">https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/03.jpg</span>
+    - <span style="color:#ae81ff">https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/04.jpg</span>
+    - <span style="color:#ae81ff">https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/05.jpg</span>
+    - <span style="color:#ae81ff">https://cdn.jsdelivr.net/gh/fushaolei/cdn-white@1.0/cover/06.jpg</span>
+</code></pre></div><blockquote>
+<p>图片均来自于bing的每日图片，版权归图片原作者所有，我只是搬到了自己的仓库方便使用，如果有侵犯到你的权益，请和我联系 ( •̀ ω •́ )y</p>
+</blockquote>
+<h3 id="浏览器标签页配置">浏览器标签页配置</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#75715e"># icon</span>
+<span style="color:#f92672">icon</span>:  <span style="color:#75715e">#标签页图标，这里可填链接</span>
+<span style="color:#75715e">#  header</span>
+<span style="color:#f92672">site_name</span>: <span style="color:#ae81ff">white.</span>
+</code></pre></div><h3 id="menu">menu</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">menu</span>:
+  <span style="color:#f92672">HOME</span>: <span style="color:#ae81ff">/</span>
+  <span style="color:#f92672">BLOG</span>: <span style="color:#ae81ff">/archives</span>
+</code></pre></div><h3 id="全局搜索">全局搜索</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#75715e">## 本地搜索</span>
+<span style="color:#f92672">search</span>:
+  <span style="color:#f92672">open</span>: <span style="color:#66d9ef">false</span> <span style="color:#75715e"># 是否开启</span>
+  <span style="color:#f92672">page</span>: <span style="color:#ae81ff">/search</span> <span style="color:#75715e"># 页面路径（通常命名为search）</span>
+</code></pre></div><p>如果你想使用的话，请先到根目录执行</p>
+<pre><code class="language-npm" data-lang="npm">npm install hexo-generator-search --save
+</code></pre><p>然后新建一个名为search的page</p>
+<pre><code class="language-npm" data-lang="npm">hexo new page &quot;search&quot;
+</code></pre><p>进入这个文件夹，更改它的<code>index.md</code>文件，示例如下</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">---
+layout: search
+cover: #你还可以自定义cover
+---
+
+</code></pre></div><p>然后将open设置为true即可开启</p>
+<h3 id="自我介绍">自我介绍</h3>
+<blockquote>
+<p>当你的home页有用到type home模式的话 请配置此项</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#75715e"># 自我介绍</span>
+<span style="color:#f92672">intro</span>:
+  <span style="color:#f92672">title</span>: <span style="color:#ae81ff">Hi.I&#39;m White.</span>
+  <span style="color:#f92672">sub</span>: <span style="color:#e6db74">&#39;A [White](https://github.com/FuShaoLei/hexo-theme-white) theme for [Hexo](http://hexo.io/)&#39;</span> <span style="color:#75715e"># markdown语法</span>
+  <span style="color:#f92672">avator</span>: <span style="color:#ae81ff">https://cdn.jsdelivr.net/gh/fushaolei/img/20200524104925.jpg</span> <span style="color:#75715e">#头像 暂时还没用到</span>
+  <span style="color:#f92672">author</span>: <span style="color:#ae81ff">white</span> <span style="color:#75715e">#所有文章的默认作者</span>
+</code></pre></div><h3 id="联系方式">联系方式</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#75715e">#联系方式  </span>
+<span style="color:#75715e">#更多图标：https://remixicon.com/</span>
+<span style="color:#f92672">contact</span>:
+  <span style="color:#f92672">Github</span>:
+    - <span style="color:#ae81ff">https://github.com/FuShaoLei/hexo-theme-white</span>
+    - <span style="color:#ae81ff">ri-github-line</span>
+  <span style="color:#f92672">Email</span>: 
+    - <span style="color:#ae81ff">mailto:1563250958@qq.com</span>
+    - <span style="color:#ae81ff">ri-mail-line</span>
+</code></pre></div><p>格式就是</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">名字</span>:
+  - <span style="color:#ae81ff">链接</span>
+  - <span style="color:#ae81ff">图标 </span>
+</code></pre></div><p>更多图标请到 <a href="https://remixicon.com/">https://remixicon.com/</a> 搜寻，感谢此图标项目的开源作者<a href="https://github.com/xiaochunjimmy">xiaochunjimmy</a></p>
+<h3 id="文章toc设置">文章toc设置</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#75715e"># 文章toc索引栏设置</span>
+<span style="color:#f92672">toc</span>:
+  <span style="color:#f92672">open</span>: <span style="color:#66d9ef">true</span> <span style="color:#75715e"># 是否开启</span>
+  <span style="color:#f92672">side</span>: <span style="color:#66d9ef">true</span>  <span style="color:#75715e"># 选择toc的位置，填true的话toc将会显示在文章的侧边，填false的话 toc将出现在文章的开头</span>
+  <span style="color:#f92672">max</span>: <span style="color:#ae81ff">2</span> <span style="color:#75715e">#最大深度</span>
+  <span style="color:#f92672">min</span>: <span style="color:#ae81ff">2</span> <span style="color:#75715e">#最小深度</span>
+</code></pre></div><p>其中side如果设置为false的话，将会出现在文章的top部分，如果设置为true的话，将会出现在侧边
+min设置的是最小深度，max设置的是最大深度，<del>如上面配置所示，min为2，说明h2索引是至少要出现的，不会出现h1索引 （ 突然不知道怎么表达，</del> 如果不理解的话建议你试试 😂</p>
+<h3 id="highlight">highlight</h3>
+<p>代码高亮，想要使用代码高亮，得先把根目录的**<code>_config.yml</code>里的highlight的enable置成false**</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#75715e"># 插件</span>
+<span style="color:#f92672">plugins</span>:
+  <span style="color:#f92672">highlightjs</span>:
+    <span style="color:#f92672">js</span>: <span style="color:#ae81ff">https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js</span>
+    <span style="color:#f92672">css</span>: <span style="color:#ae81ff">https://cdn.jsdelivr.net/npm/highlight.js@10.1.1/styles/github.css</span>
+    <span style="color:#75715e"># more: https://www.jsdelivr.com/package/npm/highlight.js?path=styles</span>
+</code></pre></div><p><strong>注：</strong>  hexo 5.0版本此处有bug（2020年8月10日写），就是渲染不出来大括号（<code>{</code>和<code>}</code>）</p>
+<p>这里博主有点懒了，最近事多心烦，就等着hexo官方更新吧 QAQ</p>
+<h3 id="评论系统">评论系统</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#75715e"># 评论系统设置</span>
+<span style="color:#f92672">comments</span>:
+  <span style="color:#f92672">open</span>: <span style="color:#66d9ef">false</span> <span style="color:#75715e">#是否开启评论系统</span>
+  <span style="color:#f92672">system</span>: <span style="color:#ae81ff">gitalk</span> <span style="color:#75715e">#选择评论系统 可选 valine gitalk livere</span>
+  <span style="color:#75715e"># Valine</span>
+  <span style="color:#f92672">valine</span>:
+    <span style="color:#f92672">appid</span>: <span style="color:#75715e">#Leancloud应用的AppID  这里和下面的要换成你自己的啊QAQ</span>
+    <span style="color:#f92672">appkey</span>: <span style="color:#75715e">#Leancloud应用的AppKey</span>
+    <span style="color:#f92672">verify</span>: <span style="color:#66d9ef">false</span> <span style="color:#75715e">#验证码</span>
+    <span style="color:#f92672">notify</span>: <span style="color:#66d9ef">true</span> <span style="color:#75715e">#评论回复提醒</span>
+    <span style="color:#f92672">avatar</span>: <span style="color:#ae81ff">robohash</span> <span style="color:#75715e">#评论列表头像样式：&#39;&#39;/mm/identicon/monsterid/wavatar/retro/hide</span>
+    <span style="color:#75715e">#头像类型可见： https://valine.js.org/avatar.html</span>
+    <span style="color:#f92672">placeholder</span>: <span style="color:#ae81ff">留下你来过的痕迹~</span> <span style="color:#75715e">#评论框占位符</span>
+  <span style="color:#75715e"># Gitalk</span>
+  <span style="color:#f92672">gitalk</span>:
+    <span style="color:#f92672">owner</span>:  <span style="color:#75715e">#Github 用户名,</span>
+    <span style="color:#f92672">repo</span>:  <span style="color:#75715e">#储存评论issue的github仓库名</span>
+    <span style="color:#f92672">admin</span>:  <span style="color:#75715e">#Github 用户名</span>
+    <span style="color:#f92672">clientID</span>:  <span style="color:#75715e">#`Github Application clientID`</span>
+    <span style="color:#f92672">clientSecret</span>: <span style="color:#75715e">#`Github Application clientSecret`</span>
+  <span style="color:#75715e">#livere</span>
+  <span style="color:#f92672">livere</span>: <span style="color:#75715e"># 前往 http://livere.com/ 申请账号</span>
+    <span style="color:#f92672">dataId</span>: <span style="color:#ae81ff">city</span> <span style="color:#75715e">#免费版本city</span>
+    <span style="color:#f92672">dataUid</span>: <span style="color:#75715e">#安装代码中 data-uid 后面数据</span>
+</code></pre></div><p>这里的话相关教程大家网上搜就好了。这里就不赘诉了</p>
+<blockquote>
+<p>还是写一些gitalk的坑吧，一个是repo这里 写的应该是<strong>仓库名</strong>，而不是仓库链接或者其他的东西，然后gitalk要上线部署一次才可以，md文件名字最好用英文来命名，如果用中文的话，超出50个字符将会初始化失败</p>
+</blockquote>
+<h3 id="其他">其他</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#75715e"># 页脚</span>
+<span style="color:#f92672">footer</span>: <span style="color:#ae81ff">Power by [Hexo](http://hexo.io/) Theme by [White](https://github.com/FuShaoLei/hexo-theme-white)</span> <span style="color:#75715e"># markdown语法</span>
+
+<span style="color:#75715e">#有分类时是否开启menu分类页和自定义名字</span>
+<span style="color:#f92672">menu_categories</span>:
+  <span style="color:#f92672">open</span>: <span style="color:#66d9ef">true</span>
+  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">分类</span>
+
+<span style="color:#75715e">#可自定义归档标签页名字 </span>
+<span style="color:#f92672">archive_tab_name</span>: <span style="color:#ae81ff">Blog</span>
+
+<span style="color:#75715e">#图片懒加载</span>
+<span style="color:#f92672">lazyload</span>:
+  <span style="color:#f92672">open</span>: <span style="color:#66d9ef">true</span> <span style="color:#75715e">#是否开启</span>
+</code></pre></div><p>这里就不bb了 大家应该看的懂</p>
+<h2 id="进阶使用">进阶使用</h2>
+<h3 id="平滑升级">平滑升级</h3>
+<h4 id="配置">配置</h4>
+<p>因为主题的更新比较频繁，所以如果你想舒服用到最新的版本的话，就请使用平滑升级</p>
+<ol>
+<li>在你<strong>根目录</strong>下的<code>source</code>文件夹下新建一个名为<code>_data</code>的<strong>文件夹</strong></li>
+<li>复制<strong>主题文件夹</strong>下的<code>_config.yml</code>到<code>_data</code>文件夹下，重命名为<code>white.yml</code></li>
+</ol>
+<p>好了，到这里差不多完成了，以后你需要改动什么，只需要在这个<code>white.yml</code>中进行修改(在编译时，会自动将此替换<code>_config.yml</code>)</p>
+<h4 id="升级">升级</h4>
+<p>当你看到我的主题有<a href="https://github.com/FuShaoLei/hexo-theme-white/issues/3">变更</a>时，在主题文件中执行<code>git pull</code>拉取最新代码
+然后，对比最新主题文件夹下的<code>_config.yml</code> 看看有无新增什么东西，添加到你的<code>white.yml</code>中即可</p>
+
+			</div>
+			
+				
+				<code>
+					<a href="/tags/hexo">#Hexo</a>
+				</code>
+				
+			
+
+
+		</article>
+	</main>
+
+	</div>
+	
+
+</body>
+</html>

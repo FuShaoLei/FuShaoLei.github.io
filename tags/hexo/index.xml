@@ -9,10 +9,10 @@
     <lastBuildDate>Mon, 21 Sep 2020 22:01:51 +0000</lastBuildDate><atom:link href="https://fushaolei.vercel.app/tags/hexo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GitHub Action &#43; Hexo 实现在线写作</title>
-      <link>https://fushaolei.vercel.app/posts/github-action-hexo/</link>
+      <link>https://fushaolei.vercel.app/post/github-action-hexo/</link>
       <pubDate>Mon, 21 Sep 2020 22:01:51 +0000</pubDate>
       
-      <guid>https://fushaolei.vercel.app/posts/github-action-hexo/</guid>
+      <guid>https://fushaolei.vercel.app/post/github-action-hexo/</guid>
       <description>心血来潮，研究了一下午，当写完的时候，上网一查，才发现已经有好多人都写过类似的文章了，但我感觉不记录就好像吃了亏什么的，所以，写了一篇蛮常见的文章，以此慰己
  零，前言 hexo 是一款快速、简洁且高效的静态博客框架，因为它的高可定制性，所以深受各个程序员的喜爱，我也曾一头扎进去研究过，先后开发了white和hiya主题，在使用过程中，也渐渐的发现了一些问题
 情景一，当浏览自己某篇博客时发现了一些错误之后想要马上修改时，将要经历经历一下步骤
@@ -28,10 +28,10 @@
     
     <item>
       <title>white主题配置</title>
-      <link>https://fushaolei.vercel.app/posts/doc-white-configration/</link>
+      <link>https://fushaolei.vercel.app/post/doc-white-configration/</link>
       <pubDate>Sun, 09 Aug 2020 23:31:29 +0000</pubDate>
       
-      <guid>https://fushaolei.vercel.app/posts/doc-white-configration/</guid>
+      <guid>https://fushaolei.vercel.app/post/doc-white-configration/</guid>
       <description>👋Hi there 欢迎使用本主题 ，White 是一个在个性和极简之间徘徊的主题，（因为作者本身性格就是这样的人，而且搞不好心态爆炸会删库跑路（现已跑路。。。），还请喜欢的各位及时fork🤣
 如果你喜欢这款主题的话，不妨给我一个star 感激不尽！
 安装  方便备份和更新
