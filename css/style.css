@@ -27,10 +27,6 @@ body{
     padding-bottom: 10px;
 }
 
-.no-bottom-border h1{
-    border: none;
-}
-
 /* header */
 header{
     width: 100%;
