@@ -25,21 +25,13 @@ Linux上，文件名称区分大小写，Windows上不区分
     </item>
     
     <item>
-      <title>树莓派部署Halo博客</title>
-      <link>https://fushaolei.vercel.app/post/raspberry-pi-blog/</link>
-      <pubDate>Tue, 30 Mar 2021 15:24:25 +0800</pubDate>
-      
-      <guid>https://fushaolei.vercel.app/post/raspberry-pi-blog/</guid>
-      <description>新一轮的折腾又开始了。。</description>
-    </item>
-    
-    <item>
       <title>树莓派入门</title>
       <link>https://fushaolei.vercel.app/post/raspberry-pi-start/</link>
       <pubDate>Fri, 26 Mar 2021 23:58:55 +0800</pubDate>
       
       <guid>https://fushaolei.vercel.app/post/raspberry-pi-start/</guid>
-      <description>型号是1代B+型，买来时不太懂Linix方面的东西，所以安了个系统后就闲置吃灰了，直到今天，学习了一些Linux知识后又重新捣鼓了起来，这篇文章主要记录了我如何在没有屏幕的情况下安装系统以及通过putty连接到树莓派的。
+      <description>树莓派入门❌ 树莓派吃灰✅
+型号是1代B+型，买来时不太懂Linix方面的东西，所以安了个系统后就闲置吃灰了，直到今天，学习了一些Linux知识后又重新捣鼓了起来，这篇文章主要记录了我如何在没有屏幕的情况下安装系统以及通过putty连接到树莓派的。
 一 烧录系统到sd卡 我使用的是官方提供的工具，简单又方便。指路：https://www.raspberrypi.org/software/
 傻瓜式的操作了，就不多讲了
  烧录之后，sd卡会变得奇奇怪怪的，当然也可把sd卡恢复成原来的样子，这里记录一下还原的的步骤
@@ -53,7 +45,7 @@ passwd 换源
 树莓派 raspbian （各版本）换国内源
 五 随便跑个程序看看 安个jdk8
 sudo apt install openjdk-8-jdk 启动项目
-java -jar demo.jar 运行成功 后续想用来练习练习linux相关的指令或者跑个博客什么的
+java -jar demo.jar 运行成功 后续想用来练习练习linux相关的指令或者跑个博客（性能太差了，糟心@_@）什么的
 学习网站  树莓派俱乐部 树莓派实验室 科技爱好者博客  参考  没有显示器情况下，安装和使用树莓派 树莓派（以及各种派）使用指南 sd卡烧录后恢复容量  </description>
     </item>
     
