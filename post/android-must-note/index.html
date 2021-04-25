@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Android笔记</title>
+	
+	
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="markdown-body">
+	<header>
+	<div class="header-box">
+		
+		
+		<div>
+			<a href="/">首页</a>
+		</div>
+		
+		<div>
+			<a href="/page/about">关于</a>
+		</div>
+		
+		<div>
+			<a href="/page/link">友链</a>
+		</div>
+		
+		<div>
+			<a href="https://travellings.now.sh/">开往</a>
+		</div>
+		
+	
+	</div>
+</header>
+
+	<div class="container">
+	
+	<main>
+		<article>
+			<div>
+				<h1>Android笔记</h1>
+			</div>
+			<div>
+				<h2 id="activity">Activity</h2>
+<h3 id="生命周期的理解">生命周期的理解</h3>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>onCreate</code></td>
+<td><strong>在activity第一次被创建时调用</strong>，通常在这个方法中完成初始化操作（初始化视图等等）</td>
+</tr>
+<tr>
+<td><code>onStart</code></td>
+<td><strong>在activitiy is becoming visible to the user时调用</strong></td>
+</tr>
+<tr>
+<td><code>onResume</code></td>
+<td><strong>在activity与用户交互时调用</strong>，此时activity位于栈顶</td>
+</tr>
+<tr>
+<td><code>onPause</code></td>
+<td><strong>在启动或恢复另一个activiy时调用</strong></td>
+</tr>
+<tr>
+<td><code>onStop</code></td>
+<td><strong>在activity不可见的时候调用</strong>，只要不可见就会调用，比如手机熄屏的时候，切换到另一个应用的时候，都会调用这个方法</td>
+</tr>
+<tr>
+<td><code>onDestroy</code></td>
+<td><strong>在activity被销毁前调调用</strong></td>
+</tr>
+<tr>
+<td><code>onRestart</code></td>
+<td><strong>在activiy重新启动之前调用</strong>，比如由A activity跳转到B activity后，在跳转回来，就会触发A activity的onRestart方法，有一些操作比如横竖屏的转变也会触发到onRestart方法，这时候想保存状态的话可以使用onSaveInstanceState方法</td>
+</tr>
+</tbody>
+</table>
+<h3 id="启动模式">启动模式</h3>
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>standard</code></td>
+<td><strong>默认的启动模式</strong>，每次启动同一个activity都会创建一个实例</td>
+</tr>
+<tr>
+<td><code>singleTop</code></td>
+<td><strong>栈顶复用模式</strong>，如果发现要启动的activiy正处于栈顶，就直接使用，而不创建，但是如果不处于栈顶，则还是会创建一个新的实例</td>
+</tr>
+<tr>
+<td><code>singleTask</code></td>
+<td>栈内复用模式，如果发现要启动的activity在栈内，则直接使用，并且使处于其上的其他activitiy出栈，如果要启动的activity不在则创建</td>
+</tr>
+<tr>
+<td><code>singleInstance</code></td>
+<td>指定为singleInstance模式的activity会启用一个新的返回栈来管理这个activity</td>
+</tr>
+</tbody>
+</table>
+<h2 id="broadcastreceiver">BroadcastReceiver</h2>
+<p>广播接收者，用于接受广播</p>
+<h3 id="广播的分类">广播的分类</h3>
+<h4 id="标准广播">标准广播</h4>
+<p>异步执行的广播，接收者几乎会在同一时间接收到广播，<strong>效率高，但无法截断</strong></p>
+<h4 id="有序广播">有序广播</h4>
+<p>同步执行进行的广播，接收者接收到并处理完自己的逻辑之后才会继续传递，<strong>可以进行截断</strong></p>
+<h4 id="具体实现">具体实现</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">val</span> intent = Intent(<span style="color:#e6db74">&#34;路径&#34;</span>)
+intent.setPackage(packageName) <span style="color:#75715e">//! ！！
+</span><span style="color:#75715e">// 无序广播
+</span><span style="color:#75715e"></span>sendBroadcast(intent)
+<span style="color:#75715e">// 有序广播
+</span><span style="color:#75715e"></span>sendOrderedBroadcast(intent, <span style="color:#66d9ef">null</span>)
+</code></pre></div><p>要注意的是，在Android 8.0 之后，静态注册的BroadcastReceiver是无法接收隐式广播的，加入<code>intent.setPackage(packageName)</code>这行代码之后会将此广播变成显示的广播，否则无法接收到这条广播</p>
+<h3 id="广播的注册方式">广播的注册方式</h3>
+<h4 id="动态注册">动态注册</h4>
+<p>通过代码对广播进行注册</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">val</span> intentFilter = IntentFilter() <span style="color:#75715e">// 定义一个过滤器
+</span><span style="color:#75715e"></span>intentFilter.addAction(<span style="color:#e6db74">&#34;路径&#34;</span>)
+myReciver = MyReciver()
+registerReceiver(myReciver, intentFilter)<span style="color:#75715e">//注册
+</span><span style="color:#75715e"></span><span style="color:#f92672">..</span>.
+unregisterReceiver(myReciver) <span style="color:#75715e">// 取消注册
+</span></code></pre></div><h4 id="静态注册">静态注册</h4>
+<p>直接在<code>AndroidManifest</code>文件中进行注册</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;receiver</span>
+    <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;.OrderlyReceiver&#34;</span>
+    <span style="color:#a6e22e">android:enabled=</span><span style="color:#e6db74">&#34;true&#34;</span>
+    <span style="color:#a6e22e">android:exported=</span><span style="color:#e6db74">&#34;true&#34;</span><span style="color:#f92672">&gt;</span>
+    <span style="color:#f92672">&lt;intent-filter&gt;</span>
+        <span style="color:#f92672">&lt;action</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;io.github.fourcomponent.MY_BROADCAST&#34;</span> <span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;/intent-filter&gt;</span>
+<span style="color:#f92672">&lt;/receiver&gt;</span>
+</code></pre></div><h2 id="service">Service</h2>
+<h3 id="生命周期">生命周期</h3>
+<p>service的生命周期可以分为两个种情况，一种是不绑定直接启动，一种是被绑定后启动</p>
+<h4 id="不绑定直接启动的生命周期">不绑定直接启动的生命周期</h4>
+<table>
+<thead>
+<tr>
+<th>生命周期</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>onCreate</code></td>
+<td>第一次<strong>创建</strong>service时调用</td>
+</tr>
+<tr>
+<td><code>onStartCommand</code></td>
+<td>每次<strong>启动</strong>service时调用</td>
+</tr>
+<tr>
+<td><code>onDestroy</code></td>
+<td>service销毁时调用</td>
+</tr>
+</tbody>
+</table>
+<p>这里要注意理解下<code>onCreate</code>和<code>onStartCommand</code>的区别，<code>onCreate</code>方法只能在整个生命周期中只能使用一次，而<code>onStartCommand</code>可以使用很多次，即每次启动service的时候都会用到<code>onStartCommand</code>，但不是每次都会用到<code>onCreate</code>（因为可能之前被创建后了）</p>
+<p>还有一点要注意的时，每个service只会存在一个实例</p>
+<h4 id="绑定后启动的生命周期">绑定后启动的生命周期</h4>
+<table>
+<thead>
+<tr>
+<th>生命周期</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>onCreate</code></td>
+<td>第一次<strong>创建</strong>service时调用，和上面的一样，这里不再赘述</td>
+</tr>
+<tr>
+<td><code>onBind</code></td>
+<td>绑定</td>
+</tr>
+<tr>
+<td><code>onDestroy</code></td>
+<td>service销毁时调用</td>
+</tr>
+</tbody>
+</table>
+<h4 id="具体实现-1">具体实现</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#75715e">// 不绑定直接启动
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">val</span> intent = Intent(<span style="color:#66d9ef">this</span>, MyService<span style="color:#f92672">::</span><span style="color:#66d9ef">class</span>.java)
+startService(intent)<span style="color:#75715e">// 开启service
+</span><span style="color:#75715e"></span>stopService(intent)<span style="color:#75715e">// 停止service，这时候会调用onDestroy方法
+</span><span style="color:#75715e">// 绑定后启动
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> connnect = <span style="color:#66d9ef">object</span> <span style="color:#960050;background-color:#1e0010">: </span><span style="color:#a6e22e">ServiceConnection</span> {
+   <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">onServiceDisconnected</span>(name: ComponentName?) {
+       TODO(<span style="color:#e6db74">&#34;Not yet implemented&#34;</span>)
+   }
+   <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">onServiceConnected</span>(name: ComponentName?, service: IBinder?) {
+       <span style="color:#75715e">// 在这里会得到一个IBinder接口变量，在这里可以做一些activity和service的交互
+</span><span style="color:#75715e"></span>   }
+}
+<span style="color:#66d9ef">val</span> intent = Intent(<span style="color:#66d9ef">this</span>, MyService<span style="color:#f92672">::</span><span style="color:#66d9ef">class</span>.java)
+bindService(intent, connnect, Context.BIND_AUTO_CREATE)
+unbindService(connnect)
+</code></pre></div><p>需要注意的是，一个service只要被启动或者绑定之后，就会处于运行的状态，但是如果一个service不仅被绑定了，而且还被启动了，这时候想要销毁service就必须调用<code>stopService(intent)</code>和<code>unbindService(connnect)</code>这两个方法。</p>
+<h2 id="fragment">Fragment</h2>
+<h3 id="生命周期-1">生命周期</h3>
+<p>fragment附着于activity，因此，fragment的生命周期和activity的生命周期可谓是紧紧相连在一起，fragment里的许多方法都是基于activity的</p>
+<table>
+<thead>
+<tr>
+<th>生命周期</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>onAttach</code></td>
+<td><strong>在fragment和activity建立关联时调用</strong></td>
+</tr>
+<tr>
+<td><code>onCreate</code></td>
+<td><strong>在fragment第一次被创建时调用</strong></td>
+</tr>
+<tr>
+<td><code>onCreateView</code></td>
+<td><strong>在fragment创建视图时调用</strong></td>
+</tr>
+<tr>
+<td><code>onActivityCreated</code></td>
+<td><strong>在与fragment关联的activity创建完毕时调用</strong></td>
+</tr>
+<tr>
+<td><code>onStart</code></td>
+<td><strong>在fragment将要展示给用户时调用 (前提是关联的activity的onStart方法已经完成).</strong></td>
+</tr>
+<tr>
+<td><code>onResume</code></td>
+<td>在fragment可以和用户交互时调用(前提是关联的activity的onResume方法已经完成)</td>
+</tr>
+<tr>
+<td><code>onPause</code></td>
+<td>fragment不再与用户交互时调用</td>
+</tr>
+<tr>
+<td><code>onStop</code></td>
+<td>fragment对用户不可见的时候调用</td>
+</tr>
+<tr>
+<td><code>onDestroyView</code></td>
+<td>当与fragment关联的视图被移除时调用</td>
+</tr>
+<tr>
+<td><code>onDestroy</code></td>
+<td>销毁fragment时调用</td>
+</tr>
+<tr>
+<td><code>onDetach</code></td>
+<td>当fragment和activity接触关联时调用</td>
+</tr>
+</tbody>
+</table>
+<h3 id="动态加载">动态加载</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">val</span> fragmentManager = supportFragmentManager
+<span style="color:#66d9ef">val</span> transaction = fragmentManager.beginTransaction()
+transaction.replace(R.id.right_framelayout,fragment)
+transaction.addToBackStack(<span style="color:#66d9ef">null</span>)
+transaction.commit()
+</code></pre></div><h2 id="异步消息处理机制">异步消息处理机制</h2>
+<p>由4个部分组成</p>
+<ul>
+<li>Message：消息，线程之间传递的消息</li>
+<li>Handler：处理者，用于发送和处理消息，消息最终都会传递到handleMessage()方法中处理</li>
+<li>MessageQueue：消息队列，用于存放所有通过Handler发送的消息</li>
+<li>Looper：将MessageQueue里的消息传递给Handler的handleMessage()方法中</li>
+</ul>
+<p>逻辑：Handler通过发送Message到MessageQueue里，Looper又将Message传递给Handler的handleMessage()方法</p>
+
+			</div>
+			
+				
+				<code>
+					<a href="/tags/android">#android</a>
+				</code>
+				
+				<code>
+					<a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0">#学习笔记</a>
+				</code>
+				
+			
+
+
+		</article>
+	</main>
+
+	</div>
+	
+
+</body>
+</html>
