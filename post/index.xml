@@ -6,30 +6,7 @@
     <description>Recent content in Posts on Sorryfu Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 24 Apr 2021 16:47:48 +0800</lastBuildDate><atom:link href="https://fushaolei.vercel.app/post/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Android笔记</title>
-      <link>https://fushaolei.vercel.app/post/android-must-note/</link>
-      <pubDate>Sat, 24 Apr 2021 16:47:48 +0800</pubDate>
-      
-      <guid>https://fushaolei.vercel.app/post/android-must-note/</guid>
-      <description>Activity 生命周期的理解    方法 说明     onCreate 在activity第一次被创建时调用，通常在这个方法中完成初始化操作（初始化视图等等）   onStart 在activitiy is becoming visible to the user时调用   onResume 在activity与用户交互时调用，此时activity位于栈顶   onPause 在启动或恢复另一个activiy时调用   onStop 在activity不可见的时候调用，只要不可见就会调用，比如手机熄屏的时候，切换到另一个应用的时候，都会调用这个方法   onDestroy 在activity被销毁前调调用   onRestart 在activiy重新启动之前调用，比如由A activity跳转到B activity后，在跳转回来，就会触发A activity的onRestart方法，有一些操作比如横竖屏的转变也会触发到onRestart方法，这时候想保存状态的话可以使用onSaveInstanceState方法    启动模式    模式 说明     standard 默认的启动模式，每次启动同一个activity都会创建一个实例   singleTop 栈顶复用模式，如果发现要启动的activiy正处于栈顶，就直接使用，而不创建，但是如果不处于栈顶，则还是会创建一个新的实例   singleTask 栈内复用模式，如果发现要启动的activity在栈内，则直接使用，并且使处于其上的其他activitiy出栈，如果要启动的activity不在则创建   singleInstance 指定为singleInstance模式的activity会启用一个新的返回栈来管理这个activity    BroadcastReceiver 广播接收者，用于接受广播</description>
-    </item>
-    
-    <item>
-      <title>浅谈面向对象三大特性</title>
-      <link>https://fushaolei.vercel.app/post/oop-note/</link>
-      <pubDate>Fri, 23 Apr 2021 18:22:41 +0800</pubDate>
-      
-      <guid>https://fushaolei.vercel.app/post/oop-note/</guid>
-      <description>读完了《Java核心技术卷Ⅰ》第一遍之后，总感觉意犹未尽，感觉知识联系不到一起，因此写此文，主要记录记录我对Java中面向对象的三大特性的理解，见笑。
-封装 之前我对封装最直观的理解就类似这种：
-public class Animal { private String name; public String getName() { return name; } public void setName(String name) { this.name = name; } } 即，程序只能通过对象的方法与对象数据进行交互，而不可以直接访问，这可理解为封装。
-封装的主要思想是为了隐藏自己内部的实现，不是说内部实现不重要，而是更重要的是对外提供的方法，其实封装的概念很广，不只局限于这种setter，getter方法，有一些方法比如Math.random()，也属于封装，封装其实无处不在。
-继承 继承的基本思想是，可以基于已有的类去创建新的类。继承了已有类之后，新的类将会复用被扩展类的全部属性和方法，而且可以增加新的方法和字段。
-多态 参考  面向对象编程三大特性&amp;mdash;&amp;mdash;封装、继承、多态  </description>
-    </item>
-    
+    <lastBuildDate>Sat, 10 Apr 2021 18:23:55 +0800</lastBuildDate><atom:link href="https://fushaolei.vercel.app/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux笔记</title>
       <link>https://fushaolei.vercel.app/post/linux-note/</link>
