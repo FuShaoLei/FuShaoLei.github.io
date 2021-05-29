@@ -3,17 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://fushaolei.vercel.app/post/linux-note/</loc>
-    <lastmod>2021-04-10T18:23:55+08:00</lastmod>
+    <loc>https://fushaolei.vercel.app/post/linux-note-copy/</loc>
+    <lastmod>2021-05-10T18:23:55+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://fushaolei.vercel.app/post/</loc>
-    <lastmod>2021-04-10T18:23:55+08:00</lastmod>
+    <lastmod>2021-05-10T18:23:55+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://fushaolei.vercel.app/</loc>
+    <lastmod>2021-05-10T18:23:55+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://fushaolei.vercel.app/post/linux-note/</loc>
     <lastmod>2021-04-10T18:23:55+08:00</lastmod>
   </url>
   
