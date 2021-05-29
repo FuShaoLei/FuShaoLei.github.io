@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>入坑ubuntu</title>
+	
+	
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="markdown-body">
+	<header>
+	<div class="header-box">
+		
+		
+		<div>
+			<a href="/">首页</a>
+		</div>
+		
+		<div>
+			<a href="/page/about">关于</a>
+		</div>
+		
+		<div>
+			<a href="/page/link">友链</a>
+		</div>
+		
+		<div>
+			<a href="https://travellings.now.sh/">开往</a>
+		</div>
+		
+	
+	</div>
+</header>
+
+	<div class="container">
+	
+	<main>
+		<article>
+			<div>
+				<h1>入坑ubuntu</h1>
+			</div>
+			<div>
+				<h2 id="安装google-chrome">安装google chrome</h2>
+<p>下载</p>
+<pre><code>wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+</code></pre><p>安装</p>
+<pre><code>sudo apt install ./google-chrome-stable_current_amd64.deb
+</code></pre><h2 id="配置git">配置Git</h2>
+<p>安装</p>
+<pre><code>sudo apt install git
+</code></pre><p>设置Git的user name和email</p>
+<pre><code>git config --global user.name &quot;fushaolei&quot;
+git config --global user.email &quot;1563250958@qq.com&quot;
+</code></pre><p>生成密钥</p>
+<pre><code>ssh-keygen -t rsa -C &quot;1563250958@qq.com&quot;
+</code></pre><p>然后在隐藏的<code>.ssh</code>文件夹中找到公钥（后缀是<code>pub</code>），然后添加到Github的ssh key中</p>
+<p>测试是否成功</p>
+<pre><code>ssh -T git@github.com
+</code></pre>
+			</div>
+			
+
+
+		</article>
+	</main>
+
+	</div>
+	
+
+</body>
+</html>

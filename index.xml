@@ -8,21 +8,19 @@
     <language>en-us</language>
     <lastBuildDate>Mon, 10 May 2021 18:23:55 +0800</lastBuildDate><atom:link href="https://fushaolei.vercel.app/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Linux笔记 - 这只是一个测试文件</title>
-      <link>https://fushaolei.vercel.app/post/linux-note-copy/</link>
+      <title>入坑ubuntu</title>
+      <link>https://fushaolei.vercel.app/post/ubuntu-begin/</link>
       <pubDate>Mon, 10 May 2021 18:23:55 +0800</pubDate>
       
-      <guid>https://fushaolei.vercel.app/post/linux-note-copy/</guid>
-      <description>第 1 讲 入门 - 这只是一个测试文件 testtesttesttesttesttesttesttesttest
-Linux是一个开源的操作系统内核，以Linux作为内核的发行版有：Debian、Ubuntu、CentOS、OpenSUSE、Arch、Deepin、Mint等
-Linux默认使用Ext4文件系统格式
-Linux上，文件名称区分大小写，Windows上不区分
-在Linux上，.开头的文件是隐藏文件
-第 2 讲 目录结构和shell基础 Linux使用 / 表示根目录，而且所有的目录都至少包含两个子目录： . 和 ..
-. 表示当前目录；.. 表示上一层目录。（/的..指向自己）
-~表示用户主目录
-开头带/的表示绝对路径，开头不带/的表示相对路径
-目录说明    目录 说明     / 系统根目录   /usr 用户的程序，配置等信息   /home 默认创建用户会在此创建   /etc 存放系统配置文件   /bin    /sbin    /root    /boot    /lib    /dev    /media    /proc    /var    /sys    /lost+found    /tmp    /usr/bin    /usr/sbin     终端和shell 终端是是计算机最外围设备。用于获取用户输入，并显示程序的输出结果。</description>
+      <guid>https://fushaolei.vercel.app/post/ubuntu-begin/</guid>
+      <description>安装google chrome 下载
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 安装
+sudo apt install ./google-chrome-stable_current_amd64.deb 配置Git 安装
+sudo apt install git 设置Git的user name和email
+git config --global user.name &amp;quot;fushaolei&amp;quot; git config --global user.email &amp;quot;1563250958@qq.com&amp;quot; 生成密钥
+ssh-keygen -t rsa -C &amp;quot;1563250958@qq.com&amp;quot; 然后在隐藏的.ssh文件夹中找到公钥（后缀是pub），然后添加到Github的ssh key中
+测试是否成功
+ssh -T git@github.com </description>
     </item>
     
     <item>
