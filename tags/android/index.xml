@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Android on 琼西往事</title>
+    <link>https://fushaolei.github.io/tags/android/</link>
+    <description>Recent content in Android on 琼西往事</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 22 Nov 2022 21:22:31 +0800</lastBuildDate><atom:link href="https://fushaolei.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kotlin速成</title>
+      <link>https://fushaolei.github.io/posts/kotlin-flesh-learn/</link>
+      <pubDate>Tue, 22 Nov 2022 21:22:31 +0800</pubDate>
+      
+      <guid>https://fushaolei.github.io/posts/kotlin-flesh-learn/</guid>
+      <description>kotlin中没有分号
+kotlin中在后边进行类型的声明
+函数 /** * main函数，同java一样，程序的入口 * Unit表示返回值为空 */ fun main():Unit{ println(&amp;#34;Hello Kotlin!&amp;#34;) } // 带参数的函数 fun test(x:Int):Int{ return x*2 } // 函数参数默认值 @JvmOverloads // 表示重载，在java代码中可以使用 fun msg(name: String, age: Int = 19) { // 这里的age默认为19  println(&amp;#34;name = $name, age = $age&amp;#34;) } 变量  var声明为可变的 val声明为只读的（相当于Java中加上final的变量）  // 可写成 var age = 18，系统会自动识别 var age: Int = 18 val NAME = &amp;#34;JulyPost&amp;#34; // 创建对象直接如此，不需要new关键字了 var person = Person() 可空类型和不可空类型 在kotlin里，所有的变量都默认是不允许为空的</description>
+    </item>
+    
+    <item>
+      <title>安装aab包</title>
+      <link>https://fushaolei.github.io/posts/install-aab-package/</link>
+      <pubDate>Sat, 19 Nov 2022 14:54:25 +0800</pubDate>
+      
+      <guid>https://fushaolei.github.io/posts/install-aab-package/</guid>
+      <description>首先你得有Java的环境，然后还要去https://github.com/google/bundletool/releases下载一个jar包
+然后将你的aab包，.jks文件，和上面下载的jar包放到同一目录下（当然，不放在一起也行。。）
+然后在小黑块中进入这个目录执行：
+java -jar bundletool-all-1.13.0.jar build-apks --bundle=./xxx.aab --output=./app-dubug.apks --ks=./xxx.jks --ks-pass=pass:xxx --ks-key-alias=xxxx --key-pass=pass:xxx --connected-devicejava -jar bundletool-all-1.13.0.jar install-apks --apks=./app-dubug.apks</description>
+    </item>
+    
+    <item>
+      <title>Android MVP模式思想</title>
+      <link>https://fushaolei.github.io/posts/android-mvp-thinking/</link>
+      <pubDate>Tue, 06 Oct 2020 13:34:37 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/posts/android-mvp-thinking/</guid>
+      <description>前言 MVP模式只是一个思想，并没有具体的，标准的编码规定。只要掌握了核心的思想，那么万变不离其宗。MVP模式，无法讲究的是单向通信，V单向和P通信，P单向和M通信，这便是MVP的精髓。
+预备知识  面向接口的编程思想 向上转型的概念 解耦  面向接口编程 先复习一下接口的概念：
+在Java程序设计语言中，接口不是类，而是对希望符合这个接口的类的一组需求（出自《Java核心卷一》p222页）说白了，接口就是一组需求
+而面向接口编程呢，就是在开始开发前，先定义好接口（可以理解为先列出一组需求），然后再进行开发
+向上转型 即父类引用指向子类对象（即多态），看完下面的代码应该更好理解些
+public interface IStudent { String getName(); } public class Student implements IStudent{//此时IStudent是父类，Student是子类  @Override public String getName() { return &amp;#34;任我行&amp;#34;; } } public class Test { public static void main(String[] args) { IStudent iStudent; iStudent=new Student();//父类引用指向子类的对象，这里做了向上转型  System.out.println(&amp;#34;学生的名字是：&amp;#34;+iStudent.getName());//打印结果：学生的名字是：任我行  } } 解耦 解耦即降低依赖性
+MVP模式 Actually，我觉得MVP模式的灵魂就是presenter层同时持有view层和model层的引用（请联系上边的向上转型的概念）。
+ 照此逻辑，我们简单实现一个常见的登录模块。根据面向接口编程，我们首先列出我们的接口（需求）：
+/** * View层的需求 */ public interface IView { //1.</description>
+    </item>
+    
+  </channel>
+</rss>

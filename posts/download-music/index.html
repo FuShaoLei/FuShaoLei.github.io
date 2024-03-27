@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>使用yt-dlp下载音乐或视频 &ndash; 琼西往事</title>
+	
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;700;900&family=Roboto+Mono&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="/css/style.css">
+	
+</head>
+
+<body>
+
+	<div class="main_container">
+
+		<div class="inner_container">
+			<div class="left_container">
+				<div class="left_card_container">
+
+
+					<div class="card_container">
+						<div class="site-tile-container">
+							<a href="https://fushaolei.github.io">
+								琼西往事
+							</a>
+						</div>
+						<div class="card_intro">导航</div>
+
+						<div class="card-nav">
+							
+							
+							<a href="/">
+								<div class="card-nav-item">
+									首页
+								</div>
+							</a>
+							
+							<a href="/about/">
+								<div class="card-nav-item">
+									关于
+								</div>
+							</a>
+							
+							<a href="/link/">
+								<div class="card-nav-item">
+									友链
+								</div>
+							</a>
+							
+							
+							<a href="https://travellings.link/" target="_blank">
+								<div class="card-nav-item">
+									开往
+								</div>
+							</a>
+						</div>
+
+					</div>
+
+					
+
+
+					
+
+
+
+
+					
+
+
+					<div class="card_container content-toc">
+						<div class="card_intro">目录</div>
+						<nav id="TableOfContents">
+  <ul>
+    <li><a href="#下载音乐">下载音乐</a></li>
+    <li><a href="#下载视频">下载视频</a></li>
+  </ul>
+</nav>
+
+					</div>
+
+					
+
+
+					
+
+
+					
+
+					<a href="/posts/new-theme-2304/">
+						<div class="card_container related-nav">
+							<div class="card_intro">上一篇</div>
+							<span class="related-nav-title">又给博客写了个新主题</span>
+						</div>
+					</a>
+
+					
+
+					
+
+					<a href="/posts/get-ps4pro/">
+						<div class="card_container related-nav">
+							<div class="card_intro">下一篇</div>
+							<span class="related-nav-title">入手PS4Pro三个月体验</span>
+							
+						</div>
+					</a>
+
+					
+
+				</div>
+			</div>
+			<div class="right_container">
+				
+<article class="article-real-container">
+
+
+	<div class="article_card_container">
+		
+
+		<div class="article_card_inner_container">
+			
+			<div class="article-normal-info">
+							<time class="card_intro" datetime=" 2023-03-10T23:57:20">2023年03月10日</time>
+			<div class="article-title">使用yt-dlp下载音乐或视频</div>
+			</div>
+
+			
+			<div class="content-container">
+				<h2 id="下载音乐">下载音乐</h2>
+<p>下载最高质量音乐到指定位置</p>
+<pre><code>D:\download\yt-dlp.exe -P D:\mp3file\ -f ba https://www.youtube.com/watch?v=Oa4v_RX774s
+</code></pre><p>下载最高质量音乐并转成mp3格式到指定位置</p>
+<pre><code>D:\download\yt-dlp.exe -P D:\mp3file\ -f ba -x --audio-format mp3 --ffmpeg-location D:\software\ffmpeg\ffmpeg.exe https://www.youtube.com/watch?v=Oa4v_RX774s
+</code></pre><h2 id="下载视频">下载视频</h2>
+<p>首先查看这个视频有什么格式：</p>
+<pre><code>D:\download\yt-dlp.exe https://www.youtube.com/watch?v=AQixv83-DOc --list-formats
+</code></pre><p>然后看自己需要什么格式就那什么格式的id进行下载，如下：</p>
+<pre><code>D:\download\yt-dlp.exe -f 299 -P D:\DDD\ https://www.youtube.com/watch?v=AQixv83-DOc
+</code></pre><p>通常我是会下载视频+音频合并的，那么我就会：</p>
+<pre><code>D:\download\yt-dlp.exe https://www.youtube.com/watch?v=RUKXvuI_qbU -f 140+137 -P D:\DDD\ --ffmpeg-location D:\software\ffmpeg\ffmpeg.exe
+</code></pre>
+			</div>
+			
+		</div>
+	</div>
+
+
+</article>
+
+			</div>
+		</div>
+
+
+
+
+	</div>
+
+</body>
+
+</html>
