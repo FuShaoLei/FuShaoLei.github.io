@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Kotlin速成 &ndash; 琼西往事</title>
+	
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;700;900&family=Roboto+Mono&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="/css/style.css">
+	
+</head>
+
+<body>
+
+	<div class="main_container">
+
+		<div class="inner_container">
+			<div class="left_container">
+				<div class="left_card_container">
+
+
+					<div class="card_container">
+						<div class="site-tile-container">
+							<a href="https://fushaolei.github.io">
+								琼西往事
+							</a>
+						</div>
+						<div class="card_intro">导航</div>
+
+						<div class="card-nav">
+							
+							
+							<a href="/">
+								<div class="card-nav-item">
+									首页
+								</div>
+							</a>
+							
+							<a href="/about/">
+								<div class="card-nav-item">
+									关于
+								</div>
+							</a>
+							
+							<a href="/link/">
+								<div class="card-nav-item">
+									友链
+								</div>
+							</a>
+							
+							
+							<a href="https://travellings.link/" target="_blank">
+								<div class="card-nav-item">
+									开往
+								</div>
+							</a>
+						</div>
+
+					</div>
+
+					
+
+
+					
+
+
+
+
+					
+
+
+					<div class="card_container content-toc">
+						<div class="card_intro">目录</div>
+						<nav id="TableOfContents">
+  <ul>
+    <li><a href="#函数">函数</a></li>
+    <li><a href="#变量">变量</a></li>
+    <li><a href="#可空类型和不可空类型">可空类型和不可空类型</a></li>
+    <li><a href="#调用符">调用符</a></li>
+    <li><a href="#构造器">构造器</a></li>
+    <li><a href="#any和unit"><code>Any</code>和<code>Unit</code></a></li>
+    <li><a href="#各种集合">各种集合</a></li>
+    <li><a href="#静态函数和属性">静态函数和属性</a></li>
+    <li><a href="#字符串">字符串</a></li>
+    <li><a href="#when">when</a></li>
+    <li><a href="#for遍历">for，遍历</a></li>
+    <li><a href="#各种声明">各种声明</a></li>
+    <li><a href="#标准函数">标准函数</a></li>
+    <li><a href="#编译期常量">编译期常量</a></li>
+    <li><a href="#内部类">内部类</a></li>
+    <li><a href="#internal"><code>internal</code></a></li>
+    <li><a href="#open和final"><code>open</code>和<code>final</code></a></li>
+    <li><a href="#主构造器和init">主构造器和<code>init</code></a></li>
+    <li><a href="#和"><code>==</code>和<code>===</code></a></li>
+    <li><a href="#heading"><code>?:</code></a></li>
+    <li><a href="#扩展函数">扩展函数</a></li>
+    <li><a href="#委托">委托</a></li>
+    <li><a href="#协程">协程</a></li>
+    <li><a href="#密封类">密封类</a></li>
+    <li><a href="#内联函数">内联函数</a></li>
+    <li><a href="#运算符重载">运算符重载</a></li>
+  </ul>
+</nav>
+
+					</div>
+
+					
+
+
+					
+
+
+					
+
+					<a href="/posts/get-ps4pro/">
+						<div class="card_container related-nav">
+							<div class="card_intro">上一篇</div>
+							<span class="related-nav-title">入手PS4Pro三个月体验</span>
+						</div>
+					</a>
+
+					
+
+					
+
+					<a href="/posts/install-aab-package/">
+						<div class="card_container related-nav">
+							<div class="card_intro">下一篇</div>
+							<span class="related-nav-title">安装aab包</span>
+							
+						</div>
+					</a>
+
+					
+
+				</div>
+			</div>
+			<div class="right_container">
+				
+<article class="article-real-container">
+
+
+	<div class="article_card_container">
+		
+
+		<div class="article_card_inner_container">
+			
+			<div class="article-normal-info">
+							<time class="card_intro" datetime=" 2022-11-22T21:22:31">2022年11月22日</time>
+			<div class="article-title">Kotlin速成</div>
+			</div>
+
+			
+			<div class="content-container">
+				<p>kotlin中没有分号</p>
+<p>kotlin中在后边进行类型的声明</p>
+<h2 id="函数">函数</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * main函数，同java一样，程序的入口
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * Unit表示返回值为空
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">main</span>():Unit{
+</span></span><span style="display:flex;"><span>    println(<span style="color:#e6db74">&#34;Hello Kotlin!&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 带参数的函数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">test</span>(x:Int):Int{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> x*<span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 函数参数默认值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">@JvmOverloads</span> <span style="color:#75715e">// 表示重载，在java代码中可以使用
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">msg</span>(name: String, age: Int = <span style="color:#ae81ff">19</span>) { <span style="color:#75715e">// 这里的age默认为19
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    println(<span style="color:#e6db74">&#34;name = </span><span style="color:#e6db74">$name</span><span style="color:#e6db74"> , age = </span><span style="color:#e6db74">$age</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="变量">变量</h2>
+<ul>
+<li>var声明为可变的</li>
+<li>val声明为只读的（相当于Java中加上final的变量）</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#75715e">// 可写成 var age = 18，系统会自动识别
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> age: Int = <span style="color:#ae81ff">18</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">val</span> NAME = <span style="color:#e6db74">&#34;JulyPost&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 创建对象直接如此，不需要new关键字了
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> person = Person()
+</span></span></code></pre></div><h2 id="可空类型和不可空类型">可空类型和不可空类型</h2>
+<p>在kotlin里，所有的变量都默认是<strong>不允许为空</strong>的</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> a: String = <span style="color:#e6db74">&#34;abc&#34;</span> <span style="color:#75715e">// 非空类型
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> b: String? = <span style="color:#e6db74">&#34;cba&#34;</span> <span style="color:#75715e">// 可空类型
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>a = <span style="color:#66d9ef">null</span> <span style="color:#75715e">// 赋空报错
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>b = <span style="color:#66d9ef">null</span> <span style="color:#75715e">// 可赋为空
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">lateinit</span> <span style="color:#66d9ef">var</span> username:TextView <span style="color:#75715e">// 延迟初始化
+</span></span></span></code></pre></div><h2 id="调用符">调用符</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> b: String? = <span style="color:#e6db74">&#34;cba&#34;</span> <span style="color:#75715e">// 可空类型
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>println(b<span style="color:#f92672">?.</span>length) <span style="color:#75715e">// 安全调用，如果不是空的话就调用length方法，如果是空的话就不做任何事
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>println(b<span style="color:#f92672">!!</span>.length) <span style="color:#75715e">// 强制调用
+</span></span></span></code></pre></div><p>安全调用符号<code>?.</code>会检查是否非空，非空则返回<code>b.length</code>，而强制调用<code>!!.</code>则会强制调用<code>b.length</code></p>
+<h2 id="构造器">构造器</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#75715e">// 空构造
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">constructor</span>()
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 带参数的构造
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">constructor</span>(context:Context)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 调用其他构造器
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">constructor</span>(context:Context):<span style="color:#66d9ef">this</span>(context,<span style="color:#66d9ef">null</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 调用父类构造器
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">constructor</span>(context:Context):<span style="color:#66d9ef">super</span>(context,<span style="color:#ae81ff">1</span>)
+</span></span></code></pre></div><h2 id="any和unit"><code>Any</code>和<code>Unit</code></h2>
+<p><code>Any</code>可以对应java中的<code>Object</code></p>
+<p><code>Unit</code>可以对应java中的<code>void</code></p>
+<h2 id="各种集合">各种集合</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> dataList = arrayOf(<span style="color:#e6db74">&#34;xx&#34;</span>, <span style="color:#e6db74">&#34;aa&#34;</span>) <span style="color:#75715e">// 定义一个数组
+</span></span></span></code></pre></div><h2 id="静态函数和属性">静态函数和属性</h2>
+<ul>
+<li>顶层函数（直接在kt文件里定义函数）</li>
+<li>object声明一个单例对象，可直接使用</li>
+<li>companion object 也是生成一个单例对象</li>
+<li><code>@JvmStatic</code>：通过这个注解，让object和companion object 的内部函数和属性，真正的生成为<strong>静态</strong></li>
+</ul>
+<p>另外，匿名内部类是用的object关键字进行创建的</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#66d9ef">object</span> <span style="color:#960050;background-color:#1e0010">: </span><span style="color:#a6e22e">OnClickListener</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ....
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><h2 id="字符串">字符串</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#66d9ef">val</span> name = <span style="color:#e6db74">&#34;任我行&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">val</span> text = <span style="color:#e6db74">&#34;我是</span><span style="color:#e6db74">${name}</span><span style="color:#e6db74">&#34;</span> <span style="color:#75715e">// 拼接字符串,还可以是函数的返回值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">val</span> text = <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        我的第一行
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        我是第二行
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        我是第三行
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>.trimIndent() <span style="color:#75715e">// 多行字符串
+</span></span></span></code></pre></div><h2 id="when">when</h2>
+<p>switch的高级版，分支条件支持表达式，在kotlin里，if和when都是有返回值的</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> num = <span style="color:#ae81ff">21</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">when</span> (num) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">1.</span>.<span style="color:#ae81ff">10</span> <span style="color:#f92672">-&gt;</span> println(<span style="color:#e6db74">&#34;小于10&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">11.</span>.<span style="color:#ae81ff">20</span> <span style="color:#f92672">-&gt;</span> println(<span style="color:#e6db74">&#34;小于20&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">21.</span>.<span style="color:#ae81ff">30</span> <span style="color:#f92672">-&gt;</span> println(<span style="color:#e6db74">&#34;小于30&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span> <span style="color:#f92672">-&gt;</span> println(<span style="color:#e6db74">&#34;未知&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 还可以这样使用
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">getScore</span>(name: String) = <span style="color:#66d9ef">when</span> {
+</span></span><span style="display:flex;"><span>    name <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;Tom&#34;</span> <span style="color:#f92672">-&gt;</span> <span style="color:#ae81ff">86</span>
+</span></span><span style="display:flex;"><span>    name <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;Jim&#34;</span> <span style="color:#f92672">-&gt;</span> <span style="color:#ae81ff">77</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span> <span style="color:#f92672">-&gt;</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="for遍历">for，遍历</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#75715e">// 左闭右闭
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (i <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">0.</span>.<span style="color:#ae81ff">10</span>){
+</span></span><span style="display:flex;"><span>    println(i)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 左闭右开
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (i <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">0</span> until <span style="color:#ae81ff">10</span>) {
+</span></span><span style="display:flex;"><span>    println(i)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 步长为2
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (i <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">..</span> <span style="color:#ae81ff">10</span> step <span style="color:#ae81ff">2</span>) {
+</span></span><span style="display:flex;"><span>    println(i)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 降序
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (i <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">10</span> downTo <span style="color:#ae81ff">1</span>) {
+</span></span><span style="display:flex;"><span>    println(i)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (item <span style="color:#66d9ef">in</span> persons) {
+</span></span><span style="display:flex;"><span>    println(item.toString())
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (i <span style="color:#66d9ef">in</span> persons.indices) {
+</span></span><span style="display:flex;"><span>    println(<span style="color:#e6db74">&#34;persons[</span><span style="color:#e6db74">$i</span><span style="color:#e6db74">] = </span><span style="color:#e6db74">${persons[i]}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="各种声明">各种声明</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#75715e">// 抽象类
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">className</span>{<span style="color:#f92672">..</span>.}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 接口
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">className</span>{<span style="color:#f92672">..</span>.}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 注解
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">annotation</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">className</span>{<span style="color:#f92672">..</span>.}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 枚举
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>enmu <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">className</span>{<span style="color:#f92672">..</span>.}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 数据类
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">data</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">className</span>{<span style="color:#f92672">..</span>.}
+</span></span></code></pre></div><h2 id="标准函数">标准函数</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#75715e">// let会将变量传入表达式中，主要作用就是配合?.来进行判空处理
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">doStudy</span>(name:String?){
+</span></span><span style="display:flex;"><span>    name<span style="color:#f92672">?.</span>let {
+</span></span><span style="display:flex;"><span>        println(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">$it</span><span style="color:#e6db74"> is studying&#34;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// with会在lambda表达式中提供第一个参数对象的上下文，并使用lambda表达式中的最后一行作为返回值返回
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">val</span> list = listOf(<span style="color:#e6db74">&#34;Apple&#34;</span>, <span style="color:#e6db74">&#34;Banana&#34;</span>, <span style="color:#e6db74">&#34;Orange&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> builder = StringBuilder()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">val</span> result = with(builder) {
+</span></span><span style="display:flex;"><span>    append(<span style="color:#e6db74">&#34;Start&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (fruit <span style="color:#66d9ef">in</span> list) append(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">$fruit</span><span style="color:#e6db74"> </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    append(<span style="color:#e6db74">&#34;finish&#34;</span>)
+</span></span><span style="display:flex;"><span>    toString()
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>println(result)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// run其实和with很相似
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">val</span> list = listOf(<span style="color:#e6db74">&#34;Apple&#34;</span>, <span style="color:#e6db74">&#34;Banana&#34;</span>, <span style="color:#e6db74">&#34;Orange&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> builder = StringBuilder()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">val</span> result = builder.run {
+</span></span><span style="display:flex;"><span>    append(<span style="color:#e6db74">&#34;Start&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (fruit <span style="color:#66d9ef">in</span> list) append(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">$fruit</span><span style="color:#e6db74"> </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    append(<span style="color:#e6db74">&#34;finish&#34;</span>)
+</span></span><span style="display:flex;"><span>    toString()
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>println(result)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// apply和run很相似，但是无法指定返回值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">val</span> list = listOf(<span style="color:#e6db74">&#34;Apple&#34;</span>, <span style="color:#e6db74">&#34;Banana&#34;</span>, <span style="color:#e6db74">&#34;Orange&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> builder = StringBuilder()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">val</span> result = builder.apply {
+</span></span><span style="display:flex;"><span>    append(<span style="color:#e6db74">&#34;Start&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (fruit <span style="color:#66d9ef">in</span> list) append(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">$fruit</span><span style="color:#e6db74"> </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    append(<span style="color:#e6db74">&#34;finish&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>println(result.toString())
+</span></span></code></pre></div><h2 id="编译期常量">编译期常量</h2>
+<p>在静态变量上加上<code>const</code>关键字</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#66d9ef">companion</span> <span style="color:#66d9ef">object</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">val</span> GOOGLE_URL = <span style="color:#e6db74">&#34;https://www.google.com/&#34;</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="内部类">内部类</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">outer</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 默认静态内部类
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">inner1</span>{
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 嵌套内部类
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">inner</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">inner2</span>{
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="internal"><code>internal</code></h2>
+<p>当前模块可见</p>
+<h2 id="open和final"><code>open</code>和<code>final</code></h2>
+<p>在kotiln中，类和函数默认是被<code>final</code>修饰的（除了<code>abstract</code>和<code>override</code>外）</p>
+<p>而使用open来修饰，就表示可以继承</p>
+<h2 id="主构造器和init">主构造器和<code>init</code></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Activity</span> <span style="color:#66d9ef">constructor</span>(name: String?) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">var</span> name: String? = <span style="color:#66d9ef">null</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">init</span> { <span style="color:#75715e">// init是初始化代码块
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">this</span>.name = name
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>更简洁的写法：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Activity</span> <span style="color:#66d9ef">constructor</span>(<span style="color:#66d9ef">var</span> name: String?) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 在构造的时候就定义变量
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><h2 id="和"><code>==</code>和<code>===</code></h2>
+<ul>
+<li><code>==</code>调用<code>equals()</code>进行比较</li>
+<li><code>===</code>比较引用地址</li>
+</ul>
+<h2 id="heading"><code>?:</code></h2>
+<p>在kotiln中，这是一个用于简化<code>if null</code>的操作符</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span>name<span style="color:#f92672">?:</span><span style="color:#e6db74">&#34;令狐冲&#34;</span> <span style="color:#75715e">// 如果name是null的话，则赋值为&#34;令狐冲&#34;
+</span></span></span></code></pre></div><h2 id="扩展函数">扩展函数</h2>
+<p>可以如此使用：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> text = <span style="color:#e6db74">&#34;乌拉&#34;</span>
+</span></span><span style="display:flex;"><span>    println(text.msg())
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">String</span>.msg(): String {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;====&gt; </span><span style="color:#e6db74">$this</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="委托">委托</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#66d9ef">val</span> name: String <span style="color:#66d9ef">by</span> lazy {<span style="color:#e6db74">&#34;萧峰&#34;</span>} <span style="color:#75715e">// 延迟，语句只在第一次访问时执行
+</span></span></span></code></pre></div><h2 id="协程">协程</h2>
+<p>是一套由Kotlin官方提供的线程API，优势在于可以把不同线程的代码写在同一代码块</p>
+<h2 id="密封类">密封类</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#75715e">// kotlin会自动检查该密封类有哪些子类
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">sealed</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Result</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Success</span>(<span style="color:#66d9ef">val</span> msg:String):Result()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Failure</span>(<span style="color:#66d9ef">val</span> error:Exception):Result()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 当使用when传入一个密封类时，kotlin编译器会自动检测此密封类有哪些子类，并强制要求你每一个情况都有做处理，好处是不用编写else语句了
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">getResultMsg</span>(result: Result) = <span style="color:#66d9ef">when</span>(result) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">is</span> Success <span style="color:#f92672">-&gt;</span> result.msg
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">is</span> Failure <span style="color:#f92672">-&gt;</span> <span style="color:#e6db74">&#34;error is </span><span style="color:#e6db74">${result.error.message}</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="内联函数">内联函数</h2>
+<p>kotlin编译器会将内联函数中的代码在编译的时候自动替换到调用它的地方，它可以将使用Lambda表达式带来的运行时开销完全消除</p>
+<p>inline 表示这是一个内联函数，里面的所以Lambda表达式都会被内联，但是在参数前加上noinline表示不内联</p>
+<p>这是因为内联的函数类型参数在编译的时候会被进行代码替换，因此它没有真正的参数属性。<strong>非内联的函数类型参数可以自由地传递给其他任何函数</strong>，因为它就是一个真实的参数，<strong>而内联的函数类型参数只允许传递给另外一个内联函数</strong>，这也是它最大的局限性。</p>
+<p>而加上crossinline表示内联函数Lambda表达式中一定不会有return关键字（但是可以有局部返回例如return@printString）</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#66d9ef">inline</span> <span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">inlineTest</span>(block1: () <span style="color:#f92672">-&gt;</span> Unit, <span style="color:#66d9ef">noinline</span> block2: () <span style="color:#f92672">-&gt;</span> Unit, <span style="color:#66d9ef">crossinline</span> block3: () <span style="color:#f92672">-&gt;</span> Unit) {
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="运算符重载">运算符重载</h2>
+<p>kotlin允许我们将所有的运算符甚至其他关键字进行重载</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Money</span>(<span style="color:#66d9ef">val</span> value: Int) {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">operator</span> <span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">plus</span>(money: Money): Money {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">val</span> sum = value + money.value
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> Money(sum)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">operator</span> <span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">plus</span>(num: Int): Money {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">val</span> sum = value + num
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> Money(sum)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 使用
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">val</span> m1 = Money(<span style="color:#ae81ff">29</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">val</span> m2 = Money(<span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">val</span> m3 = m1 + m2
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">val</span> m4 = m1 + <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    println(<span style="color:#e6db74">&#34;m3.value  = </span><span style="color:#e6db74">${m3.value}</span><span style="color:#e6db74">&#34;</span>) <span style="color:#75715e">// 39
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    println(<span style="color:#e6db74">&#34;m4.value  = </span><span style="color:#e6db74">${m4.value}</span><span style="color:#e6db74">&#34;</span>) <span style="color:#75715e">// 30
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><p><img src="https://cdn.jsdelivr.net/gh/fushaolei/img//img/202210231801730.png" alt=""></p>
+
+			</div>
+			
+			<div class="site-tags">
+				
+				<div class="site-tags-item"><a href="/tags/android">Android</a></div>
+				
+
+			</div>
+			
+		</div>
+	</div>
+
+
+</article>
+
+			</div>
+		</div>
+
+
+
+
+	</div>
+
+</body>
+
+</html>

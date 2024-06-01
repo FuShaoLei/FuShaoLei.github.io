@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on 琼西往事</title>
+    <link>https://fushaolei.github.io/tags/git/</link>
+    <description>Recent content in Git on 琼西往事</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 15 Jul 2023 19:14:36 +0800</lastBuildDate><atom:link href="https://fushaolei.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>《Pro Git》 读书笔记</title>
+      <link>https://fushaolei.github.io/posts/note-pro-git/</link>
+      <pubDate>Sat, 15 Jul 2023 19:14:36 +0800</pubDate>
+      
+      <guid>https://fushaolei.github.io/posts/note-pro-git/</guid>
+      <description>起步 Git 有三种状态
+ 已提交 committed 已修改 modified 已暂存 staged  初次运行 Git 前的配置
+git config --global user.name &amp;#34;John Doe&amp;#34;git config --global user.email johndoe@example.com 获取帮助
+git help &amp;lt;指令&amp;gt;git help merge Git 基础 获取 Git 仓库 # 在现有目录中初始化仓库 git init # 这将创建一个名为.git的子目录，此目录中含有初始化Git仓库的所有文件 git add *.c # 跟踪指定文件 git commit -m &amp;#34;init repo&amp;#34; # 提交  # 克隆现有仓库 git clone https://github.com/libgit2/libgit2 git clone https://github.com/libgit2/libgit2 mylibgit # 指定文件夹的名称 记录每次更新到仓库 工作目录下的每一个文件只有两种状态：
+ 已跟踪 （指的那些呗纳入了版本控制的文件） 未跟踪  新添加的文件，一般是untracked，这时候要使用git add &amp;lt;文件名&amp;gt; 去跟踪文件</description>
+    </item>
+    
+    <item>
+      <title>常用Git指令</title>
+      <link>https://fushaolei.github.io/posts/common-git/</link>
+      <pubDate>Tue, 12 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/posts/common-git/</guid>
+      <description>   指令 说明     git add . 将修改放入暂存区   git status 查看状态   git log 查看commit版本号   git reset --hard 版本号 版本回退，hard强制回退，soft的话会保留修改   git stash 将修改保存起来   git stash save &amp;quot;xxx&amp;quot; 将修改保存起来，并设置这个保存的标签   git stash apply stash@{x} 将修改移出来   git branch -vv 查看本地分支是否与远端分支建立了连接   git push origin &amp;lt;分支名&amp;gt;:&amp;lt;分支名&amp;gt; 仅仅将本地分支推送到远端分支， 注意:这个操作只是单纯的把本地的分支推送到远端,尚未建立连接   git push --set-upstream origin &amp;lt;分支名&amp;gt; 将本地分支推送到远端分支并建立连接   git checkout -b &amp;lt;分支名&amp;gt; origin/&amp;lt;分支名&amp;gt; 拉取远程分支到本地（本地与远程建立连接，前提是本地已经有其他分支了）    </description>
+    </item>
+    
+    <item>
+      <title>Git学习笔记</title>
+      <link>https://fushaolei.github.io/posts/git-note/</link>
+      <pubDate>Mon, 03 Feb 2020 10:55:36 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/posts/git-note/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;使用Git是程序员必备的一个技能，虽然以前有跟着老师学过，但是一知半解，所以重新学过，本文记录了我学习Git的全过程&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

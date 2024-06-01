@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>安装aab包 &ndash; 琼西往事</title>
+	
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;700;900&family=Roboto+Mono&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="/css/style.css">
+	
+</head>
+
+<body>
+
+	<div class="main_container">
+
+		<div class="inner_container">
+			<div class="left_container">
+				<div class="left_card_container">
+
+
+					<div class="card_container">
+						<div class="site-tile-container">
+							<a href="https://fushaolei.github.io">
+								琼西往事
+							</a>
+						</div>
+						<div class="card_intro">导航</div>
+
+						<div class="card-nav">
+							
+							
+							<a href="/">
+								<div class="card-nav-item">
+									首页
+								</div>
+							</a>
+							
+							<a href="/about/">
+								<div class="card-nav-item">
+									关于
+								</div>
+							</a>
+							
+							<a href="/link/">
+								<div class="card-nav-item">
+									友链
+								</div>
+							</a>
+							
+							
+							<a href="https://travellings.link/" target="_blank">
+								<div class="card-nav-item">
+									开往
+								</div>
+							</a>
+						</div>
+
+					</div>
+
+					
+
+
+					
+
+
+
+
+					
+
+
+					
+
+
+					
+
+					<a href="/posts/kotlin-flesh-learn/">
+						<div class="card_container related-nav">
+							<div class="card_intro">上一篇</div>
+							<span class="related-nav-title">Kotlin速成</span>
+						</div>
+					</a>
+
+					
+
+					
+
+					<a href="/posts/diagram-http-note/">
+						<div class="card_container related-nav">
+							<div class="card_intro">下一篇</div>
+							<span class="related-nav-title">《图解Http》笔记</span>
+							
+						</div>
+					</a>
+
+					
+
+				</div>
+			</div>
+			<div class="right_container">
+				
+<article class="article-real-container">
+
+
+	<div class="article_card_container">
+		
+
+		<div class="article_card_inner_container">
+			
+			<div class="article-normal-info">
+							<time class="card_intro" datetime=" 2022-11-19T14:54:25">2022年11月19日</time>
+			<div class="article-title">安装aab包</div>
+			</div>
+
+			
+			<div class="content-container">
+				<p>首先你得有Java的环境，然后还要去<a href="https://github.com/google/bundletool/releases">https://github.com/google/bundletool/releases</a>下载一个jar包</p>
+<p>然后将你的<strong>aab包</strong>，<strong>.jks文件</strong>，和上面下载的jar包放到同一目录下（当然，不放在一起也行。。）</p>
+<p>然后在小黑块中进入这个目录执行：</p>
+<pre tabindex="0"><code>java -jar bundletool-all-1.13.0.jar build-apks --bundle=./xxx.aab --output=./app-dubug.apks --ks=./xxx.jks --ks-pass=pass:xxx --ks-key-alias=xxxx --key-pass=pass:xxx --connected-device
+
+java -jar bundletool-all-1.13.0.jar install-apks --apks=./app-dubug.apks
+</code></pre>
+			</div>
+			
+			<div class="site-tags">
+				
+				<div class="site-tags-item"><a href="/tags/android">Android</a></div>
+				
+
+			</div>
+			
+		</div>
+	</div>
+
+
+</article>
+
+			</div>
+		</div>
+
+
+
+
+	</div>
+
+</body>
+
+</html>

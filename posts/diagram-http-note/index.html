@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>《图解Http》笔记 &ndash; 琼西往事</title>
+	
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;700;900&family=Roboto+Mono&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="/css/style.css">
+	
+</head>
+
+<body>
+
+	<div class="main_container">
+
+		<div class="inner_container">
+			<div class="left_container">
+				<div class="left_card_container">
+
+
+					<div class="card_container">
+						<div class="site-tile-container">
+							<a href="https://fushaolei.github.io">
+								琼西往事
+							</a>
+						</div>
+						<div class="card_intro">导航</div>
+
+						<div class="card-nav">
+							
+							
+							<a href="/">
+								<div class="card-nav-item">
+									首页
+								</div>
+							</a>
+							
+							<a href="/about/">
+								<div class="card-nav-item">
+									关于
+								</div>
+							</a>
+							
+							<a href="/link/">
+								<div class="card-nav-item">
+									友链
+								</div>
+							</a>
+							
+							
+							<a href="https://travellings.link/" target="_blank">
+								<div class="card-nav-item">
+									开往
+								</div>
+							</a>
+						</div>
+
+					</div>
+
+					
+
+
+					
+
+
+
+
+					
+
+
+					<div class="card_container content-toc">
+						<div class="card_intro">目录</div>
+						<nav id="TableOfContents">
+  <ul>
+    <li><a href="#第-1-章-了解web及网络基础">第 1 章 了解web及网络基础</a></li>
+    <li><a href="#第-2-章-简单的http协议">第 2 章 简单的HTTP协议</a></li>
+    <li><a href="#第-3-章-http报文内的http信息">第 3 章 HTTP报文内的HTTP信息</a></li>
+    <li><a href="#第-4-章-返回结果的http状态码">第 4 章 返回结果的HTTP状态码</a></li>
+    <li><a href="#第-5-章-与http协作的web服务器">第 5 章 与HTTP协作的Web服务器</a></li>
+    <li><a href="#第-6-章-http首部">第 6 章 HTTP首部</a></li>
+    <li><a href="#第-7-章-确保web安全的https">第 7 章 确保Web安全的HTTPS</a></li>
+  </ul>
+</nav>
+
+					</div>
+
+					
+
+
+					
+
+
+					
+
+					<a href="/posts/install-aab-package/">
+						<div class="card_container related-nav">
+							<div class="card_intro">上一篇</div>
+							<span class="related-nav-title">安装aab包</span>
+						</div>
+					</a>
+
+					
+
+					
+
+					<a href="/posts/raspberry-pi-start/">
+						<div class="card_container related-nav">
+							<div class="card_intro">下一篇</div>
+							<span class="related-nav-title">树莓派入门</span>
+							
+						</div>
+					</a>
+
+					
+
+				</div>
+			</div>
+			<div class="right_container">
+				
+<article class="article-real-container">
+
+
+	<div class="article_card_container">
+		
+
+		<div class="article_card_inner_container">
+			
+			<div class="article-normal-info">
+							<time class="card_intro" datetime=" 2022-07-02T17:34:37">2022年07月02日</time>
+			<div class="article-title">《图解Http》笔记</div>
+			</div>
+
+			
+			<div class="content-container">
+				<p>好久没写博客了，但是笔记是有常常写的，只是懒的把笔记放到博客上，因为我觉得，博客里一定要有内容，至少百分之八十的文章，要让人读了感觉有收获，我觉得这样个人博客才能够受欢迎，而自己平常做的笔记，比较随意，所以不太敢放上来，但是我觉得也不用那么刻意，毕竟看博客最多的可能是自己，现在也关闭了评论系统了，其实可以用gitalk，但是我觉得这个东西，比较粗糙，因为有时候换个url什么之类的，可能它又另启一个仓库，感觉比较傻瓜，当然，这只是过去我对它的认知，再加上评论的人不是很多，如果是交流学习的话，我感觉还是发邮件好一点，因为你会比较慎重。胡言乱语不多说，下面是正文</p>
+<h2 id="第-1-章-了解web及网络基础">第 1 章 了解web及网络基础</h2>
+<blockquote>
+<p>HTTP，全名<code>Hypertext Transfer Protocol</code>，超文本传输协议</p>
+</blockquote>
+<p>互联网是再TCP/IP协议族的基础上运作起来的</p>
+<p>TCP/IP协议族分为四层：</p>
+<ul>
+<li>应用层：决定了向用户提供应用服务时的通信活动，如FTP，DNS，HTTP等</li>
+<li>传输层：提供数据传输，如TCP，UDP</li>
+<li>网络层：处理数据包？</li>
+<li>链路层：用来处理连接网路的硬件部分</li>
+</ul>
+<p>与HTTP密切相关的几个协议：</p>
+<ul>
+<li>IP协议：作用是保证数据包传送到指定目标</li>
+<li>TCP协议：作用是可靠传输</li>
+<li>DNS服务：负责解析域名成IP地址</li>
+</ul>
+<p><strong>URI和URL</strong></p>
+<ul>
+<li>URI是<strong>统一资源标识符</strong>，强调是唯一标识</li>
+<li>URL是<strong>统一资源定位符</strong>，强调的是位置，在什么位置上</li>
+</ul>
+<h2 id="第-2-章-简单的http协议">第 2 章 简单的HTTP协议</h2>
+<p>请求访问资源的一端为客户端，提供资源的一端为服务器端，始终都是由客户端来建立通信的</p>
+<p>客户端请求报文：</p>
+<pre tabindex="0"><code>//  方法  URI     版本协议
+    GET /user/   HTTP/1.1
+// Request Headers   
+    Host: api.github.com
+    Content-Type: text/plain
+    Content-Length:21
+// Request Body
+    name=fushaolei&amp;age=21
+</code></pre><p>服务端响应报文：</p>
+<pre tabindex="0"><code>//  版本协议    状态码  状态信息
+	HTTP/1.1  200   OK
+// Response Headers        
+    Content-Type: application/json
+    Content-Length:21
+// Response Body
+    bodybodybodybodybodybodybodybodybodybodybodybodybodybodybodybodybodybodybodybody
+</code></pre><p>Http是不保存状态的协议</p>
+<p>各种请求方法：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>请求资源，无Request Body，有Response Body</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>用于增加或修改资源，有Request Body，有Response Body</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>同样用于增加或修改资源，但和POST不同的是，PUT是幂等的（调用一次与连续调用多次是等价的），有Response Body</td>
+</tr>
+<tr>
+<td>HEAD</td>
+<td>获得报文首部，没有Response Body</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>删除文件</td>
+</tr>
+<tr>
+<td>OPTIONS</td>
+<td>询问支持方法</td>
+</tr>
+<tr>
+<td>TRACE</td>
+<td>追踪路径，可以查询发出去的请求是被怎样加工修改的</td>
+</tr>
+<tr>
+<td>CONNECT</td>
+<td>要求用隧道协议连接代理</td>
+</tr>
+</tbody>
+</table>
+<p>使用Cookie进行状态管理，客户端保存好服务器端发送过来的Set-Cookie字段，在每次请求的时候带上Cookie，从而验证身份</p>
+<h2 id="第-3-章-http报文内的http信息">第 3 章 HTTP报文内的HTTP信息</h2>
+<p>Http报文本质是由多行（CR+LF换行符）数据构成的<strong>字符串文本</strong></p>
+<p>报文结构：</p>
+<p>请求报文：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>请求行
+</span></span><span style="display:flex;"><span>各种首部字段
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 换行，就这里空一行
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Request body<span style="color:#960050;background-color:#1e0010">（</span>如果有的话<span style="color:#960050;background-color:#1e0010">）</span>
+</span></span></code></pre></div><p>响应报文：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>状态行
+</span></span><span style="display:flex;"><span>各种首部字段
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 换行，就这里空一行
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>Response body<span style="color:#960050;background-color:#1e0010">（</span>如果有的话<span style="color:#960050;background-color:#1e0010">）</span>
+</span></span></code></pre></div><p>首部字段有4种，分别是，通用首部，请求首部，响应首部，实体首部</p>
+<p>内容编码：用于压缩和解压缩内容，有这几种：gzip，compress，deflate，identity（不进行编码）</p>
+<p>分块传输编码：将实体分割成块传给客户端</p>
+<p>发送多种数据的集合：multipart/form-data，multipart/byteranges，都会使用到boundary字符串来划分，比如boundary=abc，那么各个实体部分的起始行都会用&ndash;abc来进行标记，然后使用&ndash;abc&ndash;来作为结束的标志，而且每个实体部分的起始行都可含有首部字符</p>
+<p>获取部分内容：Content-Range: bytes=5001-10000</p>
+<h2 id="第-4-章-返回结果的http状态码">第 4 章 返回结果的HTTP状态码</h2>
+<p>状态码的类别：</p>
+<table>
+<thead>
+<tr>
+<th>状态码</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1XX</td>
+<td>infonational</td>
+</tr>
+<tr>
+<td>2XX</td>
+<td>success</td>
+</tr>
+<tr>
+<td>3XX</td>
+<td>redirection</td>
+</tr>
+<tr>
+<td>4XX</td>
+<td>client error</td>
+</tr>
+<tr>
+<td>5XX</td>
+<td>server error</td>
+</tr>
+</tbody>
+</table>
+<p>常见状态码：</p>
+<table>
+<thead>
+<tr>
+<th>状态码</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>OK，被服务器正常处理，且对应请求的实体会返回</td>
+</tr>
+<tr>
+<td>204</td>
+<td>Not Content，被服务器正常处理，但没有实体返回</td>
+</tr>
+<tr>
+<td>206</td>
+<td>Partial Content，范围请求，响应报文应该有Content-Range来指定内容</td>
+</tr>
+<tr>
+<td>301</td>
+<td>Move Permanently，永久重定向</td>
+</tr>
+<tr>
+<td>302</td>
+<td>Found，临时重定向</td>
+</tr>
+<tr>
+<td>303</td>
+<td>See Other</td>
+</tr>
+<tr>
+<td>304</td>
+<td>Not Modified</td>
+</tr>
+<tr>
+<td>307</td>
+<td>Temporary Redirect</td>
+</tr>
+<tr>
+<td>400</td>
+<td>Bad Request，错误的请求</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized，未验证身份</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden，访问被拒绝</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found 无法找到资源</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable</td>
+</tr>
+</tbody>
+</table>
+<h2 id="第-5-章-与http协作的web服务器">第 5 章 与HTTP协作的Web服务器</h2>
+<p>通信数据转发程序：代理（服务器和客户端的“中间人”），网关（转发通信数据），隧道（安全通信）</p>
+<p>在HTTP之前出现的协议：FTP，NNTP，Archie，WAIS，Gopher</p>
+<h2 id="第-6-章-http首部">第 6 章 HTTP首部</h2>
+<p>格式：</p>
+<pre tabindex="0"><code>首部字段名:字段值1，字段值2
+</code></pre><p>各种首部字段：</p>
+<p>通用首部字段</p>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cache-Control</td>
+<td>指定缓存的工作机制，有一堆</td>
+</tr>
+<tr>
+<td>Connnection</td>
+<td>管理持久连接</td>
+</tr>
+<tr>
+<td>Date</td>
+<td>创建Http报文的日期和时间</td>
+</tr>
+<tr>
+<td>Transfer-Encoding</td>
+<td>传输报文主体时采用的编码</td>
+</tr>
+<tr>
+<td>Upgrade</td>
+<td>检测http及其他协议是否有高可用版本</td>
+</tr>
+</tbody>
+</table>
+<p>请求首部字段：</p>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>客户端想向服务器说明的</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Accept</td>
+<td>能够处理的媒体类型</td>
+</tr>
+<tr>
+<td>Accept-Charset</td>
+<td>支持的字符集</td>
+</tr>
+<tr>
+<td>Accept-Encoding</td>
+<td>能支持的内容编码（gzip，compress，deflate，identity）</td>
+</tr>
+<tr>
+<td>Accept-Language</td>
+<td>能处理的语言</td>
+</tr>
+<tr>
+<td>Authorization</td>
+<td>认证信息</td>
+</tr>
+<tr>
+<td>Host</td>
+<td>目标主机地址（<strong>给目标主机定位子主机的</strong>），<strong>这是唯一一个必须包含在请求内的字段</strong></td>
+</tr>
+<tr>
+<td>Range</td>
+<td>对于只想获取部分资源，这个字段指定部分资源的范围</td>
+</tr>
+<tr>
+<td>Referer</td>
+<td>请求的URI是从哪个web页面发起的</td>
+</tr>
+<tr>
+<td>User-Agent</td>
+<td>浏览器的种类</td>
+</tr>
+<tr>
+<td>Cookie</td>
+<td>请求需要验证Cookie时带上</td>
+</tr>
+</tbody>
+</table>
+<p>响应首部字段：</p>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>服务器想向客户端说明的</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Location</td>
+<td>重定向的uri</td>
+</tr>
+<tr>
+<td>Retry-After</td>
+<td>稍后发出请求的时间</td>
+</tr>
+<tr>
+<td>Server</td>
+<td>http服务器的信息</td>
+</tr>
+<tr>
+<td>Set-Cookie</td>
+<td>返回给客户端Cookie</td>
+</tr>
+</tbody>
+</table>
+<p>实体首部字段：</p>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content-Encoding</td>
+<td>实体的内容编码</td>
+</tr>
+<tr>
+<td>Content-Language</td>
+<td>实体使用的语言是什么</td>
+</tr>
+<tr>
+<td>Content-Length</td>
+<td>实体的大小（单位是字节）</td>
+</tr>
+<tr>
+<td>Content-Location</td>
+<td>实体对应的URI</td>
+</tr>
+<tr>
+<td>Content-Range</td>
+<td>字节为单位的实体范围</td>
+</tr>
+<tr>
+<td>Content-Type</td>
+<td>实体媒体类型</td>
+</tr>
+</tbody>
+</table>
+<h2 id="第-7-章-确保web安全的https">第 7 章 确保Web安全的HTTPS</h2>
+<p>http的缺点：</p>
+<ul>
+<li>明文传输，内容可能会被窃听</li>
+<li>不验证身份，有可能遭遇伪装</li>
+<li>无法验证报文的完整性，可能已被篡改（像这样，请求或响应传输途中，遭攻击者拦截并篡改内容的攻击称为<strong>中间人攻击</strong>）</li>
+</ul>
+<p>Https = Http + 加密 + 认证 + 完整性保护，简单来说 Https = Http + SSL</p>
+<p>HTTPS通信步骤：</p>
+<ol>
+<li>客户端发送Client Hello给服务端</li>
+<li>服务端返回Server Hello给客户端</li>
+<li>服务器发送Certificate报文，里边包含公钥证书</li>
+<li>服务器发送Server Hello Done通知客户端，最初握手结束</li>
+<li>客户端发送Client Key Exchange报文，里边包含Pre-master secret随机密码串</li>
+<li>客户端发送Change Cipher Spec报文，提示服务端，之后的通信将采用Pre-master secret密钥加密</li>
+<li>客户端发送Finished报文，该报文包含建立连接至今全部报文的整体校验值</li>
+<li>服务端发送Change Cipher Spec</li>
+<li>服务端发送Finished</li>
+<li>SSL连接建立完成</li>
+</ol>
+
+			</div>
+			
+			<div class="site-tags">
+				
+				<div class="site-tags-item"><a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0">读书笔记</a></div>
+				
+
+			</div>
+			
+		</div>
+	</div>
+
+
+</article>
+
+			</div>
+		</div>
+
+
+
+
+	</div>
+
+</body>
+
+</html>
