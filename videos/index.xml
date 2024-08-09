@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>影视 on 琼西往事</title>
+    <link>https://fushaolei.github.io/videos/</link>
+    <description>Recent content in 影视 on 琼西往事</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 30 Jul 2023 20:47:01 +0800</lastBuildDate><atom:link href="https://fushaolei.github.io/videos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>教父</title>
+      <link>https://fushaolei.github.io/videos/godfather/</link>
+      <pubDate>Sun, 30 Jul 2023 20:47:01 +0800</pubDate>
+      
+      <guid>https://fushaolei.github.io/videos/godfather/</guid>
+      <description>帮派斗争，待补充</description>
+    </item>
+    
+    <item>
+      <title>肖申克的救赎</title>
+      <link>https://fushaolei.github.io/videos/shawshank/</link>
+      <pubDate>Sun, 30 Jul 2023 20:47:01 +0800</pubDate>
+      
+      <guid>https://fushaolei.github.io/videos/shawshank/</guid>
+      <description>给人希望 “hope is a good thing” 待补充</description>
+    </item>
+    
+  </channel>
+</rss>
