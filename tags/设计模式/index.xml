@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>设计模式 on 琼西往事</title>
+    <link>https://fushaolei.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
+    <description>Recent content in 设计模式 on 琼西往事</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 06 Oct 2020 13:34:37 +0000</lastBuildDate><atom:link href="https://fushaolei.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android MVP模式思想</title>
+      <link>https://fushaolei.github.io/posts/android-mvp-thinking/</link>
+      <pubDate>Tue, 06 Oct 2020 13:34:37 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/posts/android-mvp-thinking/</guid>
+      <description>前言 MVP模式只是一个思想，并没有具体的，标准的编码规定。只要掌握了核心的思想，那么万变不离其宗。MVP模式，无法讲究的是单向通信，V单向和P通信，P单向和M通信，这便是MVP的精髓。
+预备知识  面向接口的编程思想 向上转型的概念 解耦  面向接口编程 先复习一下接口的概念：
+在Java程序设计语言中，接口不是类，而是对希望符合这个接口的类的一组需求（出自《Java核心卷一》p222页） 说白了，接口就是一组需求
+而面向接口编程呢，就是在开始开发前，先定义好接口（可以理解为先列出一组需求），然后再进行开发
+向上转型 即父类引用指向子类对象（即多态），看完下面的代码应该更好理解些
+public interface IStudent { String getName(); } public class Student implements IStudent{//此时IStudent是父类，Student是子类  @Override public String getName() { return &amp;#34;任我行&amp;#34;; } } public class Test { public static void main(String[] args) { IStudent iStudent; iStudent=new Student();//父类引用指向子类的对象，这里做了向上转型  System.out.println(&amp;#34;学生的名字是：&amp;#34;+iStudent.getName());//打印结果：学生的名字是：任我行  } } 解耦 解耦即降低依赖性
+MVP模式 Actually，我觉得MVP模式的灵魂就是presenter层同时持有view层和model层的引用（请联系上边的向上转型的概念）。
+ 照此逻辑，我们简单实现一个常见的登录模块。根据面向接口编程，我们首先列出我们的接口（需求）：
+/** * View层的需求 */ public interface IView { //1.</description>
+    </item>
+    
+  </channel>
+</rss>
