@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IDE on 琼西往事</title>
+    <link>https://fushaolei.github.io/tags/ide/</link>
+    <description>Recent content in IDE on 琼西往事</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 14 Jun 2020 21:36:08 +0000</lastBuildDate><atom:link href="https://fushaolei.github.io/tags/ide/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IDEA安装</title>
+      <link>https://fushaolei.github.io/posts/idea-note/</link>
+      <pubDate>Sun, 14 Jun 2020 21:36:08 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/posts/idea-note/</guid>
+      <description>哭唧唧，用惯了eclispe的我用起idea就像一个傻子，现在记录一下，以免忘记 所用版本：idea 2020.1
+ 1. 下载和安装 去官网下载：https://www.jetbrains.com/idea/download/ 安装随意，破解的话 看这篇文章，有开源项目的建议可以试着申请下免费的一年使用权，链接指路：https://www.jetbrains.com/zh-cn/community/opensource/
+2. 配置maven  maven的作用就是帮助我们下载需要的jar包，不需要在自己去网上找来找去了
+ 点击这个链接：https://maven.apache.org/，去这个页面:    然后解压，记住你解压后的位置，比如我直接解压到E盘 然后是配置环境，电脑&amp;gt;属性&amp;gt;高级系统设置&amp;gt;环境变量，在系统变量中添加一个变量为M2_HOME，值为你的maven存放路径，然后到path里添加一个maven的bin路径，懒了不贴图了 在cmd中输入mvn -v出现maven的版本号 ，就说明配置成功啦！
+这时还没完： 进入E:\apache-maven-3.6.3\conf路径下。打开setting.xml 在mirrors中添加一个镜像
+&amp;lt;mirror&amp;gt; &amp;lt;id&amp;gt;nexus-aliyun&amp;lt;/id&amp;gt; &amp;lt;mirrorOf&amp;gt;central&amp;lt;/mirrorOf&amp;gt; &amp;lt;name&amp;gt;Nexus aliyun&amp;lt;/name&amp;gt; &amp;lt;url&amp;gt;http://maven.aliyun.com/nexus/content/groups/public/&amp;lt;/url&amp;gt; &amp;lt;/mirror&amp;gt; 阿里云镜像，到时候下载jar包时会更快
+ 下载的路径还没修改，将在后续补上
+ 3. Idea配置maven 先随意创建一个项目。。。进去后          -Xms1024m -Xmx2048m 好了 这样后，每创建一个新的项目，都会自动给你配置maven的路径，然后下载jar包的速度也会相应的加快，这给我们的开发带来了极大的便利</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>《Java核心技术I》笔记 &ndash; 琼西往事</title>
+	
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;700;900&family=Roboto+Mono&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="/css/style.css">
+	
+</head>
+
+<body>
+
+	<div class="main_container">
+
+		<div class="inner_container">
+			<div class="left_container">
+				<div class="left_card_container">
+
+
+
+					<div class="card_container">
+						<div class="site-tile-container">
+							<a href="https://fushaolei.github.io">
+								<span class="site-title-import-text">琼西</span><span>往事</span>
+							</a>
+						</div>
+						<div class="special-line site-bottom-line"></div>
+
+						<div class="card_intro">导航</div>
+						<div class="card-nav">
+							
+							
+							<a href="/" class="nav_link">
+								<div class="card-nav-item universal-transition">
+									首页
+								</div>
+							</a>
+							
+							<a href="/about/" class="nav_link">
+								<div class="card-nav-item universal-transition">
+									关于
+								</div>
+							</a>
+							
+							<a href="/link/" class="nav_link">
+								<div class="card-nav-item universal-transition">
+									友链
+								</div>
+							</a>
+							
+							
+							<a href="https://travellings.link/" target="_blank">
+								<div class="card-nav-item universal-transition">
+									开往
+								</div>
+							</a>
+						</div>
+
+						<div class="card_intro" style="margin-top: 15px">短评</div>
+
+						<div class="card-nav">
+							
+							
+							<a href="/game/" class="nav_link">
+								<div class="card-nav-item universal-transition">
+									游戏
+								</div>
+							</a>
+							
+							<a href="/videos/" class="nav_link">
+								<div class="card-nav-item universal-transition">
+									影视
+								</div>
+							</a>
+							
+							
+						</div>
+
+					</div>
+
+					
+
+
+					
+
+
+
+
+					
+
+
+					<div class="card_container content-toc">
+						<div class="card_intro">目录</div>
+						<nav id="TableOfContents">
+  <ul>
+    <li><a href="#概述">概述</a></li>
+    <li><a href="#第-3-章-java的基本程序设计结构">第 3 章 	Java的基本程序设计结构</a></li>
+    <li><a href="#第-4-章对象与类">第 4 章	对象与类</a></li>
+    <li><a href="#第-5-章继承">第 5 章	继承</a></li>
+    <li><a href="#第-6-章接口lambda表达式与内部类">第 6 章	接口，lambda表达式与内部类</a></li>
+    <li><a href="#第-7-章异常断言和日志">第 7 章	异常，断言和日志</a></li>
+    <li><a href="#第-8-章泛型程序设计">第 8 章	泛型程序设计</a></li>
+    <li><a href="#第-9-章-集合">第 9 章 集合</a></li>
+    <li><a href="#第-12-章并发">第 12 章	并发</a></li>
+  </ul>
+</nav>
+
+					</div>
+
+					
+
+
+					
+
+
+					
+
+					<a href="/posts/java-keyword/">
+						<div class="card_container related-nav">
+							<div class="card_intro">上一篇</div>
+							<span class="related-nav-title universal-transition">Java关键字总结</span>
+						</div>
+					</a>
+
+					
+
+					
+
+					<a href="/posts/common-git/">
+						<div class="card_container related-nav">
+							<div class="card_intro">下一篇</div>
+							<span class="related-nav-title universal-transition">常用Git指令</span>
+							
+						</div>
+					</a>
+
+					
+
+                    
+                    
+
+                    
+
+				</div>
+			</div>
+			<div class="right_container">
+				
+<article class="article-real-container">
+
+
+	<div class="article_card_container">
+
+		<div class="article_card_inner_container">
+
+			
+
+			<div class="article-normal-info">
+				<div class="article-title single-title text-shadow">《Java核心技术I》笔记</div>
+				<time class="card_intro single-date" datetime=" 2021-01-15T13:34:37">2021年01月15日</time>
+
+			</div>
+
+			<div class="content-container">
+				<table>
+<thead>
+<tr>
+<th>日期</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2021/01/31</td>
+<td>读完了第一遍，边读边记，看的比较随意，除了第一第二章外，有些难的或者偏也都直接跳过了😜，看第二遍的时候再补回来吧 maybe。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="概述">概述</h2>
+<ul>
+<li><strong>第 1 章 + 第 2 章</strong> ： 这两章介绍了一些东西，比如Java的发展历史啊，Java的特性啊，以及Java的运行环境等等。特别要说的是，Java是一门<strong>面向对象</strong>程序设计语言，程序设计语言的成功取决于<strong>是否可以实现需要的功能</strong>，而不是语法的精巧性。以及JDK（Java Development Kit：Java开发工具包）与JRE（Java Runtime Environment：Java运行时环境）</li>
+<li><strong>第 3 章 Java的基本程序设计结构</strong>：这一章讲了Java的一些基础知识，比如注释啊，8 种基本类型啊（int,short,long,byte,double,float,boolean,char），变量（如何声明，初始化变量）与常量，运算符（其中还提到了短路的概念），介绍了字符串，输入输出等（这一节其实还讲了Math的一些静态方法，不过我觉得不是很重要，需要的时候可以查嘛，所以这里就不记录了）</li>
+<li><strong>第 4 章 对象与类</strong>：这一章介绍了面向对象思想，还有类与对象的关系，说了面向对象的一些特性，以及自定义类的一些内容，还有使用构造器时代码的执行顺序</li>
+</ul>
+<h2 id="第-3-章-java的基本程序设计结构">第 3 章 	Java的基本程序设计结构</h2>
+<h3 id="1第一个程序">1.第一个程序</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Hello</span> <span style="color:#f92672">{</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello World&#34;</span><span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>说明</p>
+<ul>
+<li><code>public</code>（访问修饰符） 用于控制对所修饰的类或对象或字段的<strong>访问级别</strong></li>
+<li>class表示这是一个类，Hello则是这个类的类名</li>
+<li>main方法是所有程序的<strong>入口</strong></li>
+<li>大括号表示方法体的开始与结束</li>
+</ul>
+<h3 id="2注释">2.注释</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">//单行注释
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">/*
+</span><span style="color:#75715e">多行注释，（不能嵌套使用）
+</span><span style="color:#75715e">*/</span>
+
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 文档注释
+</span><span style="color:#75715e"> * 可用于自动的生成文档
+</span><span style="color:#75715e"> */</span>
+</code></pre></div><h3 id="3数据类型">3.数据类型</h3>
+<table>
+<thead>
+<tr>
+<th>基本类型</th>
+<th>位数</th>
+<th>字节</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td>32</td>
+<td>4</td>
+<td>0</td>
+</tr>
+<tr>
+<td><code>short</code></td>
+<td>16</td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr>
+<td><code>long</code></td>
+<td>64</td>
+<td>8</td>
+<td>0L</td>
+</tr>
+<tr>
+<td><code>byte</code></td>
+<td>8</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td><code>char</code></td>
+<td>16</td>
+<td>2</td>
+<td>&lsquo;u0000&rsquo;</td>
+</tr>
+<tr>
+<td><code>float</code></td>
+<td>32</td>
+<td>4</td>
+<td>0f</td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td>64</td>
+<td>8</td>
+<td>0d</td>
+</tr>
+<tr>
+<td><code>boolean</code></td>
+<td>1</td>
+<td></td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4变量与常量">4.变量与常量</h3>
+<h4 id="变量">变量</h4>
+<h5 id="声明变量">声明变量</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">int</span> a<span style="color:#f92672">;</span>
+String name<span style="color:#f92672">;</span>
+</code></pre></div><p>即 以<code>变量类型</code>  <code>变量名</code>这种形式来声明一个变量</p>
+<h5 id="变量初始化">变量初始化</h5>
+<p>声明一个变量后，必须用赋值语句对变量进行<strong>显式初始化</strong>，如下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+String name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;任我行&#34;</span><span style="color:#f92672">;</span>
+</code></pre></div><h4 id="常量">常量</h4>
+<blockquote>
+<p>常量就是值不会变的变量</p>
+</blockquote>
+<p>可用<code>final</code>关键字来修饰常量，而且通常此常量名为大写</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">final</span> String BAIDU_URL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;www.baidu.com&#34;</span><span style="color:#f92672">;</span>
+</code></pre></div><h4 id="枚举类型">枚举类型</h4>
+<blockquote>
+<p>作用：限制变量的取值范围</p>
+</blockquote>
+<p>如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#66d9ef">enum</span> Size <span style="color:#f92672">{</span>SMALL<span style="color:#f92672">,</span>MEDIUM<span style="color:#f92672">,</span>LARGE<span style="color:#f92672">,</span>EXTRA_LARGE<span style="color:#f92672">};</span>
+</code></pre></div><p>那么<code>Size</code>类型的变量只能取里边的值</p>
+<h3 id="5运算符">5.运算符</h3>
+<h4 id="算术运算符">算术运算符</h4>
+<table>
+<thead>
+<tr>
+<th>算术运算符</th>
+<th>表示</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>+</code></td>
+<td>加</td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td>减</td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>乘</td>
+</tr>
+<tr>
+<td><code>/</code></td>
+<td>除</td>
+</tr>
+<tr>
+<td><code>%</code></td>
+<td>取模</td>
+</tr>
+</tbody>
+</table>
+<h4 id="类型转换">类型转换</h4>
+<ul>
+<li>如参与运算的两个数类型不一致，则结果为较大类型的整型</li>
+<li>强制转换：(有可能损失信息)</li>
+</ul>
+<h4 id="其他运算符">其他运算符</h4>
+<ul>
+<li>二元运算符：例如<code>x+=4;</code>，运算符放于等号左边</li>
+<li>自增自减运算符
+<ul>
+<li><code>++x</code> 前缀形式会先加1再使用</li>
+<li><code>x++</code> 后缀形式会先使用原来的值，之后才加1</li>
+</ul>
+</li>
+<li>关系运算符：如<code>==</code>,<code>!=</code>，<code>&gt;=</code>之类的，还有<code>&amp;&amp;</code>和<code>||</code></li>
+<li>三元运算符：<code>x&gt;0 ? true : false</code>如表达式为真，则为<code>true</code>，如假则为<code>false</code></li>
+</ul>
+<h4 id="短路和运算符的逻辑">短路（<code>&amp;&amp;</code>和<code>||</code>运算符的逻辑）</h4>
+<p>如果第一个操作数已经能够确定表达式的值，第二个操作数就不必再计算了</p>
+<h3 id="6字符串">6.字符串</h3>
+<blockquote>
+<p>这一节其实感觉没有什么好记的。。。</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">String hello <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello&#34;</span><span style="color:#f92672">;</span>
+<span style="color:#75715e">// 取子串
+</span><span style="color:#75715e"></span>String s <span style="color:#f92672">=</span> hello<span style="color:#f92672">.</span><span style="color:#a6e22e">substring</span><span style="color:#f92672">(</span>0<span style="color:#f92672">,</span>3<span style="color:#f92672">);</span><span style="color:#75715e">// Hel
+</span><span style="color:#75715e">// 判断是否相等
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>hello<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello&#34;</span><span style="color:#f92672">)){</span>
+    <span style="color:#75715e">//....
+</span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+<span style="color:#75715e">// 构建字符串
+</span><span style="color:#75715e"></span>StringBuilder builder <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> StringBuilder<span style="color:#f92672">();</span>
+builder<span style="color:#f92672">.</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;builder&#34;</span><span style="color:#f92672">);</span>
+builder<span style="color:#f92672">.</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;str&#34;</span><span style="color:#f92672">);</span>
+String builderString <span style="color:#f92672">=</span> builder<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">();</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>builderString<span style="color:#f92672">);</span>
+</code></pre></div><h3 id="7输入与输出">7.输入与输出</h3>
+<h4 id="输入">输入</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Scanner input<span style="color:#f92672">=</span><span style="color:#66d9ef">new</span> Scanner<span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">in</span><span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">printf</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;请输入一个数字: &#34;</span><span style="color:#f92672">);</span>
+<span style="color:#66d9ef">int</span> num<span style="color:#f92672">=</span>input<span style="color:#f92672">.</span><span style="color:#a6e22e">nextInt</span><span style="color:#f92672">();</span><span style="color:#75715e">//输入
+</span><span style="color:#75715e"></span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;你输入的数字是：&#34;</span><span style="color:#f92672">+</span>num<span style="color:#f92672">);</span><span style="color:#75715e">//输出
+</span></code></pre></div><h4 id="输出">输出</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;普通输出&#34;</span><span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;输出后换行&#34;</span><span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">printf</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;格式化输出 %.2f&#34;</span><span style="color:#f92672">,</span> 10000<span style="color:#f92672">.</span><span style="color:#a6e22e">0</span> <span style="color:#f92672">/</span> 3<span style="color:#f92672">.</span><span style="color:#a6e22e">0</span><span style="color:#f92672">);</span>
+</code></pre></div><h3 id="8控制流程">8.控制流程</h3>
+<h5 id="条件分支流程">条件分支流程</h5>
+<p>普通分支语句</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">int</span> b <span style="color:#f92672">=</span> 2<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>a <span style="color:#f92672">&gt;</span> b<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a大于b&#34;</span><span style="color:#f92672">);</span><span style="color:#75715e">//如果a大于b则执行这个语句
+</span><span style="color:#75715e"></span><span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>a <span style="color:#f92672">==</span> b<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a等于b&#34;</span><span style="color:#f92672">);</span><span style="color:#75715e">//如果a等于b则执行这个语句
+</span><span style="color:#75715e"></span><span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a小于b&#34;</span><span style="color:#f92672">);</span><span style="color:#75715e">//否则就a小于b，当以上两种情况都不是的时候执行
+</span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+</code></pre></div><p>条件多分支语句</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">int</span> g<span style="color:#f92672">=</span>2<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">switch</span><span style="color:#f92672">(</span>g<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">case</span> 1<span style="color:#f92672">:{</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;是1&#34;</span><span style="color:#f92672">);</span><span style="color:#75715e">//当g是1时执行
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">case</span> 2<span style="color:#f92672">:{</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;是2&#34;</span><span style="color:#f92672">);</span><span style="color:#75715e">//当g是2时执行
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">default</span><span style="color:#f92672">:{</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;都不是&#34;</span><span style="color:#f92672">);</span><span style="color:#75715e">//当以上情况都不是的时候执行
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h5 id="循环流程">循环流程</h5>
+<p>根据条件，反复执行某些操作</p>
+<h6 id="for"><code>for</code></h6>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">	<span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span>0<span style="color:#f92672">;</span>i<span style="color:#f92672">&lt;</span>5<span style="color:#f92672">;</span>i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span><span style="color:#75715e">//int i=0是初始值，i&lt;5是循环条件。i++是循环后更新i的值，然后进入下一轮循环
+</span><span style="color:#75715e"></span>		System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;循环第&#34;</span><span style="color:#f92672">+</span>i<span style="color:#f92672">+</span><span style="color:#e6db74">&#34;次&#34;</span><span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+</code></pre></div><h6 id="while"><code>while</code></h6>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">		<span style="color:#66d9ef">int</span> u<span style="color:#f92672">=</span>5<span style="color:#f92672">;</span>
+		<span style="color:#66d9ef">while</span><span style="color:#f92672">(</span>u<span style="color:#f92672">&gt;</span>0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span><span style="color:#75715e">//当为true时执行
+</span><span style="color:#75715e"></span>			System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;u=&#34;</span><span style="color:#f92672">+</span>u<span style="color:#f92672">);</span>
+			<span style="color:#f92672">--</span>u<span style="color:#f92672">;</span>
+		<span style="color:#f92672">}</span>
+</code></pre></div><h6 id="dowhile"><code>do</code>..<code>while</code></h6>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">		<span style="color:#66d9ef">int</span> p<span style="color:#f92672">=</span>0<span style="color:#f92672">;</span>
+		<span style="color:#66d9ef">do</span> <span style="color:#f92672">{</span><span style="color:#75715e">//无条件进入循环
+</span><span style="color:#75715e"></span>			<span style="color:#f92672">++</span>p<span style="color:#f92672">;</span>
+			System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;p=&#34;</span><span style="color:#f92672">+</span>p<span style="color:#f92672">);</span>
+		<span style="color:#f92672">}</span><span style="color:#66d9ef">while</span><span style="color:#f92672">(</span>p<span style="color:#f92672">&lt;</span>5<span style="color:#f92672">);</span><span style="color:#75715e">//首先执行一次循环体后进行判断，若为true则继续进行下去
+</span></code></pre></div><h6 id="for-each增强型for循环"><code>for each</code>（增强型<code>for</code>循环）</h6>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span> 类型 变量名<span style="color:#f92672">:</span> 数组或集合 <span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+循环体
+<span style="color:#f92672">}</span>
+</code></pre></div><p>与普通for循环的区别：<strong>for each循环语句的循环变量将会遍历数组中的每个元素，而不是下标值</strong></p>
+<h4 id="中断控制流程的语句">中断控制流程的语句</h4>
+<p><strong>break</strong>：跳出一个switch case 或者一个循环</p>
+<p><strong>带标签的break</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span>
+read_data: <span style="color:#75715e">// 标签名（放在希望跳出的最外层的循环之前），后面跟着冒号
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>a <span style="color:#f92672">==</span> 1<span style="color:#f92672">)</span> <span style="color:#66d9ef">break</span> read_data<span style="color:#f92672">;</span><span style="color:#75715e">// break后要带着标签
+</span><span style="color:#75715e"></span>    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;in&#34;</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+<span style="color:#75715e">// 当里边发生了break read_data就会跳到下面这个语句
+</span><span style="color:#75715e"></span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;out&#34;</span><span style="color:#f92672">);</span>
+</code></pre></div><p>主要用在一些嵌套很深的循环语句中，希望发生失误后完全跳出循环体</p>
+<p><strong>continue</strong>：将控制转移到最内层循环的首部</p>
+<h3 id="9大数">9.大数</h3>
+<ul>
+<li><code>BigInteger</code>实现任意精度的整数运算</li>
+<li><code>BigDecimal</code>实现任意精度的浮点数运算</li>
+</ul>
+<h3 id="10数组">10.数组</h3>
+<ul>
+<li>存储一组具有<strong>相同数据类型</strong>的数据元素的有序集合</li>
+<li>用<code>new</code>操作符创建数组，整数类型的所有元素初始化为0，boolean类型的初始化为false，对象类型的则初始化为null</li>
+<li>数组一旦被创建，长度就不能修改了</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// 声明
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> num<span style="color:#f92672">[];</span>
+<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> sum<span style="color:#f92672">;</span>
+<span style="color:#75715e">// 静态初始化
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> num<span style="color:#f92672">[]={</span>1<span style="color:#f92672">,</span>2<span style="color:#f92672">,</span>3<span style="color:#f92672">,</span>4<span style="color:#f92672">,</span>5<span style="color:#f92672">}</span>
+<span style="color:#75715e">//动态初始化
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> num<span style="color:#f92672">[]=</span><span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>5<span style="color:#f92672">];</span><span style="color:#75715e">//预先分配内存空间
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span>0<span style="color:#f92672">;</span>i<span style="color:#f92672">&lt;</span>5<span style="color:#f92672">;</span>i<span style="color:#f92672">++){</span>
+	num<span style="color:#f92672">[</span>i<span style="color:#f92672">]=</span>i<span style="color:#f92672">*</span>3<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="第-4-章对象与类">第 4 章	对象与类</h2>
+<h3 id="1面向对象">1.面向对象</h3>
+<ul>
+<li><strong>面向对象编程</strong>，是一种通过<strong>对象</strong>的方式，把<strong>现实世界映射到计算机模型</strong>的一种编程方法。</li>
+<li>面向对象程序设计：程序由对象来组成</li>
+<li>类：构造对象的模板或蓝图</li>
+<li>对象：类的实例化</li>
+</ul>
+<blockquote>
+<p>类和对象的关系好比 模具 和 具体的用模具实际做出来的东西</p>
+</blockquote>
+<p>这一节里其实还提到了封装和继承的概念</p>
+<p>封装，以前的我理解为封装就是将类里的字段对外隐藏，而其他类想要改变这些字段只能调用我的公共方法，而不可以直接修改。在读第二遍的时候，我发现封装的思想主要是为了<strong>隐藏自己内部的实现</strong>（内部实现不重要，重要的是对外提供的方法），保证了独立性。</p>
+<p>继承就是通过扩展一些已有的类来构建新的类，而且新的类将会具有被扩展类的全部属性和方法，提高了<strong>重用性</strong>。</p>
+<h3 id="2使用预定义类">2.使用预定义类</h3>
+<h4 id="构造器">构造器</h4>
+<ul>
+<li>用来构造并初始化对象的一种特殊的方法</li>
+<li>构造器的名字应该与类名相同</li>
+</ul>
+<p>这里要明确一个东西，比方说，我定义了一个类叫做<code>Animal</code>，然后做了如下的操作</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Animal mAnimal<span style="color:#f92672">;</span>
+</code></pre></div><p>此时，<code>mAnimal</code>叫做<strong>对象变量</strong>，它是一个<strong>变量</strong>，<strong>不是一个对象</strong></p>
+<p>然后做如下操作</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">mAnimal <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Animal<span style="color:#f92672">();</span>
+</code></pre></div><p>此时<code>mAnimal</code><strong>引用了一个对象</strong></p>
+<p><strong>变量只能是引用对象</strong></p>
+<h4 id="更改器方法和访问器方法">更改器方法和访问器方法</h4>
+<ul>
+<li>更改器方法描述的是使用了方法之后，对象的状态会改变</li>
+<li>访问器方法描述的是使用了方法之后，对象的状态没有改变</li>
+</ul>
+<h3 id="3用户自定义类">3.用户自定义类</h3>
+<h4 id="隐式参数与显示参数">隐式参数与显示参数</h4>
+<p>一句话，隐式参数是调用方法的对象本身（在方法中可用<code>this</code>来表示），显示参数是方法名后面的数值</p>
+<h4 id="java中4种访问修饰符">Java中4种访问修饰符</h4>
+<ul>
+<li><code>private</code>：仅对本类可见</li>
+<li><code>public</code>：对外部完全可见</li>
+<li><code>protected</code>：对本包及所有子类可见</li>
+<li><code>默认（无需修饰符）</code>：对本包可见</li>
+</ul>
+<h3 id="4静态字段和静态方法">4.静态字段和静态方法</h3>
+<h4 id="静态字段">静态字段</h4>
+<p>静态字段即用<code>static</code>修饰的字段，静态字段是属于<strong>类</strong>，不属于单个任何对象的</p>
+<h4 id="静态方法">静态方法</h4>
+<p>用<code>static</code>修饰的方法，属于类，不属于对象，即在静态方法中不能使用<code>this</code>关键字（即，<strong>没有隐式参数</strong>），静态方法不能访问实例字段，但是可以访问静态字段</p>
+<h3 id="5方法参数">5.方法参数</h3>
+<p>跳过</p>
+<h3 id="6对象构造">6.对象构造</h3>
+<h4 id="重载">重载</h4>
+<ul>
+<li>方法签名：通过指定<strong>方法名</strong>和<strong>参数类型</strong>来描述一个方法</li>
+<li>重载即是出现了多个方法，<strong>有相同的名字，但是不同的参数</strong>，程序会在调用方法时根据参数类型来选择使用哪一个方法</li>
+</ul>
+<h4 id="调用构造器后的处理的优先级顺序">调用构造器后的处理的优先级顺序</h4>
+<ol>
+<li>如果第一行调用了另一个构造器（使用<code>this(...)</code>，另外，在构造器中调用另一个构造器这个语句也只能写在<strong>第一行</strong>），则执行另一个构造器</li>
+<li>否则则先后执行：
+<ol>
+<li>静态字段</li>
+<li>静态的初始化块</li>
+<li>所有实例字段初始化为默认值（0，false，null）</li>
+<li>初始化块</li>
+</ol>
+</li>
+<li>最后才是执行构造器主体代码</li>
+</ol>
+<blockquote>
+<p>以前总弄不清静态字段还有静态代码块的执行顺序，今天读到这里，可谓天清地明</p>
+</blockquote>
+<h3 id="7包">7.包</h3>
+<p>使用包来确保类名的<strong>唯一性</strong></p>
+<p>静态导入</p>
+<h2 id="第-5-章继承">第 5 章	继承</h2>
+<h3 id="1类子类超类">1.类，子类，超类</h3>
+<h4 id="this和super的含义"><code>this</code>和<code>super</code>的含义</h4>
+<ul>
+<li><code>this</code>
+<ul>
+<li>一是指隐式参数的调用</li>
+<li>二是指调用<strong>该类的其他构造器</strong></li>
+</ul>
+</li>
+<li><code>super</code>
+<ul>
+<li>一是调用超类的方法</li>
+<li>二 是调用超类的构造器</li>
+</ul>
+</li>
+</ul>
+<h4 id="多态">多态</h4>
+<p>一个对象变量可以指示多种实际类型的现象称为多态</p>
+<p>替换原则：程序中出现超类对象的任何地方都可以使用子类对象替换。例如：可将子类对象赋给超类变量</p>
+<p>重载解析：。。。</p>
+<p>动态绑定与静态绑定：</p>
+<ul>
+<li>动态绑定：在运行时能够自动地选择恰当的方法（调用的方法依赖隐式参数的实际类型）</li>
+<li>静态绑定：用<code>private</code>，<code>static</code>，<code>final</code>修饰的方法，编译器将准确的知道该调用哪个方法</li>
+</ul>
+<h4 id="强制类型转换">强制类型转换</h4>
+<p>唯一原因：要在暂时忽视对象的实际类型之后使用对象的全部功能。</p>
+<p>可用<code>instanceof</code>操作符来判断所属类型</p>
+<h4 id="抽象类">抽象类</h4>
+<p>更具有一般性的，只用作派生其他类的基类，而不是用来构造实例的类</p>
+<p>可以包含字段和具体方法</p>
+<p>不能被实例化</p>
+<h3 id="2object所有类的超类">2.<code>Object</code>：所有类的超类</h3>
+<p><code>Object</code>类是Java中所有类的氏族，每个类都自动的继承自<code>Object</code>类</p>
+<p><strong>在Java中，只有基本类型不是对象</strong>。</p>
+<h3 id="4对象包装器和自动装箱拆箱">4.对象包装器和自动装箱拆箱</h3>
+<h4 id="对象包装器">对象包装器</h4>
+<p>因为基本类型不是对象，但有时候又需要把基本类型转换成对象来使用，所以就出现了对象包装器这个概念。</p>
+<table>
+<thead>
+<tr>
+<th>基本类型</th>
+<th>对应的包装器类</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td><code>Integer</code></td>
+</tr>
+<tr>
+<td><code>long</code></td>
+<td><code>Long</code></td>
+</tr>
+<tr>
+<td><code>float</code></td>
+<td><code>Float</code></td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td><code>Double</code></td>
+</tr>
+<tr>
+<td><code>short</code></td>
+<td><code>Short</code></td>
+</tr>
+<tr>
+<td><code>byte</code></td>
+<td><code>Byte</code></td>
+</tr>
+<tr>
+<td><code>char</code></td>
+<td><code>Character</code></td>
+</tr>
+<tr>
+<td><code>boolean</code></td>
+<td><code>Boolean</code></td>
+</tr>
+</tbody>
+</table>
+<p>包装器类是<code>final</code>的</p>
+<h4 id="自动装箱与自动拆箱">自动装箱与自动拆箱</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">        List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> list <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
+        list<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>2<span style="color:#f92672">);</span>
+</code></pre></div><p>如上面给出的例子，<code>list</code>添加一个元素的时候，元素类型本该是<code>Integer</code>类型，可是<code>2</code>只是个<code>int</code>类型，不过没关系，<code>list.add(2)</code>将自动的变成<code>list.add(Integer.valueOf(2))</code>，这种变换称为<strong>自动装箱</strong></p>
+<p>同样的，如果想将一个<code>Integer</code>对象赋给一个<code>int</code>值时，将会<strong>自动拆箱</strong></p>
+<h2 id="第-6-章接口lambda表达式与内部类">第 6 章	接口，lambda表达式与内部类</h2>
+<h3 id="1接口">1.接口</h3>
+<p>在Java程序设计语言中，接口不是类，而是对希望符合这个接口类的一组<strong>需求</strong></p>
+<p>接口中的所有方法都自动是<code>public</code>方法（但是实现接口时，必须把方法声明为<code>public</code>）</p>
+<p>接口中的字段总是<code>public static final</code>的</p>
+<p>接口绝不会有实例字段</p>
+<p>接口同样不能被实例化，但是接口变量可以引用<strong>实现了这个接口</strong>的类对象</p>
+<p>一个类只能有一个超类，但可以实现<code>多个接口</code></p>
+<h3 id="2lambda表达式">2.<code>lambda</code>表达式</h3>
+<p>先跳过，看的云里雾里的@_@</p>
+<h3 id="3内部类">3.内部类</h3>
+<p>定义在另一个类中的类</p>
+<p>原因：</p>
+<ul>
+<li>内部类可以对同一包中的其他类隐藏</li>
+<li>内部类方法可以访问外部类的私有属性</li>
+</ul>
+<p><strong>常规内部类中可以有<code>static</code>字段（但也都必须是<code>final</code>），但是不能有<code>static</code>方法</strong></p>
+<h4 id="局部内部类">局部内部类</h4>
+<p>在一个方法中局部地定义这个类</p>
+<p>声明局部类时不能有访问说明符（<code>public</code>等）</p>
+<p>对外界完全隐藏</p>
+<h4 id="静态内部类">静态内部类</h4>
+<p>内部类不需要访问外围类对象，就应该使用静态内部类</p>
+<p><strong>静态内部类可以有静态字段和静态方法</strong></p>
+<p>在接口中声明的内部类自动是<code>static</code>和<code>public</code></p>
+<h2 id="第-7-章异常断言和日志">第 7 章	异常，断言和日志</h2>
+<p>派生于<code>Error</code>类或<code>RuntimeException</code>类的所有异常称为<strong>非检查型异常</strong></p>
+<p>所有其他异常称为<strong>检查型异常</strong></p>
+<p>这一章的剩余部分先略过，先不看</p>
+<h2 id="第-8-章泛型程序设计">第 8 章	泛型程序设计</h2>
+<p><strong>泛型方法</strong>：可以在普通类型中定义，也可在泛型类中定义</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ArrayAlg</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> T <span style="color:#a6e22e">getMiddle</span><span style="color:#f92672">(</span>T<span style="color:#f92672">...</span> a<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> a<span style="color:#f92672">[</span>a<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">/</span> 2<span style="color:#f92672">];</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><strong>限定类型</strong>： 限定<code>T</code>只能是限定类型的子类型</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">&lt;</span>T <span style="color:#66d9ef">extends</span> Comparable<span style="color:#f92672">&gt;</span>
+<span style="color:#f92672">&lt;</span>T <span style="color:#66d9ef">extends</span> Comparable <span style="color:#f92672">&amp;</span> Serializable<span style="color:#f92672">&gt;</span> <span style="color:#75715e">//甚至是多个限定
+</span></code></pre></div><p><strong>类型擦除</strong>：指的是定义了一个泛型类型，都会自动提供一个相应的原始类型。（原始类型用第一个限定来替换类型变量，如无限定，则替换为<code>Object</code>类型）</p>
+<p><strong>通配符（<code>?</code>）</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">&lt;?</span> <span style="color:#66d9ef">extends</span> Employee<span style="color:#f92672">&gt;</span> <span style="color:#75715e">//表示参数类型是Employee的子类
+</span><span style="color:#75715e"></span><span style="color:#f92672">&lt;?</span> <span style="color:#66d9ef">super</span> Employee<span style="color:#f92672">&gt;</span> <span style="color:#75715e">//表示参数类型是Employee的超类
+</span></code></pre></div><h2 id="第-9-章-集合">第 9 章 集合</h2>
+<table>
+<thead>
+<tr>
+<th>集合类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ArrayList</code></td>
+<td>可以<strong>动态</strong>增长和缩减空间的一个索引序列</td>
+</tr>
+<tr>
+<td><code>LinkedList</code></td>
+<td>链表，可在任何位置高效的插入和删除的一个有序序列</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="iterator与iterable"><code>Iterator</code>与<code>Iterable</code></h3>
+<p><code>Iterator</code>和<code>Iterable</code>都是接口</p>
+<ul>
+<li><code>Iterator</code>：迭代器，Java 1.2引入，用来代替<code> Enumeration</code>的，通过<code>hasNext</code>和<code>next</code>方法可以逐个访问集合中的每个元素</li>
+<li><code>Iterable</code>：Java 1.5 引入，为的是<strong>Implementing this interface allows an object to be the target of the &ldquo;for-each loop&rdquo; statement.</strong>，也就是<code>for each</code>循环可以处理任何实现了<code>Iterable</code>接口的对象</li>
+</ul>
+<h2 id="第-12-章并发">第 12 章	并发</h2>
+<p>多线程：一个程序可以同时运行多个线程</p>
+<p>多进程和多线程的区别：每个进程都拥有自己的一整套变量，而线程则<strong>共享数据</strong></p>
+<p><strong>新建线程的两种方式</strong></p>
+<p>一：新建类实现<code>Runnable</code>接口（完成<code>run</code>方法），然后赋给一个<code>Thread</code>对象</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyRun</span> <span style="color:#66d9ef">implements</span> Runnable <span style="color:#f92672">{</span>
+
+        <span style="color:#a6e22e">@Override</span>
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">run</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;MyRun&#34;</span><span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#75715e">// 使用
+</span><span style="color:#75715e"></span>        Runnable r <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> MyRun<span style="color:#f92672">();</span>
+        Thread thread1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Thread<span style="color:#f92672">(</span>r<span style="color:#f92672">);</span>
+        thread1<span style="color:#f92672">.</span><span style="color:#a6e22e">start</span><span style="color:#f92672">();</span>
+</code></pre></div><p>二：建立一个<code>Thread</code>的子类</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyThread</span> <span style="color:#66d9ef">extends</span> Thread <span style="color:#f92672">{</span>
+
+        <span style="color:#a6e22e">@Override</span>
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">run</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">super</span><span style="color:#f92672">.</span><span style="color:#a6e22e">run</span><span style="color:#f92672">();</span>
+            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;MyThread&#34;</span><span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#75715e">// 使用
+</span><span style="color:#75715e"></span>        Thread thread2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> MyThread<span style="color:#f92672">();</span>
+        thread2<span style="color:#f92672">.</span><span style="color:#a6e22e">start</span><span style="color:#f92672">();</span>
+</code></pre></div><h3 id="线程的状态">线程的状态</h3>
+<ul>
+<li><code>New</code>：新建</li>
+<li><code>Runnable</code>：可运行（可能正在运行也可能没有运行）</li>
+<li><code>Blocked</code>：阻塞</li>
+<li><code>Waiting</code>：等待</li>
+<li><code>Timed waiting</code>：计时等待</li>
+<li><code>Terminated</code>：终止</li>
+</ul>
+<p><code>synchronized</code>关键字</p>
+<p>从Java1.0版开始，Java中的每个对象都有一个内部锁。如果一个方法声明时有 synchronized 关键字，那么，要调用这个方法，线程必须获得内部对象锁</p>
+<p><code>volatile</code>修饰符：用来修饰字段，可以让多线程安全地读取一个字段</p>
+
+			</div>
+			
+			<div class="site-tags">
+				
+				<div class="site-tags-item"><a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0">读书笔记</a></div>
+				
+				<div class="site-tags-item"><a href="/tags/java">Java</a></div>
+				
+				<div class="site-tags-item"><a href="/tags/updating">updating</a></div>
+				
+
+			</div>
+			
+		</div>
+	</div>
+
+	<div class="article_card_comment">
+		<h2>评论</h2>
+		<div class="giscus"></div>
+	</div>
+
+	<script src="https://giscus.app/client.js"
+			data-repo="FuShaoLei/FuShaoLei.github.io"
+			data-repo-id="MDEwOlJlcG9zaXRvcnkzMjc4MDM5NTY="
+			data-category="General"
+			data-category-id="DIC_kwDOE4nkNM4CWGIj"
+			data-mapping="url"
+			data-strict="0"
+			data-reactions-enabled="1"
+			data-emit-metadata="0"
+			data-input-position="bottom"
+			data-theme="dark_dimmed"
+			data-lang="zh-CN"
+			crossorigin="anonymous"
+			async>
+	</script>
+
+</article>
+
+			</div>
+		</div>
+
+
+
+
+	</div>
+
+	<script type="text/javascript" src="/js/script.js"></script>
+</body>
+
+</html>
