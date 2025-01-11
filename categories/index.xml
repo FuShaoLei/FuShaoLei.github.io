@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on 琼西往事</title>
+    <link>https://fushaolei.github.io/categories/</link>
+    <description>Recent content in Categories on 琼西往事</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 18 Oct 2020 23:13:16 +0000</lastBuildDate><atom:link href="https://fushaolei.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android</title>
+      <link>https://fushaolei.github.io/categories/android/</link>
+      <pubDate>Sun, 18 Oct 2020 23:13:16 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/categories/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://fushaolei.github.io/categories/linux/</link>
+      <pubDate>Thu, 09 Jul 2020 16:53:45 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hexo</title>
+      <link>https://fushaolei.github.io/categories/hexo/</link>
+      <pubDate>Sun, 31 May 2020 11:18:27 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/categories/hexo/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
