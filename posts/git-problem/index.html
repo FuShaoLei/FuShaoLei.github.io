@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>工作中遇到的Git问题 &ndash; 琼西往事</title>
+	
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;700;900&family=Roboto+Mono&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<script src="/js/swup.js"></script>
+	<script src="/js/swup.init.js"></script>
+
+	<script data-swup-ignore-script>
+		const swup = new Swup({
+		    containers: ['#swup','.left_container'],
+			plugins: [new SwupPreloadPlugin({ preloadVisibleLinks: true })],
+			animateHistoryBrowsing: true
+		});
+		document.readyState === "complete" ? init() : document.addEventListener("DOMContentLoaded", ()=>{
+			init()
+			triggerSwupPageLoad(window.location.href)
+		});
+		swup.hooks.on('page:view', (visit) => {
+			init()
+		});
+	</script>
+
+</head>
+
+<body>
+
+	<div class="main_container">
+
+		<div class="inner_container">
+			<div class="left_container">
+				<div class="left_card_container">
+
+
+
+					<div class="card_container">
+						<div class="site-tile-container">
+							<a href="https://fushaolei.github.io">
+								<span class="site-title-import-text">琼西</span><span>往事</span>
+							</a>
+						</div>
+						<div class="special-line site-bottom-line"></div>
+
+						<div class="card_intro">导航</div>
+						<div class="card-nav">
+							
+							
+							<a href="/" class="nav_link">
+								<div class="card-nav-item universal-transition">
+									博客
+								</div>
+							</a>
+							
+							<a href="/about/" class="nav_link">
+								<div class="card-nav-item universal-transition">
+									关于
+								</div>
+							</a>
+							
+							<a href="/link/" class="nav_link">
+								<div class="card-nav-item universal-transition">
+									友链
+								</div>
+							</a>
+							
+							
+							<a href="https://travellings.link/" target="_blank">
+								<div class="card-nav-item universal-transition">
+									开往
+								</div>
+							</a>
+						</div>
+
+						<div class="card_intro" style="margin-top: 15px">短评</div>
+
+						<div class="card-nav">
+							
+							
+							<a href="/game/" class="nav_link">
+								<div class="card-nav-item universal-transition">
+									游戏
+								</div>
+							</a>
+							
+							<a href="/videos/" class="nav_link">
+								<div class="card-nav-item universal-transition">
+									影视
+								</div>
+							</a>
+							
+							
+						</div>
+
+					</div>
+
+					
+
+
+					
+
+
+
+
+					
+
+
+					<div class="card_container content-toc transition-main">
+						<div class="card_intro">目录</div>
+						<nav id="TableOfContents">
+  <ul>
+    <li><a href="#场景1">场景1</a></li>
+    <li><a href="#场景2">场景2</a></li>
+  </ul>
+</nav>
+
+					</div>
+
+					
+
+
+					
+
+
+					
+
+					<a href="/posts/what-is-the-git-revert/">
+						<div class="card_container related-nav transition-main">
+							<div class="card_intro">上一篇</div>
+							<span class="related-nav-title universal-transition">git revert是啥</span>
+						</div>
+					</a>
+
+					
+
+					
+
+					<a href="/posts/new-theme-2304/">
+						<div class="card_container related-nav transition-main">
+							<div class="card_intro">下一篇</div>
+							<span class="related-nav-title universal-transition">又给博客写了个新主题</span>
+							
+						</div>
+					</a>
+
+					
+
+                    
+                    
+
+                    
+
+				</div>
+			</div>
+			<div id="swup" class="right_container transition-main">
+					
+<article class="article-real-container">
+
+
+	<div class="article_card_container">
+
+		<div class="article_card_inner_container">
+
+			
+
+			<div class="article-normal-info">
+				<div class="article-title single-title text-shadow">工作中遇到的Git问题</div>
+				<time class="card_intro single-date" datetime=" 2023-06-18T01:01:56">2023年06月18日</time>
+
+			</div>
+
+			<div class="content-container">
+				<h2 id="场景1">场景1</h2>
+<blockquote>
+<p>问题：有一个仓库feature，需要用到另外一个仓库base作为基础然后去定制开发，但是又想保留住base的commit信息</p>
+</blockquote>
+<p>首先要把base给clone下来，此时输入<code>git remote -v</code>，会出现：</p>
+<pre><code>origin  git@github.com:FuShaoLei/base.git (fetch)
+origin  git@github.com:FuShaoLei/base.git (push)
+</code></pre><p>origin是这个远程仓库的别名</p>
+<p>后面带fetch指的就是<code>git fetch</code>时的地址，那么<code>git fetch</code>和<code>git pull</code>有什么区别呢</p>
+<ul>
+<li><code>git fetch</code> 命令用于从<strong>远程仓库获取最新的提交和分支信息</strong>，但<strong>不会自动合并或修改</strong>你当前的工作区。它会将远程仓库的最新状态下载到你本地，使你能够查看和比较远程分支与本地分支之间的差异（可以使用<code>git diff</code>命令）。</li>
+<li><code>git pull</code>命令，实际上是<code>git fetch</code>和<code>git merge</code>（默认的合并策略是递归）的结合</li>
+</ul>
+<p>后面带push指的就是<code>git push</code>时的地址</p>
+<p>好，现在言归正传</p>
+<p>首先删除本地的origin分支（我总感觉不删除也行）</p>
+<pre><code>git remote remove origin
+</code></pre><p>然后添加远端的仓库</p>
+<pre><code>git remote add origin git@github.com:FuShaoLei/feature.git
+</code></pre><p>这时候输入<code>git remote -v</code>就可以看到和之前不一样</p>
+<p>然后就可以push 上去了</p>
+<pre><code>git push --set-upstream origin master
+</code></pre><h2 id="场景2">场景2</h2>
+<blockquote>
+<p>问题：有一个仓库feature，需要用到另外一个仓库base作为基础然后去定制开发，我通过之前的方法做到，使得feature和base有着相同的commit信息，但随着时间的推移，我的feature做了一些定制开发，我的base也修复了一些bug什么，这时候，我想将base上的修改，移动到feature仓库来，该如何做呢</p>
+</blockquote>
+<p>首先添加远端仓库base</p>
+<pre><code>git remote add base git@github.com:FuShaoLei/base.git
+</code></pre><p>这时输入<code>git remote -v</code>就可以看到如下指令</p>
+<pre><code>base    git@github.com:FuShaoLei/base.git (fetch)
+base    git@github.com:FuShaoLei/base.git (push)
+origin  git@github.com:FuShaoLei/feature.git (fetch)
+origin  git@github.com:FuShaoLei/feature.git (push)
+</code></pre><p>然后拉去base的最新代码：</p>
+<pre><code>git fetch base
+</code></pre><p>合并进去</p>
+<pre><code>git merge base/master
+</code></pre><p>发生冲突后，使用我们的修改：</p>
+<pre><code>git checkout --ours &lt;filename&gt; // 指定某个文件
+git checkout --ours . // 或者全部文件
+</code></pre><p>或者使用base/master的修改</p>
+<pre><code>git checkout --theirs &lt;filename&gt; // 指定某个文件
+git checkout --theirs . // 或者全部文件
+</code></pre><p>然后continue</p>
+<pre><code>git merge --continue
+</code></pre><p>然后push就好了</p>
+
+			</div>
+			
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+			</div>
+		</div>
+
+
+
+
+	</div>
+
+	<script type="text/javascript" src="/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Spring笔记 &ndash; 琼西往事</title>
+	
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;700;900&family=Roboto+Mono&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<script src="/js/swup.js"></script>
+	<script src="/js/swup.init.js"></script>
+
+	<script data-swup-ignore-script>
+		const swup = new Swup({
+		    containers: ['#swup','.left_container'],
+			plugins: [new SwupPreloadPlugin({ preloadVisibleLinks: true })],
+			animateHistoryBrowsing: true
+		});
+		document.readyState === "complete" ? init() : document.addEventListener("DOMContentLoaded", ()=>{
+			init()
+			triggerSwupPageLoad(window.location.href)
+		});
+		swup.hooks.on('page:view', (visit) => {
+			init()
+		});
+	</script>
+
+</head>
+
+<body>
+
+	<div class="main_container">
+
+		<div class="inner_container">
+			<div class="left_container">
+				<div class="left_card_container">
+
+
+
+					<div class="card_container">
+						<div class="site-tile-container">
+							<a href="https://fushaolei.github.io">
+								<span class="site-title-import-text">琼西</span><span>往事</span>
+							</a>
+						</div>
+						<div class="special-line site-bottom-line"></div>
+
+						<div class="card_intro">导航</div>
+						<div class="card-nav">
+							
+							
+							<a href="/" class="nav_link">
+								<div class="card-nav-item universal-transition">
+									博客
+								</div>
+							</a>
+							
+							<a href="/about/" class="nav_link">
+								<div class="card-nav-item universal-transition">
+									关于
+								</div>
+							</a>
+							
+							<a href="/link/" class="nav_link">
+								<div class="card-nav-item universal-transition">
+									友链
+								</div>
+							</a>
+							
+							
+							<a href="https://travellings.link/" target="_blank">
+								<div class="card-nav-item universal-transition">
+									开往
+								</div>
+							</a>
+						</div>
+
+						<div class="card_intro" style="margin-top: 15px">短评</div>
+
+						<div class="card-nav">
+							
+							
+							<a href="/game/" class="nav_link">
+								<div class="card-nav-item universal-transition">
+									游戏
+								</div>
+							</a>
+							
+							<a href="/videos/" class="nav_link">
+								<div class="card-nav-item universal-transition">
+									影视
+								</div>
+							</a>
+							
+							
+						</div>
+
+					</div>
+
+					
+
+
+					
+
+
+
+
+					
+
+
+					<div class="card_container content-toc transition-main">
+						<div class="card_intro">目录</div>
+						<nav id="TableOfContents">
+  <ul>
+    <li><a href="#第一个程序">第一个程序</a></li>
+    <li><a href="#3种配置元数据的方法">3种配置元数据的方法</a></li>
+  </ul>
+</nav>
+
+					</div>
+
+					
+
+
+					
+
+
+					
+
+					<a href="/posts/github-action-hexo/">
+						<div class="card_container related-nav transition-main">
+							<div class="card_intro">上一篇</div>
+							<span class="related-nav-title universal-transition">GitHub Action &#43; Hexo 实现在线写作</span>
+						</div>
+					</a>
+
+					
+
+					
+
+					<a href="/posts/tech-frame-mybatis-note/">
+						<div class="card_container related-nav transition-main">
+							<div class="card_intro">下一篇</div>
+							<span class="related-nav-title universal-transition">MyBatis笔记</span>
+							
+						</div>
+					</a>
+
+					
+
+                    
+                    
+
+                    
+
+				</div>
+			</div>
+			<div id="swup" class="right_container transition-main">
+					
+<article class="article-real-container">
+
+
+	<div class="article_card_container">
+
+		<div class="article_card_inner_container">
+
+			
+
+			<div class="article-normal-info">
+				<div class="article-title single-title text-shadow">Spring笔记</div>
+				<time class="card_intro single-date" datetime=" 2020-08-17T09:27:43">2020年08月17日</time>
+
+			</div>
+
+			<div class="content-container">
+				<blockquote>
+<p>很早之前就听说过这个框架了，但是今年二月份才开始学╰(￣ω￣ｏ)，未必是有些晚了，现在又重新学期，有了之前学idea的经验，应该也不是什么问题</p>
+<p>贴一个文档：https://docs.spring.io/spring/docs/current/spring-framework-reference/index.html</p>
+</blockquote>
+<h2 id="第一个程序">第一个程序</h2>
+<h3 id="ioc和di的概念">IoC和DI的概念</h3>
+<ul>
+<li>IoC：控制反转（设计原则）<strong>由容器主动将资源推送到它所管理的组件里，组件要有接受资源的方式</strong></li>
+<li>DI：依赖注入（IoC的典型实现）</li>
+</ul>
+<blockquote>
+<p>好了，光知道这个思想其实没什么用，下面开始编码</p>
+<p>步骤</p>
+<ol>
+<li>创建maven项目</li>
+<li>在pom.xml中添加相应的依赖</li>
+<li>👴忘了</li>
+</ol>
+</blockquote>
+<h3 id="pomxml里的依赖">pom.xml里的依赖</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">        <span style="color:#75715e">&lt;!--Spring核心基础依赖--&gt;</span>
+        <span style="color:#f92672">&lt;dependency&gt;</span>
+            <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework<span style="color:#f92672">&lt;/groupId&gt;</span>
+            <span style="color:#f92672">&lt;artifactId&gt;</span>spring-core<span style="color:#f92672">&lt;/artifactId&gt;</span>
+            <span style="color:#f92672">&lt;version&gt;</span>5.0.2.RELEASE<span style="color:#f92672">&lt;/version&gt;</span>
+        <span style="color:#f92672">&lt;/dependency&gt;</span>
+        <span style="color:#f92672">&lt;dependency&gt;</span>
+            <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework<span style="color:#f92672">&lt;/groupId&gt;</span>
+            <span style="color:#f92672">&lt;artifactId&gt;</span>spring-context<span style="color:#f92672">&lt;/artifactId&gt;</span>
+            <span style="color:#f92672">&lt;version&gt;</span>5.0.2.RELEASE<span style="color:#f92672">&lt;/version&gt;</span>
+        <span style="color:#f92672">&lt;/dependency&gt;</span>
+        <span style="color:#f92672">&lt;dependency&gt;</span>
+            <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework<span style="color:#f92672">&lt;/groupId&gt;</span>
+            <span style="color:#f92672">&lt;artifactId&gt;</span>spring-beans<span style="color:#f92672">&lt;/artifactId&gt;</span>
+            <span style="color:#f92672">&lt;version&gt;</span>5.0.2.RELEASE<span style="color:#f92672">&lt;/version&gt;</span>
+        <span style="color:#f92672">&lt;/dependency&gt;</span>
+        <span style="color:#f92672">&lt;dependency&gt;</span>
+            <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework<span style="color:#f92672">&lt;/groupId&gt;</span>
+            <span style="color:#f92672">&lt;artifactId&gt;</span>spring-expression<span style="color:#f92672">&lt;/artifactId&gt;</span>
+            <span style="color:#f92672">&lt;version&gt;</span>5.0.2.RELEASE<span style="color:#f92672">&lt;/version&gt;</span>
+        <span style="color:#f92672">&lt;/dependency&gt;</span>
+        <span style="color:#75715e">&lt;!--日志相关--&gt;</span>
+        <span style="color:#f92672">&lt;dependency&gt;</span>
+            <span style="color:#f92672">&lt;groupId&gt;</span>commons-logging<span style="color:#f92672">&lt;/groupId&gt;</span>
+            <span style="color:#f92672">&lt;artifactId&gt;</span>commons-logging<span style="color:#f92672">&lt;/artifactId&gt;</span>
+            <span style="color:#f92672">&lt;version&gt;</span>1.2<span style="color:#f92672">&lt;/version&gt;</span>
+        <span style="color:#f92672">&lt;/dependency&gt;</span>
+        <span style="color:#f92672">&lt;dependency&gt;</span>
+            <span style="color:#f92672">&lt;groupId&gt;</span>log4j<span style="color:#f92672">&lt;/groupId&gt;</span>
+            <span style="color:#f92672">&lt;artifactId&gt;</span>log4j<span style="color:#f92672">&lt;/artifactId&gt;</span>
+            <span style="color:#f92672">&lt;version&gt;</span>1.2.17<span style="color:#f92672">&lt;/version&gt;</span>
+        <span style="color:#f92672">&lt;/dependency&gt;</span>
+        <span style="color:#f92672">&lt;dependency&gt;</span>
+            <span style="color:#f92672">&lt;groupId&gt;</span>org.testng<span style="color:#f92672">&lt;/groupId&gt;</span>
+            <span style="color:#f92672">&lt;artifactId&gt;</span>testng<span style="color:#f92672">&lt;/artifactId&gt;</span>
+            <span style="color:#f92672">&lt;version&gt;</span>RELEASE<span style="color:#f92672">&lt;/version&gt;</span>
+            <span style="color:#f92672">&lt;scope&gt;</span>compile<span style="color:#f92672">&lt;/scope&gt;</span>
+        <span style="color:#f92672">&lt;/dependency&gt;</span>
+
+</code></pre></div><h2 id="3种配置元数据的方法">3种配置元数据的方法</h2>
+<h3 id="基于xml的配置">基于Xml的配置</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;beans</span> <span style="color:#a6e22e">xmlns=</span><span style="color:#e6db74">&#34;http://www.springframework.org/schema/beans&#34;</span>
+	<span style="color:#a6e22e">xmlns:xsi=</span><span style="color:#e6db74">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span> <span style="color:#a6e22e">xmlns:context=</span><span style="color:#e6db74">&#34;http://www.springframework.org/schema/context&#34;</span>
+	<span style="color:#a6e22e">xsi:schemaLocation=</span><span style="color:#e6db74">&#34;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+</span><span style="color:#e6db74">		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd&#34;</span><span style="color:#f92672">&gt;</span>
+	<span style="color:#75715e">&lt;!-- id写什么都行 只要保证唯一就行，在Spring容器中用id来调用--&gt;</span>
+	<span style="color:#75715e">&lt;!--  class要写完整路径,Spring运行时通过class这个路径来实例化对象放入Spring容器中 --&gt;</span>
+	<span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;InteCpu&#34;</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;com.pc.InteCpu&#34;</span><span style="color:#f92672">&gt;&lt;/bean&gt;</span>
+	<span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;Computer&#34;</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;com.pc.Computer&#34;</span><span style="color:#f92672">&gt;</span>
+	<span style="color:#75715e">&lt;!-- name要写Computer中的类名名称 --&gt;</span>
+	<span style="color:#75715e">&lt;!-- ref依赖注入，ref里写id --&gt;</span>
+	<span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;cpu&#34;</span> <span style="color:#a6e22e">ref=</span><span style="color:#e6db74">&#34;InteCpu&#34;</span><span style="color:#f92672">&gt;&lt;/property&gt;</span>
+	<span style="color:#f92672">&lt;/bean&gt;</span>
+<span style="color:#f92672">&lt;/beans&gt;</span>
+</code></pre></div><p>然后引用：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.pc<span style="color:#f92672">;</span>
+
+<span style="color:#f92672">import</span> org.springframework.context.ApplicationContext<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.context.support.ClassPathXmlApplicationContext<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Test</span> <span style="color:#f92672">{</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#75715e">//接口
+</span><span style="color:#75715e"></span>		ApplicationContext ctx<span style="color:#f92672">=</span><span style="color:#66d9ef">new</span> ClassPathXmlApplicationContext<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;applicationContext.xml&#34;</span><span style="color:#f92672">);</span>
+		Computer pc<span style="color:#f92672">=(</span>Computer<span style="color:#f92672">)</span>ctx<span style="color:#f92672">.</span><span style="color:#a6e22e">getBean</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Computer&#34;</span><span style="color:#f92672">);</span><span style="color:#75715e">//从Spring容器内调用id为Computer的类（？不知是否改用这个词）
+</span><span style="color:#75715e"></span>		pc<span style="color:#f92672">.</span><span style="color:#a6e22e">play</span><span style="color:#f92672">();</span><span style="color:#75715e">//运行
+</span><span style="color:#75715e"></span>	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h3 id="基于注解的配置">基于注解的配置</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;beans</span> <span style="color:#a6e22e">xmlns=</span><span style="color:#e6db74">&#34;http://www.springframework.org/schema/beans&#34;</span>
+	<span style="color:#a6e22e">xmlns:xsi=</span><span style="color:#e6db74">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span> <span style="color:#a6e22e">xmlns:context=</span><span style="color:#e6db74">&#34;http://www.springframework.org/schema/context&#34;</span>
+	<span style="color:#a6e22e">xsi:schemaLocation=</span><span style="color:#e6db74">&#34;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+</span><span style="color:#e6db74">		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd&#34;</span><span style="color:#f92672">&gt;</span>
+	<span style="color:#75715e">&lt;!-- 用注解的方式 --&gt;</span>
+	<span style="color:#f92672">&lt;context:annotation-config/&gt;</span>
+	<span style="color:#75715e">&lt;!-- 说明包在哪，然后就会帮你扫描com.pc下所有的类
+</span><span style="color:#75715e">	当扫描到@Component的时候，则会帮你把这个&#34;组件&#34;实例化出来放入
+</span><span style="color:#75715e">	Spring容器中（自动分配的id首字母是小写的），当扫描到@Resource的时候，说明要依赖注入，Spring会自动帮你引入依赖--&gt;</span>
+	<span style="color:#f92672">&lt;context:component-scan</span> <span style="color:#a6e22e">base-package=</span><span style="color:#e6db74">&#34;com.pc&#34;</span><span style="color:#f92672">&gt;</span>
+	<span style="color:#f92672">&lt;/context:component-scan&gt;</span>
+<span style="color:#f92672">&lt;/beans&gt;</span>
+</code></pre></div><p>比如：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.pc<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> javax.annotation.Resource<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.stereotype.Component<span style="color:#f92672">;</span>
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 配置元数据第二种方法：基于注解的配置
+</span><span style="color:#75715e"> */</span>
+<span style="color:#a6e22e">@Component</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Computer&#34;</span><span style="color:#f92672">)</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Computer</span> <span style="color:#f92672">{</span>
+	<span style="color:#75715e">//加入这个标签，说明
+</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">@Resource</span>
+	<span style="color:#66d9ef">private</span> Cpu cpu<span style="color:#f92672">;</span>
+
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setCpu</span><span style="color:#f92672">(</span>Cpu cpu<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">cpu</span> <span style="color:#f92672">=</span> cpu<span style="color:#f92672">;</span>
+	<span style="color:#f92672">}</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">play</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">cpu</span><span style="color:#f92672">.</span><span style="color:#a6e22e">run</span><span style="color:#f92672">();</span>
+		System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;computer is playing by annotation&#34;</span><span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>引用的方法和<code>基于Xml的配置</code>的差不多</p>
+<h3 id="基于java的配置">基于Java的配置</h3>
+<p>此方法没有xml文件，纯java引用</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.pc<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.context.ApplicationContext<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.context.annotation.AnnotationConfigApplicationContext<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.context.annotation.ComponentScan<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.context.annotation.Configuration<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.context.support.ClassPathXmlApplicationContext<span style="color:#f92672">;</span>
+
+<span style="color:#a6e22e">@Configuration</span>
+<span style="color:#a6e22e">@ComponentScan</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;com.pc&#34;</span><span style="color:#f92672">)</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Test</span> <span style="color:#f92672">{</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		<span style="color:#75715e">//接口
+</span><span style="color:#75715e"></span>		ApplicationContext ctx<span style="color:#f92672">=</span><span style="color:#66d9ef">new</span> AnnotationConfigApplicationContext<span style="color:#f92672">(</span>Test<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">);</span>
+		Computer pc<span style="color:#f92672">=(</span>Computer<span style="color:#f92672">)</span>ctx<span style="color:#f92672">.</span><span style="color:#a6e22e">getBean</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Computer&#34;</span><span style="color:#f92672">);</span>
+		pc<span style="color:#f92672">.</span><span style="color:#a6e22e">play</span><span style="color:#f92672">();</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>需要添加注解，此方法可以理解为另一种形式的<code>基于注解的配置</code></p>
+<blockquote>
+<p>当扫描到@Component的时候，则会帮你把这个&quot;组件&quot;实例化出来放入
+Spring容器中（自动分配的id首字母是小写的），当扫描到@Resource的时候，说明要依赖注入，Spring会自动帮你引入依赖</p>
+</blockquote>
+<blockquote>
+<p>感觉，还是基于xml的配置更好些，修改方便，然后，也方便复用（雾(+_+)?</p>
+</blockquote>
+
+			</div>
+			
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+			</div>
+		</div>
+
+
+
+
+	</div>
+
+	<script type="text/javascript" src="/js/script.js"></script>
+</body>
+
+</html>

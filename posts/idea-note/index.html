@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>IDEA安装 &ndash; 琼西往事</title>
+	
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;700;900&family=Roboto+Mono&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<script src="/js/swup.js"></script>
+	<script src="/js/swup.init.js"></script>
+
+	<script data-swup-ignore-script>
+		const swup = new Swup({
+		    containers: ['#swup','.left_container'],
+			plugins: [new SwupPreloadPlugin({ preloadVisibleLinks: true })],
+			animateHistoryBrowsing: true
+		});
+		document.readyState === "complete" ? init() : document.addEventListener("DOMContentLoaded", ()=>{
+			init()
+			triggerSwupPageLoad(window.location.href)
+		});
+		swup.hooks.on('page:view', (visit) => {
+			init()
+		});
+	</script>
+
+</head>
+
+<body>
+
+	<div class="main_container">
+
+		<div class="inner_container">
+			<div class="left_container">
+				<div class="left_card_container">
+
+
+
+					<div class="card_container">
+						<div class="site-tile-container">
+							<a href="https://fushaolei.github.io">
+								<span class="site-title-import-text">琼西</span><span>往事</span>
+							</a>
+						</div>
+						<div class="special-line site-bottom-line"></div>
+
+						<div class="card_intro">导航</div>
+						<div class="card-nav">
+							
+							
+							<a href="/" class="nav_link">
+								<div class="card-nav-item universal-transition">
+									博客
+								</div>
+							</a>
+							
+							<a href="/about/" class="nav_link">
+								<div class="card-nav-item universal-transition">
+									关于
+								</div>
+							</a>
+							
+							<a href="/link/" class="nav_link">
+								<div class="card-nav-item universal-transition">
+									友链
+								</div>
+							</a>
+							
+							
+							<a href="https://travellings.link/" target="_blank">
+								<div class="card-nav-item universal-transition">
+									开往
+								</div>
+							</a>
+						</div>
+
+						<div class="card_intro" style="margin-top: 15px">短评</div>
+
+						<div class="card-nav">
+							
+							
+							<a href="/game/" class="nav_link">
+								<div class="card-nav-item universal-transition">
+									游戏
+								</div>
+							</a>
+							
+							<a href="/videos/" class="nav_link">
+								<div class="card-nav-item universal-transition">
+									影视
+								</div>
+							</a>
+							
+							
+						</div>
+
+					</div>
+
+					
+
+
+					
+
+
+
+
+					
+
+
+					<div class="card_container content-toc transition-main">
+						<div class="card_intro">目录</div>
+						<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-下载和安装">1. 下载和安装</a></li>
+    <li><a href="#2-配置maven">2. 配置maven</a></li>
+    <li><a href="#3-idea配置maven">3. Idea配置maven</a></li>
+  </ul>
+</nav>
+
+					</div>
+
+					
+
+
+					
+
+
+					
+
+					<a href="/posts/tech-android-listview-note/">
+						<div class="card_container related-nav transition-main">
+							<div class="card_intro">上一篇</div>
+							<span class="related-nav-title universal-transition">Listview学习</span>
+						</div>
+					</a>
+
+					
+
+					
+
+					<a href="/posts/record-idea-note/">
+						<div class="card_container related-nav transition-main">
+							<div class="card_intro">下一篇</div>
+							<span class="related-nav-title universal-transition">IDEA食用小记</span>
+							
+						</div>
+					</a>
+
+					
+
+                    
+                    
+
+                    
+
+				</div>
+			</div>
+			<div id="swup" class="right_container transition-main">
+					
+<article class="article-real-container">
+
+
+	<div class="article_card_container">
+
+		<div class="article_card_inner_container">
+
+			
+
+			<div class="article-normal-info">
+				<div class="article-title single-title text-shadow">IDEA安装</div>
+				<time class="card_intro single-date" datetime=" 2020-06-14T21:36:08">2020年06月14日</time>
+
+			</div>
+
+			<div class="content-container">
+				<blockquote>
+<p>哭唧唧，用惯了eclispe的我用起idea就像一个傻子，现在记录一下，以免忘记
+所用版本：idea 2020.1</p>
+</blockquote>
+<h2 id="1-下载和安装">1. 下载和安装</h2>
+<p>去官网下载：https://www.jetbrains.com/idea/download/
+安装随意，<del>破解的话 看这篇<a href="https://nymane.github.io/post/2020-04-14-IntelliJ_IDEA_2020.1%E6%B3%A8%E5%86%8C%E7%A0%81%EF%BC%88%E4%BA%B2%E6%B5%8B%E6%9C%89%E6%95%88%EF%BC%8C%E5%8F%AF%E6%BF%80%E6%B4%BB%E8%87%B3_2089_%E5%B9%B4">文章</a></del>，有开源项目的建议可以试着申请下免费的一年使用权，链接指路：https://www.jetbrains.com/zh-cn/community/opensource/</p>
+<h2 id="2-配置maven">2. 配置maven</h2>
+<blockquote>
+<p>maven的作用就是帮助我们下载需要的jar包，不需要在自己去网上找来找去了</p>
+</blockquote>
+<p>点击这个链接：https://maven.apache.org/，去这个页面:
+<div class="render-img-wrapper">
+    <div class="render-img-inner">
+        <img src="https://cdn.jsdelivr.net/gh/fushaolei/img/20200614230817.png" alt="">
+    </div>
+    <div class="info"></div>
+</div>
+
+</p>
+<p>然后解压，记住你解压后的位置，比如我直接解压到E盘
+然后是配置环境，电脑&gt;属性&gt;高级系统设置&gt;环境变量，在系统变量中添加一个变量为<code>M2_HOME</code>，值为你的maven存放路径，然后到path里添加一个maven的bin路径，懒了不贴图了 
+在cmd中输入<code>mvn -v</code>出现maven的版本号 ，就说明配置成功啦！</p>
+<p>这时还没完：
+进入<code>E:\apache-maven-3.6.3\conf</code>路径下。打开setting.xml
+在mirrors中添加一个镜像</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">     <span style="color:#f92672">&lt;mirror&gt;</span>
+            <span style="color:#f92672">&lt;id&gt;</span>nexus-aliyun<span style="color:#f92672">&lt;/id&gt;</span>
+            <span style="color:#f92672">&lt;mirrorOf&gt;</span>central<span style="color:#f92672">&lt;/mirrorOf&gt;</span>
+            <span style="color:#f92672">&lt;name&gt;</span>Nexus aliyun<span style="color:#f92672">&lt;/name&gt;</span>
+            <span style="color:#f92672">&lt;url&gt;</span>http://maven.aliyun.com/nexus/content/groups/public/<span style="color:#f92672">&lt;/url&gt;</span>
+    <span style="color:#f92672">&lt;/mirror&gt;</span>
+</code></pre></div><p>阿里云镜像，到时候下载jar包时会更快</p>
+<blockquote>
+<p>下载的路径还没修改，将在后续补上</p>
+</blockquote>
+<h2 id="3-idea配置maven">3. Idea配置maven</h2>
+<p>先随意创建一个项目。。。进去后
+<div class="render-img-wrapper">
+    <div class="render-img-inner">
+        <img src="https://cdn.jsdelivr.net/gh/fushaolei/img/20200614233119.png" alt="">
+    </div>
+    <div class="info"></div>
+</div>
+
+
+<div class="render-img-wrapper">
+    <div class="render-img-inner">
+        <img src="https://cdn.jsdelivr.net/gh/fushaolei/img/20200614233133.png" alt="">
+    </div>
+    <div class="info"></div>
+</div>
+
+
+<div class="render-img-wrapper">
+    <div class="render-img-inner">
+        <img src="https://cdn.jsdelivr.net/gh/fushaolei/img/20200614233140.png" alt="">
+    </div>
+    <div class="info"></div>
+</div>
+
+</p>
+<pre><code>-Xms1024m -Xmx2048m
+</code></pre><p>好了 这样后，每创建一个新的项目，都会自动给你配置maven的路径，然后下载jar包的速度也会相应的加快，这给我们的开发带来了极大的便利</p>
+
+			</div>
+			
+			<div class="site-tags">
+				
+				<div class="site-tags-item"><a href="/tags/ide">IDE</a></div>
+				
+
+			</div>
+			
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+			</div>
+		</div>
+
+
+
+
+	</div>
+
+	<script type="text/javascript" src="/js/script.js"></script>
+</body>
+
+</html>

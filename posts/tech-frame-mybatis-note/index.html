@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>MyBatis笔记 &ndash; 琼西往事</title>
+	
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;700;900&family=Roboto+Mono&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<script src="/js/swup.js"></script>
+	<script src="/js/swup.init.js"></script>
+
+	<script data-swup-ignore-script>
+		const swup = new Swup({
+		    containers: ['#swup','.left_container'],
+			plugins: [new SwupPreloadPlugin({ preloadVisibleLinks: true })],
+			animateHistoryBrowsing: true
+		});
+		document.readyState === "complete" ? init() : document.addEventListener("DOMContentLoaded", ()=>{
+			init()
+			triggerSwupPageLoad(window.location.href)
+		});
+		swup.hooks.on('page:view', (visit) => {
+			init()
+		});
+	</script>
+
+</head>
+
+<body>
+
+	<div class="main_container">
+
+		<div class="inner_container">
+			<div class="left_container">
+				<div class="left_card_container">
+
+
+
+					<div class="card_container">
+						<div class="site-tile-container">
+							<a href="https://fushaolei.github.io">
+								<span class="site-title-import-text">琼西</span><span>往事</span>
+							</a>
+						</div>
+						<div class="special-line site-bottom-line"></div>
+
+						<div class="card_intro">导航</div>
+						<div class="card-nav">
+							
+							
+							<a href="/" class="nav_link">
+								<div class="card-nav-item universal-transition">
+									博客
+								</div>
+							</a>
+							
+							<a href="/about/" class="nav_link">
+								<div class="card-nav-item universal-transition">
+									关于
+								</div>
+							</a>
+							
+							<a href="/link/" class="nav_link">
+								<div class="card-nav-item universal-transition">
+									友链
+								</div>
+							</a>
+							
+							
+							<a href="https://travellings.link/" target="_blank">
+								<div class="card-nav-item universal-transition">
+									开往
+								</div>
+							</a>
+						</div>
+
+						<div class="card_intro" style="margin-top: 15px">短评</div>
+
+						<div class="card-nav">
+							
+							
+							<a href="/game/" class="nav_link">
+								<div class="card-nav-item universal-transition">
+									游戏
+								</div>
+							</a>
+							
+							<a href="/videos/" class="nav_link">
+								<div class="card-nav-item universal-transition">
+									影视
+								</div>
+							</a>
+							
+							
+						</div>
+
+					</div>
+
+					
+
+
+					
+
+
+
+
+					
+
+
+					<div class="card_container content-toc transition-main">
+						<div class="card_intro">目录</div>
+						<nav id="TableOfContents">
+  <ul>
+    <li><a href="#第一个项目">第一个项目</a></li>
+    <li><a href="#简单的crud">简单的CRUD</a></li>
+  </ul>
+</nav>
+
+					</div>
+
+					
+
+
+					
+
+
+					
+
+					<a href="/posts/tech-frame-spring-note/">
+						<div class="card_container related-nav transition-main">
+							<div class="card_intro">上一篇</div>
+							<span class="related-nav-title universal-transition">Spring笔记</span>
+						</div>
+					</a>
+
+					
+
+					
+
+					<a href="/posts/record-flutter-easy-begin/">
+						<div class="card_container related-nav transition-main">
+							<div class="card_intro">下一篇</div>
+							<span class="related-nav-title universal-transition">Flutter快速入门</span>
+							
+						</div>
+					</a>
+
+					
+
+                    
+                    
+
+                    
+
+				</div>
+			</div>
+			<div id="swup" class="right_container transition-main">
+					
+<article class="article-real-container">
+
+
+	<div class="article_card_container">
+
+		<div class="article_card_inner_container">
+
+			
+
+			<div class="article-normal-info">
+				<div class="article-title single-title text-shadow">MyBatis笔记</div>
+				<time class="card_intro single-date" datetime=" 2020-08-14T14:12:12">2020年08月14日</time>
+
+			</div>
+
+			<div class="content-container">
+				<blockquote>
+<p>这框架是大三下学期的课程了，当时学的时候是用的eclipse的，现在换用IDEA 遇到了许多的坑，特此记录，然后，这也是个从零开始学mybatis的博文，为了期末考试，也为了巩固自己的编码基础，特写此文.
+<strong>注：编码环境</strong></p>
+<ul>
+<li>IDEA 2020.1</li>
+<li>Mysql 8.0.20</li>
+<li>全部都是Maven项目（为方便引入jar包）</li>
+</ul>
+<p>外加一个官网指路👉https://mybatis.org/mybatis-3/</p>
+<p>还有一个自己学mybatis时敲过的全部代码：https://github.com/FuShaoLei/FrameDemo/tree/master/Mybatis</p>
+</blockquote>
+<h2 id="第一个项目">第一个项目</h2>
+<blockquote>
+<p>分为以下几步</p>
+<ol>
+<li>创建一个maven项目</li>
+<li>配置包，编译</li>
+<li>创建entity类，以及映射器接口和SQL映射XML文件</li>
+<li>创建mybatis的 xml配置文件并关联SQL映射XML文件</li>
+<li>测试</li>
+</ol>
+<p>👴哭了，第一次配置太麻烦了</p>
+</blockquote>
+<h3 id="导入jar包">导入jar包</h3>
+<p>由于我是maven项目，根据官方的文档 ，只需在pom.xml中添加相应的东西即可</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;dependencies&gt;</span>
+    <span style="color:#f92672">&lt;dependency&gt;</span>
+        <span style="color:#f92672">&lt;groupId&gt;</span>org.mybatis<span style="color:#f92672">&lt;/groupId&gt;</span>
+        <span style="color:#f92672">&lt;artifactId&gt;</span>mybatis<span style="color:#f92672">&lt;/artifactId&gt;</span>
+        <span style="color:#f92672">&lt;version&gt;</span>3.5.5<span style="color:#f92672">&lt;/version&gt;</span>
+    <span style="color:#f92672">&lt;/dependency&gt;</span>
+    <span style="color:#f92672">&lt;dependency&gt;</span>
+        <span style="color:#f92672">&lt;groupId&gt;</span>mysql<span style="color:#f92672">&lt;/groupId&gt;</span>
+        <span style="color:#f92672">&lt;artifactId&gt;</span>mysql-connector-java<span style="color:#f92672">&lt;/artifactId&gt;</span>
+        <span style="color:#f92672">&lt;version&gt;</span>8.0.20<span style="color:#f92672">&lt;/version&gt;</span>
+    <span style="color:#f92672">&lt;/dependency&gt;</span>
+<span style="color:#f92672">&lt;/dependencies&gt;</span>
+</code></pre></div><h3 id="从-xml-中构建-sqlsessionfactory">从 XML 中构建 SqlSessionFactory</h3>
+<blockquote>
+<p>**每个基于 MyBatis 的应用都是以一个 SqlSessionFactory 的实例为核心的。**SqlSessionFactory 的实例可以通过 SqlSessionFactoryBuilder 获得。而 SqlSessionFactoryBuilder 则可以从 XML 配置文件或一个预先配置的 Configuration 实例来构建出 SqlSessionFactory 实例。(官方原话)</p>
+</blockquote>
+<p>由上面可知，要创建一个xml配置文件，为的是构建SqlSessionFactory实例。根据官方给的xml配置文件示例进行修改即可</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; ?&gt;</span>
+<span style="color:#75715e">&lt;!DOCTYPE configuration
+</span><span style="color:#75715e">        PUBLIC &#34;-//mybatis.org//DTD Config 3.0//EN&#34;
+</span><span style="color:#75715e">        &#34;http://mybatis.org/dtd/mybatis-3-config.dtd&#34;&gt;</span>
+<span style="color:#f92672">&lt;configuration&gt;</span>
+    <span style="color:#f92672">&lt;settings&gt;</span>
+        <span style="color:#f92672">&lt;setting</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;logImpl&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;STDOUT_LOGGING&#34;</span> <span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;/settings&gt;</span>
+    <span style="color:#f92672">&lt;environments</span> <span style="color:#a6e22e">default=</span><span style="color:#e6db74">&#34;dev&#34;</span><span style="color:#f92672">&gt;</span>
+        <span style="color:#f92672">&lt;environment</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;dev&#34;</span><span style="color:#f92672">&gt;</span>
+            <span style="color:#f92672">&lt;transactionManager</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;JDBC&#34;</span> <span style="color:#f92672">/&gt;</span>
+            <span style="color:#f92672">&lt;dataSource</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;POOLED&#34;</span><span style="color:#f92672">&gt;</span>
+                <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;driver&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;com.mysql.cj.jdbc.Driver&#34;</span> <span style="color:#f92672">/&gt;</span>
+                <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;url&#34;</span>
+                          <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;jdbc:mysql://localhost:3306/mybatis_db?useUnicode=true&amp;amp;characterEncoding=utf-8&amp;amp;serverTimezone=GMT&#34;</span> <span style="color:#f92672">/&gt;</span>
+                <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;username&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;root&#34;</span> <span style="color:#f92672">/&gt;</span>
+                <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;18389621811&#34;</span> <span style="color:#f92672">/&gt;</span>
+            <span style="color:#f92672">&lt;/dataSource&gt;</span>
+        <span style="color:#f92672">&lt;/environment&gt;</span>
+    <span style="color:#f92672">&lt;/environments&gt;</span>
+
+    <span style="color:#f92672">&lt;mappers&gt;</span>
+        <span style="color:#f92672">&lt;mapper</span> <span style="color:#a6e22e">resource=</span><span style="color:#e6db74">&#34;com/mapper/StudentMapper.xml&#34;</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;/mappers&gt;</span>
+<span style="color:#f92672">&lt;/configuration&gt;</span>
+</code></pre></div><blockquote>
+<p>要注意的是那个name为url的value值，有name为driver的value值，mysql5.0和mysql8.0的配置不太一样！</p>
+</blockquote>
+<p>好了到这里已经编写好了xml文件，接下来是构建SqlSessionFactory，根据老师的教学，编写MybatisUtil</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 从 XML 中构建 SqlSessionFactory
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MybatisUtil</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> SqlSessionFactory sessionFactory<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">static</span> <span style="color:#f92672">{</span>
+        InputStream is<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+            is<span style="color:#f92672">=</span> Resources<span style="color:#f92672">.</span><span style="color:#a6e22e">getResourceAsStream</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;mybatis-config.xml&#34;</span><span style="color:#f92672">);</span>
+            sessionFactory <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SqlSessionFactoryBuilder<span style="color:#f92672">().</span><span style="color:#a6e22e">build</span><span style="color:#f92672">(</span>is<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span><span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>IOException e<span style="color:#f92672">){</span>
+            e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> SqlSession <span style="color:#a6e22e">getSession</span><span style="color:#f92672">(){</span>
+        <span style="color:#66d9ef">return</span> sessionFactory<span style="color:#f92672">.</span><span style="color:#a6e22e">openSession</span><span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>通过阅读以上代码可知，MybatisUtil这个类暴露了一个<code>getSession()</code>方法供使用这个<code>sessionFactory.openSession();</code>这个是什么意思呢？ 👴也不懂啊 woc</p>
+<h3 id="测试">测试</h3>
+<p>然后就可以进行简单的测试了，具体看代码</p>
+<p>在这里说个坑。</p>
+<blockquote>
+<p>推荐阅读：https://blog.csdn.net/qq_23184291/article/details/78089115</p>
+</blockquote>
+<p>算了 👴不想说了，反正就是要往pom.xml中添加</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;build&gt;</span>
+    <span style="color:#f92672">&lt;resources&gt;</span>
+        <span style="color:#f92672">&lt;resource&gt;</span>
+            <span style="color:#f92672">&lt;directory&gt;</span>src/main/java<span style="color:#f92672">&lt;/directory&gt;</span>
+            <span style="color:#f92672">&lt;includes&gt;</span>
+                <span style="color:#f92672">&lt;include&gt;</span>**/*.xml<span style="color:#f92672">&lt;/include&gt;</span>
+            <span style="color:#f92672">&lt;/includes&gt;</span>
+        <span style="color:#f92672">&lt;/resource&gt;</span>
+    <span style="color:#f92672">&lt;/resources&gt;</span>
+<span style="color:#f92672">&lt;/build&gt;</span>
+</code></pre></div><h2 id="简单的crud">简单的CRUD</h2>
+<blockquote>
+<p>随便贴些代码，具体还得看项目</p>
+</blockquote>
+<p>映射器接口</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 实现简单的CRUD
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">StudentMapper</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e">//增
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">insertStudentNoReturnId</span><span style="color:#f92672">(</span>Student student<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">insertStudentAndReturnId</span><span style="color:#f92672">(</span>Student student<span style="color:#f92672">);</span>
+    <span style="color:#75715e">//删
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">deleteStudent</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> id<span style="color:#f92672">);</span>
+    <span style="color:#75715e">//改
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">updateStudent</span><span style="color:#f92672">(</span>String sex<span style="color:#f92672">,</span><span style="color:#66d9ef">int</span> id<span style="color:#f92672">);</span>
+
+    <span style="color:#75715e">//查
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>Student<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">selectAllStudent</span><span style="color:#f92672">();</span>
+    <span style="color:#66d9ef">public</span> Student <span style="color:#a6e22e">selectStudent</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> id<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>SQL映射XML文件</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; ?&gt;</span>
+<span style="color:#75715e">&lt;!DOCTYPE mapper
+</span><span style="color:#75715e">        PUBLIC &#34;-//mybatis.org//DTD Mapper 3.0//EN&#34;
+</span><span style="color:#75715e">        &#34;http://mybatis.org/dtd/mybatis-3-mapper.dtd&#34;&gt;</span>
+<span style="color:#f92672">&lt;mapper</span> <span style="color:#a6e22e">namespace=</span><span style="color:#e6db74">&#34;com.mapper.StudentMapper&#34;</span><span style="color:#f92672">&gt;</span>
+    <span style="color:#75715e">&lt;!--增--&gt;</span>
+    <span style="color:#f92672">&lt;insert</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;insertStudentNoReturnId&#34;</span><span style="color:#f92672">&gt;</span>
+        insert into students(name,sex) values (#{name},#{sex})
+    <span style="color:#f92672">&lt;/insert&gt;</span>
+    <span style="color:#75715e">&lt;!--如果想在执行插入操作以后返回表中的主键值，需要在映射文件中insert元素中加上如下两个属性--&gt;</span>
+    <span style="color:#f92672">&lt;insert</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;insertStudentAndReturnId&#34;</span> <span style="color:#a6e22e">useGeneratedKeys=</span><span style="color:#e6db74">&#34;true&#34;</span> <span style="color:#a6e22e">keyProperty=</span><span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">&gt;</span>
+        insert into students(name,sex) values (#{name},#{sex})
+        <span style="color:#f92672">&lt;selectKey</span> <span style="color:#a6e22e">resultType=</span><span style="color:#e6db74">&#34;int&#34;</span> <span style="color:#a6e22e">keyProperty=</span><span style="color:#e6db74">&#34;id&#34;</span> <span style="color:#a6e22e">order=</span><span style="color:#e6db74">&#34;AFTER&#34;</span><span style="color:#f92672">&gt;</span>
+            select last_insert_id()
+        <span style="color:#f92672">&lt;/selectKey&gt;</span>
+    <span style="color:#f92672">&lt;/insert&gt;</span>
+    <span style="color:#75715e">&lt;!--删--&gt;</span>
+    <span style="color:#f92672">&lt;delete</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;deleteStudent&#34;</span><span style="color:#f92672">&gt;</span>
+        delete from students where id=#{id}
+    <span style="color:#f92672">&lt;/delete&gt;</span>
+    <span style="color:#75715e">&lt;!--改--&gt;</span>
+    <span style="color:#75715e">&lt;!--跟据id修改性别 (￣▽￣)&#34;--&gt;</span>
+    <span style="color:#f92672">&lt;update</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;updateStudent&#34;</span><span style="color:#f92672">&gt;</span>
+        update students set sex=#{arg0} where id=#{arg1}
+    <span style="color:#f92672">&lt;/update&gt;</span>
+    <span style="color:#75715e">&lt;!--查--&gt;</span>
+    <span style="color:#f92672">&lt;select</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;selectAllStudent&#34;</span> <span style="color:#a6e22e">resultType=</span><span style="color:#e6db74">&#34;com.entity.Student&#34;</span><span style="color:#f92672">&gt;</span>
+        select * from students
+    <span style="color:#f92672">&lt;/select&gt;</span>
+    <span style="color:#f92672">&lt;select</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;selectStudent&#34;</span> <span style="color:#a6e22e">resultType=</span><span style="color:#e6db74">&#34;com.entity.Student&#34;</span><span style="color:#f92672">&gt;</span>
+        select * from students where id = #{id}
+    <span style="color:#f92672">&lt;/select&gt;</span>
+<span style="color:#f92672">&lt;/mapper&gt;</span>
+</code></pre></div><p>这里要说明的一点是，那个插入后放回的值不是id，二十它影响的行数，如果要获取id的话
+（除了需要改动映射的xml文件），直接getId即可，如下</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">int</span> returnId <span style="color:#f92672">=</span> studentMapper<span style="color:#f92672">.</span><span style="color:#a6e22e">insertStudentAndReturnId</span><span style="color:#f92672">(</span>student2<span style="color:#f92672">);</span>
+<span style="color:#75715e">//插入后直接student2.getId()即可
+</span><span style="color:#75715e"></span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;影响的行数是：&#34;</span> <span style="color:#f92672">+</span> returnId<span style="color:#f92672">+</span><span style="color:#e6db74">&#34; 新插入的id是：&#34;</span><span style="color:#f92672">+</span>student2<span style="color:#f92672">.</span><span style="color:#a6e22e">getId</span><span style="color:#f92672">());</span>
+</code></pre></div>
+			</div>
+			
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+			</div>
+		</div>
+
+
+
+
+	</div>
+
+	<script type="text/javascript" src="/js/script.js"></script>
+</body>
+
+</html>
