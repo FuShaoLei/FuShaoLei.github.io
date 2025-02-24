@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>常用Git指令 &ndash; 琼西往事</title>
+	
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;700;900&family=Roboto+Mono&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<script src="/js/swup.js"></script>
+	<script src="/js/swup.init.js"></script>
+
+	<script data-swup-ignore-script>
+		const swup = new Swup({
+		    containers: ['#swup','.left_container'],
+			plugins: [new SwupPreloadPlugin({ preloadVisibleLinks: true })],
+			animateHistoryBrowsing: true
+		});
+		document.readyState === "complete" ? init() : document.addEventListener("DOMContentLoaded", ()=>{
+			init()
+			triggerSwupPageLoad(window.location.href)
+		});
+		swup.hooks.on('page:view', (visit) => {
+			init()
+		});
+	</script>
+
+</head>
+
+<body>
+
+	<div class="main_container">
+
+		<div class="inner_container">
+			<div class="left_container">
+				<div class="left_card_container">
+
+
+
+					<div class="card_container">
+						<div class="site-tile-container">
+							<a href="https://fushaolei.github.io">
+								<span class="site-title-import-text">琼西</span><span>往事</span>
+							</a>
+						</div>
+						<div class="special-line site-bottom-line"></div>
+
+						<div class="card_intro">导航</div>
+						<div class="card-nav">
+							
+							
+							<a href="/" class="nav_link">
+								<div class="card-nav-item universal-transition">
+									博客
+								</div>
+							</a>
+							
+							<a href="/about/" class="nav_link">
+								<div class="card-nav-item universal-transition">
+									关于
+								</div>
+							</a>
+							
+							<a href="/link/" class="nav_link">
+								<div class="card-nav-item universal-transition">
+									友链
+								</div>
+							</a>
+							
+							
+							<a href="https://www.travellings.cn/go.html" target="_blank">
+								<div class="card-nav-item universal-transition">
+									开往
+								</div>
+							</a>
+						</div>
+
+						<div class="card_intro" style="margin-top: 15px">短评</div>
+
+						<div class="card-nav">
+							
+							
+							<a href="/game/" class="nav_link">
+								<div class="card-nav-item universal-transition">
+									游戏
+								</div>
+							</a>
+							
+							<a href="/videos/" class="nav_link">
+								<div class="card-nav-item universal-transition">
+									影视
+								</div>
+							</a>
+							
+							
+						</div>
+
+					</div>
+
+					
+
+
+					
+
+
+
+
+					
+
+
+					
+
+
+					
+
+					<a href="/posts/core-java-1-note/">
+						<div class="card_container related-nav transition-main">
+							<div class="card_intro">上一篇</div>
+							<span class="related-nav-title universal-transition">《Java核心技术I》笔记</span>
+						</div>
+					</a>
+
+					
+
+					
+
+					<a href="/posts/hello-hugo/">
+						<div class="card_container related-nav transition-main">
+							<div class="card_intro">下一篇</div>
+							<span class="related-nav-title universal-transition">Hello Hugo</span>
+
+						</div>
+					</a>
+
+					
+
+                    
+                    
+
+                    
+
+				</div>
+			</div>
+			<div id="swup" class="right_container transition-main">
+					
+<article class="article-real-container">
+
+
+	<div class="article_card_container">
+
+		<div class="article_card_inner_container">
+
+			
+
+			<div class="article-normal-info">
+				<div class="article-title single-title text-shadow">常用Git指令</div>
+				<time class="card_intro single-date" datetime=" 2021-01-12T00:00:00">2021年01月12日</time>
+
+			</div>
+
+			<div class="content-container">
+				<table>
+<thead>
+<tr>
+<th>指令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git add .</code></td>
+<td>将修改放入暂存区</td>
+</tr>
+<tr>
+<td><code>git status</code></td>
+<td>查看状态</td>
+</tr>
+<tr>
+<td><code>git log</code></td>
+<td>查看commit版本号</td>
+</tr>
+<tr>
+<td><code>git reset --hard 版本号</code></td>
+<td>版本回退，hard强制回退，soft的话会保留修改</td>
+</tr>
+<tr>
+<td><code>git stash</code></td>
+<td>将修改保存起来</td>
+</tr>
+<tr>
+<td><code>git stash save &quot;xxx&quot;</code></td>
+<td>将修改保存起来，并设置这个保存的标签</td>
+</tr>
+<tr>
+<td><code>git stash apply stash@{x}</code></td>
+<td>将修改移出来</td>
+</tr>
+<tr>
+<td><code>git branch -vv</code></td>
+<td>查看本地分支是否与远端分支建立了连接</td>
+</tr>
+<tr>
+<td><code>git push origin &lt;分支名&gt;:&lt;分支名&gt;</code></td>
+<td>仅仅将本地分支推送到远端分支， <strong>注意:这个操作只是单纯的把本地的分支推送到远端,尚未建立连接</strong></td>
+</tr>
+<tr>
+<td><code>git push --set-upstream origin &lt;分支名&gt;</code></td>
+<td>将本地分支推送到远端分支并建立连接</td>
+</tr>
+<tr>
+<td><code>git checkout -b &lt;分支名&gt; origin/&lt;分支名&gt;</code></td>
+<td>拉取远程分支到本地（本地与远程建立连接，前提是本地已经有其他分支了）</td>
+</tr>
+</tbody>
+</table>
+
+			</div>
+			
+			<div class="site-tags">
+				
+				<div class="site-tags-item"><a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0">学习笔记</a></div>
+				
+				<div class="site-tags-item"><a href="/tags/git">Git</a></div>
+				
+
+			</div>
+			
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+			</div>
+		</div>
+
+
+
+
+	</div>
+
+	<script type="text/javascript" src="/js/script.js"></script>
+</body>
+
+</html>
