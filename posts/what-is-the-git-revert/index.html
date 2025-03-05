@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>git revert是啥 &ndash; 琼西往事</title>
+	
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;700;900&family=Roboto+Mono&display=swap"
+		rel="stylesheet">
+
+	<link rel="stylesheet" href="/css/new.css">
+
+	
+
+
+</head>
+
+<body>
+
+	<div class="main_container">
+
+		<div class="inner_container">
+
+			<div class="top_container">
+				<div class="site-title-container">
+					<a href="https://fushaolei.github.io">
+						<span class="site-title-import-text">琼西</span><span>往事</span>
+					</a>
+				</div>
+				<div class="site-nav-container">
+					
+					
+					<a href="/" class="nav_link">
+						<div class="card-nav-item universal-transition">
+							博客
+						</div>
+					</a>
+					
+					<a href="/about/" class="nav_link">
+						<div class="card-nav-item universal-transition">
+							关于
+						</div>
+					</a>
+					
+					<a href="/link/" class="nav_link">
+						<div class="card-nav-item universal-transition">
+							友链
+						</div>
+					</a>
+					
+					
+					<a href="https://www.travellings.cn/go.html" target="_blank">
+						<div class="card-nav-item universal-transition">
+							开往
+						</div>
+					</a>
+				</div>
+			</div>
+
+			<div class="top_container_bottom_line"></div>
+
+			<div class="content_container">
+				
+<article class="article-real-container">
+
+
+	<div class="article_card_container">
+
+		<div class="article_card_inner_container">
+
+			<div class="article-normal-info">
+				<div class="important_title normal_important_title_size article-title single-title text-shadow">git revert是啥</div>
+				<time class="card_intro single-date" datetime=" 2023-07-10T23:32:59">2023年07月10日</time>
+			</div>
+
+			<div class="content-container">
+				<h2 id="revert">Revert</h2>
+<p>通过指定一个commit id重做并生成一个新的commit id</p>
+<pre tabindex="0"><code>git revert 6512d3da569a86974491cfa65fa60c1283f8d2e8
+</code></pre><p>然后直接<code>git push</code>就好了</p>
+<p>或者使用</p>
+<pre tabindex="0"><code>git revert -n 6512d3da569a86974491cfa65fa60c1283f8d2e8
+</code></pre><p>这也会撤销指定commit id的修改，这就会将指定commit id的修改放到工作区，但不会创建新的commit，需要你手动去<code>git commit</code></p>
+<h2 id="revert与reset的区别">Revert与Reset的区别</h2>
+<ul>
+<li>reset是指定的id后面的提交都不要了，如果指定的commit id后面有很多提交，使用git reset时，那些提交都不要了</li>
+<li>revert是指定的id的提交不要了，仅仅指定commit id会重做</li>
+</ul>
+<hr>
+<h2 id="合并多个commit到一个commit">合并多个commit到一个commit</h2>
+<pre tabindex="0"><code>git rebase -i head~N
+</code></pre><p>N代表的是想要合并提交的数量</p>
+<p>这将会打开一个编辑器，按<code>i</code></p>
+<pre tabindex="0"><code>pick：使用commit。
+reword：使用commit，修改commit信息。
+squash：使用commit，将commit信息合入上一个commit。
+fixup：使用commit，丢弃commit信息。
+</code></pre><p>然后<code>esc</code>推出insert模式，然后输入<code>:wq</code>就可以了</p>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="article_card_comment">
+		<h2>评论</h2>
+		<div class="giscus"></div>
+	</div>
+
+	<script src="https://giscus.app/client.js"
+			data-repo="FuShaoLei/FuShaoLei.github.io"
+			data-repo-id="MDEwOlJlcG9zaXRvcnkzMjc4MDM5NTY="
+			data-category="General"
+			data-category-id="DIC_kwDOE4nkNM4CWGIj"
+			data-mapping="url"
+			data-strict="0"
+			data-reactions-enabled="1"
+			data-emit-metadata="0"
+			data-input-position="bottom"
+			data-theme="dark_dimmed"
+			data-lang="zh-CN"
+			crossorigin="anonymous"
+			async>
+	</script>
+
+</article>
+
+			</div>
+
+		</div>
+
+
+
+
+
+	</div>
+
+	<script type="text/javascript" src="/js/script.js"></script>
+</body>
+
+</html>

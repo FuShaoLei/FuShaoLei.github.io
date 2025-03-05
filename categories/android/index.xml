@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Android on 琼西往事</title>
+    <link>https://fushaolei.github.io/categories/android/</link>
+    <description>Recent content in Android on 琼西往事</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 18 Oct 2020 23:13:16 +0000</lastBuildDate><atom:link href="https://fushaolei.github.io/categories/android/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RelativeLayout中的属性</title>
+      <link>https://fushaolei.github.io/posts/android-relativelayout-att/</link>
+      <pubDate>Sun, 18 Oct 2020 23:13:16 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/posts/android-relativelayout-att/</guid>
+      <description>与parent相对的属性    属性 说明     layout_alignParentTop 表示widget的顶部和Container的顶部对齐。   layout_alignParentBottom 表示widget的底部和Container的底部对齐。   layout_alignParentStart 表示widget的左边和Container的起始边缘对齐。   layout_alignParentEnd 表示widget的左边和Container的结束边缘对齐。   layout_alignParentLeft 表示widget的左边和Container的左边对齐。   layout_alignParentRight 表示widget的右边和Container的右边对齐。   layout_centerInParent 表示widget处于Container平面上的正中间。   layout_alignWithParentIfMissing 若设置true，则当该控件layout_toLeftOf, layout_toRightOf等找不到相对的参考widget时，就以父container为参考。    与widget相对的布局    属性 说明     layout_above 表示该widget位于参数值标识的widget的上方。   layout_below 表示该widget位于参数值标识的widget的下方。   layout_alignTop 表示该widget的顶部与参数值标识的widget的顶部对齐。   layout_alignBottom 表示该widget的底部与参数值标识的widget的**底部*8对齐。   layout_alignStart 表示该widget的起始边缘与参数值标识的widget的起始边缘对齐。   layout_alignEnd 表示该widget的结束边缘与参数值标识的widget的结束边缘对齐   layout_alignLeft 表示该widget的左边与参数值标识的widget的左边对齐。   layout_alignRight 表示该widget的右边参数值标识的widget的右边对齐。   layout_centerHorizontal 表示widget处于Container水平方向上的中间。   layout_centerVertical 表示widget处于Container垂直方向上的中间。   layout_alignBaseline 表示该widget的BaseLine与参数值标识的widget的BaseLine对齐。   layout_toLeftOf 表示该widget位于参数值标识的widget的左方。   layout_toRightOf 表示该widget位于参数值标识的widget的右方。   layout_toStartOf 🚩表示该widget结束边缘与参数值标识的widget的起始边缘对齐   layout_toEndOf 🚩表示该widget起始边缘与参数值标识的widget的结束边缘对齐    </description>
+    </item>
+    
+    <item>
+      <title>Android常用库</title>
+      <link>https://fushaolei.github.io/posts/android-usaully-use/</link>
+      <pubDate>Mon, 05 Oct 2020 14:53:08 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/posts/android-usaully-use/</guid>
+      <description>MMKV 作用类似sharepreferences，（也是以键值对来存储数据的），但性能比sharepreferences好太多了。
+github地址：https://github.com/Tencent/MMKV
+implementation &#39;com.tencent:mmkv-static:1.2.4&#39; </description>
+    </item>
+    
+    <item>
+      <title>Listview学习</title>
+      <link>https://fushaolei.github.io/posts/tech-android-listview-note/</link>
+      <pubDate>Wed, 24 Jun 2020 08:37:32 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/posts/tech-android-listview-note/</guid>
+      <description>Listview是入门android的重点，当初浅尝辄止，不是很理解原理，如今重新来过，希望有不一样的感悟
+ 简介 AdapterView 容器控件，其整体效果由每一个子元素内容决定，子元素的形式由Adapter决定。 常见子类：
+ ListView 垂直列表 GridView 网格列表 Spinner 下拉列表  待显示的数据如何传递给AdapterView中的Item？
+ 准备数据 （数据和item是匹配的） 借助Adapter来实现数据与View之间的数据传递。  Adapter 将数据显示到视图上，数据和视图之间交互的中介。
+图解    作用  将数据和视图分开了，数据改变时，不需要修改视图组件，只需更新Adapter 对于同一组数据，可以显示为不同的视图形式  常用Adapter  ArrayAdapter：最简单的适配器，数据源为文本字符串数组。 SimpleAdapter：简单适配器，数据源结构比较复杂，一般为List类型对象。 SimpleCursorAdapter：游标适配器，数据源一般为数据库中（SQLite）的数据。 自定义适配器：更灵活的适配器，数据源不定（由用户自行指定），需要继承BaseAdapter抽象类。   实际项目中，自定义适配器用的比较多
+ 基本流程  准备数据源 准备AdapterView每一个子项（item）的视图布局。 创建Adapter（连接数据源和视图布局）。 为指定AdapterView视图组件绑定适配器。 为AdapterView绑定（item）事件监听器。  自定义Adapter 基础样式 /** * 继承BaseAdapter后需要完成四个方法 * 1. getCount() 获得数据的条数 * 2. getItem(int position) 获取每个item显示的数据对象 * 3. getItemId(int position) 获取每个item的id的值 * 4.</description>
+    </item>
+    
+  </channel>
+</rss>
