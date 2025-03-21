@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en-us" data-theme="dark">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>《Pro Git》 读书笔记 &ndash; 琼西往事</title>
+	
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;700;900&family=Roboto+Mono&display=swap"
+		rel="stylesheet">
+
+	<link rel="stylesheet" href="/css/new.css">
+
+	
+
+
+</head>
+
+<body>
+
+	<div class="main_container">
+
+		<div class="inner_container">
+
+			<div class="top_container">
+				<div class="site-title-container">
+					<a href="https://fushaolei.github.io">
+						<span class="site-title-import-text">琼西</span><span>往事</span>
+					</a>
+				</div>
+				<div class="site-nav-container">
+					
+					
+					<a href="/" class="nav_link">
+						<div class="card-nav-item universal-transition">
+							博客
+						</div>
+					</a>
+					
+					<a href="/about/" class="nav_link">
+						<div class="card-nav-item universal-transition">
+							关于
+						</div>
+					</a>
+					
+					<a href="/link/" class="nav_link">
+						<div class="card-nav-item universal-transition">
+							友链
+						</div>
+					</a>
+					
+					
+					<a href="https://www.travellings.cn/go.html" target="_blank">
+						<div class="card-nav-item universal-transition">
+							开往
+						</div>
+					</a>
+				</div>
+			</div>
+
+			<div class="top_container_bottom_line"></div>
+
+			<div class="content_container">
+				
+<article class="article-real-container">
+
+
+	<div class="article_card_container">
+
+		<div class="article_card_inner_container">
+
+			<div class="article-normal-info">
+				<div class="important_title normal_important_title_size article-title single-title text-shadow">《Pro Git》 读书笔记</div>
+				<time class="card_intro single-date" datetime=" 2023-07-15T19:14:36">2023年07月15日</time>
+			</div>
+
+			<div class="content-container">
+				<h2 id="起步">起步</h2>
+<p>Git 有三种状态</p>
+<ul>
+<li>已提交 committed</li>
+<li>已修改 modified</li>
+<li>已暂存 staged</li>
+</ul>
+<p>初次运行 Git 前的配置</p>
+<pre><code>git config --global user.name &quot;John Doe&quot;
+git config --global user.email johndoe@example.com
+</code></pre><p>获取帮助</p>
+<pre><code>git help &lt;指令&gt;
+git help merge
+</code></pre><h2 id="git-基础">Git 基础</h2>
+<h3 id="获取-git-仓库">获取 Git 仓库</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 在现有目录中初始化仓库</span>
+git init <span style="color:#75715e"># 这将创建一个名为.git的子目录，此目录中含有初始化Git仓库的所有文件</span>
+git add *.c <span style="color:#75715e"># 跟踪指定文件</span>
+git commit -m <span style="color:#e6db74">&#34;init repo&#34;</span> <span style="color:#75715e"># 提交</span>
+
+<span style="color:#75715e"># 克隆现有仓库</span>
+git clone https://github.com/libgit2/libgit2
+git clone https://github.com/libgit2/libgit2 mylibgit <span style="color:#75715e"># 指定文件夹的名称</span>
+</code></pre></div><h3 id="记录每次更新到仓库">记录每次更新到仓库</h3>
+<p>工作目录下的每一个文件只有两种状态：</p>
+<ul>
+<li>已跟踪 （指的那些呗纳入了版本控制的文件）</li>
+<li>未跟踪</li>
+</ul>
+<p>新添加的文件，一般是untracked，这时候要使用<code>git add &lt;文件名&gt;</code> 去跟踪文件</p>
+<p>git add 的作用</p>
+<ul>
+<li>开始跟踪新文件</li>
+<li>把已跟踪文件放到暂存区</li>
+<li>合并时把有冲突的文件标记为已解决的状态</li>
+</ul>
+<p>Git 只会暂存你最后一次运行<code>git add</code>时的版本</p>
+<h3 id="查看状态">查看状态</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git status
+git status -s <span style="color:#75715e"># 更紧凑的格式输出状态</span>
+</code></pre></div><h3 id="忽略文件">忽略文件</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">touch .gitignore <span style="color:#75715e"># 添加</span>
+</code></pre></div><p>示例：</p>
+<pre><code># no .a files
+*.a
+
+# but do track lib.a, even though you're ignoring .a files above
+!lib.a
+
+# only ignore the TODO file in the current directory, not subdir/TODO
+/TODO
+
+# ignore all files in the build/ directory
+build/
+
+# ignore doc/notes.txt, but not doc/server/arch.txt
+doc/*.txt
+
+# ignore all .pdf files in the doc/ directory
+doc/**/*.pdf
+</code></pre><h3 id="查看已暂存和未暂存的修改">查看已暂存和未暂存的修改</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git diff <span style="color:#75715e"># 比较的是工作区和暂存区快照之间的差异，也就是修改后没有暂存起来的变化内容</span>
+git difftool <span style="color:#75715e"># 使用图形化界面来查看差异</span>
+</code></pre></div><h3 id="提交更新">提交更新</h3>
+<p><code>git commit</code> 之前最后再进行一次<code>git add</code>，确保还有什么修改过的文件或新增的文件还没被暂存</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git commit <span style="color:#75715e"># 这样会打开一个文本编辑器，让你输入提交信息</span>
+git commit -m <span style="color:#e6db74">&#34;commit msg&#34;</span> <span style="color:#75715e"># 直接提交</span>
+</code></pre></div><p>也可以使用</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git commit -a -m <span style="color:#e6db74">&#34;commit msg&#34;</span>
+</code></pre></div><p>这样加一个<code>-a</code>，Git 就会子哦对那个把所有<strong>已经跟踪过的文件</strong>（意味着如果未跟踪过的将不会暂存）暂存起来，一并提交</p>
+<h3 id="移除文件">移除文件</h3>
+<p>这个命令是把文件移除然后提交到暂存区，如果单纯的删除的话还得手动<code>git add</code>提交到暂存区</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git rm &lt;文件名&gt;
+git rm --cached &lt;文件名&gt; <span style="color:#75715e"># 将文件在暂存区删除，然后让这个文件变成untrack状态，这时这个文件还在</span>
+</code></pre></div><h3 id="移动文件">移动文件</h3>
+<p>移动文件并提交到暂存区</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git mv &lt;文件名&gt; &lt;新的文件名&gt;
+</code></pre></div><h2 id="查看提交历史">查看提交历史</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git log
+git log -p -2 <span style="color:#75715e"># 查看最近两次提交的内容差异</span>
+git log --stat <span style="color:#75715e"># 查看每次提交的简略的统计信息</span>
+git log --online <span style="color:#75715e"># 一行显示简要信息</span>
+git log --pretty<span style="color:#f92672">=</span>oneline <span style="color:#75715e"># 可以指定格式去展示提交历史</span>
+git log --pretty<span style="color:#f92672">=</span>format:<span style="color:#e6db74">&#39;%h -%an, %ar : %s&#39;</span>
+git log --pretty<span style="color:#f92672">=</span>format:<span style="color:#e6db74">&#39;%h %s&#39;</span> --graph <span style="color:#75715e"># 配合graph使用</span>
+</code></pre></div><h2 id="撤销操作">撤销操作</h2>
+<p>如果你commit之后发现还有要修改的地方，那么你就可以使用下面这条命令：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git commit -m <span style="color:#e6db74">&#34;init repo&#34;</span>
+git add &lt;忘记要修改的文件&gt;
+git commit --amend
+</code></pre></div><p>最终你第二次提交会代替你第一次提交，也就是最终只有一条提交</p>
+<h3 id="撤销对文件的修改">撤销对文件的修改</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 先是要取消暂存，让它回到工作区</span>
+git reset HEAD &lt;filename&gt; <span style="color:#75715e"># 第一种方法</span>
+git restore --staged &lt;filename&gt; <span style="color:#75715e"># 第二种方法</span>
+
+
+<span style="color:#75715e"># 撤销对文件的修改</span>
+git checkout -- &lt;filename&gt; <span style="color:#75715e"># 第一种方法</span>
+git restore &lt;filename&gt; <span style="color:#75715e"># 第二种方法</span>
+</code></pre></div><h2 id="远程仓库的使用">远程仓库的使用</h2>
+<h3 id="查看远程仓库">查看远程仓库</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote 
+git remote -v <span style="color:#75715e"># 显示详细信息</span>
+</code></pre></div><p>可以发现 origin 是 git clone 时的服务器默认的名字</p>
+<h3 id="添加远程仓库">添加远程仓库</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote add &lt;remote-name&gt; &lt;url&gt;
+</code></pre></div><h3 id="从远程仓库中抓取与拉取">从远程仓库中抓取与拉取</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git fetch &lt;shortname&gt; <span style="color:#75715e"># git fetch会将数据拉取到你本地仓库，并不会自动合并或修改你当前的工作，你必须要手动git merge</span>
+git pull <span style="color:#75715e"># 这个命令其实包含着git fetch，而且还会尝试合并远程分支到当前分支</span>
+</code></pre></div><h3 id="推送到远程分支">推送到远程分支</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git push &lt;remote-name&gt; &lt;branch-name&gt;
+git push origin master
+</code></pre></div><h3 id="查看远程仓库-1">查看远程仓库</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote show &lt;remote-name&gt;
+git remote show origin
+</code></pre></div><h3 id="远程仓库的移除和重命名">远程仓库的移除和重命名</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote rename &lt;remote-name&gt; &lt;new-remote-name&gt; <span style="color:#75715e"># 重命名</span>
+git remote rm &lt;remote-name&gt; <span style="color:#75715e"># 移除</span>
+</code></pre></div><h2 id="打标签">打标签</h2>
+<h3 id="列出标签">列出标签</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git tag <span style="color:#75715e"># 会列出所有标签</span>
+</code></pre></div><h3 id="创建标签">创建标签</h3>
+<p>Git 中分为两种标签</p>
+<ul>
+<li>轻量标签：特定提交的一个引用</li>
+<li>附注标签：存储在Git中的一个完整对象</li>
+</ul>
+<p>创建附注标签：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git tag -a v0.1 -m <span style="color:#e6db74">&#34;chicken you are beautiful&#34;</span>
+git tag -a v0.05 -m <span style="color:#e6db74">&#34;hungry&#34;</span> a6da524 <span style="color:#75715e"># 后面加上版本号可以对某一个commit打上版本号</span>
+</code></pre></div><p>查看某个标签的详细信息：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git show v0.1
+</code></pre></div><h3 id="共享标签push到远程服务器">共享标签（push到远程服务器）</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git push origin v0.05 <span style="color:#75715e"># push一个</span>
+git push origin --tags <span style="color:#75715e"># push全部</span>
+</code></pre></div><h3 id="检出标签">检出标签</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git checkout -b version005 v0.05 <span style="color:#75715e"># 创建一个新分支，这个分支的内容和我的指定的版本号的内容是一致的</span>
+</code></pre></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="article_card_comment">
+		<h2>评论</h2>
+		<div class="giscus"></div>
+	</div>
+
+	<script src="https://giscus.app/client.js"
+			data-repo="FuShaoLei/FuShaoLei.github.io"
+			data-repo-id="MDEwOlJlcG9zaXRvcnkzMjc4MDM5NTY="
+			data-category="General"
+			data-category-id="DIC_kwDOE4nkNM4CWGIj"
+			data-mapping="url"
+			data-strict="0"
+			data-reactions-enabled="1"
+			data-emit-metadata="0"
+			data-input-position="bottom"
+			data-theme="dark"
+			data-lang="zh-CN"
+			crossorigin="anonymous"
+			async>
+	</script>
+
+</article>
+
+			</div>
+
+		</div>
+
+
+
+
+
+	</div>
+
+	<script type="text/javascript" src="/js/script.js"></script>
+</body>
+
+</html>

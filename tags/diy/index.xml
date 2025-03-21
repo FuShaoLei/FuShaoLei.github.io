@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>diy on 琼西往事</title>
+    <link>https://fushaolei.github.io/tags/diy/</link>
+    <description>Recent content in diy on 琼西往事</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 17 Mar 2024 21:55:47 +0800</lastBuildDate><atom:link href="https://fushaolei.github.io/tags/diy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>自制Hitbox</title>
+      <link>https://fushaolei.github.io/posts/hitbox-diy/</link>
+      <pubDate>Sun, 17 Mar 2024 21:55:47 +0800</pubDate>
+      
+      <guid>https://fushaolei.github.io/posts/hitbox-diy/</guid>
+      <description>上一篇说到我装机就是为了玩街霸6，其实还有一个原因，就是如果我在Playstation平台玩的话，就只能用手柄了，但其实用手柄有一个问题，就是我习惯移动用Ps5手柄的左摇杆（如下视频），结果，玩了不到两个月，左摇杆就漂移了（所谓漂移指的是在我不动摇杆的情况，摇杆会自己输入指令），还好我买的是国行版本的，手柄一年内免费换新。所以我实在是不想用手柄玩街霸了，在线下尝试了hitbox后，我决定自制一个Hitbox。
+ 准备材料 配件一览
+   项目 价格 说明     亚克力框体+磨砂面板图 97+30 淘宝找人定制的，感觉有点小贵   苍炎芯片2.0 + 杜邦线*20 84 省心，不用自己刷系统，对于我这种懒人来说非常舒服   拳霸白透明24mm按键 * 16 + 透明白色蓝光30mm按键 * 1 + 发光供电线 * 1 112 拳霸这款按键才6块钱一个，已经是我能找到的最便宜的品牌按键了   USB方口转母USB线 6    M355 铜柱 * 10 + M312 螺丝 * 50 16.02     总价格：345
+在B站跟着这个视频一步一步做的，总体来说是一次简单的DIY，几乎没什么难度，总体过程中比较困难的是选择面板图的图案，我在互联网上怎么找都不太满意，最后用了下面这张朱莉的图片（虽然我的主力不是朱莉🤣），感谢原作者
+成果 因为安装过程过于简单就不放图了（其实是我没存多少图😆）
+上手视频 👇</description>
+    </item>
+    
+  </channel>
+</rss>

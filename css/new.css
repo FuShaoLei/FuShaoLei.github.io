@@ -1,0 +1,212 @@
+@import url(single.css);
+:root {
+    --container-width: 700px;
+    --left-width: 260px;
+    --card-padding: 17px;
+    --card-margin: 10px;
+
+    --font-size-embellish: .8rem;
+
+
+    --font-main: 'Noto Serif SC', serif;
+    --font-code: 'Roboto Mono', monospace;
+
+    --font-title: "Noto Sans SC", sans-serif;
+
+
+    --normal-cover-height: 228px;
+    --list-item-height: 160px;
+
+    --rate-cover-width: 228px;
+    --rate-cover-height: 314px;
+
+    --width-border: 5px;
+
+    --universal-transition-attr: all 0.2s linear;
+
+    --article-padding: 17px;
+    --img-border-width: 3px;
+
+    --universal-bg: rgba(51, 51, 51, 0.3);
+
+    --normal-font-size: 17px;
+}
+
+[data-theme='light'] {
+    --color-bg: #F6F8FA;
+    --color-theme-main: #B54047;
+    --color-text-main: #24292F;
+    --color-text-secondary: rgba(51, 51, 51, 0.4);
+    --color-embellish: #ecedee;
+
+    /*--color-bg: #F6F8FA;*/
+    /*--color-theme-main: #e4141c;*/
+    /*--color-text-main: #24292F;*/
+    /*--color-text-secondary: rgba(51, 51, 51, 0.4);*/
+    /*--color-embellish: #ecedee;*/
+}
+
+[data-theme='dark'] {
+    --color-bg: #333;
+    --color-theme-main: #B54047;
+    --color-text-main: #D1D5DB;
+    --color-text-secondary: rgba(225, 225, 225, 0.4);
+    --color-dress: rgba(225, 225, 225, 0.2);
+    --color-embellish: #444444;
+}
+
+
+
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-bg);
+    /*background-image: url("../img/bg.jpg");*/
+    /*background-attachment: fixed;*/
+
+    font-family: var(--font-main);
+
+    color: var(--color-text-main);
+    font-size: var(--normal-font-size);
+}
+
+
+body a {
+    color: var(--color-text-main);
+    text-decoration: none;
+}
+
+/* 滚动条 */
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+
+    /*background-image: url(../img/bg.jpg);*/
+    /*background-size: cover;*/
+
+    background-color: var(--color-bg) ;
+}
+
+
+::-webkit-scrollbar-thumb {
+    /*background-image: url(../img/footer_bg.jpg);*/
+    /*background-size: auto;*/
+    /*background-repeat: repeat;*/
+
+    background-color: var(--color-theme-main) ;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    /*background: var(--color-text-secondary);*/
+}
+
+.site-nav-container a:hover {
+    color: var(--color-theme-main);
+}
+
+.main_container {
+    color: var(--color-text-main);
+    display: flex;
+    justify-content: center;
+}
+
+.top_container {
+    width: var(--container-width);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 0;
+}
+
+
+.site-nav-container {
+    display: flex;
+}
+
+.site-nav-container div {
+    margin-left: 10px;
+}
+
+.site-title-import-text {
+    color: var(--color-theme-main);
+}
+
+.site-title-container {
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.top_container_bottom_line {
+    width: 100%;
+    height: 1px;
+
+    /*background-color: var(--color-text-main) ;*/
+
+    border-bottom: 2px dashed var(--color-text-main);
+
+    /*background-image: url(../img/line.png);*/
+    /*background-repeat: repeat-x;*/
+    /*background-size: auto 2px;*/
+}
+
+.list_main_wrapper {
+    width: var(--container-width);
+}
+
+.nav_link.active_link {
+    color: var(--color-theme-main);
+}
+
+.main_item_wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.main_item_wrapper div {
+    font-size: 1.1rem;
+}
+
+.group_wrapper {
+    margin: 10px;
+}
+
+.group_wrapper:hover .article_title {
+    color: var(--color-theme-main);
+}
+
+.main_item_wrapper time{
+    font-size: .8rem;
+    color: var(--color-text-secondary);
+}
+
+.split_line {
+    margin: 0 5px;
+    font-weight: bold;
+    color: var(--color-theme-main);
+}
+
+.article-real-container {
+    width: var(--container-width);
+}
+
+.group_title {
+
+    font-weight: bold;
+    margin-top: 35px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.normal_important_title_size {
+    font-size: 2rem;
+}
+
+.important_title {
+    /*text-shadow: 1px 1px 2px var(--color-theme-main);*/
+}

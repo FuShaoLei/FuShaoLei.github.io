@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hexo on 琼西往事</title>
+    <link>https://fushaolei.github.io/categories/hexo/</link>
+    <description>Recent content in hexo on 琼西往事</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 31 May 2020 11:18:27 +0000</lastBuildDate><atom:link href="https://fushaolei.github.io/categories/hexo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hexo博客备份过程记录</title>
+      <link>https://fushaolei.github.io/posts/record-how-to-backup-hexo/</link>
+      <pubDate>Sun, 31 May 2020 11:18:27 +0000</pubDate>
+      
+      <guid>https://fushaolei.github.io/posts/record-how-to-backup-hexo/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;小记录&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
