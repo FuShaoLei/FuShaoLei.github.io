@@ -1,0 +1,304 @@
+@import url(single.css);
+:root {
+    --container-width: 670px;
+    --left-width: 260px;
+    --card-padding: 17px;
+    --card-margin: 10px;
+
+    --font-size-embellish: .8rem;
+
+
+    --font-main: 'Noto Serif SC', serif;
+    --font-code: 'Roboto Mono', monospace;
+
+    --font-title: "Noto Sans SC", sans-serif;
+
+
+    --normal-cover-height: 228px;
+    --list-item-height: 160px;
+
+    --rate-cover-width: 228px;
+    --rate-cover-height: 314px;
+
+    --width-border: 5px;
+
+    --universal-transition-attr: all 0.2s linear;
+
+    --article-padding: 17px;
+    --img-border-width: 3px;
+
+    --universal-bg: rgba(51, 51, 51, 0.3);
+
+    --normal-font-size: 17px;
+}
+
+[data-theme='light'] {
+    --color-bg: #F6F8FA;
+    --color-theme-main: #B54047;
+    --color-text-main: #24292F;
+    --color-text-secondary: rgba(51, 51, 51, 0.4);
+    --color-embellish: #e0e0e1;
+}
+
+[data-theme='dark'] {
+    --color-bg: #333;
+    --color-theme-main: #B54047;
+    --color-text-main: #D1D5DB;
+    --color-text-secondary: rgba(225, 225, 225, 0.4);
+    --color-dress: rgba(225, 225, 225, 0.2);
+    --color-embellish: #444444;
+}
+
+/*赛博朋克*/
+[data-theme='cyberpunk'] {
+    --color-bg: #0D1117;
+    --color-theme-main: #FF007A;
+    --color-text-main: #C9D1D9;
+    --color-text-secondary: rgba(201, 209, 217, 0.4);
+    --color-dress: rgba(201, 209, 217, 0.1);
+    --color-embellish: #21262D;
+}
+
+/*秋日暖阳*/
+[data-theme='autumn'] {
+    --color-bg: #2B1B17;
+    --color-theme-main: #D77A61;
+    --color-text-main: #EDE0D4;
+    --color-text-secondary: rgba(237, 224, 212, 0.4);
+    --color-dress: rgba(215, 122, 97, 0.2);
+    --color-embellish: #8C3F30;
+}
+
+/*清新日光*/
+[data-theme='daylight'] {
+    --color-bg: #FAFAFA;
+    --color-theme-main: #007ACC;
+    --color-text-main: #333333;
+    --color-text-secondary: rgba(51, 51, 51, 0.4);
+    --color-dress: rgba(0, 122, 204, 0.1);
+    --color-embellish: #E0E7FF;
+}
+
+/*薄荷森林*/
+[data-theme='mint'] {
+    --color-bg: #EAF8F0;
+    --color-theme-main: #16A085;
+    --color-text-main: #2C3E50;
+    --color-text-secondary: rgba(44, 62, 80, 0.4);
+    --color-dress: rgba(22, 160, 133, 0.1);
+    --color-embellish: #A7E1CD;
+}
+
+/*奶油舒芙蕾*/
+[data-theme='souffle'] {
+    --color-bg: #FFF8E1;
+    --color-theme-main: #FFA726;
+    --color-text-main: #5D4037;
+    --color-text-secondary: rgba(93, 64, 55, 0.4);
+    --color-dress: rgba(255, 167, 38, 0.1);
+    --color-embellish: #FFD54F;
+}
+
+
+
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-bg);
+    /*background-image: url("../img/bg.jpg");*/
+    /*background-attachment: fixed;*/
+
+    font-family: var(--font-main);
+
+    color: var(--color-text-main);
+    font-size: var(--normal-font-size);
+}
+
+
+body a {
+    color: var(--color-text-main);
+    text-decoration: none;
+}
+
+/* 滚动条 */
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+
+    /*background-image: url(../img/bg.jpg);*/
+    /*background-size: cover;*/
+
+    background-color: var(--color-bg) ;
+}
+
+
+::-webkit-scrollbar-thumb {
+    /*background-image: url(../img/footer_bg.jpg);*/
+    /*background-size: auto;*/
+    /*background-repeat: repeat;*/
+
+    background-color: var(--color-theme-main) ;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    /*background: var(--color-text-secondary);*/
+}
+
+.site-nav-container a:hover {
+    color: var(--color-theme-main);
+}
+
+.main_container {
+    color: var(--color-text-main);
+    display: flex;
+    justify-content: center;
+}
+
+.top_container {
+    width: var(--container-width);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 0;
+}
+
+
+.site-nav-container {
+    display: flex;
+}
+
+.site-nav-container div {
+    margin-left: 10px;
+}
+
+.site-title-container {
+    font-size: 1.9rem;
+    font-weight: 1000;
+    letter-spacing: 2px;
+    text-align: center;
+    transition: .3s;
+}
+
+.site-title-import-text {
+    color: var(--color-theme-main);
+    transition: .3s;
+}
+.site-title-normal-text {
+    transition: .3s;
+}
+
+.site-title-container:hover .site-title-import-text{
+    color: var(--color-text-main);
+}
+
+.site-title-container:hover .site-title-normal-text{
+    color: var(--color-theme-main);
+}
+
+.top_container_bottom_line {
+    width: 100%;
+    height: 1px;
+
+    /*background-color: var(--color-text-main) ;*/
+
+    border-bottom: 1px dashed var(--color-theme-main);
+
+    /*background-image: url(../img/line.png);*/
+    /*background-repeat: repeat-x;*/
+    /*background-size: auto 2px;*/
+}
+
+.list_main_wrapper {
+    width: var(--container-width);
+    margin-bottom: 30px;
+}
+
+.nav_link.active_link {
+    color: var(--color-theme-main);
+}
+
+.main_item_wrapper {
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*flex-wrap: wrap;*/
+}
+
+.group_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.article_line {
+    flex-grow: 1; /* 横线占据剩余空间 */
+    height: 1px;
+    background-color: var(--color-embellish);
+}
+
+.article_title {
+    font-size: 1.15rem;
+}
+
+.group_wrapper {
+    margin: 12px 0;
+}
+
+.group_wrapper:hover .article_title {
+    color: var(--color-theme-main);
+    text-decoration: underline dotted;
+}
+
+.article_time {
+    font-size: .85rem;
+    color: var(--color-text-secondary);
+}
+
+.split_line {
+    margin: 0 5px;
+    font-weight: bold;
+    color: var(--color-theme-main);
+}
+
+.article-real-container {
+    width: var(--container-width);
+}
+
+.group_title {
+    color: var(--color-theme-main);
+    font-family: var(--font-title);
+    font-weight: bold;
+    margin-top: 35px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.normal_important_title_size {
+    font-size: 2.05rem;
+}
+
+.important_title {
+    /*text-shadow: 1px 1px 2px var(--color-theme-main);*/
+}
+
+#theme-change-btn {
+    font-family: var(--font-title);
+
+    font-weight: bold;
+    border-radius: 4px;
+    margin-left: 5px;
+    letter-spacing: 0;
+    margin-top: auto;
+    font-size: .8rem;
+    padding: 2px 4px;
+    background: var(--color-theme-main);
+    color: var(--color-bg);
+}
+
+#theme-change-btn:hover{
+    cursor: pointer;
+    /*color: var(--color-theme-main);*/
+}
