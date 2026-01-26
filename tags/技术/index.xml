@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>技术 on 琼西往事</title>
+    <link>https://fushaolei.github.io/tags/%E6%8A%80%E6%9C%AF/</link>
+    <description>Recent content in 技术 on 琼西往事</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 07 Mar 2024 21:17:00 +0800</lastBuildDate><atom:link href="https://fushaolei.github.io/tags/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>装机の初体验</title>
+      <link>https://fushaolei.github.io/posts/first-time-build-pc/</link>
+      <pubDate>Thu, 07 Mar 2024 21:17:00 +0800</pubDate>
+      
+      <guid>https://fushaolei.github.io/posts/first-time-build-pc/</guid>
+      <description>楔子 我一直以来都想有自己的一台电脑，有装机这个想法已经有三年左右了吧，最初的起因是陪伴我五年的飞行堡垒突然坠毁了，而且那时又逢春招，我又是计算机专业相关的，彼时我必须要有一台电脑。当时又不想花家里太多钱，于是我便开始在网上找装机教程，结果发现这东西是个深坑，便停了下来，一直到现在，因为想玩街霸6，所以准备组装一台pc来玩，为什么要组pc呢，我不是有Ps5了吗，因为Playstation特么的联机要会员，而会员在去年的时候涨价了，就算二档会员打完折也要四百五左右，贵的要死，而我之前开了一年的二档该玩的游戏几乎都已经玩完了。———— 无法忍受这“高昂”的联机费用是一个原因，还有一个原因是在ps端的街霸6有输入延迟，可能是50ms左右，或者5ms，不记得了，反正就是这看似很短的输入延迟，好几次差点治好了我的低血压。终于我忍无可忍，准备组装一台PC
+配置    项目 型号 入手渠道 价格     板u 12490F + 铭瑄B760M WIFI6 D4 pdd 1518   显卡 电竞判客4060 8G jd 2199   电源 航嘉WD650evo直出 tb 299   内存条 金百达银爵3600 16G * 2 tb 349   散热器 雅浚E3 V2 + 先马冰风散热风扇 * 3 pdd 54.99 + 72.52   硬盘 铠侠RC20 1TB pdd 385   机箱 易大师进化版黑（标配type c） pdd 169    总价格：5,046.</description>
+    </item>
+    
+    <item>
+      <title>使用yt-dlp下载音乐或视频</title>
+      <link>https://fushaolei.github.io/posts/download-music/</link>
+      <pubDate>Fri, 10 Mar 2023 23:57:20 +0800</pubDate>
+      
+      <guid>https://fushaolei.github.io/posts/download-music/</guid>
+      <description>下载音乐 下载最高质量音乐到指定位置
+D:\download\yt-dlp.exe -P D:\mp3file\ -f ba https://www.youtube.com/watch?v=Oa4v_RX774s  下载最高质量音乐并转成mp3格式到指定位置
+D:\download\yt-dlp.exe -P D:\mp3file\ -f ba -x --audio-format mp3 --ffmpeg-location D:\software\ffmpeg\ffmpeg.exe https://www.youtube.com/watch?v=Oa4v_RX774s  下载视频 首先查看这个视频有什么格式：
+D:\download\yt-dlp.exe https://www.youtube.com/watch?v=AQixv83-DOc --list-formats  然后看自己需要什么格式就那什么格式的id进行下载，如下：
+D:\download\yt-dlp.exe -f 299 -P D:\DDD\ https://www.youtube.com/watch?v=AQixv83-DOc  通常我是会下载视频+音频合并的，那么我就会：
+D:\download\yt-dlp.exe https://www.youtube.com/watch?v=RUKXvuI_qbU -f 140+137 -P D:\DDD\ --ffmpeg-location D:\software\ffmpeg\ffmpeg.exe  </description>
+    </item>
+    
+  </channel>
+</rss>

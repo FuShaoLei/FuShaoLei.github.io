@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-us" data-theme="night">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>使用yt-dlp下载音乐或视频 &ndash; 琼西往事</title>
+  
+  
+
+  <script>
+    (function() {
+      var storageKey = "inkpress-theme";
+      var saved = localStorage.getItem(storageKey);
+      var initial = saved || "night";
+      document.documentElement.setAttribute("data-theme", initial);
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/theme.js" defer></script>
+</head>
+<body data-theme-list="day,night,sepia">
+  <header class="site-header">
+  <div class="topbar">
+    <a class="site-logo" href="/">琼西往事</a>
+    <nav class="main-nav" aria-label="Main">
+      
+      
+        
+        
+        
+          
+        
+        <a class="nav-link is-active" href="/posts/">博客</a>
+      
+        
+        
+        
+        <a class="nav-link" href="/works/">作品</a>
+      
+        
+        
+        
+        <a class="nav-link" href="/link/">友链</a>
+      
+        
+        
+        
+        <a class="nav-link" href="/about/">关于</a>
+      
+      <a class="nav-link" href="https://www.travellings.cn/go.html" target="_blank" rel="noopener">开往</a>
+      <a class="nav-link" href="https://foreverblog.cn/go.html" target="_blank" rel="noopener">虫洞</a>
+    </nav>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="切换主题">
+      主题 <span class="theme-label" data-theme-label>夜</span>
+    </button>
+  </div>
+  <div class="rule"></div>
+</header>
+
+
+  <main class="site-main">
+    
+  
+  
+    <div class="content-shell">
+  
+  <article class="content">
+    
+    
+      
+        
+      
+    
+    <header class="content-header">
+      <div class="kicker">Posts</div>
+      <h1>使用yt-dlp下载音乐或视频</h1>
+      <div class="post-meta">
+        2023-03-10
+        
+          <span class="dot">&middot;</span>
+          <a class="tag-inline" href="/tags/%E5%B7%A5%E5%85%B7/">#工具</a><a class="tag-inline" href="/tags/%E6%8A%80%E6%9C%AF/">#技术</a>
+        
+      </div>
+      
+    </header>
+    <div class="prose">
+      <h2 id="下载音乐">下载音乐</h2>
+<p>下载最高质量音乐到指定位置</p>
+<pre><code>D:\download\yt-dlp.exe -P D:\mp3file\ -f ba https://www.youtube.com/watch?v=Oa4v_RX774s
+</code></pre>
+<p>下载最高质量音乐并转成mp3格式到指定位置</p>
+<pre><code>D:\download\yt-dlp.exe -P D:\mp3file\ -f ba -x --audio-format mp3 --ffmpeg-location D:\software\ffmpeg\ffmpeg.exe https://www.youtube.com/watch?v=Oa4v_RX774s
+</code></pre>
+<h2 id="下载视频">下载视频</h2>
+<p>首先查看这个视频有什么格式：</p>
+<pre><code>D:\download\yt-dlp.exe https://www.youtube.com/watch?v=AQixv83-DOc --list-formats
+</code></pre>
+<p>然后看自己需要什么格式就那什么格式的id进行下载，如下：</p>
+<pre><code>D:\download\yt-dlp.exe -f 299 -P D:\DDD\ https://www.youtube.com/watch?v=AQixv83-DOc
+</code></pre>
+<p>通常我是会下载视频+音频合并的，那么我就会：</p>
+<pre><code>D:\download\yt-dlp.exe https://www.youtube.com/watch?v=RUKXvuI_qbU -f 140+137 -P D:\DDD\ --ffmpeg-location D:\software\ffmpeg\ffmpeg.exe
+</code></pre>
+
+    </div>
+    
+      
+        <nav class="post-nav" aria-label="文章导航">
+          
+            <a class="post-nav-link prev" href="/posts/clean-ps4pro/">
+              <span class="post-nav-label">上一篇</span>
+              <span class="post-nav-title">给 Ps4Pro 清灰&amp;换硅脂</span>
+            </a>
+          
+          
+            <a class="post-nav-link next" href="/posts/fix-ps4-controller-by-myself/">
+              <span class="post-nav-label">下一篇</span>
+              <span class="post-nav-title">自己动手给Ps4手柄换摇杆</span>
+            </a>
+          
+        </nav>
+      
+    
+  </article>
+  
+    <aside class="toc-sidebar" aria-label="文章目录">
+      <div class="toc-title">目录</div>
+      <div class="toc-body">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#下载音乐">下载音乐</a></li>
+    <li><a href="#下载视频">下载视频</a></li>
+  </ul>
+</nav>
+      </div>
+    </aside>
+    </div>
+  
+
+  </main>
+  <footer class="site-footer">
+  <div class="rule"></div>
+  <div class="footer-inner">
+    <span>琼西往事</span>
+    <span>@2026</span>
+  </div>
+</footer>
+
+
+</body>
+</html>

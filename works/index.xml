@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>作品 on 琼西往事</title>
+    <link>https://fushaolei.github.io/works/</link>
+    <description>Recent content in 作品 on 琼西往事</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 26 Jan 2026 10:14:00 +0800</lastBuildDate><atom:link href="https://fushaolei.github.io/works/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>微品牌识别</title>
+      <link>https://fushaolei.github.io/works/micro-branding/</link>
+      <pubDate>Mon, 26 Jan 2026 10:14:00 +0800</pubDate>
+      
+      <guid>https://fushaolei.github.io/works/micro-branding/</guid>
+      <description>为小型品牌建立清晰的视觉识别与版式系统。</description>
+    </item>
+    
+    <item>
+      <title>工作室案例集</title>
+      <link>https://fushaolei.github.io/works/studio-case/</link>
+      <pubDate>Mon, 26 Jan 2026 10:12:00 +0800</pubDate>
+      
+      <guid>https://fushaolei.github.io/works/studio-case/</guid>
+      <description>整理多个项目案例的视觉与交互成果，聚焦叙事呈现。</description>
+    </item>
+    
+    <item>
+      <title>InkPress 主题</title>
+      <link>https://fushaolei.github.io/works/inkpress-theme/</link>
+      <pubDate>Mon, 26 Jan 2026 10:10:00 +0800</pubDate>
+      
+      <guid>https://fushaolei.github.io/works/inkpress-theme/</guid>
+      <description>一套报纸质感的 Hugo 主题，支持多主题切换、作品与文章展示。</description>
+    </item>
+    
+    <item>
+      <title>Cannonball - Solo Cover</title>
+      <link>https://fushaolei.github.io/works/solo-cover-cannonball/</link>
+      <pubDate>Sat, 01 Mar 2025 20:10:00 +0800</pubDate>
+      
+      <guid>https://fushaolei.github.io/works/solo-cover-cannonball/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Comfortably Numb - Solo Cover</title>
+      <link>https://fushaolei.github.io/works/solo-cover-comfortably-numb/</link>
+      <pubDate>Tue, 18 Feb 2025 22:00:00 +0800</pubDate>
+      
+      <guid>https://fushaolei.github.io/works/solo-cover-comfortably-numb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sultans of Swing - Solo Cover</title>
+      <link>https://fushaolei.github.io/works/solo-cover-sultans-of-swing/</link>
+      <pubDate>Mon, 10 Feb 2025 21:30:00 +0800</pubDate>
+      
+      <guid>https://fushaolei.github.io/works/solo-cover-sultans-of-swing/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

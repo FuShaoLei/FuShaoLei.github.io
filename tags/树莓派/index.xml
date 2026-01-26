@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>树莓派 on 琼西往事</title>
+    <link>https://fushaolei.github.io/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/</link>
+    <description>Recent content in 树莓派 on 琼西往事</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 26 Mar 2021 23:58:55 +0800</lastBuildDate><atom:link href="https://fushaolei.github.io/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>树莓派入门</title>
+      <link>https://fushaolei.github.io/posts/raspberry-pi-start/</link>
+      <pubDate>Fri, 26 Mar 2021 23:58:55 +0800</pubDate>
+      
+      <guid>https://fushaolei.github.io/posts/raspberry-pi-start/</guid>
+      <description>树莓派入门❌ 树莓派吃灰✅
+型号是1代B+型，买来时不太懂Linux方面的东西，所以安了个系统后就闲置吃灰了，直到今天，学习了一些Linux知识后又重新捣鼓了起来，这篇文章主要记录了我如何在没有屏幕的情况下安装系统以及通过putty连接到树莓派的。
+一 烧录系统到sd卡 我使用的是官方提供的工具，简单又方便。指路：https://www.raspberrypi.org/software/
+傻瓜式的操作了，就不多讲了
+ 烧录之后，sd卡会变得奇奇怪怪的，当然也可把sd卡恢复成原来的样子，这里记录一下还原的的步骤
+ 管理员方式启动cmd 输入 diskpart list disk select disk 1 #选择第一个磁盘 （这里我的sd卡是 disk 1） clean create partition primary active format fs=fat32 quick   二 将sd卡插入树莓派等待安装 安装过程中你可以看到黄灯在不规律的闪动，等到黄灯不闪了，只有红灯在亮的时候，八成是好了。
+三 连接树莓派 首先先让树莓派连上网，这里我用的是网线的方式，然后用ssh连接树莓派，这里我使用的是putty
+其中默认账号为pi，密码为raspberry
+ 如果连接被拒绝，则可能是因为新版系统默认没有开SSH，可以将sd卡插到读卡器，手动用电脑，在根目录下创建一个名为ssh，无后缀的文件
+ 登录成功之后
+四 优化 改个密码
+passwd  换源
+树莓派 raspbian （各版本）换国内源
+五 随便跑个程序看看 安个jdk8
+sudo apt install openjdk-8-jdk  启动项目
+java -jar demo.jar  运行成功 后续想用来练习练习linux相关的指令或者跑个博客（性能太差了，糟心@_@）什么的
+学习网站  树莓派俱乐部 树莓派实验室 科技爱好者博客  参考  没有显示器情况下，安装和使用树莓派 树莓派（以及各种派）使用指南 sd卡烧录后恢复容量  </description>
+    </item>
+    
+  </channel>
+</rss>

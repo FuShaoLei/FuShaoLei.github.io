@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en-us" data-theme="night">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>树莓派入门 &ndash; 琼西往事</title>
+  
+  
+
+  <script>
+    (function() {
+      var storageKey = "inkpress-theme";
+      var saved = localStorage.getItem(storageKey);
+      var initial = saved || "night";
+      document.documentElement.setAttribute("data-theme", initial);
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/theme.js" defer></script>
+</head>
+<body data-theme-list="day,night,sepia">
+  <header class="site-header">
+  <div class="topbar">
+    <a class="site-logo" href="/">琼西往事</a>
+    <nav class="main-nav" aria-label="Main">
+      
+      
+        
+        
+        
+          
+        
+        <a class="nav-link is-active" href="/posts/">博客</a>
+      
+        
+        
+        
+        <a class="nav-link" href="/works/">作品</a>
+      
+        
+        
+        
+        <a class="nav-link" href="/link/">友链</a>
+      
+        
+        
+        
+        <a class="nav-link" href="/about/">关于</a>
+      
+      <a class="nav-link" href="https://www.travellings.cn/go.html" target="_blank" rel="noopener">开往</a>
+      <a class="nav-link" href="https://foreverblog.cn/go.html" target="_blank" rel="noopener">虫洞</a>
+    </nav>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="切换主题">
+      主题 <span class="theme-label" data-theme-label>夜</span>
+    </button>
+  </div>
+  <div class="rule"></div>
+</header>
+
+
+  <main class="site-main">
+    
+  
+  
+    <div class="content-shell">
+  
+  <article class="content">
+    
+    
+      
+        
+      
+    
+    <header class="content-header">
+      <div class="kicker">Posts</div>
+      <h1>树莓派入门</h1>
+      <div class="post-meta">
+        2021-03-26
+        
+          <span class="dot">&middot;</span>
+          <a class="tag-inline" href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/">#树莓派</a><a class="tag-inline" href="/tags/%E6%8A%98%E8%85%BE/">#折腾</a>
+        
+      </div>
+      
+    </header>
+    <div class="prose">
+      <p>树莓派入门❌
+树莓派吃灰✅</p>
+<p><img src="https://cdn.jsdelivr.net/gh/fushaolei/img2/20210326114448.jpg" alt="">
+型号是1代B+型，买来时不太懂Linux方面的东西，所以安了个系统后就闲置吃灰了，直到今天，学习了一些Linux知识后又重新捣鼓了起来，这篇文章主要记录了我如何在没有屏幕的情况下安装系统以及通过putty连接到树莓派的。</p>
+<h2 id="一-烧录系统到sd卡">一 烧录系统到sd卡</h2>
+<p>我使用的是官方提供的工具，简单又方便。指路：<a href="https://www.raspberrypi.org/software/">https://www.raspberrypi.org/software/</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/fushaolei/img2/20210327003757.jpg" alt=""></p>
+<p>傻瓜式的操作了，就不多讲了</p>
+<blockquote>
+<p>烧录之后，sd卡会变得奇奇怪怪的，当然也可把sd卡恢复成原来的样子，这里记录一下还原的的步骤</p>
+<ol>
+<li>管理员方式启动cmd</li>
+<li>输入  diskpart</li>
+<li>list  disk</li>
+<li>select disk 1 #选择第一个磁盘 （这里我的sd卡是 disk 1）</li>
+<li>clean</li>
+<li>create partition primary</li>
+<li>active</li>
+<li>format fs=fat32 quick</li>
+</ol>
+</blockquote>
+<h2 id="二-将sd卡插入树莓派等待安装">二 将sd卡插入树莓派等待安装</h2>
+<p>安装过程中你可以看到黄灯在不规律的闪动，等到黄灯不闪了，只有红灯在亮的时候，八成是好了。</p>
+<h2 id="三-连接树莓派">三 连接树莓派</h2>
+<p>首先先让树莓派连上网，这里我用的是网线的方式，然后用ssh连接树莓派，这里我使用的是putty</p>
+<p>其中默认账号为<strong>pi</strong>，密码为<strong>raspberry</strong></p>
+<blockquote>
+<p>如果连接被拒绝，则可能是因为新版系统默认没有开SSH，可以将sd卡插到读卡器，手动用电脑，在根目录下创建一个名为ssh，无后缀的文件</p>
+</blockquote>
+<p>登录成功之后</p>
+<p><img src="https://cdn.jsdelivr.net/gh/fushaolei/img2/20210327123848.jpg" alt=""></p>
+<h2 id="四-优化">四 优化</h2>
+<p>改个密码</p>
+<pre><code class="language-bash">passwd
+</code></pre>
+<p>换源</p>
+<p><a href="https://blog.csdn.net/weixin_45437140/article/details/102872988">树莓派 raspbian （各版本）换国内源</a></p>
+<h2 id="五-随便跑个程序看看">五 随便跑个程序看看</h2>
+<p>安个jdk8</p>
+<pre><code class="language-bash">sudo apt install openjdk-8-jdk
+</code></pre>
+<p>启动项目</p>
+<pre><code class="language-bash">java -jar demo.jar
+</code></pre>
+<p>运行成功
+<img src="https://cdn.jsdelivr.net/gh/fushaolei/img2/20210327141140.jpg" alt=""></p>
+<p>后续想用来练习练习linux相关的指令或者<del>跑个博客</del>（性能太差了，糟心@_@）什么的</p>
+<h2 id="学习网站">学习网站</h2>
+<ul>
+<li><a href="https://raspberrypi.club/">树莓派俱乐部</a></li>
+<li><a href="https://shumeipai.nxez.com/">树莓派实验室</a></li>
+<li><a href="https://www.lxx1.com/">科技爱好者博客</a></li>
+</ul>
+<h2 id="参考">参考</h2>
+<ul>
+<li><a href="https://blog.csdn.net/github_38111866/article/details/76038665">没有显示器情况下，安装和使用树莓派</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/77585297">树莓派（以及各种派）使用指南</a></li>
+<li><a href="https://blog.csdn.net/ZHANG_TIMI/article/details/102717785">sd卡烧录后恢复容量</a></li>
+</ul>
+
+    </div>
+    
+      
+        <nav class="post-nav" aria-label="文章导航">
+          
+            <a class="post-nav-link prev" href="/posts/hello-hugo/">
+              <span class="post-nav-label">上一篇</span>
+              <span class="post-nav-title">Hello Hugo</span>
+            </a>
+          
+          
+            <a class="post-nav-link next" href="/posts/my-2021/">
+              <span class="post-nav-label">下一篇</span>
+              <span class="post-nav-title">2021总结</span>
+            </a>
+          
+        </nav>
+      
+    
+  </article>
+  
+    <aside class="toc-sidebar" aria-label="文章目录">
+      <div class="toc-title">目录</div>
+      <div class="toc-body">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#一-烧录系统到sd卡">一 烧录系统到sd卡</a></li>
+    <li><a href="#二-将sd卡插入树莓派等待安装">二 将sd卡插入树莓派等待安装</a></li>
+    <li><a href="#三-连接树莓派">三 连接树莓派</a></li>
+    <li><a href="#四-优化">四 优化</a></li>
+    <li><a href="#五-随便跑个程序看看">五 随便跑个程序看看</a></li>
+    <li><a href="#学习网站">学习网站</a></li>
+    <li><a href="#参考">参考</a></li>
+  </ul>
+</nav>
+      </div>
+    </aside>
+    </div>
+  
+
+  </main>
+  <footer class="site-footer">
+  <div class="rule"></div>
+  <div class="footer-inner">
+    <span>琼西往事</span>
+    <span>@2026</span>
+  </div>
+</footer>
+
+
+</body>
+</html>
