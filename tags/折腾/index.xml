@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>折腾 on 琼西往事</title>
+    <link>https://fushaolei.github.io/tags/%E6%8A%98%E8%85%BE/</link>
+    <description>Recent content in 折腾 on 琼西往事</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 20 Oct 2025 15:08:41 +0800</lastBuildDate><atom:link href="https://fushaolei.github.io/tags/%E6%8A%98%E8%85%BE/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>再次折腾Nas</title>
+      <link>https://fushaolei.github.io/posts/fxxk-nas/</link>
+      <pubDate>Mon, 20 Oct 2025 15:08:41 +0800</pubDate>
+      
+      <guid>https://fushaolei.github.io/posts/fxxk-nas/</guid>
+      <description>国庆回来发现Nas炸了，系统进不去，不知道发生了什么，重装引导之后发现一个盘炸了，一个盘变成未初始化，万幸的是那块最重要的数据备份盘完好无损，真乃不幸中的万幸也！赶快把数据再备份一个副本，然后再备份一份到百度云（好像没有其他更好的选择了？），吓死我了，要是这块数据也丢的话，我是真的要炸了
+其实那块未初始化的盘的数据也可以考出来，只要使用一个叫 UFS Explorer 的软件，不过由于没有另外一块硬盘我放弃了，我认了，反正也不是什么重要数据。
+郁闷的是那块ssd炸了，心情复杂。</description>
+    </item>
+    
+    <item>
+      <title>浅谈 Sony 65X90L 一年使用体验</title>
+      <link>https://fushaolei.github.io/posts/get-sony-65x90l/</link>
+      <pubDate>Sat, 29 Mar 2025 13:42:22 +0800</pubDate>
+      
+      <guid>https://fushaolei.github.io/posts/get-sony-65x90l/</guid>
+      <description>自2023年5月份那会购入Ps5开始，我就一直很想搭配大电视来进行游玩，想象下班回来躺在沙发上马上就开玩，多爽。如今已经过去了一年多了，谈谈我的体验和一些折腾
+ 购入&amp;amp;装机 其实一开始我的预算只有3000左右，犹豫不决，而且我对于尺寸也没有一个概念，经过一番线下咨询，决定了自己需要的尺寸，和品牌，搭配Ps5还是得 Sony 自家的机器。（这下预算已经到了6000了）
+ 其实一开始有考虑过雷鸟鹏7Pro，但是线下的销售小哥不是很推荐，所以作罢
+ 东选西选，发现新机器好像只有这台比较便宜，所以我就决定购入了这台 Sony 65X90L，65寸屏幕+ 4k分辨率 + 120hz刷新率，也够我用了。
+淘宝网购 5800 拿下。
+等了四天终于发货了，到货之后就是要预约装机师傅过来拆箱和组装，这里千万不能自己拆箱，如果自己拆箱了电视有什么问题的话需要自己负责，如果是sony那边的人来安装的话电视有问题可以退换。
+铛铛铛铛！
+使用感受 玩游戏 首先Ps5是支持HDMI-CEC的，然后电视也支持，这个功能有什么用呢。就是在Ps5和电视都熄屏的情况下，我打开PS5的时候，这个功能就会自动帮我把电视打开，并且切到PS5的信号上，这不就是我一开始买电视的打算吗，这个功能简直赞爆了。
+然后玩战神5，和神秘海域4的时候搭配电视的可变刷新率（VRR）帧率直接超出了60帧，可能都达到了100帧左右了，体验感直接拉满。
+ 不过并不是所有的游戏都支持可变刷新率的，比如荒野大镖客2，还是30帧，无语😓R星你在干什么🤬
+ 看电影 电视上安一个Kodi，用来看电影，看美剧也不错。一开始我是直接把电影拷进硬盘，然后硬盘又插到电视上，也凑合看，不过一部4K电影少说也得要7 80G了，硬盘只有1T，所以拷来烤去的显得有点又不优雅，所以后面自组了NAS，想看什么直接往NAS里拷贝，然后就直接可以电视上看啦。
+搭配PC进行游玩的姿势 我其实是想要和Ps5有一样的游戏体验的，所以我购入了Xbox手柄，再搭配Steam的大屏幕模式去游玩。不过我发现我遇到了如下问题
+ PC在电视的旁边，我离电视大概两米远，这就意味着每次开机的时候，我得起身走过去，按下PC的开机键，然后再回到沙发 我将PC开机后，我还要用遥控打开电视，然后再手动的去切换到PC的信号  第一个问题，我搭配 小米音箱 + 小米插座，然后再将PC设为通电自启，完美解决了。
+ 将PC的开机密码设为空体验更佳（PS：这样做的坏处就是安全性较低，而且不能进行远程连接）
+ 第二个问题，说白了就是 显卡不支持HDMI-CEC功能，所以和电视做不了联动，经过我一番网络搜索，没辙，不过我发现小米最近开源了那个集成组件到Home Assistant，刚好我又有一个NAS可以部署Home Assistant，如果可以联动Sony 电视，或许这是一个解决办法。经过我的一番折腾，终于实现了 PC开机启动后电视也跟着启动然后切换信号，后面会再写一篇文章说道说道。
+总结 综上，这是一款带给我满满幸福感的设备，极大的丰富了我这个宅男的下班生活。也是我工作以来买的最贵的电子产品，反正都是自己的钱，想怎么花就怎么花，爽！</description>
+    </item>
+    
+    <item>
+      <title>Nas装机&amp;初体验</title>
+      <link>https://fushaolei.github.io/posts/diy-nas/</link>
+      <pubDate>Wed, 24 Jul 2024 11:08:20 +0800</pubDate>
+      
+      <guid>https://fushaolei.github.io/posts/diy-nas/</guid>
+      <description>起因：云盘惨遭清空 某一天，我登入华为云相册，想要回味一番以往的滋味，没成想打开却是一片空白。
+原来华为云会在用户未登陆一年后清空所有数据，并且也会通知你，就这样，我的2017至于2018年的某些回忆好像被删除了。之前就老是听说不要相信云什么之类的，果然人教人教不会，事教人一下就会了。彼时我的心在滴血，欲哭无泪，懊悔不已，现在说什么都晚了，我的数据对于这些厂家来说，似乎可有可无，恨不得弃之如蝼蚁。所以我准备把这些照片给管理备份起来，包括一些旧手机上的照片还有相机的照片。而且最近买了个大电视，一开始我想看电影的话都是先在移动硬盘中下好资源，然后再拿去插上电视的，这样繁琐的操作做多了就烦了，想着用更优雅一点的方式来解决。思来想去，决定组台Nas。
+装机过程 配件一览:
+   项目 型号 入手渠道 价格     CPU i3-8100T 🍑 179   主板 B365 tix 🍑 479   内存 16g ddr4 2666 🍑 169   散热 ITX 19mm超薄ITX散热 🍑 66.5   电源 台达1u 400w 🍑 157   硬盘 希捷酷狼 4T 🍑 678   固态硬盘 铭瑄128g 🍑 85   机箱 Aurrel数字科技 4盘位nas 机箱 🍑 253   UPS APE BK640M2 🍑 504    总计: 2,570.</description>
+    </item>
+    
+    <item>
+      <title>自制Hitbox</title>
+      <link>https://fushaolei.github.io/posts/hitbox-diy/</link>
+      <pubDate>Sun, 17 Mar 2024 21:55:47 +0800</pubDate>
+      
+      <guid>https://fushaolei.github.io/posts/hitbox-diy/</guid>
+      <description>上一篇说到我装机就是为了玩街霸6，其实还有一个原因，就是如果我在Playstation平台玩的话，就只能用手柄了，但其实用手柄有一个问题，就是我习惯移动用Ps5手柄的左摇杆（如下视频），结果，玩了不到两个月，左摇杆就漂移了（所谓漂移指的是在我不动摇杆的情况，摇杆会自己输入指令），还好我买的是国行版本的，手柄一年内免费换新。所以我实在是不想用手柄玩街霸了，在线下尝试了hitbox后，我决定自制一个Hitbox。
+准备材料 配件一览
+   项目 价格 说明     亚克力框体+磨砂面板图 97+30 淘宝找人定制的，感觉有点小贵   苍炎芯片2.0 + 杜邦线*20 84 省心，不用自己刷系统，对于我这种懒人来说非常舒服   拳霸白透明24mm按键 * 16 + 透明白色蓝光30mm按键 * 1 + 发光供电线 * 1 112 拳霸这款按键才6块钱一个，已经是我能找到的最便宜的品牌按键了   USB方口转母USB线 6    M355 铜柱 * 10 + M312 螺丝 * 50 16.02     总价格：345
+在B站跟着这个视频一步一步做的，总体来说是一次简单的DIY，几乎没什么难度，总体过程中比较困难的是选择面板图的图案，我在互联网上怎么找都不太满意，最后用了下面这张朱莉的图片（虽然我的主力不是朱莉🤣），感谢原作者
+成果 因为安装过程过于简单就不放图了（其实是我没存多少图😆）
+上手视频 👇
+最后，希望我的艾德早点上大师，哦吼~</description>
+    </item>
+    
+    <item>
+      <title>装机の初体验</title>
+      <link>https://fushaolei.github.io/posts/first-time-build-pc/</link>
+      <pubDate>Thu, 07 Mar 2024 21:17:00 +0800</pubDate>
+      
+      <guid>https://fushaolei.github.io/posts/first-time-build-pc/</guid>
+      <description>楔子 我一直以来都想有自己的一台电脑，有装机这个想法已经有三年左右了吧，最初的起因是陪伴我五年的飞行堡垒突然坠毁了，而且那时又逢春招，我又是计算机专业相关的，彼时我必须要有一台电脑。当时又不想花家里太多钱，于是我便开始在网上找装机教程，结果发现这东西是个深坑，便停了下来，一直到现在，因为想玩街霸6，所以准备组装一台pc来玩，为什么要组pc呢，我不是有Ps5了吗，因为Playstation特么的联机要会员，而会员在去年的时候涨价了，就算二档会员打完折也要四百五左右，贵的要死，而我之前开了一年的二档该玩的游戏几乎都已经玩完了。———— 无法忍受这“高昂”的联机费用是一个原因，还有一个原因是在ps端的街霸6有输入延迟，可能是50ms左右，或者5ms，不记得了，反正就是这看似很短的输入延迟，好几次差点治好了我的低血压。终于我忍无可忍，准备组装一台PC
+配置    项目 型号 入手渠道 价格     板u 12490F + 铭瑄B760M WIFI6 D4 pdd 1518   显卡 电竞判客4060 8G jd 2199   电源 航嘉WD650evo直出 tb 299   内存条 金百达银爵3600 16G * 2 tb 349   散热器 雅浚E3 V2 + 先马冰风散热风扇 * 3 pdd 54.99 + 72.52   硬盘 铠侠RC20 1TB pdd 385   机箱 易大师进化版黑（标配type c） pdd 169    总价格：5,046.</description>
+    </item>
+    
+    <item>
+      <title>又给博客写了个新主题</title>
+      <link>https://fushaolei.github.io/posts/new-theme-2304/</link>
+      <pubDate>Sat, 29 Apr 2023 00:12:47 +0800</pubDate>
+      
+      <guid>https://fushaolei.github.io/posts/new-theme-2304/</guid>
+      <description>Screenshot 首页
+详情页
+动机 最近在看《给大家看的设计书》，虽然还没看完，马上就想亲手尝试一下，根据书中所写的亲密性，对齐，重复，对比等设计法则，重写了博客的样式，我的初衷是创建一个简约的博客，专注于内容本身，也要有一些优雅的设计。啊，我的一生，都在追求着优雅。这个主题暂时命名为hugo-theme-dark，为什么取这个名字呢，是为了纪念我的心爱的博客主题hexo-theme-white，现在已经不维护了，我觉得我亏欠它太多了，或许未来的某一天，我会重新拾起它，完善它。</description>
+    </item>
+    
+    <item>
+      <title>自己动手给Ps4手柄换摇杆</title>
+      <link>https://fushaolei.github.io/posts/fix-ps4-controller-by-myself/</link>
+      <pubDate>Fri, 14 Apr 2023 09:52:47 +0800</pubDate>
+      
+      <guid>https://fushaolei.github.io/posts/fix-ps4-controller-by-myself/</guid>
+      <description>工具一览  撬棒 镊子 十字螺丝刀 两个新的摇杆  开整 用撬棒分离手柄，注意上下有一条线连在一起，别把它弄断了
+拆下电池，取出电池仓
+拆开主板和上盖
+更换摇杆
+最后按顺序按照回去就可以了
+总体没什么难度
+ 后面再也没有为这个手柄拍过照，只有最后把它卖出去的时候拍的最后一张：  </description>
+    </item>
+    
+    <item>
+      <title>给 Ps4Pro 清灰&amp;换硅脂</title>
+      <link>https://fushaolei.github.io/posts/clean-ps4pro/</link>
+      <pubDate>Sat, 14 Jan 2023 19:51:17 +0800</pubDate>
+      
+      <guid>https://fushaolei.github.io/posts/clean-ps4pro/</guid>
+      <description>工具一览  PTM7950-SP 硅脂 固态硅脂导热垫片 75*T8 带孔梅花螺丝刀 撬片等一些工具  这里先说一下，我的Ps4Pro型号是7008b
+开干！ ok 大功告成！！
+实测运行《最后生还者2》比清灰之前安静多了</description>
+    </item>
+    
+    <item>
+      <title>树莓派入门</title>
+      <link>https://fushaolei.github.io/posts/raspberry-pi-start/</link>
+      <pubDate>Fri, 26 Mar 2021 23:58:55 +0800</pubDate>
+      
+      <guid>https://fushaolei.github.io/posts/raspberry-pi-start/</guid>
+      <description>树莓派入门❌ 树莓派吃灰✅
+型号是1代B+型，买来时不太懂Linux方面的东西，所以安了个系统后就闲置吃灰了，直到今天，学习了一些Linux知识后又重新捣鼓了起来，这篇文章主要记录了我如何在没有屏幕的情况下安装系统以及通过putty连接到树莓派的。
+一 烧录系统到sd卡 我使用的是官方提供的工具，简单又方便。指路：https://www.raspberrypi.org/software/
+傻瓜式的操作了，就不多讲了
+ 烧录之后，sd卡会变得奇奇怪怪的，当然也可把sd卡恢复成原来的样子，这里记录一下还原的的步骤
+ 管理员方式启动cmd 输入 diskpart list disk select disk 1 #选择第一个磁盘 （这里我的sd卡是 disk 1） clean create partition primary active format fs=fat32 quick   二 将sd卡插入树莓派等待安装 安装过程中你可以看到黄灯在不规律的闪动，等到黄灯不闪了，只有红灯在亮的时候，八成是好了。
+三 连接树莓派 首先先让树莓派连上网，这里我用的是网线的方式，然后用ssh连接树莓派，这里我使用的是putty
+其中默认账号为pi，密码为raspberry
+ 如果连接被拒绝，则可能是因为新版系统默认没有开SSH，可以将sd卡插到读卡器，手动用电脑，在根目录下创建一个名为ssh，无后缀的文件
+ 登录成功之后
+四 优化 改个密码
+passwd  换源
+树莓派 raspbian （各版本）换国内源
+五 随便跑个程序看看 安个jdk8
+sudo apt install openjdk-8-jdk  启动项目
+java -jar demo.jar  运行成功 后续想用来练习练习linux相关的指令或者跑个博客（性能太差了，糟心@_@）什么的
+学习网站  树莓派俱乐部 树莓派实验室 科技爱好者博客  参考  没有显示器情况下，安装和使用树莓派 树莓派（以及各种派）使用指南 sd卡烧录后恢复容量  </description>
+    </item>
+    
+  </channel>
+</rss>
