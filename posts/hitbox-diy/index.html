@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en-us" data-theme="night">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>自制Hitbox &ndash; 琼西往事</title>
+  
+  
+
+  <script>
+    (function() {
+      var storageKey = "inkpress-theme";
+      var saved = localStorage.getItem(storageKey);
+      var initial = saved || "night";
+      document.documentElement.setAttribute("data-theme", initial);
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/theme.js" defer></script>
+</head>
+<body data-theme-list="day,night,sepia">
+  <header class="site-header">
+  <div class="topbar">
+    <a class="site-logo" href="/">琼西往事</a>
+    <nav class="main-nav" aria-label="Main">
+      
+      
+        
+        
+        
+          
+        
+        <a class="nav-link is-active" href="/posts/">博客</a>
+      
+        
+        
+        
+        <a class="nav-link" href="/works/">作品</a>
+      
+        
+        
+        
+        <a class="nav-link" href="/link/">友链</a>
+      
+        
+        
+        
+        <a class="nav-link" href="/about/">关于</a>
+      
+      <a class="nav-link" href="https://www.travellings.cn/go.html" target="_blank" rel="noopener">开往</a>
+      <a class="nav-link" href="https://foreverblog.cn/go.html" target="_blank" rel="noopener">虫洞</a>
+    </nav>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="切换主题">
+      主题 <span class="theme-label" data-theme-label>夜</span>
+    </button>
+  </div>
+  <div class="rule"></div>
+</header>
+
+
+  <main class="site-main">
+    
+  
+  
+    <div class="content-shell">
+  
+  <article class="content">
+    
+    
+      
+        
+      
+    
+    <header class="content-header">
+      <div class="kicker">Posts</div>
+      <h1>自制Hitbox</h1>
+      <div class="post-meta">
+        2024-03-17
+        
+          <span class="dot">&middot;</span>
+          <a class="tag-inline" href="/tags/%E6%8A%98%E8%85%BE/">#折腾</a>
+        
+      </div>
+      
+        <div class="cover">
+          <img src="https://cdn.jsdelivr.net/gh/FuShaoLei/img5@master/202403172353742.jpg" alt="自制Hitbox 封面">
+        </div>
+      
+    </header>
+    <div class="prose">
+      <p>上一篇说到我装机就是为了玩街霸6，其实还有一个原因，就是如果我在Playstation平台玩的话，就只能用手柄了，但其实用手柄有一个问题，就是我习惯移动用Ps5手柄的左摇杆（如下视频），结果，玩了不到两个月，左摇杆就漂移了（所谓漂移指的是在我不动摇杆的情况，摇杆会自己输入指令），还好我买的是国行版本的，手柄一年内免费换新。所以我实在是不想用手柄玩街霸了，在线下尝试了hitbox后，我决定自制一个Hitbox。</p>
+<div style="position:relative; padding-bottom:75%; width:100%; height:0">
+  <iframe
+    src="//player.bilibili.com/player.html?bvid=BV1jz4y1n7oH&page=1&autoplay=0"
+    scrolling="no"
+    border="0"
+    frameborder="no"
+    framespacing="0"
+    allowfullscreen="true"
+    style="position:absolute; height: 100%; width: 100%;"
+  ></iframe>
+</div>
+
+<h2 id="准备材料">准备材料</h2>
+<p>配件一览</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>价格</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>亚克力框体+磨砂面板图</td>
+<td>97+30</td>
+<td>淘宝找人定制的，感觉有点小贵</td>
+</tr>
+<tr>
+<td>苍炎芯片2.0  +  杜邦线*20</td>
+<td>84</td>
+<td>省心，不用自己刷系统，对于我这种懒人来说非常舒服</td>
+</tr>
+<tr>
+<td>拳霸白透明24mm按键 * 16 + 透明白色蓝光30mm按键 * 1 + 发光供电线 * 1</td>
+<td>112</td>
+<td>拳霸这款按键才6块钱一个，已经是我能找到的最便宜的品牌按键了</td>
+</tr>
+<tr>
+<td>USB方口转母USB线</td>
+<td>6</td>
+<td></td>
+</tr>
+<tr>
+<td>M3<em>55 铜柱 * 10 + M3</em>12 螺丝 * 50</td>
+<td>16.02</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>总价格：345</strong></p>
+<p>在B站跟着<a href="https://www.bilibili.com/video/BV1rh411E7gS/">这个视频</a>一步一步做的，总体来说是一次简单的DIY，几乎没什么难度，总体过程中比较困难的是选择面板图的图案，我在互联网上怎么找都不太满意，最后用了下面这张朱莉的图片（虽然我的主力不是朱莉🤣），感谢<a href="https://www.deviantart.com/cr1one/art/street-fighter-6-juri-wallpaper-955665294">原作者</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/FuShaoLei/img5@master/202403172226580.png" alt=""></p>
+<h2 id="成果">成果</h2>
+<p>因为安装过程过于简单就不放图了（其实是我没存多少图😆）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/FuShaoLei/img5@master/202403172352700.jpg" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/FuShaoLei/img5@master/202403172353742.jpg" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/FuShaoLei/img5@master/202403172353322.jpg" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/FuShaoLei/img5@master/202403172352704.jpg" alt=""></p>
+<p>上手视频 👇</p>
+<div style="position:relative; padding-bottom:75%; width:100%; height:0">
+  <iframe
+    src="//player.bilibili.com/player.html?bvid=BV1Aj421Q7Rt&page=1&autoplay=0"
+    scrolling="no"
+    border="0"
+    frameborder="no"
+    framespacing="0"
+    allowfullscreen="true"
+    style="position:absolute; height: 100%; width: 100%;"
+  ></iframe>
+</div>
+
+<p>最后，希望我的艾德早点上大师，哦吼~</p>
+
+    </div>
+    
+      
+        <nav class="post-nav" aria-label="文章导航">
+          
+            <a class="post-nav-link prev" href="/posts/rate-titanic/">
+              <span class="post-nav-label">上一篇</span>
+              <span class="post-nav-title">短评《泰坦尼克号》</span>
+            </a>
+          
+          
+            <a class="post-nav-link next" href="/posts/secondary-play-uncharted-4/">
+              <span class="post-nav-label">下一篇</span>
+              <span class="post-nav-title">短评《神秘海域4》</span>
+            </a>
+          
+        </nav>
+      
+    
+  </article>
+  
+    <aside class="toc-sidebar" aria-label="文章目录">
+      <div class="toc-title">目录</div>
+      <div class="toc-body">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#准备材料">准备材料</a></li>
+    <li><a href="#成果">成果</a></li>
+  </ul>
+</nav>
+      </div>
+    </aside>
+    </div>
+  
+
+  </main>
+  <footer class="site-footer">
+  <div class="rule"></div>
+  <div class="footer-inner">
+    <span>琼西往事</span>
+    <span>@2026</span>
+  </div>
+</footer>
+
+
+</body>
+</html>

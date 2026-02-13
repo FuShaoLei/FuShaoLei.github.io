@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>工具 on 琼西往事</title>
+    <link>https://fushaolei.github.io/tags/%E5%B7%A5%E5%85%B7/</link>
+    <description>Recent content in 工具 on 琼西往事</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 10 Mar 2023 23:57:20 +0800</lastBuildDate><atom:link href="https://fushaolei.github.io/tags/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用yt-dlp下载音乐或视频</title>
+      <link>https://fushaolei.github.io/posts/download-music/</link>
+      <pubDate>Fri, 10 Mar 2023 23:57:20 +0800</pubDate>
+      
+      <guid>https://fushaolei.github.io/posts/download-music/</guid>
+      <description>下载音乐 下载最高质量音乐到指定位置
+D:\download\yt-dlp.exe -P D:\mp3file\ -f ba https://www.youtube.com/watch?v=Oa4v_RX774s  下载最高质量音乐并转成mp3格式到指定位置
+D:\download\yt-dlp.exe -P D:\mp3file\ -f ba -x --audio-format mp3 --ffmpeg-location D:\software\ffmpeg\ffmpeg.exe https://www.youtube.com/watch?v=Oa4v_RX774s  下载视频 首先查看这个视频有什么格式：
+D:\download\yt-dlp.exe https://www.youtube.com/watch?v=AQixv83-DOc --list-formats  然后看自己需要什么格式就那什么格式的id进行下载，如下：
+D:\download\yt-dlp.exe -f 299 -P D:\DDD\ https://www.youtube.com/watch?v=AQixv83-DOc  通常我是会下载视频+音频合并的，那么我就会：
+D:\download\yt-dlp.exe https://www.youtube.com/watch?v=RUKXvuI_qbU -f 140+137 -P D:\DDD\ --ffmpeg-location D:\software\ffmpeg\ffmpeg.exe  </description>
+    </item>
+    
+  </channel>
+</rss>
