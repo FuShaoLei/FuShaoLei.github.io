@@ -1,0 +1,33 @@
+.relative-article-container {
+    position: fixed;
+    top: var(--side-top);
+    left: 42px;
+    z-index: 9999;
+    width: 350px;
+    /*background: #B54047;*/
+
+    text-align: right;
+}
+
+.relative-posts-list {
+    margin-top: 10px;
+    font-size: .9rem;
+}
+
+.relative-post-item {
+    margin-bottom: 3px;
+}
+
+.relative-post-item a:hover {
+    color: var(--color-theme-main);
+}
+
+.relative-post-item .current-post{
+    color: var(--color-theme-main);
+}
+
+@media (max-width: 1200px) {
+    .relative-article-container {
+        display: none;
+    }
+}
