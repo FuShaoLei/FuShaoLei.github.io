@@ -1,0 +1,117 @@
+.blog-list-main-wrapper {
+    margin-top: 70px;
+    width: var(--container-width);
+}
+
+.blog-summary-wrapper-container {
+    margin-bottom: 30px;
+    transition: var(--universal-transition-attr);
+}
+
+.blog-summary-inner-container {
+    display: block;
+    padding: 10px 14px;
+}
+
+.blog-summary-wrapper-container:hover .blog-summary-title{
+    color: var(--color-theme-main);
+    margin-left: 5px;
+}
+
+.blog-summary-wrapper-container:hover {
+    background: var(--color-embellish);
+    border-radius: var(--normal-border-radius);
+}
+
+.blog-summary-wrapper-container:active {
+    transform: scale(0.98);
+}
+
+.blog-summary-wrapper-container:after{
+    content: '';
+    display: block;
+    height: 2px;
+    background: var(--color-embellish);
+    margin-left: 14px;
+    max-width: 65px;
+    margin-top: 18px;
+    border-radius: var(--normal-border-radius);
+}
+
+
+.blog-summary-title {
+    font-size: 1.15rem;
+    transition: var(--universal-transition-attr);
+}
+
+.blog-summary-date-wrapper {
+    margin-top: 3px;
+    display: flex;
+
+    color: var(--color-text-secondary);
+    font-size: .85rem;
+}
+
+.blog-summary-tags-wrapper {
+    display: flex;
+}
+
+.blog-summary-tags-wrapper div {
+    margin-left: 5px;
+}
+
+.blog-summary-preface {
+    color: var(--color-text-secondary);
+    font-size: .9rem;
+}
+
+.blog-pagination-wrapper-container {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.pagination-item.active {
+    color: var(--color-theme-main);
+}
+
+@media (max-width: 900px) {
+    .blog-list-main-wrapper {
+        margin-top: 24px;
+        width: 100%;
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+
+    .blog-summary-inner-container {
+        padding: 10px 12px;
+    }
+
+    .blog-summary-date-wrapper {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .blog-summary-tags-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .blog-summary-wrapper-container:after {
+        margin-left: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .blog-summary-title {
+        font-size: 1.05rem;
+    }
+
+    .blog-summary-preface {
+        font-size: .85rem;
+    }
+}
+
